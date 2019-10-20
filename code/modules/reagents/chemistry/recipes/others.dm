@@ -681,7 +681,6 @@
 	results = list(/datum/reagent/pax = 3)
 	required_reagents  = list(/datum/reagent/toxin/mindbreaker = 1, /datum/reagent/medicine/synaptizine = 1, /datum/reagent/water = 1)
 
-
 //////////////////EXPANDED MUTATION TOXINS/////////////////////
 
 /datum/chemical_reaction/mutationtoxin/stable
@@ -781,3 +780,36 @@
 	id = /datum/reagent/mutationtoxin/plasma
 	results = list(/datum/reagent/mutationtoxin/plasma = 1)
 	required_reagents  = list(/datum/reagent/aslimetoxin = 1, /datum/reagent/toxin/plasma = 60, /datum/reagent/uranium = 20)
+
+/datum/chemical_reaction/yuck
+	name = "Organic Fluid"
+	id = /datum/reagent/yuck
+	results = list(/datum/reagent/yuck = 4)
+	required_reagents = list(/datum/reagent/fuel = 3)
+	required_container = /obj/item/reagent_containers/food/snacks/deadmouse
+
+
+/datum/chemical_reaction/slimejelly
+	name = "artificial slime jelly"
+	id = /datum/reagent/toxin/slimejelly
+	results = list(/datum/reagent/toxin/slimejelly = 5)
+	required_reagents = list(/datum/reagent/oil = 3, /datum/reagent/uranium/radium = 2, /datum/reagent/consumable/tinlux =1)
+	required_container = /obj/item/reagent_containers/food/snacks/grown/mushroom/glowshroom
+	mix_message = "The mushroom's insides bubble and pop and it becomes very limp."
+
+/datum/chemical_reaction/slime_extractification
+	name = "slime extractification"
+	id = "slime extractification"
+	required_reagents = list(/datum/reagent/toxin/slimejelly = 30, /datum/reagent/consumable/frostoil = 5, /datum/reagent/toxin/plasma = 5)
+	mix_message = "The mixture condenses into a ball."
+
+/datum/chemical_reaction/slime_extractification/on_reaction(datum/reagents/holder, created_volume)
+	var/location = get_turf(holder.my_atom)
+	new /obj/item/slime_extract/grey(location)
+
+/datum/chemical_reaction/cellulose_carbonization
+	name = "Cellulose_Carbonization"
+	id = /datum/reagent/carbon
+	results = list(/datum/reagent/carbon = 1)
+	required_reagents = list(/datum/reagent/cellulose = 1)
+	required_temp = 512
