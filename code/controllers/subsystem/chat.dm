@@ -18,7 +18,7 @@ SUBSYSTEM_DEF(chat)
 			return
 
 
-/datum/controller/subsystem/chat/proc/queue(target, message, handle_whitespace = TRUE)
+/datum/controller/subsystem/chat/proc/queue(target, message, handle_whitespace = TRUE, confidential = FALSE)
 	if(!target || !message)
 		return
 
@@ -38,6 +38,8 @@ SUBSYSTEM_DEF(chat)
 		message = replacetext(message, "\t", "[GLOB.TAB][GLOB.TAB]")
 	message += "<br>"
 
+	if(!confidential)
+		SSdemo.write_chat(target, message)
 
 	//rustg_url_encode it TWICE, this way any UTF-8 characters are able to be decoded by the Javascript.
 	//Do the double-encoding here to save nanoseconds
@@ -46,13 +48,13 @@ SUBSYSTEM_DEF(chat)
 	if(islist(target))
 		for(var/I in target)
 			var/client/C = CLIENT_FROM_VAR(I) //Grab us a client if possible
-			
+
 			if(!C)
 				return
 
 			//Send it to the old style output window.
 			SEND_TEXT(C, original_message)
-			
+
 			if(!C?.chatOutput || C.chatOutput.broken) //A player who hasn't updated his skin file.
 				continue
 
@@ -64,7 +66,7 @@ SUBSYSTEM_DEF(chat)
 
 	else
 		var/client/C = CLIENT_FROM_VAR(target) //Grab us a client if possible
-		
+
 		if(!C)
 			return
 
