@@ -436,7 +436,7 @@ update_label("John Doe", "Clowny")
 	registered_name = "Syndicate"
 	assignment = "Syndicate Operative"
 	icon_state = "syndie"
-	access = list(ACCESS_SYNDICATE)
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
 
 /obj/item/card/id/syndicate_command/captain_id
 	name = "syndicate captain ID card"
@@ -444,7 +444,7 @@ update_label("John Doe", "Clowny")
 	registered_name = "Syndicate"
 	assignment = "Syndicate Ship Captain"
 	icon_state = "syndie"
-	access = list(ACCESS_SYNDICATE)
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
 
 /obj/item/card/id/captains_spare
 	name = "captain's spare ID"
