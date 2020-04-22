@@ -10,6 +10,7 @@
 	flags_1 =  CONDUCT_1
 	slot_flags = ITEM_SLOT_BACK
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pulse, /obj/item/ammo_casing/energy/electrode, /obj/item/ammo_casing/energy/laser)
+	internal_cell = TRUE //prevents you from giving it an OP cell
 	cell_type = "/obj/item/stock_parts/cell/pulse"
 	fire_rate = 3
 	automatic = 1
