@@ -108,7 +108,7 @@ GLOBAL_LIST_INIT(admin_verbs_fun, list(
 	/client/proc/admin_away,
 	/client/proc/healall,
 	/client/proc/spawn_floor_cluwne,
-	/client/proc/spawnhuman
+	/client/proc/spawnhuman,
 	/client/proc/fax_panel
 	))
 GLOBAL_PROTECT(admin_verbs_fun)
