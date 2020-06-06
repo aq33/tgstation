@@ -1,6 +1,6 @@
 {
 	"suspicion": [
-		"@pick(add_name)obserwuje cię...",
+		"@pick(add_name)obserwuję cię...",
 		"@pick(add_name)wiem co robisz",
 		"@pick(add_name)co tam chowasz?",
 		"Widziałem to"
@@ -12,11 +12,11 @@
 		"Tia",
 		"Nie",
 		"Nah",
-		"Wątpię w to",
+		"Wątpię",
 		"Uh...",
 		"Dlaczego?",
 		"Ale...",
-		"Trzymaj się",
+		"Zaczekaj",
 		"Hmm",
 		"Ta, wiem",
 		"Dziwne"
@@ -28,7 +28,7 @@
 		"Cześć ",
 		"Hello ",
 		"Czekaj, ",
-		"To jest "
+		"To "
 	],
 
 	"getout": [
@@ -101,7 +101,7 @@
 	],
 
 	"infection_advice": [
-		"@pick(add_name)trzymaj się zdala",
+		"@pick(add_name)trzymaj się ode mnie zdala",
 		"@pick(add_name)nie podchodź",
 		"@pick(add_name)ostrożnie",
 		"@pick(add_name)pomóż mi",
@@ -125,18 +125,16 @@
 	"accusations": [
 		"martwy",
 		"zbuntowany",
-		"kult",
-		"to kultysta",
-		"clockcult",
-		"to clock kultysta",
-		"to głowa rewolucji",
-		"to rewolucjonista",
-		"to szef gangu",
-		"to gangster",
-		"to zdrajca",
-		"to tator",
-		"to ling",
-		"to changeling"
+		"kultystą",
+		"clock kultystą",
+		"przywódcą rewolucji",
+		"rewolucjonistą",
+		"szefem gangu",
+		"gangsterem",
+		"zdrajcą",
+		"traitorem",
+		"lingiem",
+		"changelingiem"
 	],
 
 	"threat": [
@@ -158,33 +156,34 @@
 	],
 
 	"location": [
-		"kosmos w pobliżu @pick(sublocation)",
-		"mostek",
-		"zbrojownia",
+		"kosmosie w pobliżu @pick(sublocation)",
+		"mostku",
+		"zbrojownii",
 		"sec",
 		"security",
 		"science",
 		"xenobio",
-		"inżynieria",
+		"inżynierii",
 		"cargo",
-		"medbay",
-		"atmosferyka",
-		"szyby",
-		"@pick(sublocation) szyby",
-		"wirologia",
-		"kostnica",
-		"biuro Hopa",
-		"biuro kapitana",
-		"kaplica",
-		"biblioteka",
-		"składzik z narzędziami",
-		"botanika",
-		"kuchnia",
-		"satelita AI"
+		"medbayu",
+		"atmosferyce",
+		"maint",
+		"@pick(sublocation) maint",
+		"tunelach"
+		"wirologii",
+		"kostnicy",
+		"biurze HoPa",
+		"biurze Kapitana",
+		"kaplicy",
+		"bibliotece",
+		"składziku z narzędziami",
+		"botanice",
+		"kuchnii",
+		"satelicie AI"
 	],
 
 	"sublocation": [
-		"mostek",
+		"bridge",
 		"zbrojownia",
 		"sec",
 		"security",
@@ -208,11 +207,11 @@
 	],
 
 	"advice": [
-		"Hmm...nie jestem tego pewien.",
-		"Tak. Robisz coś dobrego.",
+		"Hmm...nie jestem pewien.",
+		"Tak. Dobrze robisz.",
 		"Nie. Przestań to robić.",
 		"Powinieneś uważać na tę osobę.",
-		"Zaufaj jej",
+		"Zaufaj jej.",
 		"Ta osoba chce cie zabić.",
 		"Zabij go. Wiesz kogo.",
 		"Powinieneś pójść gdzie indziej. Szybko.",
