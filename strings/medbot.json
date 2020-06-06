@@ -1,0 +1,30 @@
+{
+	"coming": {
+		"Hey, %TARGETNAME%! Hold on, I'm coming.": "sound/voice/medbot/coming.ogg",
+		"Wait %TARGETNAME%! I want to help!": "sound/voice/medbot/help.ogg",
+		"%TARGETNAME%, you appear to be injured!": "sound/voice/medbot/injured.ogg"
+	},
+	"fluff": {
+		"Radar, put a mask on!": "sound/voice/medbot/radar.ogg",
+		"There's always a catch, and I'm the best there is.": "sound/voice/medbot/catch.ogg",
+		"I knew it, I should've been a plastic surgeon.": "sound/voice/medbot/surgeon.ogg",
+		"What kind of medbay is this? Everyone's dropping like flies.": "sound/voice/medbot/flies.ogg",
+		"Delicious!": "sound/voice/medbot/delicious.ogg"
+	},
+	"patient_dead": {
+		"No! Stay with me!": "sound/voice/medbot/no.ogg",
+		"Live, damnit! LIVE!": "sound/voice/medbot/live.ogg",
+		"I...I've never lost a patient before. Not today, I mean.": "sound/voice/medbot/lost.ogg"
+	},
+	"after_heal": {
+		"All patched up!": "sound/voice/medbot/patchedup.ogg",
+		"An apple a day keeps me away.": "sound/voice/medbot/apple.ogg",
+		"Feel better soon!": "sound/voice/medbot/feelbetter.ogg"
+	},
+	"radio_emergency": [
+		"Medical emergency! %TARGETNAME% is in critical condition at %LOCATION%!"
+	],
+	"efficiency": [
+		"Surgerical Knowledge Found! Efficiency is increased by %EFFICIENCY%!"
+	]
+}

@@ -2,6 +2,7 @@
 //MEDBOT PATHFINDING
 //MEDBOT ASSEMBLY
 
+#define MEDBOT_FILE "medbot.json"
 
 /mob/living/simple_animal/bot/medbot
 	name = "\improper Medibot"
@@ -185,7 +186,9 @@
 		if(tech_boosters)
 			heal_amount = (round(tech_boosters/2,0.1)*initial(heal_amount))+initial(heal_amount) //every 2 tend wounds tech gives you an extra 100% healing, adjusting for unique branches (combo is bonus)
 			if(oldheal_amount < heal_amount)
-				speak("Surgerical Knowledge Found! Efficiency is increased by [round(heal_amount/oldheal_amount*100)]%!")
+				var/message = pick_list(MEDBOT_FILE, "efficiency")
+				message = replacetext(message, "%EFFICIENCY%", round(heal_amount/oldheal_amount*100))
+				speak(message)
 	update_controls()
 	return
 
@@ -217,8 +220,9 @@
 	if(assess_patient(H))
 		last_found = world.time
 		if((last_newpatient_speak + 300) < world.time) //Don't spam these messages!
-			var/list/messagevoice = list("Hey, [H.name]! Hold on, I'm coming." = 'sound/voice/medbot/coming.ogg',"Wait [H.name]! I want to help!" = 'sound/voice/medbot/help.ogg',"[H.name], you appear to be injured!" = 'sound/voice/medbot/injured.ogg')
+			var/list/messagevoice = strings(MEDBOT_FILE, "coming")
 			var/message = pick(messagevoice)
+			message = replacetext(message, "%TARGETNAME%", H.name)
 			speak(message)
 			playsound(src, messagevoice[message], 50, FALSE)
 			last_newpatient_speak = world.time
@@ -245,7 +249,7 @@
 
 	if(QDELETED(patient))
 		if(!shut_up && prob(1))
-			var/list/messagevoice = list("Radar, put a mask on!" = 'sound/voice/medbot/radar.ogg',"There's always a catch, and I'm the best there is." = 'sound/voice/medbot/catch.ogg',"I knew it, I should've been a plastic surgeon." = 'sound/voice/medbot/surgeon.ogg',"What kind of medbay is this? Everyone's dropping like flies." = 'sound/voice/medbot/flies.ogg',"Delicious!" = 'sound/voice/medbot/delicious.ogg')
+			var/list/messagevoice = strings(MEDBOT_FILE, "fluff")
 			var/message = pick(messagevoice)
 			speak(message)
 			playsound(src, messagevoice[message], 50)
@@ -367,7 +371,7 @@
 		return
 
 	if(C.stat == DEAD || (HAS_TRAIT(C, TRAIT_FAKEDEATH)))
-		var/list/messagevoice = list("No! Stay with me!" = 'sound/voice/medbot/no.ogg',"Live, damnit! LIVE!" = 'sound/voice/medbot/live.ogg',"I...I've never lost a patient before. Not today, I mean." = 'sound/voice/medbot/lost.ogg')
+		var/list/messagevoice = strings(MEDBOT_FILE, "patient_dead")
 		var/message = pick(messagevoice)
 		speak(message)
 		playsound(src, messagevoice[message], 50)
@@ -394,7 +398,7 @@
 		if(!treatment_method && emagged != 2) //If they don't need any of that they're probably cured!
 			if(C.maxHealth - C.health < heal_threshold)
 				to_chat(src, "<span class='notice'>[C] is healthy! Your programming prevents you from injecting anyone without at least [heal_threshold] damage of any one type ([heal_threshold + 5] for oxygen damage.)</span>")
-			var/list/messagevoice = list("All patched up!" = 'sound/voice/medbot/patchedup.ogg',"An apple a day keeps me away." = 'sound/voice/medbot/apple.ogg',"Feel better soon!" = 'sound/voice/medbot/feelbetter.ogg')
+			var/list/messagevoice = strings(MEDBOT_FILE, "after_heal")
 			var/message = pick(messagevoice)
 			speak(message)
 			playsound(src, messagevoice[message], 50)
@@ -455,7 +459,11 @@
 	if(declare_cooldown > world.time)
 		return
 	var/area/location = get_area(src)
-	speak("Medical emergency! [crit_patient || "A patient"] is in critical condition at [location]!",radio_channel)
+	var/message = pick_list(MEDBOT_FILE, "radio_emergency")
+	if(!crit_patient)
+		message = replacetext(message, "%TARGETNAME%", "A patient")
+	message = replacetext(message, "%LOCATION%", location)
+	speak(message, radio_channel)
 	declare_cooldown = world.time + 200
 
 /obj/machinery/bot_core/medbot
