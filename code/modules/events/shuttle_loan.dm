@@ -42,7 +42,7 @@
 		if(ANTIDOTE_NEEDED)
 			priority_announce("Dział towarowy: Wasza stacja została wybrana do przeprowadzenia badań nad projektem epidemiologicznym. Wyślijcie nam swój statek towarowy by otrzymać próbki.", "Inicjatywy Badawcze Centralnego Dowództwa")
 		if(PIZZA_DELIVERY)
-			priority_announce("Dział towarowy: Wygląda na to że sąsiednia stacja przypadkowo zamówiła pizzę wam a nie sobie."Dział Ds. Pizzy Centralnego Dowództwa")
+			priority_announce("Dział towarowy: Wygląda na to że sąsiednia stacja przypadkowo zamówiła pizzę wam a nie sobie.", "Dział Ds. Pizzy Centralnego Dowództwa")
 			thanks_msg = "The cargo shuttle should return in five minutes."
 			bonus_points = 0
 		if(ITS_HIP_TO)
