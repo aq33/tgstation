@@ -8,4 +8,4 @@
 	wave_name = "meaty"
 
 /datum/round_event/meteor_wave/meaty/announce(fake)
-	priority_announce("Meaty ores have been detected on collision course with the station.", "Oh crap, get the mop.",'sound/ai/meteors.ogg')
+	priority_announce("Mięsoory wykryte na kursie kolizyjnym ze stacją. O cholera, łapać się za pomy.",'sound/ai/meteors.ogg')
