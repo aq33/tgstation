@@ -1,39 +1,17 @@
-## /tg/station codebase
+# Aquila Station 13
 
-[![Build Status](https://travis-ci.org/tgstation/tgstation.png)](https://travis-ci.org/tgstation/tgstation) 
-[![Percentage of issues still open](https://isitmaintained.com/badge/open/tgstation/tgstation.svg)](https://isitmaintained.com/project/tgstation/tgstation "Percentage of issues still open")
-[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/tgstation/tgstation.svg)](https://isitmaintained.com/project/tgstation/tgstation "Average time to resolve an issue")
-![Coverage](https://img.shields.io/badge/coverage---3%25-red.svg)
+* **Discord:** https://discord.gg/66DeZmB
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-resentment.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/contains-technical-debt.svg)](https://user-images.githubusercontent.com/8171642/50290880-ffef5500-043a-11e9-8270-a2e5b697c86c.png) [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
+## Zgłaszanie bugów lub sugestii
 
-* **Website:** https://www.tgstation13.org
-* **Code:** https://github.com/tgstation/tgstation
-* **Wiki:** https://tgstation13.org/wiki/Main_Page
-* **Codedocs:** https://codedocs.tgstation13.org/
-* **/tg/station Discord:** https://tgstation13.org/phpBB/viewforum.php?f=60
-* **Coderbus Discord:** https://discord.gg/Vh8TJp9
-* ~~**IRC:** irc://irc.rizon.net/coderbus~~ (dead)
+Jeżeli chcesz zgłosić buga, lub zasugerować nową zmianę to zrób to w zakładce Issues, i daj odpowiedni label.
 
-This is the codebase for the /tg/station flavoured fork of SpaceStation 13.
+## Pomoc w tłumaczeniu/programowaniu
 
-Space Station 13 is a paranoia-laden round-based roleplaying game set against the backdrop of a nonsensical, metal death trap masquerading as a space station, with charming spritework designed to represent the sci-fi setting and its dangerous undertones. Have fun, and survive!
-
-## DOWNLOADING
-[Downloading](.github/DOWNLOADING.md)
-
-[Running on the server](.github/RUNNING_A_SERVER.md)
-
-[Maps and Away Missions](.github/MAPS_AND_AWAY_MISSIONS.md)
-
-## Requirements for contributors
-[Guidelines for Contributors](.github/CONTRIBUTING.md)
-
-[/tg/station HACKMD account](https://hackmd.io/@tgstation) - Design documentation here
-
-[Documenting your code](.github/AUTODOC_GUIDE.md)
-
-[Policy configuration system](.github/POLICYCONFIG.md)
+Jeżeli chcesz pomóc to najpierw wybierz issue którym chcesz się zając, napisz tam, ze ty zajmiesz się np. jakimś konkretnym plikiem, lub całym issue, itd.
+Wtedy zforkuj te repozytorium, i tam nanieś zmiany tworząc commity (nie branche),
+pliki można też edytować z poziomu strony. Gdy chcesz zaproponować złączenie twojego forka do głownego repo,
+utwórz pull request.
 
 ## LICENSE
 
