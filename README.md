@@ -12,6 +12,8 @@ Jeżeli chcesz pomóc to najpierw wybierz issue którym chcesz się zając, napi
 Wtedy zforkuj te repozytorium, i tam nanieś zmiany tworząc commity (nie branche),
 pliki można też edytować z poziomu strony. Gdy chcesz zaproponować złączenie twojego forka do głownego repo,
 utwórz pull request.
+Pamiętajcie, że brak jednego przecinka czy cudzysłowa spowoduje crasha, wiem, że to i tak może się od czasu do czasu
+zdarzyć, ale starajcie się weryfikować że tak nie będzie po waszych zmianach.
 
 ## LICENSE
 
