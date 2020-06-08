@@ -39,7 +39,7 @@
 	phrase_sound = "robocop"
 
 /datum/hailer_phrase/god
-	phrase_text = "Bóg zesłał mnie dziś przeciw tym oszustom, których nie mogliśmy złapać wczoraj."
+	phrase_text = "Bóg zesłał mnie dziś przeciw tym szumowinom, których nie mogliśmy złapać wczoraj."
 	phrase_sound = "god"
 
 /datum/hailer_phrase/freeze
@@ -47,7 +47,7 @@
 	phrase_sound = "freeze"
 
 /datum/hailer_phrase/imperial
-	phrase_text = "Zatrzymaj się natychmiast, bandycka szumowino!"
+	phrase_text = "Stop right there, criminal scum!"
 	phrase_sound = "imperial"
 
 /datum/hailer_phrase/bash
@@ -75,5 +75,5 @@
 	phrase_sound = "super"
 
 /datum/hailer_phrase/dredd
-	phrase_text = "Ja jestem, PRAWO!"
+	phrase_text = "Ja jestem, PRAWEM!"
 	phrase_sound = "dredd"
