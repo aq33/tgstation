@@ -138,6 +138,9 @@
 /turf/open/floor/proc/make_plating()
 	return ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 
+/turf/open/floor/proc/crush()
+	break_tile()
+
 /turf/open/floor/ChangeTurf(path, new_baseturf, flags)
 	if(!isfloorturf(src))
 		return ..() //fucking turfs switch the fucking src of the fucking running procs
