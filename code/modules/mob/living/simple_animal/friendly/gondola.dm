@@ -27,6 +27,7 @@
 	maxbodytemp = 1500
 	maxHealth = 200
 	health = 200
+	gold_core_spawnable = FRIENDLY_SPAWN
 	del_on_death = TRUE
 
 	//Gondolas don't make footstep sounds
