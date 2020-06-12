@@ -1,9 +1,0 @@
-sound/ambience/title1.ogg
-sound/ambience/title2.ogg
-sound/ambience/title3.ogg
-sound/ambience/dwarf.ogg
-sound/ambience/unatco.ogg
-sound/ambience/lysendraa.ogg
-sound/ambience/ttgl.ogg
-sound/ambience/asteroids.ogg
-sound/ambience/trade_routes.ogg

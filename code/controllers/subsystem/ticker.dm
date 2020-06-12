@@ -1,4 +1,4 @@
-#define ROUND_START_MUSIC_LIST "strings/round_start_sounds.txt"
+#define ROUND_START_MUSIC_LIST "round_start_sounds.json"
 
 SUBSYSTEM_DEF(ticker)
 	name = "Ticker"
@@ -115,7 +115,7 @@ SUBSYSTEM_DEF(ticker)
 		music -= S
 
 	if(!length(music))
-		music = world.file2list(ROUND_START_MUSIC_LIST, "\n")
+		music = pick_list(ROUND_START_MUSIC_LIST, "start_music")
 		login_music = pick(music)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
