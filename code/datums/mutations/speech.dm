@@ -142,7 +142,7 @@
 
 /datum/mutation/human/elvis
 	name = "Elvis"
-	desc = "Straszliwa mutacja pochodząca od 'pacjenta-zero'."
+	desc = "Straszliwa mutacja nazwana po jej 'pacjencie zero'."
 	quality = MINOR_NEGATIVE
 	text_gain_indication = "<span class='notice'>Czujesz się świetnie, laleczko.</span>"
 	text_lose_indication = "<span class='notice'>Czujesz, że nie chcesz już tyle mówić.</span>"
