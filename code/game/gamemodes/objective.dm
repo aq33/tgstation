@@ -208,7 +208,7 @@ GLOBAL_LIST_EMPTY(objectives)
 /datum/objective/assassinate/internal/update_explanation_text()
 	..()
 	if(target && !target.current)
-		explanation_text = "Dokonaj zamachu na [target.name], [NIEZNANE]"
+		explanation_text = "Dokonaj zamachu na [target.name], rola nieznana"
 
 /datum/objective/mutiny
 	name = "mutiny"
