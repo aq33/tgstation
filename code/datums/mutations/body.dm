@@ -28,7 +28,6 @@
 	desc = "Strange mutation that causes the holder to randomly mutate."
 	quality = NEGATIVE
 	text_gain_indication = "<span class='danger'>You feel strange.</span>"
-	locked = TRUE
 
 /datum/mutation/human/bad_dna/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
