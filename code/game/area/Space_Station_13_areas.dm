@@ -54,7 +54,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 //EXTRA
 
 /area/asteroid
-	name = "Asteroid"
+	name = "Asteroida"
 	icon_state = "asteroid"
 	requires_power = FALSE
 	has_gravity = STANDARD_GRAVITY
@@ -71,7 +71,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	blob_allowed = TRUE
 
 /area/asteroid/nearstation/bomb_site
-	name = "Bomb Testing Asteroid"
+	name = "Asteroida do testowania bomb"
 
 //STATION13
 
@@ -85,78 +85,78 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 //Departments
 
 /area/maintenance/department/chapel
-	name = "Chapel Maintenance"
+	name = "Tunel Techniczny Kaplica"
 	icon_state = "maint_chapel"
 
 /area/maintenance/department/chapel/monastery
-	name = "Monastery Maintenance"
+	name = "Tunel Techniczny Klasztor"
 	icon_state = "maint_monastery"
 
 /area/maintenance/department/crew_quarters/bar
-	name = "Bar Maintenance"
+	name = "Tunel Techniczny Bar"
 	icon_state = "maint_bar"
 
 /area/maintenance/department/crew_quarters/dorms
-	name = "Dormitory Maintenance"
+	name = "Tunel Techniczny Sala Sypialna"
 	icon_state = "maint_dorms"
 
 /area/maintenance/department/eva
-	name = "EVA Maintenance"
+	name = "Tunel Techniczny EVA"
 	icon_state = "maint_eva"
 
 /area/maintenance/department/electrical
-	name = "Electrical Maintenance"
+	name = "Tunel Techniczny Energetyka"
 	icon_state = "maint_electrical"
 
 /area/maintenance/department/engine/atmos
-	name = "Atmospherics Maintenance"
+	name = "Tunel Techniczny Atmosferyka"
 	icon_state = "maint_atmos"
 
 /area/maintenance/department/security
-	name = "Security Maintenance"
+	name = "Tunel Techniczny Ochrona"
 	icon_state = "maint_sec"
 
 /area/maintenance/department/security/upper
-	name = "Upper Security Maintenance"
+	name = "Górny Tunel Techniczny Ochrona"
 
 /area/maintenance/department/security/brig
-	name = "Brig Maintenance"
+	name = "Tunel Techniczny Bryg"
 	icon_state = "maint_brig"
 
 /area/maintenance/department/medical
-	name = "Medbay Maintenance"
+	name = "Tunel Techniczny Szpital"
 	icon_state = "medbay_maint"
 
 /area/maintenance/department/medical/central
-	name = "Central Medbay Maintenance"
+	name = "Centralny Tunel Techniczny Szpital"
 	icon_state = "medbay_maint_central"
 
 /area/maintenance/department/medical/morgue
-	name = "Morgue Maintenance"
+	name = "Tunel Techniczny Kostnica"
 	icon_state = "morgue_maint"
 
 /area/maintenance/department/science
-	name = "Science Maintenance"
+	name = "Tunel Techniczny Wydział Badawczy"
 	icon_state = "maint_sci"
 
 /area/maintenance/department/science/central
-	name = "Central Science Maintenance"
+	name = "Centralny Tunel Techniczny Wydział Badawczy"
 	icon_state = "maint_sci_central"
 
 /area/maintenance/department/cargo
-	name = "Cargo Maintenance"
+	name = "Tunel Techniczny Ładownia"
 	icon_state = "maint_cargo"
 
 /area/maintenance/department/bridge
-	name = "Bridge Maintenance"
+	name = "Tunel Techniczny Mostek"
 	icon_state = "maint_bridge"
 
 /area/maintenance/department/engine
-	name = "Engineering Maintenance"
+	name = "Tunel Techniczny Inżynieria"
 	icon_state = "maint_engi"
 
 /area/maintenance/department/science/xenobiology
-	name = "Xenobiology Maintenance"
+	name = "Tunel Techniczny Ksenobiologia"
 	icon_state = "xenomaint"
 	xenobiology_compatible = TRUE
 
@@ -164,324 +164,324 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 //Maintenance - Generic
 
 /area/maintenance/aft
-	name = "Aft Maintenance"
+	name = "Tunel Techniczny Rufa"
 	icon_state = "amaint"
 
 /area/maintenance/aft/upper
-	name = "Upper Aft Maintenance"
+	name = "Górny Tunel Techniczny Rufa"
 
 /area/maintenance/aft/secondary
-	name = "Aft Maintenance"
+	name = "Tunel Techniczny Rufa"
 	icon_state = "amaint_2"
 
 /area/maintenance/central
-	name = "Central Maintenance"
+	name = "Centralny Tunel Techniczny"
 	icon_state = "maintcentral"
 
 /area/maintenance/central/secondary
-	name = "Central Maintenance"
+	name = "Centralny Tunel Techniczny"
 	icon_state = "maintcentral"
 
 /area/maintenance/fore
-	name = "Fore Maintenance"
+	name = "Tunel Techniczny Dziób"
 	icon_state = "fmaint"
 
 /area/maintenance/fore/upper
-	name = "Upper Fore Maintenance"
+	name = "Górny Tunel Techniczny DzióbSterburta"
 
 /area/maintenance/fore/secondary
-	name = "Fore Maintenance"
+	name = "Tunel Techniczny DzióbSterburta"
 	icon_state = "fmaint_2"
 
 /area/maintenance/starboard
-	name = "Starboard Maintenance"
+	name = "Tunel Techniczny Sterburta"
 	icon_state = "smaint"
 
 /area/maintenance/starboard/upper
-	name = "Upper Starboard Maintenance"
+	name = "Górny Tunel Techniczny Sterburta"
 
 /area/maintenance/starboard/central
-	name = "Central Starboard Maintenance"
+	name = "Centralny Tunel Techniczny Sterburta"
 	icon_state = "smaint"
 
 /area/maintenance/starboard/secondary
-	name = "Secondary Starboard Maintenance"
+	name = "Drugorzędny Tunel Techniczny Sterburta"
 	icon_state = "smaint_2"
 
 /area/maintenance/starboard/aft
-	name = "Starboard Quarter Maintenance"
+	name = "Dolny Tunel Techniczny Sterburta"
 	icon_state = "asmaint"
 
 /area/maintenance/starboard/aft/secondary
-	name = "Secondary Starboard Quarter Maintenance"
+	name = "Drugorzędny Dolny Tunel Techniczny Sterburta"
 	icon_state = "asmaint_2"
 
 /area/maintenance/starboard/fore
-	name = "Starboard Bow Maintenance"
+	name = "Przedni Tunel Techniczny Sterburta"
 	icon_state = "fsmaint"
 
 /area/maintenance/port
-	name = "Port Maintenance"
+	name = "Tunel Techniczny Bakburta"
 	icon_state = "pmaint"
 
 /area/maintenance/port/central
-	name = "Central Port Maintenance"
+	name = "Centralny Tunel Techniczny Bakburta"
 	icon_state = "maintcentral"
 
 /area/maintenance/port/aft
-	name = "Port Quarter Maintenance"
+	name = "Górny Tunel Techniczny Bakburta"
 	icon_state = "apmaint"
 
 /area/maintenance/port/fore
-	name = "Port Bow Maintenance"
+	name = "Dolny Tunel Techniczny Bakburta"
 	icon_state = "fpmaint"
 
 /area/maintenance/disposal
-	name = "Waste Disposal"
+	name = "Utylizacja Odpadów"
 	icon_state = "disposal"
 
 /area/maintenance/disposal/incinerator
-	name = "Incinerator"
+	name = "Krematorium"
 	icon_state = "incinerator"
 
 
 //Hallway
 
 /area/hallway/primary/aft
-	name = "Aft Primary Hallway"
+	name = "Dolny Główny Korytarz"
 	icon_state = "hallA"
 
 /area/hallway/primary/fore
-	name = "Fore Primary Hallway"
+	name = "Górny Główny Koryatrz"
 	icon_state = "hallF"
 
 /area/hallway/primary/starboard
-	name = "Starboard Primary Hallway"
+	name = "Główny Korytarz Sterburta"
 	icon_state = "hallS"
 
 /area/hallway/primary/port
-	name = "Port Primary Hallway"
+	name = "Główny Korytarz Bakburta"
 	icon_state = "hallP"
 
 /area/hallway/primary/central
-	name = "Central Primary Hallway"
+	name = "Centralny Główny Korytarz"
 	icon_state = "hallC"
 
 /area/hallway/primary/upper
-	name = "Upper Central Primary Hallway"
+	name = "Górny Centralny Główny Korytarz"
 	icon_state = "hallC"
 
 
 /area/hallway/secondary/command
-	name = "Command Hallway"
+	name = "Korytarz Dowództwa"
 	icon_state = "bridge_hallway"
 
 /area/hallway/secondary/construction
-	name = "Construction Area"
+	name = "Strefa Budowlana"
 	icon_state = "construction"
 
 /area/hallway/secondary/exit
-	name = "Escape Shuttle Hallway"
+	name = "Korytarz Prom Ratunkowy"
 	icon_state = "escape"
 
 /area/hallway/secondary/exit/departure_lounge
-	name = "Departure Lounge"
+	name = "Hala Odlotów"
 	icon_state = "escape_lounge"
 
 /area/hallway/secondary/entry
-	name = "Arrival Shuttle Hallway"
+	name = "Korytarz Hala Przylotów"
 	icon_state = "entry"
 
 /area/hallway/secondary/service
-	name = "Service Hallway"
+	name = "Korytarz Usług"
 	icon_state = "hall_service"
 
 //Command
 
 /area/bridge
-	name = "Bridge"
+	name = "Mostek"
 	icon_state = "bridge"
 	ambientsounds = list('sound/ambience/signal.ogg')
 
 /area/bridge/meeting_room
-	name = "Heads of Staff Meeting Room"
+	name = "Sala Konferencyjna Dyrektorów Departamentów"
 	icon_state = "meeting"
 
 /area/bridge/meeting_room/council
-	name = "Council Chamber"
+	name = "Izba Rady"
 	icon_state = "meeting"
 
 /area/bridge/showroom/corporate
-	name = "Corporate Showroom"
+	name = "Sala Prezentacyjna"
 	icon_state = "showroom"
 
 /area/crew_quarters/heads/captain
-	name = "Captain's Office"
+	name = "Biuro Kapitana"
 	icon_state = "captain"
 
 /area/crew_quarters/heads/captain/private
-	name = "Captain's Quarters"
+	name = "Kwatera Kapitana"
 	icon_state = "captain_private"
 
 /area/crew_quarters/heads/chief
-	name = "Chief Engineer's Office"
+	name = "Biuro Majstra"
 	icon_state = "ce_office"
 
 /area/crew_quarters/heads/cmo
-	name = "Chief Medical Officer's Office"
+	name = "Biuro Ordynatora"
 	icon_state = "cmo_office"
 
 /area/crew_quarters/heads/hop
-	name = "Head of Personnel's Office"
+	name = "Biuro Głowy Personelu"
 	icon_state = "hop_office"
 
 /area/crew_quarters/heads/hos
-	name = "Head of Security's Office"
+	name = "Biuro Głowy Ochrony"
 	icon_state = "hos_office"
 
 /area/crew_quarters/heads/hor
-	name = "Research Director's Office"
+	name = "Biuro Dyrektora Naukowego"
 	icon_state = "rd_office"
 
 /area/comms
-	name = "Communications Relay"
+	name = "Radiowęzeł"
 	icon_state = "tcomsatcham"
 
 /area/server
-	name = "Messaging Server Room"
+	name = "Serwerownia Systemu Wiadmości"
 	icon_state = "server"
 
 //Crew
 
 /area/crew_quarters/dorms
-	name = "Dormitories"
+	name = "Sala Sypialna"
 	icon_state = "dorms"
 	safe = TRUE
 
 /area/crew_quarters/dorms/barracks
-	name = "Sleep Barracks"
+	name = "Sypialnie"
 
 /area/crew_quarters/dorms/barracks/male
-	name = "Male Sleep Barracks"
+	name = "Sypialnie Męskie"
 	icon_state = "dorms_male"
 
 /area/crew_quarters/dorms/barracks/female
-	name = "Female Sleep Barracks"
+	name = "Sypialnie Damskie"
 	icon_state = "dorms_female"
 
 /area/crew_quarters/toilet
-	name = "Dormitory Toilets"
+	name = "Sala Sypialna Toaleta"
 	icon_state = "toilet"
 
 /area/crew_quarters/toilet/auxiliary
-	name = "Auxiliary Restrooms"
+	name = "Dodatkowa Toaleta"
 	icon_state = "toilet"
 
 /area/crew_quarters/toilet/locker
-	name = "Locker Toilets"
+	name = "Szatnia Toaleta"
 	icon_state = "toilet"
 
 /area/crew_quarters/toilet/restrooms
-	name = "Restrooms"
+	name = "Toalety"
 	icon_state = "toilet"
 
 /area/crew_quarters/locker
-	name = "Locker Room"
+	name = "Szatnia"
 	icon_state = "locker"
 
 /area/crew_quarters/lounge
-	name = "Lounge"
+	name = "Hol"
 	icon_state = "lounge"
 
 /area/crew_quarters/fitness
-	name = "Fitness Room"
+	name = "Siłownia"
 	icon_state = "fitness"
 
 /area/crew_quarters/fitness/locker_room
-	name = "Unisex Locker Room"
+	name = "Szatnia Dzielona"
 	icon_state = "locker"
 
 /area/crew_quarters/fitness/locker_room/male
-	name = "Male Locker Room"
+	name = "Szatnia Męska"
 	icon_state = "locker_male"
 
 /area/crew_quarters/fitness/locker_room/female
-	name = "Female Locker Room"
+	name = "Szatnia Damska"
 	icon_state = "locker_female"
 
 
 /area/crew_quarters/fitness/recreation
-	name = "Recreation Area"
+	name = "Strefa Wypoczynkowa"
 	icon_state = "rec"
 
 /area/crew_quarters/cafeteria
-	name = "Cafeteria"
+	name = "Kafeteria"
 	icon_state = "cafeteria"
 
 /area/crew_quarters/kitchen
-	name = "Kitchen"
+	name = "Kuchnia"
 	icon_state = "kitchen"
 
 /area/crew_quarters/kitchen/coldroom
-	name = "Kitchen Cold Room"
+	name = "Kuchnia Chłodnia"
 	icon_state = "kitchen_cold"
 
 /area/crew_quarters/bar
 	name = "Bar"
 	icon_state = "bar"
 	mood_bonus = 5
-	mood_message = "<span class='nicegreen'>I love being in the bar!\n</span>"
+	mood_message = "<span class='nicegreen'>Kocham przesiadywać w barze!\n</span>"
 
 /area/crew_quarters/bar/atrium
 	name = "Atrium"
 	icon_state = "bar"
 
 /area/crew_quarters/electronic_marketing_den
-	name = "Electronic Marketing Den"
+	name = "Market Części Elektronicznych"
 	icon_state = "abandoned_m_den"
 
 /area/crew_quarters/abandoned_gambling_den
-	name = "Abandoned Gambling Den"
+	name = "Opuszczona Szulernia"
 	icon_state = "abandoned_g_den"
 
 /area/crew_quarters/abandoned_gambling_den/secondary
 	icon_state = "abandoned_g_den_2"
 
 /area/crew_quarters/theatre
-	name = "Theatre"
+	name = "Teatr"
 	icon_state = "theatre"
 
 /area/crew_quarters/theatre/abandoned
-	name = "Abandoned Theatre"
+	name = "Opuszczony Teatr"
 	icon_state = "abandoned_theatre"
 
 /area/library
-	name = "Library"
+	name = "Biblioteka"
 	icon_state = "library"
 	flags_1 = CULT_PERMITTED_1
 
 /area/library/lounge
-	name = "Library Lounge"
+	name = "Biblioteka Hol"
 	icon_state = "library_lounge"
 
 /area/library/artgallery
-	name = " Art Gallery"
+	name = "Galeria Sztuki"
 	icon_state = "library_gallery"
 
 /area/library/private
-	name = "Library Private Study"
+	name = "Biblioteka Czytalnia"
 	icon_state = "library_gallery_private"
 
 /area/library/upper
-	name = "Library Upper Floor"
+	name = "Biblioteka Górne Piętro"
 	icon_state = "library"
 
 /area/library/printer
-	name = "Library Printer Room"
+	name = "Biblioteka Drukarnia"
 	icon_state = "library"
 
 /area/library/abandoned
-	name = "Abandoned Library"
+	name = "Opuszczona Biblioteka"
 	icon_state = "abandoned_library"
 	flags_1 = CULT_PERMITTED_1
 
@@ -491,28 +491,28 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	flags_1 = NONE
 
 /area/chapel/main
-	name = "Chapel"
+	name = "Kaplica"
 
 /area/chapel/main/monastery
-	name = "Monastery"
+	name = "Klasztor"
 
 /area/chapel/office
-	name = "Chapel Office"
+	name = "Biuro Kapelana"
 	icon_state = "chapeloffice"
 
 /area/chapel/asteroid
-	name = "Chapel Asteroid"
+	name = "Kaplica Asterioidy"
 	icon_state = "explored"
 
 /area/chapel/asteroid/monastery
-	name = "Monastery Asteroid"
+	name = "Klasztor Asteroidy"
 
 /area/chapel/dock
-	name = "Chapel Dock"
+	name = "Dok Kaplicy"
 	icon_state = "construction"
 
 /area/lawoffice
-	name = "Law Office"
+	name = "Biuro Prawnicze"
 	icon_state = "law"
 
 
@@ -522,61 +522,61 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambientsounds = ENGINEERING
 
 /area/engine/engine_smes
-	name = "Engineering SMES"
+	name = "Inżynieria SMES"
 	icon_state = "engine_smes"
 
 /area/engine/engineering
-	name = "Engineering"
+	name = "Inżynieria"
 	icon_state = "engine"
 
 /area/engine/atmos
-	name = "Atmospherics"
+	name = "Atmosferyka"
 	icon_state = "atmos"
 	flags_1 = CULT_PERMITTED_1
 
 /area/engine/atmos/upper
-	name = "Upper Atmospherics"
+	name = "Górna Atmosferyka"
 
 /area/engine/atmospherics_engine
-	name = "Atmospherics Engine"
+	name = "Atmosferyka Silnik"
 	icon_state = "atmos_engine"
 	valid_territory = FALSE
 
 /area/engine/engine_room //donut station specific
-	name = "Engine Room"
+	name = "Maszynownia"
 	icon_state = "atmos_engine"
 
 /area/engine/lobby
-	name = "Engineering Lobby"
+	name = "Inżynieria Hol"
 	icon_state = "engi_lobby"
 
 /area/engine/engine_room/external
-	name = "Supermatter External Access"
+	name = "Supermateria Zewnętrzny Dostęp"
 	icon_state = "engine_foyer"
 
 /area/engine/supermatter
-	name = "Supermatter Engine"
+	name = "Reaktor Supermaterii"
 	icon_state = "engine_sm"
 	valid_territory = FALSE
 
 /area/engine/break_room
-	name = "Engineering Foyer"
+	name = "Inżynieria Hall"
 	icon_state = "engine_break"
 
 /area/engine/gravity_generator
-	name = "Gravity Generator Room"
+	name = "Pomieszczenie Generatora Grawitacji"
 	icon_state = "grav_gen"
 
 /area/engine/storage
-	name = "Engineering Storage"
+	name = "Inżynieria Magazyn"
 	icon_state = "engi_storage"
 
 /area/engine/storage_shared
-	name = "Shared Engineering Storage"
+	name = "Inżynieria Współdzielony Magazyn"
 	icon_state = "engi_storage"
 
 /area/engine/transit_tube
-	name = "Transit Tube"
+	name = "Tuba Przesyłowa"
 	icon_state = "transit_tube"
 
 
@@ -591,321 +591,321 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambientsounds = ENGINEERING
 
 /area/solar/fore
-	name = "Fore Solar Array"
+	name = "Górne Panele Słoneczne"
 	icon_state = "yellow"
 
 /area/solar/aft
-	name = "Aft Solar Array"
+	name = "Dolne Panele Słoneczne"
 	icon_state = "yellow"
 
 /area/solar/aux/port
-	name = "Port Bow Auxiliary Solar Array"
+	name = "Górne Dodatkowe Panele Słoneczne Bakburta"
 	icon_state = "panelsA"
 
 /area/solar/aux/starboard
-	name = "Starboard Bow Auxiliary Solar Array"
+	name = "Górne Dodatkowe Panele Słoneczne Sterburta"
 	icon_state = "panelsA"
 
 /area/solar/starboard
-	name = "Starboard Solar Array"
+	name = "Panele Słoneczne Sterburta"
 	icon_state = "panelsS"
 
 /area/solar/starboard/aft
-	name = "Starboard Quarter Solar Array"
+	name = "Dolne Panele Słoneczne Sterburta"
 	icon_state = "panelsAS"
 
 /area/solar/starboard/fore
-	name = "Starboard Bow Solar Array"
+	name = "Górne Panele Słoneczne Sterburta"
 	icon_state = "panelsFS"
 
 /area/solar/port
-	name = "Port Solar Array"
+	name = "Panele Słoneczne Bakburta"
 	icon_state = "panelsP"
 
 /area/solar/port/aft
-	name = "Port Quarter Solar Array"
+	name = "Dolne Panele Słoneczne Bakburta"
 	icon_state = "panelsAP"
 
 /area/solar/port/fore
-	name = "Port Bow Solar Array"
+	name = "Górne Panele Słoneczne Bakburta"
 	icon_state = "panelsFP"
 
 /area/solar/aisat
-	name = "AI Satellite Solars"
+	name = "Panele Słoneczne Satelita AI"
 	icon_state = "yellow"
 
 //Solar Maint
 
 /area/maintenance/solars
-	name = "Solar Maintenance"
+	name = "Tunel Techniczny Panele Słoneczne"
 	icon_state = "yellow"
 
 /area/maintenance/solars/port
-	name = "Port Solar Maintenance"
+	name = "Tunel Techniczny Panele Słoneczne Bakburta"
 	icon_state = "SolarcontrolP"
 
 /area/maintenance/solars/port/aft
-	name = "Port Quarter Solar Maintenance"
+	name = "Dolny Tunel Techniczny Panele Słoneczne Bakburta"
 	icon_state = "SolarcontrolAP"
 
 /area/maintenance/solars/port/fore
-	name = "Port Bow Solar Maintenance"
+	name = "Górny Tunel Techniczny Panele Słoneczne Bakburta"
 	icon_state = "SolarcontrolFP"
 
 /area/maintenance/solars/starboard
-	name = "Starboard Solar Maintenance"
+	name = "Tunel Techniczny Panele Słoneczne Sterburta"
 	icon_state = "SolarcontrolS"
 
 /area/maintenance/solars/starboard/aft
-	name = "Starboard Quarter Solar Maintenance"
+	name = "Dolny Tunel Techniczny Panele Słoneczne Sterburta"
 	icon_state = "SolarcontrolAS"
 
 /area/maintenance/solars/starboard/fore
-	name = "Starboard Bow Solar Maintenance"
+	name = "Górny Tunel Techniczny Panele Słoneczne Sterburta"
 	icon_state = "SolarcontrolFS"
 
 //Teleporter
 
 /area/teleporter
-	name = "Teleporter Room"
+	name = "Pomieszczenie Teleportera"
 	icon_state = "teleporter"
 	ambientsounds = ENGINEERING
 
 /area/gateway
-	name = "Gateway"
+	name = "Brama"
 	icon_state = "gateway"
 	ambientsounds = ENGINEERING
 
 //MedBay
 
 /area/medical
-	name = "Medical"
+	name = "Szpital"
 	icon_state = "medbay1"
 	ambientsounds = MEDICAL
 
 /area/medical/abandoned
-	name = "Abandoned Medbay"
+	name = "Opuszczony Szpital"
 	icon_state = "abandoned_medbay"
 	ambientsounds = list('sound/ambience/signal.ogg')
 
 /area/medical/medbay/central
-	name = "Medbay Central"
+	name = "Szpital Głowny"
 	icon_state = "med_central"
 
 /area/medical/medbay/lobby
-	name = "Medbay Lobby"
+	name = "Szpital Hol"
 	icon_state = "med_lobby"
 
 	//Medbay is a large area, these additional areas help level out APC load.
 
 /area/medical/medbay/zone2
-	name = "Medbay"
+	name = "Szpital"
 	icon_state = "medbay2"
 
 /area/medical/medbay/aft
-	name = "Medbay Aft"
+	name = "Szpital Górny"
 	icon_state = "med_aft"
 
 /area/medical/storage
-	name = "Medbay Storage"
+	name = "Szpital Magazyn"
 	icon_state = "med_storage"
 
 /area/medical/paramedic
-	name = "Paramedic Dispatch"
+	name = "Pomieszczenie Ratowników Medycznych"
 	icon_state = "paramedic"
 
 /area/medical/office
-	name = "Medical Office"
+	name = "Gabinet Medyczny"
 	icon_state = "med_office"
 
 /area/medical/surgery/room_c
-	name = "Surgery C"
+	name = "Sala Operacyjna C"
 	icon_state = "surgery"
 
 /area/medical/surgery/room_d
-	name = "Surgery D"
+	name = "Sala Operacyjna D"
 	icon_state = "surgery"
 
 /area/medical/break_room
-	name = "Medical Break Room"
+	name = "Szpital Pokój Socjalny"
 	icon_state = "med_break"
 
 /area/medical/coldroom
-	name = "Medical Cold Room"
+	name = "Szpital Chłodnia"
 	icon_state = "kitchen_cold"
 
 /area/medical/patients_rooms
-	name = "Patients' Rooms"
+	name = "Pokoje Pacjentów"
 	icon_state = "patients"
 
 /area/medical/patients_rooms/room_a
-	name = "Patient Room A"
+	name = "Pokój Pacjenta A"
 	icon_state = "patients"
 
 /area/medical/patients_rooms/room_b
-	name = "Patient Room B"
+	name = "Pokój Pacjenta B"
 	icon_state = "patients"
 
 /area/medical/virology
-	name = "Virology"
+	name = "Wirologia"
 	icon_state = "virology"
 	flags_1 = CULT_PERMITTED_1
 
 /area/medical/morgue
-	name = "Morgue"
+	name = "Kostnica"
 	icon_state = "morgue"
 	ambientsounds = SPOOKY
 
 /area/medical/chemistry
-	name = "Chemistry"
+	name = "Chemia"
 	icon_state = "chem"
 
 /area/medical/pharmacy
-	name = "Pharmacy"
+	name = "Farmaceutyka"
 	icon_state = "pharmacy"
 
 /area/medical/surgery
-	name = "Surgery"
+	name = "Chirurgia"
 	icon_state = "surgery"
 
 /area/medical/surgery/room_b
-	name = "Surgery B"
+	name = "Sala Operacyjna B"
 	icon_state = "surgery"
 
 /area/medical/cryo
-	name = "Cryogenics"
+	name = "Kriogenika"
 	icon_state = "cryo"
 
 /area/medical/exam_room
-	name = "Exam Room"
+	name = "Pomieszczenie Egzaminacyjne"
 	icon_state = "exam_room"
 
 /area/medical/genetics
-	name = "Genetics Lab"
+	name = "Laboratorium Genetyczne"
 	icon_state = "genetics"
 
 /area/medical/sleeper
-	name = "Medbay Treatment Center"
+	name = "Sala Medyczna"
 	icon_state = "exam_room"
 
 /area/medical/psychology
-	name = "Psychology Office"
+	name = "Biuro Psychologa"
 	icon_state = "psychology"
 	mood_bonus = 3
-	mood_message = "<span class='nicegreen'>I feel at ease here.\n</span>"
+	mood_message = "<span class='nicegreen'>Czuję, że ktoś wreszcie mnie rozumie.\n</span>"
 	ambientsounds = list('sound/ambience/aurora_caelus_short.ogg')
 
 //Security
 
 /area/security
-	name = "Security"
+	name = "Ochrona"
 	icon_state = "security"
 	ambientsounds = HIGHSEC
 
 /area/security/main
-	name = "Security Office"
+	name = "Biuro Ochrony"
 	icon_state = "security"
 
 /area/security/brig
-	name = "Brig"
+	name = "Bryg"
 	icon_state = "brig"
 
 /area/security/brig/upper
-	name = "Brig Overlook"
+	name = "Górny Bryg"
 
 /area/security/courtroom
-	name = "Courtroom"
+	name = "Sala Sądowa"
 	icon_state = "courtroom"
 
 /area/security/prison
-	name = "Prison Wing"
+	name = "Skrzydło Więzienne"
 	icon_state = "sec_prison"
 
 /area/security/prison/toilet //radproof
-	name = "Prison Toilet"
+	name = "Więzienie Toaleta"
 	icon_state = "sec_prison_safe"
 
 /area/security/prison/safe //radproof
-	name = "Prison Wing Cells"
+	name = "Cele Więzienne"
 	icon_state = "sec_prison_safe"
 
 /area/security/prison/upper
-	name = "Upper Prison Wing"
+	name = "Górne Skrzydło Więzienne"
 	icon_state = "prison_upper"
 
 /area/security/prison/visit
-	name = "Prison Visitation Area"
+	name = "Pomieszczenie Odwiedzin"
 	icon_state = "prison_visit"
 
 /area/security/prison/rec
-	name = "Prison Rec Room"
+	name = "Więzienna Sala Przesłuchań"
 	icon_state = "prison_rec"
 
 /area/security/prison/mess
-	name = "Prison Mess Hall"
+	name = "Więzienie Hol"
 	icon_state = "prison_mess"
 
 /area/security/prison/work
-	name = "Prison Work Room"
+	name = "Więzienie Warsztat"
 	icon_state = "prison_work"
 
 /area/security/prison/shower
-	name = "Prison Shower"
+	name = "Więzienie Prysznic"
 	icon_state = "prison_shower"
 
 /area/security/prison/workout
-	name = "Prison Gym"
+	name = "Więzienie Siłownia"
 	icon_state = "prison_workout"
 
 /area/security/prison/garden
-	name = "Prison Garden"
+	name = "Więzienie Ogród"
 	icon_state = "prison_garden"
 
 /area/security/processing
-	name = "Labor Shuttle Dock"
+	name = "Prom Kolonia Karna"
 	icon_state = "sec_processing"
 
 /area/security/processing/cremation
-	name = "Security Crematorium"
+	name = "Ochrona Krematorium"
 	icon_state = "sec_cremation"
 
 /area/security/warden
-	name = "Brig Control"
+	name = "Dowództwo Brygu"
 	icon_state = "warden"
 
 /area/security/detectives_office
-	name = "Detective's Office"
+	name = "Biuro Detektywa"
 	icon_state = "detective"
 	ambientsounds = list('sound/ambience/ambidet1.ogg','sound/ambience/ambidet2.ogg')
 
 /area/security/detectives_office/private_investigators_office
-	name = "Private Investigator's Office"
+	name = "Biuro Prywatnego Detektywa"
 	icon_state = "investigate_office"
 
 /area/security/range
-	name = "Firing Range"
+	name = "Strzelnica"
 	icon_state = "firingrange"
 
 /area/security/execution
 	icon_state = "execution_room"
 
 /area/security/execution/transfer
-	name = "Transfer Centre"
+	name = "Centrum Transferowe"
 	icon_state = "sec_processing"
 
 /area/security/execution/education
-	name = "Prisoner Education Chamber"
+	name = "Sala Edukacji Więźniów"
 
 /area/security/nuke_storage
-	name = "Vault"
+	name = "Skarbiec"
 	icon_state = "nuke_storage"
 
 /area/ai_monitored/nuke_storage
-	name = "Vault"
+	name = "Skarbiec"
 	icon_state = "nuke_storage"
 
 /area/security/checkpoint
-	name = "Security Checkpoint"
+	name = "Punkt Kontrolny Ochrony"
 	icon_state = "checkpoint1"
 
 /area/security/checkpoint/auxiliary
@@ -915,27 +915,27 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "checkpoint_esc"
 
 /area/security/checkpoint/supply
-	name = "Security Post - Cargo Bay"
+	name = "Posterunek Ochrony - Ładownia"
 	icon_state = "checkpoint_supp"
 
 /area/security/checkpoint/engineering
-	name = "Security Post - Engineering"
+	name = "Posterunek Ochrony - Inżynieria"
 	icon_state = "checkpoint_engi"
 
 /area/security/checkpoint/medical
-	name = "Security Post - Medbay"
+	name = "Posterunek Ochrony - Szpital"
 	icon_state = "checkpoint_med"
 
 /area/security/checkpoint/science
-	name = "Security Post - Science"
+	name = "Posterunek Ochrony - Wydział Naukowy"
 	icon_state = "checkpoint_sci"
 
 /area/security/checkpoint/science/research
-	name = "Security Post - Research Division"
+	name = "Posterunek Ochrony - Wydział Naukowy"
 	icon_state = "checkpoint_res"
 
 /area/security/checkpoint/customs
-	name = "Customs"
+	name = "Urząd Celny"
 	icon_state = "customs_point"
 
 /area/security/checkpoint/customs/auxiliary
@@ -945,234 +945,234 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 //Service
 
 /area/quartermaster
-	name = "Quartermasters"
+	name = "Kwatermistrza"
 	icon_state = "quart"
 
 /area/quartermaster/sorting
-	name = "Delivery Office"
+	name = "Biuro Pocztowe"
 	icon_state = "cargo_delivery"
 
 /area/quartermaster/warehouse
-	name = "Warehouse"
+	name = "Magazyn"
 	icon_state = "cargo_warehouse"
 
 /area/quartermaster/warehouse/upper
-	name = "Upper Warehouse"
+	name = "Górny Magazyn"
 
 /area/quartermaster/office
-	name = "Cargo Office"
+	name = "Biuro Ładowni"
 	icon_state = "cargo_office"
 
 /area/quartermaster/storage
-	name = "Cargo Bay"
+	name = "Strefa Załadunku"
 	icon_state = "cargo_bay"
 
 /area/quartermaster/qm
-	name = "Quartermaster's Office"
+	name = "Biuro Kwatermistrza"
 	icon_state = "quart_office"
 
 /area/quartermaster/qm/perch
-	name = "Quartermaster's Perch"
+	name = "Punkt Obserwacyjny Kwatermistrza"
 	icon_state = "quart_perch"
 
 /area/quartermaster/miningdock
-	name = "Mining Dock"
+	name = "Dok Górniczy"
 	icon_state = "mining"
 
 /area/quartermaster/miningoffice
-	name = "Mining Office"
+	name = "Biuro Górnicze"
 	icon_state = "mining"
 
 /area/janitor
-	name = "Custodial Closet"
+	name = "Schowek Sprzątacza"
 	icon_state = "janitor"
 	flags_1 = CULT_PERMITTED_1
 
 /area/hydroponics
-	name = "Hydroponics"
+	name = "Hydroponika"
 	icon_state = "hydro"
 
 /area/hydroponics/upper
-	name = "Upper Hydroponics"
+	name = "Górna Hydroponika"
 	icon_state = "hydro"
 
 /area/hydroponics/garden
-	name = "Garden"
+	name = "Ogród"
 	icon_state = "garden"
 
 /area/hydroponics/garden/abandoned
-	name = "Abandoned Garden"
+	name = "Opuszczony Ogród"
 	icon_state = "abandoned_garden"
 
 /area/hydroponics/garden/monastery
-	name = "Monastery Garden"
+	name = "Ogród Klasztoru"
 	icon_state = "hydro"
 
 
 //Science
 
 /area/science
-	name = "Science Division"
+	name = "Wydział Badawczy"
 	icon_state = "science"
 
 /area/science/lab
-	name = "Research and Development"
+	name = "Badania i Rozwój"
 	icon_state = "research"
 
 /area/science/xenobiology
-	name = "Xenobiology Lab"
+	name = "Laboratorium Ksenobiologii"
 	icon_state = "xenobio"
 
 /area/science/storage
-	name = "Toxins Storage"
+	name = "Przechowalnia Toksyn"
 	icon_state = "tox_storage"
 
 /area/science/test_area
 	valid_territory = FALSE
-	name = "Toxins Test Area"
+	name = "Obszar Testowania Toksyn"
 	icon_state = "tox_test"
 
 /area/science/mixing
-	name = "Toxins Mixing Lab"
+	name = "Laboratorium Fuzji Toksyn"
 	icon_state = "tox_mix"
 
 /area/science/mixing/chamber
-	name = "Toxins Mixing Chamber"
+	name = "Komora Fuzji Toksyn"
 	icon_state = "tox_mix_chamber"
 	valid_territory = FALSE
 
 /area/science/genetics
-	name = "Genetics Lab"
+	name = "Laboratorium Genetyczne"
 	icon_state = "geneticssci"
 
 /area/science/misc_lab
-	name = "Testing Lab"
+	name = "Laboratorium Testowe"
 	icon_state = "tox_misc"
 
 /area/science/misc_lab/range
-	name = "Research Testing Range"
+	name = "Obszar Testowania Wynalazków"
 	icon_state = "tox_range"
 
 /area/science/server
-	name = "Research Division Server Room"
+	name = "Serwerownia Wydziału Badawczego"
 	icon_state = "server"
 
 /area/science/explab
-	name = "Experimentation Lab"
+	name = "Laboratorium Eksperymentalne"
 	icon_state = "exp_lab"
 
 /area/science/robotics
-	name = "Robotics"
+	name = "Robotyka"
 	icon_state = "robotics"
 
 /area/science/robotics/mechbay
-	name = "Mech Bay"
+	name = "Zatoka Mechów"
 	icon_state = "mechbay"
 
 /area/science/robotics/lab
-	name = "Robotics Lab"
+	name = "Laboratorium Robotyki"
 	icon_state = "ass_line"
 
 /area/science/research
-	name = "Research Division"
+	name = "Wydział Badawczy"
 	icon_state = "science"
 
 /area/science/research/abandoned
-	name = "Abandoned Research Lab"
+	name = "Opuszczone Laboratorium Badawcze"
 	icon_state = "abandoned_sci"
 
 /area/science/nanite
-	name = "Nanite Lab"
+	name = "Laboratorium Nanitowe"
 	icon_state = "nanite"
 
 //Storage
 
 /area/storage/tools
-	name = "Auxiliary Tool Storage"
+	name = "Dodatkowy Skład Narzędziowy"
 	icon_state = "tool_storage"
 
 /area/storage/primary
-	name = "Primary Tool Storage"
+	name = "Główny Skład Narzędziowy"
 	icon_state = "primary_storage"
 
 /area/storage/art
-	name = "Art Supply Storage"
+	name = "Skład Przyborów Plastycznych"
 	icon_state = "art_storage"
 
 /area/storage/tcom
-	name = "Telecomms Storage"
+	name = "Skład Urządzeń Telekomunikacyjnych"
 	icon_state = "tcom"
 	valid_territory = FALSE
 
 /area/storage/eva
-	name = "EVA Storage"
+	name = "Skład EVA"
 	icon_state = "eva"
 
 /area/storage/emergency/starboard
-	name = "Starboard Emergency Storage"
+	name = "Skład Ratunkowy Sterburta"
 	icon_state = "emergency_storage"
 
 /area/storage/emergency/port
-	name = "Port Emergency Storage"
+	name = "Skład Ratunkowy Bakburta"
 	icon_state = "emergency_storage"
 
 /area/storage/tech
-	name = "Technical Storage"
+	name = "Skład Techniczny"
 	icon_state = "aux_storage"
 
 /area/storage/mining
-	name = "Public Mining Storage"
+	name = "Publiczny Skład Górniczy"
 	icon_state = "mining"
 
 //Construction
 
 /area/construction
-	name = "Construction Area"
+	name = "Strefa Budowlana"
 	icon_state = "construction"
 	ambientsounds = ENGINEERING
 
 /area/construction/mining/aux_base
-	name = "Auxiliary Base Construction"
+	name = "Strefa Budowlana Bazy Dodatkowej"
 	icon_state = "aux_base_construction"
 
 /area/construction/storage_wing
-	name = "Storage Wing"
+	name = "Skrzydło Magazynowe"
 	icon_state = "storage_wing"
 
 // Vacant Rooms
 /area/vacant_room
-	name = "Vacant Room"
+	name = "Wolne Pomieszczenie"
 	icon_state = "vacant_room"
 	ambientsounds = MAINTENANCE
 
 /area/vacant_room/office
-	name = "Vacant Office"
+	name = "Wolne Biuro"
 	icon_state = "vacant_office"
 
 /area/vacant_room/commissary
-	name = "Vacant Commissary"
+	name = "Wolna Kantyna"
 	icon_state = "vacant_commissary"
 
 //AI
 
 /area/ai_monitored/security/armory
-	name = "Armory"
+	name = "Zbrojownia"
 	icon_state = "armory"
 	ambientsounds = HIGHSEC
 
 /area/ai_monitored/security/armory/upper
-	name = "Upper Armory"
+	name = "Górna Zbrojownia"
 
 /area/ai_monitored/storage/eva
-	name = "EVA Storage"
+	name = "Skład EVA"
 	icon_state = "eva"
 	ambientsounds = HIGHSEC
 
 /area/ai_monitored/storage/eva/upper
-	name = "Upper EVA Storage"
+	name = "Górny Skład EVA"
 
 /area/ai_monitored/storage/satellite
-	name = "AI Satellite Maint"
+	name = "Tunel Techniczny Satelity AI"
 	icon_state = "ai_storage"
 	ambientsounds = HIGHSEC
 
@@ -1182,51 +1182,51 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambientsounds = list('sound/ambience/ambimalf.ogg', 'sound/ambience/ambitech.ogg', 'sound/ambience/ambitech2.ogg', 'sound/ambience/ambiatmos.ogg', 'sound/ambience/ambiatmos2.ogg')
 
 /area/ai_monitored/turret_protected/ai_upload
-	name = "AI Upload Chamber"
+	name = "Komora Zgrywania AI"
 	icon_state = "ai_upload"
 
 /area/ai_monitored/turret_protected/ai_upload_foyer
-	name = "AI Upload Access"
+	name = "Śluza Komory Zgrywania AI"
 	icon_state = "ai_upload_foyer"
 
 /area/ai_monitored/turret_protected/ai
-	name = "AI Chamber"
+	name = "Komora AI"
 	icon_state = "ai_chamber"
 
 /area/ai_monitored/turret_protected/aisat
-	name = "AI Satellite"
+	name = "Satelita AI"
 	icon_state = "ai"
 
 /area/ai_monitored/turret_protected/aisat/atmos
-	name = "AI Satellite Atmos"
+	name = "Satelita AI Atmosferyka"
 	icon_state = "ai"
 
 /area/ai_monitored/turret_protected/aisat/foyer
-	name = "AI Satellite Foyer"
+	name = "Satelita AI Hol"
 	icon_state = "ai_foyer"
 
 /area/ai_monitored/turret_protected/aisat/service
-	name = "AI Satellite Service"
+	name = "Satelita AI Serwis"
 	icon_state = "ai"
 
 /area/ai_monitored/turret_protected/aisat/hallway
-	name = "AI Satellite Hallway"
+	name = "Satelita AI Korytarz"
 	icon_state = "ai"
 
 /area/aisat
-	name = "AI Satellite Exterior"
+	name = "Satelita AI Powłoka"
 	icon_state = "ai"
 
 /area/ai_monitored/turret_protected/aisat_interior
-	name = "AI Satellite Antechamber"
+	name = "Satelita AI Wejście"
 	icon_state = "ai_interior"
 
 /area/ai_monitored/turret_protected/AIsatextAS
-	name = "AI Sat Ext"
+	name = "Satelita AI Wyjście"
 	icon_state = "ai_sat_east"
 
 /area/ai_monitored/turret_protected/AIsatextAP
-	name = "AI Sat Ext"
+	name = "Satelita AI Wyjście"
 	icon_state = "ai_sat_west"
 
 
@@ -1237,26 +1237,26 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 											'sound/ambience/ambitech2.ogg', 'sound/ambience/ambitech3.ogg', 'sound/ambience/ambimystery.ogg')
 
 /area/tcommsat/computer
-	name = "Telecomms Control Room"
+	name = "Pomieszczenie Kontrolne Telekomunikacji"
 	icon_state = "tcomsatcomp"
 
 /area/tcommsat/server
-	name = "Telecomms Server Room"
+	name = "Serwerownia Telekomunikacji"
 	icon_state = "tcomsatcham"
 
 /area/tcommsat/server/upper
-	name = "Upper Telecomms Server Room"
+	name = "Górna Serwerownia Telekomunikacji"
 
 //External Hull Access
 /area/maintenance/external
-	name = "External Hull Access"
+	name = "Śluza Zewnętrznej Powłoki"
 	icon_state = "amaint"
 
 /area/maintenance/external/aft
-	name = "Aft External Hull Access"
+	name = "Dolna Śluza Zewnętrznej Powłoki"
 
 /area/maintenance/external/port
-	name = "Port External Hull Access"
+	name = "Śluza Zewnętrznej Powłoki Bakburta"
 
 /area/maintenance/external/port/bow
-	name = "Port Bow External Hull Access"
+	name = "Górna Śluza Zewnętrznej Powłoki Bakburta"
