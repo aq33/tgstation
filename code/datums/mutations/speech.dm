@@ -142,22 +142,21 @@
 
 /datum/mutation/human/elvis
 	name = "Elvis"
-	desc = "A terrifying mutation named after its 'patient-zero'."
+	desc = "Straszliwa mutacja nazwana po jej 'pacjencie zero'."
 	quality = MINOR_NEGATIVE
-	locked = TRUE
-	text_gain_indication = "<span class='notice'>You feel pretty good, honeydoll.</span>"
-	text_lose_indication = "<span class='notice'>You feel a little less conversation would be great.</span>"
+	text_gain_indication = "<span class='notice'>Czujesz się świetnie, laleczko.</span>"
+	text_lose_indication = "<span class='notice'>Czujesz, że nie chcesz już tyle mówić.</span>"
 
 /datum/mutation/human/elvis/on_life()
 	switch(pick(1,2))
 		if(1)
 			if(prob(15))
-				var/list/dancetypes = list("swinging", "fancy", "stylish", "20'th century", "jivin'", "rock and roller", "cool", "salacious", "bashing", "smashing")
+				var/list/dancetypes = list("huśtające", "fantastyczne", "stylowe", "20-sto wieczne", "kręcoce", "rock 'n' rollowe", "cool", "ponętne", "zjawiskowe")
 				var/dancemoves = pick(dancetypes)
-				owner.visible_message("<b>[owner]</b> busts out some [dancemoves] moves!")
+				owner.visible_message("<b>[owner]</b> nagle zaczyna tańczyć, wykonując swoje [dancemoves] taneczne kroki!")
 		if(2)
 			if(prob(15))
-				owner.visible_message("<b>[owner]</b> [pick("jiggles their hips", "rotates their hips", "gyrates their hips", "taps their foot", "dances to an imaginary song", "jiggles their legs", "snaps their fingers")]!")
+				owner.visible_message("<b>[owner]</b> [pick("potrząsa bioderkami", "kręci bioderkami", "wiruje bioderkami", "postukuje nóżką", "tańczy do wymyślonej muzyki", "rusza nogami w rytm", "pstryka palcami")]!")
 
 /datum/mutation/human/elvis/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
@@ -173,15 +172,13 @@
 	var/message = speech_args[SPEECH_MESSAGE]
 	if(message)
 		message = " [message] "
-		message = replacetext(message," i'm not "," I ain't ")
-		message = replacetext(message," girl ",pick(" honey "," baby "," baby doll "))
-		message = replacetext(message," man ",pick(" son "," buddy "," brother"," pal "," friendo "))
-		message = replacetext(message," out of "," outta ")
-		message = replacetext(message," thank you "," thank you, thank you very much ")
-		message = replacetext(message," thanks "," thank you, thank you very much ")
-		message = replacetext(message," what are you "," whatcha ")
-		message = replacetext(message," yes ",pick(" sure", "yea "))
-		message = replacetext(message," muh valids "," my kicks ")
+		message = replacetext(message," nie jestem "," ooojjj jaaa nie jestem ")
+		message = replacetext(message," dziewczyno ",pick(" słodka "," dziecino "," laleczko "))
+		message = replacetext(message," facet ",pick(" synek "," typo "," brach"," kumpel "," typeczek "))
+		message = replacetext(message," dzieki "," dzieki, wielkie, wielkie dzięki")
+		message = replacetext(message," dziękuje "," dziękuje, bardzo, ale to bardzo dziękuje ")
+		message = replacetext(message," tak ",pick(" pewex", "taaaa ", "jaha"))
+
 		speech_args[SPEECH_MESSAGE] = trim(message)
 
 
@@ -189,9 +186,8 @@
 	name = "Stoner"
 	desc = "A common mutation that severely decreases intelligence."
 	quality = NEGATIVE
-	locked = TRUE
-	text_gain_indication = "<span class='notice'>You feel...totally chill, man!</span>"
-	text_lose_indication = "<span class='notice'>You feel like you have a better sense of time.</span>"
+	text_gain_indication = "<span class='notice'>Czujesz się... totaaaaaaaaaalnie wychilowany...</span>"
+	text_lose_indication = "<span class='notice'>Masz wrażenie, jakbyś lepiej odczuwał przepływ czasu.</span>"
 
 /datum/mutation/human/stoner/on_acquiring(mob/living/carbon/human/owner)
 	..()
