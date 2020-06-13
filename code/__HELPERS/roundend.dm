@@ -231,7 +231,7 @@
 	//Set news report and mode result
 	mode.set_round_result()
 
-	send2irc("Server", "Round just ended.")
+	send2chat("Server", "Runda właśnie się skończyła.")
 
 	if(length(CONFIG_GET(keyed_list/cross_server)))
 		send_news_report()
