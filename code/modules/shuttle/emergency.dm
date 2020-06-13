@@ -317,7 +317,7 @@
 					return
 				mode = SHUTTLE_DOCKED
 				setTimer(SSshuttle.emergencyDockTime)
-				send2adminchat("Server", "The Emergency Shuttle has docked with the station.")
+				send2chat("Server", "Statek ratunkowy właśnie zadokował do stacji.")
 				priority_announce("[SSshuttle.emergency] has docked with the station. You have [timeLeft(600)] minutes to board the Emergency Shuttle.", null, 'sound/ai/shuttledock.ogg', "Priority")
 				ShuttleDBStuff()
 
