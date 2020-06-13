@@ -474,7 +474,7 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		adminGreet(1)
 		holder.owner = null
 		GLOB.admins -= src
-		if (!GLOB.admins.len && SSticker.IsRoundInProgress() && false) //Only report this stuff if we are currently playing.
+		if (!GLOB.admins.len && SSticker.IsRoundInProgress() && FALSE) //Only report this stuff if we are currently playing.
 			var/cheesy_message = pick(
 				"I have no admins online!",\
 				"I'm all alone :(",\
