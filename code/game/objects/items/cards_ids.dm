@@ -380,7 +380,7 @@ update_label()
 				else if(user.gender == FEMALE)
 					input_name = "[pick(GLOB.first_names_female)] [pick(GLOB.last_names_female)]"
 				else
-					input_name = "[pick(pick(GLOB.first_names_female), pick(GLOB.first_names_male))] [pick(pick(GLOB.last_names_female), pick(GLOB.last_names_male))]"
+					input_name = "[human_first_name_random()] [human_last_name_random()]"
 
 			var/target_occupation = stripped_input(user, "What occupation would you like to put on this card?\nNote: This will not grant any access levels other than Maintenance.", "Agent card job assignment", assignment ? assignment : "Assistant", MAX_MESSAGE_LEN)
 			if(!target_occupation)

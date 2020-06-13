@@ -104,7 +104,7 @@
 			if(FEMALE)
 				. = capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names_female))
 			else
-				. = capitalize(pick(pick(GLOB.first_names_male), pick(GLOB.first_names_female))) + " " + capitalize(pick(pick(GLOB.last_names_male), pick(GLOB.last_names_female)))
+				. = capitalize(human_first_name_random()) + " " + capitalize(human_last_name_random())
 
 		if(!findname(.))
 			break

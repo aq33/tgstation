@@ -209,7 +209,7 @@
 		H.fully_replace_character_name(H.real_name,chosen_name)
 
 /datum/antagonist/nukeop/leader/proc/ask_name()
-	var/randomname = pick(pick(GLOB.last_names_female), pick(GLOB.last_names_male))
+	var/randomname = human_last_name_random()
 	var/newname = stripped_input(owner.current,"You are the nuke operative [title]. Please choose a last name for your family.", "Name change",randomname)
 	if (!newname)
 		newname = randomname
