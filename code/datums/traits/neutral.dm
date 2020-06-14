@@ -2,21 +2,21 @@
 //MAKE SURE THESE DO NOT MAJORLY IMPACT GAMEPLAY. those should be positive or negative traits.
 
 /datum/quirk/no_taste
-	name = "Ageusia"
-	desc = "You can't taste anything! Toxic food will still poison you."
+	name = "Aguezja"
+	desc = "Nie czujesz smaku! Toksyczne jedzenie nadal jest trujące."
 	value = 0
 	mob_trait = TRAIT_AGEUSIA
-	gain_text = "<span class='notice'>You can't taste anything!</span>"
-	lose_text = "<span class='notice'>You can taste again!</span>"
-	medical_record_text = "Patient suffers from ageusia and is incapable of tasting food or reagents."
+	gain_text = "<span class='notice'>Nie czujesz smaku!</span>"
+	lose_text = "<span class='notice'>Znowu czujesz smak!</span>"
+	medical_record_text = "Pacjent choruje na aguezję i nie czuje smaku potraw."
 
 /datum/quirk/foreigner
-	name = "Foreigner"
-	desc = "You're not from around here. You don't know Galactic Common!"
+	name = "Obcokrajowiec"
+	desc = "Nie jesteś stąd. Nie znasz Galaktycznego Pospolitego!"
 	value = 0
-	gain_text = "<span class='notice'>The words being spoken around you don't make any sense."
-	lose_text = "<span class='notice'>You've developed fluency in Galactic Common."
-	medical_record_text = "Patient does not speak Galactic Common and may require an interpreter."
+	gain_text = "<span class='notice'>Słowa które mówisz nie mają sensu."
+	lose_text = "<span class='notice'>Potrafisz płynnie rozmawiać w Galaktycznym Pospolitym."
+	medical_record_text = "Pacjent nie zna Galaktycznego Pospolitego i potrzebuje tłumacza."
 
 /datum/quirk/foreigner/add()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -31,12 +31,12 @@
 		H.remove_language(/datum/language/uncommon)
 
 /datum/quirk/vegetarian
-	name = "Vegetarian"
-	desc = "You find the idea of eating meat morally and physically repulsive."
+	name = "Wegetarianin"
+	desc = "Uważasz, że jedzenie mięsa jest niemoralne."
 	value = 0
-	gain_text = "<span class='notice'>You feel repulsion at the idea of eating meat.</span>"
-	lose_text = "<span class='notice'>You feel like eating meat isn't that bad.</span>"
-	medical_record_text = "Patient reports a vegetarian diet."
+	gain_text = "<span class='notice'>Odrzuca cię myśl jedzenia mięsa.</span>"
+	lose_text = "<span class='notice'>Uważasz, że mięso nie jest jednak takie złe.</span>"
+	medical_record_text = "Pacjent zgłosił, że stosuje dietę wegetariańską."
 
 /datum/quirk/vegetarian/add()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -55,20 +55,20 @@
 
 /datum/quirk/snob
 	name = "Snob"
-	desc = "You care about the finer things, if a room doesn't look nice its just not really worth it, is it?"
+	desc = "Obchodzą cię tylko piekne rzeczy, jeśli pokój nie wygląda ładnie to nie jest tego wart, czyż nie?"
 	value = 0
-	gain_text = "<span class='notice'>You feel like you understand what things should look like.</span>"
-	lose_text = "<span class='notice'>Well who cares about deco anyways?</span>"
-	medical_record_text = "Patient seems to be rather stuck up."
+	gain_text = "<span class='notice'>Czujesz, że znasz definicję piękna.</span>"
+	lose_text = "<span class='notice'>Kogo tak właściwie obchodzi wystrój?</span>"
+	medical_record_text = "Pacjent ma wygórowane ego."
 	mob_trait = TRAIT_SNOB
 
 /datum/quirk/pineapple_liker
-	name = "Ananas Affinity"
-	desc = "You find yourself greatly enjoying fruits of the ananas genus. You can't seem to ever get enough of their sweet goodness!"
+	name = "Uwielbienie Ananasa"
+	desc = "Uwielbiasz jeść potrawy z ananasem. Nigdy nie masz dość ich słodkości!"
 	value = 0
-	gain_text = "<span class='notice'>You feel an intense craving for pineapple.</span>"
-	lose_text = "<span class='notice'>Your feelings towards pineapples seem to return to a lukewarm state.</span>"
-	medical_record_text = "Patient demonstrates a pathological love of pineapple."
+	gain_text = "<span class='notice'>Czujesz niesamowitą potrzebę zjedzenia ananasa.</span>"
+	lose_text = "<span class='notice'>Ananasy nie robią już na tobie wrażenia.</span>"
+	medical_record_text = "Pacjent wykazuje patologiczne zamiłowanie do spożywania ananasów."
 
 /datum/quirk/pineapple_liker/add()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -82,12 +82,12 @@
 		species.liked_food &= ~PINEAPPLE
 
 /datum/quirk/pineapple_hater
-	name = "Ananas Aversion"
-	desc = "You find yourself greatly detesting fruits of the ananas genus. Serious, how the hell can anyone say these things are good? And what kind of madman would even dare putting it on a pizza!?"
+	name = "Obrzydzenie Ananasa"
+	desc = "Nie lubisz spożywać potraw z ananasem. Serio, komu to w ogóle smakuje? I jaki szaleniec uznał, że dobrym pomysłem jest dodawanie ich do pizzy!?"
 	value = 0
-	gain_text = "<span class='notice'>You find yourself pondering what kind of idiot actually enjoys pineapples...</span>"
-	lose_text = "<span class='notice'>Your feelings towards pineapples seem to return to a lukewarm state.</span>"
-	medical_record_text = "Patient is correct to think that pineapple is disgusting."
+	gain_text = "<span class='notice'>Zastanawasz się jakiemu idiocie w ogóle smakują ananasy...</span>"
+	lose_text = "<span class='notice'>Ananasy nie robią już na tobie wrażenia.</span>"
+	medical_record_text = "Pacjent ma rację uważając, że ananasy są ochydne."
 
 /datum/quirk/pineapple_hater/add()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -101,12 +101,12 @@
 		species.disliked_food &= ~PINEAPPLE
 
 /datum/quirk/deviant_tastes
-	name = "Deviant Tastes"
-	desc = "You dislike food that most people enjoy, and find delicious what they don't."
+	name = "Dziwne Preferencje Kulinarne"
+	desc = "Nie lubisz jedzenia, które wiekszość ludzi uznaje za dobre, a ubóstwiasz to którego nikt inny nie tknie."
 	value = 0
-	gain_text = "<span class='notice'>You start craving something that tastes strange.</span>"
-	lose_text = "<span class='notice'>You feel like eating normal food again.</span>"
-	medical_record_text = "Patient demonstrates irregular nutrition preferences."
+	gain_text = "<span class='notice'>Masz ochotę zjeść coś co smakuje dziwnie.</span>"
+	lose_text = "<span class='notice'>Masz ochotę zjeść coś normalnego.</span>"
+	medical_record_text = "Kubki smakowe pacjenta działają w nietypowy sposób."
 
 /datum/quirk/deviant_tastes/add()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -123,17 +123,17 @@
 		species.disliked_food = initial(species.disliked_food)
 
 /datum/quirk/monochromatic
-	name = "Monochromacy"
-	desc = "You suffer from full colorblindness, and perceive nearly the entire world in blacks and whites."
+	name = "Monochromatyczność"
+	desc = "Cierpisz na daltonizm, widzisz świat w czerni i bieli."
 	value = 0
-	medical_record_text = "Patient is afflicted with almost complete color blindness."
+	medical_record_text = "Pacjent wykazuje niemal całkowity daltonizm."
 
 /datum/quirk/monochromatic/add()
 	quirk_holder.add_client_colour(/datum/client_colour/monochrome)
 
 /datum/quirk/monochromatic/post_add()
 	if(quirk_holder.mind.assigned_role == "Detective")
-		to_chat(quirk_holder, "<span class='boldannounce'>Mmm. Nothing's ever clear on this station. It's all shades of gray...</span>")
+		to_chat(quirk_holder, "<span class='boldannounce'>Hmm. Ta stacja jest pełna brudu. Cała w odcieniach szarości...</span>")
 		quirk_holder.playsound_local(quirk_holder, 'sound/ambience/ambidet1.ogg', 50, FALSE)
 
 /datum/quirk/monochromatic/remove()
@@ -141,10 +141,10 @@
 		quirk_holder.remove_client_colour(/datum/client_colour/monochrome)
 
 /datum/quirk/phobia
-	name = "Phobia"
-	desc = "You are irrationally afraid of something."
+	name = "Fobia"
+	desc = "Czujesz irracjonalny lęk przed czymś."
 	value = 0
-	medical_record_text = "Patient has an irrational fear of something."
+	medical_record_text = "Pacjent odczuwa irracjonalny strach przed czymś."
 
 /datum/quirk/phobia/post_add()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -156,10 +156,10 @@
 		H.cure_trauma_type(/datum/brain_trauma/mild/phobia, TRAUMA_RESILIENCE_ABSOLUTE)
 
 /datum/quirk/needswayfinder
-	name = "Navigationally Challenged"
-	desc = "Lacking familiarity with certain stations, you start with a wayfinding pinpointer where available."
+	name = "Nawigacyjnie Upośledzony"
+	desc = "Brakuje ci znajomości rozkładu niektórych stacji, zaczynasz z wskaźnikiem."
 	value = 0
-	medical_record_text = "Patient demonstrates a keen ability to get lost."
+	medical_record_text = "Pacjent wykazuje tendencję do gubienia się."
 
 	var/obj/item/pinpointer/wayfinding/wayfinder
 	var/where
@@ -174,29 +174,29 @@
 	wayfinder.roundstart = TRUE
 
 	var/list/slots = list(
-		"in your left pocket" = ITEM_SLOT_LPOCKET,
-		"in your right pocket" = ITEM_SLOT_RPOCKET,
-		"in your backpack" = ITEM_SLOT_BACKPACK
+		"w swojej lewej kieszeni" = ITEM_SLOT_LPOCKET,
+		"w swojej prawej kieszeni" = ITEM_SLOT_RPOCKET,
+		"w swoim plecaku" = ITEM_SLOT_BACKPACK
 	)
-	where = H.equip_in_one_of_slots(wayfinder, slots, FALSE) || "at your feet"
+	where = H.equip_in_one_of_slots(wayfinder, slots, FALSE) || "pod twoimi stopami"
 
 /datum/quirk/needswayfinder/post_add()
 	if(!GLOB.wayfindingbeacons.len)
 		return
-	if(where == "in your backpack")
+	if(where == "w twoim plecaku")
 		var/mob/living/carbon/human/H = quirk_holder
 		SEND_SIGNAL(H.back, COMSIG_TRY_STORAGE_SHOW, H)
 
-	to_chat(quirk_holder, "<span class='notice'>There is a pinpointer [where], which can help you find your way around. Click in-hand to activate.</span>")
+	to_chat(quirk_holder, "<span class='notice'>Masz wskaźnik [where], pomoże ci on się odnaleźć na stacji. Kliknij na niego, kiedy masz go w dłoni, żeby go aktywować.</span>")
 
 /datum/quirk/bald
-	name = "Smooth-Headed"
-	desc = "You have no hair and are quite insecure about it! Keep your wig on, or at least your head covered up."
+	name = "Gładkogłowy"
+	desc = "Nie masz włosów na głowie i bardzo się tego wstydzisz! Noś swój tupecik lub chociaż przykryj czymś głowę."
 	value = 0
 	mob_trait = TRAIT_BALD
-	gain_text = "<span class='notice'>Your head is as smooth as can be, it's terrible.</span>"
-	lose_text = "<span class='notice'>Your head itches, could it be... growing hair?!</span>"
-	medical_record_text = "Patient starkly refused to take off headwear during examination."
+	gain_text = "<span class='notice'>Twoje głowa jest gładka niczym pupcia niemowlaka, gorzej być nie może.</span>"
+	lose_text = "<span class='notice'>Głowa cię swędzi, czy tobie... odrastają włosy?!</span>"
+	medical_record_text = "Pacjent stanowczo odmówił zdjęcia nakrycia glowy podczas badania."
 	///The user's starting hairstyle
 	var/old_hair
 
