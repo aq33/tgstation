@@ -32,7 +32,7 @@
 	excludefromjob = list("Captain")
 
 /datum/objective_item/steal/hoslaser
-	name = "osobisty pistolet laserowy Głowy Ochrony."
+	name = "osobisty pistolet laserowy Komendanta."
 	targetitem = /obj/item/gun/energy/e_gun/hos
 	difficulty = 10
 	excludefromjob = list("Head Of Security")
@@ -50,7 +50,7 @@
 	excludefromjob = list("Captain")
 
 /datum/objective_item/steal/magboots
-	name = "zaawansowane buty magnetyczne Majstra."
+	name = "zaawansowane buty magnetyczne Szefa Inżynierii."
 	targetitem =  /obj/item/clothing/shoes/magboots/advance
 	difficulty = 5
 	excludefromjob = list("Chief Engineer")
@@ -103,7 +103,7 @@
 	..()
 
 /datum/objective_item/steal/supermatter
-	name = "srebro z kryształu supermaterii. Upewnij się, że jesteś ubrany w odpowiednie środki ochrony osobistej podczas pozyskiwania srebra!"
+	name = "odłamek kryształu supermaterii. Upewnij się, że jesteś ubrany w odpowiednie środki ochrony osobistej podczas pozyskiwania srebra!"
 	targetitem = /obj/item/nuke_core/supermatter_sliver
 	difficulty = 15
 
