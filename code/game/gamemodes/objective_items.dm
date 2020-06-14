@@ -129,7 +129,7 @@
 
 
 /datum/objective_item/steal/functionalai
-	name = działające AI."
+	name = "działające AI."
 	targetitem = /obj/item/aicard
 	difficulty = 20 //beyond the impossible
 
