@@ -416,7 +416,7 @@
 
 /datum/quirk/insanity
 	name = "Zaburzenia Dysocjacyjne"
-	desc = "Cierpisz na chorobę psychiczną wywołującą znaczne halucynacje. Toksyna "Mindbreaker" może złagodzić jej efekty, jesteś odporny na halucynacje, które wywołuje <b>To nie licencja na griefowanie.</b>"
+	desc = "Cierpisz na chorobę psychiczną wywołującą znaczne halucynacje. Toksyna Mindbreaker może złagodzić jej efekty, jesteś odporny na halucynacje, które wywołuje <b>To nie licencja na griefowanie.</b>"
 	value = -2
 	//no mob trait because it's handled uniquely
 	gain_text = "<span class='userdanger'>...</span>"
