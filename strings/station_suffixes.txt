@@ -1,65 +1,65 @@
-Station
-Frontier
-Suffix
-Death-trap
-Space-hulk
-Lab
-Hazard
-Academy
-Spess Junk
-Fishery
-No-Moon
-Tomb
-Crypt
-Hut
-Monkey
-Bomb
-Trade Post
-Fortress
-Village
-Town
-City
-Edition
-Hive
-Complex
-Base
-Facility
-Depot
-Outpost
-Installation
-Drydock
-Observatory
-Array
-Relay
+Stacja
+Granica
+Przyrostek
+Śmiertelna Pułapka
+Kosmiczny Hulk
+Laboratorium
+Niebezpieczeństwo
+Akademia
+Kosmiczny Śmieciuch
+Rybołówstwo
+Wcale Nie Księżyc
+Grobowiec
+Krypta
+Chatka
+Małpa
+Bomba
+Stanowisko Handlowe
+Forteca
+Wioska
+Miasteczko
+MIasto
+Edycja
+Gniazdo
+Kompleks
+Baza
+Placówka
+Skład
+Posterunek
+Instalacja
+Suchy Dok
+Obserwatorium
+Szyk
+Przekaźnik
 Monitor
-Platform
-Construct
+Platforma
+Konstrukt
 Hangar
-Prison
-Center
+Więzienie
+Centrum
 Port
-Waystation
-Factory
-Waypoint
-Stopover
-Hub
-HQ
-Office
-Object
-Fortification
-Colony
-Planet-Cracker
-Roost
-Fat Camp
-Airstrip
-Harbor
-Garden
-Continent
-Environment
-Course
-Country
-Province
-Workspace
+Przystanek
+Fabryka
+Stop
+Przycupka
+Ośrodek
+Sztab
+Biuro
+Objekt
+Fortyfikacja
+Kolonia
+Niszczyciel Planet
+Grzęda
+Obóz Grubasów
+Pas Startowy
+Port
+Ogród
+Kontynent
+Środowisko
+Kurs
+Kraj
+Prowincja
+Miejsce Pracy
 Metro
-Warehouse
-Space Junk
+Magazyn
+Kosmiczny Śmieć
