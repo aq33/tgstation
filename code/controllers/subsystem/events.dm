@@ -47,8 +47,9 @@ SUBSYSTEM_DEF(events)
 
 //
 /datum/controller/subsystem/events/proc/checkEvent()
+	var/chance_mult = get_active_player_count(alive_check = 1, afk_check = 1, human_check = 0) < 10 ? 0.5 : 1
 	while(last_check < world.time)
-		if(prob(event_chance))
+		if(prob(event_chance * chance_mult))
 			spawnEvent()
 		last_check++
 	last_check = world.time
