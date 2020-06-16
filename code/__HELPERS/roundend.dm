@@ -239,15 +239,15 @@
 	//Set news report and mode result
 	mode.set_round_result()
 
-	send2adminchat("Server", "Round just ended.")
+	send2chat("Server", "Runda właśnie się skończyła.")
 
 	if(length(CONFIG_GET(keyed_list/cross_server)))
 		send_news_report()
 
 	CHECK_TICK
 
+	//check config blah blah
 	handle_hearts()
-	set_observer_default_invisibility(0, "<span class='warning'>The round is over! You are now visible to the living.</span>")
 
 	CHECK_TICK
 

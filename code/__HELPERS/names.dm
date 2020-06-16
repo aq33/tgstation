@@ -16,6 +16,12 @@
 /proc/moth_name()
 	return "[pick(GLOB.moth_first)] [pick(GLOB.moth_last)]"
 
+/proc/human_last_name_random()
+	return pick(pick(GLOB.last_names_female), pick(GLOB.last_names_male))
+
+/proc/human_first_name_random()
+	return pick(pick(GLOB.first_names_female), pick(GLOB.first_names_male))
+
 GLOBAL_VAR(command_name)
 /proc/command_name()
 	if (GLOB.command_name)
@@ -193,9 +199,7 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 							if(prob(10))
 								. += pick(lizard_name(MALE),lizard_name(FEMALE))
 							else
-								var/new_name = pick(pick(GLOB.first_names_male,GLOB.first_names_female))
-								new_name += " "
-								new_name += pick(GLOB.last_names)
+								var/new_name = pick(pick(GLOB.first_names_male) + " " + pick(GLOB.last_names_male), pick(GLOB.first_names_female) + " " + pick(GLOB.last_names_female))
 								. += new_name
 					if(2)
 						. += pick(get_all_jobs())//Returns a job.

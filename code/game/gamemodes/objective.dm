@@ -183,9 +183,9 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/assassinate/update_explanation_text()
 	..()
 	if(target && target.current)
-		explanation_text = "Assassinate [target.name], the [!target_role_type ? target.assigned_role : target.special_role]."
+		explanation_text = "Dokonaj zamachu na [target.name], [!target_role_type ? target.assigned_role : target.special_role]."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Cel dowolny"
 
 /datum/objective/assassinate/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
@@ -196,7 +196,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/assassinate/internal/update_explanation_text()
 	..()
 	if(target && !target.current)
-		explanation_text = "Assassinate [target.name], who was obliterated"
+		explanation_text = "Dokonaj zamachu na [target.name], rola nieznana"
 
 /datum/objective/mutiny
 	name = "mutiny"
@@ -217,9 +217,9 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/mutiny/update_explanation_text()
 	..()
 	if(target && target.current)
-		explanation_text = "Assassinate or exile [target.name], the [!target_role_type ? target.assigned_role : target.special_role]."
+		explanation_text = "Dokonaj zamachu na lub wygnaj [target.name], [!target_role_type ? target.assigned_role : target.special_role]."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Cel dowolny"
 
 /datum/objective/maroon
 	name = "maroon"
@@ -236,9 +236,9 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 /datum/objective/maroon/update_explanation_text()
 	if(target && target.current)
-		explanation_text = "Prevent [target.name], the [!target_role_type ? target.assigned_role : target.special_role], from escaping alive."
+		explanation_text = "Powstrzymaj [target.name], [!target_role_type ? target.assigned_role : target.special_role], przed ucieczką."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Cel dowolny"
 
 /datum/objective/maroon/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
@@ -270,9 +270,9 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/debrain/update_explanation_text()
 	..()
 	if(target && target.current)
-		explanation_text = "Steal the brain of [target.name], the [!target_role_type ? target.assigned_role : target.special_role]."
+		explanation_text = "Ukradnij mózg [target.name], [!target_role_type ? target.assigned_role : target.special_role]."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Cel dowolny"
 
 /datum/objective/debrain/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
@@ -299,9 +299,9 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/protect/update_explanation_text()
 	..()
 	if(target && target.current)
-		explanation_text = "Protect [target.name], the [!target_role_type ? target.assigned_role : target.special_role]."
+		explanation_text = "Ochroń [target.name], [!target_role_type ? target.assigned_role : target.special_role]."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Cel dowolny"
 
 /datum/objective/protect/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
@@ -326,9 +326,9 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/jailbreak/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Ensure that [target.name], the [!target_role_type ? target.assigned_role : target.special_role] escapes alive and out of custody."
+		explanation_text = "Dopilnuj żeby [target.name], [!target_role_type ? target.assigned_role : target.special_role] uciekł żywy i nie pojmany."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Cel dowolny"
 
 /datum/objective/jailbreak/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
@@ -342,14 +342,14 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/jailbreak/detain/update_explanation_text()
 	..()
 	if(target && target.current)
-		explanation_text = "Ensure that [target.name], the [!target_role_type ? target.assigned_role : target.special_role] is delivered to nanotrasen alive and in custody."
+		explanation_text = "Dopilnuj żeby [target.name], [!target_role_type ? target.assigned_role : target.special_role] dotarł do Centrali żywy i pojmany."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Cel dowolny"
 
 /datum/objective/hijack
 	name = "hijack"
-	explanation_text = "Hijack the shuttle to ensure no loyalist Nanotrasen crew escape alive and out of custody."
-	team_explanation_text = "Hijack the shuttle to ensure no loyalist Nanotrasen crew escape alive and out of custody. Leave no team member behind."
+	explanation_text = "Porwij prom ratunkowy, żeby upewnić się, że żaden lojalny członek personelu nie ucieknie żywy i nie pojmany."
+	team_explanation_text = "Porwij prom ratunkowy, żeby upewnić się, że żaden lojalny członek personelu nie ucieknie żywy i nie pojmany. Nie pozostaw żadnego członka drużyny."
 	martyr_compatible = 0 //Technically you won't get both anyway.
 
 /datum/objective/hijack/check_completion() // Requires all owners to escape.
@@ -392,7 +392,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 /datum/objective/robot_army
 	name = "robot army"
-	explanation_text = "Have at least eight active cyborgs synced to you."
+	explanation_text = "Upewnij się że jesteś zsynchronizowany z co najmniej ośmioma aktywnymi cyborgami."
 	martyr_compatible = 0
 
 /datum/objective/robot_army/check_completion()
@@ -409,8 +409,8 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 /datum/objective/escape
 	name = "escape"
-	explanation_text = "Escape on the shuttle or an escape pod alive and without being in custody."
-	team_explanation_text = "Have all members of your team escape on a shuttle or pod alive, without being in custody."
+	explanation_text = "Ucieknij na promie lub w kapsule ratunkowej, żywy i nie pojmany."
+	team_explanation_text = "Dopilnuj, żeby wszyscy członkowie twojej drużyny uciekli na promie lub w kapsule ratunkowej, żywi i nie pojmani."
 
 /datum/objective/escape/check_completion()
 	// Require all owners escape safely.
@@ -432,18 +432,18 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/escape/escape_with_identity/update_explanation_text()
 	if(target && target.current)
 		target_real_name = target.current.real_name
-		explanation_text = "Escape on the shuttle or an escape pod with the identity of [target_real_name], the [target.assigned_role]"
+		explanation_text = "Ucieknij na promie lub w kapsule ratunkowej jako [target_real_name], [target.assigned_role]"
 		var/mob/living/carbon/human/H
 		if(ishuman(target.current))
 			H = target.current
 		if(H && H.get_id_name() != target_real_name)
 			target_missing_id = 1
 		else
-			explanation_text += " while wearing their identification card"
+			explanation_text += ", mając na sobie jego kartę dostępu"
 		explanation_text += "." //Proper punctuation is important!
 
 	else
-		explanation_text = "Free Objective."
+		explanation_text = "Cel dowolny."
 
 /datum/objective/escape/escape_with_identity/check_completion()
 	if(!target || !target_real_name)
@@ -462,7 +462,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 /datum/objective/survive
 	name = "survive"
-	explanation_text = "Stay alive until the end."
+	explanation_text = "Utrzymaj się przy życiu do końca."
 
 /datum/objective/survive/check_completion()
 	var/list/datum/mind/owners = get_owners()
@@ -483,7 +483,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 /datum/objective/martyr
 	name = "martyr"
-	explanation_text = "Die a glorious death."
+	explanation_text = "Zgiń bohaterską śmiercią."
 
 /datum/objective/martyr/check_completion()
 	var/list/datum/mind/owners = get_owners()
@@ -496,7 +496,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 /datum/objective/nuclear
 	name = "nuclear"
-	explanation_text = "Destroy the station with a nuclear device."
+	explanation_text = "Zniszcz stację za pomocą ładunku nuklearnego."
 	martyr_compatible = 1
 
 /datum/objective/nuclear/check_completion()
@@ -541,11 +541,11 @@ GLOBAL_LIST_EMPTY(possible_items)
 	if(item)
 		targetinfo = item
 		steal_target = targetinfo.targetitem
-		explanation_text = "Steal [targetinfo.name]"
+		explanation_text = "Ukradnij [targetinfo.name]"
 		give_special_equipment(targetinfo.special_equipment)
 		return steal_target
 	else
-		explanation_text = "Free objective"
+		explanation_text = "Cel dowolny"
 		return
 
 /datum/objective/steal/admin_edit(mob/admin)
@@ -624,9 +624,9 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 /datum/objective/steal/exchange/update_explanation_text()
 	..()
 	if(target && target.current)
-		explanation_text = "Acquire [targetinfo.name] held by [target.name], the [target.assigned_role] and syndicate agent"
+		explanation_text = "Otrzymaj [targetinfo.name] trzymany przez [target.name], [target.assigned_role] i agent Syndykatu"
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Cel dowolny"
 
 
 /datum/objective/steal/exchange/backstab
@@ -732,9 +732,9 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 /datum/objective/protect_object/update_explanation_text()
 	. = ..()
 	if(protect_target)
-		explanation_text = "Protect \the [protect_target] at all costs."
+		explanation_text = "Ochroń [protect_target] za wszelką cenę."
 	else
-		explanation_text = "Free objective."
+		explanation_text = "Cel dowolny."
 
 /datum/objective/protect_object/check_completion()
 	return !QDELETED(protect_target)
@@ -764,7 +764,7 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 
 /datum/objective/absorb/update_explanation_text()
 	. = ..()
-	explanation_text = "Extract [target_amount] compatible genome\s."
+	explanation_text = "Zdobądź kompatybilne genomy [target_amount]."
 
 /datum/objective/absorb/admin_edit(mob/admin)
 	var/count = input(admin,"How many people to absorb?","absorb",target_amount) as num|null
@@ -786,7 +786,7 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 
 /datum/objective/absorb_most
 	name = "absorb most"
-	explanation_text = "Extract more compatible genomes than any other Changeling."
+	explanation_text = "Zdobądź więcej kompatybilnych genomów niż inny Changeling."
 
 /datum/objective/absorb_most/check_completion()
 	var/list/datum/mind/owners = get_owners()
@@ -807,7 +807,7 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 
 /datum/objective/absorb_changeling
 	name = "absorb changeling"
-	explanation_text = "Absorb another Changeling."
+	explanation_text = "Wchłoń innego Changelinga."
 
 /datum/objective/absorb_changeling/check_completion()
 	var/list/datum/mind/owners = get_owners()
@@ -847,9 +847,9 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 /datum/objective/destroy/update_explanation_text()
 	..()
 	if(target && target.current)
-		explanation_text = "Destroy [target.name], the experimental AI."
+		explanation_text = "Zniszcz [target.name], eksperymentalne AI."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Cel dowolny"
 
 /datum/objective/destroy/admin_edit(mob/admin)
 	var/list/possible_targets = active_ais(1)
@@ -1027,13 +1027,13 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 /datum/objective/changeling_team_objective/impersonate_department/update_explanation_text()
 	..()
 	if(!department_real_names.len || !department_minds.len)
-		explanation_text = "Free Objective"
+		explanation_text = "Cel dowolny"
 		return  //Something fucked up, give them a win
 
 	if(command_staff_only)
-		explanation_text = "Ensure changelings impersonate and escape as the following heads of staff: "
+		explanation_text = "Upewnij się, że Changelingi podszyją sie pod i uciekną jako następujące głwoy departamentów: "
 	else
-		explanation_text = "Ensure changelings impersonate and escape as the following members of \the [department_string] department: "
+		explanation_text = "Upewnij się, że Changelingi podszyją sie pod i uciekną jako następujący członkowie departamentu [department_string]: "
 
 	var/first = 1
 	for(var/datum/mind/M in department_minds)

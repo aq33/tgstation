@@ -7,9 +7,10 @@ SUBSYSTEM_DEF(events)
 	var/list/running = list()	//list of all existing /datum/round_event
 	var/list/currentrun = list()
 
-	var/scheduled = 0			//The next world.time that a naturally occuring random event can be selected.
-	var/frequency_lower = 1800	//3 minutes lower bound.
-	var/frequency_upper = 6000	//10 minutes upper bound. Basically an event will happen every 3 to 10 minutes.
+	var/last_check = 0			//last time checkEvent() was called
+	var/mtth = 3900	//6.5 minutes mean time to happen.,
+			//that is - there is 50% chance that the event will happen at least once after 6.5 minutes
+	var/event_chance = 0	//probability of event firing every 1/10 of a second, set in Initialize
 
 	var/list/holidays			//List of all holidays occuring today or null if no holidays
 	var/wizardmode = FALSE
@@ -20,7 +21,8 @@ SUBSYSTEM_DEF(events)
 		if(!E.typepath)
 			continue				//don't want this one! leave it for the garbage collector
 		control += E				//add it to the list of all events (controls)
-	reschedule()
+	last_check = world.time
+	event_chance = (1 - 0.5 ** (1 / mtth)) * 100
 	getHoliday()
 	return ..()
 
@@ -43,15 +45,14 @@ SUBSYSTEM_DEF(events)
 		if (MC_TICK_CHECK)
 			return
 
-//checks if we should select a random event yet, and reschedules if necessary
+//
 /datum/controller/subsystem/events/proc/checkEvent()
-	if(scheduled <= world.time)
-		spawnEvent()
-		reschedule()
-
-//decides which world.time we should select another random event at.
-/datum/controller/subsystem/events/proc/reschedule()
-	scheduled = world.time + rand(frequency_lower, max(frequency_lower,frequency_upper))
+	var/chance_mult = get_active_player_count(alive_check = 1, afk_check = 1, human_check = 0) < 10 ? 0.5 : 1
+	while(last_check < world.time)
+		if(prob(event_chance * chance_mult))
+			spawnEvent()
+		last_check++
+	last_check = world.time
 
 //selects a random event based on whether it can occur and it's 'weight'(probability)
 /datum/controller/subsystem/events/proc/spawnEvent()
@@ -178,10 +179,9 @@ SUBSYSTEM_DEF(events)
 
 /datum/controller/subsystem/events/proc/toggleWizardmode()
 	wizardmode = !wizardmode
-	message_admins("Summon Events has been [wizardmode ? "enabled, events will occur every [SSevents.frequency_lower / 600] to [SSevents.frequency_upper / 600] minutes" : "disabled"]!")
+	message_admins("Summon Events has been [wizardmode ? "enabled, events will occur every [SSevents.mtth / 600] minutes on average" : "disabled"]!")
 	log_game("Summon Events was [wizardmode ? "enabled" : "disabled"]!")
 
 
 /datum/controller/subsystem/events/proc/resetFrequency()
-	frequency_lower = initial(frequency_lower)
-	frequency_upper = initial(frequency_upper)
+	mtth = initial(mtth)
