@@ -1,0 +1,30 @@
+{
+	"coming": {
+		"Hej, %TARGETNAME%! Wytrzymaj, nadciągam.": "sound/voice/medbot/coming.ogg",
+		"Poczekaj %TARGETNAME%! Chcę pomóc!": "sound/voice/medbot/help.ogg",
+		"%TARGETNAME%, wydajesz się być ranny!": "sound/voice/medbot/injured.ogg"
+	},
+	"fluff": {
+		"Radar, włóż maskę!": "sound/voice/medbot/radar.ogg",
+		"Zawsze jest pewien haczyk, a ja jestem najlepszym z nich wszystkich.": "sound/voice/medbot/catch.ogg",
+		"Wiedziałem, powinienem był zostać chirurgiem plastycznym.": "sound/voice/medbot/surgeon.ogg",
+		"Co to za medbay? Wszyscy padają jak muchy.": "sound/voice/medbot/flies.ogg",
+		"Przepyszne!": "sound/voice/medbot/delicious.ogg"
+	},
+	"patient_dead": {
+		"Nie! Zostań ze mną!": "sound/voice/medbot/no.ogg",
+		"Żyj, cholera! ŻYJ!": "sound/voice/medbot/live.ogg",
+		"Ja... Ja nigdy nie straciłem wcześniej pacjenta. Znaczy się nie dziś.": "sound/voice/medbot/lost.ogg"
+	},
+	"after_heal": {
+		"Wszystko pozszywane!": "sound/voice/medbot/patchedup.ogg",
+		"Jabłko dziennie - służę dzielnie.": "sound/voice/medbot/apple.ogg",
+		"Za chwilę będzie dobrze!": "sound/voice/medbot/feelbetter.ogg"
+	},
+	"radio_emergency": [
+		"Nagły wypadek! %TARGETNAME% jest w krytycznym stanie w %LOCATION%!"
+	],
+	"efficiency": [
+		"Wiedza chirurgiczna odnaleziona! Efektywność zwiększona o %EFFICIENCY%!"
+	]
+}
