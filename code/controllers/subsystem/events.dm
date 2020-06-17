@@ -8,8 +8,8 @@ SUBSYSTEM_DEF(events)
 	var/list/currentrun = list()
 
 	var/last_check = 0			//last time checkEvent() was called
-	var/mtth = 3900	//6.5 minutes mean time to happen.,
-			//that is - there is 50% chance that the event will happen at least once after 6.5 minutes
+	var/mtth = 2750	//~4.5 minutes mean time to happen.,
+			//that is - there is 50% chance that the event will happen at least once after ~4.5 minutes
 	var/event_chance = 0	//probability of event firing every 1/10 of a second, set in Initialize
 
 	var/list/holidays			//List of all holidays occuring today or null if no holidays
