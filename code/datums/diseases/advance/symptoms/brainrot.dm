@@ -1,22 +1,21 @@
 /*
 //////////////////////////////////////
 Brainrot
-(OPIS NIECH KTOŚ ZROBI, KTO SIĘ NA TYM ZNA, ZOSTAWIAM TAKI JAK W HEADACHE)
-	Noticable.
-	Highly resistant.
-	Increases stage speed.
-	Not transmittable.
-	Low Level.
+
+	Bardzo zauważalna.
+	Bardzo mało odporna.
+	Zmniejsza stage speed.
+	Nie zaraźliwa.
+	Wysoki level.
 BONUS
-	Displays an annoying message!
-	Should be used for buffing your disease.
+	Niszczy mózg.
 //////////////////////////////////////
 */
 
 /datum/symptom/brainrot
 
 	name = "Brainrot"
-	desc = "Symptom niszczący komórki mózgu, powodujący różne związane z tym powikłania."
+	desc = "Symptom niszczący szare komórki, powodujący różne związane z tym powikłania."
 	stealth = -2
 	resistance = 1
 	stage_speed = -1
@@ -39,7 +38,7 @@ BONUS
 			if(prob(2))
 				A.affected_mob.emote("yawn")
 			if(prob(2))
-				to_chat(A.affected_mob, "<span class='danger'>You don't feel like yourself.</span>")
+				to_chat(A.affected_mob, "<span class='danger'>Nie czujesz się sobą.</span>")
 			if(prob(2))
 				A.affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1, 170)
 				A.affected_mob.updatehealth()
@@ -52,7 +51,7 @@ BONUS
 				A.affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 2, 170)
 				A.affected_mob.updatehealth()
 				if(prob(2))
-					to_chat(A.affected_mob, "<span class='danger'>Your try to remember something important...but can't.</span>")
+					to_chat(A.affected_mob, "<span class='danger'>Próbujesz przypomnieć sobie coś ważnego...ale nie możesz.</span>")
 
 		if(4 || 5)
 			if(prob(2))
@@ -63,11 +62,11 @@ BONUS
 				A.affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3, 170)
 				A.affected_mob.updatehealth()
 				if(prob(2))
-					to_chat(A.affected_mob, "<span class='danger'>Strange buzzing fills your head, removing all thoughts.</span>")
+					to_chat(A.affected_mob, "<span class='danger'>Niepokojące buczenie wypełnia twój umysł, pozbawiając cię myśli.</span>")
 			if(prob(3))
-				to_chat(A.affected_mob, "<span class='danger'>You lose consciousness...</span>")
-				A.affected_mob.visible_message("<span class='warning'>[A.affected_mob] suddenly collapses!</span>", \
-											"<span class='userdanger'>You suddenly collapse!</span>")
+				to_chat(A.affected_mob, "<span class='danger'>Tracisz przytomność...</span>")
+				A.affected_mob.visible_message("<span class='warning'>[A.affected_mob] nagle upada!</span>", \
+											"<span class='userdanger'>Nagle upadasz!</span>")
 				A.affected_mob.Unconscious(rand(100,200))
 				if(prob(1))
 					A.affected_mob.emote("snore")
