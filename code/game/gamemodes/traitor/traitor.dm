@@ -39,6 +39,9 @@
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		restricted_jobs += "Assistant"
 
+	if(num_players() < 10)
+		restricted_jobs += "AI"
+
 	var/num_traitors = 1
 
 	var/tsc = CONFIG_GET(number/traitor_scaling_coeff)
