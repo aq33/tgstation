@@ -249,7 +249,7 @@
 			candidates -= player
 
 /datum/dynamic_ruleset/midround/malf/execute()
-	if(!candidates || !candidates.len)
+	if(!candidates || !candidates.len || get_active_player_count(alive_check = 1, afk_check = 1, human_check = 0) < 10)
 		return FALSE
 	var/mob/living/silicon/ai/M = pick_n_take(candidates)
 	assigned += M.mind
