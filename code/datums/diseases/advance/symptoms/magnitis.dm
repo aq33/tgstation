@@ -1,15 +1,13 @@
 /*
 //////////////////////////////////////
 Magnitis
-(OPIS NIECH KTOŚ ZROBI, KTO SIĘ NA TYM ZNA, ZOSTAWIAM TAKI JAK W HEADACHE)
-	Noticable.
-	Highly resistant.
-	Increases stage speed.
-	Not transmittable.
-	Low Level.
+	Bardzo zauważalna.
+	Średnio odporna.
+	Wolny stage speed.
+	Nie zaraźliwa.
+	Średni Level.
 BONUS
-	Displays an annoying message!
-	Should be used for buffing your disease.
+	Pacjent przyciąga metal.
 //////////////////////////////////////
 */
 
@@ -34,7 +32,7 @@ BONUS
 	switch(A.stage)
 		if(2)
 			if(prob(2))
-				to_chat(A.affected_mob, "<span class='danger'>You feel a slight shock course through your body.</span>")
+				to_chat(A.affected_mob, "<span class='danger'>Czujesz jak lekki impuls przeszywa twoje ciało.</span>")
 			if(prob(2))
 				for(var/obj/M in orange(2,A.affected_mob))
 					if(!M.anchored && (M.flags_1 & CONDUCT_1))
@@ -45,9 +43,9 @@ BONUS
 					step_towards(S,A.affected_mob)
 		if(3)
 			if(prob(2))
-				to_chat(A.affected_mob, "<span class='danger'>You feel a strong shock course through your body.</span>")
+				to_chat(A.affected_mob, "<span class='danger'>Czujesz jak silniejszy impuls przeszywa twoje ciało.</span>")
 			if(prob(2))
-				to_chat(A.affected_mob, "<span class='danger'>You feel like clowning around.</span>")
+				to_chat(A.affected_mob, "<span class='danger'>Czujesz, że pora się powygłupiać.</span>")
 			if(prob(4))
 				for(var/obj/M in orange(4,A.affected_mob))
 					if(!M.anchored && (M.flags_1 & CONDUCT_1))
@@ -64,9 +62,9 @@ BONUS
 						step_towards(S,A.affected_mob)
 		if(4 || 5)
 			if(prob(2))
-				to_chat(A.affected_mob, "<span class='danger'>You feel a powerful shock course through your body.</span>")
+				to_chat(A.affected_mob, "<span class='danger'>Czujesz jak potężny impuls przeszywa twoje ciało.</span>")
 			if(prob(2))
-				to_chat(A.affected_mob, "<span class='danger'>You query upon the nature of miracles.</span>")
+				to_chat(A.affected_mob, "<span class='danger'>Zastanawiasz się nad naturą cudów.</span>")
 			if(prob(8))
 				for(var/obj/M in orange(6,A.affected_mob))
 					if(!M.anchored && (M.flags_1 & CONDUCT_1))
