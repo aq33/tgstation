@@ -1,22 +1,21 @@
 /*
 //////////////////////////////////////
 Anxiety
-(OPIS NIECH KTOŚ ZROBI, KTO SIĘ NA TYM ZNA, ZOSTAWIAM TAKI JAK W HEADACHE)
-	Noticable.
-	Highly resistant.
-	Increases stage speed.
-	Not transmittable.
-	Low Level.
+	Bardzo zauważalna.
+	Średnio odporna.
+	Zwykły stage speed.
+	Zaraźliwa.
+	Wysoki level.
 BONUS
-	Displays an annoying message!
-	Should be used for buffing your disease.
+	Postać panikuje.
+	Powoduje wypluwanie motyli.
 //////////////////////////////////////
 */
 
 /datum/symptom/anxiety
 
-	name = "Anxiety"
-	desc = "Symptom jeżeli powodujący wypluwanie motyli w późniejszej fazie."
+	name = "Stany Lękowe"
+	desc = "Symptom wywołujący strach. W późniejszym stadium pacjent wypluwa z siebie motyle."
 	stealth = -2
 	resistance = 2
 	stage_speed = 1
