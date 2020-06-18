@@ -24,12 +24,17 @@
 /datum/dynamic_ruleset/roundstart/traitor/pre_execute()
 	. = ..()
 	var/num_traitors = antag_cap[indice_pop] * (scaled_times + 1)
+
+	if(mode.roundstart_pop_ready < 10)
+		restricted_roles.Add("AI")
+
 	for (var/i = 1 to num_traitors)
 		var/mob/M = pick_n_take(candidates)
 		assigned += M.mind
 		M.mind.special_role = ROLE_TRAITOR
 		M.mind.restricted_roles = restricted_roles
 		GLOB.pre_setup_antags += M.mind
+
 	return TRUE
 
 /datum/dynamic_ruleset/roundstart/traitor/rule_process()
