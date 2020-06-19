@@ -2,12 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\code",
-    "\\code\\modules",
-    "\\code\\modules\\reagents",
+    "\\code\\datums",
+    "\\code\\datums\\diseases",
+    "\\code\\datums\\diseases\\advance",
+    "\\code\\datums\\diseases\\advance\\symptoms",
     "\\code\\modules\\reagents\\chemistry",
     "\\code\\modules\\reagents\\chemistry\\reagents",
-    "\\code\\modules\\reagents\\chemistry\\recipes"
+    "\\code\\modules\\reagents\\chemistry\\recipes",
+    "\\code\\modules\\research"
   ],
-  "SelectedNode": "\\code\\modules\\reagents\\chemistry\\reagents\\other_reagents.dm",
+  "SelectedNode": "\\code\\datums\\diseases\\advance\\symptoms\\anxiety.dm",
   "PreviewInSolutionExplorer": false
 }
