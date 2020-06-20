@@ -55253,6 +55253,10 @@
 /obj/item/newspaper,
 /turf/open/floor/plasteel,
 /area/vacant_room/commissary)
+"wea" = (
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel,
+/area/crew_quarters/bar)
 "wfU" = (
 /obj/machinery/atmospherics/components/trinary/mixer{
 	dir = 8
@@ -91044,7 +91048,7 @@ aKN
 aMv
 aNH
 aOJ
-aQc
+wea
 aPY
 aSG
 aPY

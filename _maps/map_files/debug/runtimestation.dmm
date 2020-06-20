@@ -2227,6 +2227,10 @@
 "qQ" = (
 /turf/open/floor/engine,
 /area/quartermaster/miningoffice)
+"rq" = (
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel,
+/area/medical/chemistry)
 "rK" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -7290,7 +7294,7 @@ aj
 hD
 cj
 ct
-Ce
+rq
 cF
 bE
 bE
