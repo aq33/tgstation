@@ -545,12 +545,26 @@
 	race = /datum/species/human/felinid
 	taste_description = "something nyat good"
 
-/datum/reagent/mutationtoxin/lizard
+/datum/reagent/mutationtoxin/lizard/
 	name = "Lizard Mutation Toxin"
 	description = "A lizarding toxin."
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/lizard
-	taste_description = "dragon's breath but not as cool"
+	taste_description = "chaos"
+
+/datum/reagent/mutationtoxin/lizard/on_mob_life(mob/living/carbon/human/H)
+	if(current_cycle >= cycles_to_turn) //overwrite since we want more races
+		var/list/random_races = list(/datum/species/zombie,
+									/datum/species/skeleton,
+									/datum/species/vampire,
+									/datum/species/snail,
+									/datum/species/mush)
+		var/datum/species/species_type = pick(random_races)
+		H.set_species(species_type)
+		H.reagents.del_reagent(type)
+		to_chat(H, "<span class='warning'>You've become \a [initial(species_type.name)]!</span>")
+		return TRUE
+	return ..()
 
 /datum/reagent/mutationtoxin/fly
 	name = "Fly Mutation Toxin"

@@ -94,6 +94,26 @@
 	category = list("Firing Pins")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/taser
+	name = "Taser gun"
+	desc = "A low-capacity, energy-based stun gun used by security teams to subdue targets at range."
+	id = "taser"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 10000, /datum/material/glass = 10000, /datum/material/silver = 10000)
+	build_path = /obj/item/gun/energy/taser
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+/datum/design/advtaser
+	name = "Hybrid taser"
+	desc = "A dual-mode taser designed to fire both short-range high-power electrodes and long-range disabler beams."
+	id = "advtaser"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 15000, /datum/material/glass = 15000, /datum/material/silver = 15000)
+	build_path = /obj/item/gun/energy/e_gun/advtaser
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+
 /datum/design/pin_explorer
 	name = "Outback Firing Pin"
 	desc = "This firing pin only shoots while ya ain't on station, fair dinkum!"
