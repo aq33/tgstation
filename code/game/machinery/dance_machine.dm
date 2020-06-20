@@ -117,3 +117,4 @@
 		SSjukeboxes.remove_jukebox(subsystem_instance)
 		subsystem_instance = null
 		stop = world.time + 100
+		
