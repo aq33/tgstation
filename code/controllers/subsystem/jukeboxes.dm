@@ -1,13 +1,3 @@
-SUBSYSTEM_DEF(jukeboxes)
-	name = "Jukeboxes"
-	wait = 5
-	var/list/songs = list()
-	var/list/active_jukeboxes = list()
-	var/list/free_channels = list()
-	var/falloff = 10
-	var/wet = -250
-	var/dry = -10000
-
 /datum/track
 	var/song_name = "undefined"
 	var/song_path = null
@@ -17,6 +7,16 @@ SUBSYSTEM_DEF(jukeboxes)
 	song_name = name
 	song_path = path
 	song_length = length
+
+SUBSYSTEM_DEF(jukeboxes)
+	name = "Jukeboxes"
+	wait = 5
+	var/list/datum/track/songs = list()
+	var/list/obj/jukebox/active_jukeboxes = list()
+	var/list/free_channels = list()
+	var/falloff = 10
+	var/wet = -250
+	var/dry = -10000
 
 /datum/controller/subsystem/jukeboxes/proc/add_jukebox(obj/jukebox, selection)
 	if(selection > songs.len)
@@ -80,15 +80,12 @@ SUBSYSTEM_DEF(jukeboxes)
 	for(var/list/jukeinfo in active_jukeboxes)
 		if(!jukeinfo.len)
 			CRASH("Active jukebox without any associated metadata.")
-			continue
 		var/datum/track/juketrack = songs[jukeinfo[1]]
 		if(!istype(juketrack))
 			CRASH("Invalid jukebox track datum.")
-			continue
 		var/obj/jukebox = jukeinfo[3]
 		if(!istype(jukebox))
 			CRASH("Nonexistant or invalid object associated with jukebox.")
-			continue
 		var/sound/song_played = sound(juketrack.song_path)
 		var/area/current_area = get_area(jukebox)
 		var/list/hearers_cache = hearers(7, jukebox)
