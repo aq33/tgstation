@@ -12,7 +12,7 @@ SUBSYSTEM_DEF(jukeboxes)
 	name = "Jukeboxes"
 	wait = 5
 	var/list/datum/track/songs = list()
-	var/list/obj/jukebox/active_jukeboxes = list()
+	var/list/active_jukeboxes = list()
 	var/list/free_channels = list()
 	var/falloff = 10
 	var/wet = -250
