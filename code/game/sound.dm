@@ -26,7 +26,7 @@
 		if(get_dist(M, turf_source) <= maxdistance)
 			M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, pressure_affected, S)
 
-/mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, channel = 0, pressure_affected = TRUE, sound/S)
+/mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, channel = 0, pressure_affected = TRUE, sound/S, envwet = -10000, envdry = 0)
 	if(!client || !can_hear())
 		return
 
@@ -36,6 +36,8 @@
 	S.wait = 0 //No queue
 	S.channel = channel || open_sound_channel()
 	S.volume = vol
+	S.environment = 7
+	S.echo = list(envdry, null, envwet, null, null, null, null, null, null, null, null, null, null, 1, 1, 1, null, null)
 
 	if(vary)
 		if(frequency)
