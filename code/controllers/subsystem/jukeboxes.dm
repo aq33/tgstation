@@ -49,6 +49,7 @@ SUBSYSTEM_DEF(jukeboxes)
 					song.length = S.len * 10
 					break
 		if(song.length == null)
+			remove_jukebox(channel)
 			CRASH("Couldn't query song length")
 
 	return channel
@@ -79,7 +80,7 @@ SUBSYSTEM_DEF(jukeboxes)
 		T.path = file("config/jukebox_music/sounds/[S]")
 		T.name = S
 		T.length = null 
-		songs += T
+		songs |= T
 		song_lib[S] = songs.len
 	song_lib = sortList(song_lib)
 	for(var/i in CHANNEL_JUKEBOX_START to CHANNEL_JUKEBOX_END)
