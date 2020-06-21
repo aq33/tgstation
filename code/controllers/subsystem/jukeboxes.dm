@@ -60,6 +60,7 @@ SUBSYSTEM_DEF(jukeboxes)
 	for(var/datum/jukebox/i in active_jukeboxes)
 		if(i.channel == channel)
 			jukebox = i
+			break
 		id++
 	ASSERT(jukebox != null)
 	for(var/mob/M in GLOB.player_list)
