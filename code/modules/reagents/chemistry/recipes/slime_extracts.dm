@@ -80,6 +80,24 @@
 	new /obj/item/stack/sheet/rglass(location, 5)
 	new /obj/item/stack/sheet/glass(location, 15)
 	..()
+/datum/chemical_reaction/slime/slimestalinium
+	required_reagents = list(/datum/reagent/consumable/ethanol/vodka = 1)
+	required_container = /obj/item/slime_extract/metal
+	required_other = TRUE
+
+/datum/chemical_reaction/slime/slimestalinium/on_reaction(datum/reagents/holder)
+	var/turf/location = get_turf(holder.my_atom)
+	new /obj/item/stack/sheet/stalinium(location, 10)
+	..()
+/datum/chemical_reaction/slime/slimecapitalisium
+	required_reagents = list(/datum/reagent/gold = 1)
+	required_container = /obj/item/slime_extract/metal
+	required_other = TRUE
+
+/datum/chemical_reaction/slime/slimecapitalisium/on_reaction(datum/reagents/holder)
+	var/turf/location = get_turf(holder.my_atom)
+	new /obj/item/stack/sheet/capitalisium(location, 10)
+	..()
 
 //Gold
 /datum/chemical_reaction/slime/slimemobspawn
