@@ -9,12 +9,12 @@
 	var/active = FALSE
 	var/stop = 0
 	var/selection = 1
-	var/subsystem_instance = null
+	var/channel = null
 
 /obj/machinery/jukebox/Destroy()
-	if(!isnull(subsystem_instance))
-		SSjukeboxes.remove_jukebox(subsystem_instance)
-		subsystem_instance = null
+	if(!isnull(channel))
+		SSjukeboxes.remove_jukebox(channel)
+		channel = null
 	return ..()
 
 /obj/machinery/jukebox/attackby(obj/item/O, mob/user, params)
@@ -56,8 +56,8 @@
 	dat += "<b><A href='?src=[REF(src)];action=toggle'>[!active ? "BREAK IT DOWN" : "SHUT IT DOWN"]<b></A><br>"
 	dat += "</div><br>"
 	dat += "<A href='?src=[REF(src)];action=select'> Select Track</A><br>"
-	dat += "Track Selected: [SSjukeboxes.songs[selection].song_name]<br>"
-	dat += "Track Length: [DisplayTimeText(SSjukeboxes.songs[selection].song_length)]<br><br>"
+	dat += "Track Selected: [SSjukeboxes.songs[selection].name]<br>"
+	dat += "Track Length: [DisplayTimeText(SSjukeboxes.songs[selection].length)]<br><br>"
 	var/datum/browser/popup = new(user, "vending", "[name]", 400, 350)
 	popup.set_content(dat.Join())
 	popup.open()
@@ -75,7 +75,7 @@
 					to_chat(usr, "<span class='warning'>Error: The device is still resetting from the last activation, it will be ready again in [DisplayTimeText(stop-world.time)].</span>")
 					playsound(src, 'sound/misc/compiler-failure.ogg', 50, TRUE)
 					return
-				if(activate_music() == FALSE)
+				if(!activate_music())
 					to_chat(usr, "<span class='warning'>Error: Hardware failure.</span>")
 					playsound(src, 'sound/misc/compiler-failure.ogg', 50, TRUE)
 					return
@@ -89,22 +89,19 @@
 				to_chat(usr, "<span class='warning'>Error: You cannot change the song until the current one is over.</span>")
 				return
 
-			var/list/available = list()
-			for(var/datum/track/S in SSjukeboxes.songs)
-				available[S.song_name] = S
-			var/selected = input(usr, "Choose your song", "Track:") as null|anything in sortList(available)
-			if(QDELETED(src) || !selected || !istype(available[selected], /datum/track))
+			var/selected = input(usr, "Choose your song", "Track:") as null|anything in SSjukeboxes.song_lib
+			if(QDELETED(src) || !selected)
 				return
-			selection = selected
+			selection = SSjukeboxes.song_lib[selected]
 			updateUsrDialog()
 
 /obj/machinery/jukebox/proc/activate_music()
-	subsystem_instance = SSjukeboxes.add_jukebox(src, selection)
-	if(isnull(subsystem_instance))
-		return FALSE
+	channel = SSjukeboxes.add_jukebox(src, selection)
+	if(isnull(channel))
+		return null
 	active = TRUE
 	update_icon()
-	stop = world.time + SSjukeboxes.songs[selection].song_length
+	stop = world.time + SSjukeboxes.songs[selection].length
 	START_PROCESSING(SSobj, src)
 	return TRUE
 
@@ -114,7 +111,7 @@
 		STOP_PROCESSING(SSobj, src)
 		playsound(src,'sound/machines/terminal_off.ogg',50,TRUE)
 		update_icon()
-		SSjukeboxes.remove_jukebox(subsystem_instance)
-		subsystem_instance = null
-		stop = world.time + 100
+		SSjukeboxes.remove_jukebox(channel)
+		channel = null
+		stop = world.time + 25
 		
