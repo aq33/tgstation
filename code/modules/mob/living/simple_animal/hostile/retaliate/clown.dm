@@ -25,6 +25,7 @@
 	melee_damage_upper = 10
 	attack_sound = 'sound/items/bikehorn.ogg'
 	obj_damage = 0
+	gold_core_spawnable = HOSTILE_SPAWN
 	environment_smash = ENVIRONMENT_SMASH_NONE
 	del_on_death = 1
 	loot = list(/obj/effect/mob_spawn/human/clown/corpse)

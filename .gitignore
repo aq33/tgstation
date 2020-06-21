@@ -232,3 +232,4 @@ tools/LinuxOneShot/TGS_Logs
 
 #visual studio
 .vs
+*.cache
