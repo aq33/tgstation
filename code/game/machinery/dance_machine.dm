@@ -76,7 +76,7 @@
 					playsound(src, 'sound/misc/compiler-failure.ogg', 50, TRUE)
 					return
 				if(!activate_music())
-					to_chat(usr, "<span class='warning'>Error: Hardware failure.</span>")
+					to_chat(usr, "<span class='warning'>Error: Hardware failure, try again.</span>")
 					playsound(src, 'sound/misc/compiler-failure.ogg', 50, TRUE)
 					return
 				START_PROCESSING(SSobj, src)
