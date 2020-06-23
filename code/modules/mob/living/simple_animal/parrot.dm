@@ -913,46 +913,25 @@
 	..(gibbed)
 
 /mob/living/simple_animal/parrot/Poly/proc/Read_Memory()
-	if(fexists("data/npc_saves/Poly.sav")) //legacy compatability to convert old format to new
 		var/savefile/S = new /savefile("data/npc_saves/Poly.sav")
 		S["phrases"] 			>> speech_buffer
 		S["roundssurvived"]		>> rounds_survived
 		S["longestsurvival"]	>> longest_survival
 		S["longestdeathstreak"] >> longest_deathstreak
-		fdel("data/npc_saves/Poly.sav")
-	else
-		var/json_file = file("data/npc_saves/Poly.json")
-		if(!fexists(json_file))
-			return
-		var/list/json = json_decode(file2text(json_file))
-		speech_buffer = json["phrases"]
-		rounds_survived = json["roundssurvived"]
-		longest_survival = json["longestsurvival"]
-		longest_deathstreak = json["longestdeathstreak"]
-	if(!islist(speech_buffer))
-		speech_buffer = list()
 
-/mob/living/simple_animal/parrot/Poly/proc/Write_Memory(dead)
-	var/json_file = file("data/npc_saves/Poly.json")
-	var/list/file_data = list()
-	if(islist(speech_buffer))
-		file_data["phrases"] = speech_buffer
-	if(dead)
-		file_data["roundssurvived"] = min(rounds_survived - 1, 0)
-		file_data["longestsurvival"] = longest_survival
-		if(rounds_survived - 1 < longest_deathstreak)
-			file_data["longestdeathstreak"] = rounds_survived - 1
+	if(isnull(speech_buffer))
+		speech_buffer = list()
 		else
-			file_data["longestdeathstreak"] = longest_deathstreak
-	else
-		file_data["roundssurvived"] = rounds_survived + 1
-		if(rounds_survived + 1 > longest_survival)
-			file_data["longestsurvival"] = rounds_survived + 1
-		else
-			file_data["longestsurvival"] = longest_survival
-		file_data["longestdeathstreak"] = longest_deathstreak
-	fdel(json_file)
-	WRITE_FILE(json_file, json_encode(file_data))
+		if(speech_buffer.len)
+			speak += pick(speech_buffer)
+
+/mob/living/simple_animal/parrot/Poly/proc/Write_Memory()
+	var/savefile/S = new /savefile("data/npc_saves/Poly.sav")
+	S["phrases"] 			<< speech_buffer
+	S["roundssurvived"]		<< rounds_survived
+	S["longestsurvival"]	<< longest_survival
+	S["longestdeathstreak"] << longest_deathstreak
+	memory_saved = 1
 
 /mob/living/simple_animal/parrot/Poly/ghost
 	name = "The Ghost of Poly"
