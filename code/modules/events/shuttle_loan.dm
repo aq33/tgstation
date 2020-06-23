@@ -29,26 +29,26 @@
 	SSshuttle.shuttle_loan = src
 	switch(dispatch_type)
 		if(HIJACK_SYNDIE)
-			priority_announce("Cargo: The syndicate are trying to infiltrate your station. If you let them hijack your cargo shuttle, you'll save us a headache.","CentCom Counter Intelligence")
+			priority_announce("Dział towarowy: Syndykat ma na celu zinfiltrować wszą stację. Jeśli pozwolicie im porwać wasz statek towarowy to zaoszczędzicie nam bólu głowy.","Kontrwywiad Centralnego Dowództwa")
 		if(RUSKY_PARTY)
-			priority_announce("Cargo: A group of angry Russians want to have a party. Can you send them your cargo shuttle then make them disappear?","CentCom Russian Outreach Program")
+			priority_announce("Dział towarowy: Grupa wkurzonych rusków chce sobie zrobić przyjęcie, możecie wysłać po nich wasz statek towarowy i się nimi zająć?","Program Pomocy Rosjanom Centralnego Dowództwa")
 		if(SPIDER_GIFT)
-			priority_announce("Cargo: The Spider Clan has sent us a mysterious gift. Can we ship it to you to see what's inside?","CentCom Diplomatic Corps")
+			priority_announce("Dział towarowy: Otrzymaliśmy tajemniczy prezent od Pajęczego Klanu. Możemy go wam przesłać byście zobaczyli co jest w środku?","Korpus Dyplomatyczny Centralnego Dowództwa")
 		if(DEPARTMENT_RESUPPLY)
-			priority_announce("Cargo: Seems we've ordered doubles of our department resupply packages this month. Can we send them to you?","CentCom Supply Department")
-			thanks_msg = "The cargo shuttle should return in 5 minutes."
+			priority_announce("Dział towarowy: Wygląda na to że w tym miesiącu zamówiliśmy nadwyżkę pakietów zaopatrzeniowych dla naszych działów, możemy przesłać je wam?","Dział Zaopatrzeniowy Centralnego Dowództwa")
+			thanks_msg = "Statek towarowy powinien powrócić w ciągu pięciu minut."
 			bonus_points = 0
 		if(ANTIDOTE_NEEDED)
-			priority_announce("Cargo: Your station has been chosen for an epidemiological research project. Send us your cargo shuttle to receive your research samples.", "CentCom Research Initiatives")
+			priority_announce("Dział towarowy: Wasza stacja została wybrana do przeprowadzenia badań nad projektem epidemiologicznym. Wyślijcie nam swój statek towarowy by otrzymać próbki.", "Inicjatywy Badawcze Centralnego Dowództwa")
 		if(PIZZA_DELIVERY)
-			priority_announce("Cargo: It looks like a neighbouring station accidentally delivered their pizza to you instead.", "CentCom Spacepizza Division")
-			thanks_msg = "The cargo shuttle should return in 5 minutes."
+			priority_announce("Dział towarowy: Wygląda na to że sąsiednia stacja przypadkowo zamówiła pizzę wam a nie sobie.", "Dział Ds. Pizzy Centralnego Dowództwa")
+			thanks_msg = "Statek towarowy powinien powrócić w ciągu pięciu minut."
 			bonus_points = 0
 		if(ITS_HIP_TO)
-			priority_announce("Cargo: One of our freighters carrying a bee shipment has been attacked by eco-terrorists. Can you clean up the mess for us?", "CentCom Janitorial Division")
+			priority_announce("Dział towarowy: Jeden z naszych frachtowców wiozący pszczoły został zaatakowany przez eko terrorystów. Zajęlibyście się tym całym syfem?", "Dział Ds. Konserwacji Powierzchni Płaskich Centralnego Dowództwa")
 			bonus_points = 20000 //Toxin bees can be unbeelievably lethal
 		if(MY_GOD_JC)
-			priority_announce("Cargo: We have discovered an active Syndicate bomb near our VIP shuttle's fuel lines. If you feel up to the task, we will pay you for defusing it.", "CentCom Security Division")
+			priority_announce("Dział towarowy: Znaleźliśmy aktywną bombę Syndykatu w pobliżu układu paliwowego w jednym z naszych VIP-owskich statków. Jeśli czujecie się na siła to zapłacimy wam za jej rozbrojenie.", "Dział Ds. Bezpieczeństwa Centralnego Dowództwa")
 			thanks_msg = "Live explosive ordnance incoming via supply shuttle. Evacuating cargo bay is recommended."
 			bonus_points = 45000 //If you mess up, people die and the shuttle gets turned into swiss cheese
 
