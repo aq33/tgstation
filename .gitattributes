@@ -2,6 +2,8 @@
 *.dmm merge=dmm
 *.dmi merge=dmi
 
+*.dm -crlf
+
 # exlude maps from contribution count
 *.dmm linguist-generated=true 
 

@@ -40,7 +40,7 @@ map donutstation
 endmap
 
 map runtimestation
-	disabled
+	default
 endmap
 
 map multiz_debug
