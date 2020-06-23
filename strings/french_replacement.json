@@ -1,62 +1,58 @@
 {
 
     "french": {
-		"yes": "oui",
-		"no": "non",
-        "I'm": "j'", 
-        "am": "suis", 
-		"a": "un",
-        "and": "et", 
-		"the": "l'",
-		"I": "j'",
-		"for": "pour",
-		"with": "avec",
-		"of": "de",
+		"tak": "oui",
+		"nie": "non",
+        "Ja": "j'",
+        "jestem": "suis",
+        "i": "et",
+		"dla": "pour",
+		"z": "avec",
 		
 		
-        "assistant": "ravageur",
-        "assistants": "ravageurs",
-        "baby": [
+        "asystant": "ravageur",
+        "asystenci": "ravageurs",
+        "dziecko": [
             "enfant", 
             "petit baguette"
         ], 
-        "bad": "mal", 
-        "bye": [
+        "zły": "mal",
+        "żegnam": [
             "bon voyage", 
             "adieu",
 			"au revoir"
         ], 
-		"cake": "gateau",
-        "captain": "capitaine", 
+		"ciasto": "gateau",
+        "kapitan": "capitaine",
 		"changeling": "changeur",
-        "cheese": [
+        "ser": [
             "brie", 
             "roquefort",
 			"camembert"
         ], 
-		"cigarette": "clope",
-        "cook": "cuisinier", 
-        "dad": "papa", 
-        "enemy": "silly english dog", 
-        "friend": "ami", 
-        "good": "bon", 
+		"papieros": "clope",
+        "kucharz": "cuisinier",
+        "ojciec": "papa",
+        "wróg": "silly english dog",
+        "przyjaciel": "ami",
+        "dobry": "bon",
         "greytide": "les gitans", 
         "greytider": "les gitans",
         "greytiders": "les gitans",
-		"hardsuit": "burkini",
-        "hello": [
+		"kombinezon": "burkini",
+        "cześć": [
             "'allo", 
             "bonjour",
 			"salut"
         ], 
-		"maint": "les banlieues",
-        "meat": [
+		"przejście techniczne": "les banlieues",
+        "mięso": [
             "coq au vin", 
             "boeuf"
         ], 
-        "mom": "maman", 
-        "my": "mon", 
-        "nuke": [
+        "matka": "maman",
+        "mój": "mon",
+        "atomówka": [
 			"grand bombe", 
 			"la baguette ultime"
 		],
@@ -64,28 +60,23 @@
         "operative": "boche", 
         "operatives": "boches", 
         "ops": "boches", 
-        "urity": "urite", 
-        "security": "securite", 
-		"shit": "merde",
-        "shitcurity": [
-			"gendarmerie",
-			"les keufs"
-		],
-        "shitsec": [
+        "ochrona": "securite",
+		"gówno": "merde",
+        "gównochrona": [
 			"gendarmerie",
 			"les keufs"
 		],
         "spaghetti": "macaroni", 
-        "spicy": "epice", 
-        "thanks": "merci",  
-		"tomato": "tomate",
-        "traitor": "collaborateur", 
-        "want": "envie", 
-        "what's": "quel est", 
-        "who's": "qui est",  
-        "why": "porquois", 
-        "wine": "vin",
-		"wizard": "sorcier"
+        "ostre": "epice",
+        "dzięki": "merci",
+		"pomidor": "tomate",
+        "zdrajca": "collaborateur",
+        "chce": "envie",
+        "co jest": "quel est",
+        "kto jest": "qui est",
+        "dlaczego": "porquois",
+        "wino": "vin",
+		"czarodziej": "sorcier"
 		}
 		
 }
