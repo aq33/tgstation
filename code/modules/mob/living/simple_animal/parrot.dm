@@ -913,15 +913,15 @@
 	..(gibbed)
 
 /mob/living/simple_animal/parrot/Poly/proc/Read_Memory()
-		var/savefile/S = new /savefile("data/npc_saves/Poly.sav")
-		S["phrases"] 			>> speech_buffer
-		S["roundssurvived"]		>> rounds_survived
-		S["longestsurvival"]	>> longest_survival
-		S["longestdeathstreak"] >> longest_deathstreak
+	var/savefile/S = new /savefile("data/npc_saves/Poly.sav")
+	S["phrases"] 			>> speech_buffer
+	S["roundssurvived"]		>> rounds_survived
+	S["longestsurvival"]	>> longest_survival
+	S["longestdeathstreak"] >> longest_deathstreak
 
 	if(isnull(speech_buffer))
 		speech_buffer = list()
-		else
+	else
 		if(speech_buffer.len)
 			speak += pick(speech_buffer)
 
