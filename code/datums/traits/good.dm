@@ -46,46 +46,6 @@
 	lose_text = "<span class='danger'>Przestałeś rozumieć emocje innych.</span>"
 	medical_record_text = "Pacjent zwraca wiele uwagi i jest wrażliwy na cudze uczucia lub choruje na ESP. Potrzebne więcej badań."
 
-datum/quirk/fan_clown
-	name = "Entuzjasta Klaunów"
-	desc = "Rzeczy związane z klaunami sprawiaja ci radość, a twoja klaunowa przypinka daje ci bonus do humoru. Honk!"
-	value = 1
-	mob_trait = TRAIT_FAN_CLOWN
-	gain_text = "<span class='notice'>Jesteś wielkim fanem klaunów.</span>"
-	lose_text = "<span class='danger'>Klauny nie wydają ci się już takie zabawne.</span>"
-	medical_record_text = "Pacjent zgłasza, że jest wielkim fanem klaunów."
-
-/datum/quirk/fan_clown/on_spawn()
-	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/clothing/accessory/fan_clown_pin/B = new(get_turf(H))
-	var/list/slots = list (
-		"backpack" = ITEM_SLOT_BACKPACK,
-		"hands" = ITEM_SLOT_HANDS,
-	)
-	H.equip_in_one_of_slots(B, slots , qdel_on_fail = TRUE)
-	var/datum/atom_hud/fan = GLOB.huds[DATA_HUD_FAN]
-	fan.add_hud_to(H)
-
-datum/quirk/fan_mime
-	name = "Entuzjasta Mimów"
-	desc = "Rzeczy związane z mimami sprawiaja ci radość, a twoja mimowa przypinka daje ci bonus do humoru."
-	value = 1
-	mob_trait = TRAIT_FAN_MIME
-	gain_text = "<span class='notice'>Jesteś wielkim fanem mimów.</span>"
-	lose_text = "<span class='danger'>Mimy nie są już takie same jak kiedyś.</span>"
-	medical_record_text = "Pacjent zgłasza, że jest wielkim fanem mimów."
-
-/datum/quirk/fan_mime/on_spawn()
-	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/clothing/accessory/fan_mime_pin/B = new(get_turf(H))
-	var/list/slots = list (
-		"backpack" = ITEM_SLOT_BACKPACK,
-		"hands" = ITEM_SLOT_HANDS,
-	)
-	H.equip_in_one_of_slots(B, slots , qdel_on_fail = TRUE)
-	var/datum/atom_hud/fan = GLOB.huds[DATA_HUD_FAN]
-	fan.add_hud_to(H)
-
 /datum/quirk/freerunning
 	name = "Mistrz Parkour"
 	desc = "Jesteś mistrzem zręczności i szybkości! Wspinasz się na stoły szybciej."

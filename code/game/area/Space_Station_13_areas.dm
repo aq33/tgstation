@@ -498,7 +498,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/library/abandoned
 	name = "Opuszczona Biblioteka"
 	icon_state = "abandoned_library"
-	flags_1 = CULT_PERMITTED_1
 
 /area/chapel
 	icon_state = "chapel"
@@ -825,7 +824,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "psychology"
 	mood_bonus = 3
 	mood_message = "<span class='nicegreen'>Czuję, że ktoś wreszcie mnie rozumie.\n</span>"
-	ambientsounds = list('sound/ambience/aurora_caelus_short.ogg')
 
 //Security
 

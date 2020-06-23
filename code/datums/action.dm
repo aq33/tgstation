@@ -276,19 +276,6 @@
 	name = "Włąćż/Wyłącz Słuchawki"
 	desc = "UNTZ UNTZ UNTZ"
 
-/datum/action/item_action/toggle_spacesuit
-	name = "Włącz/Wyłącz Regulatory Termiczne Kombinezonu"
-	icon_icon = 'icons/mob/actions/actions_spacesuit.dmi'
-	button_icon_state = "thermal_off"
-
-/datum/action/item_action/toggle_spacesuit/New(Target)
-	. = ..()
-	RegisterSignal(target, COMSIG_SUIT_SPACE_TOGGLE, .proc/toggle)
-
-/datum/action/item_action/toggle_spacesuit/Destroy()
-	UnregisterSignal(target, COMSIG_SUIT_SPACE_TOGGLE)
-	return ..()
-
 /datum/action/item_action/toggle_headphones/Trigger()
 	var/obj/item/clothing/ears/headphones/H = target
 	if(istype(H))
@@ -539,11 +526,7 @@
 		return
 	//Box closing from here on out.
 	if(!isturf(owner.loc)) //Don't let the player use this to escape mechs/welded closets.
-<<<<<<< HEAD
-		to_chat(owner, "<span class = 'notice'>You need more space to activate this implant.</span>")
-=======
 		to_chat(owner, "<span class='warning'>Potrzebujesz więcej miejsca do aktywowania implantu!</span>")
->>>>>>> 017441cb0... Tłumaczenie quirków, przedmiotów do celów anatgów, akcji (#88)
 		return
 	if(cooldown < world.time - 100)
 		var/box = new boxtype(owner.drop_location())

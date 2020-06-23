@@ -126,8 +126,7 @@
 				phrase = rand(12,18)	// user has broke the restrictor, it will now only play shitcurity phrases
 
 		if(!safety)
-			phrase_text = "JEBAĆ TWOJEGO PEDAŁA TY GÓWNO JEDZĄCA BURZO CHUJÓW I CHAPAJ KUTASA JEBANA DUPO WJEŻDZAJĄCA GÓWNO KURWA JEDZ PENISY W TWOJĄ PIERDOLONĄ MORDĘ I WYSRAJ ABORCJE KURWY ORAZ NAKUPKAJ I NASRAJ DO SWOJEJ DUPY T
-Y FIUCIE KURWA ZASRANA MAŁPO KURWA DUPA PALANCIE Z ODMĘTÓW GÓWNA."
+			phrase_text = "JEBAĆ TWOJEGO PEDAŁA TY GÓWNO JEDZĄCA BURZO CHUJÓW I CHAPAJ KUTASA JEBANA DUPO WJEŻDZAJĄCA GÓWNO KURWA JEDZ PENISY W TWOJĄ PIERDOLONĄ MORDĘ I WYSRAJ ABORCJE KURWY ORAZ NAKUPKAJ I NASRAJ DO SWOJEJ DUPY TY FIUCIE KURWA ZASRANA MAŁPO KURWA DUPA PALANCIE Z ODMĘTÓW GÓWNA."
 			phrase_sound = "emag"
 		else
 
@@ -136,7 +135,7 @@ Y FIUCIE KURWA ZASRANA MAŁPO KURWA DUPA PALANCIE Z ODMĘTÓW GÓWNA."
 					phrase_text = "STAĆ! STAĆ! STAĆ!"
 					phrase_sound = "halt"
 				if(2)
-					phrase_text = "Stój w imieniu prawa".
+					phrase_text = "Stój w imieniu prawa."
 					phrase_sound = "bobby"
 				if(3)
 					phrase_text = "Uległość jest w twoim najlepszym interesie."

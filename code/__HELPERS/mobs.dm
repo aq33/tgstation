@@ -106,7 +106,7 @@
 				. = capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names_male))
 			if(FEMALE)
 				. = capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names_female))
-		else
+			else
 				. = capitalize(human_first_name_random()) + " " + capitalize(human_last_name_random())
 
 		if(!findname(.))

@@ -27,9 +27,9 @@
 
 proc/squid_name(gender)
 	if(gender == MALE)
-		return "[pick(GLOB.squid_names_male)] [pick(GLOB.last_names)]"
+		return "[pick(GLOB.squid_names_male)] [pick(GLOB.last_names_male)]"
 	else
-		return "[pick(GLOB.squid_names_female)] [pick(GLOB.last_names)]"
+		return "[pick(GLOB.squid_names_female)] [pick(GLOB.last_names_female)]"
 
 /proc/human_last_name_random()
 	return pick(pick(GLOB.last_names_female), pick(GLOB.last_names_male))
