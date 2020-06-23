@@ -1,43 +1,43 @@
 {
 	"suspicion": [
-		"@pick(add_name)i'm watching you...",
-		"@pick(add_name)i know what you're doing",
-		"@pick(add_name)what are you hiding?",
-		"I saw that"
+		"@pick(add_name)obserwuję cię...",
+		"@pick(add_name)wiem co robisz",
+		"@pick(add_name)co tam chowasz?",
+		"Widziałem to"
 	],
 
 	"conversation": [
-		"Yes",
-		"Yeah",
-		"Yup",
+		"Tak",
 		"No",
+		"Tia",
+		"Nie",
 		"Nah",
-		"I doubt it",
+		"Wątpię",
 		"Uh...",
-		"Why?",
-		"But...",
-		"Hold on",
+		"Dlaczego?",
+		"Ale...",
+		"Zaczekaj",
 		"Hmm",
-		"Yeah, i know",
-		"Weird"
+		"Ta, wiem",
+		"Dziwne"
 	],
 
 	"greetings": [
 		"",
-		"Hey, ",
-		"Hi ",
+		"Hej, ",
+		"Cześć ",
 		"Hello ",
-		"Wait, ",
-		"It's "
+		"Czekaj, ",
+		"To "
 	],
 
 	"getout": [
-		"@pick(add_name)get out",
-		"@pick(add_name)get out!",
-		"@pick(add_name)go away",
-		"@pick(add_name)fuck off",
-		"OUT!",
-		"@pick(add_name)out!"
+		"@pick(add_name)wynocha",
+		"@pick(add_name)spadaj!",
+		"@pick(add_name)odejdź",
+		"@pick(add_name)spierdalaj",
+		"WYPAD!",
+		"@pick(add_name)wypad!"
 	],
 
 	"weird": [
@@ -51,9 +51,9 @@
 	],
 
 	"didyouhearthat": [
-		"Did you hear that?",
-		"Did you see that?",
-		"What was that?"
+		"Słyszałeś to?",
+		"Widziałeś to?",
+		"Co to było?"
 	],
 
 	"add_name": [
@@ -63,59 +63,59 @@
 	],
 
 	"doubt": [
-		"Why?",
-		"What?",
-		"Wait, what?",
-		"@pick(add_name)wait",
-		"@pick(add_name)hold on",
+		"Dlaczego?",
+		"Co?",
+		"Czekaj, co?",
+		"@pick(add_name)czekaj",
+		"@pick(add_name)poczekaj",
 		"Uh..."
 	],
 
 	"aggressive": [
-		"@pick(add_name)give me that!",
-		"@pick(add_name)stop it!",
-		"@pick(add_name)i'm going to kill you!",
-		"@pick(add_name)fuck you!"
+		"@pick(add_name)dawaj mi to!",
+		"@pick(add_name)przestań!",
+		"@pick(add_name)zabiję cie!",
+		"@pick(add_name)pierdol się!"
 	],
 
 	"help": [
+		"POMOCY",
+		"POMOC",
+		"RATUNKU",
+		"NA POMOC",
 		"HELP",
-		"HELP",
-		"HELP",
-		"HELP",
-		"HELP",
-		"HELP ME",
-		"HELP HIM",
-		"HELP HER",
-		"HELP THEM",
-		"HELP US",
-		"HELP YOURSELF"
+		"POMÓŻ MI",
+		"POMÓŻ MU",
+		"POMÓŻ JEJ",
+		"POMÓŻ IM",
+		"POMÓŻ NAM",
+		"POMÓŻ SOBIE"
 	],
 
 	"escape": [
-		"@pick(add_name)RUN!!",
-		"They're behind me!",
-		"It's here!",
-		"@pick(add_name)follow me!",
-		"@pick(add_name)follow me"
+		"@pick(add_name)UCIEKAJ!!",
+		"Są za mną!",
+		"To tutaj!",
+		"@pick(add_name)za mną!",
+		"@pick(add_name)za mną"
 	],
 
 	"infection_advice": [
-		"@pick(add_name)stay away",
-		"@pick(add_name)don't get close",
-		"@pick(add_name)be careful",
-		"@pick(add_name)help me",
-		"@pick(add_name)kill me"
+		"@pick(add_name)trzymaj się ode mnie zdala",
+		"@pick(add_name)nie podchodź",
+		"@pick(add_name)ostrożnie",
+		"@pick(add_name)pomóż mi",
+		"@pick(add_name)zabij mnie"
 	],
 
 	"people": [
-		"Captain",
+		"Kapitan",
 		"Hos",
 		"Cmo",
 		"Rd",
 		"Ce",
 		"Hop",
-		"Janitor",
+		"Woźny",
 		"AI",
 		"Viro",
 		"Qm",
@@ -123,102 +123,100 @@
 	],
 
 	"accusations": [
-		"dead",
-		"rogue",
-		"cult",
-		"a cultist",
-		"clockcult",
-		"a clock cultist",
-		"a revhead",
-		"a rev",
-		"a gang leader",
-		"a gangster",
-		"a traitor",
-		"a tator",
-		"a ling",
-		"a changeling"
+		"martwy",
+		"zbuntowany",
+		"kultystą",
+		"clock kultystą",
+		"przywódcą rewolucji",
+		"rewolucjonistą",
+		"szefem gangu",
+		"gangsterem",
+		"zdrajcą",
+		"traitorem",
+		"lingiem",
+		"changelingiem"
 	],
 
 	"threat": [
-		"Cult",
+		"Kult",
 		"Wizard",
 		"Blob",
 		"Ling",
-		"Ops",
-		"Swarmers",
-		"Spiders",
-		"Xenos",
+		"Syndykaci",
+		"Swarmery",
+		"Pająki",
+		"Xenosy",
 		"Revenant",
-		"Traitor",
-		"Harm",
-		"Blue APC",
-		"I hear flashing",
-		"Help",
+		"Zdrajca",
+		"Krzywda",
+		"Słyszę błyskanie",
+		"Pomocy",
 		"%TARGETNAME%"
 	],
 
 	"location": [
-		"space near @pick(sublocation)",
-		"the bridge",
-		"the armory",
+		"kosmosie w pobliżu @pick(sublocation)",
+		"mostku",
+		"zbrojownii",
 		"sec",
 		"security",
 		"science",
 		"xenobio",
-		"engineering",
+		"inżynierii",
 		"cargo",
-		"medbay",
-		"atmos",
+		"medbayu",
+		"atmosferyce",
 		"maint",
 		"@pick(sublocation) maint",
-		"virology",
-		"morgue",
-		"hops office",
-		"captains office",
-		"the chapel",
-		"the library",
-		"tool storage",
-		"botany",
-		"the kitchen",
-		"the ai sat"
+		"tunelach",
+		"wirologii",
+		"kostnicy",
+		"biurze HoPa",
+		"biurze Kapitana",
+		"kaplicy",
+		"bibliotece",
+		"składziku z narzędziami",
+		"botanice",
+		"kuchnii",
+		"satelicie AI"
 	],
 
 	"sublocation": [
-		"the bridge",
-		"the armory",
+		"bridge",
+		"zbrojownia",
 		"sec",
 		"security",
 		"science",
 		"xenobio",
-		"engineering",
+		"inżynieria",
 		"cargo",
 		"medbay",
-		"atmos",
-		"maint",
-		"virology",
-		"morgue",
-		"hops office",
-		"captains office",
-		"the chapel",
-		"the library",
-		"tool storage",
-		"botany",
-		"the kitchen",
-		"the ai sat"
+		"atmosferyka",
+		"szyby",
+	    "wirologia",
+		"kostnica",
+		"biuro Hopa",
+		"biuro kapitana",
+		"kaplica",
+		"biblioteka",
+		"składzik z narzędziami",
+		"botanika",
+		"kuchnia",
+		"satelita AI"
 	],
 
 	"advice": [
-		"Hmm...not sure about that.",
-		"Yes. You're doing the right thing.",
-		"No. Stop what you're doing.",
-		"You should be wary of that person.",
-		"Trust that person.",
-		"That person wants to kill you.",
-		"Kill that person. You know who.",
-		"You should go somewhere else. Quickly.",
-		"Good luck. You'll need it.",
-		"You have my permission. Do it.",
-		"Just do it."
+		"Hmm...nie jestem pewien.",
+		"Tak. Dobrze robisz.",
+		"Nie. Przestań to robić.",
+		"Powinieneś uważać na tę osobę.",
+		"Zaufaj jej.",
+		"Ta osoba chce cie zabić.",
+		"Zabij go. Wiesz kogo.",
+		"Powinieneś pójść gdzie indziej. Szybko.",
+		"Powodzenia. Będziesz go potrzebować",
+		"Masz moją zgodę. Zrób to",
+		"Po prostu to zrób"
 	],
 
 	"chemicals": [
