@@ -97,7 +97,7 @@
 /turf/open/floor/light/colour_cycle,
 /area/shuttle/escape)
 "v" = (
-/obj/machinery/jukebox/disco/indestructible,
+/obj/machinery/jukebox,
 /turf/open/floor/light/colour_cycle,
 /area/shuttle/escape)
 "x" = (
