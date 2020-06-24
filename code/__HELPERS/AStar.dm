@@ -111,7 +111,7 @@ Actual Adjacent procs :
 	var/turf/end = get_turf(_end)
 	var/turf/start = get_turf(caller)
 	if(!start || !end)
-		stack_trace("Invalid A* start or destination")
+		CRASH("Invalid A* start or destination")
 		return FALSE
 	if( start.z != end.z || start == end ) //no pathfinding between z levels
 		return FALSE
