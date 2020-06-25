@@ -18651,7 +18651,6 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
-/obj/machinery/computer/cloning,
 /obj/item/radio/intercom{
 	pixel_y = 22
 	},
@@ -26497,7 +26496,6 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/delivery,
-/obj/machinery/clonepod/prefilled,
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics/cloning)
 "aNw" = (
@@ -27369,9 +27367,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/box,
-/obj/machinery/sleeper{
-	dir = 4
-	},
+/obj/machinery/stasis,
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/central)
 "aOI" = (
@@ -32676,7 +32672,6 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
-/obj/machinery/dna_scannernew,
 /obj/machinery/airalarm{
 	pixel_y = 24
 	},

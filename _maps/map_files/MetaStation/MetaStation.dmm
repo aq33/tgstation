@@ -3952,12 +3952,10 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/machinery/sleeper{
-	dir = 4
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
+/obj/machinery/stasis,
 /turf/open/floor/plasteel/dark,
 /area/medical/sleeper)
 "ahh" = (
@@ -64470,9 +64468,6 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics/cloning)
 "cvw" = (
-/obj/machinery/clonepod/prefilled{
-	pixel_y = 2
-	},
 /obj/item/radio/intercom{
 	pixel_x = 29
 	},
@@ -65085,9 +65080,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
 	},
-/obj/machinery/computer/cloning{
-	dir = 8
-	},
 /obj/machinery/light{
 	dir = 4
 	},
@@ -65555,7 +65547,6 @@
 /area/medical/genetics/cloning)
 "cxo" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
-/obj/machinery/dna_scannernew,
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4

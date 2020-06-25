@@ -5791,12 +5791,10 @@
 /turf/open/floor/plasteel/dark,
 /area/security/courtroom)
 "amu" = (
-/obj/machinery/sleeper{
-	dir = 8
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
+/obj/machinery/stasis,
 /turf/open/floor/plasteel/dark,
 /area/medical/sleeper)
 "amx" = (
@@ -26637,7 +26635,6 @@
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
 "bvq" = (
-/obj/structure/chair,
 /obj/effect/landmark/start/geneticist,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 8
@@ -28157,7 +28154,6 @@
 /turf/open/floor/plasteel,
 /area/medical/sleeper)
 "bzl" = (
-/obj/machinery/dna_scannernew,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
@@ -28168,7 +28164,6 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics)
 "bzm" = (
-/obj/machinery/clonepod/prefilled,
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -28182,9 +28177,6 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics)
 "bzn" = (
-/obj/machinery/computer/cloning{
-	dir = 1
-	},
 /obj/machinery/airalarm{
 	dir = 1;
 	pixel_y = -22

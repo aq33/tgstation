@@ -54,10 +54,7 @@
 	dir = 4;
 	network = list("ss13","medbay")
 	},
-/obj/machinery/sleeper{
-	dir = 4;
-	icon_state = "sleeper"
-	},
+/obj/machinery/stasis,
 /turf/open/floor/plasteel,
 /area/medical/sleeper)
 "aag" = (
@@ -29639,7 +29636,6 @@
 /turf/open/floor/grass,
 /area/medical/genetics)
 "bpy" = (
-/obj/machinery/clonepod/prefilled,
 /obj/item/radio/intercom{
 	frequency = 1485;
 	name = "Station Intercom (Medbay)";
@@ -30427,9 +30423,6 @@
 /turf/open/floor/grass,
 /area/medical/genetics)
 "bqW" = (
-/obj/machinery/computer/cloning{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -31103,7 +31096,6 @@
 /turf/open/floor/grass,
 /area/medical/genetics)
 "bsr" = (
-/obj/machinery/dna_scannernew,
 /obj/machinery/camera{
 	c_tag = "Genetics Cloning";
 	dir = 4;
@@ -63063,15 +63055,6 @@
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
-"sXb" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/chair/office{
-	dir = 8
-	},
-/turf/open/floor/plasteel/white,
-/area/medical/genetics)
 "sXR" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/r_wall,
@@ -90116,7 +90099,7 @@ bmi
 bjN
 bow
 bpz
-sXb
+bpz
 bss
 btV
 bou
