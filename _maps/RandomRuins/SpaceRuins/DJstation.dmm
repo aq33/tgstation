@@ -166,6 +166,9 @@
 "aE" = (
 /obj/structure/table,
 /obj/item/flashlight/lamp,
+/obj/item/gps{
+	gpstag = "X-12"
+	},
 /turf/open/floor/plasteel/grimy,
 /area/ruin/space/djstation)
 "aF" = (

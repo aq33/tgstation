@@ -334,6 +334,12 @@
 /obj/item/stack/sheet/iron/fifty,
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/unpowered/no_grav)
+"fs" = (
+/obj/item/gps{
+	gpstag = "X-03"
+	},
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/unpowered/no_grav)
 "XA" = (
 /obj/structure/fluff/bus/passable/seat{
 	icon_state = "backseat"
@@ -471,7 +477,7 @@ ab
 ab
 ab
 ab
-ad
+fs
 ad
 aj
 an

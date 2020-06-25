@@ -938,6 +938,9 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/gps{
+	gpstag = "X-04"
+	},
 /turf/open/floor/plasteel/dark{
 	initial_gas_mix = "TEMP=2.7"
 	},

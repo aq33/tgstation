@@ -157,6 +157,12 @@
 /obj/item/shovel,
 /turf/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
+"O" = (
+/obj/item/gps{
+	gpstag = "X-07"
+	},
+/turf/open/floor/mineral/bananium/airless,
+/area/ruin/unpowered)
 
 (1,1,1) = {"
 a
@@ -509,7 +515,7 @@ d
 f
 o
 r
-h
+O
 w
 d
 b

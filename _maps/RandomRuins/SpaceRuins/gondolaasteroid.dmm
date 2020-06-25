@@ -91,6 +91,12 @@
 	},
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space/has_grav)
+"Y" = (
+/obj/item/gps{
+	gpstag = "X-15"
+	},
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/space/has_grav)
 
 (1,1,1) = {"
 a
@@ -991,7 +997,7 @@ b
 c
 c
 c
-c
+Y
 c
 c
 c

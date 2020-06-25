@@ -311,6 +311,9 @@
 	},
 /obj/machinery/light,
 /obj/structure/table,
+/obj/item/gps{
+	gpstag = "X-14"
+	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/gasthelizard)
 "O" = (

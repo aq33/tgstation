@@ -53,6 +53,12 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
+"t" = (
+/obj/item/gps{
+	gpstag = "X-13"
+	},
+/turf/open/floor/plating,
+/area/ruin/unpowered)
 "Q" = (
 /obj/structure/lattice,
 /turf/template_noop,
@@ -203,7 +209,7 @@ d
 d
 d
 d
-d
+t
 d
 d
 d

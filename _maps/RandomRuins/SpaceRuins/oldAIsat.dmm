@@ -136,6 +136,9 @@
 "aA" = (
 /obj/structure/table,
 /obj/item/paper,
+/obj/item/gps{
+	gpstag = "X-19"
+	},
 /turf/open/floor/plasteel/airless,
 /area/tcommsat/oldaisat)
 "aB" = (

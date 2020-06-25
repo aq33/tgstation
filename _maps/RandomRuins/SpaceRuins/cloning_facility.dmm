@@ -312,6 +312,9 @@
 /area/ruin/space/has_grav/powered/ancient_shuttle)
 "Q" = (
 /obj/structure/table/glass,
+/obj/item/gps{
+	gpstag = "X-05"
+	},
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/powered/ancient_shuttle)
 "R" = (
