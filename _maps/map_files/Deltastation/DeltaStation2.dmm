@@ -122682,6 +122682,20 @@
 /obj/effect/landmark/start/brig_phys,
 /turf/open/floor/plasteel/white,
 /area/security/brig)
+"mLf" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel,
+/area/crew_quarters/bar/atrium)
 "mMY" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/vending/snack/random,
@@ -163515,7 +163529,7 @@ aHE
 aJa
 aKB
 aLM
-aLL
+mLf
 aLL
 aQw
 aLL
