@@ -42,6 +42,8 @@
 	/// The (text for the) stamps on the paper.
 	var/list/stamps			/// Positioning for the stamp in tgui
 	var/list/stamped		/// Overlay info
+	drop_sound = 'sound/items/handling/paper_drop.ogg'
+	pickup_sound =  'sound/items/handling/paper_pickup.ogg'
 
 	var/contact_poison // Reagent ID to transfer on contact
 	var/contact_poison_volume = 0

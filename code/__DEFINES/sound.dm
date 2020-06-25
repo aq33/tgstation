@@ -87,3 +87,8 @@
 	'sound/hallucinations/turn_around1.ogg', 'sound/hallucinations/turn_around2.ogg', 'sound/hallucinations/veryfar_noise.ogg', 'sound/hallucinations/wail.ogg')
 
 #define MUSIC_VOLUME 50 //AQUILA EDIT
+#define INTERACTION_SOUND_RANGE_MODIFIER -3
+#define EQUIP_SOUND_VOLUME 30
+#define PICKUP_SOUND_VOLUME 15
+#define DROP_SOUND_VOLUME 20 
+#define YEET_SOUND_VOLUME 90
