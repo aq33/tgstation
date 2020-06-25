@@ -375,6 +375,14 @@
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/plating/asteroid,
 /area/ruin/powered/clownplanet)
+"ST" = (
+/obj/item/gps{
+	gpstag = "X-06"
+	},
+/turf/open/floor/grass{
+	color = "#1eff00"
+	},
+/area/ruin/powered/clownplanet)
 
 (1,1,1) = {"
 aa
@@ -834,7 +842,7 @@ av
 av
 av
 aL
-aj
+ST
 aj
 ab
 aF

@@ -1,25 +1,76 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"a" = (
+"ch" = (
+/obj/machinery/computer{
+	desc = "A computer long since rendered non-functional due to lack of maintenance. Spitting out error messages.";
+	name = "Broken Computer"
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"cl" = (
+/obj/structure/light_construct/small{
+	dir = 4
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"gi" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/obj/effect/decal/remains/human,
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"gB" = (
+/obj/item/stock_parts/cell{
+	charge = 100;
+	maxcharge = 15000
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"hx" = (
+/obj/machinery/door/poddoor{
+	id = "oldship_ruin_gun";
+	name = "pod bay door"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/whiteship/box)
+"hQ" = (
+/obj/machinery/door/airlock/public/glass,
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"id" = (
+/obj/machinery/mass_driver{
+	dir = 4;
+	id = "oldship_ruin_gun"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/whiteship/box)
+"je" = (
 /turf/template_noop,
 /area/template_noop)
-"b" = (
+"jS" = (
+/turf/closed/wall/mineral/titanium/interior,
+/area/ruin/space/has_grav/whiteship/box)
+"jW" = (
+/obj/structure/table,
+/obj/item/storage/firstaid/regular{
+	pixel_x = 6;
+	pixel_y = -5
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"mq" = (
 /turf/closed/wall/mineral/titanium,
 /area/ruin/space/has_grav/whiteship/box)
-"c" = (
-/turf/open/floor/mineral/titanium/white,
+"mF" = (
+/obj/machinery/door/window,
+/turf/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/whiteship/box)
-"d" = (
-/obj/structure/shuttle/engine/propulsion/left{
-	dir = 8
-	},
-/turf/open/floor/plating/airless,
-/area/ruin/space/has_grav/whiteship/box)
-"e" = (
+"nt" = (
 /obj/structure/table,
-/obj/item/radio/off,
+/obj/item/gun/energy/laser/retro,
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/whiteship/box)
-"f" = (
+"oy" = (
 /obj/structure/table,
 /obj/item/screwdriver,
 /obj/structure/light_construct{
@@ -27,48 +78,38 @@
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/whiteship/box)
-"g" = (
-/obj/machinery/computer/pod{
-	dir = 8;
-	id = "oldship_ruin_gun"
-	},
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"h" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8
-	},
-/turf/open/floor/plating/airless,
-/area/ruin/space/has_grav/whiteship/box)
-"i" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/open/floor/plating/airless,
-/area/ruin/space/has_grav/whiteship/box)
-"j" = (
-/turf/closed/wall/mineral/titanium/interior,
-/area/ruin/space/has_grav/whiteship/box)
-"k" = (
+"pA" = (
 /obj/structure/rack,
 /obj/item/clothing/suit/space/hardsuit/medical,
 /obj/item/clothing/mask/breath,
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/whiteship/box)
-"l" = (
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/whiteship/box)
-"m" = (
-/obj/item/stock_parts/cell{
-	charge = 100;
-	maxcharge = 15000
+"pB" = (
+/obj/structure/chair{
+	dir = 1
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/whiteship/box)
-"n" = (
+"qX" = (
+/obj/machinery/door/window/northright,
+/obj/effect/decal/remains/human,
+/turf/open/floor/mineral/titanium/purple,
+/area/ruin/space/has_grav/whiteship/box)
+"ri" = (
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"ry" = (
+/obj/structure/table,
+/obj/item/gps{
+	gpstag = "X-27"
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"tS" = (
+/obj/item/multitool,
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"ui" = (
 /obj/structure/rack,
 /obj/item/tank/internals/emergency_oxygen,
 /obj/item/tank/internals/emergency_oxygen,
@@ -77,93 +118,7 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/whiteship/box)
-"o" = (
-/obj/machinery/door/airlock/public/glass,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/whiteship/box)
-"p" = (
-/obj/machinery/mass_driver{
-	dir = 4;
-	id = "oldship_ruin_gun"
-	},
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/whiteship/box)
-"q" = (
-/obj/machinery/door/poddoor{
-	id = "oldship_ruin_gun";
-	name = "pod bay door"
-	},
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/whiteship/box)
-"r" = (
-/obj/structure/shuttle/engine/propulsion/right{
-	dir = 8
-	},
-/turf/open/floor/plating/airless,
-/area/ruin/space/has_grav/whiteship/box)
-"s" = (
-/obj/structure/light_construct/small,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/whiteship/box)
-"t" = (
-/obj/machinery/door/airlock/titanium,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/whiteship/box)
-"u" = (
-/obj/structure/frame/computer{
-	anchored = 1
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"v" = (
-/obj/machinery/computer{
-	desc = "A computer long since rendered non-functional due to lack of maintenance. Spitting out error messages.";
-	name = "Broken Computer"
-	},
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"w" = (
-/obj/machinery/door/airlock/titanium,
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"x" = (
-/obj/structure/chair{
-	dir = 1
-	},
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"y" = (
-/obj/item/shard{
-	icon_state = "medium"
-	},
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"z" = (
-/obj/structure/light_construct,
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"A" = (
-/obj/structure/light_construct{
-	dir = 1
-	},
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"B" = (
-/obj/effect/spawner/structure/window/shuttle,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/whiteship/box)
-"C" = (
-/obj/structure/table,
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"D" = (
-/obj/machinery/door/window,
-/turf/open/floor/mineral/titanium/purple,
-/area/ruin/space/has_grav/whiteship/box)
-"E" = (
+"uC" = (
 /obj/structure/bed,
 /obj/item/bedsheet,
 /obj/structure/window/reinforced,
@@ -172,68 +127,74 @@
 	},
 /turf/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/whiteship/box)
-"F" = (
-/obj/structure/table,
-/obj/item/gun/energy/laser/retro,
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"G" = (
-/obj/machinery/door/airlock/public/glass,
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"H" = (
-/obj/structure/light_construct{
-	dir = 4
-	},
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"I" = (
-/obj/structure/light_construct/small{
-	dir = 4
-	},
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"J" = (
-/obj/structure/light_construct{
+"uE" = (
+/obj/structure/shuttle/engine/propulsion/left{
 	dir = 8
 	},
+/turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/whiteship/box)
+"uZ" = (
+/obj/structure/frame/computer{
+	anchored = 1;
+	dir = 1
+	},
+/obj/structure/light_construct,
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/whiteship/box)
-"K" = (
-/obj/structure/chair{
-	dir = 4
+"vu" = (
+/obj/machinery/door/airlock/public/glass,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/whiteship/box)
+"vV" = (
+/obj/item/scalpel,
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"yn" = (
+/obj/machinery/sleeper{
+	dir = 8
 	},
 /obj/effect/decal/remains/human,
+/obj/structure/light_construct,
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/whiteship/box)
-"L" = (
-/obj/machinery/computer{
-	desc = "A computer long since rendered non-functional due to lack of maintenance. Spitting out error messages.";
-	dir = 8;
-	name = "Broken Computer"
+"yy" = (
+/obj/structure/table,
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"yI" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 8
 	},
-/turf/open/floor/mineral/titanium/white,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/whiteship/box)
-"M" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/open/floor/mineral/titanium/white,
+"zI" = (
+/turf/open/floor/plating,
 /area/ruin/space/has_grav/whiteship/box)
-"N" = (
-/obj/structure/light_construct/small{
+"Bm" = (
+/obj/structure/frame/computer{
+	anchored = 1;
 	dir = 8
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/whiteship/box)
-"O" = (
+"BH" = (
+/obj/structure/frame/computer{
+	anchored = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"BX" = (
 /obj/structure/table,
-/obj/item/tank/internals/oxygen,
+/obj/item/radio/off,
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/whiteship/box)
-"P" = (
-/obj/machinery/portable_atmospherics/scrubber,
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"Q" = (
+"CW" = (
 /obj/structure/bed,
 /obj/item/bedsheet,
 /obj/structure/window/reinforced{
@@ -244,863 +205,909 @@
 	},
 /turf/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/whiteship/box)
-"R" = (
-/obj/machinery/door/window/northright,
-/obj/effect/decal/remains/human,
-/turf/open/floor/mineral/titanium/purple,
-/area/ruin/space/has_grav/whiteship/box)
-"S" = (
-/obj/item/multitool,
+"Dr" = (
+/obj/structure/light_construct,
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/whiteship/box)
-"T" = (
+"DH" = (
+/obj/structure/light_construct/small,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/whiteship/box)
+"DX" = (
+/obj/machinery/door/airlock/titanium,
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"Eh" = (
 /obj/structure/light_construct/small{
 	dir = 1
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/whiteship/box)
-"U" = (
+"EH" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"Gv" = (
+/obj/item/shard{
+	icon_state = "medium"
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"HM" = (
+/obj/machinery/portable_atmospherics/scrubber,
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"ID" = (
+/obj/machinery/door/airlock/titanium,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/whiteship/box)
+"II" = (
+/obj/machinery/computer{
+	desc = "A computer long since rendered non-functional due to lack of maintenance. Spitting out error messages.";
+	dir = 8;
+	name = "Broken Computer"
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"Kk" = (
+/obj/structure/light_construct{
+	dir = 4
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"Mu" = (
+/obj/structure/table,
+/obj/item/tank/internals/oxygen,
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"Pn" = (
+/obj/structure/light_construct{
+	dir = 1
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"Pw" = (
+/obj/machinery/computer/pod{
+	dir = 8;
+	id = "oldship_ruin_gun"
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"Qd" = (
+/obj/effect/spawner/structure/window/shuttle,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/whiteship/box)
+"QY" = (
+/obj/structure/light_construct{
+	dir = 8
+	},
+/turf/open/floor/mineral/titanium/white,
+/area/ruin/space/has_grav/whiteship/box)
+"Ry" = (
+/obj/structure/shuttle/engine/propulsion/right{
+	dir = 8
+	},
+/turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/whiteship/box)
+"Tu" = (
 /obj/structure/chair,
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/whiteship/box)
-"V" = (
-/obj/structure/frame/computer{
-	anchored = 1;
-	dir = 1
-	},
-/obj/structure/light_construct,
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"W" = (
-/obj/item/scalpel,
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"X" = (
-/obj/structure/table,
-/obj/item/storage/firstaid/regular{
-	pixel_x = 6;
-	pixel_y = -5
-	},
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/whiteship/box)
-"Y" = (
-/obj/structure/frame/computer{
-	anchored = 1;
+"Ur" = (
+/obj/structure/light_construct/small{
 	dir = 8
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/ruin/space/has_grav/whiteship/box)
-"Z" = (
-/obj/machinery/sleeper{
+"YU" = (
+/obj/structure/shuttle/engine/propulsion{
 	dir = 8
 	},
-/obj/effect/decal/remains/human,
-/obj/structure/light_construct,
-/turf/open/floor/mineral/titanium/white,
+/turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/whiteship/box)
 
 (1,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-b
-b
-t
-b
-b
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+mq
+ID
+mq
+mq
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (2,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-b
-j
-c
-j
-b
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+jS
+ri
+jS
+mq
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (3,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-b
-c
-c
-c
-b
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+ri
+ri
+ri
+mq
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (4,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-b
-c
-c
-c
-b
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+ri
+ri
+ri
+mq
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (5,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-b
-c
-c
-c
-b
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+ri
+ri
+ri
+mq
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (6,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-b
-c
-c
-z
-b
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+ri
+ri
+Dr
+mq
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (7,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-b
-c
-c
-c
-b
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+ri
+ri
+ri
+mq
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (8,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-b
-c
-c
-c
-b
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+ri
+ri
+ri
+mq
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (9,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-b
-c
-c
-M
-b
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+ri
+ri
+EH
+mq
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (10,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-b
-j
-c
-j
-b
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+jS
+ri
+jS
+mq
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (11,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-b
-b
-w
-b
-b
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+mq
+DX
+mq
+mq
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (12,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-a
-b
-c
-b
-a
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+ri
+mq
+je
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (13,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-a
-b
-b
-w
-b
-b
-a
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+je
+mq
+mq
+DX
+mq
+mq
+je
+je
+je
+je
+je
+je
+je
+je
 "}
 (14,1,1) = {"
-a
-a
-a
-a
-a
-a
-a
-b
-b
-j
-c
-j
-b
-b
-a
-a
-a
-a
-a
-a
-a
+je
+je
+je
+je
+je
+je
+je
+mq
+mq
+jS
+ri
+jS
+mq
+mq
+je
+je
+je
+je
+je
+je
+je
 "}
 (15,1,1) = {"
-b
-d
-h
-h
-h
-r
-a
-b
-j
-c
-c
-c
-j
-b
-a
-d
-h
-h
-h
-r
-b
+mq
+uE
+YU
+YU
+YU
+Ry
+je
+mq
+jS
+ri
+ri
+ri
+jS
+mq
+je
+uE
+YU
+YU
+YU
+Ry
+mq
 "}
 (16,1,1) = {"
-b
-b
-i
-i
-i
-b
-b
-b
-A
-c
-c
-c
-z
-b
-b
-b
-i
-i
-i
-b
-b
+mq
+mq
+yI
+yI
+yI
+mq
+mq
+mq
+Pn
+ri
+ri
+ri
+Dr
+mq
+mq
+mq
+yI
+yI
+yI
+mq
+mq
 "}
 (17,1,1) = {"
-a
-b
-j
-l
-l
-j
-b
-j
-c
-c
-c
-c
-c
-j
-b
-j
-l
-l
-j
-b
-a
+je
+mq
+jS
+zI
+zI
+jS
+mq
+jS
+ri
+ri
+ri
+ri
+ri
+jS
+mq
+jS
+zI
+zI
+jS
+mq
+je
 "}
 (18,1,1) = {"
-a
-a
-b
-j
-l
-s
-b
-c
-c
-c
-c
-c
-c
-P
-b
-T
-l
-j
-b
-a
-a
+je
+je
+mq
+jS
+zI
+DH
+mq
+ri
+ri
+ri
+ri
+ri
+ri
+HM
+mq
+Eh
+zI
+jS
+mq
+je
+je
 "}
 (19,1,1) = {"
-a
-a
-a
-b
-b
-t
-b
-b
-b
-B
-G
-B
-b
-b
-b
-t
-b
-b
-a
-a
-a
+je
+je
+je
+mq
+mq
+ID
+mq
+mq
+mq
+Qd
+hQ
+Qd
+mq
+mq
+mq
+ID
+mq
+mq
+je
+je
+je
 "}
 (20,1,1) = {"
-a
-a
-a
-b
-b
-c
-c
-c
-c
-c
-c
-c
-c
-c
-c
-c
-b
-b
-a
-a
-a
+je
+je
+je
+mq
+mq
+ri
+ri
+ri
+ri
+ri
+ri
+ri
+ri
+ri
+ri
+ri
+mq
+mq
+je
+je
+je
 "}
 (21,1,1) = {"
-a
-a
-b
-b
-j
-m
-c
-c
-c
-c
-H
-c
-c
-c
-c
-c
-b
-b
-b
-a
-a
+je
+je
+mq
+mq
+jS
+gB
+ri
+ri
+ri
+ri
+Kk
+ri
+ri
+ri
+ri
+ri
+mq
+mq
+mq
+je
+je
 "}
 (22,1,1) = {"
-a
-b
-b
-j
-c
-c
-c
-c
-b
-b
-b
-b
-b
-b
-c
-c
-b
-b
-b
-b
-a
+je
+mq
+mq
+jS
+ri
+ri
+ri
+ri
+mq
+mq
+mq
+mq
+mq
+mq
+ri
+ri
+mq
+mq
+mq
+mq
+je
 "}
 (23,1,1) = {"
-b
-b
-b
-b
-b
-b
-j
-c
-b
-D
-c
-N
-c
-w
-c
-c
-w
-c
-j
-b
-a
+mq
+mq
+mq
+mq
+mq
+mq
+jS
+ri
+mq
+mF
+ri
+Ur
+ri
+DX
+ri
+ri
+DX
+ri
+jS
+mq
+je
 "}
 (24,1,1) = {"
-t
-c
-c
-k
-k
-j
-b
-z
-b
-E
-c
-O
-Q
-b
-A
-c
-b
-c
-X
-b
-b
+ID
+ri
+ri
+pA
+pA
+jS
+mq
+Dr
+mq
+uC
+ri
+Mu
+CW
+mq
+Pn
+ri
+mq
+ri
+jW
+mq
+mq
 "}
 (25,1,1) = {"
-b
-c
-c
-c
-c
-n
-b
-c
-w
-c
-I
-c
-R
-b
-c
-c
-b
-c
-c
-j
-b
+mq
+ri
+ri
+ri
+ri
+ui
+mq
+ri
+DX
+ri
+cl
+ri
+qX
+mq
+ri
+ri
+mq
+ri
+ri
+jS
+mq
 "}
 (26,1,1) = {"
-b
-e
-c
-c
-c
-c
-b
-c
-b
-b
-b
-b
-b
-b
-c
-m
-B
-W
-c
-c
-b
+mq
+BX
+ri
+ri
+ri
+ri
+mq
+ri
+mq
+mq
+mq
+mq
+mq
+mq
+ri
+gB
+Qd
+vV
+ri
+ri
+mq
 "}
 (27,1,1) = {"
-b
-f
-c
-c
-c
-c
-w
-c
-c
-c
-J
-c
-c
-c
-c
-c
-B
-c
-c
-Z
-b
+mq
+oy
+ri
+ri
+ri
+ri
+DX
+ri
+ri
+ri
+QY
+ri
+ri
+ri
+ri
+ri
+Qd
+ri
+ri
+yn
+mq
 "}
 (28,1,1) = {"
-b
-c
-c
-c
-c
-c
-b
-j
-c
-c
-c
-c
-c
-c
-c
-S
-B
-c
-c
-c
-b
+mq
+ri
+ri
+ri
+ri
+ri
+mq
+jS
+ri
+ri
+ri
+ri
+ri
+ri
+ri
+tS
+Qd
+ri
+ri
+ri
+mq
 "}
 (29,1,1) = {"
-b
-c
-c
-c
-c
-j
-b
-b
-b
-B
-G
-B
-b
-b
-b
-b
-b
-c
-c
-c
-b
+mq
+ri
+ri
+ri
+ri
+jS
+mq
+mq
+mq
+Qd
+hQ
+Qd
+mq
+mq
+mq
+mq
+mq
+ri
+ri
+ri
+mq
 "}
 (30,1,1) = {"
-b
-c
-c
-c
-j
-b
-j
-c
-c
-c
-c
-c
-c
-C
-C
-C
-b
-c
-c
-j
-b
+mq
+ri
+ri
+ri
+jS
+mq
+jS
+ri
+ri
+ri
+ri
+ri
+ri
+yy
+yy
+yy
+mq
+ri
+ri
+jS
+mq
 "}
 (31,1,1) = {"
-t
-c
-g
-c
-b
-j
-c
-c
-c
-c
-c
-c
-c
-c
-c
-c
-j
-j
-Y
-b
-a
+ID
+ri
+Pw
+ri
+mq
+jS
+ri
+ri
+ri
+ri
+ri
+ri
+ri
+ri
+ri
+ri
+jS
+jS
+Bm
+mq
+je
 "}
 (32,1,1) = {"
-b
-b
-b
-o
-b
-u
-x
-c
-c
-c
-c
-c
-c
-c
-c
-U
-V
-b
-b
-b
-a
+mq
+mq
+mq
+vu
+mq
+BH
+pB
+ri
+ri
+ri
+ri
+ri
+ri
+ri
+ri
+Tu
+uZ
+mq
+mq
+mq
+je
 "}
 (33,1,1) = {"
-a
-a
-b
-p
-b
-v
-x
-c
-c
-C
-K
-C
-c
-c
-c
-c
-j
-b
-b
-a
-a
+je
+je
+mq
+id
+mq
+ch
+pB
+ri
+ri
+yy
+gi
+yy
+ri
+ri
+ri
+ri
+jS
+mq
+mq
+je
+je
 "}
 (34,1,1) = {"
-a
-a
-b
-q
-b
-j
-y
-c
-c
-F
-L
-C
-c
-c
-c
-j
-b
-b
-a
-a
-a
+je
+je
+mq
+hx
+mq
+jS
+Gv
+ri
+ri
+nt
+II
+ry
+ri
+ri
+ri
+jS
+mq
+mq
+je
+je
+je
 "}
 (35,1,1) = {"
-a
-a
-a
-a
-b
-b
-b
-B
-B
-B
-B
-B
-B
-B
-b
-b
-b
-a
-a
-a
-a
+je
+je
+je
+je
+mq
+mq
+mq
+Qd
+Qd
+Qd
+Qd
+Qd
+Qd
+Qd
+mq
+mq
+mq
+je
+je
+je
+je
 "}

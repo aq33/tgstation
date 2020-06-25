@@ -298,10 +298,7 @@
 /obj/effect/turf_decal/stripes/end{
 	dir = 4
 	},
-/obj/machinery/sleeper{
-	dir = 4;
-	icon_state = "sleeper"
-	},
+/obj/machinery/stasis,
 /turf/open/floor/plasteel,
 /area/medical/medbay/central)
 "aaJ" = (
@@ -98519,7 +98516,6 @@
 	},
 /area/maintenance/department/medical/central)
 "dnl" = (
-/obj/machinery/clonepod/prefilled,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -98540,7 +98536,6 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics/cloning)
 "dnm" = (
-/obj/machinery/computer/cloning,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -98553,7 +98548,6 @@
 /turf/open/floor/plasteel/white,
 /area/medical/genetics/cloning)
 "dnn" = (
-/obj/machinery/dna_scannernew,
 /obj/machinery/airalarm{
 	pixel_y = 22
 	},
@@ -122688,6 +122682,20 @@
 /obj/effect/landmark/start/brig_phys,
 /turf/open/floor/plasteel/white,
 /area/security/brig)
+"mLf" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel,
+/area/crew_quarters/bar/atrium)
 "mMY" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/vending/snack/random,
@@ -163521,7 +163529,7 @@ aHE
 aJa
 aKB
 aLM
-aLL
+mLf
 aLL
 aQw
 aLL

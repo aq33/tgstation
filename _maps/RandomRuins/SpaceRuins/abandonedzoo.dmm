@@ -252,6 +252,9 @@
 "aN" = (
 /obj/structure/table/reinforced,
 /obj/item/folder,
+/obj/item/gps{
+	gpstag = "X-02"
+	},
 /turf/open/floor/plasteel/dark/side,
 /area/ruin/space/has_grav/abandonedzoo)
 "aO" = (

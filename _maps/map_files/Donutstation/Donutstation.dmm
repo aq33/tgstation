@@ -11,10 +11,6 @@
 	dir = 1;
 	network = list("ss13","Medical")
 	},
-/obj/machinery/sleeper{
-	dir = 1;
-	icon_state = "sleeper"
-	},
 /turf/open/floor/plasteel,
 /area/medical/sleeper)
 "aad" = (
@@ -106,10 +102,6 @@
 	},
 /area/hallway/secondary/exit/departure_lounge)
 "aan" = (
-/obj/machinery/sleeper{
-	dir = 1;
-	icon_state = "sleeper"
-	},
 /turf/open/floor/plasteel,
 /area/medical/sleeper)
 "aao" = (
@@ -5112,6 +5104,7 @@
 	dir = 4;
 	network = list("ss13","Bar Area")
 	},
+/obj/machinery/jukebox,
 /turf/open/floor/plasteel,
 /area/crew_quarters/bar)
 "amU" = (
@@ -13747,19 +13740,10 @@
 /turf/open/floor/plasteel/white,
 /area/medical/storage)
 "aGf" = (
-/obj/machinery/dna_scannernew,
 /obj/machinery/airalarm{
 	dir = 4;
 	pixel_x = -23
 	},
-/turf/open/floor/plasteel/white,
-/area/medical/genetics/cloning)
-"aGg" = (
-/obj/machinery/computer/cloning,
-/turf/open/floor/plasteel/white,
-/area/medical/genetics/cloning)
-"aGh" = (
-/obj/machinery/clonepod/prefilled,
 /turf/open/floor/plasteel/white,
 /area/medical/genetics/cloning)
 "aGi" = (
@@ -18161,9 +18145,6 @@
 /turf/open/floor/plating,
 /area/hydroponics)
 "aQD" = (
-/obj/structure/chair{
-	dir = 1
-	},
 /obj/effect/landmark/start/geneticist,
 /turf/open/floor/plasteel/white,
 /area/medical/genetics/cloning)
@@ -80563,7 +80544,7 @@ aBU
 aGn
 bhT
 aFP
-aGg
+aFR
 aQD
 cbK
 pYp
@@ -80820,7 +80801,7 @@ aBU
 aGn
 bhU
 aFQ
-aGh
+aFR
 aFR
 cbL
 cbR

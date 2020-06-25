@@ -145,6 +145,13 @@
 /obj/structure/bed,
 /turf/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
+"H" = (
+/obj/structure/table/wood,
+/obj/item/gps{
+	gpstag = "X-17"
+	},
+/turf/open/floor/mineral/titanium/purple,
+/area/ruin/space/has_grav/powered/authorship)
 
 (1,1,1) = {"
 a
@@ -296,7 +303,7 @@ c
 j
 r
 w
-n
+H
 j
 c
 a

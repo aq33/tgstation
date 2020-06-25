@@ -99,6 +99,12 @@
 /obj/structure/shuttle/engine/propulsion/burst,
 /turf/template_noop,
 /area/ruin/powered)
+"K" = (
+/obj/item/gps{
+	gpstag = "X-24"
+	},
+/turf/open/floor/oldshuttle,
+/area/ruin/powered)
 
 (1,1,1) = {"
 a
@@ -266,7 +272,7 @@ g
 g
 c
 t
-g
+K
 g
 d
 "}

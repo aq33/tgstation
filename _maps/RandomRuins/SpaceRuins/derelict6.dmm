@@ -58,8 +58,8 @@
 /area/ruin/unpowered)
 "al" = (
 /obj/structure/fluff/broken_flooring{
-	icon_state = "singular";
-	dir = 4
+	dir = 4;
+	icon_state = "singular"
 	},
 /obj/structure/lattice,
 /turf/template_noop,
@@ -273,6 +273,9 @@
 "aV" = (
 /obj/structure/table/wood,
 /obj/item/trash/plate,
+/obj/item/gps{
+	gpstag = "X-11"
+	},
 /turf/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
@@ -459,8 +462,8 @@
 /area/ruin/unpowered)
 "bD" = (
 /obj/structure/fluff/broken_flooring{
-	icon_state = "singular";
-	dir = 4
+	dir = 4;
+	icon_state = "singular"
 	},
 /turf/open/floor/plasteel/airless,
 /area/ruin/unpowered)
@@ -481,8 +484,8 @@
 /area/ruin/unpowered)
 "bG" = (
 /obj/structure/fluff/broken_flooring{
-	icon_state = "singular";
-	dir = 4
+	dir = 4;
+	icon_state = "singular"
 	},
 /turf/template_noop,
 /area/template_noop)

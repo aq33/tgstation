@@ -89,6 +89,12 @@
 /obj/structure/girder,
 /turf/open/floor/plating/airless,
 /area/ruin/unpowered)
+"w" = (
+/obj/item/gps{
+	gpstag = "X-09"
+	},
+/turf/open/floor/mineral/titanium/blue/airless,
+/area/ruin/unpowered)
 
 (1,1,1) = {"
 a
@@ -773,7 +779,7 @@ c
 e
 h
 h
-h
+w
 h
 e
 c

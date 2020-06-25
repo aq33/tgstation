@@ -134,6 +134,12 @@
 "q" = (
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/powered)
+"s" = (
+/obj/item/gps{
+	gpstag = "X-23"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/powered)
 "t" = (
 /obj/machinery/power/port_gen/pacman,
 /turf/open/floor/plating,
@@ -481,7 +487,7 @@ b
 b
 b
 o
-q
+s
 q
 q
 A
