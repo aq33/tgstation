@@ -259,10 +259,6 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	var/loom_result = /obj/item/stack/sheet/cotton/cloth
 	grind_results = list(/datum/reagent/cellulose = 10)
 
-/obj/item/stack/sheet/mineral/bamboo/get_main_recipes()
-	. = ..()
-	. += GLOB.bamboo_recipes
-
 GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	new/datum/stack_recipe("white jumpsuit", /obj/item/clothing/under/color/white, 3), \
 	new/datum/stack_recipe("white shoes", /obj/item/clothing/shoes/sneakers/white, 2), \

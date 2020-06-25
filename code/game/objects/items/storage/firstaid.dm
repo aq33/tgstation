@@ -122,8 +122,8 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/stack/medical/gauze = 1,
-		/obj/item/stack/medical/bruise_pack = 3,
-		/obj/item/stack/medical/ointment= 3)
+		/obj/item/stack/medical/suture = 3,
+		/obj/item/stack/medical/mesh= 3)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/firstaid/fire
