@@ -780,7 +780,7 @@
 		add_spells_to_statpanel(mind.spell_list)
 	add_spells_to_statpanel(mob_spell_list)
 
-	winset(src, "current-map", "text = 'Map: [SSmapping.config?.map_name || "Loading..."]'")
+	//winset(src, "current-map", "text = 'Map: [SSmapping.config?.map_name || "Loading..."]'")
 
 
 /**
