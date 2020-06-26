@@ -21991,6 +21991,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/machinery/droneDispenser/snowflake,
 /turf/open/floor/plasteel/white,
 /area/science/robotics/lab)
 "biO" = (

@@ -55993,6 +55993,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/engine_room)
+"ust" = (
+/obj/machinery/droneDispenser/snowflake,
+/turf/open/floor/plasteel/white,
+/area/science/robotics/lab)
 "utg" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -85932,7 +85936,7 @@ ajt
 ajt
 bmr
 ajp
-ajp
+ust
 aBm
 bmf
 aEA
