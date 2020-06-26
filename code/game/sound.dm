@@ -26,7 +26,7 @@
 		if(get_dist(M, turf_source) <= maxdistance)
 			M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, pressure_affected, S)
 
-/mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, channel = 0, pressure_affected = TRUE, sound/S, envwet = -10000, envdry = 0)
+/mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, channel = 0, pressure_affected = TRUE, sound/S)
 	if(!client || !can_hear())
 		return
 
@@ -36,8 +36,6 @@
 	S.wait = 0 //No queue
 	S.channel = channel || open_sound_channel()
 	S.volume = vol
-	S.environment = 7
-	S.echo = list(envdry, null, envwet, null, null, null, null, null, null, null, null, null, null, 1, 1, 1, null, null)
 
 	if(vary)
 		if(frequency)
@@ -45,14 +43,22 @@
 		else
 			S.frequency = get_rand_frequency()
 
+	var/direct = 0
+	var/room   = -10000
 	if(isturf(turf_source))
 		var/turf/T = get_turf(src)
 
 		//sound volume falloff with distance
 		var/distance = get_dist(T, turf_source)
 
-		S.volume -= max(distance - world.view, 0) * 2 //multiplicative falloff to add on top of natural audio falloff.
+		S.volume -= max(distance - world.view, 0) //multiplicative falloff to add on top of natural audio falloff.
 
+		if(get_area(T) == get_area(turf_source) || distance <= 4)
+			direct = 0
+			room   = -250
+		else 
+			direct = -250
+			room   = 0
 		if(pressure_affected)
 			//Atmosphere affects sound
 			var/pressure_factor = 1
@@ -83,6 +89,8 @@
 		S.y = 1
 		S.falloff = (falloff ? falloff : FALLOFF_SOUNDS)
 
+	S.environment = 7
+	S.echo = list(direct, null, room, null, null, null, null, null, null, null, null, null, null, 1, 1, 1, null, null)
 	SEND_SOUND(src, S)
 
 /proc/sound_to_playing_players(soundin, volume = 100, vary = FALSE, frequency = 0, falloff = FALSE, channel = 0, pressure_affected = FALSE, sound/S)
