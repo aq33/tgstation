@@ -6792,7 +6792,6 @@
 /turf/open/floor/grass,
 /area/chapel/main)
 "amx" = (
-/obj/structure/flora/rock/pile,
 /obj/item/pickaxe,
 /turf/open/floor/plating/asteroid,
 /area/maintenance/port)
@@ -9962,6 +9961,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
+/obj/item/clothing/glasses/sunglasses/advanced,
 /turf/open/floor/wood,
 /area/security/detectives_office)
 "asD" = (
@@ -62076,7 +62076,7 @@
 /obj/structure/table/wood,
 /obj/item/clipboard,
 /obj/item/folder/red,
-/obj/item/clothing/glasses/sunglasses,
+/obj/item/clothing/glasses/sunglasses/advanced,
 /turf/open/floor/carpet/green,
 /area/security/detectives_office)
 "cfJ" = (
@@ -92519,7 +92519,7 @@ ame
 bxc
 amB
 buz
-amC
+buz
 buz
 buz
 buz
