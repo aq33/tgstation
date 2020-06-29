@@ -57,7 +57,7 @@
 			direct = 0
 			room   = -250
 		else 
-			direct = -250
+			direct = -250 - distance * 50
 			room   = 0
 		if(pressure_affected)
 			//Atmosphere affects sound
