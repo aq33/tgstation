@@ -548,7 +548,7 @@
 	uniform = /obj/item/clothing/under/rank/rnd/scientist
 	shoes = /obj/item/clothing/shoes/laceup
 	id = /obj/item/card/id/away/old/sci
-	l_pocket = /obj/item/stack/medical/bruise_pack
+	l_pocket = /obj/item/stack/medical/suture
 	assignedrole = "Ancient Crew"
 
 /obj/effect/mob_spawn/human/oldsci/Destroy()
