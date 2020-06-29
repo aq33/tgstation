@@ -394,8 +394,8 @@ GLOBAL_LIST_INIT(bamboo_recipes, list ( \
 
 /obj/item/stack/sheet/mineral/bamboo/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.bamboo_recipes
-	return ..()
 	grind_results = list()
+	return ..()
 
 /*
  * Cardboard

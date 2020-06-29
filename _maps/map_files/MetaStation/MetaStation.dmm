@@ -48526,7 +48526,6 @@
 /obj/structure/rack,
 /obj/item/stack/medical/mesh,
 /obj/item/stack/medical/suture,
-/obj/item/reagent_containers/syringe/multiver,
 /obj/item/reagent_containers/syringe/epinephrine{
 	pixel_x = -1;
 	pixel_y = 2
