@@ -593,10 +593,10 @@
 	pixel_y = 6
 	},
 /obj/item/stack/medical/gauze,
-/obj/item/stack/medical/bruise_pack{
+/obj/item/stack/medical/suture{
 	pixel_x = 6
 	},
-/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/mesh,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -26
 	},
