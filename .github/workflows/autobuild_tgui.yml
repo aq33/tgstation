@@ -26,10 +26,10 @@ jobs:
         working-directory: ./tgui
       - name: Commit Artifacts
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "TGUI"
-          git pull origin master
+          git config --local user.email "aquila33-bot@protonmail.com"
+          git config --local user.name "aquila33-bot"
           git commit -m "Automatic TGUI Rebuild [ci skip]" -a || true
+          git pull --rebase origin master
       - name: Push Artifacts
         uses: ad-m/github-push-action@master
         with:
