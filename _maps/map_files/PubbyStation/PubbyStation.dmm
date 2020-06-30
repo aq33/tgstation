@@ -31430,7 +31430,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/item/twohanded/required/kirbyplants/random,
+/obj/machinery/droneDispenser/snowflake,
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "bsX" = (

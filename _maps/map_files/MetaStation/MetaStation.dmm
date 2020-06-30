@@ -14141,8 +14141,8 @@
 	height = 5;
 	id = "mining_home";
 	name = "mining shuttle bay";
-	roundstart_template = /datum/map_template/shuttle/mining/box;
-	width = 7
+	width = 7;
+	roundstart_template = /datum/map_template/shuttle/mining/box
 	},
 /turf/open/space/basic,
 /area/space)
@@ -83724,6 +83724,11 @@
 	},
 /turf/closed/wall,
 /area/chapel/main)
+"jTJ" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/droneDispenser/snowflake,
+/turf/open/floor/plasteel,
+/area/science/robotics/lab)
 "jUn" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -115820,7 +115825,7 @@ cEm
 cFf
 cFg
 cFh
-cHR
+jTJ
 cIL
 cJK
 cCq
