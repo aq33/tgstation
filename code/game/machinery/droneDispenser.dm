@@ -24,6 +24,8 @@
 	var/iron_cost = 1000
 	var/glass_cost = 1000
 	var/power_used = 1000
+	var/gold_cost = 0
+	var/copper_cost = 0
 	
 
 	var/mode = DRONE_READY
@@ -54,7 +56,7 @@
 	var/datum/component/material_container/materials = AddComponent(/datum/component/material_container, list(/datum/material/iron, /datum/material/glass), MINERAL_MATERIAL_AMOUNT * MAX_STACK_SIZE * 2, TRUE, /obj/item/stack)
 	materials.insert_amount_mat(starting_amount)
 	materials.precise_insertion = TRUE
-	using_materials = list(/datum/material/iron = iron_cost, /datum/material/glass = glass_cost)
+	using_materials = list(/datum/material/iron = iron_cost, /datum/material/glass = glass_cost, /datum/material/copper = copper_cost, /datum/material/gold = gold_cost)
 
 /obj/machinery/droneDispenser/preloaded
 	starting_amount = 5000
