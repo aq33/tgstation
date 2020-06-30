@@ -2,6 +2,10 @@ anguage: generic
 dist: xenial
 sudo: false
 
+branches:
+  only:
+  - /.*/
+
 matrix:
   include:
     - name: "Run Linters"
