@@ -23,5 +23,7 @@ jobs:
           pip install ruamel.yaml PyGithub
       - name: Make CL
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CL_TOKEN }}
+          GIT_EMAIL: "aquila33-bot@protonmail.com" 
+          GIT_NAME: "aquila33-bot"
         run: python tools/changelog/generate_cl.py
