@@ -24,6 +24,7 @@
 	var/iron_cost = 1000
 	var/glass_cost = 1000
 	var/power_used = 1000
+	
 
 	var/mode = DRONE_READY
 	var/timer
@@ -80,8 +81,10 @@
 	dispense_type = /obj/item/drone_shell/snowflake
 	end_create_message = "dispenses a snowflake drone shell."
 	// Those holoprojectors aren't cheap
-	iron_cost = 2000
-	glass_cost = 2000
+	iron_cost = 10000
+	glass_cost = 10000
+	gold_cost = 500
+	copper_cost = 500
 	power_used = 2000
 	starting_amount = 10000
 
