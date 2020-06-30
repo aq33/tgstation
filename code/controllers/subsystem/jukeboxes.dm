@@ -16,7 +16,7 @@ SUBSYSTEM_DEF(jukeboxes)
 	var/list/datum/track/songs = list()
 	var/list/datum/jukebox/active_jukeboxes = list()
 	var/list/free_channels = list()
-	var/falloff = 10
+	var/falloff = 6
 
 /datum/controller/subsystem/jukeboxes/proc/add_jukebox(obj/jukebox_obj, selection)
 	if(selection > songs.len)
