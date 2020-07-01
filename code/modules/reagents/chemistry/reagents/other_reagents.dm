@@ -480,18 +480,27 @@
 	process_flags = ORGANIC | SYNTHETIC
 	
 /datum/reagent/mutationtoxin/lizard/on_mob_life(mob/living/carbon/human/H)
-	if(current_cycle >= cycles_to_turn) //overwrite since we want more races
-		var/list/random_races = list(/datum/species/zombie,
-									/datum/species/skeleton,
-									/datum/species/vampire,
-									/datum/species/snail,
-									/datum/species/mush)
-		var/datum/species/species_type = pick(random_races)
-		H.set_species(species_type)
-		H.reagents.del_reagent(type)
-		to_chat(H, "<span class='warning'>You've become \a [initial(species_type.name)]!</span>")
-		return TRUE
-	return ..()
+	..()
+	switch(current_cycle)
+		if(1 to 6)
+			if(prob(10))
+				to_chat(H, "<span class='warning'>[pick("You don't feel very well.", "Your skin feels a little strange.")]</span>")
+		if(7 to 12)
+			if(prob(10))
+				to_chat(H, "<span class='warning'>[pick("Your appendages are melting away.", "Your limbs begin to lose their shape.")]</span>")
+		if(13 to 19)
+			if(prob(10))
+				to_chat(H, "<span class='warning'>[pick("You feel your internal organs turning into something else.", "You feel very strange.")]</span>")
+		if(20 to INFINITY)
+			var/list/random_races = list(/datum/species/zombie,
+										/datum/species/skeleton,
+										/datum/species/vampire,
+										/datum/species/snail,
+										/datum/species/mush)
+			var/datum/species/species_type = pick(random_races)
+			H.set_species(species_type)
+			H.reagents.del_reagent(type)
+			to_chat(H, "<span class='warning'>You've become \a [initial(species_type.name)]!</span>")
 
 /datum/reagent/mutationtoxin/fly
 	name = "Fly Mutation Toxin"
