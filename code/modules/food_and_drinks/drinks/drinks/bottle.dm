@@ -20,10 +20,10 @@
 	if(isliving(hitby))
 		var/mob/living/L = hitby
 		smash(L)
-	else 
+	else
 		smash()
 	return TRUE
-	
+
 
 /obj/item/reagent_containers/food/drinks/bottle/smash(mob/living/target, mob/thrower, ranged = FALSE)
 	//Creates a shattering noise and replaces the bottle with a broken_bottle
@@ -334,6 +334,13 @@
 	desc = "A bottle of pure Fernet Bronca, produced in Cordoba Space Station"
 	icon_state = "fernetbottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/fernet = 100)
+
+/obj/item/reagent_containers/food/drinks/bottle/amarena
+	name = "Amarena"
+	desc = "Szery szery lejcie, amarenę wlejcie."
+	icon_state = "amarenabottle"
+	volume = 70
+	list_reagents = list(/datum/reagent/consumable/ethanol/amarena = 70)
 
 //////////////////////////JUICES AND STUFF ///////////////////////
 
