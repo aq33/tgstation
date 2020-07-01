@@ -16,7 +16,7 @@ SUBSYSTEM_DEF(jukeboxes)
 	var/list/datum/track/songs = list()
 	var/list/datum/jukebox/active_jukeboxes = list()
 	var/list/free_channels = list()
-	var/falloff = 6
+	var/falloff = 7
 
 /datum/controller/subsystem/jukeboxes/proc/add_jukebox(obj/jukebox_obj, selection)
 	if(selection > songs.len)
@@ -101,12 +101,12 @@ SUBSYSTEM_DEF(jukeboxes)
 		for(var/mob/M in GLOB.player_list)
 			if(!M.client)
 				continue
-			if(!(M.client.prefs.toggles & SOUND_INSTRUMENTS))
-				continue
 
 			song_played.status = SOUND_UPDATE
+			if(!(M.client.prefs.toggles & SOUND_INSTRUMENTS))
+				song_played.status |= SOUND_MUTE
 
-			if(jukebox_obj.z != M.z)	//todo - expand this to work with mining planet z-levels when robust jukebox audio gets merged to master
+			if(jukebox_obj.z != M.z)
 				song_played.status |= SOUND_MUTE	//Setting volume = 0 doesn't let the sound properties update at all, which is lame.
 
 			M.playsound_local(get_turf(jukebox_obj), null, 100, falloff = falloff, channel = jukebox.channel, S = song_played)

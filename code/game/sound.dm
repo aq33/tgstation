@@ -36,6 +36,7 @@
 	S.wait = 0 //No queue
 	S.channel = channel || open_sound_channel()
 	S.volume = vol
+	S.falloff = (falloff ? falloff : FALLOFF_SOUNDS)
 
 	if(vary)
 		if(frequency)
@@ -51,13 +52,13 @@
 		//sound volume falloff with distance
 		var/distance = get_dist(T, turf_source)
 
-		S.volume -= max(distance - world.view, 0) //multiplicative falloff to add on top of natural audio falloff.
+		S.volume -= max(distance - falloff, 0) * 2 //multiplicative falloff to add on top of natural audio falloff.
 
-		if(get_area(T) == get_area(turf_source) || distance <= 4)
+		if(get_area(T) == get_area(turf_source))
 			direct = 0
 			room   = -250
 		else 
-			direct = -250 - distance * 50
+			direct = -distance * 100
 			room   = 0
 		if(pressure_affected)
 			//Atmosphere affects sound
@@ -78,17 +79,14 @@
 			S.volume *= pressure_factor
 			//End Atmosphere affecting sound
 
-		if(S.volume <= 0)
-			return //No sound
-
 		var/dx = turf_source.x - T.x // Hearing from the right/left
 		S.x = dx
 		var/dz = turf_source.y - T.y // Hearing from infront/behind
 		S.z = dz
 		// The y value is for above your head, but there is no ceiling in 2d spessmens.
 		S.y = 1
-		S.falloff = (falloff ? falloff : FALLOFF_SOUNDS)
 
+	//even if `S.volume == 0`, we need to send sound because it might have `status & SOUND_UPDATE`
 	S.environment = 7
 	S.echo = list(direct, null, room, null, null, null, null, null, null, null, null, null, null, 1, 1, 1, null, null)
 	SEND_SOUND(src, S)
