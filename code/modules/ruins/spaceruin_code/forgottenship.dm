@@ -54,7 +54,6 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	desc = "Prototype hardsuit helmet with experimental armor plates, protecting from laser-based weapons very well, while giving limited protection against anything else."
 	icon_state = "cybersun"
 	item_state = "cybersun"
-	hardsuit_type = "cybersun"
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 70, "energy" = 50, "bomb" = 15, "bio" = 100, "rad" = 50, "fire" = 60, "acid" = 60)
 	strip_delay = 600
 	actions_types = list()
@@ -63,7 +62,6 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 /obj/item/clothing/suit/space/hardsuit/cybersun
 	icon_state = "cybersun"
 	item_state = "cybersun"
-	hardsuit_type = "cybersun"
 	name = "Cybersun hardsuit"
 	desc = "Prototype hardsuit with experimental armor plates, protecting from laser-based weapons very well, while giving limited protection against anything else. Requires the user to activate the inner mechanism in order to unequip it, making it really difficult to take it off from somebody else."
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 70, "energy" = 50, "bomb" = 15, "bio" = 100, "rad" = 50, "fire" = 60, "acid" = 60)
@@ -88,7 +86,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	retreat_distance = 2
 	minimum_distance = 4
 	casingtype = /obj/item/ammo_casing/c46x30mm
-	projectilesound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
+	projectilesound = 'sound/weapons/gunshot.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/nanotrasenassaultsoldier)
 
 /mob/living/simple_animal/hostile/nanotrasen/elite
@@ -99,8 +97,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	icon_living = "nanotrasen_ert"
 	maxHealth = 150
 	health = 150
-	melee_damage_lower = 13
-	melee_damage_upper = 18
+	melee_damage = 15
 	ranged = TRUE
 	rapid = 3
 	rapid_fire_delay = 5
@@ -109,7 +106,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	minimum_distance = 1
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
-	projectiletype = /obj/projectile/beam/laser
+	projectiletype = /obj/item/projectile/beam/laser
 	projectilesound = 'sound/weapons/pulse.ogg'
 	loot = list(/obj/effect/gibspawner/human)
 	faction = list(ROLE_DEATHSQUAD)

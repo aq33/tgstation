@@ -189,8 +189,8 @@
 	id_job = "Nanotrasen Assault Force"
 	id_access = "Security Officer"
 	outfit = /datum/outfit/nanotrasenassaultsoldiercorpse
-	hairstyle = "Bald"
-	facial_hairstyle = "Shaved"
+	hair_style = "Bald"
+	facial_hair_style = "Shaved"
 
 /datum/outfit/nanotrasenassaultsoldiercorpse
 	name = "NT Assault Officer Corpse"
