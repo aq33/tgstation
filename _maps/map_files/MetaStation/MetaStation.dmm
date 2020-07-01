@@ -14141,8 +14141,8 @@
 	height = 5;
 	id = "mining_home";
 	name = "mining shuttle bay";
-	roundstart_template = /datum/map_template/shuttle/mining/box;
-	width = 7
+	width = 7;
+	roundstart_template = /datum/map_template/shuttle/mining/box
 	},
 /turf/open/space/basic,
 /area/space)
@@ -48522,9 +48522,8 @@
 /area/bridge/showroom/corporate)
 "bOG" = (
 /obj/structure/rack,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/reagent_containers/syringe/charcoal,
+/obj/item/stack/medical/mesh,
+/obj/item/stack/medical/suture,
 /obj/item/reagent_containers/syringe/epinephrine{
 	pixel_x = -1;
 	pixel_y = 2
@@ -54014,8 +54013,8 @@
 "cap" = (
 /obj/structure/table,
 /obj/item/stack/medical/gauze,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/mesh,
+/obj/item/stack/medical/suture,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
@@ -60011,11 +60010,11 @@
 	pixel_y = -1
 	},
 /obj/item/reagent_containers/dropper,
-/obj/item/stack/medical/bruise_pack{
+/obj/item/stack/medical/suture{
 	pixel_x = -2;
 	pixel_y = 6
 	},
-/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/mesh,
 /obj/item/healthanalyzer,
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
@@ -83725,6 +83724,11 @@
 	},
 /turf/closed/wall,
 /area/chapel/main)
+"jTJ" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/droneDispenser/snowflake,
+/turf/open/floor/plasteel,
+/area/science/robotics/lab)
 "jUn" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -115821,7 +115825,7 @@ cEm
 cFf
 cFg
 cFh
-cHR
+jTJ
 cIL
 cJK
 cCq

@@ -1,10 +1,10 @@
-anguage: generic
+language: generic
 dist: xenial
 sudo: false
 
 branches:
   only:
-    - beestation
+    - master
 
 matrix:
   include:

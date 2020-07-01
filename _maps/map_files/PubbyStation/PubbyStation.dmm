@@ -31430,7 +31430,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/item/twohanded/required/kirbyplants/random,
+/obj/machinery/droneDispenser/snowflake,
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "bsX" = (
@@ -46883,8 +46883,8 @@
 /area/space)
 "cad" = (
 /obj/structure/closet/crate/medical,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/mesh,
+/obj/item/stack/medical/suture,
 /turf/open/floor/plating,
 /area/maintenance/department/engine)
 "cae" = (

@@ -143,7 +143,6 @@ for fileName in glob.glob(os.path.join(args.ymlDir, "*.yml")):
     cl = {}
     with open(fileName, 'r',encoding='utf-8') as f:
         cl = yaml.load(f)
-        f.close()
     if today not in all_changelog_entries:
         all_changelog_entries[today] = {}
     author_entries = all_changelog_entries[today].get(cl['author'], [])

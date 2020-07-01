@@ -24,6 +24,9 @@
 	var/iron_cost = 1000
 	var/glass_cost = 1000
 	var/power_used = 1000
+	var/gold_cost = 0
+	var/copper_cost = 0
+	
 
 	var/mode = DRONE_READY
 	var/timer
@@ -53,7 +56,7 @@
 	var/datum/component/material_container/materials = AddComponent(/datum/component/material_container, list(/datum/material/iron, /datum/material/glass), MINERAL_MATERIAL_AMOUNT * MAX_STACK_SIZE * 2, TRUE, /obj/item/stack)
 	materials.insert_amount_mat(starting_amount)
 	materials.precise_insertion = TRUE
-	using_materials = list(/datum/material/iron = iron_cost, /datum/material/glass = glass_cost)
+	using_materials = list(/datum/material/iron = iron_cost, /datum/material/glass = glass_cost, /datum/material/copper = copper_cost, /datum/material/gold = gold_cost)
 
 /obj/machinery/droneDispenser/preloaded
 	starting_amount = 5000
@@ -80,8 +83,10 @@
 	dispense_type = /obj/item/drone_shell/snowflake
 	end_create_message = "dispenses a snowflake drone shell."
 	// Those holoprojectors aren't cheap
-	iron_cost = 2000
-	glass_cost = 2000
+	iron_cost = 10000
+	glass_cost = 10000
+	gold_cost = 500
+	copper_cost = 500
 	power_used = 2000
 	starting_amount = 10000
 

@@ -1396,8 +1396,8 @@
 	height = 5;
 	id = "laborcamp_home";
 	name = "fore bay 1";
-	width = 9;
-	roundstart_template = /datum/map_template/shuttle/labour/box
+	roundstart_template = /datum/map_template/shuttle/labour/box;
+	width = 9
 	},
 /turf/open/space/basic,
 /area/space)
@@ -1408,8 +1408,8 @@
 	height = 15;
 	id = "arrivals_stationary";
 	name = "arrivals";
-	width = 7;
-	roundstart_template = /datum/map_template/shuttle/arrival/box
+	roundstart_template = /datum/map_template/shuttle/arrival/box;
+	width = 7
 	},
 /turf/open/space/basic,
 /area/space)
@@ -2868,6 +2868,10 @@
 /obj/item/healthanalyzer/advanced,
 /turf/open/floor/plasteel,
 /area/medical/medbay)
+"UJ" = (
+/obj/machinery/droneDispenser/snowflake,
+/turf/open/floor/plasteel,
+/area/science)
 "Vg" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel,
@@ -6482,7 +6486,7 @@ bl
 zo
 ah
 Yy
-bD
+UJ
 XC
 gY
 jb
