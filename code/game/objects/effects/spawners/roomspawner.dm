@@ -9,8 +9,6 @@
 	var/room_width = 0
 	var/room_height = 0
 
-/obj/effect/spawner/room/proc/LateSpawn()
-
 /obj/effect/spawner/room/Initialize()
 	..()
 	return INITIALIZE_HINT_LATELOAD
