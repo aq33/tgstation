@@ -86,7 +86,9 @@
 		// The y value is for above your head, but there is no ceiling in 2d spessmens.
 		S.y = 1
 
-	//even if `S.volume == 0`, we need to send sound because it might have `status & SOUND_UPDATE`
+	//SOUND_MUTE signalizes the sound should play despite volume == 0
+	if(S.volume == 0 && !(S.status & SOUND_UPDATE) && !(S.status & SOUND_MUTE))
+		return
 	S.environment = 7
 	S.echo = list(direct, null, room, null, null, null, null, null, null, null, null, null, null, 1, 1, 1, null, null)
 	SEND_SOUND(src, S)
