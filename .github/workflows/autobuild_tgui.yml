@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
         with:
-          fetch-depth: 25
+          fetch-depth: 10
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
@@ -28,8 +28,8 @@ jobs:
         run: |
           git config --local user.email "aquila33-bot@protonmail.com"
           git config --local user.name "aquila33-bot"
+          git pull --rebase --autostash origin master
           git commit -m "Automatic TGUI Rebuild [ci skip]" -a || true
-          git pull --rebase origin master
       - name: Push Artifacts
         uses: ad-m/github-push-action@master
         with:
