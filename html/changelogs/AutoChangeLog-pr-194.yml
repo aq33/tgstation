@@ -1,0 +1,4 @@
+author: zukonake
+changes:
+- tweak: jednorazowo ustawiono FPSy w preferencjach wszystkich graczy na 60
+delete-after: true
