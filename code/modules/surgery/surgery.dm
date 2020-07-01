@@ -130,9 +130,9 @@
 	if(locate(/obj/structure/table/optable/abductor, T))
 		propability = 1.2
 	if(locate(/obj/machinery/stasis, T))
-		propability = 0.8
+		propability = 1.0
 	if(locate(/obj/structure/table/optable, T))
-		propability = 0.8
+		propability = 1.0
 	else if(locate(/obj/structure/table, T))
 		propability = 0.6
 	else if(locate(/obj/structure/bed, T))
