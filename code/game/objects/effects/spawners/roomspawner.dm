@@ -10,8 +10,6 @@
 	var/room_height = 0
 
 /obj/effect/spawner/room/proc/LateSpawn()
-	template.load(get_turf(src), centered = template.centerspawner)
-	qdel(src)
 
 /obj/effect/spawner/room/Initialize()
 	..()
@@ -34,10 +32,10 @@
 		if(template.stock <= 0)
 			template.spawned = TRUE
 		addtimer(CALLBACK(src, /obj/effect/spawner/room.proc/LateSpawn), 600)
-	else 
-		template = null
-	if(!template)
-		qdel(src)
+		template.load(get_turf(src), centered = template.centerspawner)
+	else
+		CRASH("couldn't find template for a room spawner")
+	qdel(src)
 
 /obj/effect/spawner/room/fivexfour
 	name = "5x4 room spawner"
