@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
         with:
-          fetch-depth: 25
+          fetch-depth: 10
       - name: Python setup
         uses: actions/setup-python@v1
         with:
@@ -22,9 +22,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install ruamel.yaml PyGithub pyyaml bs4
       - name: Make CL
+        run: python tools/changelog/generate_cl.py
         env:
           GITHUB_TOKEN: ${{ secrets.CL_TOKEN }}
-        run: python tools/changelog/generate_cl.py
+      - name: Pull
+        run: git pull --rebase --autostash origin master
       - name: Compile CL
         run: python tools/changelog/ss13_genchangelog.py html/changelog.html html/changelogs
       - name: Commit
@@ -32,7 +34,6 @@ jobs:
           git config --local user.email "aquila33-bot@protonmail.com"
           git config --local user.name "aquila33-bot"
           git commit -m "Automatic changelog compile [ci skip]" -a || true
-          git pull --rebase origin master
       - name: Push
         uses: ad-m/github-push-action@master
         with:
