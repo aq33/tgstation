@@ -7,8 +7,9 @@
 	total_positions = 4
 	spawn_positions = 3
 	supervisors = "the security team"
-
 	outfit = /datum/outfit/job/prisoner
+	selection_color = "#ffe1c3"
+	paycheck = PAYCHECK_PRISONER
 
 	display_order = JOB_DISPLAY_ORDER_PRISONER
 

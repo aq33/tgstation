@@ -1,11 +1,13 @@
-#define STARTING_PAYCHECKS 5
+#define STARTING_PAYCHECKS 8
 
-#define PAYCHECK_ASSISTANT 5
-#define PAYCHECK_MINIMAL 5
-#define PAYCHECK_EASY 20
-#define PAYCHECK_MEDIUM 50
-#define PAYCHECK_HARD 100
-#define PAYCHECK_COMMAND 200
+//Experimental change: Paycheck amounts are static for determining initial funds, halved for regular paycheks.
+#define PAYCHECK_PRISONER 50
+#define PAYCHECK_ASSISTANT 100
+#define PAYCHECK_MINIMAL 110
+#define PAYCHECK_EASY 120
+#define PAYCHECK_MEDIUM 150
+#define PAYCHECK_HARD 200
+#define PAYCHECK_COMMAND 600
 
 #define PAYCHECK_WELFARE 20 //NEETbucks
 
