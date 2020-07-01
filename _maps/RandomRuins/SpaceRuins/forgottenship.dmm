@@ -433,7 +433,7 @@
 "bm" = (
 /obj/machinery/mineral/ore_redemption{
 	name = "Syndicate ore redemption machine";
-	ore_multiplier = 4;
+	sheet_per_ore = 4;
 	ore_pickup_rate = 20;
 	req_access = list(150)
 	},
