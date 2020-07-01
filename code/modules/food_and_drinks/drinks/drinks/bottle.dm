@@ -354,6 +354,12 @@
 	icon_state = "moonshinebottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/rum = 95, /datum/reagent/drug/mushroomhallucinogen = 5)
 
+/obj/item/reagent_containers/food/drinks/bottle/amarena
+	name = "Amarena"
+	desc = "Szery szery lejcie, amarenę wlejcie."
+	icon_state = "amarenabottle"
+	list_reagents = list(/datum/reagent/consumable/ethanol/amarena = 70)
+
 //////////////////////////JUICES AND STUFF ///////////////////////
 
 /obj/item/reagent_containers/food/drinks/bottle/orangejuice

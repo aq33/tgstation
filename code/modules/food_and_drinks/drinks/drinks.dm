@@ -265,8 +265,8 @@
 
 
 /obj/item/reagent_containers/food/drinks/dry_ramen
-	name = "cup ramen"
-	desc = "Just add 5ml of water, self heats! A taste that reminds you of your school years. Now new with salty flavour!"
+	name = "zupa romana"
+	desc = "Wystarczy, że dodasz 5ml wody."
 	icon_state = "ramen"
 	list_reagents = list(/datum/reagent/consumable/dry_ramen = 15, /datum/reagent/consumable/sodiumchloride = 3)
 	foodtype = GRAIN
