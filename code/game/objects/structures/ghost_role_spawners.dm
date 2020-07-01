@@ -608,12 +608,6 @@
 	outfit = /datum/outfit/syndicatespace/syndicrew
 	assignedrole = "Cybersun Crewmember"
 
-/obj/effect/mob_spawn/human/syndicatespace/Initialize(mapload)
-	. = ..()
-	var/policy = get_policy(ROLE_SYNDICATE_CYBERSUN)
-	if(policy)
-		important_info = policy
-
 /datum/outfit/syndicatespace/syndicrew/post_equip(mob/living/carbon/human/H)
 	H.faction |= ROLE_SYNDICATE
 
@@ -631,12 +625,6 @@
 	important_info = "Protect the ship and secret documents in your backpack with your own life. DO NOT let the ship fall into enemy hands."
 	outfit = /datum/outfit/syndicatespace/syndicaptain
 	assignedrole = "Cybersun Captain"
-
-/obj/effect/mob_spawn/human/syndicatespace/syndicaptain/Initialize(mapload)
-	. = ..()
-	var/policy = get_policy(ROLE_SYNDICATE_CYBERSUN_CAPTAIN)
-	if(policy)
-		important_info = policy
 
 /datum/outfit/syndicatespace/syndicaptain/post_equip(mob/living/carbon/human/H)
 	H.faction |= ROLE_SYNDICATE

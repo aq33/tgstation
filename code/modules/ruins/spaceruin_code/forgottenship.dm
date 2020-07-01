@@ -18,18 +18,17 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	desc = "An advanced vendor that dispenses medical drugs, both recreational and medicinal."
 	products = list(/obj/item/reagent_containers/syringe = 4,
 					/obj/item/healthanalyzer = 4,
-					/obj/item/reagent_containers/pill/patch/libital = 5,
-					/obj/item/reagent_containers/pill/patch/aiuri = 5,
-					/obj/item/reagent_containers/glass/bottle/multiver = 1,
-					/obj/item/reagent_containers/glass/bottle/syriniver = 1,
+					/obj/item/reagent_containers/pill/patch/styptic = 5,
+					/obj/item/reagent_containers/pill/patch/silver_sulf = 5,
+					/obj/item/reagent_containers/glass/bottle/charcoal = 2,
 					/obj/item/reagent_containers/glass/bottle/epinephrine = 3,
 					/obj/item/reagent_containers/glass/bottle/morphine = 3,
 					/obj/item/reagent_containers/glass/bottle/potass_iodide = 1,
 					/obj/item/reagent_containers/glass/bottle/salglu_solution = 3,
 					/obj/item/reagent_containers/syringe/antiviral = 5,
-					/obj/item/reagent_containers/medigel/libital = 2,
-					/obj/item/reagent_containers/medigel/aiuri = 2,
-					/obj/item/reagent_containers/medigel/sterilizine = 1)
+					/obj/item/reagent_containers/medspray/styptic = 2,
+					/obj/item/reagent_containers/medspray/silver_sulf = 2,
+					/obj/item/reagent_containers/medspray/sterilizine = 1)
 	contraband = list(/obj/item/reagent_containers/glass/bottle/cold = 2,
 					/obj/item/restraints/handcuffs = 4,
 					/obj/item/storage/backpack/duffelbag/syndie/surgery = 1,
@@ -46,8 +45,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 					/obj/item/defibrillator/loaded = 1,
 					/obj/item/wallframe/defib_mount = 1,
 					/obj/item/sensor_device = 2,
-					/obj/item/pinpointer/crew = 2,
-					/obj/item/shears = 1)
+					/obj/item/pinpointer/crew = 2)
 
 ///////////	forgottenship lore
 
@@ -78,6 +76,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 /obj/structure/fluff/empty_sleeper/syndicate/captain
 	icon_state = "sleeper_s-open"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	deconstructible = FALSE
 
 /obj/structure/fluff/empty_sleeper/syndicate/captain/ComponentInitialize()
 	. = ..()
@@ -144,7 +143,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	strip_delay = 600
 	slowdown = 0
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/cybersun
-	actions_types = list(/datum/action/item_action/toggle_helmet, /datum/action/item_action/toggle_spacesuit)
+	actions_types = list(/datum/action/item_action/toggle_helmet)
 	jetpack = /obj/item/tank/jetpack/suit
 
 //Special NT NPCs
