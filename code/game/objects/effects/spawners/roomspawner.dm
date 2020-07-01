@@ -29,7 +29,6 @@
 		template.weight = (template.weight / 2)
 		if(template.stock <= 0)
 			template.spawned = TRUE
-		addtimer(CALLBACK(src, /obj/effect/spawner/room.proc/LateSpawn), 600)
 		template.load(get_turf(src), centered = template.centerspawner)
 	else
 		CRASH("couldn't find template for a room spawner")
