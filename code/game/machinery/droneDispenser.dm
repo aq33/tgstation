@@ -4,7 +4,7 @@
 
 /obj/machinery/droneDispenser //Most customizable machine 2015
 	name = "drone shell dispenser"
-	desc = "A hefty machine that, when supplied with iron and glass, will periodically create a drone shell. Does not need to be manually operated."
+	desc = "Maszyna która automatycznie produkuje drony po załadowaniu żelazem i szkłem."
 
 	icon = 'icons/obj/machines/droneDispenser.dmi'
 	icon_state = "on"
@@ -50,7 +50,7 @@
 
 /obj/machinery/droneDispenser/Initialize()
 	. = ..()
-	var/datum/component/material_container/materials = AddComponent(/datum/component/material_container, list(/datum/material/iron, /datum/material/glass), MINERAL_MATERIAL_AMOUNT * MAX_STACK_SIZE * 2, TRUE, /obj/item/stack)
+	var/datum/component/material_container/materials = AddComponent(/datum/component/material_container, list(/datum/material/iron, /datum/material/glass,  /datum/material/copper, /datum/material/gold), MINERAL_MATERIAL_AMOUNT * MAX_STACK_SIZE * 2, TRUE, /obj/item/stack)
 	materials.insert_amount_mat(starting_amount)
 	materials.precise_insertion = TRUE
 	using_materials = list(/datum/material/iron = iron_cost, /datum/material/glass = glass_cost)
@@ -76,7 +76,7 @@
 // I don't need your forgiveness, this is awesome.
 /obj/machinery/droneDispenser/snowflake
 	name = "snowflake drone shell dispenser"
-	desc = "A hefty machine that, when supplied with iron and glass, will periodically create a snowflake drone shell. Does not need to be manually operated."
+	desc = "Maszyna która automatycznie produkuje drony po załadowaniu żelazem, szkłem, miedzią i złotem."
 	dispense_type = /obj/item/drone_shell/snowflake
 	end_create_message = "dispenses a snowflake drone shell."
 	// Those holoprojectors aren't cheap
