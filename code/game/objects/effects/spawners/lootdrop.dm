@@ -261,9 +261,9 @@
 		/obj/item/reagent_containers/food/snacks/pie/cream = 3)
 
 /obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner
-	name = "2% chance xeno egg spawner"
+	name = "20% chance xeno egg spawner"
 	loot = list(
-		/obj/effect/decal/remains/xeno = 49,
+		/obj/effect/decal/remains/xeno = 4,
 		/obj/effect/spawner/xeno_egg_delivery = 1)
 
 /obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner/Initialize()
