@@ -110,6 +110,23 @@
 				if(M.can_hear())
 					to_chat(M, "[icon2html(A, M)] *[message]*")
 
+/datum/bank_account/proc/bounty_text()
+	if(!civilian_bounty)
+		return FALSE
+	var/bounty_string
+	if(istype(civilian_bounty, /datum/bounty/item))
+		var/datum/bounty/item/item = civilian_bounty
+		bounty_string = "[item.description] Quantity = [item.required_count]. Reward: = [item.reward]."
+	if(istype(civilian_bounty, /datum/bounty/reagent))
+		var/datum/bounty/reagent/chemical = civilian_bounty
+		bounty_string = "[chemical.description] Quantity = [chemical.required_volume]. Reward: = [chemical.reward]."
+	return bounty_string
+
+/datum/bank_account/proc/bounty_value()
+	if(!civilian_bounty)
+		return FALSE
+	return civilian_bounty.reward
+
 /datum/bank_account/department
 	account_holder = "Guild Credit Agency"
 	var/department_id = "REPLACE_ME"
