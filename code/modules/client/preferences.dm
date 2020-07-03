@@ -199,8 +199,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<table width='100%'><tr><td width='75%' valign='top'>"
 			if(is_banned_from(user.ckey, "Appearance"))
 				dat += "<b>Jesteś zbanowany z tworzenia postaci. Możesz kontynuować tworzenie postaci ale podczas dołączeia do gry zostanie przetasowana.</b><br>"
-			dat += "<a href='?_src_=prefs;preference=name;task=random'>Wybierz imie za mnie</A> "
-			dat += "<a href='?_src_=prefs;preference=name'>Zawsze inne imie: [be_random_name ? "Tak" : "Nie"]</a><BR>"
+			dat += "<a href='?_src_=prefs;preference=name;task=random'>Losowe imię</A> "
+			dat += "<a href='?_src_=prefs;preference=name'>Zawsze losowe imię: [be_random_name ? "Tak" : "Nie"]</a><BR>"
 
 			dat += "<b>Name:</b> "
 			dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a><BR>"
@@ -210,7 +210,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<b>Wiek:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
 
 			dat += "<b>Imiona specjalne:</b><BR>"
-			var/old_group
+			var/old_groupn\
 			for(var/custom_name_id in GLOB.preferences_custom_names)
 				var/namedata = GLOB.preferences_custom_names[custom_name_id]
 				if(!old_group)
@@ -221,7 +221,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<a href ='?_src_=prefs;preference=[custom_name_id];task=input'><b>[namedata["pref_name"]]:</b> [custom_names[custom_name_id]]</a> "
 			dat += "<br><br>"
 
-			dat += "<b>Dotatek wybranych prac:</b><BR>"
+			dat += "<b>Dodatkowe opcje prac:</b><BR>"
 			dat += "<a href='?_src_=prefs;preference=ai_core_icon;task=input'><b>Inny wygląd AI:</b> [preferred_ai_core_display]</a><br>"
 			dat += "<a href='?_src_=prefs;preference=sec_dept;task=input'><b>Ochroniaż danego departamentu:</b> [prefered_security_department]</a><BR></td>"
 
