@@ -48,7 +48,7 @@
 			if(PLAYER_READY_TO_OBSERVE)
 				output += "<p>\[ [LINKIFY_READY("Gotowy", PLAYER_READY_TO_PLAY)] | [LINKIFY_READY("Brak gotowości", PLAYER_NOT_READY)] | <b> Obserwuj </b> \]</p>"
 	else
-		output += "<p><a href='byond://?src=[REF(src)];manifest=1'>Zobacz na liste załogi</a></p>"
+		output += "<p><a href='byond://?src=[REF(src)];manifest=1'>Zobacz spis załogi</a></p>"
 		output += "<p><a href='byond://?src=[REF(src)];late_join=1'>Dołącz do gry!</a></p>"
 		output += "<p>[LINKIFY_READY("Obserwuj", PLAYER_READY_TO_OBSERVE)]</p>"
 
@@ -118,7 +118,7 @@
 
 	if(href_list["late_join"])
 		if(!SSticker || !SSticker.IsRoundInProgress())
-			to_chat(usr, "<span class='danger'>Gra jeszcze się nie zaczeła, lub już się skończyła...</span>")
+			to_chat(usr, "<span class='danger'>Gra jeszcze się nie zaczęła, lub już się skończyła...</span>")
 			return
 
 		if(href_list["late_join"] == "override")
@@ -135,7 +135,7 @@
 			if(queue_position == 1)
 				to_chat(usr, "<span class='notice'>Jesteś w kolejce do dołączenia do gry. Zostaniesz powiadomiony kiedy zwolni się miejsce.</span>")
 			else if(queue_position)
-				to_chat(usr, "<span class='notice'>Przed tobą czeka [queue_position-1] grzaczy do dołączenia do gry.</span>")
+				to_chat(usr, "<span class='notice'>Przed tobą czeka [queue_position-1] graczy do dołączenia do gry.</span>")
 			else
 				SSticker.queued_players += usr
 				to_chat(usr, "<span class='notice'>Dołączasz do kolejki oczekiwania. Twoje miejsce w kolejce to [SSticker.queued_players.len].</span>")
@@ -147,7 +147,7 @@
 
 	if(href_list["SelectedJob"])
 		if(!SSticker || !SSticker.IsRoundInProgress())
-			to_chat(usr, "<span class='danger'>>Gra jeszcze się nie zaczeła, lub już się skończyła...</span>")
+			to_chat(usr, "<span class='danger'>>Gra jeszcze się nie zaczęła, lub już się skończyła...</span>")
 			return
 
 		if(!GLOB.enter_allowed)
@@ -183,7 +183,7 @@
 		ready = PLAYER_NOT_READY
 		return FALSE
 
-	var/this_is_like_playing_right = alert(src,"Czy jesteś pewnien obserwacji rozgrywki? Nie będziesz mógł zagrać podczas tej rundy!","Potwierdzenie","Tak","Nie")
+	var/this_is_like_playing_right = alert(src,"Czy jesteś pewien obserwacji rozgrywki? Nie będziesz mógł zagrać podczas tej rundy!","Potwierdzenie","Tak","Nie")
 
 	if(QDELETED(src) || !src.client || this_is_like_playing_right != "Tak")
 		ready = PLAYER_NOT_READY
@@ -202,7 +202,7 @@
 		observer.forceMove(O.loc)
 	else
 		to_chat(src, "<span class='notice'>Teleportacja nieudana. Poinformuj admina używając Ahelp</span>")
-		stack_trace("Na mapie brakuje observer mark lub próbujesz obserwować zanim gra się zaczeła") //co?
+		stack_trace("There's no freaking observer landmark available on this map or you're making observers before the map is initialised")
 	observer.key = key
 	observer.client = client
 	observer.set_ghost_appearance()
@@ -441,7 +441,7 @@
 	client.crew_manifest_delay = world.time + (1 SECONDS)
 
 	var/dat = "<html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'></head><body>"
-	dat += "<h4>Lista załogi</h4>"
+	dat += "<h4>Spis załogi</h4>"
 	dat += GLOB.data_core.get_manifest_html()
 
 	src << browse(dat, "window=manifest;size=387x420;can_close=1")
