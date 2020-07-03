@@ -10,10 +10,23 @@ Jeżeli chcesz zgłosić buga, lub zasugerować nową zmianę to zrób to w zak�
 
 Jeżeli chcesz pomóc to najpierw wybierz issue którym chcesz się zając, napisz tam, ze ty zajmiesz się np. jakimś konkretnym plikiem, lub całym issue, itd.
 Wtedy zforkuj te repozytorium, i tam nanieś zmiany tworząc commity (nie branche),
-pliki można też edytować z poziomu strony. Gdy chcesz zaproponować złączenie twojego forka do głownego repo,
-utwórz pull request.
-Pamiętajcie, że brak jednego przecinka czy cudzysłowa spowoduje crasha, wiem, że to i tak może się od czasu do czasu
-zdarzyć, ale starajcie się weryfikować że tak nie będzie po waszych zmianach.
+pliki można też edytować z poziomu strony. Gdy chcesz zaproponować złączenie twojego forka do głównego repo,
+utwórz PR (pull request).
+Wasz PR musi mieć wypełnioną formę changeloga, przykładowy changelog:
+```
+:cl:
+add: dodano coś tam, można go zrobić z czegoś tam
+fix: naprawiono jakiś bug
+/:cl:
+```
+Wasz PR będzie wtedy sprawdzany przez automatyczne testy pod względem literówek itd.
+Jeżeli wszystko wygląda git, zukonake zmerge'uje to do repozytorium, lub odpali testowy merge.
+
+Jeżeli chcesz pomóc, ale nie wiesz z czym, zobacz [ten projekt](https://github.com/aq33/tgstation/projects/3).
+Najłatwiejsze issues to te z labelem "tweak", "tłumaczenie", "grafika" i "dźwięk".
+
+Jeżeli czegoś nie wiesz/nie rozumiesz to poinformuj nas na kanale #coder.
+Tu jest też link do ogólnego Discorda (anglojęzycznego) związanego z programowaniem SS13: https://discord.gg/Vh8TJp9
 
 ## LICENSE
 
