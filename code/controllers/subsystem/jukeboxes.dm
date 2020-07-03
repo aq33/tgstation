@@ -41,7 +41,7 @@ SUBSYSTEM_DEF(jukeboxes)
 		if(!(M.client.prefs.toggles & SOUND_INSTRUMENTS))
 			continue
 
-		M.playsound_local(get_turf(jukebox_obj), null, 100, falloff = falloff, channel = jukebox.channel, S = song_played)
+		M.playsound_local(get_turf(jukebox_obj), null, MUSIC_VOLUME, falloff = falloff, channel = jukebox.channel, S = song_played)
 		CHECK_TICK
 	return channel
 
@@ -109,6 +109,6 @@ SUBSYSTEM_DEF(jukeboxes)
 			if(jukebox_obj.z != M.z)
 				song_played.status |= SOUND_MUTE	//Setting volume = 0 doesn't let the sound properties update at all, which is lame.
 
-			M.playsound_local(get_turf(jukebox_obj), null, 100, falloff = falloff, channel = jukebox.channel, S = song_played)
+			M.playsound_local(get_turf(jukebox_obj), null, MUSIC_VOLUME, falloff = falloff, channel = jukebox.channel, S = song_played)
 			CHECK_TICK
 	return
