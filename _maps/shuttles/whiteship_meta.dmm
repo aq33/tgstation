@@ -440,9 +440,7 @@
 /area/shuttle/abandoned/engine)
 "aP" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
@@ -454,9 +452,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -465,9 +461,7 @@
 /area/shuttle/abandoned/engine)
 "aR" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -488,9 +482,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -509,9 +501,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -532,9 +522,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -557,9 +545,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -581,9 +567,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -610,12 +594,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -636,9 +615,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -660,9 +637,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -684,9 +659,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
@@ -695,9 +668,7 @@
 "bb" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -715,9 +686,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -729,9 +698,7 @@
 "bd" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -805,9 +772,7 @@
 /area/shuttle/abandoned/engine)
 "bj" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
@@ -903,9 +868,7 @@
 "br" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -979,9 +942,7 @@
 /area/shuttle/abandoned/crew)
 "by" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering"
 	},
@@ -1053,9 +1014,7 @@
 	name = "Bar"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -1102,9 +1061,7 @@
 /area/shuttle/abandoned/engine)
 "bI" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -1213,9 +1170,7 @@
 	pixel_y = 3
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "4"
-	},
+/obj/structure/cable,
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "Salvage Ship Bar APC";
@@ -1231,12 +1186,7 @@
 "bO" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1277,9 +1227,7 @@
 /area/shuttle/abandoned/bridge)
 "bS" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/firealarm{
@@ -1379,9 +1327,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1412,9 +1358,7 @@
 /obj/item/pen{
 	pixel_x = -4
 	},
-/obj/structure/cable{
-	icon_state = "2"
-	},
+/obj/structure/cable,
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "Salvage Ship Bridge APC";
@@ -1482,18 +1426,14 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
 "ci" = (
 /obj/structure/sign/warning/vacuum/external{
 	pixel_y = 32
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/light/small/built{
 	dir = 1
 	},
@@ -1505,19 +1445,12 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
 "ck" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
 	},
@@ -1612,12 +1545,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1629,9 +1557,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/shuttle/abandoned/bar)
@@ -1644,9 +1570,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -1664,9 +1588,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/turf_decal/tile/neutral{
@@ -1734,9 +1656,7 @@
 /area/shuttle/abandoned/bridge)
 "cw" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/airalarm/all_access{
@@ -1808,9 +1728,7 @@
 "cB" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1939,9 +1857,7 @@
 	pixel_x = -25;
 	req_access = null
 	},
-/obj/structure/cable{
-	icon_state = "2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/abandoned/cargo)
 "cK" = (
@@ -2008,9 +1924,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -2050,9 +1964,7 @@
 	dir = 4;
 	pixel_x = -24
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/abandoned/cargo)
 "cQ" = (
@@ -2098,9 +2010,7 @@
 	name = "Bar"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -2138,9 +2048,7 @@
 /obj/machinery/power/smes/engineering{
 	charge = 1e+006
 	},
-/obj/structure/cable{
-	icon_state = "4"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/bot,
@@ -2148,9 +2056,7 @@
 /area/shuttle/abandoned/engine)
 "cY" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
@@ -2202,9 +2108,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/abandoned/cargo)
 "dc" = (
@@ -2281,9 +2185,7 @@
 "dh" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -2376,9 +2278,7 @@
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
 "dq" = (
@@ -2392,23 +2292,13 @@
 /area/shuttle/abandoned/cargo)
 "dr" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
 "ds" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
@@ -2420,9 +2310,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -2434,12 +2322,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -2456,9 +2339,7 @@
 /obj/effect/turf_decal/arrows/white,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -2481,9 +2362,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -2504,9 +2383,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -2529,9 +2406,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/stripes/white/line,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -2648,16 +2523,12 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
 "dI" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
 "dJ" = (
@@ -2980,12 +2851,7 @@
 /area/shuttle/abandoned/bar)
 "el" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)

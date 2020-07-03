@@ -366,9 +366,7 @@
 /obj/machinery/power/port_gen/pacman{
 	anchored = 1
 	},
-/obj/structure/cable{
-	icon_state = "4"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/shuttle/pirate)
@@ -788,9 +786,7 @@
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/shuttle/pirate)
 "bP" = (
@@ -802,9 +798,7 @@
 /area/shuttle/pirate)
 "bQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/shuttle/pirate)
 "bX" = (
@@ -812,9 +806,7 @@
 /obj/machinery/power/terminal{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "8"
-	},
+/obj/structure/cable,
 /obj/structure/rack,
 /obj/item/storage/toolbox/mechanical{
 	pixel_y = 4

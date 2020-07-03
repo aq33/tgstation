@@ -5,7 +5,6 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 #define UNDER_SMES -1
 #define UNDER_TERMINAL 1
 
-
 ///////////////////////////////
 //CABLE STRUCTURE
 ///////////////////////////////
@@ -82,8 +81,9 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 		if(linked_dirs & check_dir)
 			var/TB = get_step(loc, check_dir)
 			var/obj/structure/cable/C = locate(/obj/structure/cable) in TB
-			C.linked_dirs &= ~inverse
-			C.update_icon()
+			if(C)
+				C.linked_dirs &= ~inverse
+				C.update_icon()
 
 	if(powernet)
 		cut_cable_from_powernet()				// update the powernets
@@ -194,9 +194,9 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 	else
 		return 0
 
-/obj/structure/cable/proc/avail(amount)
+/obj/structure/cable/proc/avail()
 	if(powernet)
-		return amount ? powernet.avail >= amount : powernet.avail
+		return powernet.avail
 	else
 		return 0
 
@@ -284,16 +284,16 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 // Powernets handling helpers
 //////////////////////////////////////////////
 
-/obj/structure/cable/proc/get_cable_connections(powernetless_only, ignore_dir = null)
+/obj/structure/cable/proc/get_cable_connections(powernetless_only)
 	. = list()
 	var/turf/T
 	for(var/check_dir in GLOB.cardinals)
-		if(check_dir != ignore_dir)
+		if(linked_dirs & check_dir)
 			T = get_step(src, check_dir)
 			if(T)
 				var/obj/structure/cable/C = locate(/obj/structure/cable) in T
 				if(C)
-					.[C] = check_dir
+					. += C
 
 /obj/structure/cable/proc/get_machine_connections(powernetless_only)
 	. = list()
@@ -331,7 +331,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 	var/list/P_list = list()
 	for(var/dir_check in GLOB.cardinals)
 		if(linked_dirs & dir_check)
-			T1 = get_step(T1, dir_check)
+			T1 = get_step(loc, dir_check)
 			P_list += locate(/obj/structure/cable) in T1
 
 	// remove the cut cable from its turf and powernet, so that it doesn't get count in propagate_network worklist
@@ -339,7 +339,11 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 		moveToNullspace()
 	powernet.remove_cable(src) //remove the cut cable from its powernet
 
+	var/first = TRUE
 	for(var/obj/O in P_list)
+		if(first)
+			first = FALSE
+			continue
 		addtimer(CALLBACK(O, .proc/auto_propogate_cut_cable, O), 0) //so we don't rebuild the network X times when singulo/explosion destroys a line of X cables
 
 ///////////////////////////////////////////////
@@ -370,7 +374,7 @@ GLOBAL_LIST_INIT(cable_coil_recipes, list (new/datum/stack_recipe("cable restrai
 	w_class = WEIGHT_CLASS_SMALL
 	throw_speed = 3
 	throw_range = 5
-	materials = list(/datum/material/iron=10, /datum/material/glass=5)
+	materials = list(MAT_METAL=10, MAT_GLASS=5)
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
 	attack_verb = list("whipped", "lashed", "disciplined", "flogged")
@@ -414,7 +418,7 @@ GLOBAL_LIST_INIT(cable_coil_recipes, list (new/datum/stack_recipe("cable restrai
 		return ..()
 
 	var/obj/item/bodypart/affecting = H.get_bodypart(check_zone(user.zone_selected))
-	if(affecting?.status == BODYPART_ROBOTIC)
+	if(affecting && affecting.status == BODYPART_ROBOTIC)
 		if(user == H)
 			user.visible_message("<span class='notice'>[user] starts to fix some of the wires in [H]'s [affecting.name].</span>", "<span class='notice'>You start fixing some of the wires in [H == user ? "your" : "[H]'s"] [affecting.name].</span>")
 			if(!do_mob(user, H, 50))
@@ -454,7 +458,7 @@ GLOBAL_LIST_INIT(cable_coil_recipes, list (new/datum/stack_recipe("cable restrai
 		return
 
 	if(!isturf(T) || T.intact || !T.can_have_cabling())
-		to_chat(user, "<span class='warning'>You can only lay cables on top of exterior catwalks and plating!</span>")
+		to_chat(user, "<span class='warning'>You can only lay cables on catwalks and plating!</span>")
 		return
 
 	if(get_amount() < 1) // Out of cable

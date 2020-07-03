@@ -1603,31 +1603,23 @@
 "dC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/smes/engineering,
-/obj/structure/cable{
-	icon_state = "4"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "dD" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "dF" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "dG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/smes/engineering,
-/obj/structure/cable{
-	icon_state = "8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plating,
 /area/shuttle/escape)
@@ -1684,9 +1676,7 @@
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "dU" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "dV" = (
@@ -1971,9 +1961,7 @@
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "lz" = (
-/obj/structure/cable{
-	icon_state = "2"
-	},
+/obj/structure/cable,
 /obj/machinery/power/terminal{
 	dir = 1
 	},
@@ -2049,12 +2037,7 @@
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "vD" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /obj/item/radio/intercom{
 	dir = 2;
 	name = "Station Intercom (General)";
@@ -2195,9 +2178,7 @@
 /area/shuttle/escape)
 "Ie" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "2"
-	},
+/obj/structure/cable,
 /obj/machinery/power/terminal{
 	dir = 1
 	},
@@ -2366,9 +2347,7 @@
 /turf/open/floor/plasteel/dark,
 /area/shuttle/escape)
 "RC" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/general/hidden,
 /turf/open/floor/plating,
 /area/shuttle/escape)

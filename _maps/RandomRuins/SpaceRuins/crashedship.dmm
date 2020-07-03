@@ -99,25 +99,19 @@
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
 "ay" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
 "az" = (
 /obj/structure/table/optable,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
 "aA" = (
 /obj/machinery/computer/operating{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
 "aB" = (
@@ -175,9 +169,7 @@
 /turf/closed/wall/mineral/titanium/overspace,
 /area/awaymission/BMPship/Fore)
 "aL" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
 "aM" = (
@@ -251,32 +243,24 @@
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
 "bc" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /obj/item/clothing/glasses/regular/hipster,
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
 "be" = (
 /obj/machinery/door/airlock/titanium,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
 "bf" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "bg" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "bh" = (
@@ -385,22 +369,16 @@
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
 "bD" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "bE" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/item/hand_labeler,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "bG" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/item/storage/box,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
@@ -474,9 +452,7 @@
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "bT" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
 	dir = 2
 	},
@@ -492,9 +468,7 @@
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "bW" = (
-/obj/structure/cable{
-	icon_state = "2"
-	},
+/obj/structure/cable,
 /obj/machinery/power/apc/unlocked{
 	dir = 1;
 	environ = 0;
@@ -675,9 +649,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "cn" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/titanium,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
@@ -760,15 +732,11 @@
 /turf/closed/wall/mineral/titanium/interior,
 /area/awaymission/BMPship/Fore)
 "cH" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "cI" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "cJ" = (
@@ -795,9 +763,7 @@
 /area/awaymission/BMPship/Midship)
 "cM" = (
 /obj/structure/window/reinforced,
-/obj/structure/cable{
-	icon_state = "2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -838,9 +804,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "cQ" = (
-/obj/structure/cable{
-	icon_state = "2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/showroomfloor,
 /area/awaymission/BMPship/Aft)
 "cR" = (
@@ -870,9 +834,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "cW" = (
-/obj/structure/cable{
-	icon_state = "2"
-	},
+/obj/structure/cable,
 /obj/machinery/power/apc/unlocked{
 	dir = 1;
 	environ = 0;
@@ -905,9 +867,7 @@
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "db" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "dc" = (
@@ -949,12 +909,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "dg" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -962,9 +917,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "di" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -972,42 +925,26 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "dj" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/showroomfloor,
 /area/awaymission/BMPship/Aft)
 "dk" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/awaymission/BMPship/Aft)
 "dl" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "dm" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "dn" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "do" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "dq" = (
@@ -1042,9 +979,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "dw" = (
@@ -1058,9 +993,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "dx" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1068,9 +1001,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "dy" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1078,9 +1009,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "dz" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1116,9 +1045,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "dE" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "dG" = (
@@ -1132,25 +1059,16 @@
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "dI" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "dJ" = (
 /obj/machinery/door/airlock/titanium,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "dK" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1159,18 +1077,11 @@
 /area/awaymission/BMPship/Midship)
 "dL" = (
 /obj/machinery/shieldwallgen,
-/obj/structure/cable{
-	icon_state = "4"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Midship)
 "dM" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1178,9 +1089,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "dN" = (
-/obj/structure/cable{
-	icon_state = "2"
-	},
+/obj/structure/cable,
 /obj/machinery/power/apc/unlocked{
 	dir = 1;
 	pixel_y = 23;
@@ -1233,9 +1142,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1289,13 +1196,7 @@
 	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit.";
 	name = "power storage unit"
 	},
-/obj/structure/cable{
-	icon_state = "2"
-	},
 /obj/structure/cable,
-/obj/structure/cable{
-	icon_state = "2"
-	},
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "eb" = (
@@ -1387,9 +1288,7 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/awaymission/BMPship/Aft)
 "ep" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -1426,21 +1325,15 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "ev" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "ew" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "ex" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "ey" = (
@@ -1449,12 +1342,7 @@
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Midship)
 "ez" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1462,12 +1350,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "eA" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1475,12 +1358,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "eB" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1564,12 +1442,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "eM" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1577,12 +1450,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "eO" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/showroomfloor,
 /area/awaymission/BMPship/Aft)
 "eP" = (
@@ -1597,7 +1465,6 @@
 	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit.";
 	name = "power storage unit"
 	},
-/obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
@@ -1653,9 +1520,7 @@
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "fa" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/item/stock_parts/cell/high,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
@@ -1664,9 +1529,7 @@
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "fd" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/titanium,
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
@@ -1778,40 +1641,30 @@
 	},
 /area/awaymission/BMPship/Fore)
 "fw" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Fore)
 "fx" = (
 /obj/item/shard{
 	icon_state = "small"
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Fore)
 "fy" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless{
 	icon_state = "panelscorched"
 	},
 /area/awaymission/BMPship/Fore)
 "fz" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/awaymission/BMPship/Fore)
 "fA" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /obj/item/kitchen/knife,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
@@ -1830,21 +1683,15 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "fC" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/showroomfloor,
 /area/awaymission/BMPship/Aft)
 "fD" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/showroomfloor,
 /area/awaymission/BMPship/Aft)
 "fE" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/showroomfloor,
 /area/awaymission/BMPship/Aft)
 "fF" = (
@@ -1886,15 +1733,11 @@
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Fore)
 "fM" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Fore)
 "fN" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -1915,9 +1758,7 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/awaymission/BMPship/Aft)
 "fR" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "fS" = (
@@ -1967,16 +1808,12 @@
 "fZ" = (
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/titanium,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "ga" = (
 /obj/machinery/door/airlock/titanium,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "gb" = (
@@ -1989,9 +1826,7 @@
 	},
 /area/awaymission/BMPship)
 "gd" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/titanium,
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Fore)
@@ -2098,27 +1933,15 @@
 /area/awaymission/BMPship/Aft)
 "gA" = (
 /obj/effect/decal/remains/human,
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "gC" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "gD" = (
-/obj/structure/cable{
-	icon_state = "8"
-	},
+/obj/structure/cable,
 /obj/item/wallframe/apc,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
@@ -2173,9 +1996,7 @@
 /obj/structure/bed,
 /obj/item/bedsheet,
 /obj/item/storage/wallet/random,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "gP" = (
@@ -2202,34 +2023,24 @@
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
 "gU" = (
-/obj/structure/cable{
-	icon_state = "4"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
 "gV" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
 "gW" = (
 /obj/machinery/door/airlock/titanium,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Midship)
 "gX" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "gY" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "gZ" = (

@@ -15,9 +15,7 @@
 	req_access = null;
 	req_access_txt = "150"
 	},
-/obj/structure/cable{
-	icon_state = "2"
-	},
+/obj/structure/cable,
 /mob/living/simple_animal/hostile/syndicate/ranged/smg/pilot{
 	environment_smash = 0
 	},
