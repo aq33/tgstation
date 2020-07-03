@@ -716,7 +716,7 @@
 		stat(null, "Czas serwera: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]")
 		stat(null, "Czas rundy: [worldtime2text()]")
 		stat(null, "Czas stacji: [station_time_timestamp()]")
-		stat(null, "Opuźnienie czasu: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
+		stat(null, "Opóźnienie czasu: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
 		stat(null, "Obecnych graczy: [GLOB.clients.len]")
 		if(SSshuttle.emergency)
 			var/ETA = SSshuttle.emergency.getModeStr()
