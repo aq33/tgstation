@@ -193,7 +193,7 @@
 	for(var/client/C in GLOB.clients)
 		if(C)
 
-			C.playtitlemusic(40)
+			C.playtitlemusic(MUSIC_VOLUME / 2)
 			C.process_endround_metacoin()
 
 			if(CONFIG_GET(flag/allow_crew_objectives))
