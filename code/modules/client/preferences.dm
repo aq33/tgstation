@@ -210,7 +210,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<b>Wiek:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
 
 			dat += "<b>Imiona specjalne:</b><BR>"
-			var/old_groupn\
+			var/old_groupn
 			for(var/custom_name_id in GLOB.preferences_custom_names)
 				var/namedata = GLOB.preferences_custom_names[custom_name_id]
 				if(!old_group)
