@@ -363,6 +363,32 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	materials = list(/datum/material/gold = MINERAL_MATERIAL_AMOUNT*0.2)
 	grind_results = list(/datum/reagent/gold = 4)
 
+/obj/item/coin/gold/debug
+	custom_materials = list(/datum/material/gold = 400)
+	desc = "If you got this somehow, be aware that it will dust you. Almost certainly."
+
+/obj/item/coin/gold/debug/attack_self(mob/user)
+	if(cooldown < world.time)
+		if(string_attached) //does the coin have a wire attached
+			to_chat(user, "<span class='warning'>The coin won't flip very well with something attached!</span>" )
+			return FALSE//do not flip the coin
+		cooldown = world.time + 15
+		flick("coin_[coinflip]_flip", src)
+		coinflip = pick(sideslist)
+		icon_state = "coin_[coinflip]"
+		playsound(user.loc, 'sound/items/coinflip.ogg', 50, TRUE)
+		var/oldloc = loc
+		sleep(15)
+		if(loc == oldloc && user && !user.incapacitated())
+			user.visible_message("<span class='notice'>[user] flips [src]. It lands on [coinflip].</span>", \
+ 							 "<span class='notice'>You flip [src]. It lands on [coinflip].</span>", \
+							 "<span class='hear'>You hear the clattering of loose change.</span>")
+		if(coinflip == "heads")
+			SSeconomy.fire()
+		else
+			qdel(src)
+	return TRUE//did the coin flip? useful for suicide_act
+
 /obj/item/coin/silver
 	name = "silver coin"
 	cmineral = "silver"

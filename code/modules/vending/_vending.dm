@@ -292,6 +292,17 @@ GLOBAL_LIST_EMPTY(vending_products)
 		R.custom_price = initial(temp.custom_price) * SSeconomy.inflation_value()
 		R.custom_premium_price = initial(temp.custom_premium_price) * SSeconomy.inflation_value()
 		recordlist += R
+
+/obj/machinery/vending/proc/reset_prices(list/recordlist, list/premiumlist)
+	for(var/R in recordlist)
+		var/datum/data/vending_product/record = R
+		var/atom/ahhhhh = record.product_path
+		record.custom_price = initial(ahhhhh.custom_price) * SSeconomy.inflation_value()
+	for(var/R in premiumlist)
+		var/datum/data/vending_product/record = R
+		var/atom/ahhhhh = record.product_path
+		record.custom_premium_price = initial(ahhhhh.custom_premium_price) * SSeconomy.inflation_value()
+
 /**
   * Refill a vending machine from a refill canister
   *
