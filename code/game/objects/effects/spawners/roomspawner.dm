@@ -30,9 +30,10 @@
 		if(template.stock <= 0)
 			template.spawned = TRUE
 		template.load(get_turf(src), centered = template.centerspawner)
+		qdel(src)
 	else
+		qdel(src)
 		CRASH("couldn't find template for a room spawner")
-	qdel(src)
 
 /obj/effect/spawner/room/fivexfour
 	name = "5x4 room spawner"
