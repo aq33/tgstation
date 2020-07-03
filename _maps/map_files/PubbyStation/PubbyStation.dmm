@@ -28205,16 +28205,16 @@
 /turf/open/floor/engine,
 /area/science/explab)
 "blT" = (
-/obj/machinery/portable_atmospherics/canister,
-/obj/machinery/atmospherics/components/unary/portables_connector/visible,
+/obj/machinery/nanite_program_hub,
 /turf/open/floor/engine,
-/area/science/explab)
+/area/science/nanite)
 "blV" = (
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/twohanded/required/kirbyplants/random,
 /turf/open/floor/engine,
-/area/science/explab)
+/area/science/nanite)
 "blX" = (
 /turf/open/floor/engine,
 /area/science/xenobiology)
@@ -28614,21 +28614,16 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 9
 	},
+/obj/structure/closet/crate/science,
 /turf/open/floor/engine,
 /area/science/explab)
 "bmZ" = (
-/obj/machinery/atmospherics/pipe/manifold/general/visible{
-	dir = 8
-	},
-/obj/machinery/meter,
+/obj/machinery/nanite_programmer,
 /turf/open/floor/engine,
-/area/science/explab)
+/area/science/nanite)
 "bna" = (
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 8
-	},
 /turf/open/floor/engine,
-/area/science/explab)
+/area/science/nanite)
 "bnc" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/heater{
 	dir = 8
@@ -29015,12 +29010,9 @@
 /turf/open/floor/engine,
 /area/science/explab)
 "bnZ" = (
-/obj/machinery/portable_atmospherics/canister,
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 1
-	},
+/obj/machinery/computer/nanite_cloud_controller,
 /turf/open/floor/engine,
-/area/science/explab)
+/area/science/nanite)
 "boc" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer{
 	dir = 8
@@ -30188,6 +30180,10 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/explab)
+"bqu" = (
+/obj/structure/chair/stool,
+/turf/open/floor/engine,
+/area/science/nanite)
 "bqv" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -55075,11 +55071,13 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "eQF" = (
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 1
+/obj/structure/table,
+/obj/item/storage/box/disks_nanite{
+	pixel_x = 2;
+	pixel_y = 7
 	},
 /turf/open/floor/engine,
-/area/science/explab)
+/area/science/nanite)
 "eQN" = (
 /obj/structure/chair/stool,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -60965,7 +60963,7 @@
 "pbI" = (
 /obj/effect/landmark/start/scientist,
 /turf/open/floor/engine,
-/area/science/explab)
+/area/science/nanite)
 "pbR" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/on{
 	dir = 8
@@ -61814,9 +61812,9 @@
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
 "qDJ" = (
-/obj/machinery/atmospherics/components/unary/portables_connector/visible,
+/obj/machinery/nanite_chamber,
 /turf/open/floor/engine,
-/area/science/explab)
+/area/science/nanite)
 "qEB" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /obj/effect/turf_decal/stripes/line{
@@ -64086,9 +64084,11 @@
 /turf/open/floor/plating,
 /area/maintenance/department/engine)
 "vmG" = (
-/obj/machinery/atmospherics/components/trinary/filter,
+/obj/machinery/computer/nanite_chamber_control{
+	dir = 8
+	},
 /turf/open/floor/engine,
-/area/science/explab)
+/area/science/nanite)
 "vov" = (
 /obj/machinery/atmospherics/pipe/manifold/purple/visible{
 	dir = 4
@@ -106546,7 +106546,7 @@ bjw
 blT
 bmZ
 bnZ
-bky
+bna
 edl
 bqs
 btk
@@ -106800,10 +106800,10 @@ bbI
 aFi
 aTx
 vll
-bky
 bna
-bky
-bky
+bqu
+bna
+bna
 bqt
 bqs
 btl
@@ -107058,9 +107058,9 @@ aEj
 bjx
 bjw
 blV
-bky
-bky
-bky
+bna
+bna
+bna
 bqt
 bqs
 btl
@@ -107314,10 +107314,10 @@ bbI
 aGP
 bjx
 vll
-bky
-boh
+bna
+bqu
 pbI
-bky
+bna
 bqt
 bqs
 btl
@@ -107574,7 +107574,7 @@ bjw
 qDJ
 vmG
 eQF
-bky
+bna
 nBL
 bqs
 xgG
