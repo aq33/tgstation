@@ -2,7 +2,7 @@
 "a" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/template_noop)
@@ -149,7 +149,7 @@
 "A" = (
 /obj/structure/cable,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/structure/sign/warning{
 	pixel_y = -32
@@ -160,20 +160,20 @@
 "B" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/template_noop)
 "C" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
@@ -191,16 +191,16 @@
 "E" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/template_noop)
 "F" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/sign/warning{
 	pixel_y = -32

@@ -275,7 +275,7 @@
 "aaL" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
 /area/solar/starboard)
@@ -2675,7 +2675,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/crew_quarters/heads/hor)
@@ -2820,7 +2820,7 @@
 "ahd" = (
 /obj/machinery/power/smes,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/camera{
 	c_tag = "Engineering - Starboard Aux Solars Access";
@@ -2941,7 +2941,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -3105,7 +3105,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -3339,7 +3339,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "sciencecheckpoint";
@@ -3688,7 +3688,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3821,7 +3821,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/security/prison)
@@ -3884,7 +3884,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/bridge)
@@ -3900,7 +3900,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/bridge)
@@ -3965,7 +3965,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/security/brig)
@@ -4127,7 +4127,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "brigexternalblast";
@@ -4323,7 +4323,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -4941,7 +4941,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "sciencecheckpoint";
@@ -5386,7 +5386,7 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
@@ -5872,7 +5872,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "sciencecheckpoint";
@@ -6043,7 +6043,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -6409,7 +6409,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "briginteralshutter";
@@ -6470,7 +6470,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/solar/starboard)
@@ -6499,7 +6499,7 @@
 	track = 0
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -6545,7 +6545,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "medicalcheckpoint";
@@ -7003,7 +7003,7 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/maintenance/fore)
@@ -7256,7 +7256,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -7647,7 +7647,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -7669,7 +7669,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "brigexternalblast";
@@ -8174,7 +8174,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/ai_monitored/security/armory)
@@ -8444,7 +8444,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/security/checkpoint)
@@ -11115,7 +11115,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "hop";
@@ -11468,7 +11468,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "xenobio3";
@@ -12051,7 +12051,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12212,7 +12212,7 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/server)
@@ -12601,7 +12601,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "briginteralshutter";
@@ -12882,7 +12882,7 @@
 "aEy" = (
 /obj/machinery/mech_bay_recharge_port,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
@@ -13067,7 +13067,7 @@
 "aEP" = (
 /obj/machinery/shieldwallgen/xenobiologyaccess,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/science/xenobiology)
@@ -13351,7 +13351,7 @@
 "aFo" = (
 /obj/machinery/computer/mech_bay_power_console,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
@@ -14318,7 +14318,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "medicalcheckpoint";
@@ -16836,7 +16836,7 @@
 	name = "Western AI Solar Control"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -18021,7 +18021,7 @@
 /area/quartermaster/storage)
 "aQs" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/hallway/secondary/entry";
@@ -18326,7 +18326,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "medicalcheckpoint";
@@ -19147,7 +19147,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -19308,7 +19308,7 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/maintenance/fore)
@@ -20364,7 +20364,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -20515,7 +20515,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "briginteralshutter";
@@ -20579,7 +20579,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "hop";
@@ -20599,7 +20599,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "brigexternalblast";
@@ -20617,7 +20617,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "brigexternalblast";
@@ -20846,7 +20846,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -20867,7 +20867,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "brigexternalblast";
@@ -20887,7 +20887,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "brigexternalblast";
@@ -20908,7 +20908,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/security/main)
@@ -21111,7 +21111,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "briginteralshutter";
@@ -21192,7 +21192,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "hop";
@@ -21362,7 +21362,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "medicalcheckpoint";
@@ -21581,7 +21581,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/maintenance/port)
@@ -21877,7 +21877,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -22978,7 +22978,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "briginteralshutter";
@@ -23380,7 +23380,7 @@
 "bbh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/maintenance/disposal/incinerator";
@@ -25863,7 +25863,7 @@
 	name = "Starboard Solar Array"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
 /area/solar/starboard)
@@ -26028,7 +26028,7 @@
 	name = "Starboard Solar Array"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
 /area/solar/starboard)
@@ -26038,7 +26038,7 @@
 	name = "Starboard Solar Array"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
 /area/solar/starboard)
@@ -26143,7 +26143,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
@@ -26687,7 +26687,7 @@
 	name = "Starboard Solar Array"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
 /area/solar/aft)
@@ -26697,7 +26697,7 @@
 	name = "Starboard Solar Array"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
 /area/solar/aft)
@@ -26740,7 +26740,7 @@
 	name = "Starboard Solar Array"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
 /area/solar/aft)
@@ -26964,7 +26964,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/ai_monitored/security/armory)
@@ -27013,7 +27013,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/ai_monitored/security/armory)
@@ -27043,7 +27043,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "brigexternalblast";
@@ -27653,7 +27653,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/crew_quarters/heads/hor)
@@ -27673,7 +27673,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/crew_quarters/heads/hor)
@@ -28762,7 +28762,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/medical/genetics/cloning)
@@ -28918,7 +28918,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/medical/virology)
@@ -28943,7 +28943,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/medical/virology)
@@ -29311,7 +29311,7 @@
 /area/science/xenobiology)
 "bnk" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/science/xenobiology";
@@ -29491,7 +29491,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
@@ -29624,7 +29624,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "xenocontainment";
@@ -29706,7 +29706,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/poddoor/preopen{
@@ -30070,7 +30070,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "xenobio2";
@@ -30157,7 +30157,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/science/explab)
@@ -30180,7 +30180,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/poddoor/preopen{
@@ -30606,7 +30606,7 @@
 	},
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel,
 /area/engine/gravity_generator)
@@ -30618,7 +30618,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel,
 /area/engine/gravity_generator)
@@ -30853,7 +30853,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "xenobio1";
@@ -30916,7 +30916,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/poddoor/preopen{
@@ -31777,7 +31777,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/light/small,
 /turf/open/floor/plating,
@@ -32048,7 +32048,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/security/detectives_office)
@@ -32537,7 +32537,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/security/detectives_office)
@@ -34044,7 +34044,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/security/checkpoint)
@@ -34759,7 +34759,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/ai_monitored/storage/eva)
@@ -34773,7 +34773,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/ai_monitored/storage/eva)
@@ -35305,7 +35305,7 @@
 	name = "privacy shutters"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/security/detectives_office)
@@ -35314,7 +35314,7 @@
 	charge = 5e+006
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -35751,7 +35751,7 @@
 /area/medical/morgue)
 "bzE" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/storage/tech";
@@ -36313,7 +36313,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/quartermaster/qm";
@@ -36709,7 +36709,7 @@
 /area/maintenance/starboard)
 "bBD" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/medical/morgue";
@@ -36926,7 +36926,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -37063,7 +37063,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "hop";
@@ -37114,7 +37114,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -37202,7 +37202,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/bridge)
@@ -37222,7 +37222,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/security/checkpoint)
@@ -37252,7 +37252,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/security/checkpoint)
@@ -37303,7 +37303,7 @@
 /area/hydroponics/garden)
 "bCD" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/maintenance/starboard/fore";
@@ -38993,7 +38993,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -40677,7 +40677,7 @@
 "bJa" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark/telecomms,
@@ -40713,7 +40713,7 @@
 "bJe" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel/dark/telecomms,
 /area/tcommsat/server)
@@ -40740,7 +40740,7 @@
 "bJh" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel/dark/telecomms,
 /area/tcommsat/server)
@@ -40820,7 +40820,7 @@
 "bJs" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark/telecomms,
@@ -41351,7 +41351,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/bridge)
@@ -41365,7 +41365,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/bridge)
@@ -42347,7 +42347,7 @@
 	charge = 5e+006
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
@@ -42376,7 +42376,7 @@
 	name = "Starboard Solar Array"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
 /area/space/nearstation)
@@ -42521,7 +42521,7 @@
 "bMT" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
@@ -42661,7 +42661,7 @@
 "bNf" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
 /area/space/nearstation)
@@ -42731,7 +42731,7 @@
 "bNm" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
 /area/space/nearstation)
@@ -42773,7 +42773,7 @@
 	name = "Eastern AI Solar Control"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -43067,7 +43067,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/camera{
 	c_tag = "Research - Mech Bay";
@@ -43544,7 +43544,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/dark,
 /area/gateway)
@@ -44166,7 +44166,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engine_room)
@@ -44203,7 +44203,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engine_room)
@@ -45620,7 +45620,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -46024,7 +46024,7 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plating,
@@ -49162,7 +49162,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -49503,7 +49503,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/construction)
@@ -50766,7 +50766,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/teleporter";
@@ -50856,7 +50856,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/newscaster/security_unit{
 	pixel_x = -32
@@ -50878,13 +50878,13 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/security)
 "cRz" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/crew_quarters/fitness/recreation";
@@ -51132,7 +51132,7 @@
 /area/science/lab)
 "dXK" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/maintenance/fore";
@@ -51174,7 +51174,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/security/main";
@@ -51341,7 +51341,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
@@ -51422,7 +51422,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
@@ -51482,7 +51482,7 @@
 /area/engine/engine_room)
 "eSa" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/quartermaster/office";
@@ -51524,7 +51524,7 @@
 /area/crew_quarters/heads/hop)
 "eZi" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/security/warden";
@@ -51797,7 +51797,7 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
@@ -51919,7 +51919,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/effect/spawner/lootdrop/grille_or_trash,
 /turf/open/floor/plating,
@@ -52027,7 +52027,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
@@ -52097,7 +52097,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
@@ -52112,7 +52112,7 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -52124,7 +52124,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -52168,7 +52168,7 @@
 	dir = 6
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/camera/autoname,
 /turf/open/floor/circuit/green,
@@ -52426,7 +52426,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/crew_quarters/kitchen/coldroom";
@@ -52680,7 +52680,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/carpet,
 /area/security/detectives_office)
@@ -52859,14 +52859,14 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel/grimy,
 /area/tcommsat/computer)
 "jGy" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engine_room)
@@ -52938,7 +52938,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/maintenance/fore)
@@ -52975,7 +52975,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel,
 /area/hydroponics)
@@ -53030,7 +53030,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/ai_monitored/nuke_storage";
@@ -53054,7 +53054,7 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/medical)
@@ -53071,7 +53071,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/crew_quarters/heads/chief)
@@ -53081,7 +53081,7 @@
 	state = 2
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/camera{
 	c_tag = "Engine -Emitters Right";
@@ -53098,7 +53098,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
@@ -53127,7 +53127,7 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
@@ -53250,7 +53250,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel/dark/telecomms,
 /area/tcommsat/server)
@@ -53342,7 +53342,7 @@
 /area/crew_quarters/kitchen/coldroom)
 "lEO" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/maintenance/disposal";
@@ -53361,7 +53361,7 @@
 /area/space/nearstation)
 "lFx" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/crew_quarters/heads/hos";
@@ -53475,7 +53475,7 @@
 /area/crew_quarters/theatre)
 "mnC" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/crew_quarters/theatre";
@@ -53579,7 +53579,7 @@
 "myk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/gateway";
@@ -53628,7 +53628,7 @@
 	state = 2
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/engine/engine_room)
@@ -53788,7 +53788,7 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -53897,7 +53897,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating{
@@ -53914,7 +53914,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel,
 /area/medical/cryo)
@@ -53956,7 +53956,7 @@
 	dir = 10
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/circuit/green,
 /area/engine/supermatter)
@@ -54065,7 +54065,7 @@
 /area/maintenance/department/security)
 "nPi" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/crew_quarters/fitness";
@@ -54109,7 +54109,7 @@
 /area/engine/engineering)
 "nVf" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/maintenance/two,
@@ -54287,7 +54287,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
@@ -54328,7 +54328,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat/service)
@@ -54350,7 +54350,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/security/processing";
@@ -54428,7 +54428,7 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/window/eastleft{
 	name = "AI Access";
@@ -54467,7 +54467,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/maintenance/port)
@@ -54500,7 +54500,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/effect/spawner/lootdrop/grille_or_trash,
 /turf/open/floor/plating,
@@ -54564,7 +54564,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engine_room/external)
@@ -54601,7 +54601,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/white,
 /area/science/explab)
@@ -54653,7 +54653,7 @@
 	state = 2
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/engine/engine_room)
@@ -54665,13 +54665,13 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
 "pNR" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/security/courtroom";
@@ -54712,7 +54712,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/maintenance/port)
@@ -54748,7 +54748,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/circuit/green,
 /area/engine/supermatter)
@@ -54986,7 +54986,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
@@ -55056,7 +55056,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
@@ -55148,7 +55148,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
@@ -55176,7 +55176,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/circuit/green,
 /area/engine/supermatter)
@@ -55437,7 +55437,7 @@
 /area/engine/engine_room)
 "sqt" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/hallway/primary/central";
@@ -55660,7 +55660,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
@@ -55998,7 +55998,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/construction/mining/aux_base";
@@ -56042,7 +56042,7 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
@@ -56054,14 +56054,14 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "uzT" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -56113,7 +56113,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
@@ -56181,7 +56181,7 @@
 	state = 2
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/camera{
 	c_tag = "Engine - Emitters Left";
@@ -56214,7 +56214,7 @@
 /area/quartermaster/qm)
 "vcT" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/crew_quarters/bar";
@@ -56446,7 +56446,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
@@ -56765,7 +56765,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/security/checkpoint";
@@ -56799,7 +56799,7 @@
 /area/maintenance/fore)
 "wCc" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc{
 	areastring = "/area/security/prison";
@@ -56817,7 +56817,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/captain/private)
@@ -56862,7 +56862,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/white,
 /area/science/lab)
@@ -56898,7 +56898,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/construction)
@@ -56997,7 +56997,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/solar/aft)
@@ -57016,7 +57016,7 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)

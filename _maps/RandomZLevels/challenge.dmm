@@ -1006,7 +1006,7 @@
 "cZ" = (
 /obj/machinery/gateway,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1

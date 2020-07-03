@@ -42,7 +42,7 @@
 	start_charge = 0
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/materials3)
@@ -140,7 +140,7 @@
 	start_charge = 0
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/effect/decal/cleanable/vomit,
 /turf/open/floor/plasteel,
@@ -214,7 +214,7 @@
 	start_charge = 0
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/central2)
@@ -463,7 +463,7 @@
 "bF" = (
 /obj/machinery/power/smes,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/power2)
@@ -483,7 +483,7 @@
 /area/ruin/space/has_grav/storage/central2)
 "bJ" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/power2)
@@ -492,7 +492,7 @@
 	start_charge = 0
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/power1)
@@ -584,7 +584,7 @@
 	start_charge = 0
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/power3)
@@ -608,7 +608,7 @@
 	start_charge = 0
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/power2)
@@ -763,7 +763,7 @@
 	},
 /obj/effect/decal/cleanable/ash,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/materials1)

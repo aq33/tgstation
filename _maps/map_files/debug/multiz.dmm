@@ -79,7 +79,7 @@
 	},
 /obj/structure/closet/secure_closet/engineering_electrical,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
@@ -104,7 +104,7 @@
 	pixel_y = 23
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -118,10 +118,10 @@
 	pixel_y = 23
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -396,7 +396,7 @@
 	pixel_x = -25
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/light,
 /obj/structure/table,
@@ -504,7 +504,7 @@
 	},
 /obj/structure/cable,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/airalarm{
 	frequency = 1439;
@@ -544,7 +544,7 @@
 	pixel_x = -25
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/closet/secure_closet/captains,
 /turf/open/floor/plasteel{
@@ -626,7 +626,7 @@
 	pixel_x = -25
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/plasteel{

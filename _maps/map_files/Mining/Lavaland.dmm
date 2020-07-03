@@ -533,7 +533,7 @@
 	pixel_y = 23
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel,
 /area/mine/laborcamp)
@@ -841,7 +841,7 @@
 	network = list("labor")
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -1158,7 +1158,7 @@
 	charge = 5e+006
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
@@ -1196,7 +1196,7 @@
 	pixel_y = 2
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/light{
 	dir = 8
@@ -1348,7 +1348,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
@@ -1410,7 +1410,7 @@
 /area/mine/production)
 "dx" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -1521,7 +1521,7 @@
 /area/mine/living_quarters)
 "dG" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/power/port_gen/pacman{
 	anchored = 1
@@ -1747,7 +1747,7 @@
 	pixel_y = 23
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)

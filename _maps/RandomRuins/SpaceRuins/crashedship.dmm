@@ -116,7 +116,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)
@@ -493,7 +493,7 @@
 /area/awaymission/BMPship/Fore)
 "bW" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc/unlocked{
 	dir = 1;
@@ -796,7 +796,7 @@
 "cM" = (
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -839,7 +839,7 @@
 /area/awaymission/BMPship/Midship)
 "cQ" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/awaymission/BMPship/Aft)
@@ -871,7 +871,7 @@
 /area/awaymission/BMPship/Aft)
 "cW" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc/unlocked{
 	dir = 1;
@@ -1160,7 +1160,7 @@
 "dL" = (
 /obj/machinery/shieldwallgen,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Midship)
@@ -1179,7 +1179,7 @@
 /area/awaymission/BMPship/Midship)
 "dN" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc/unlocked{
 	dir = 1;
@@ -1290,11 +1290,11 @@
 	name = "power storage unit"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
@@ -2117,7 +2117,7 @@
 /area/awaymission/BMPship/Aft)
 "gD" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/item/wallframe/apc,
 /turf/open/floor/plasteel,
@@ -2203,7 +2203,7 @@
 /area/awaymission/BMPship/Midship)
 "gU" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating/airless,
 /area/awaymission/BMPship/Midship)

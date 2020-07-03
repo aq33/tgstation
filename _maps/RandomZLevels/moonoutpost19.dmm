@@ -383,7 +383,7 @@
 "aX" = (
 /obj/machinery/gateway,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -884,10 +884,10 @@
 /area/awaymission/moonoutpost19/syndicate)
 "bS" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/computer/monitor/secret,
 /obj/effect/turf_decal/stripes/line{
@@ -906,7 +906,7 @@
 	outputting = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating{
 	heat_capacity = 1e+006
@@ -1119,7 +1119,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -2203,14 +2203,14 @@
 /area/awaymission/moonoutpost19/research)
 "ek" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/shieldwallgen{
 	locked = 0;
 	req_access = null
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating{
 	heat_capacity = 1e+006
@@ -2314,7 +2314,7 @@
 /area/awaymission/moonoutpost19/research)
 "ez" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/preopen{
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
@@ -2423,7 +2423,7 @@
 	name = "P.A.C.M.A.N.-type portable generator"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating{
 	heat_capacity = 1e+006
@@ -2435,7 +2435,7 @@
 	name = "S.U.P.E.R.P.A.C.M.A.N.-type portable generator"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating{
 	heat_capacity = 1e+006;
@@ -2459,7 +2459,7 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/airalarm/unlocked{
 	pixel_y = 23;
@@ -2471,7 +2471,7 @@
 /area/awaymission/moonoutpost19/research)
 "eW" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/smes{
 	charge = 1.5e+006;
@@ -2662,7 +2662,7 @@
 "fn" = (
 /obj/structure/cable,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/preopen{
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
@@ -3089,7 +3089,7 @@
 /area/awaymission/moonoutpost19/research)
 "gb" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/grille,
 /obj/machinery/door/poddoor/preopen{
@@ -3266,7 +3266,7 @@
 /area/awaymission/moonoutpost19/research)
 "gt" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/disposalpipe/segment{
 	desc = "An underfloor disposal pipe. This one has been applied with an acid-proof coating.";
@@ -3477,7 +3477,7 @@
 	name = "Acid-Proof containment chamber blast door"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating{
@@ -4974,7 +4974,7 @@
 /area/awaymission/moonoutpost19/arrivals)
 "jH" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc/highcap/fifteen_k{
 	dir = 1;

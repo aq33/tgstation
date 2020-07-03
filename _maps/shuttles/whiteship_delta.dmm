@@ -178,7 +178,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/power/apc{
 	dir = 8;
@@ -470,7 +470,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -1217,7 +1217,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc{
 	dir = 8;
@@ -1302,7 +1302,7 @@
 	charge = 1e+006
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
@@ -1315,7 +1315,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/power/apc{
 	dir = 4;
@@ -1424,7 +1424,7 @@
 	},
 /obj/machinery/space_heater,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)

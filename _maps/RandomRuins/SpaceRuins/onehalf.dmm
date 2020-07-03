@@ -223,7 +223,7 @@
 /area/ruin/space/has_grav/onehalf/dorms_med)
 "aM" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/closet/crate/medical,
 /obj/item/clothing/neck/stethoscope,
@@ -319,7 +319,7 @@
 /area/ruin/space/has_grav/onehalf/drone_bay)
 "aY" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -776,7 +776,7 @@
 /area/ruin/space/has_grav/onehalf/bridge)
 "cf" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -876,13 +876,13 @@
 "cq" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
@@ -937,7 +937,7 @@
 "cz" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
@@ -1061,7 +1061,7 @@
 "cV" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
@@ -1131,10 +1131,10 @@
 "de" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
@@ -1145,10 +1145,10 @@
 "df" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
@@ -1159,10 +1159,10 @@
 "dg" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";

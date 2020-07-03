@@ -2554,7 +2554,7 @@
 	start_charge = 100
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
@@ -3996,7 +3996,7 @@
 "hZ" = (
 /obj/machinery/gateway,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2"
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -5007,7 +5007,7 @@
 /area/awaymission/undergroundoutpost45/crew_quarters)
 "jV" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc/highcap/fifteen_k{
 	dir = 1;
@@ -6155,7 +6155,7 @@
 /area/awaymission/undergroundoutpost45/research)
 "lH" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/machinery/power/apc/highcap/fifteen_k{
 	dir = 2;
@@ -8255,7 +8255,7 @@
 	name = "P.A.C.M.A.N.-type portable generator"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating{
 	heat_capacity = 1e+006
@@ -8271,10 +8271,10 @@
 	},
 /obj/item/wrench,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating{
 	heat_capacity = 1e+006
@@ -8289,7 +8289,7 @@
 	name = "P.A.C.M.A.N.-type portable generator"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating{
 	heat_capacity = 1e+006
@@ -9127,7 +9127,7 @@
 /area/awaymission/undergroundoutpost45/engineering)
 "qE" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/computer/monitor/secret{
 	name = "primary power monitoring console"
@@ -9609,7 +9609,7 @@
 /area/awaymission/undergroundoutpost45/engineering)
 "rp" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/machinery/power/apc/highcap/fifteen_k{
 	dir = 8;
@@ -12495,7 +12495,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plating{
 	heat_capacity = 1e+006
@@ -12504,10 +12504,10 @@
 "wl" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating{
 	heat_capacity = 1e+006
@@ -13551,7 +13551,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "4"
 	},
 /turf/open/floor/plasteel{
 	heat_capacity = 1e+006
@@ -13571,7 +13571,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "8"
 	},
 /turf/open/floor/plating,
 /area/awaymission/undergroundoutpost45/mining)
