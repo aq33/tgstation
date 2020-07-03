@@ -240,8 +240,8 @@
 "aX" = (
 /obj/machinery/porta_turret{
 	dir = 8;
-	set_obj_flags = "EMAGGED";
-	installation = /obj/item/gun/energy/lasercannon
+	installation = /obj/item/gun/energy/lasercannon;
+	set_obj_flags = "EMAGGED"
 	},
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
@@ -382,8 +382,8 @@
 "bq" = (
 /obj/machinery/porta_turret{
 	dir = 8;
-	set_obj_flags = "EMAGGED";
-	installation = /obj/item/gun/energy/lasercannon
+	installation = /obj/item/gun/energy/lasercannon;
+	set_obj_flags = "EMAGGED"
 	},
 /turf/open/floor/plating,
 /area/awaymission/challenge/main)

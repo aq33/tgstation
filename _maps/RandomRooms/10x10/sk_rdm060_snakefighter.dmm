@@ -1,13 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /obj/machinery/power/smes/engineering,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
 /turf/open/floor/plating,
 /area/template_noop)
 "b" = (
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-8"
 	},
 /obj/structure/sign/departments/science{
@@ -62,7 +62,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "k" = (
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
@@ -109,7 +109,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "u" = (
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/item/wrench,
@@ -148,7 +148,7 @@
 /area/template_noop)
 "A" = (
 /obj/structure/cable,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
 /obj/structure/sign/warning{
@@ -159,27 +159,27 @@
 /area/template_noop)
 "B" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
 /turf/open/floor/plating,
 /area/template_noop)
 "C" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-8"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/template_noop)
 "D" = (
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/research/glass{
@@ -190,16 +190,16 @@
 /area/template_noop)
 "E" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
 /area/template_noop)
 "F" = (
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-8"
 	},
 /obj/structure/sign/warning{

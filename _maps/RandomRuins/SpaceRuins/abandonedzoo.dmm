@@ -8,17 +8,17 @@
 	anchored = 1;
 	power = 1
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-4"
 	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/abandonedzoo)
 "ac" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating,
@@ -29,10 +29,10 @@
 	anchored = 1;
 	power = 1
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating/airless,
@@ -43,10 +43,10 @@
 	anchored = 1;
 	power = 1
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
 /turf/open/floor/plating/airless,
@@ -57,10 +57,10 @@
 	anchored = 1;
 	power = 1
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-8"
 	},
 /turf/open/floor/plating/airless,
@@ -188,10 +188,10 @@
 	name = "Bio Containment";
 	req_one_access_txt = "47"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/dark/side,
@@ -202,10 +202,10 @@
 	anchored = 1;
 	power = 1
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
@@ -229,10 +229,10 @@
 	anchored = 1;
 	power = 1
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
 /turf/open/floor/plating,
@@ -244,7 +244,7 @@
 /turf/template_noop,
 /area/space/nearstation)
 "aL" = (
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark/side,
@@ -289,7 +289,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark/side,
@@ -306,7 +306,7 @@
 /obj/structure/rack,
 /obj/item/melee/baton/cattleprod,
 /obj/effect/spawner/lootdrop/maintenance,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-2"
 	},
 /turf/open/floor/plasteel/dark/side,
@@ -370,7 +370,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark/side,
@@ -407,7 +407,7 @@
 /area/ruin/space/has_grav/abandonedzoo)
 "be" = (
 /obj/structure/reagent_dispensers/fueltank,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-4"
 	},
 /turf/open/floor/plasteel/dark/side,
@@ -417,10 +417,10 @@
 	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit.";
 	name = "power storage unit"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-8"
 	},
 /turf/open/floor/plasteel/dark/side,
@@ -428,7 +428,7 @@
 "bg" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/machinery/light,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-8"
 	},
 /turf/open/floor/plasteel/dark/side,
@@ -482,10 +482,10 @@
 	anchored = 1;
 	power = 1
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
@@ -503,20 +503,20 @@
 /area/ruin/space/has_grav/abandonedzoo)
 "bs" = (
 /obj/machinery/shieldwallgen,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/abandonedzoo)
 "bt" = (
 /obj/machinery/shieldwallgen,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating/airless,
@@ -650,7 +650,7 @@
 /area/ruin/space/has_grav/abandonedzoo)
 "bN" = (
 /obj/structure/grille/broken,
-/obj/item/stack/cable_coil/cut/yellow,
+/obj/item/stack/cable_coil,
 /obj/item/shard{
 	icon_state = "small"
 	},
@@ -672,11 +672,11 @@
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "bS" = (
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-4"
 	},
 /obj/machinery/shieldwallgen,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
 /turf/open/floor/plating/airless,
@@ -704,10 +704,10 @@
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/abandonedzoo)
 "eY" = (
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-4"
 	},
 /turf/open/floor/plasteel/dark/side,
@@ -723,7 +723,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/dark,
@@ -734,17 +734,17 @@
 	anchored = 1;
 	power = 1
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-4"
 	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/abandonedzoo)
 "kj" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
@@ -772,10 +772,10 @@
 	anchored = 1;
 	power = 1
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
 /turf/open/floor/plating/airless,
@@ -791,10 +791,10 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
@@ -803,7 +803,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/item/stack/cable_coil/cut/yellow,
+/obj/item/stack/cable_coil,
 /obj/item/stack/tile/plasteel{
 	pixel_x = 3;
 	pixel_y = -4
@@ -812,10 +812,10 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/abandonedzoo)
 "sC" = (
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-8"
 	},
 /turf/open/floor/plasteel/dark/side,
@@ -831,7 +831,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
@@ -850,7 +850,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
@@ -860,10 +860,10 @@
 	name = "Bio Containment";
 	req_one_access_txt = "47"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-4"
 	},
 /turf/open/floor/plasteel/dark/side,
@@ -879,7 +879,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
@@ -889,10 +889,10 @@
 	name = "Bio Containment";
 	req_one_access_txt = "47"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "2-8"
 	},
 /turf/open/floor/plasteel/dark/side,
@@ -906,10 +906,10 @@
 	anchored = 1;
 	power = 1
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating/airless,
@@ -919,10 +919,10 @@
 	name = "Bio Containment";
 	req_one_access_txt = "47"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/structure/cable/yellow{
+/obj/structure/cable{
 	icon_state = "1-8"
 	},
 /turf/open/floor/plasteel/dark/side,

@@ -7,8 +7,8 @@
 	pixel_y = 32
 	},
 /obj/machinery/light/small{
-	icon_state = "bulb";
-	dir = 1
+	dir = 1;
+	icon_state = "bulb"
 	},
 /turf/open/floor/plating,
 /area/template_noop)
@@ -32,8 +32,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/boozeomat/all_access,
 /obj/machinery/light/small{
-	icon_state = "bulb";
-	dir = 1
+	dir = 1;
+	icon_state = "bulb"
 	},
 /turf/open/floor/plating,
 /area/template_noop)

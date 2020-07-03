@@ -3,10 +3,6 @@
 /obj/effect/turf_decal/stripes/corner,
 /turf/open/floor/plasteel,
 /area/template_noop)
-"b" = (
-/obj/item/clothing/head/cone,
-/turf/open/floor/plating,
-/area/template_noop)
 "c" = (
 /obj/item/stack/tile/plasteel,
 /obj/item/stack/tile/plasteel,
@@ -17,7 +13,7 @@
 /area/template_noop)
 "d" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/item/stack/cable_coil/random/five,
+/obj/item/stack/cable_coil/five,
 /obj/structure/sign/warning,
 /turf/open/floor/plasteel,
 /area/template_noop)
@@ -90,7 +86,7 @@ f
 k
 "}
 (2,1,1) = {"
-b
+m
 g
 l
 "}

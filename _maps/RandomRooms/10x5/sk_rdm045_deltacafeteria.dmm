@@ -114,8 +114,8 @@
 /obj/item/clothing/head/chefhat,
 /obj/item/clothing/suit/apron/chef,
 /obj/machinery/light/small{
-	icon_state = "bulb";
-	dir = 1
+	dir = 1;
+	icon_state = "bulb"
 	},
 /turf/open/floor/plasteel/white/side,
 /area/template_noop)

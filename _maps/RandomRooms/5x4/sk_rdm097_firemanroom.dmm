@@ -53,8 +53,8 @@
 "h" = (
 /obj/structure/table,
 /obj/item/storage/box/donkpockets{
-	pixel_y = 8;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = 8
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
