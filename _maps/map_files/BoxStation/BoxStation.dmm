@@ -21423,7 +21423,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/button/crematorium{
-	id = krematoriumkost;
+	id = 2137;
 	pixel_y = 25
 	},
 /turf/open/floor/plasteel/dark,
@@ -21433,7 +21433,7 @@
 	dir = 4
 	},
 /obj/structure/bodycontainer/crematorium{
-	id = krematoriumkost
+	id = 2137
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)

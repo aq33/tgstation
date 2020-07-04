@@ -29198,7 +29198,7 @@
 "boD" = (
 /obj/structure/bodycontainer/crematorium{
 	dir = 8;
-	id = krematoriumkost
+	id = 2137
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
@@ -54291,7 +54291,7 @@
 	dir = 4
 	},
 /obj/machinery/button/crematorium{
-	id = krematoriumkost;
+	id = 2137;
 	pixel_x = -5;
 	pixel_y = -25
 	},

@@ -67959,7 +67959,7 @@
 	},
 /obj/structure/bodycontainer/crematorium{
 	dir = 8;
-	id = krematoriumkost
+	id = 2137
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
@@ -68392,7 +68392,7 @@
 	pixel_x = 29
 	},
 /obj/machinery/button/crematorium{
-	id = krematoriumkost;
+	id = 2137;
 	pixel_x = 25;
 	pixel_y = -9
 	},
