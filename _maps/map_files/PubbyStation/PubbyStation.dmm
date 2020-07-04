@@ -29196,7 +29196,10 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "boD" = (
-/obj/item/ectoplasm,
+/obj/structure/bodycontainer/crematorium{
+	dir = 8;
+	id = krematoriumkost
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "boE" = (
@@ -54280,6 +54283,20 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/engine,
 /area/engine/engineering)
+"dfo" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/button/crematorium{
+	id = krematoriumkost;
+	pixel_x = -5;
+	pixel_y = -25
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/morgue)
 "dfr" = (
 /obj/machinery/atmospherics/pipe/manifold/cyan/visible{
 	dir = 4
@@ -93440,7 +93457,7 @@ blg
 bmr
 bnz
 boD
-bpH
+dfo
 biY
 bsE
 bue
