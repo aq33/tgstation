@@ -16,14 +16,14 @@ Jeżeli chcesz pomóc to najpierw wybierz issue którym chcesz się zając, napi
 Wtedy zforkuj te repozytorium, i tam nanieś zmiany tworząc commity (nie branche),
 pliki można też edytować z poziomu strony. Gdy chcesz zaproponować złączenie twojego forka do głównego repo,
 utwórz PR (pull request).
-Wasz PR musi mieć wypełnioną formę changeloga, przykładowy changelog:
+Twój PR musi mieć wypełnioną formę changeloga, przykładowy changelog:
 ```
 :cl:
 add: dodano coś tam, można go zrobić z czegoś tam
 fix: naprawiono jakiś bug
 /:cl:
 ```
-Wasz PR będzie wtedy sprawdzany przez automatyczne testy pod względem literówek itd.
+Twój PR będzie wtedy sprawdzany przez automatyczne testy pod względem literówek itd.
 Jeżeli wszystko wygląda git, zukonake zmerge'uje to do repozytorium, lub odpali testowy merge.
 
 Jeżeli chcesz pomóc, ale nie wiesz z czym, zobacz [ten projekt](https://github.com/aq33/tgstation/projects/3).
@@ -33,6 +33,10 @@ Do programowania polecam Visual Studio Code i wtedy otworzenie workspace, pokaż
 
 Jeżeli czegoś nie wiesz/nie rozumiesz to poinformuj nas na kanale #coder.
 Tu jest też link do ogólnego Discorda (anglojęzycznego) związanego z programowaniem SS13: https://discord.gg/Vh8TJp9
+
+### Robisz zmianę ale nie wiesz czy zostanie przyjęta?
+
+Polecam zrobić draft pull request i z wyprzedzeniem opisać co zamierzasz dodac, wtedy ktoś zatwierdzi (lub nie) twój pomysł.
 
 ## LICENSE
 
