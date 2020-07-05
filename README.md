@@ -6,6 +6,10 @@
 
 Jeżeli chcesz zgłosić buga, lub zasugerować nową zmianę to zrób to w zakładce Issues, i daj odpowiedni label.
 
+## Ważne
+Jeżeli robisz wiele PR z twojego forka, z różnych branchów, to muszą te branche być bazowane na naszym masterze, a nie na twoich innych branchach.
+W innym przypadku jeden branch może nanosić 2 PRy.
+
 ## Pomoc w tłumaczeniu/programowaniu
 
 Jeżeli chcesz pomóc to najpierw wybierz issue którym chcesz się zając, napisz tam, ze ty zajmiesz się np. jakimś konkretnym plikiem, lub całym issue, itd.
@@ -24,6 +28,8 @@ Jeżeli wszystko wygląda git, zukonake zmerge'uje to do repozytorium, lub odpal
 
 Jeżeli chcesz pomóc, ale nie wiesz z czym, zobacz [ten projekt](https://github.com/aq33/tgstation/projects/3).
 Najłatwiejsze issues to te z labelem "tweak", "tłumaczenie", "grafika" i "dźwięk".
+
+Do programowania polecam Visual Studio Code i wtedy otworzenie workspace, pokaże to zalecane pluginy które bardzo ułatwiają pracę z Byondem.
 
 Jeżeli czegoś nie wiesz/nie rozumiesz to poinformuj nas na kanale #coder.
 Tu jest też link do ogólnego Discorda (anglojęzycznego) związanego z programowaniem SS13: https://discord.gg/Vh8TJp9
