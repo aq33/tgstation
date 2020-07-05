@@ -141,7 +141,6 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "aat" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
@@ -918,7 +917,6 @@
 /turf/open/floor/engine,
 /area/science/explab)
 "acx" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
@@ -3526,7 +3524,6 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/heads/hor)
 "ajg" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
@@ -6855,7 +6852,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -11260,7 +11256,6 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aBP" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -11877,7 +11872,6 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "aDm" = (
-/obj/structure/cable,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -12479,7 +12473,6 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -16131,7 +16124,6 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "aNv" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
 /obj/structure/cable,
@@ -16448,7 +16440,6 @@
 /turf/open/floor/plasteel,
 /area/maintenance/port/fore)
 "aOl" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -22563,7 +22554,6 @@
 /turf/open/floor/wood,
 /area/crew_quarters/theatre)
 "bca" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
@@ -23235,7 +23225,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port)
 "bdC" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -28411,7 +28400,6 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "bou" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 5
 	},
@@ -29027,7 +29015,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "bpX" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -30478,7 +30465,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral,
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
@@ -30507,7 +30493,6 @@
 "bsI" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/neutral,
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
@@ -30785,7 +30770,6 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
@@ -34700,7 +34684,6 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "bBE" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
@@ -36845,7 +36828,6 @@
 /turf/open/floor/plating,
 /area/maintenance/department/security)
 "bFJ" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer3,
 /obj/structure/cable,
@@ -36887,7 +36869,6 @@
 /turf/open/floor/plasteel,
 /area/security/main)
 "bFP" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/structure/cable,
@@ -37171,7 +37152,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral,
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -37306,7 +37286,6 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
@@ -37369,7 +37348,6 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -39535,7 +39513,6 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat/service)
 "bLL" = (
-/obj/structure/cable,
 /obj/machinery/turretid{
 	control_area = "/area/ai_monitored/turret_protected/ai";
 	enabled = 1;
@@ -41013,7 +40990,6 @@
 	name = "Gateway Access";
 	req_access_txt = "62"
 	},
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -41958,7 +41934,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "bRn" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
 /obj/structure/cable,
@@ -42421,7 +42396,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/structure/cable,
@@ -45433,7 +45407,6 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "bZN" = (
-/obj/structure/cable,
 /obj/machinery/porta_turret/ai{
 	dir = 4
 	},
@@ -46312,7 +46285,6 @@
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
 "ccc" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -47470,7 +47442,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/purple/hidden/layer1{
 	dir = 9
 	},
@@ -48413,7 +48384,6 @@
 	name = "Chief Engineer";
 	req_access_txt = "56"
 	},
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -48614,7 +48584,6 @@
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
 "fNR" = (
-/obj/structure/cable,
 /obj/machinery/power/apc{
 	areastring = "/area/library/lounge";
 	dir = 2;
@@ -48726,7 +48695,6 @@
 /turf/closed/wall,
 /area/crew_quarters/fitness/locker_room)
 "gsu" = (
-/obj/structure/cable,
 /obj/machinery/power/apc{
 	areastring = "/area/quartermaster/warehouse";
 	dir = 1;
@@ -48892,7 +48860,6 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
-/obj/structure/cable,
 /obj/machinery/power/apc{
 	areastring = "/area/bridge";
 	dir = 8;
@@ -48903,7 +48870,6 @@
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "hjz" = (
-/obj/structure/cable,
 /obj/machinery/power/apc{
 	areastring = "/area/crew_quarters/dorms";
 	dir = 2;
@@ -49250,7 +49216,6 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "ice" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 5
 	},
@@ -49265,7 +49230,6 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "ifP" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/structure/cable,
 /turf/open/floor/plasteel,
@@ -49316,7 +49280,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
@@ -49549,7 +49512,6 @@
 /turf/open/floor/plasteel,
 /area/engine/engine_room)
 "jws" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/structure/cable,
 /obj/effect/landmark/start/station_engineer,
@@ -49757,7 +49719,6 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/nuke_storage)
 "kyS" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
@@ -50408,7 +50369,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
-/obj/structure/cable,
 /obj/item/clothing/head/cone,
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -51545,7 +51505,6 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "qOX" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
@@ -51634,7 +51593,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "rmC" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
 	},
@@ -52746,7 +52704,6 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "vmc" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
@@ -52781,7 +52738,6 @@
 /obj/machinery/atmospherics/pipe/manifold/orange/visible{
 	dir = 1
 	},
-/obj/structure/cable,
 /obj/machinery/meter,
 /obj/structure/cable,
 /turf/open/floor/plasteel,
@@ -53197,7 +53153,6 @@
 /turf/open/floor/plasteel,
 /area/engine/supermatter)
 "wBW" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -53599,7 +53554,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},

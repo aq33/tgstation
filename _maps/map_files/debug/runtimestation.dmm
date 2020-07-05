@@ -99,7 +99,6 @@
 	name = "Gravity Generator APC";
 	pixel_y = 23
 	},
-/obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
@@ -1883,7 +1882,6 @@
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "fK" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
@@ -1891,7 +1889,6 @@
 /turf/open/floor/plasteel,
 /area/storage/primary)
 "fL" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable,
 /turf/open/floor/plasteel,
@@ -2143,7 +2140,6 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "gu" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
@@ -2313,7 +2309,6 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
-/obj/structure/cable,
 /obj/machinery/power/apc{
 	dir = 1;
 	pixel_y = 23

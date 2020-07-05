@@ -603,7 +603,6 @@
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "bS" = (
-/obj/structure/cable,
 /obj/machinery/shieldwallgen,
 /obj/structure/cable,
 /turf/open/floor/plating/airless,

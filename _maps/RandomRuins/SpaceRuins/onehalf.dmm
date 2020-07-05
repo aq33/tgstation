@@ -865,7 +865,6 @@
 /area/ruin/space/has_grav/onehalf/bridge)
 "cz" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
 	name = "bridge blast door"
@@ -987,7 +986,6 @@
 /area/ruin/space/has_grav/onehalf/bridge)
 "cV" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
 	name = "bridge blast door"

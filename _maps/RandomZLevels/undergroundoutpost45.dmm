@@ -12129,7 +12129,6 @@
 	},
 /area/awaymission/undergroundoutpost45/engineering)
 "wm" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
 /obj/machinery/door/airlock/command/glass{
@@ -12346,7 +12345,6 @@
 	},
 /area/awaymission/undergroundoutpost45/mining)
 "wF" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,

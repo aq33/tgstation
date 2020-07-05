@@ -1472,7 +1472,6 @@
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
 "cB" = (
-/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4

@@ -1869,7 +1869,6 @@
 /area/ruin/unpowered/syndicate_lava_base/main)
 "gE" = (
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer3,
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -1900,7 +1899,6 @@
 /turf/open/floor/plasteel,
 /area/ruin/unpowered/syndicate_lava_base/main)
 "gH" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
 /obj/structure/cable,
@@ -5229,7 +5227,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
-/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/apc/syndicate{
 	dir = 1;

@@ -1157,7 +1157,6 @@
 /turf/open/floor/plating,
 /area/awaymission/research/interior/gateway)
 "cS" = (
-/obj/structure/cable,
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 4;
 	name = "Genetics APC";
@@ -2911,7 +2910,6 @@
 /turf/open/floor/plating,
 /area/awaymission/research/interior)
 "gp" = (
-/obj/structure/cable,
 /obj/machinery/light/small,
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -5680,7 +5678,6 @@
 	},
 /area/awaymission/research/interior/dorm)
 "lZ" = (
-/obj/structure/cable,
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "Escape APC";

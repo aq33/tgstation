@@ -206,7 +206,6 @@
 /area/ruin/space/has_grav/storage/power1)
 "aN" = (
 /obj/machinery/door/airlock/highsecurity,
-/obj/structure/cable,
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/mapping_helpers/airlock/locked,
@@ -364,7 +363,6 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/materials1)
 "bv" = (
-/obj/structure/cable,
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 6;
 	icon_state = "tracks"
@@ -601,7 +599,6 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/power2)
 "cn" = (
-/obj/structure/cable,
 /obj/effect/decal/cleanable/blood/footprints{
 	dir = 1;
 	icon_state = "blood1"

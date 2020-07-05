@@ -3522,7 +3522,6 @@
 /turf/open/floor/plating/airless,
 /area/ruin/space/derelict/hallway/secondary)
 "mX" = (
-/obj/structure/cable,
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "Worn-out APC";

@@ -4890,7 +4890,6 @@
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hos)
 "amu" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -5480,7 +5479,6 @@
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hos)
 "anV" = (
-/obj/structure/cable,
 /obj/machinery/power/apc{
 	dir = 2;
 	name = "Head of Security's Office APC";
@@ -10460,7 +10458,6 @@
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "azn" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
 	},
@@ -12519,7 +12516,6 @@
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/hop)
 "aDW" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -13323,7 +13319,6 @@
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
 "aFU" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
@@ -13974,7 +13969,6 @@
 /turf/open/floor/plating,
 /area/hallway/secondary/exit/departure_lounge)
 "aHC" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
@@ -14423,7 +14417,6 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "aIN" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable,
 /turf/open/floor/plasteel,
@@ -14484,7 +14477,6 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "aIX" = (
-/obj/structure/cable,
 /obj/effect/landmark/observer_start,
 /obj/structure/cable,
 /turf/open/floor/plasteel,
@@ -17501,7 +17493,6 @@
 /turf/open/floor/plating,
 /area/maintenance/department/crew_quarters/bar)
 "aQO" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -29863,7 +29854,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
 	},
@@ -29871,7 +29861,6 @@
 /turf/open/floor/plasteel/dark,
 /area/science/xenobiology)
 "btF" = (
-/obj/structure/cable,
 /obj/effect/landmark/blobstart,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -30495,7 +30484,6 @@
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/zone2)
 "bvg" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
@@ -31582,7 +31570,6 @@
 /turf/open/floor/plasteel/dark,
 /area/science/explab)
 "bxw" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -32105,7 +32092,6 @@
 /area/science/lab)
 "byG" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/purple,
@@ -32922,7 +32908,6 @@
 /turf/open/floor/plating,
 /area/crew_quarters/heads/hor)
 "bAp" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/research{
 	name = "Research Director's Office";
@@ -34023,7 +34008,6 @@
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/cmo)
 "bCv" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/sorting/mail{
 	dir = 8;
 	sortType = 10
@@ -34100,7 +34084,6 @@
 /turf/open/floor/plating,
 /area/maintenance/department/engine)
 "bCB" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
@@ -34705,7 +34688,6 @@
 /turf/open/floor/plasteel/dark,
 /area/science/explab)
 "bDS" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
 	},
@@ -35243,7 +35225,6 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/exam_room)
 "bEM" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -40698,7 +40679,6 @@
 /turf/open/floor/plasteel/dark,
 /area/storage/tech)
 "bRT" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
@@ -41268,7 +41248,6 @@
 /obj/machinery/power/terminal{
 	dir = 8
 	},
-/obj/structure/cable,
 /obj/machinery/light,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -41734,7 +41713,6 @@
 /turf/open/floor/plasteel,
 /area/engine/break_room)
 "bUm" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -43367,7 +43345,6 @@
 /turf/open/floor/plating,
 /area/crew_quarters/heads/chief)
 "bYa" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable,
@@ -43737,7 +43714,6 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "bYT" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -43777,7 +43753,6 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "bYV" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -43936,7 +43911,6 @@
 /obj/machinery/power/terminal{
 	dir = 4
 	},
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -44492,7 +44466,6 @@
 	},
 /area/chapel/main/monastery)
 "cbc" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
@@ -46590,7 +46563,6 @@
 /turf/open/floor/carpet,
 /area/library)
 "cjR" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable,
 /turf/open/floor/carpet,
@@ -47143,7 +47115,6 @@
 /turf/open/floor/plating,
 /area/tcommsat/computer)
 "cmb" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -49017,7 +48988,6 @@
 /turf/open/floor/plasteel/dark,
 /area/chapel/main/monastery)
 "csO" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -49178,7 +49148,6 @@
 /turf/open/floor/plasteel/dark,
 /area/chapel/main/monastery)
 "ctL" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -51070,7 +51039,6 @@
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
 "cCZ" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -51911,7 +51879,6 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/aft)
 "eCw" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
@@ -53069,7 +53036,6 @@
 /turf/open/floor/plasteel/white,
 /area/medical/chemistry)
 "gIC" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
@@ -55848,7 +55814,6 @@
 /turf/open/floor/plating,
 /area/maintenance/department/security/brig)
 "lIr" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -58622,7 +58587,6 @@
 /turf/open/floor/plasteel/dark,
 /area/library/lounge)
 "qOH" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
@@ -61925,7 +61889,6 @@
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "xxS" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
 	},

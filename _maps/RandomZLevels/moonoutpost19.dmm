@@ -2148,7 +2148,6 @@
 	},
 /area/awaymission/moonoutpost19/research)
 "ek" = (
-/obj/structure/cable,
 /obj/machinery/shieldwallgen{
 	locked = 0;
 	req_access = null
@@ -2253,7 +2252,6 @@
 	},
 /area/awaymission/moonoutpost19/research)
 "ez" = (
-/obj/structure/cable,
 /obj/machinery/door/poddoor/preopen{
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
 	id = "Awaylab";
@@ -3120,7 +3118,6 @@
 	},
 /area/awaymission/moonoutpost19/research)
 "gt" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	desc = "An underfloor disposal pipe. This one has been applied with an acid-proof coating.";
 	dir = 4;
@@ -3323,7 +3320,6 @@
 	},
 /area/awaymission/moonoutpost19/research)
 "gL" = (
-/obj/structure/cable,
 /obj/machinery/door/poddoor/preopen{
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
 	id = "Awaylab";

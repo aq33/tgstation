@@ -14727,7 +14727,6 @@
 /turf/open/floor/plating,
 /area/awaymission/snowdin/post/mining_main)
 "Kk" = (
-/obj/structure/cable,
 /obj/machinery/computer/monitor/secret,
 /obj/structure/cable,
 /turf/open/floor/plating,

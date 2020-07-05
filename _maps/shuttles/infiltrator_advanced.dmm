@@ -2074,7 +2074,6 @@
 	name = "Ordnance Storage";
 	req_access_txt = "150"
 	},
-/obj/structure/cable,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -2177,7 +2176,6 @@
 	name = "Ordnance Storage";
 	req_access_txt = "150"
 	},
-/obj/structure/cable,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4

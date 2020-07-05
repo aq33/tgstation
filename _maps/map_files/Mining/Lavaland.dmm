@@ -708,7 +708,6 @@
 /turf/open/floor/plasteel,
 /area/mine/eva)
 "bT" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -1424,7 +1423,6 @@
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "dC" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
@@ -1569,7 +1567,6 @@
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "dS" = (
-/obj/structure/cable,
 /obj/machinery/door/airlock/maintenance{
 	name = "Mining Station Maintenance";
 	req_access_txt = "48"
@@ -1753,7 +1750,6 @@
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "eq" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
 /obj/structure/cable,
