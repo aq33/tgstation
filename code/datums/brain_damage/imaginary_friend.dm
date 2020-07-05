@@ -1,9 +1,9 @@
 /datum/brain_trauma/special/imaginary_friend
-	name = "Imaginary Friend"
-	desc = "Patient can see and hear an imaginary person."
-	scan_desc = "partial schizophrenia"
-	gain_text = "<span class='notice'>You feel in good company, for some reason.</span>"
-	lose_text = "<span class='warning'>You feel lonely again.</span>"
+	name = "Wymyślony przyjaciel"
+	desc = "Badany może zobaczyć wymyśloną osobe."
+	scan_desc = "Wymyślony przyjaciel umysłu"
+	gain_text = "<span class='notice'>Czujesz się jakbyś miał gości.</span>"
+	lose_text = "<span class='warning'>Czujesz się samotny ponownie.</span>"
 	var/mob/camera/imaginary_friend/friend
 	var/friend_initialized = FALSE
 
@@ -46,7 +46,7 @@
 	if(owner.stat == DEAD)
 		qdel(src)
 		return
-	var/list/mob/dead/observer/candidates = pollCandidatesForMob("Do you want to play as [owner]'s imaginary friend?", ROLE_PAI, null, null, 75, friend, POLL_IGNORE_IMAGINARYFRIEND)
+	var/list/mob/dead/observer/candidates = pollCandidatesForMob("Czy chesz grać jako wymyślony przyjaciel [owner]a?", ROLE_PAI, null, null, 75, friend, POLL_IGNORE_IMAGINARYFRIEND)
 	if(LAZYLEN(candidates))
 		var/mob/dead/observer/C = pick(candidates)
 		friend.key = C.key
@@ -55,10 +55,10 @@
 		qdel(src)
 
 /mob/camera/imaginary_friend
-	name = "imaginary friend"
-	real_name = "imaginary friend"
+	name = "Wymyślony przyjaciel"
+	real_name = "wymyslony przyjaciel"
 	move_on_shuttle = TRUE
-	desc = "A wonderful yet fake friend."
+	desc = "Świetny, fałszywy przyjaciel."
 	see_in_dark = 0
 	lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 	sight = NONE

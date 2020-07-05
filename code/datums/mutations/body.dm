@@ -2,16 +2,16 @@
 
 //Epilepsy gives a very small chance to have a seizure every life tick, knocking you unconscious.
 /datum/mutation/human/epilepsy
-	name = "Epilepsy"
-	desc = "A genetic defect that sporadically causes seizures."
+	name = "Padaczka"
+	desc = "Defekt genetyczny, który powoduje napady padaczki."
 	quality = NEGATIVE
-	text_gain_indication = "<span class='danger'>You get a headache.</span>"
+	text_gain_indication = "<span class='danger'>Łapie cię ból głowy.</span>"
 	synchronizer_coeff = 1
 	power_coeff = 1
 
 /datum/mutation/human/epilepsy/on_life()
 	if(prob(1 * GET_MUTATION_SYNCHRONIZER(src)) && owner.stat == CONSCIOUS)
-		owner.visible_message("<span class='danger'>[owner] starts having a seizure!</span>", "<span class='userdanger'>You have a seizure!</span>")
+		owner.visible_message("<span class='danger'>[owner] dostaje ataku padaczki!</span>", "<span class='userdanger'>Dostajesz ataku padaczki!</span>")
 		owner.Unconscious(200 * GET_MUTATION_POWER(src))
 		owner.Jitter(1000 * GET_MUTATION_POWER(src))
 		SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "epilepsy", /datum/mood_event/epilepsy)
@@ -24,10 +24,10 @@
 
 //Unstable DNA induces random mutations!
 /datum/mutation/human/bad_dna
-	name = "Unstable DNA"
-	desc = "Strange mutation that causes the holder to randomly mutate."
+	name = "Niestabilne DNA"
+	desc = "Dziwna mutacja, która powoduje niekontrolowane mutacje."
 	quality = NEGATIVE
-	text_gain_indication = "<span class='danger'>You feel strange.</span>"
+	text_gain_indication = "<span class='danger'>Czujesz się dziwnie.</span>"
 	locked = TRUE
 
 /datum/mutation/human/bad_dna/on_acquiring(mob/living/carbon/human/owner)
@@ -50,10 +50,10 @@
 
 //Cough gives you a chronic cough that causes you to drop items.
 /datum/mutation/human/cough
-	name = "Cough"
-	desc = "A chronic cough."
+	name = "Kaszel"
+	desc = "Chroniczny kaszel."
 	quality = MINOR_NEGATIVE
-	text_gain_indication = "<span class='danger'>You start coughing.</span>"
+	text_gain_indication = "<span class='danger'>Zaczynasz kaszleć.</span>"
 	synchronizer_coeff = 1
 	power_coeff = 1
 
@@ -67,11 +67,11 @@
 			owner.throw_at(target, cough_range, GET_MUTATION_POWER(src))
 
 /datum/mutation/human/paranoia
-	name = "Paranoia"
-	desc = "Subject is easily terrified, and may suffer from hallucinations."
+	name = "Paranoja"
+	desc = "Badanego łatwo przestraszyć, czasem występują halucynacje."
 	quality = NEGATIVE
-	text_gain_indication = "<span class='danger'>You feel screams echo through your mind...</span>"
-	text_lose_indication = "<span class'notice'>The screaming in your mind fades.</span>"
+	text_gain_indication = "<span class='danger'>Słyszysz echo krzyków...</span>"
+	text_lose_indication = "<span class'notice'>Krzyki ustępują.</span>"
 
 /datum/mutation/human/paranoia/on_life()
 	if(prob(5) && owner.stat == CONSCIOUS)
@@ -81,8 +81,8 @@
 
 //Dwarfism shrinks your body and lets you pass tables.
 /datum/mutation/human/dwarfism
-	name = "Dwarfism"
-	desc = "A mutation believed to be the cause of dwarfism."
+	name = "karłowatość"
+	desc = "Mutacja uznawana za przyczyne karłowatości."
 	quality = POSITIVE
 	difficulty = 16
 	instability = 5
@@ -94,22 +94,22 @@
 		return
 	owner.transform = owner.transform.Scale(1, 0.8)
 	passtable_on(owner, GENETIC_MUTATION)
-	owner.visible_message("<span class='danger'>[owner] suddenly shrinks!</span>", "<span class='notice'>Everything around you seems to grow..</span>")
+	owner.visible_message("<span class='danger'>[owner] naglę się zmiejsza!</span>", "<span class='notice'>Wszystko dookoła ciebie naglę wydaję się większe..</span>")
 
 /datum/mutation/human/dwarfism/on_losing(mob/living/carbon/human/owner)
 	if(..())
 		return
 	owner.transform = owner.transform.Scale(1, 1.25)
 	passtable_off(owner, GENETIC_MUTATION)
-	owner.visible_message("<span class='danger'>[owner] suddenly grows!</span>", "<span class='notice'>Everything around you seems to shrink..</span>")
+	owner.visible_message("<span class='danger'>[owner] naglę się zwiększa!</span>", "<span class='notice'>Wszystko dookoła ciebie naglę wydaję się mniejsze..</span>")
 
 
 //Clumsiness has a very large amount of small drawbacks depending on item.
 /datum/mutation/human/clumsy
-	name = "Clumsiness"
-	desc = "A genome that inhibits certain brain functions, causing the holder to appear clumsy. Honk"
+	name = "Nieporadność"
+	desc = "Genom, który utrudnia funkcjonowanie mózgu robiąc z badanego niezdarę. Honk"
 	quality = MINOR_NEGATIVE
-	text_gain_indication = "<span class='danger'>You feel lightheaded.</span>"
+	text_gain_indication = "<span class='danger'>Twoja głowa robi się  lekka.</span>"
 
 /datum/mutation/human/clumsy/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
@@ -124,10 +124,10 @@
 
 //Tourettes causes you to randomly stand in place and shout.
 /datum/mutation/human/tourettes
-	name = "Tourette's Syndrome"
-	desc = "A chronic twitch that forces the user to scream bad words." //definitely needs rewriting
+	name = "Zespół Touretta"
+	desc = "Chroniczne drgawki, które zmuszają do przeklinania." //JD
 	quality = NEGATIVE
-	text_gain_indication = "<span class='danger'>You twitch.</span>"
+	text_gain_indication = "<span class='danger'>Dostajesz drgawek.</span>"
 	synchronizer_coeff = 1
 
 /datum/mutation/human/tourettes/on_life()
@@ -137,7 +137,7 @@
 			if(1)
 				owner.emote("twitch")
 			if(2 to 3)
-				owner.say("[prob(50) ? ";" : ""][pick("SHIT", "PISS", "FUCK", "CUNT", "COCKSUCKER", "MOTHERFUCKER", "TITS")]", forced="tourette's syndrome")
+				owner.say("[prob(50) ? ";" : ""][pick("GÓWNO", "KUTAS", "KURWA", "DEBILU", "JEBAĆ PIS", "GŁOSUJE NA PIS", "PIZDA")]", forced="Zespół Touretta") //może nie lubi pis-u ale na niego głosuje, kto wie
 		var/x_offset_old = owner.pixel_x
 		var/y_offset_old = owner.pixel_y
 		var/x_offset = owner.pixel_x + rand(-2,2)
@@ -148,10 +148,10 @@
 
 //Deafness makes you deaf.
 /datum/mutation/human/deaf
-	name = "Deafness"
-	desc = "The holder of this genome is completely deaf."
+	name = "Głuchota"
+	desc = "Genom powodujący całkowitą głuchote."
 	quality = NEGATIVE
-	text_gain_indication = "<span class='danger'>You can't seem to hear anything.</span>"
+	text_gain_indication = "<span class='danger'>Wszystko dookoła ucichło.</span>"
 
 /datum/mutation/human/deaf/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
@@ -166,8 +166,8 @@
 
 //Monified turns you into a monkey.
 /datum/mutation/human/race
-	name = "Monkified"
-	desc = "A strange genome, believing to be what differentiates monkeys from humans."
+	name = "Zamieniony w małpe" //nie ma na to słowa- zmałpowany?
+	desc = "Dziwny genom, naukowcy uważają go za skutek ewolucji."
 	quality = NEGATIVE
 	time_coeff = 2
 	locked = TRUE //Species specific, keep out of actual gene pool
@@ -182,10 +182,10 @@
 		. = owner.humanize(TR_KEEPITEMS | TR_KEEPIMPLANTS | TR_KEEPORGANS | TR_KEEPDAMAGE | TR_KEEPVIRUS | TR_KEEPSE)
 
 /datum/mutation/human/glow
-	name = "Glowy"
-	desc = "You permanently emit a light with a random color and intensity."
+	name = "Świecący"
+	desc = "Twoja osoba emituje światło o losowym kolorze i natężeniu."
 	quality = POSITIVE
-	text_gain_indication = "<span class='notice'>Your skin begins to glow softly.</span>"
+	text_gain_indication = "<span class='notice'>Twoja skóra zaczyna świecić.</span>"
 	instability = 5
 	var/obj/effect/dummy/luminescent_glow/glowth //shamelessly copied from luminescents
 	var/glow = 2.5
@@ -213,26 +213,26 @@
 	QDEL_NULL(glowth)
 
 /datum/mutation/human/glow/anti
-	name = "Anti-Glow"
-	desc = "Your skin seems to attract and absorb nearby light creating 'darkness' around you."
-	text_gain_indication = "<span class='notice'>Your light around you seems to disappear.</span>"
+	name = "Anty-Świecący" //Zaciemniejący?
+	desc = "Twoja skóra pochłania światło dookoła, tworząc ciemność."
+	text_gain_indication = "<span class='notice'>Światło dookoła ciebie zaczyna znikać.</span>"
 	glow = -3.5 //Slightly stronger, since negating light tends to be harder than making it.
 	conflicts = list(/datum/mutation/human/glow)
 	locked = TRUE
 
 /datum/mutation/human/strong
-	name = "Strength"
-	desc = "The user's muscles slightly expand."
+	name = "Silny" //mariusz pudzian
+	desc = "Mięśnie badanego zauważalnie rosną."
 	quality = POSITIVE
-	text_gain_indication = "<span class='notice'>You feel strong.</span>"
+	text_gain_indication = "<span class='notice'>Czujesz się silny.</span>"
 	difficulty = 16
 
 /datum/mutation/human/insulated
-	name = "Insulated"
-	desc = "The affected person does not conduct electricity."
+	name = "Izolowany"
+	desc = "Osoba nie przewodzi prądu."
 	quality = POSITIVE
-	text_gain_indication = "<span class='notice'>Your fingertips go numb.</span>"
-	text_lose_indication = "<span class='notice'>Your fingertips regain feeling.</span>"
+	text_gain_indication = "<span class='notice'>Twoje palce drętwieją.</span>"
+	text_lose_indication = "<span class='notice'>Znowu czujesz swoje palce.</span>"
 	difficulty = 16
 	instability = 25
 
@@ -247,11 +247,11 @@
 	REMOVE_TRAIT(owner, TRAIT_SHOCKIMMUNE, "genetics")
 
 /datum/mutation/human/fire
-	name = "Fiery Sweat"
-	desc = "The user's skin will randomly combust, but is generally alot more resilient to burning."
+	name = "Ognisty pot"
+	desc = "Badaczy czasem zapala się, lecz jest bardziej odporny na poparzenia."
 	quality = NEGATIVE
-	text_gain_indication = "<span class='warning'>You feel hot.</span>"
-	text_lose_indication = "<span class'notice'>You feel a lot cooler.</span>"
+	text_gain_indication = "<span class='warning'>Czujesz się rozpalony.</span>" //xD
+	text_lose_indication = "<span class'notice'>Czujesz się chłodniej.</span>"
 	difficulty = 14
 	synchronizer_coeff = 1
 	power_coeff = 1
@@ -272,11 +272,11 @@
 	owner.physiology.burn_mod *= 2
 
 /datum/mutation/human/badblink
-	name = "Spatial Instability"
-	desc = "The victim of the mutation has a very weak link to spatial reality, and may be displaced. Often causes extreme nausea."
+	name = "Niestabilność przestrzeni"
+	desc = "Mutacja badanego ma bardzo słabe połączenie do czwartej gęstości i może do niej wejść. Często powoduje zawroty głowy."
 	quality = NEGATIVE
-	text_gain_indication = "<span class='warning'>The space around you twists sickeningly.</span>"
-	text_lose_indication = "<span class'notice'>The space around you settles back to normal.</span>"
+	text_gain_indication = "<span class='warning'>Przestrzeń dookoła ciebie wykręca się.</span>"
+	text_lose_indication = "<span class'notice'>Przestrzeń dookoła ciebie wraca do trzeciego wymiaru.</span>"
 	difficulty = 18//high so it's hard to unlock and abuse
 	instability = 10
 	synchronizer_coeff = 1
@@ -287,42 +287,42 @@
 /datum/mutation/human/badblink/on_life()
 	if(prob(warpchance))
 		var/warpmessage = pick(
-		"<span class='warning'>With a sickening 720 degree twist of their back, [owner] vanishes into thin air.</span>",
-		"<span class='warning'>[owner] does some sort of strange backflip into another dimension. It looks pretty painful.</span>",
-		"<span class='warning'>[owner] does a jump to the left, a step to the right, and warps out of reality.</span>",
-		"<span class='warning'>[owner]'s torso starts folding inside out until it vanishes from reality, taking [owner] with it.</span>",
-		"<span class='warning'>One moment, you see [owner]. The next, [owner] is gone.</span>")
-		owner.visible_message(warpmessage, "<span class='userdanger'>You feel a wave of nausea as you fall through reality!</span>")
+		"<span class='warning'>Z zadziwiającym przewrotem 420 stopni, [owner] rozpływa się w powietrzu.</span>",
+		"<span class='warning'>[owner] robi przewrót w tył do innego wymiaru. Wygląda to boleśnie.</span>",
+		"<span class='warning'>[owner] robi skok w lewo, krok w prawo i wchodzi w czwartą gęstość.</span>",
+		"<span class='warning'>tłów [owner]a przerwaca się na lewą strone wychodząc z tego wymiaru, zabierając [owner]a z tłowiem.</span>",
+		"<span class='warning'>W jedym momencie widzisz [owner]a. A w następnym, już nie.</span>")
+		owner.visible_message(warpmessage, "<span class='userdanger'>Czujesz zawroty głowy i spadanie do innego wymiaru!</span>")
 		var/warpdistance = rand(10,15) * GET_MUTATION_POWER(src)
 		do_teleport(owner, get_turf(owner), warpdistance, channel = TELEPORT_CHANNEL_FREE)
 		owner.adjust_disgust(GET_MUTATION_SYNCHRONIZER(src) * (warpchance * warpdistance))
 		warpchance = 0
-		owner.visible_message("<span class='danger'>[owner] appears out of nowhere!</span>")
+		owner.visible_message("<span class='danger'>[owner] pojawia się z nikąd!</span>")
 	else
 		warpchance += 0.25 * GET_MUTATION_ENERGY(src)
 
 /datum/mutation/human/acidflesh
-	name = "Acidic Flesh"
-	desc = "Subject has acidic chemicals building up underneath their skin. This is often lethal."
+	name = "Kwaśna skóra"
+	desc = "U badanego kwas zbiera się pod skórą, wypalając ją z środka. To jest często zabójcze."
 	quality = NEGATIVE
-	text_gain_indication = "<span class='userdanger'>A horrible burning sensation envelops you as your flesh turns to acid!</span>"
-	text_lose_indication = "<span class'notice'>A feeling of relief covers you as your flesh goes back to normal.</span>"
+	text_gain_indication = "<span class='userdanger'>Okropne uczucie palenia występuje pod twoją skórą, twoje tkanki zamieniają się w kwas!</span>"
+	text_lose_indication = "<span class'notice'>Uczucie palenia ustępuje, twoje tkanki wracają do normalności.</span>"
 	difficulty = 18//high so it's hard to unlock and use on others
 	var/msgcooldown = 0
 
 /datum/mutation/human/acidflesh/on_life()
 	if(prob(25))
 		if(world.time > msgcooldown)
-			to_chat(owner, "<span class='danger'>Your acid flesh bubbles...</span>")
+			to_chat(owner, "<span class='danger'>Kwas pod twoją skórą bombelkuje...</span>")
 			msgcooldown = world.time + 200
 		if(prob(15))
 			owner.acid_act(rand(30,50), 10)
-			owner.visible_message("<span class='warning'>[owner]'s skin bubbles and pops.</span>", "<span class='userdanger'>Your bubbling flesh pops! It burns!</span>")
+			owner.visible_message("<span class='warning'>kwas pod skórą [owner]a wybucha.</span>", "<span class='userdanger'>Twoja skóra tryska kwasam, To pali!</span>")
 			playsound(owner,'sound/weapons/sear.ogg', 50, 1)
 
 /datum/mutation/human/gigantism
-	name = "Gigantism"//negative version of dwarfism
-	desc = "The cells within the subject spread out to cover more area, making them appear larger."
+	name = "Gigantyzm"//negative version of dwarfism
+	desc = "Komórki badanego powiększają się."
 	quality = MINOR_NEGATIVE
 	difficulty = 12
 	conflicts = list(DWARFISM)
@@ -332,21 +332,21 @@
 		return
 	owner.resize = 1.25
 	owner.update_transform()
-	owner.visible_message("<span class='danger'>[owner] suddenly grows!</span>", "<span class='notice'>Everything around you seems to shrink..</span>")
+	owner.visible_message("<span class='danger'>[owner] nagle rośnie!</span>", "<span class='notice'>Wszystko dookoła ciebie maleje..</span>")
 
 /datum/mutation/human/gigantism/on_losing(mob/living/carbon/human/owner)
 	if(..())
 		return
 	owner.resize = 0.8
 	owner.update_transform()
-	owner.visible_message("<span class='danger'>[owner] suddenly shrinks!</span>", "<span class='notice'>Everything around you seems to grow..</span>")
+	owner.visible_message("<span class='danger'>[owner] nagle maleje!</span>", "<span class='notice'>Wszystko dookoła ciebie rośnie..</span>")
 
 /datum/mutation/human/spastic
-	name = "Spastic"
-	desc = "Subject suffers from muscle spasms."
+	name = "Paralityk"
+	desc = "Badany cierpi z drgawek mięśni."
 	quality = NEGATIVE
-	text_gain_indication = "<span class='warning'>You flinch.</span>"
-	text_lose_indication = "<span class'notice'>Your flinching subsides.</span>"
+	text_gain_indication = "<span class='warning'>Zaczynasz wzdrygiwać się.</span>"
+	text_lose_indication = "<span class'notice'>Twoje drgania ustępują.</span>"
 	difficulty = 16
 
 /datum/mutation/human/spastic/on_acquiring()
@@ -360,11 +360,11 @@
 	owner.remove_status_effect(STATUS_EFFECT_SPASMS)
 
 /datum/mutation/human/extrastun
-	name = "Two Left Feet"
-	desc = "A mutation that replaces the right foot with another left foot. It makes standing up after getting knocked down very difficult."
+	name = "Dwie lewe nogi"
+	desc = "Mutacja która zamienia prawą noge na lewą co powoduje podnoszenię się znacznie trudniejszę."
 	quality = NEGATIVE
-	text_gain_indication = "<span class='warning'>Your right foot feels... left.</span>"
-	text_lose_indication = "<span class'notice'>Your right foot feels alright.</span>"
+	text_gain_indication = "<span class='warning'>Twoja prawa noga... jest lewa.</span>"
+	text_lose_indication = "<span class'notice'>Twoja prawa noga jest spowrotem prawa.</span>"
 	difficulty = 16
 	var/stun_cooldown = 0
 
@@ -373,5 +373,5 @@
 		if(owner.AmountKnockdown() || owner.AmountStun())
 			owner.SetKnockdown(owner.AmountKnockdown()*2)
 			owner.SetStun(owner.AmountStun()*2)
-			owner.visible_message("<span class='danger'>[owner] tries to stand up, but trips!</span>", "<span class='userdanger'>You trip over your own feet!</span>")
+			owner.visible_message("<span class='danger'>[owner] próboje się podnieść ale się przewraca!</span>", "<span class='userdanger'>Przewracasz się sam na sobie!</span>")
 			stun_cooldown = world.time + 300

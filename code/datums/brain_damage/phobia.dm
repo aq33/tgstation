@@ -1,7 +1,7 @@
 /datum/brain_trauma/mild/phobia
-	name = "Phobia"
-	desc = "Patient is unreasonably afraid of something."
-	scan_desc = "phobia"
+	name = "Fobia"
+	desc = "Badany jest wystraszony czymś."
+	scan_desc = "Fobia"
 	gain_text = "<span class='warning'>You start finding default values very unnerving...</span>"
 	lose_text = "<span class='notice'>You no longer feel afraid of default values.</span>"
 	var/phobia_type
@@ -21,8 +21,8 @@
 	if(!phobia_type)
 		phobia_type = pick(SStraumas.phobia_types)
 
-	gain_text = "<span class='warning'>You start finding [phobia_type] very unnerving...</span>"
-	lose_text = "<span class='notice'>You no longer feel afraid of [phobia_type].</span>"
+	gain_text = "<span class='warning'>Zaczynasz bać się [phobia_type]...</span>"
+	lose_text = "<span class='notice'>Już się nie boisz [phobia_type].</span>"
 	scan_desc += " of [phobia_type]"
 	trigger_words = SStraumas.phobia_words[phobia_type]
 	trigger_mobs = SStraumas.phobia_mobs[phobia_type]
@@ -138,73 +138,73 @@
 // Defined phobia types for badminry, not included in the RNG trauma pool to avoid diluting.
 
 /datum/brain_trauma/mild/phobia/spiders
-	phobia_type = "spiders"
+	phobia_type = "pająki"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/space
-	phobia_type = "space"
+	phobia_type = "kosmos"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/security
-	phobia_type = "security"
+	phobia_type = "ochrona"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/clowns
-	phobia_type = "clowns"
+	phobia_type = "klauny"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/greytide
-	phobia_type = "greytide"
+	phobia_type = "asystenci"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/lizards
-	phobia_type = "lizards"
+	phobia_type = "jaszczury"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/skeletons
-	phobia_type = "skeletons"
+	phobia_type = "szkielety"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/snakes
-	phobia_type = "snakes"
+	phobia_type = "węże"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/robots
-	phobia_type = "robots"
+	phobia_type = "roboty"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/doctors
-	phobia_type = "doctors"
+	phobia_type = "lekaże"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/authority
-	phobia_type = "authority"
+	phobia_type = "odpowiedzialność"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/supernatural
-	phobia_type = "the supernatural"
+	phobia_type = "nienaturalne"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/aliens
-	phobia_type = "aliens"
+	phobia_type = "kosmici"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/strangers
-	phobia_type = "strangers"
+	phobia_type = "nieznajomi"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/birds
-	phobia_type = "birds"
+	phobia_type = "ptaki"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/falling
-	phobia_type = "falling"
+	phobia_type = "spadania"
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/anime
-	phobia_type = "anime"
+	phobia_type = "anime" //bruh
 	random_gain = FALSE
 
 /datum/brain_trauma/mild/phobia/conspiracies
-	phobia_type = "conspiracies"
+	phobia_type = "konspiracje" //5G, szczepionki i ziemia jest płaska
 	random_gain = FALSE

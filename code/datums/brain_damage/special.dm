@@ -4,11 +4,11 @@
 /datum/brain_trauma/special
 
 /datum/brain_trauma/special/godwoken
-	name = "Godwoken Syndrome"
+	name = "Zespół boga"
 	desc = "Patient occasionally and uncontrollably channels an eldritch god when speaking."
-	scan_desc = "god delusion"
-	gain_text = "<span class='notice'>You feel a higher power inside your mind...</span>"
-	lose_text = "<span class='warning'>The divine presence leaves your head, no longer interested.</span>"
+	scan_desc = "olśniony"
+	gain_text = "<span class='notice'>Czujesz jak siła wyższa mówi coś do ciebie...</span>"
+	lose_text = "<span class='warning'>Siła wyższa wychodzi z umysłu, nie jest już zainteresowana.</span>"
 
 /datum/brain_trauma/special/godwoken/on_life()
 	..()
@@ -48,11 +48,11 @@
 	voice_of_god(message, owner, list("colossus","yell"), 2.5, include_owner, FALSE)
 
 /datum/brain_trauma/special/bluespace_prophet
-	name = "Bluespace Prophecy"
-	desc = "Patient can sense the bob and weave of bluespace around them, showing them passageways no one else can see."
-	scan_desc = "bluespace attunement"
-	gain_text = "<span class='notice'>You feel the bluespace pulsing around you...</span>"
-	lose_text = "<span class='warning'>The faint pulsing of bluespace fades into silence.</span>"
+	name = "Potencja niebieskiej przestrzeni"
+	desc = "Badany wykrywa sygnały bluespace."
+	scan_desc = "sygnał bluespace"
+	gain_text = "<span class='notice'>Czujesz jakby czwarty wymiar...</span>"
+	lose_text = "<span class='warning'>Pulsujące sygnały zanikają.</span>"
 	var/next_portal = 0
 
 /datum/brain_trauma/special/bluespace_prophet/on_life()
@@ -91,8 +91,8 @@
 		second.seer = owner
 
 /obj/effect/hallucination/simple/bluespace_stream
-	name = "bluespace stream"
-	desc = "You see a hidden pathway through bluespace..."
+	name = "Strumyk niebieskiej przestrzeni"
+	desc = "Widzisz klucz do niebieskiej przestrzeni..."
 	image_icon = 'icons/effects/effects.dmi'
 	image_state = "bluestream"
 	image_layer = ABOVE_MOB_LAYER
@@ -121,11 +121,11 @@
 		user.visible_message("<span class='warning'>[user] [slip_out_message].</span>", "<span class='notice'>...and find your way to the other side.</span>")
 
 /datum/brain_trauma/special/psychotic_brawling
-	name = "Violent Psychosis"
-	desc = "Patient fights in unpredictable ways, ranging from helping his target to hitting them with brutal strength."
-	scan_desc = "violent psychosis"
-	gain_text = "<span class='warning'>You feel unhinged...</span>"
-	lose_text = "<span class='notice'>You feel more balanced.</span>"
+	name = "Agresywny"
+	desc = "Badany nie może powstrzymać się od agresji."
+	scan_desc = "agresywny"
+	gain_text = "<span class='warning'>Czujesz się zdenerwowany...</span>"
+	lose_text = "<span class='notice'>Uczucie aresi przemija.</span>"
 	var/datum/martial_art/psychotic_brawling/psychotic_brawling
 
 /datum/brain_trauma/special/psychotic_brawling/on_gain()
@@ -145,11 +145,11 @@
 	clonable = FALSE
 
 /datum/brain_trauma/special/tenacity
-	name = "Tenacity"
-	desc = "Patient is psychologically unaffected by pain and injuries, and can remain standing far longer than a normal person."
-	scan_desc = "traumatic neuropathy"
-	gain_text = "<span class='warning'>You suddenly stop feeling pain.</span>"
-	lose_text = "<span class='warning'>You realize you can feel pain again.</span>"
+	name = "Odrętfy"
+	desc = "Badany nie odczówa bólu."
+	scan_desc = "brak bólu"
+	gain_text = "<span class='warning'>Przestajesz czuć ból.</span>"
+	lose_text = "<span class='warning'>Zdajesz sobie sprawe że odczuwasz ból.</span>"
 
 /datum/brain_trauma/special/tenacity/on_gain()
 	ADD_TRAIT(owner, TRAIT_NOSOFTCRIT, TRAUMA_TRAIT)
@@ -162,11 +162,11 @@
 	..()
 
 /datum/brain_trauma/special/death_whispers
-	name = "Functional Cerebral Necrosis"
-	desc = "Patient's brain is stuck in a functional near-death state, causing occasional moments of lucid hallucinations, which are often interpreted as the voices of the dead."
+	name = "Łączenie z duchami"
+	desc = "Badany potrawi usłyszeć zmarłe osoby."
 	scan_desc = "chronic functional necrosis"
-	gain_text = "<span class='warning'>You feel dead inside.</span>"
-	lose_text = "<span class='notice'>You feel alive again.</span>"
+	gain_text = "<span class='warning'>Czujesz się martwy w środku.</span>"
+	lose_text = "<span class='notice'>Czujesz się żywy.</span>"
 	var/active = FALSE
 
 /datum/brain_trauma/special/death_whispers/on_life()
@@ -189,11 +189,11 @@
 	active = FALSE
 
 /datum/brain_trauma/special/beepsky
-	name = "Criminal"
-	desc = "Patient seems to be a criminal."
-	scan_desc = "criminal mind"
-	gain_text = "<span class='warning'>Justice is coming for you.</span>"
-	lose_text = "<span class='notice'>You were absolved for your crimes.</span>"
+	name = "Przestępca"
+	desc = "Badany wygląda na przestępce."
+	scan_desc = "umysł przestępcy"
+	gain_text = "<span class='warning'>Sprawiedliwość nadchodzi.</span>"
+	lose_text = "<span class='notice'>Zostałeś oczyszczony z zarzutów.</span>"
 	clonable = FALSE
 	random_gain = FALSE
 	var/obj/effect/hallucination/simple/securitron/beepsky
@@ -227,7 +227,7 @@
 		return
 	if(get_dist(owner, beepsky) <= 1)
 		owner.playsound_local(owner, 'sound/weapons/egloves.ogg', 50)
-		owner.visible_message("<span class='warning'>[owner]'s body jerks as if it was shocked.</span>", "<span class='userdanger'>You feel the fist of the LAW.</span>")
+		owner.visible_message("<span class='warning'>ciało [owner]a rusza się jakby było podnapięciem.</span>", "<span class='userdanger'>Poczułeś pięść PRAWA.</span>")
 		owner.take_bodypart_damage(0,0,rand(40, 70))
 		QDEL_NULL(beepsky)
 	if(prob(20) && get_dist(owner, beepsky) <= 8)
@@ -235,7 +235,7 @@
 	..()
 
 /obj/effect/hallucination/simple/securitron
-	name = "Securitron"
+	name = "Securitron" //shituritron
 	desc = "The LAW is coming."
 	image_icon = 'icons/mob/aibots.dmi'
 	image_state = "secbot-c"
@@ -250,7 +250,7 @@
 	if(prob(60))
 		forceMove(get_step_towards(src, victim))
 		if(prob(5))
-			to_chat(victim, "<span class='name'>[name]</span> exclaims, \"<span class='robotic'>Level 10 infraction alert!\"</span>")
+			to_chat(victim, "<span class='name'>[name]</span> oznajmia, \"<span class='robotic'>przestępstwo poziomu 10!\"</span>")
 
 /obj/effect/hallucination/simple/securitron/Destroy()
 	STOP_PROCESSING(SSfastprocess,src)
