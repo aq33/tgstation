@@ -106708,9 +106708,11 @@
 /turf/open/floor/plating,
 /area/medical/morgue)
 "dDQ" = (
-/obj/structure/filingcabinet/chestdrawer,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/structure/bodycontainer/crematorium{
+	id = 2137
+	},
 /turf/open/floor/plating{
 	icon_state = "platingdmg2"
 	},
@@ -107297,6 +107299,11 @@
 /turf/open/floor/plasteel,
 /area/medical/morgue)
 "dEY" = (
+/obj/machinery/button/crematorium{
+	id = 2137;
+	pixel_x = 25;
+	pixel_y = 5
+	},
 /turf/open/floor/plating,
 /area/medical/morgue)
 "dFe" = (

@@ -14141,8 +14141,8 @@
 	height = 5;
 	id = "mining_home";
 	name = "mining shuttle bay";
-	width = 7;
-	roundstart_template = /datum/map_template/shuttle/mining/box
+	roundstart_template = /datum/map_template/shuttle/mining/box;
+	width = 7
 	},
 /turf/open/space/basic,
 /area/space)
@@ -67957,13 +67957,9 @@
 /obj/machinery/airalarm{
 	pixel_y = 32
 	},
-/obj/structure/table,
-/obj/item/paper_bin{
-	pixel_x = 6;
-	pixel_y = 4
-	},
-/obj/item/paper/guides/jobs/medical/morgue{
-	pixel_x = -4
+/obj/structure/bodycontainer/crematorium{
+	dir = 8;
+	id = 2137
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
@@ -68392,11 +68388,13 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "cCY" = (
-/obj/structure/table,
-/obj/item/storage/box/bodybags,
-/obj/item/pen,
 /obj/item/radio/intercom{
 	pixel_x = 29
+	},
+/obj/machinery/button/crematorium{
+	id = 2137;
+	pixel_x = 25;
+	pixel_y = -9
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
@@ -69006,7 +69004,6 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "cEd" = (
-/obj/structure/table,
 /obj/machinery/power/apc{
 	areastring = "/area/medical/morgue";
 	dir = 4;
@@ -69016,11 +69013,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/obj/item/folder/white{
-	pixel_x = 4;
-	pixel_y = -3
-	},
-/obj/item/clothing/gloves/color/latex,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
