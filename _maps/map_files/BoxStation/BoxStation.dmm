@@ -21422,11 +21422,18 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
+/obj/machinery/button/crematorium{
+	id = 2137;
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "bhq" = (
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/structure/bodycontainer/crematorium{
+	id = 2137
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
