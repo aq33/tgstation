@@ -5,6 +5,10 @@
 	item_state = "shotgun"
 	fire_sound = "sound/weapons/shotgunshot.ogg"
 	vary_fire_sound = FALSE
+	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
 	fire_sound_volume = 90
 	rack_sound = "sound/weapons/shotgunpump.ogg"
 	load_sound = "sound/weapons/shotguninsert.ogg"
@@ -129,6 +133,10 @@
 	desc = "A semi-auto, mag-fed shotgun for combat in narrow corridors, nicknamed 'Bulldog' by boarding parties. Compatible only with specialized 8-round drum magazines."
 	icon_state = "bulldog"
 	item_state = "bulldog"
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	inhand_x_dimension = 32
+	inhand_y_dimension = 32
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_MEDIUM
 	mag_type = /obj/item/ammo_box/magazine/m12g
@@ -231,6 +239,8 @@
 		new /obj/item/stack/cable_coil(get_turf(src), 10)
 		slung = 0
 		update_icon()
+	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
 
 /obj/item/gun/ballistic/shotgun/doublebarrel/improvised/sawn
 	name = "sawn-off improvised shotgun"
