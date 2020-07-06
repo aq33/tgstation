@@ -16,8 +16,8 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 	desc = "A flexible, superconducting insulated cable for heavy-duty power transfer."
 	icon = 'icons/obj/power_cond/layer_cable.dmi'
 	icon_state = "l2-1-2-4-8-node"
+	level = 1
 	color = "yellow"
-	level = 1 //is underfloor
 	layer = WIRE_LAYER //Above hidden pipes, GAS_PIPE_HIDDEN_LAYER
 	anchored = TRUE
 	obj_flags = CAN_BE_HIT | ON_BLUEPRINTS
@@ -43,13 +43,11 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 
 /obj/structure/cable/Initialize(mapload)
 	. = ..()
-
 	var/turf/T = get_turf(src)			// hide if turf is not intact
 	if(level==1)
 		hide(T.intact)
 	GLOB.cable_list += src //add it to the global cable list
 	Connect_cable()
-
 
 ///Set the linked indicator bitflags
 /obj/structure/cable/proc/Connect_cable(clear_before_updating = FALSE)
@@ -123,13 +121,13 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 // General procedures
 ///////////////////////////////////
 
-//If underfloor, hide the cable
 /obj/structure/cable/hide(i)
+
 	if(level == 1 && isturf(loc))
 		invisibility = i ? INVISIBILITY_MAXIMUM : 0
 	update_icon()
 
-/obj/structure/cable/update_icon()
+/obj/structure/cable/update_icon_state()
 	if(!linked_dirs)
 		icon_state = "l[cable_layer]-noconnection"
 	else
@@ -159,7 +157,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 	if(W.tool_behaviour == TOOL_WIRECUTTER)
 		if (shock(user, 50))
 			return
-		user.visible_message("[user] cuts the cable.", "<span class='notice'>You cut the cable.</span>")
+		user.visible_message("<span class='notice'>[user] cuts the cable.</span>", "<span class='notice'>You cut the cable.</span>")
 		investigate_log("was cut by [key_name(usr)] in [AREACOORD(src)]", INVESTIGATE_WIRES)
 		deconstruct()
 		return
@@ -214,13 +212,13 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 
 /obj/structure/cable/proc/surplus()
 	if(powernet)
-		return CLAMP(powernet.avail-powernet.load, 0, powernet.avail)
+		return clamp(powernet.avail-powernet.load, 0, powernet.avail)
 	else
 		return 0
 
-/obj/structure/cable/proc/avail()
+/obj/structure/cable/proc/avail(amount)
 	if(powernet)
-		return powernet.avail
+		return amount ? powernet.avail >= amount : powernet.avail
 	else
 		return 0
 
@@ -230,7 +228,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 
 /obj/structure/cable/proc/delayed_surplus()
 	if(powernet)
-		return CLAMP(powernet.newavail - powernet.delayedload, 0, powernet.newavail)
+		return clamp(powernet.newavail - powernet.delayedload, 0, powernet.newavail)
 	else
 		return 0
 
@@ -388,15 +386,16 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 // Definitions
 ////////////////////////////////
 
-GLOBAL_LIST_INIT(cable_coil_recipes, list (new/datum/stack_recipe("cable restraints", /obj/item/restraints/handcuffs/cable, 15), new/datum/stack_recipe("noose", /obj/structure/chair/noose, 30, time = 80, one_per_turf = 1, on_floor = 1), new/datum/stack_recipe("multilayer cable", /obj/structure/cable/multilayer, 1), new/datum/stack_recipe("multiZ cable", /obj/structure/cable/multilayer/multiz, 1)))
+GLOBAL_LIST_INIT(cable_coil_recipes, list(new/datum/stack_recipe("cable restraints", /obj/item/restraints/handcuffs/cable, 15), new/datum/stack_recipe("noose", /obj/structure/chair/noose, 30, time = 80, one_per_turf = 1, on_floor = 1), new/datum/stack_recipe("multilayer cable", /obj/structure/cable/multilayer, 1), new/datum/stack_recipe("multiZ cable", /obj/structure/cable/multilayer/multiz, 1)))
 
 /obj/item/stack/cable_coil
 	name = "cable coil"
-	custom_price = 30
+	custom_price = 75
 	gender = NEUTER //That's a cable coil sounds better than that's some cable coils
 	icon = 'icons/obj/power.dmi'
 	icon_state = "coil"
 	item_state = "coil"
+	novariants = FALSE
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
 	max_amount = MAXCOIL
@@ -431,6 +430,14 @@ GLOBAL_LIST_INIT(cable_coil_recipes, list (new/datum/stack_recipe("cable restrai
 	. = ..()
 	. += "<b>Ctrl+Click</b> to change the layer you are placing on."
 
+/obj/item/stack/cable_coil/update_icon_state()
+	if(novariants)
+		return
+	icon_state = "[initial(icon_state)][amount < 3 ? amount : ""]"
+	var/how_many_things = amount < 3 ? "piece" : "coil"
+	name = "cable [how_many_things]"
+	desc = "A [how_many_things] of insulated power cable."
+
 /obj/item/stack/cable_coil/suicide_act(mob/user)
 	if(locate(/obj/structure/chair/stool) in get_turf(user))
 		user.visible_message("<span class='suicide'>[user] is making a noose with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
@@ -441,6 +448,9 @@ GLOBAL_LIST_INIT(cable_coil_recipes, list (new/datum/stack_recipe("cable restrai
 /obj/item/stack/cable_coil/proc/check_menu(mob/living/user)
 	if(!istype(user))
 		return FALSE
+	if(!user.IsAdvancedToolUser())
+		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
+		return FALSE
 	if(user.incapacitated() || !user.Adjacent(src))
 		return FALSE
 	return TRUE
@@ -448,6 +458,8 @@ GLOBAL_LIST_INIT(cable_coil_recipes, list (new/datum/stack_recipe("cable restrai
 GLOBAL_LIST(cable_radial_layer_list)
 
 /obj/item/stack/cable_coil/CtrlClick(mob/living/user)
+	if(loc!=user)
+		return ..()
 	if(!user)
 		return
 	if(!GLOB.cable_radial_layer_list)
@@ -463,35 +475,36 @@ GLOBAL_LIST(cable_radial_layer_list)
 		return
 	switch(layer_result)
 		if("Layer 1")
-			name = "cable coil"
-			icon_state = "coil"
 			color = "red"
 			target_type = /obj/structure/cable/layer1
 			target_layer = CABLE_LAYER_1
+			novariants = FALSE
 		if("Layer 2")
-			name = "cable coil"
-			icon_state = "coil"
 			color = "yellow"
 			target_type = /obj/structure/cable
 			target_layer = CABLE_LAYER_2
+			novariants = FALSE
 		if("Layer 3")
-			name = "cable coil"
-			icon_state = "coil"
 			color = "blue"
 			target_type = /obj/structure/cable/layer3
 			target_layer = CABLE_LAYER_3
+			novariants = FALSE
 		if("Multilayer cable hub")
 			name = "multilayer cable hub"
+			desc = "A multilayer cable hub."
 			icon_state = "cable_bridge"
 			color = "white"
 			target_type = /obj/structure/cable/multilayer
 			target_layer = CABLE_LAYER_2
+			novariants = TRUE
 		if("Multi Z layer cable hub")
 			name = "multi z layer cable hub"
+			desc = "A multi-z layer cable hub."
 			icon_state = "cablerelay-broken-cable"
 			color = "white"
 			target_type = /obj/structure/cable/multilayer/multiz
 			target_layer = CABLE_LAYER_2
+			novariants = TRUE
 	update_icon()
 
 
@@ -679,6 +692,9 @@ GLOBAL_LIST(cable_radial_layer_list)
 
 GLOBAL_LIST(hub_radial_layer_list)
 
+/obj/structure/cable/multilayer/attack_robot(mob/user)
+	attack_hand(user)
+
 /obj/structure/cable/multilayer/attack_hand(mob/living/user)
 	if(!user)
 		return
@@ -721,6 +737,9 @@ GLOBAL_LIST(hub_radial_layer_list)
 /obj/structure/cable/multilayer/proc/check_menu(mob/living/user)
 	if(!istype(user))
 		return FALSE
+	if(!user.IsAdvancedToolUser())
+		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
+		return FALSE
 	if(user.incapacitated() || !user.Adjacent(src))
 		return FALSE
 	return TRUE
@@ -736,5 +755,4 @@ GLOBAL_LIST(hub_radial_layer_list)
 /obj/structure/cable/multilayer/CtrlClick(mob/living/user)
 	to_chat(user, "<span class='warning'>You pust reset button.</span>")
 	addtimer(CALLBACK(src, .proc/Reload), 10, TIMER_UNIQUE) //spam protect
-
 
