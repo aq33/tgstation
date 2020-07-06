@@ -49,7 +49,6 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 		hide(T.intact)
 	GLOB.cable_list += src //add it to the global cable list
 	Connect_cable()
-	AddElement(/datum/element/undertile, TRAIT_T_RAY_VISIBLE)
 
 
 ///Set the linked indicator bitflags
