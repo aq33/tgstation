@@ -203,6 +203,7 @@
 			playsound(C.loc, 'sound/misc/slip.ogg', 50, 1, -3)
 
 		SEND_SIGNAL(C, COMSIG_ADD_MOOD_EVENT, "slipped", /datum/mood_event/slipped)
+		sleep(2)
 		if(force_drop)
 			for(var/obj/item/I in C.held_items)
 				C.accident(I)
@@ -210,7 +211,7 @@
 		var/olddir = C.dir
 		C.moving_diagonally = 0 //If this was part of diagonal move slipping will stop it.
 		if(!(lube & SLIDE_ICE))
-			C.Knockdown(knockdown_amount)
+			C.Knockdown(knockdown_amount / 2)
 			C.drop_all_held_items()
 			C.Paralyze(paralyze_amount)
 			C.stop_pulling()

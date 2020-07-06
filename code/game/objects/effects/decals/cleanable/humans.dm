@@ -7,6 +7,14 @@
 	blood_state = BLOOD_STATE_HUMAN
 	bloodiness = BLOOD_AMOUNT_PER_DECAL
 
+/obj/effect/decal/cleanable/blood/proc/make_slippery()
+	AddComponent(/datum/component/slippery, 20, NO_SLIP_WHEN_WALKING)
+
+/obj/effect/decal/cleanable/blood/Initialize(mapload, list/datum/disease/diseases)
+	. = ..()
+	if(isexacttype(src, /obj/effect/decal/cleanable/blood))
+		make_slippery()
+
 /obj/effect/decal/cleanable/blood/replace_decal(obj/effect/decal/cleanable/blood/C)
 	C.add_blood_DNA(return_blood_DNA())
 	if (bloodiness)
@@ -28,6 +36,10 @@
 /obj/effect/decal/cleanable/blood/splatter
 	icon_state = "gibbl1"
 	random_icon_states = list("gibbl1", "gibbl2", "gibbl3", "gibbl4", "gibbl5")
+
+/obj/effect/decal/cleanable/blood/splatter/Initialize(mapload, list/datum/disease/diseases)
+	. = ..()
+	make_slippery()
 
 /obj/effect/decal/cleanable/blood/tracks
 	icon_state = "tracks"
@@ -62,6 +74,7 @@
 		start_rotting(rename=FALSE)
 	else
 		addtimer(CALLBACK(src, .proc/start_rotting), 2 MINUTES)
+	make_slippery()
 
 /obj/effect/decal/cleanable/blood/gibs/proc/start_rotting(rename=TRUE)
 	if(rename)
