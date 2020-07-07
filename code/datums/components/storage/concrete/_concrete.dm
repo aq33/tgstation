@@ -124,8 +124,6 @@
 		M.client.screen -= AM
 	if(isitem(AM))
 		var/obj/item/I = AM
-		var/mob/M = parent.loc
-		I.dropped(M, TRUE)
 		I.item_flags &= ~IN_STORAGE
 		I.remove_outline()
 		if(ismob(parent.loc))
