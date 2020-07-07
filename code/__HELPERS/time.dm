@@ -1,6 +1,10 @@
 /// Returns the world time in hh:mm:ss
 /proc/worldtime2text()
-	return gameTimestamp("hh:mm:ss", world.time)
+	var/ticks   = world.time - SSticker.round_start_time
+	var/seconds = round((ticks / 10) % 60)
+	var/minutes = round(((ticks / 10) / 60) % 60)
+	var/hours   = round(((ticks / 10) / 60) / 60)
+	return "[hours < 10 ? "0" : ""][hours]:[minutes < 10 ? "0" : ""][minutes]:[seconds < 10 ? "0" : ""][seconds]"
 
 /// Returns the world time into hh:mm:ss with the option of showing deciseconds
 /proc/time_stamp(format = "hh:mm:ss", show_ds)

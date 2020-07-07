@@ -1,4 +1,4 @@
-#define CREDIT_ROLL_SPEED 30
+#define CREDIT_ROLL_SPEED 120
 #define CREDIT_SPAWN_SPEED 4
 #define CREDIT_ANIMATE_HEIGHT (16 * world.icon_size) //13 would cause credits to get stacked at the top of the screen, so we let them go past the top edge
 #define CREDIT_EASE_DURATION 12
