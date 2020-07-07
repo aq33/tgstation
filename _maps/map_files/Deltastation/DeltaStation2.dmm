@@ -2590,6 +2590,7 @@
 	dir = 1
 	},
 /obj/structure/closet/l3closet/virology,
+/obj/item/extrapolator,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "aeq" = (
@@ -64447,6 +64448,7 @@
 	name = "Lawyer's Privacy Control";
 	pixel_y = 24
 	},
+/obj/item/cartridge/lawyer,
 /turf/open/floor/wood,
 /area/lawoffice)
 "cdh" = (
@@ -116267,6 +116269,7 @@
 "dYa" = (
 /obj/structure/closet/l3closet/virology,
 /obj/effect/turf_decal/bot,
+/obj/item/extrapolator,
 /turf/open/floor/plasteel,
 /area/medical/virology)
 "dYb" = (
