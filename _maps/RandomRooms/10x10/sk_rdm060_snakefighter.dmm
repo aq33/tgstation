@@ -166,16 +166,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "E" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/template_noop)
-"F" = (
-/obj/structure/cable,
-/obj/structure/sign/warning{
-	pixel_y = -32
-	},
-/obj/machinery/shieldwallgen/xenobiologyaccess,
+/obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating,
 /area/template_noop)
 "G" = (
@@ -231,13 +222,24 @@
 /obj/machinery/shieldwallgen/xenobiologyaccess,
 /turf/open/floor/plating,
 /area/template_noop)
+"S" = (
+/obj/effect/decal/cleanable/blood/gibs/old,
+/turf/open/floor/plating,
+/area/template_noop)
+"Z" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating,
+/area/template_noop)
 
 (1,1,1) = {"
 a
 j
 f
 t
-f
+E
 f
 H
 H
@@ -247,7 +249,7 @@ i
 (2,1,1) = {"
 b
 k
-k
+Z
 u
 A
 H
@@ -287,7 +289,7 @@ r
 e
 D
 f
-f
+S
 f
 O
 f
@@ -321,7 +323,7 @@ g
 p
 f
 y
-E
+B
 H
 f
 K
@@ -332,8 +334,8 @@ f
 h
 q
 f
-f
-F
+E
+A
 H
 H
 N

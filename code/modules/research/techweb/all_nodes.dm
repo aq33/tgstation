@@ -566,6 +566,15 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
+/datum/techweb_node/adv_combat_cyber_implants
+	id = "adv_combat_cyber_implants"
+	display_name = "Advanced Combat Cybernetic Implants"
+	description = "Experimental military cybernetic weapons."
+	prereq_ids = list("combat_cyber_implants", "syndicate_basic")
+	design_ids = list("hydraulic_blade")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
+	export_price = 10000
+
 ////////////////////////Tools////////////////////////
 
 /datum/techweb_node/basic_mining
@@ -684,7 +693,7 @@
 	display_name = "Advanced Weapon Development Technology"
 	description = "Our weapons are breaking the rules of reality by now."
 	prereq_ids = list("adv_engi", "weaponry")
-	design_ids = list("pin_loyalty")
+	design_ids = list("pin_loyalty", "taser")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 
@@ -711,7 +720,7 @@
 	display_name = "Radioactive Weaponry"
 	description = "Weapons using radioactive technology."
 	prereq_ids = list("adv_engi", "adv_weaponry")
-	design_ids = list("nuclear_gun")
+	design_ids = list("nuclear_gun", "advtaser")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 

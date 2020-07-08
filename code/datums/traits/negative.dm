@@ -477,36 +477,33 @@
 	medical_record_text = "Pacjent notoycznie zażywa twarde narkotyki."
 
 	var/drug_list = list(/datum/reagent/drug/crank, /datum/reagent/drug/krokodil, /datum/reagent/medicine/morphine, /datum/reagent/drug/happiness, /datum/reagent/drug/methamphetamine) //List of possible IDs
-	var/reagent_id //ID picked from list
-	var/datum/reagent/reagent_type //If this is defined, reagent_id will be unused and the defined reagent type will be instead.
-	var/datum/reagent/reagent_instance
-	var/where_drug
-	var/obj/item/drug_container_type //If this is defined before pill generation, pill generation will be skipped. This is the type of the pill bottle.
-	var/obj/item/drug_instance
-	var/where_accessory
-	var/obj/item/accessory_type //If this is null, it won't be spawned.
-	var/obj/item/accessory_instance
-	var/tick_counter = 0
+	var/datum/reagent/reagent_type //!If this is defined, reagent_id will be unused and the defined reagent type will be instead.
+	var/datum/reagent/reagent_instance //! actual instanced version of the reagent
+	var/where_drug //! Where the drug spawned
+	var/obj/item/drug_container_type //! If this is defined before pill generation, pill generation will be skipped. This is the type of the pill bottle.
+	var/where_accessory //! where the accessory spawned
+	var/obj/item/accessory_type //! If this is null, an accessory won't be spawned.
+	var/process_interval = 30 SECONDS //! how frequently the quirk processes
+	var/next_process = 0 //! ticker for processing
 
 /datum/quirk/junkie/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
-	reagent_id = pick(drug_list)
 	if (!reagent_type)
-		var/datum/reagent/prot_holder = GLOB.chemical_reagents_list[reagent_id]
-		reagent_type = prot_holder.type
+		reagent_type = pick(drug_list)
 	reagent_instance = new reagent_type()
 	H.reagents.addiction_list.Add(reagent_instance)
 	var/current_turf = get_turf(quirk_holder)
 	if (!drug_container_type)
 		drug_container_type = /obj/item/storage/pill_bottle
-	drug_instance = new drug_container_type(current_turf)
+	var/obj/item/drug_instance = new drug_container_type(current_turf)
 	if (istype(drug_instance, /obj/item/storage/pill_bottle))
 		var/pill_state = "pill[rand(1,20)]"
 		for(var/i in 1 to 7)
 			var/obj/item/reagent_containers/pill/P = new(drug_instance)
 			P.icon_state = pill_state
-			P.reagents.add_reagent(reagent_id, 1)
+			P.reagents.add_reagent(reagent_type, 1)
 
+	var/obj/item/accessory_instance
 	if (accessory_type)
 		accessory_instance = new accessory_type(current_turf)
 	var/list/slots = list(
@@ -524,23 +521,19 @@
 		SEND_SIGNAL(H.back, COMSIG_TRY_STORAGE_SHOW, H)
 
 /datum/quirk/junkie/proc/announce_drugs()
-	to_chat(quirk_holder, "<span class='boldnotice'>Masz [initial(drug_container_type.name)] [initial(reagent_type.name)] [where_drug]. Lepiej żeby tyle ci wsytarczyło...</span>")
+	to_chat(quirk_holder, "<span class='boldnotice'>There is a [initial(drug_container_type.name)] of [initial(reagent_type.name)] [where_drug]. Better hope you don't run out...</span>")
 
 /datum/quirk/junkie/on_process()
 	var/mob/living/carbon/human/H = quirk_holder
-	if (tick_counter == 60) //Halfassed optimization, increase this if there's slowdown due to this quirk
-		var/in_list = FALSE
-		for (var/datum/reagent/entry in H.reagents.addiction_list)
-			if(istype(entry, reagent_type))
-				in_list = TRUE
-				break
-		if(!in_list)
+	if(world.time > next_process)
+		next_process = world.time + process_interval
+		if(!H.reagents.addiction_list.Find(reagent_instance))
+			if(QDELETED(reagent_instance))
+				reagent_instance = new reagent_type()
+			else
+				reagent_instance.addiction_stage = 0
 			H.reagents.addiction_list += reagent_instance
-			reagent_instance.addiction_stage = 0
 			to_chat(quirk_holder, "<span class='danger'>Myślałeś, że pokonałeś już nałóg, ale potzrebujesz kolejnej dawki [reagent_instance.name]...</span>")
-		tick_counter = 0
-	else
-		++tick_counter
 
 /datum/quirk/junkie/smoker
 	name = "Palacz"
@@ -558,10 +551,7 @@
 		/obj/item/storage/fancy/cigarettes/cigpack_uplift,
 		/obj/item/storage/fancy/cigarettes/cigpack_robust,
 		/obj/item/storage/fancy/cigarettes/cigpack_robustgold,
-		/obj/item/storage/fancy/cigarettes/cigpack_carp,
-		/obj/item/storage/fancy/cigarettes/cigars,
-		/obj/item/storage/fancy/cigarettes/cigars/cohiba,
-		/obj/item/storage/fancy/cigarettes/cigars/havana)
+		/obj/item/storage/fancy/cigarettes/cigpack_carp)
 	. = ..()
 
 /datum/quirk/junkie/smoker/announce_drugs()
@@ -573,8 +563,8 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/I = H.get_item_by_slot(SLOT_WEAR_MASK)
 	if (istype(I, /obj/item/clothing/mask/cigarette))
-		var/obj/item/storage/fancy/cigarettes/C = drug_instance
-		if(istype(I, C.spawn_type))
+		var/obj/item/storage/fancy/cigarettes/C = drug_container_type
+		if(istype(I, initial(C.spawn_type)))
 			SEND_SIGNAL(quirk_holder, COMSIG_CLEAR_MOOD_EVENT, "wrong_cigs")
 			return
 		SEND_SIGNAL(quirk_holder, COMSIG_ADD_MOOD_EVENT, "wrong_cigs", /datum/mood_event/wrong_brand)

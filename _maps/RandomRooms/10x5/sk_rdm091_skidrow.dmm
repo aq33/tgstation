@@ -193,6 +193,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/template_noop)
+"R" = (
+/obj/effect/decal/cleanable/vomit/old,
+/turf/open/floor/plating,
+/area/template_noop)
 "S" = (
 /obj/effect/decal/cleanable/blood/innards,
 /turf/open/floor/plating,
@@ -252,7 +256,7 @@ h
 N
 J
 i
-N
+R
 O
 "}
 (6,1,1) = {"
@@ -271,7 +275,7 @@ x
 "}
 (8,1,1) = {"
 y
-N
+R
 s
 D
 c

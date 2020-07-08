@@ -183,7 +183,8 @@
 		/obj/item/holosign_creator/medical,
 		/obj/item/pipe_dispenser/plumbing,
 		/obj/item/construction/plumbing,
-		/obj/item/plunger
+		/obj/item/plunger,
+		/obj/item/extrapolator
 		))
 
 /obj/item/storage/belt/security

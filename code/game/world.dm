@@ -291,14 +291,10 @@ GLOBAL_VAR(restart_counter)
 	var/s = ""
 	var/hostedby
 	if(config)
-		var/server_name = CONFIG_GET(string/servername)
-		if (server_name)
-			s += "<b>[server_name]</b> &#8212; "
-
 		hostedby = CONFIG_GET(string/hostedby)
 
-	s += "<b>[station_name()]</b>";
-	s += "(<a href='https://discord.gg/z9ttAvA'>Discord</a>|<a href='http://beestation13.com'>Website</a>)"
+	s += "<b>Polska Aquila Station 13</b>"
+	s += "(<a href='https://discord.gg/wQFUt5R'>Discord</a>)|</br>Gramy codziennie o 20"
 
 	var/players = GLOB.clients.len
 
