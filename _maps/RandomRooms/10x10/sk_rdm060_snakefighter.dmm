@@ -227,9 +227,7 @@
 /turf/open/floor/plating,
 /area/template_noop)
 "Z" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating,
 /area/template_noop)
