@@ -128,6 +128,11 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 #define BLOOD_LOSS_IN_SPREAD		20
 #define BLOOD_AMOUNT_PER_DECAL		20
 
+#define BLOOD_DRY_TIME_MINIMUM        30 SECONDS
+#define BLOOD_DRY_TIME_PER_BLOODINESS 10 SECONDS
+#define BLOOD_SLIPPERY_KNOCKDOWN      3 SECONDS
+#define BLOOD_DRY_COLOR               rgb(160, 160, 160, 255)
+
 //Bloody shoe blood states
 #define BLOOD_STATE_HUMAN			"blood"
 #define BLOOD_STATE_XENO			"xeno"
