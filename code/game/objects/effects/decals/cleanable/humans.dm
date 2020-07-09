@@ -1,3 +1,4 @@
+//deprecated, use splatter instead
 /obj/effect/decal/cleanable/blood
 	name = "blood"
 	desc = "It's red and gooey. Perhaps it's the chef's cooking?"
@@ -97,19 +98,30 @@
 	random_icon_states = list("gibbl1", "gibbl2", "gibbl3", "gibbl4", "gibbl5")
 	is_slippery = TRUE
 
+/obj/effect/decal/cleanable/blood/splatter/add_bloodiness(var/amount)
+	var/before = (bloodiness > MAX_SHOE_BLOODINESS / 2)
+	. = ..()
+	var/after = (bloodiness > MAX_SHOE_BLOODINESS / 2)
+	if(before != after)
+		if(bloodiness > MAX_SHOE_BLOODINESS / 2)
+			icon_state = pick(list("floor1", "floor2", "floor3", "floor4", "floor5", "floor6", "floor7"))
+		else if(bloodiness <= MAX_SHOE_BLOODINESS / 2)
+			icon_state = pick(random_icon_states)
+
 /obj/effect/decal/cleanable/blood/tracks
 	icon_state = "tracks"
 	desc = "They look like tracks left by wheels."
-	icon_state = "tracks"
 	random_icon_states = null
 
-/obj/effect/decal/cleanable/trail_holder //not a child of blood on purpose
-	name = "blood"
+/obj/effect/decal/cleanable/blood/trail_holder
+	name = "bloody trails"
 	icon = 'icons/effects/blood.dmi'
+	icon_state = null //rendered through overlays
+	random_icon_states = null
 	desc = "Your instincts say you shouldn't be following these."
 	var/list/existing_dirs = list()
 
-/obj/effect/decal/cleanable/trail_holder/can_bloodcrawl_in()
+/obj/effect/decal/cleanable/blood/trail_holder/can_bloodcrawl_in()
 	return TRUE
 
 /obj/effect/decal/cleanable/blood/gibs
@@ -218,9 +230,9 @@
 /obj/effect/decal/cleanable/blood/footprints
 	name = "footprints"
 	icon = 'icons/effects/footprints.dmi'
-	icon_state = "nothingwhatsoever"
-	desc = "WHOSE FOOTPRINTS ARE THESE?"
+	icon_state = null //rendered through overlays
 	random_icon_states = null
+	desc = "WHOSE FOOTPRINTS ARE THESE?"
 	blood_state = BLOOD_STATE_HUMAN //the icon state to load images from
 	var/entered_dirs = 0
 	var/exited_dirs = 0
