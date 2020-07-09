@@ -20119,23 +20119,14 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
-/obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "aRk" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/engine/engineering)
-"aRn" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 9
-	},
-/obj/structure/cable/multilayer{
-	cable_layer = 3
-	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "aRo" = (
@@ -20145,7 +20136,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "aRp" = (
@@ -20559,26 +20549,32 @@
 /area/maintenance/starboard/fore)
 "aSp" = (
 /obj/machinery/power/terminal,
-/obj/structure/cable,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -27
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
+/obj/structure/cable/multilayer{
+	cable_layer = 1
+	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "aSq" = (
 /obj/machinery/power/terminal,
-/obj/structure/cable,
 /obj/effect/turf_decal/stripes/line,
+/obj/structure/cable/multilayer{
+	cable_layer = 1
+	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "aSr" = (
 /obj/machinery/power/terminal,
-/obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
+	},
+/obj/structure/cable/multilayer{
+	cable_layer = 1
 	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
@@ -20596,6 +20592,8 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
+/obj/structure/cable/layer1,
+/obj/structure/cable,
 /turf/open/floor/plasteel{
 	dir = 1
 	},
@@ -30455,7 +30453,6 @@
 /area/ai_monitored/storage/satellite)
 "blM" = (
 /obj/machinery/power/port_gen/pacman,
-/obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -30465,6 +30462,9 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+	},
+/obj/structure/cable/multilayer{
+	cable_layer = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/satellite)
@@ -31365,7 +31365,6 @@
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -31374,6 +31373,9 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
+	},
+/obj/structure/cable/multilayer{
+	cable_layer = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/satellite)
@@ -31385,10 +31387,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/satellite)
 "bnH" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
 	},
@@ -31398,6 +31400,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/satellite)
 "bnI" = (
@@ -31409,10 +31412,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
 	},
-/obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/satellite)
 "bnK" = (
@@ -32229,7 +32232,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable,
+/obj/structure/cable/multilayer{
+	cable_layer = 3
+	},
 /turf/open/space,
 /area/space/nearstation)
 "bpC" = (
@@ -32242,7 +32247,7 @@
 /obj/structure/transit_tube/station{
 	dir = 4
 	},
-/obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/aisat)
 "bpD" = (
@@ -32250,17 +32255,20 @@
 	dir = 10
 	},
 /obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/aisat)
 "bpE" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/aisat)
 "bpF" = (
 /obj/machinery/holopad,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/aisat)
 "bpG" = (
@@ -32268,6 +32276,7 @@
 	dir = 1
 	},
 /obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/aisat)
 "bpH" = (
@@ -32275,6 +32284,7 @@
 /obj/machinery/ai_slipper{
 	uses = 10
 	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/aisat)
 "bpI" = (
@@ -32292,17 +32302,20 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "bpJ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "bpK" = (
 /obj/structure/cable,
 /obj/machinery/holopad,
 /obj/item/beacon,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "bpL" = (
@@ -32310,6 +32323,7 @@
 	dir = 1
 	},
 /obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "bpM" = (
@@ -32327,6 +32341,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
 	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bpN" = (
@@ -32334,6 +32349,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bpO" = (
@@ -32344,6 +32360,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
 	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bpP" = (
@@ -32353,15 +32370,18 @@
 	uses = 10
 	},
 /mob/living/simple_animal/bot/secbot/pingsky,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bpQ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bpR" = (
 /obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bpS" = (
@@ -32379,10 +32399,12 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
 	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "bpT" = (
 /obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/satellite)
 "bpU" = (
@@ -32394,7 +32416,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/satellite)
 "bpW" = (
@@ -33345,7 +33366,6 @@
 "brR" = (
 /obj/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
-/obj/structure/cable,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
@@ -33551,7 +33571,6 @@
 /obj/machinery/computer/monitor{
 	dir = 1
 	},
-/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/satellite)
 "bsi" = (
@@ -76235,7 +76254,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "jSj" = (
@@ -78451,6 +78470,12 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/plasteel/white,
 /area/science/lab)
+"uRs" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
+/obj/structure/cable/layer1,
+/turf/open/floor/plating,
+/area/engine/engineering)
 "uRM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 9
@@ -118930,7 +118955,7 @@ aMb
 fdr
 axY
 aCR
-aCR
+uRs
 aSs
 aCR
 axY
@@ -119187,7 +119212,7 @@ aKz
 axY
 axY
 aPY
-aRn
+aCO
 aSt
 aTF
 aUY
