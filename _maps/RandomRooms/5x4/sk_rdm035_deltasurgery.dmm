@@ -12,7 +12,7 @@
 "b" = (
 /obj/structure/closet/secure_closet/medical2,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/white,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/template_noop)
 "c" = (
@@ -218,7 +218,7 @@
 /obj/effect/turf_decal/tile/blue,
 /turf/open/floor/plasteel/white,
 /area/template_noop)
-"X" = (
+"v" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
@@ -247,7 +247,7 @@ o
 "}
 (3,1,1) = {"
 c
-X
+v
 l
 p
 "}
