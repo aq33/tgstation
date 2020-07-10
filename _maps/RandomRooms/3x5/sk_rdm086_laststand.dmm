@@ -60,7 +60,7 @@
 /obj/effect/decal/cleanable/blood/gibs/up,
 /turf/open/floor/plating,
 /area/template_noop)
-"T" = (
+"l" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
@@ -78,7 +78,7 @@ c
 b
 e
 h
-T
+l
 c
 "}
 (3,1,1) = {"

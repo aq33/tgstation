@@ -2,7 +2,7 @@
 "a" = (
 /obj/structure/table,
 /obj/item/wallframe/camera,
-/obj/item/stack/cable_coil/random/five,
+/obj/item/stack/cable_coil/five,
 /turf/open/floor/plasteel/dark,
 /area/template_noop)
 "b" = (

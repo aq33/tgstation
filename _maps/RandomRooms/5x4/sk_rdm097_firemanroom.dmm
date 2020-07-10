@@ -53,8 +53,8 @@
 "h" = (
 /obj/structure/table,
 /obj/item/storage/box/donkpockets{
-	pixel_y = 8;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = 8
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
@@ -94,7 +94,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/template_noop)
-"s" = (
+"t" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
 /turf/open/floor/plasteel,
 /area/template_noop)
@@ -125,7 +125,7 @@ c
 "}
 (5,1,1) = {"
 e
-s
+t
 i
 l
 "}
