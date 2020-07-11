@@ -8,6 +8,7 @@
 	var/postdig_icon_change = FALSE
 	var/postdig_icon
 	var/wet
+	var/is_no_slip = FALSE
 
 	var/footstep = null
 	var/barefootstep = null
@@ -16,7 +17,7 @@
 
 /turf/open/ComponentInitialize()
 	. = ..()
-	if(wet)
+	if(wet && !is_no_slip)
 		AddComponent(/datum/component/wet_floor, wet, INFINITY, 0, INFINITY, TRUE)
 
 //direction is direction of travel of A
@@ -189,6 +190,8 @@
 		return 0
 	if(has_gravity(src))
 		var/obj/buckled_obj
+		if(src.is_no_slip && !(lube&GALOSHES_DONT_HELP))
+			return 0
 		if(C.buckled)
 			buckled_obj = C.buckled
 			if(!(lube&GALOSHES_DONT_HELP)) //can't slip while buckled unless it's lube.
@@ -232,10 +235,12 @@
 		return 1
 
 /turf/open/proc/MakeSlippery(wet_setting = TURF_WET_WATER, min_wet_time = 0, wet_time_to_add = 0, max_wet_time = MAXIMUM_WET_TIME, permanent)
-	AddComponent(/datum/component/wet_floor, wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
+	if(!is_no_slip)
+		AddComponent(/datum/component/wet_floor, wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 
 /turf/open/proc/MakeDry(wet_setting = TURF_WET_WATER, immediate = FALSE, amount = INFINITY)
-	SEND_SIGNAL(src, COMSIG_TURF_MAKE_DRY, wet_setting, immediate, amount)
+	if(!is_no_slip)
+		SEND_SIGNAL(src, COMSIG_TURF_MAKE_DRY, wet_setting, immediate, amount)
 
 /turf/open/get_dumping_location()
 	return src
