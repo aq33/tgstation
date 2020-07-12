@@ -1,6 +1,3 @@
-# don't ever modify text to prevent conflicts
-* -text
-
 # merger hooks, run tools/hooks/install.bat or install.sh to set up
 *.dmm merge=dmm
 *.dmi merge=dmi
@@ -8,9 +5,6 @@
 # dme and map files should be LF
 *.dme text eol=lf
 *.dmm text eol=lf
-
-# dm files unmodified
-*.dm text
 
 # exlude maps from contribution count
 *.dmm linguist-generated=true 
