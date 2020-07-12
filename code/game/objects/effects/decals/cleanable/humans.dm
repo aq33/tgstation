@@ -21,10 +21,8 @@
 	ASSERT(!is_old)
 	dry_timer = null
 	name = "dried [name]"
-	var/slip_component = GetComponent(/datum/component/slippery)
 
-	if(slip_component != null)
-		qdel(slip_component)
+	check_slippery()
 	is_old = TRUE
 	bloodiness = 0
 	var/old_alpha = alpha
@@ -38,21 +36,32 @@
 	if(can_dry && dry_timer == null)
 		dry_timer = addtimer(CALLBACK(src, .proc/make_old), BLOOD_DRY_TIME_MINIMUM + bloodiness * BLOOD_DRY_TIME_PER_BLOODINESS, TIMER_STOPPABLE)
 
+/obj/effect/decal/cleanable/blood/proc/check_slippery()
+	var/comp = GetComponent(/datum/component/slippery)
+
+	if(is_slippery && !is_old && bloodiness >= BLOOD_SLIPPERY_TRESHOLD)
+		if(comp == null)
+			AddComponent(/datum/component/slippery, BLOOD_SLIPPERY_KNOCKDOWN, NO_SLIP_WHEN_WALKING)
+	else
+		if(comp != null)
+			qdel(comp)
+
 /obj/effect/decal/cleanable/blood/proc/make_fresh()
 	ASSERT(is_old)
 	name = initial(name)
 
-	if(is_slippery && GetComponent(/datum/component/slippery) == null)
-		AddComponent(/datum/component/slippery, BLOOD_SLIPPERY_KNOCKDOWN, NO_SLIP_WHEN_WALKING)
+	check_slippery()
 	is_old = FALSE
 	color = initial(color)
 	update_dry_timer()
 
 /obj/effect/decal/cleanable/blood/add_bloodiness(var/amount)
 	. = ..()
-	if(is_old && amount > 0)
-		make_fresh()
+	if(is_old)
+		if(amount > 0)
+			make_fresh()
 	else
+		check_slippery()
 		update_dry_timer()
 
 /obj/effect/decal/cleanable/blood/Initialize(mapload, list/datum/disease/diseases)
