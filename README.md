@@ -12,6 +12,8 @@ W innym przypadku jeden branch może nanosić 2 PRy.
 
 ## Pomoc w tłumaczeniu/programowaniu
 
+[Priorytetowe Issues](https://github.com/aq33/tgstation/projects/3)
+
 Jeżeli chcesz pomóc to najpierw wybierz issue którym chcesz się zając, napisz tam, ze ty zajmiesz się np. jakimś konkretnym plikiem, lub całym issue, itd.
 Wtedy zforkuj te repozytorium, i tam nanieś zmiany tworząc commity (nie branche),
 pliki można też edytować z poziomu strony. Gdy chcesz zaproponować złączenie twojego forka do głównego repo,
