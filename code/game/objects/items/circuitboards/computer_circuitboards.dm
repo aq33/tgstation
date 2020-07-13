@@ -196,7 +196,7 @@
 	build_path = /obj/machinery/computer/pod/old/swf
 
 /obj/item/circuitboard/computer/bountypad
-	name = "Salvage Pod (Computer Board)"
+	name = "Bounty Pad (Computer Board)"
 	build_path = /obj/machinery/computer/piratepad_control/civilian
 
 /obj/item/circuitboard/computer/prisoner

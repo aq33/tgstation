@@ -113,6 +113,11 @@
 				if(M.can_hear())
 					to_chat(M, "[icon2html(A, M)] *[message]*")
 
+/**
+  * Produces a string based off the account's civilian bounty in order to send to the bounty pad.
+  *
+  * Breaks down the specifics of most bounty types by showcasing their appropriate variables/qualities.
+  */
 /datum/bank_account/proc/bounty_text()
 	if(!civilian_bounty)
 		return FALSE
@@ -125,11 +130,17 @@
 		bounty_string = "[chemical.description] Quantity = [chemical.required_volume]. Reward: = [chemical.reward]."
 	return bounty_string
 
+/**
+  * Produces the value of the account's civilian bounty reward, if able.
+  */
 /datum/bank_account/proc/bounty_value()
 	if(!civilian_bounty)
 		return FALSE
 	return civilian_bounty.reward
 
+/**
+  * Performs house-cleaning on variables when a civilian bounty is replaced, or, when a bounty is claimed.
+  */
 /datum/bank_account/proc/reset_bounty()
 	civilian_bounty = null
 	bounty_timer = 0
