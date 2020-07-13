@@ -53,13 +53,8 @@
 		GLOB.materials_list[D.id] = D
 	sortList(GLOB.materials_list)
 
-	GLOB.emote_list = init_emote_list()
-
-
-
-	// Keybindings
 	init_keybindings()
-		
+
 	GLOB.emote_list = init_emote_list()
 
 	init_subtypes(/datum/crafting_recipe, GLOB.crafting_recipes)
