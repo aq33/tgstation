@@ -270,14 +270,16 @@
 			return
 
 	// Find a blood decal or create a new one.
-	var/obj/effect/decal/cleanable/blood/B = locate() in T
-	if(!B)
-		B = new /obj/effect/decal/cleanable/blood/splatter(T, get_static_viruses())
-	if (B.bloodiness < MAX_SHOE_BLOODINESS) //add more blood, up to a limit
-		B.bloodiness += BLOOD_AMOUNT_PER_DECAL
-	B.transfer_mob_blood_dna(src) //give blood info to the blood decal.
+	var/obj/effect/decal/cleanable/blood/splatter/splatter = locate(/obj/effect/decal/cleanable/blood/splatter) in T
+
+	if(!splatter)
+		splatter = new /obj/effect/decal/cleanable/blood/splatter(T, get_static_viruses())
+
+	splatter.add_bloodiness(BLOOD_AMOUNT_PER_DECAL)
+
+	splatter.transfer_mob_blood_dna(src) //give blood info to the blood decal.
 	if(temp_blood_DNA)
-		B.add_blood_DNA(temp_blood_DNA)
+		splatter.add_blood_DNA(temp_blood_DNA)
 
 /mob/living/carbon/human/add_splatter_floor(turf/T, small_drip)
 	if(!(NOBLOOD in dna.species.species_traits))

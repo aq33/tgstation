@@ -8,6 +8,7 @@
 	var/postdig_icon_change = FALSE
 	var/postdig_icon
 	var/wet
+	var/is_no_slip = FALSE
 
 	var/footstep = null
 	var/barefootstep = null
@@ -16,7 +17,7 @@
 
 /turf/open/ComponentInitialize()
 	. = ..()
-	if(wet)
+	if(wet && !is_no_slip)
 		AddComponent(/datum/component/wet_floor, wet, INFINITY, 0, INFINITY, TRUE)
 
 //direction is direction of travel of A
@@ -189,6 +190,8 @@
 		return 0
 	if(has_gravity(src))
 		var/obj/buckled_obj
+		if(src.is_no_slip && !(lube&GALOSHES_DONT_HELP))
+			return 0
 		if(C.buckled)
 			buckled_obj = C.buckled
 			if(!(lube&GALOSHES_DONT_HELP)) //can't slip while buckled unless it's lube.
@@ -203,6 +206,7 @@
 			playsound(C.loc, 'sound/misc/slip.ogg', 50, 1, -3)
 
 		SEND_SIGNAL(C, COMSIG_ADD_MOOD_EVENT, "slipped", /datum/mood_event/slipped)
+		sleep(2)
 		if(force_drop)
 			for(var/obj/item/I in C.held_items)
 				C.accident(I)
@@ -210,7 +214,7 @@
 		var/olddir = C.dir
 		C.moving_diagonally = 0 //If this was part of diagonal move slipping will stop it.
 		if(!(lube & SLIDE_ICE))
-			C.Knockdown(knockdown_amount)
+			C.Knockdown(knockdown_amount / 2)
 			C.drop_all_held_items()
 			C.Paralyze(paralyze_amount)
 			C.stop_pulling()
@@ -231,10 +235,12 @@
 		return 1
 
 /turf/open/proc/MakeSlippery(wet_setting = TURF_WET_WATER, min_wet_time = 0, wet_time_to_add = 0, max_wet_time = MAXIMUM_WET_TIME, permanent)
-	AddComponent(/datum/component/wet_floor, wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
+	if(!is_no_slip)
+		AddComponent(/datum/component/wet_floor, wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 
 /turf/open/proc/MakeDry(wet_setting = TURF_WET_WATER, immediate = FALSE, amount = INFINITY)
-	SEND_SIGNAL(src, COMSIG_TURF_MAKE_DRY, wet_setting, immediate, amount)
+	if(!is_no_slip)
+		SEND_SIGNAL(src, COMSIG_TURF_MAKE_DRY, wet_setting, immediate, amount)
 
 /turf/open/get_dumping_location()
 	return src
