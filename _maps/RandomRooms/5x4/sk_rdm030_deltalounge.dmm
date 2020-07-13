@@ -15,8 +15,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/maintenance,
 /obj/machinery/light/small{
-	icon_state = "bulb";
-	dir = 1
+	dir = 1;
+	icon_state = "bulb"
 	},
 /turf/open/floor/plasteel/dark,
 /area/template_noop)

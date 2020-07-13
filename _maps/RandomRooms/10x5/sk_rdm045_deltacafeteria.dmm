@@ -114,8 +114,8 @@
 /obj/item/clothing/head/chefhat,
 /obj/item/clothing/suit/apron/chef,
 /obj/machinery/light/small{
-	icon_state = "bulb";
-	dir = 1
+	dir = 1;
+	icon_state = "bulb"
 	},
 /turf/open/floor/plasteel/white/side,
 /area/template_noop)
@@ -307,11 +307,11 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/template_noop)
-"R" = (
+"P" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
 /turf/open/floor/plasteel/white,
 /area/template_noop)
-"Y" = (
+"Q" = (
 /obj/effect/decal/cleanable/vomit/old,
 /turf/open/floor/plasteel/white,
 /area/template_noop)
@@ -375,7 +375,7 @@ x
 (9,1,1) = {"
 i
 p
-Y
+Q
 p
 y
 "}
@@ -383,6 +383,6 @@ y
 j
 q
 p
-R
+P
 z
 "}

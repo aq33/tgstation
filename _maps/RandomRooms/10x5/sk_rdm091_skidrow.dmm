@@ -77,10 +77,6 @@
 /obj/structure/mecha_wreckage/ripley,
 /turf/open/floor/plating,
 /area/template_noop)
-"p" = (
-/obj/effect/decal/cleanable/vomit/old,
-/turf/open/floor/plating,
-/area/template_noop)
 "s" = (
 /obj/effect/spawner/lootdrop/grille_or_trash,
 /turf/open/floor/plating,
@@ -106,8 +102,8 @@
 /area/template_noop)
 "y" = (
 /obj/item/storage/bag/trash{
-	pixel_y = -12;
-	pixel_x = 13
+	pixel_x = 13;
+	pixel_y = -12
 	},
 /obj/effect/decal/cleanable/food/tomato_smudge,
 /turf/open/floor/plating,
@@ -130,8 +126,8 @@
 	pixel_y = -2
 	},
 /obj/item/wirecutters{
-	pixel_y = -3;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -3
 	},
 /obj/item/reagent_containers/syringe,
 /turf/open/floor/plating,
@@ -197,6 +193,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/template_noop)
+"R" = (
+/obj/effect/decal/cleanable/vomit/old,
+/turf/open/floor/plating,
+/area/template_noop)
 "S" = (
 /obj/effect/decal/cleanable/blood/innards,
 /turf/open/floor/plating,
@@ -256,7 +256,7 @@ h
 N
 J
 i
-p
+R
 O
 "}
 (6,1,1) = {"
@@ -275,7 +275,7 @@ x
 "}
 (8,1,1) = {"
 y
-p
+R
 s
 D
 c
