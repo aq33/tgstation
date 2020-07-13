@@ -13,6 +13,7 @@ W innym przypadku jeden branch może nanosić 2 PRy.
 ## Pomoc w tłumaczeniu/programowaniu
 
 [Priorytetowe Issues](https://github.com/aq33/tgstation/projects/3)
+
 [Poradnik do Gita/Githuba](https://github.com/aq33/tgstation/wiki/Podstawy-Gita-i-wprowadzania-zmian)
 
 Jeżeli chcesz pomóc to najpierw wybierz issue którym chcesz się zając, napisz tam, ze ty zajmiesz się np. jakimś konkretnym plikiem, lub całym issue, itd.
