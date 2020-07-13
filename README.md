@@ -13,8 +13,10 @@ W innym przypadku jeden branch może nanosić 2 PRy.
 ## Pomoc w tłumaczeniu/programowaniu
 
 [Priorytetowe Issues](https://github.com/aq33/tgstation/projects/3)
+[Poradnik do Gita/Githuba](https://github.com/aq33/tgstation/wiki/Podstawy-Gita-i-wprowadzania-zmian)
 
 Jeżeli chcesz pomóc to najpierw wybierz issue którym chcesz się zając, napisz tam, ze ty zajmiesz się np. jakimś konkretnym plikiem, lub całym issue, itd.
+Najłatwiejsze issues to te z labelem "tweak", "tłumaczenie", "grafika" i "dźwięk".
 Wtedy zforkuj te repozytorium, i tam nanieś zmiany tworząc commity (nie branche),
 pliki można też edytować z poziomu strony. Gdy chcesz zaproponować złączenie twojego forka do głównego repo,
 utwórz PR (pull request).
@@ -28,12 +30,9 @@ fix: naprawiono jakiś bug
 Twój PR będzie wtedy sprawdzany przez automatyczne testy pod względem literówek itd.
 Jeżeli wszystko wygląda git, zukonake zmerge'uje to do repozytorium, lub odpali testowy merge.
 
-Jeżeli chcesz pomóc, ale nie wiesz z czym, zobacz [ten projekt](https://github.com/aq33/tgstation/projects/3).
-Najłatwiejsze issues to te z labelem "tweak", "tłumaczenie", "grafika" i "dźwięk".
-
 Do programowania polecam Visual Studio Code i wtedy otworzenie workspace, pokaże to zalecane pluginy które bardzo ułatwiają pracę z Byondem.
 
-Jeżeli czegoś nie wiesz/nie rozumiesz to poinformuj nas na kanale #coder.
+Jeżeli czegoś nie wiesz/nie rozumiesz to poinformuj nas na kanale #coder, jeżeli nie widzisz tego kanału to spytaj admina o rangę kodera.
 Tu jest też link do ogólnego Discorda (anglojęzycznego) związanego z programowaniem SS13: https://discord.gg/Vh8TJp9
 
 ### Robisz zmianę ale nie wiesz czy zostanie przyjęta?
