@@ -38,6 +38,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/stunmod = 1
 	var/oxymod = 1
 	var/clonemod = 1
+	var/hygiene_mod = 1 //hygiene change rate
 	var/toxmod = 1
 	var/staminamod = 1		// multiplier for stun duration
 	var/attack_type = BRUTE //Type of damage attack does
