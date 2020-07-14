@@ -63,3 +63,15 @@
 	description = "Central Command's moth janitor has had its wings burnt off. Care to ship a replacement pair?"
 	reward = 3000
 	wanted_types = list(/obj/item/organ/wings/moth)
+
+/datum/bounty/item/medical/chainsaw
+	name = "Chainsaw"
+	description = "A CMO at CentCom is having trouble operating on golems. She requests one chainsaw, please."
+	reward = 2500
+	wanted_types = list(/obj/item/chainsaw)
+
+/datum/bounty/item/medical/tail_whip //Like the cat tail bounties, with more processing.
+	name = "Nine Tails whip"
+	description = "Commander Jackson is looking for a fine addition to her exotic weapons collection. She will reward you handsomely for either a Cat or Liz o' Nine Tails."
+	reward = 4000
+	wanted_types = list(/obj/item/melee/chainofcommand/tailwhip)
