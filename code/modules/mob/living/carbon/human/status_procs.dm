@@ -57,5 +57,8 @@
 	update_smell()
 
 /mob/living/carbon/human/proc/set_hygiene(amount)
-	hygiene	 = CLAMP(amount * src.dna.species.hygiene_mod, 0, HYGIENE_LEVEL_CLEAN)
+	if(src.dna.species.hygiene_mod == 0)
+		hygiene = HYGIENE_LEVEL_NORMAL
+	else
+		hygiene	 = CLAMP(amount, 0, HYGIENE_LEVEL_CLEAN)
 	update_smell()
