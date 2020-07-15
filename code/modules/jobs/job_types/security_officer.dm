@@ -11,7 +11,7 @@
 	selection_color = "#ffeeee"
 	chat_color = "#E6A3A3"
 	minimal_player_age = 7
-	exp_requirements = 360
+	exp_requirements = 180
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_SECURITY
 
