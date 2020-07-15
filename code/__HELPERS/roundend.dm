@@ -227,7 +227,7 @@
 	//Set news report and mode result
 	mode.set_round_result()
 
-	send2chat("Server", "Runda właśnie się skończyła.")
+	send2chat("Runda właśnie się skończyła.", CONFIG_GET(string/chat_announce_new_game))
 
 	if(length(CONFIG_GET(keyed_list/cross_server)))
 		send_news_report()
