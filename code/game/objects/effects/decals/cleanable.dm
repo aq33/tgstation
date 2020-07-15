@@ -65,6 +65,12 @@
 		reagents.expose_temperature(exposed_temperature)
 	..()
 
+/obj/effect/decal/cleanable/proc/add_bloodiness(var/amount)
+	var/old = bloodiness
+	bloodiness += amount
+	bloodiness = min(MAX_SHOE_BLOODINESS, bloodiness)
+	bloodiness = max(0, bloodiness)
+	return bloodiness - old
 
 //Add "bloodiness" of this blood's type, to the human's shoes
 //This is on /cleanable because fuck this ancient mess
@@ -76,13 +82,9 @@
 			var/obj/item/clothing/shoes/S = H.shoes
 			if(!S.can_be_bloody)
 				return
-			var/add_blood = 0
-			if(bloodiness >= BLOOD_GAIN_PER_STEP)
-				add_blood = BLOOD_GAIN_PER_STEP
-			else
-				add_blood = bloodiness
-			bloodiness -= add_blood
-			S.bloody_shoes[blood_state] = min(MAX_SHOE_BLOODINESS,S.bloody_shoes[blood_state]+add_blood)
+			//always non-positive
+			var/change = add_bloodiness(-BLOOD_GAIN_PER_STEP)
+			S.bloody_shoes[blood_state] = min(MAX_SHOE_BLOODINESS, S.bloody_shoes[blood_state] - change)
 			S.add_blood_DNA(return_blood_DNA())
 			S.blood_state = blood_state
 			update_icon()
