@@ -297,6 +297,7 @@ GLOBAL_VAR(restart_counter)
 	s += "(<a href='https://discord.gg/wQFUt5R'>Discord</a>)"
 	s += "<br>-MRP"
 	s += "<br>-Dla początkujących i nie tylko"
+	s += "<br>"
 
 	var/players = GLOB.clients.len
 
