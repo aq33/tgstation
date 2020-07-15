@@ -294,7 +294,9 @@ GLOBAL_VAR(restart_counter)
 		hostedby = CONFIG_GET(string/hostedby)
 
 	s += "<b>Polska Aquila Station 13</b>"
-	s += "(<a href='https://discord.gg/wQFUt5R'>Discord</a>)|</br>Gramy codziennie o 20"
+	s += "(<a href='https://discord.gg/wQFUt5R'>Discord</a>)"
+	s += "<br>-MRP"
+	s += "<br>-Dla początkujących i nie tylko"
 
 	var/players = GLOB.clients.len
 
