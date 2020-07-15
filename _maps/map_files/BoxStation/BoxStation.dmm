@@ -5616,6 +5616,7 @@
 	pixel_y = 32
 	},
 /obj/item/multitool,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/fore)
 "aoj" = (
