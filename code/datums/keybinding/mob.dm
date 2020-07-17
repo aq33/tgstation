@@ -11,6 +11,7 @@
 /datum/keybinding/mob/speech_cloud/down(client/user)
 	if(!istype(user.mob, /mob/living)) return
 	var/mob/living/mob = user.mob
+	if(mob.stat != CONSCIOUS || !mob.can_speak()) return
 	var/list/listening = get_hearers_in_view(world.view, mob)
 
 	var/image/I = image('icons/mob/talk.dmi', mob, "[mob.bubble_icon]0", FLY_LAYER)
