@@ -14,7 +14,7 @@
 	protected_roles = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain")
 	restricted_roles = list("Cyborg")
 	required_candidates = 1
-	weight = 5
+	weight = 4
 	cost = 10
 	requirements = list(10,10,10,10,10,10,10,10,10,10)
 	high_population_requirement = 10
@@ -57,7 +57,7 @@
 	protected_roles = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain")
 	restricted_roles = list("Cyborg", "AI")
 	required_candidates = 2
-	weight = 4
+	weight = 5
 	cost = 10
 	requirements = list(40,30,30,20,20,15,15,15,10,10)
 	high_population_requirement = 15
@@ -109,7 +109,7 @@
 	restricted_roles = list("AI", "Cyborg")
 	required_candidates = 1
 	weight = 3
-	cost = 30
+	cost = 20
 	requirements = list(80,70,60,50,40,20,20,10,10,10)
 	high_population_requirement = 10
 	var/team_mode_probability = 30
@@ -140,13 +140,13 @@
 	name = "Wizard"
 	antag_flag = ROLE_WIZARD
 	antag_datum = /datum/antagonist/wizard
-	minimum_required_age = 14
+	minimum_required_age = 0
 	restricted_roles = list("Head of Security", "Captain") // Just to be sure that a wizard getting picked won't ever imply a Captain or HoS not getting drafted
 	required_candidates = 1
-	weight = 2
-	cost = 30
+	weight = 4
+	cost = 25
 	requirements = list(90,90,70,40,30,20,10,10,10,10)
-	high_population_requirement = 10
+	high_population_requirement = 18
 	var/list/roundstart_wizards = list()
 
 /datum/dynamic_ruleset/roundstart/wizard/acceptable(population=0, threat=0)
@@ -184,13 +184,13 @@
 	name = "Blood Cult"
 	antag_flag = ROLE_CULTIST
 	antag_datum = /datum/antagonist/cult
-	minimum_required_age = 14
+	minimum_required_age = 0
 	restricted_roles = list("AI", "Cyborg", "Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Chaplain", "Head of Personnel")
 	required_candidates = 2
-	weight = 3
-	cost = 30
+	weight = 2
+	cost = 25
 	requirements = list(100,90,80,60,40,30,10,10,10,10)
-	high_population_requirement = 10
+	high_population_requirement = 20
 	flags = HIGHLANDER_RULESET
 	var/cultist_cap = list(2,2,2,3,3,4,4,4,4,4)
 	var/datum/team/cult/main_cult
@@ -242,13 +242,13 @@
 	antag_flag = ROLE_OPERATIVE
 	antag_datum = /datum/antagonist/nukeop
 	var/datum/antagonist/antag_leader_datum = /datum/antagonist/nukeop/leader
-	minimum_required_age = 14
+	minimum_required_age = 0
 	restricted_roles = list("Head of Security", "Captain") // Just to be sure that a nukie getting picked won't ever imply a Captain or HoS not getting drafted
-	required_candidates = 5
+	required_candidates = 3
 	weight = 3
-	cost = 40
+	cost = 25
 	requirements = list(90,90,90,80,60,40,30,20,10,10)
-	high_population_requirement = 10
+	high_population_requirement = 18
 	flags = HIGHLANDER_RULESET
 	var/operative_cap = list(2,2,2,3,3,3,4,4,5,5)
 	var/datum/team/nuclear/nuke_team
@@ -330,14 +330,14 @@
 	antag_flag = ROLE_REV_HEAD
 	antag_flag_override = ROLE_REV
 	antag_datum = /datum/antagonist/rev/head
-	minimum_required_age = 14
+	minimum_required_age = 0
 	restricted_roles = list("AI", "Cyborg", "Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Head of Personnel", "Chief Engineer", "Chief Medical Officer", "Research Director")
 	required_candidates = 3
 	weight = 2
 	delay = 7 MINUTES
-	cost = 35
+	cost = 25
 	requirements = list(101,101,70,40,30,20,10,10,10,10)
-	high_population_requirement = 10
+	high_population_requirement = 20
 	flags = HIGHLANDER_RULESET
 	// I give up, just there should be enough heads with 35 players...
 	minimum_players = 35
@@ -445,7 +445,7 @@
 	antag_datum = /datum/antagonist/nukeop/clownop
 	antag_leader_datum = /datum/antagonist/nukeop/leader/clownop
 	requirements = list(101,101,101,101,101,101,101,101,101,101)
-	high_population_requirement = 101
+	high_population_requirement = 25
 
 /datum/dynamic_ruleset/roundstart/nuclear/clown_ops/pre_execute()
 	. = ..()
@@ -471,10 +471,10 @@
 	antag_datum = /datum/antagonist/devil
 	restricted_roles = list("Lawyer", "Curator", "Chaplain", "Head of Security", "Captain", "AI", "Cyborg", "Security Officer", "Warden", "Detective", "Brig Physician")
 	required_candidates = 1
-	weight = 3
-	cost = 0
+	weight = 5
+	cost = 25
 	requirements = list(101,101,101,101,101,101,101,101,101,101)
-	high_population_requirement = 101
+	high_population_requirement = 20
 	var/devil_limit = 4 // Hard limit on devils if scaling is turned off
 
 /datum/dynamic_ruleset/roundstart/devil/pre_execute()
@@ -529,10 +529,10 @@
 	antag_datum = /datum/antagonist/monkey/leader
 	restricted_roles = list("Cyborg", "AI")
 	required_candidates = 1
-	weight = 3
-	cost = 0
+	weight = 4
+	cost = 25
 	requirements = list(101,101,101,101,101,101,101,101,101,101)
-	high_population_requirement = 101
+	high_population_requirement = 20
 	var/players_per_carrier = 30
 	var/monkeys_to_win = 1
 	var/escaped_monkeys = 0
@@ -588,10 +588,10 @@
 	name = "Meteor"
 	persistent = TRUE
 	required_candidates = 0
-	weight = 3
-	cost = 0
+	weight = 6
+	cost = 25
 	requirements = list(101,101,101,101,101,101,101,101,101,101)
-	high_population_requirement = 101
+	high_population_requirement = 25
 	var/meteordelay = 2000
 	var/nometeors = 0
 	var/rampupdelta = 5
