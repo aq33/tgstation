@@ -74,7 +74,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/start/prisoner/Initialize()
 	..()
 	GLOB.prisoner_start += loc
-	return INITIALIZE_HINT_QDEL
 
 /obj/effect/landmark/start/janitor
 	name = "Janitor"
