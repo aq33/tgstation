@@ -43,6 +43,7 @@
 	var/list/explosionSize = list(0,0,2,3)
 	var/stay_after_drop = FALSE
 	var/specialised = TRUE // It's not a general use pod for cargo/admin use
+	var/list/queued_announces	//people coming in that we have to announce
 
 /obj/structure/closet/supplypod/bluespacepod
 	style = STYLE_BLUESPACE
@@ -93,6 +94,9 @@
 /obj/structure/closet/supplypod/extractionpod/specialisedPod(atom/movable/holder)
 	holder.forceMove(pick(GLOB.holdingfacility)) // land in ninja jail
 	open(holder, forced = TRUE)
+
+/obj/structure/closet/supplypod/proc/QueueAnnounce(mob, rank)
+	LAZYADD(queued_announces, CALLBACK(GLOBAL_PROC, .proc/AnnounceArrival, mob, rank))
 
 /obj/structure/closet/supplypod/Initialize(mapload)
 	. = ..()
@@ -245,7 +249,11 @@
 		depart(src)
 	else
 		if(!stay_after_drop) // Departing should be handled manually
-			addtimer(CALLBACK(src, .proc/depart, holder), departureDelay) //Finish up the pod's duties after a certain amount of time
+			addtimer(CALLBACK(src, .proc/depart, holder), departureDelay) //Finish up the pod's duties after a certain amount of time\
+	for(var/L in queued_announces)
+		var/datum/callback/C = L
+		C.Invoke()
+	LAZYCLEARLIST(queued_announces)
 
 /obj/structure/closet/supplypod/proc/depart(atom/movable/holder)
 	if (leavingSound)
