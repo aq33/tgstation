@@ -1,8 +1,9 @@
 /datum/round_event_control/nightmare
 	name = "Spawn Nightmare"
 	typepath = /datum/round_event/ghost_role/nightmare
+	weight = 10
 	max_occurrences = 1
-	min_players = 20
+	min_players = 15
 
 /datum/round_event/ghost_role/nightmare
 	minimum_required = 1
