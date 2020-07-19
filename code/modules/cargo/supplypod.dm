@@ -375,8 +375,6 @@
 	pod.update_icon()
 	pod.forceMove(drop_location()) //The fallingPod animation is over, now's a good time to forceMove the actual pod into position
 	QDEL_NULL(fallingPod) //Delete the falling pod effect, because at this point its animation is over. We dont use temp_visual because we want to manually delete it as soon as the pod appears
-	for (var/mob/living/M in src) //Remember earlier (initialization) when we moved mobs into the DPTarget so they wouldnt get lost in nullspace? Time to get them out
-		M.forceMove(pod)
 	pod.preOpen() //Begin supplypod open procedures. Here effects like explosions, damage, and other dangerous (and potentially admin-caused, if the centcom_podlauncher datum was used) memes will take place
 	qdel(src) //The target's purpose is complete. It can rest easy now
 
