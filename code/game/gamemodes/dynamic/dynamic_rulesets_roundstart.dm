@@ -110,7 +110,7 @@
 	required_candidates = 1
 	weight = 3
 	cost = 20
-	requirements = list(80,70,60,50,40,20,20,10,10,10)
+	requirements = list(60,50,50,50,40,20,20,10,10,10)
 	high_population_requirement = 10
 	var/team_mode_probability = 30
 
@@ -145,7 +145,7 @@
 	required_candidates = 1
 	weight = 4
 	cost = 25
-	requirements = list(90,90,70,40,30,20,10,10,10,10)
+	requirements = list(80,70,60,40,30,20,10,10,10,10)
 	high_population_requirement = 18
 	var/list/roundstart_wizards = list()
 
@@ -189,7 +189,7 @@
 	required_candidates = 2
 	weight = 2
 	cost = 25
-	requirements = list(100,90,80,60,40,30,10,10,10,10)
+	requirements = list(90,80,80,60,40,30,10,10,10,10)
 	high_population_requirement = 20
 	flags = HIGHLANDER_RULESET
 	var/cultist_cap = list(2,2,2,3,3,4,4,4,4,4)
@@ -247,7 +247,7 @@
 	required_candidates = 3
 	weight = 3
 	cost = 25
-	requirements = list(90,90,90,80,60,40,30,20,10,10)
+	requirements = list(80,70,70,70,60,40,30,20,10,10)
 	high_population_requirement = 18
 	flags = HIGHLANDER_RULESET
 	var/operative_cap = list(2,2,2,3,3,3,4,4,5,5)
@@ -336,11 +336,11 @@
 	weight = 2
 	delay = 7 MINUTES
 	cost = 25
-	requirements = list(101,101,70,40,30,20,10,10,10,10)
+	requirements = list(95,85,70,40,30,20,10,10,10,10)
 	high_population_requirement = 20
 	flags = HIGHLANDER_RULESET
 	// I give up, just there should be enough heads with 35 players...
-	minimum_players = 35
+	minimum_players = 20
 	var/datum/team/revolution/revolution
 	var/finished = 0
 
@@ -473,7 +473,7 @@
 	required_candidates = 1
 	weight = 5
 	cost = 25
-	requirements = list(101,101,101,101,101,101,101,101,101,101)
+	requirements = list(90,80,101,101,101,101,101,101,101,101)
 	high_population_requirement = 20
 	var/devil_limit = 4 // Hard limit on devils if scaling is turned off
 
@@ -531,7 +531,7 @@
 	required_candidates = 1
 	weight = 4
 	cost = 25
-	requirements = list(101,101,101,101,101,101,101,101,101,101)
+	requirements = list(80,70,101,101,101,101,101,101,101,101)
 	high_population_requirement = 20
 	var/players_per_carrier = 30
 	var/monkeys_to_win = 1
@@ -590,7 +590,7 @@
 	required_candidates = 0
 	weight = 6
 	cost = 25
-	requirements = list(101,101,101,101,101,101,101,101,101,101)
+	requirements = list(90,80,101,101,101,101,101,101,101,101)
 	high_population_requirement = 25
 	var/meteordelay = 2000
 	var/nometeors = 0
