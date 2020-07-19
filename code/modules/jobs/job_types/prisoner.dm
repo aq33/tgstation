@@ -4,8 +4,8 @@
 	department_head = list("The Security Team")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "the security team"
 
 	outfit = /datum/outfit/job/prisoner
@@ -21,3 +21,15 @@
 	id = /obj/item/card/id/prisoner
 	ears = null
 	belt = null
+
+/datum/job/prisoner/after_spawn(mob/living/carbon/human/H, mob/M, latejoin)
+	. = ..()
+	if(latejoin)
+		var/obj/structure/closet/supplypod/bluespacepod/pod = new()
+		pod.style = STYLE_STANDARD
+		H.forceMove(pod)
+		var/droplocation = pick(GLOB.prisoner_start)
+		new /obj/effect/pod_landingzone(droplocation, pod)
+
+/datum/job/prisoner/override_latejoin_spawn()
+	return TRUE
