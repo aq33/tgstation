@@ -94,7 +94,7 @@
 	holder.forceMove(pick(GLOB.holdingfacility)) // land in ninja jail
 	open(holder, forced = TRUE)
 
-/obj/structure/closet/supplypod/Initialize()
+/obj/structure/closet/supplypod/Initialize(mapload)
 	. = ..()
 	if (!mapload)
 		var/shippingLane = GLOB.areas_by_type[/area/centcom/supplypod/fly_me_to_the_moon]
@@ -335,7 +335,7 @@
 			var/atom/movable/O = single_order
 			O.forceMove(pod)
 	for (var/mob/living/M in pod) //If there are any mobs in the supplypod, we want to forceMove them into the target. This is so that they can see where they are about to land, AND so that they don't get sent to the nullspace error room (as the pod is currently in nullspace)
-		M.forceMove(src)
+		M.reset_perspective(src)
 	if(pod.effectStun) //If effectStun is true, stun any mobs caught on this target until the pod gets a chance to hit them
 		for (var/mob/living/M in get_turf(src))
 			M.Stun(pod.landingDelay+10, ignore_canstun = TRUE)//you aint goin nowhere, kid.
@@ -357,6 +357,8 @@
 /obj/effect/DPtarget/proc/beginLaunch(effectCircle) //Begin the animation for the pod falling. The effectCircle param determines whether the pod gets to come in from any descent angle
 	fallingPod = new /obj/effect/DPfall(drop_location(), pod)
 	var/matrix/M = matrix(fallingPod.transform) //Create a new matrix that we can rotate
+	for (var/mob/living/M in pod)
+		M.reset_perspective(null)
 	var/angle = effectCircle ? rand(0,360) : rand(70,110) //The angle that we can come in from
 	fallingPod.pixel_x = cos(angle)*400 //Use some ADVANCED MATHEMATICS to set the animated pod's position to somewhere on the edge of a circle with the center being the target
 	fallingPod.pixel_z = sin(angle)*400
