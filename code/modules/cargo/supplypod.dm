@@ -66,6 +66,26 @@
 	landingDelay = 20 //Very speedy!
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
+/obj/structure/closet/supplypod/securitypod
+	style = STYLE_SECURITY
+	bluespace = TRUE
+	explosionSize = list(0,0,0,1)
+	var/obj/item/radio/Radio
+
+/obj/structure/closet/supplypod/securitypod/Initialize()
+	. = ..()
+	Radio = new /obj/item/radio(src)
+	Radio.listening = 0
+
+/obj/structure/closet/supplypod/securitypod/Destroy()
+	QDEL_NULL(Radio)
+	return ..()
+
+/obj/structure/closet/supplypod/securitypod/preOpen()
+		Radio.set_frequency(FREQ_SECURITY)
+		Radio.talk_into(src, "SECURITY ALERT: New prisoner dropping into [get_area(src)].", FREQ_SECURITY)
+		QDEL_NULL(Radio)
+		..()
 
 /obj/structure/closet/supplypod/proc/specialisedPod()
 	return 1
