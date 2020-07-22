@@ -27,7 +27,7 @@
 				return
 			grenades += I
 			to_chat(user, "<span class='notice'>You put the grenade in the grenade launcher.</span>")
-			to_chat(user, "<span class='notice'>[grenades.len] / [max_grenades] granatów.</span>")
+			to_chat(user, "<span class='notice'>[grenades.len] / [max_grenades] grenades.</span>")
 		else
 			to_chat(usr, "<span class='danger'>The grenade launcher cannot hold more grenades.</span>")
 
