@@ -42,7 +42,7 @@ SUBSYSTEM_DEF(jukeboxes)
 			continue
 
 		M.playsound_local(get_turf(jukebox_obj), null, MUSIC_VOLUME, falloff = falloff, channel = jukebox.channel, S = song_played)
-		CHECK_TICK
+		stoplag(5)
 	return channel
 
 /datum/controller/subsystem/jukeboxes/proc/remove_jukebox(channel)
@@ -58,6 +58,7 @@ SUBSYSTEM_DEF(jukeboxes)
 		if(!M.client)
 			continue
 		M.stop_sound_channel(channel)
+		stoplag(5)
 	//idk if we have to del the jukebox datum
 	active_jukeboxes.Cut(id, id+1)
 	free_channels += channel
