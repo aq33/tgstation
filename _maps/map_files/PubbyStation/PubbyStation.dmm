@@ -52053,6 +52053,13 @@
 	},
 /turf/open/floor/plating,
 /area/hallway/secondary/exit/departure_lounge)
+"fUk" = (
+/obj/structure/bodycontainer/crematorium{
+	dir = 4;
+	id = "crematoriummedbay"
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/morgue)
 "fUA" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "bridgespace";
@@ -58926,6 +58933,13 @@
 /obj/item/twohanded/required/kirbyplants/random,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
+"sBh" = (
+/obj/machinery/button/crematorium{
+	id = "crematoriummedbay";
+	pixel_x = -25
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/morgue)
 "sBA" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -88254,8 +88268,8 @@ biY
 bjS
 bld
 bmp
-bld
-bld
+fUk
+sBh
 bpH
 biY
 bsB

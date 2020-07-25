@@ -40274,6 +40274,13 @@
 /obj/structure/sign/warning/securearea,
 /turf/closed/wall/r_wall,
 /area/teleporter)
+"bGF" = (
+/obj/machinery/button/crematorium{
+	id = "crematoriummedbay";
+	pixel_x = -25
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/morgue)
 "bGG" = (
 /obj/structure/chair{
 	dir = 1
@@ -63302,7 +63309,10 @@
 /obj/machinery/light_switch{
 	pixel_x = -23
 	},
-/obj/structure/bodycontainer/morgue,
+/obj/structure/bodycontainer/crematorium{
+	dir = 4;
+	id = "crematoriummedbay"
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "cEV" = (
@@ -103860,7 +103870,7 @@ cCf
 cCU
 cDY
 cEU
-cCf
+bGF
 cCe
 cHI
 cID

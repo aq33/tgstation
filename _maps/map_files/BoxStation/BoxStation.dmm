@@ -19500,6 +19500,9 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/bodycontainer/crematorium{
+	id = "crematoriummedbay"
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "bhr" = (
@@ -47058,6 +47061,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness)
+"kdx" = (
+/obj/structure/cable,
+/obj/machinery/button/crematorium{
+	id = "crematoriummedbay";
+	pixel_y = 25
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/morgue)
 "kdH" = (
 /obj/machinery/computer/warrant{
 	dir = 8
@@ -95772,7 +95783,7 @@ mkg
 mkg
 mkg
 bfL
-biB
+kdx
 biB
 biB
 cTL

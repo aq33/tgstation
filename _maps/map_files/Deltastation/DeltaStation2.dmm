@@ -99560,6 +99560,10 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/structure/bodycontainer/crematorium{
+	dir = 4;
+	id = "crematoriummedbay"
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "dHD" = (
@@ -114649,6 +114653,14 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port)
+"xoF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/crematorium{
+	id = "crematoriummedbay";
+	pixel_y = -25
+	},
+/turf/open/floor/plating,
+/area/medical/morgue)
 "xua" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -154855,7 +154867,7 @@ dDJ
 dES
 dGi
 dHD
-dES
+xoF
 dCy
 dKW
 dMv
