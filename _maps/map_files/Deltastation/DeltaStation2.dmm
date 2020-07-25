@@ -49455,19 +49455,6 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "bNq" = (
-/obj/item/grenade/barrier{
-	pixel_x = -3;
-	pixel_y = 1
-	},
-/obj/item/grenade/barrier,
-/obj/item/grenade/barrier{
-	pixel_x = 3;
-	pixel_y = -1
-	},
-/obj/item/grenade/barrier{
-	pixel_x = 6;
-	pixel_y = -2
-	},
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom{
 	pixel_y = 26
@@ -49482,6 +49469,12 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "bNr" = (
@@ -52865,19 +52858,28 @@
 /area/ai_monitored/security/armory)
 "bTj" = (
 /obj/structure/rack,
-/obj/item/gun/energy/laser{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/gun/energy/laser,
-/obj/item/gun/energy/laser{
-	pixel_x = 3;
-	pixel_y = -3
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/bot,
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/obj/item/ammo_box/magazine/recharge,
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/gun/ballistic/automatic/laser{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/obj/item/gun/ballistic/automatic/laser,
+/obj/item/gun/ballistic/automatic/laser{
+	pixel_x = 3;
+	pixel_y = 3
 	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
@@ -58357,6 +58359,22 @@
 /obj/item/gun/energy/e_gun/dragnet,
 /obj/item/gun/energy/e_gun/dragnet,
 /obj/item/gun/grenadelauncher,
+/obj/item/grenade/barrier{
+	pixel_x = 3;
+	pixel_y = -1
+	},
+/obj/item/grenade/barrier{
+	pixel_x = 3;
+	pixel_y = -1
+	},
+/obj/item/grenade/barrier{
+	pixel_x = 3;
+	pixel_y = -1
+	},
+/obj/item/grenade/barrier{
+	pixel_x = 3;
+	pixel_y = -1
+	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
 "cbL" = (
@@ -99560,6 +99578,10 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/structure/bodycontainer/crematorium{
+	dir = 4;
+	id = "crematoriummedbay"
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "dHD" = (
@@ -113017,6 +113039,21 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
 /area/construction/mining/aux_base)
+"pSH" = (
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/item/storage/lockbox/dueling,
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/bar)
 "pTh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral{
@@ -114634,6 +114671,14 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port)
+"xoF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/crematorium{
+	id = "crematoriummedbay";
+	pixel_y = -25
+	},
+/turf/open/floor/plating,
+/area/medical/morgue)
 "xua" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -152944,7 +152989,7 @@ aDL
 aFa
 aGl
 aHE
-aJa
+pSH
 aKB
 aLM
 mLf
@@ -154840,7 +154885,7 @@ dDJ
 dES
 dGi
 dHD
-dES
+xoF
 dCy
 dKW
 dMv
