@@ -52858,19 +52858,28 @@
 /area/ai_monitored/security/armory)
 "bTj" = (
 /obj/structure/rack,
-/obj/item/gun/energy/laser{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/gun/energy/laser,
-/obj/item/gun/energy/laser{
-	pixel_x = 3;
-	pixel_y = -3
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/bot,
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/obj/item/ammo_box/magazine/recharge,
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/gun/ballistic/automatic/laser{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/obj/item/gun/ballistic/automatic/laser,
+/obj/item/gun/ballistic/automatic/laser{
+	pixel_x = 3;
+	pixel_y = 3
 	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
