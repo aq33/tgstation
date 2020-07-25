@@ -49455,19 +49455,6 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "bNq" = (
-/obj/item/grenade/barrier{
-	pixel_x = -3;
-	pixel_y = 1
-	},
-/obj/item/grenade/barrier,
-/obj/item/grenade/barrier{
-	pixel_x = 3;
-	pixel_y = -1
-	},
-/obj/item/grenade/barrier{
-	pixel_x = 6;
-	pixel_y = -2
-	},
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom{
 	pixel_y = 26
@@ -49482,6 +49469,12 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "bNr" = (
@@ -58357,6 +58350,22 @@
 /obj/item/gun/energy/e_gun/dragnet,
 /obj/item/gun/energy/e_gun/dragnet,
 /obj/item/gun/grenadelauncher,
+/obj/item/grenade/barrier{
+	pixel_x = 3;
+	pixel_y = -1
+	},
+/obj/item/grenade/barrier{
+	pixel_x = 3;
+	pixel_y = -1
+	},
+/obj/item/grenade/barrier{
+	pixel_x = 3;
+	pixel_y = -1
+	},
+/obj/item/grenade/barrier{
+	pixel_x = 3;
+	pixel_y = -1
+	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
 "cbL" = (

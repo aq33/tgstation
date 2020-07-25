@@ -3188,6 +3188,10 @@
 /obj/item/storage/lockbox/loyalty{
 	layer = 4
 	},
+/obj/item/clothing/mask/gas/sechailer,
+/obj/item/clothing/mask/gas/sechailer,
+/obj/item/clothing/mask/gas/sechailer,
+/obj/item/clothing/mask/gas/sechailer,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "aiM" = (
@@ -3212,6 +3216,9 @@
 	pixel_x = 24
 	},
 /obj/structure/cable,
+/obj/item/gun/grenadelauncher,
+/obj/item/gun/energy/e_gun/dragnet,
+/obj/item/gun/energy/e_gun/dragnet,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "aiP" = (
@@ -59600,13 +59607,12 @@
 /area/storage/primary)
 "ulV" = (
 /obj/structure/rack,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/gun/energy/e_gun/dragnet,
-/obj/item/gun/energy/e_gun/dragnet,
-/obj/item/gun/grenadelauncher,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "ulY" = (
