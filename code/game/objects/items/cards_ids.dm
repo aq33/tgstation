@@ -213,7 +213,7 @@
 			to_chat(user, "<span class='notice'>The provided account has been linked to this ID card.</span>")
 
 			return TRUE
-			
+
 	to_chat(user, "<span class='warning'>The account ID number provided is invalid.</span>")
 	return
 
@@ -390,7 +390,7 @@ update_label("John Doe", "Clowny")
 			forged = TRUE
 			to_chat(user, "<span class='notice'>You successfully forge the ID card.</span>")
 			log_game("[key_name(user)] has forged \the [initial(name)] with name \"[registered_name]\" and occupation \"[assignment]\".")
-			
+
 			// First time use automatically sets the account id to the user.
 			if (first_use && !registered_account)
 				if(ishuman(user))
@@ -429,6 +429,22 @@ update_label("John Doe", "Clowny")
 	icon_state = "syndicate"
 	assignment = "Syndicate Officer"
 	access = list(ACCESS_SYNDICATE)
+
+/obj/item/card/id/syndicate_command/crew_id
+	name = "syndicate ID card"
+	desc = "An ID straight from the Syndicate."
+	registered_name = "Syndicate"
+	assignment = "Syndicate Operative"
+	icon_state = "syndie"
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
+
+/obj/item/card/id/syndicate_command/captain_id
+	name = "syndicate captain ID card"
+	desc = "An ID straight from the Syndicate."
+	registered_name = "Syndicate"
+	assignment = "Syndicate Ship Captain"
+	icon_state = "syndie"
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
 
 /obj/item/card/id/captains_spare
 	name = "captain's spare ID"

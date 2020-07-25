@@ -300,7 +300,9 @@
 	set waitfor = FALSE
 	if(!SSdbcore.Connect())
 		return
-	var/datum/DBQuery/query_round_shuttle_name = SSdbcore.NewQuery("UPDATE [format_table_name("round")] SET shuttle_name = '[name]' WHERE id = [GLOB.round_id]")
+	var/datum/DBQuery/query_round_shuttle_name = SSdbcore.NewQuery({"
+		UPDATE [format_table_name("round")] SET shuttle_name = :name WHERE id = :round_id
+	"}, list("name" = name, "round_id" = GLOB.round_id))
 	query_round_shuttle_name.Execute()
 	qdel(query_round_shuttle_name)
 
@@ -332,7 +334,8 @@
 					return
 				mode = SHUTTLE_DOCKED
 				setTimer(SSshuttle.emergencyDockTime)
-				send2chat("Server", "Statek ratunkowy właśnie zadokował do stacji.")
+				send2chat("Statek ratunkowy właśnie zadokował do stacji.", CONFIG_GET(string/chat_announce_new_game))
+
 				priority_announce("[SSshuttle.emergency] właśnie zadokował do stacji. Masz [timeLeft(600)] minut by wejść na pokład.", null, 'sound/ai/shuttledock.ogg', "Priority")
 				ShuttleDBStuff()
 

@@ -248,8 +248,8 @@
 /obj/machinery/light_switch{
 	pixel_y = -26
 	},
-/obj/item/stack/cable_coil/white,
-/obj/item/stack/cable_coil/white,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
 /obj/item/stack/sheet/glass,
 /obj/item/stack/sheet/glass,
 /obj/item/circuitboard/machine/microwave,
@@ -289,6 +289,18 @@
 /obj/machinery/light/small,
 /turf/open/floor/wood,
 /area/template_noop)
+"K" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/wood,
+/area/template_noop)
+"P" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plasteel/dark,
+/area/template_noop)
+"Y" = (
+/obj/effect/decal/cleanable/vomit/old,
+/turf/open/floor/plasteel/dark,
+/area/template_noop)
 
 (1,1,1) = {"
 a
@@ -299,9 +311,9 @@ F
 "}
 (2,1,1) = {"
 b
-k
+Y
 j
-k
+P
 G
 "}
 (3,1,1) = {"
@@ -321,7 +333,7 @@ z
 (5,1,1) = {"
 e
 n
-n
+K
 r
 n
 "}
@@ -349,7 +361,7 @@ n
 (9,1,1) = {"
 e
 n
-n
+K
 n
 m
 "}

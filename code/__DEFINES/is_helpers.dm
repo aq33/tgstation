@@ -56,6 +56,9 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 
 #define isplatingturf(A) (istype(A, /turf/open/floor/plating))
 
+//you need to make sure istype(A, B) is true when calling this
+#define isexacttype(A, B) (typesof(A).len == typesof(B).len)
+
 //Mobs
 #define isliving(A) (istype(A, /mob/living))
 

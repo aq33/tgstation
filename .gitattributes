@@ -2,7 +2,9 @@
 *.dmm merge=dmm
 *.dmi merge=dmi
 
-*.dme -lf
+# dme and map files should be LF
+*.dme text eol=lf
+*.dmm text eol=lf
 
 # exlude maps from contribution count
 *.dmm linguist-generated=true 

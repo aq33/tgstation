@@ -7,6 +7,7 @@
 	var/song_id = null
 	var/channel = null
 	var/obj/jukebox = null
+	var/listeners = list()
 
 SUBSYSTEM_DEF(jukeboxes)
 	name = "Jukeboxes"
@@ -15,9 +16,7 @@ SUBSYSTEM_DEF(jukeboxes)
 	var/list/datum/track/songs = list()
 	var/list/datum/jukebox/active_jukeboxes = list()
 	var/list/free_channels = list()
-	var/falloff = 10
-	var/wet = -250
-	var/dry = -10000
+	var/falloff = 7
 
 /datum/controller/subsystem/jukeboxes/proc/add_jukebox(obj/jukebox_obj, selection)
 	if(selection > songs.len)
@@ -33,25 +32,17 @@ SUBSYSTEM_DEF(jukeboxes)
 	jukebox.jukebox = jukebox_obj
 	active_jukeboxes[active_jukeboxes.len] = jukebox
 
-	var/datum/track/song = songs[jukebox.song_id]
-	var/sound/song_sound = sound(song.path)
-	song_sound.status = SOUND_MUTE
+	var/sound/song_played = sound(songs[jukebox.song_id].path)
+	song_played.status = SOUND_MUTE
+
 	for(var/mob/M in GLOB.player_list)
 		if(!M.client)
 			continue
 		if(!(M.client.prefs.toggles & SOUND_INSTRUMENTS))
 			continue
-		M.playsound_local(get_turf(src), null, 100, falloff = falloff, channel = channel, S = song_sound)
-		if(song.length == null) //find length of song
-			var/list/sounds = M.client.SoundQuery()
-			for(var/sound/S in sounds)
-				if(S.channel == channel)
-					song.length = S.len * 10
-					break
-		if(song.length == null)
-			remove_jukebox(channel)
-			CRASH("Couldn't query song length")
 
+		M.playsound_local(get_turf(jukebox_obj), null, MUSIC_VOLUME, falloff = falloff, channel = jukebox.channel, S = song_played)
+		CHECK_TICK
 	return channel
 
 /datum/controller/subsystem/jukeboxes/proc/remove_jukebox(channel)
@@ -79,10 +70,17 @@ SUBSYSTEM_DEF(jukeboxes)
 			continue
 		var/datum/track/T = new()
 		T.path = file("config/jukebox_music/sounds/[S]")
-		T.name = S
-		T.length = null 
+		var/list/tokens = splittext(S, "+")
+		if(tokens.len != 2)
+			warning("failed to load song [S]")
+			continue
+		T.name = tokens[1]
+		T.length = text2num(tokens[2]) * 10 //seconds to deciseconds
+		if(T.length == null)
+			warning("failed to load song, couldn't load length [S]")
+			continue
 		songs |= T
-		song_lib[S] = songs.len
+		song_lib[T.name] = songs.len
 	song_lib = sortList(song_lib)
 	for(var/i in CHANNEL_JUKEBOX_START to CHANNEL_JUKEBOX_END)
 		free_channels |= i
@@ -99,26 +97,18 @@ SUBSYSTEM_DEF(jukeboxes)
 		if(!istype(jukebox_obj))
 			CRASH("Nonexistant or invalid object associated with jukebox.")
 		var/sound/song_played = sound(juketrack.path)
-		var/area/current_area = get_area(jukebox_obj)
-		var/list/hearers_cache = hearers(7, jukebox_obj)
 
 		for(var/mob/M in GLOB.player_list)
 			if(!M.client)
 				continue
+
+			song_played.status = SOUND_UPDATE
 			if(!(M.client.prefs.toggles & SOUND_INSTRUMENTS))
-				M.stop_sound_channel(jukebox.channel)
-				continue
+				song_played.status |= SOUND_MUTE
 
-			var/in_range = FALSE
-			if(jukebox_obj.z == M.z)	//todo - expand this to work with mining planet z-levels when robust jukebox audio gets merged to master
-				song_played.status = SOUND_UPDATE
-				if(get_area(M) == current_area)
-					in_range = TRUE
-				else if(M in hearers_cache)
-					in_range = TRUE
-			else
-				song_played.status = SOUND_MUTE | SOUND_UPDATE	//Setting volume = 0 doesn't let the sound properties update at all, which is lame.
+			if(jukebox_obj.z != M.z)
+				song_played.status |= SOUND_MUTE	//Setting volume = 0 doesn't let the sound properties update at all, which is lame.
 
-			M.playsound_local(get_turf(jukebox_obj), null, 100, falloff = falloff, channel = jukebox.channel, S = song_played, envwet = (in_range ? wet : 0), envdry = (in_range ? 0 : dry))
+			M.playsound_local(get_turf(jukebox_obj), null, MUSIC_VOLUME, falloff = falloff, channel = jukebox.channel, S = song_played)
 			CHECK_TICK
 	return

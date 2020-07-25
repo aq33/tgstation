@@ -307,3 +307,11 @@
 	filling_color = "#1E90FF"
 	tastes = list("nuts" = 1, "pie" = 1)
 	foodtype = GRAIN
+
+/obj/item/reagent_containers/food/snacks/pie/kremowka
+	name = "kremówka"
+	desc = "Wadowicki specjał"
+	icon_state = "kremowka"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 5)
+	tastes = list("pie" = 1, "cream" = 1)
+	foodtype = GRAIN | SUGAR

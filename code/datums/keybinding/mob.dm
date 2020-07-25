@@ -2,6 +2,28 @@
 		category = CATEGORY_HUMAN
 		weight = WEIGHT_MOB
 
+/datum/keybinding/mob/speech_cloud
+	key = "T"
+	name = "speech_cloud"
+	full_name = "Speech Cloud"
+	description = ""
+
+/datum/keybinding/mob/speech_cloud/down(client/user)
+	if(!istype(user.mob, /mob/living)) return
+	var/mob/living/mob = user.mob
+	if(mob.stat != CONSCIOUS || !mob.can_speak()) return
+	var/list/listening = get_hearers_in_view(world.view, mob)
+
+	var/image/I = image('icons/mob/talk.dmi', mob, "[mob.bubble_icon]0", FLY_LAYER)
+	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
+
+	var/list/speech_bubble_recipients = list()
+	for(var/mob/M in listening)
+		if(M.client)
+			speech_bubble_recipients.Add(M.client)
+
+	INVOKE_ASYNC(GLOBAL_PROC, /.proc/animate_speechbubble, I, speech_bubble_recipients, 50)
+	return TRUE
 
 /datum/keybinding/mob/face_north
 	key = "Ctrl-W"

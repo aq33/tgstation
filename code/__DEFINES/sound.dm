@@ -17,7 +17,7 @@
 
 
 #define SOUND_MINIMUM_PRESSURE 10
-#define FALLOFF_SOUNDS 1
+#define FALLOFF_SOUNDS 2
 
 
 //Ambience types
@@ -77,3 +77,4 @@
 #define PICKUP_SOUND_VOLUME 15
 #define DROP_SOUND_VOLUME 20 
 #define YEET_SOUND_VOLUME 90
+#define MUSIC_VOLUME 50

@@ -53,9 +53,12 @@
 			remove_language(/datum/language/beachbum)
 
 /mob/living/carbon/human/proc/adjust_hygiene(amount)
-	hygiene = CLAMP(hygiene+amount, 0, HYGIENE_LEVEL_CLEAN)
+	hygiene = CLAMP(hygiene+amount * src.dna.species.hygiene_mod, 0, HYGIENE_LEVEL_CLEAN)
 	update_smell()
 
 /mob/living/carbon/human/proc/set_hygiene(amount)
-	hygiene	 = CLAMP(amount, 0, HYGIENE_LEVEL_CLEAN)
+	if(src.dna.species.hygiene_mod == 0)
+		hygiene = HYGIENE_LEVEL_NORMAL
+	else
+		hygiene	 = CLAMP(amount, 0, HYGIENE_LEVEL_CLEAN)
 	update_smell()

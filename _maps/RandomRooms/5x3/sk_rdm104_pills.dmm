@@ -44,6 +44,10 @@
 	},
 /turf/open/floor/plating,
 /area/template_noop)
+"B" = (
+/obj/effect/decal/cleanable/vomit/old,
+/turf/open/floor/plating,
+/area/template_noop)
 "C" = (
 /turf/open/floor/plating,
 /area/template_noop)
@@ -72,13 +76,13 @@
 
 (1,1,1) = {"
 C
-C
+B
 a
 "}
 (2,1,1) = {"
 a
 f
-C
+B
 "}
 (3,1,1) = {"
 C

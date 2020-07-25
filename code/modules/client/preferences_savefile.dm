@@ -5,7 +5,7 @@
 //	You do not need to raise this if you are adding new values that have sane defaults.
 //	Only raise this value when changing the meaning/format/name/layout of an existing value
 //	where you would want the updater procs below to run
-#define SAVEFILE_VERSION_MAX	35
+#define SAVEFILE_VERSION_MAX	38
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -44,6 +44,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 /datum/preferences/proc/update_preferences(current_version, savefile/S)
 	if(current_version < 35)
 		overhead_chat = TRUE
+	if(current_version < 36)
+		clientfps = 60
+	if(current_version < 37)
+		outline_enabled = TRUE
+		outline_color = COLOR_BLUE_GRAY
 	return
 
 /datum/preferences/proc/update_character(current_version, savefile/S)
@@ -110,7 +115,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 			if(new_value)
 				job_preferences[initial(J.title)] = new_value
 
-	if(current_version < 25)
+	if(current_version < 38)
 		key_bindings = deepCopyList(GLOB.keybinding_list_by_key)
 		WRITE_FILE(S["key_bindings"], key_bindings)
 	if(current_version < 27)
@@ -143,6 +148,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["lastchangelog"]		>> lastchangelog
 	S["UI_style"]			>> UI_style
 	S["overhead_chat"]		>> overhead_chat
+	S["outline_color"]		>> outline_color
+	S["outline_enabled"]	>> outline_enabled
 	S["hotkeys"]			>> hotkeys
 	S["tgui_fancy"]			>> tgui_fancy
 	S["tgui_lock"]			>> tgui_lock
@@ -243,6 +250,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["lastchangelog"], lastchangelog)
 	WRITE_FILE(S["UI_style"], UI_style)
 	WRITE_FILE(S["overhead_chat"], overhead_chat)
+	WRITE_FILE(S["outline_enabled"], outline_enabled)
+	WRITE_FILE(S["outline_color"], outline_color)
 	WRITE_FILE(S["hotkeys"], hotkeys)
 	WRITE_FILE(S["tgui_fancy"], tgui_fancy)
 	WRITE_FILE(S["tgui_lock"], tgui_lock)
