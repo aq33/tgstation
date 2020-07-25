@@ -37603,14 +37603,12 @@
 	pixel_y = 6
 	},
 /obj/item/radio/intercom{
-	anyai = 1;
 	freerange = 1;
 	listening = 0;
 	name = "Custom Channel";
 	pixel_y = 22
 	},
 /obj/item/radio/intercom{
-	anyai = 1;
 	freerange = 1;
 	frequency = 1447;
 	name = "Private Channel";
@@ -37648,7 +37646,6 @@
 "bpo" = (
 /obj/effect/landmark/start/ai/secondary,
 /obj/item/radio/intercom{
-	anyai = 1;
 	freerange = 1;
 	listening = 0;
 	name = "Custom Channel";
@@ -37661,7 +37658,6 @@
 	pixel_x = -27
 	},
 /obj/item/radio/intercom{
-	anyai = 1;
 	freerange = 1;
 	frequency = 1447;
 	name = "Private Channel";
@@ -37725,7 +37721,6 @@
 "bpr" = (
 /obj/effect/landmark/start/ai/secondary,
 /obj/item/radio/intercom{
-	anyai = 1;
 	freerange = 1;
 	listening = 0;
 	name = "Custom Channel";
@@ -37738,7 +37733,6 @@
 	pixel_x = 27
 	},
 /obj/item/radio/intercom{
-	anyai = 1;
 	freerange = 1;
 	frequency = 1447;
 	name = "Private Channel";
@@ -66332,19 +66326,10 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-<<<<<<< refs/remotes/BeeStation/master
-/obj/item/radio/intercom{
-	freerange = 1;
-	frequency = 1447;
-	name = "Private Channel";
-	pixel_x = -10;
-	pixel_y = -25
-=======
 /obj/machinery/camera{
 	c_tag = "Departures Cargo Dock";
 	dir = 1;
 	name = "shuttle camera"
->>>>>>> kilo is back
 	},
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/exit/departure_lounge)
