@@ -7,6 +7,7 @@
 	baseturfs = /turf/open/lava //lava all the way down
 	slowdown = 2
 
+	is_no_slip = TRUE
 	light_range = 2
 	light_power = 0.75
 	light_color = LIGHT_COLOR_LAVA
@@ -20,17 +21,11 @@
 /turf/open/lava/ex_act(severity, target)
 	contents_explosion(severity, target)
 
-/turf/open/lava/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
-	return
-
 /turf/open/lava/Melt()
 	to_be_destroyed = FALSE
 	return src
 
 /turf/open/lava/acid_act(acidpwr, acid_volume)
-	return
-
-/turf/open/lava/MakeDry(wet_setting = TURF_WET_WATER)
 	return
 
 /turf/open/lava/airless

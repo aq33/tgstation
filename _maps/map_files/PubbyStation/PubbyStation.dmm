@@ -3188,6 +3188,10 @@
 /obj/item/storage/lockbox/loyalty{
 	layer = 4
 	},
+/obj/item/clothing/mask/gas/sechailer,
+/obj/item/clothing/mask/gas/sechailer,
+/obj/item/clothing/mask/gas/sechailer,
+/obj/item/clothing/mask/gas/sechailer,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "aiM" = (
@@ -3212,6 +3216,9 @@
 	pixel_x = 24
 	},
 /obj/structure/cable,
+/obj/item/gun/grenadelauncher,
+/obj/item/gun/energy/e_gun/dragnet,
+/obj/item/gun/energy/e_gun/dragnet,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "aiP" = (
@@ -3726,14 +3733,23 @@
 /area/ai_monitored/security/armory)
 "ajT" = (
 /obj/structure/rack,
-/obj/item/gun/energy/laser{
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/ammo_box/magazine/recharge,
+/obj/item/ammo_box/magazine/recharge{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/gun/energy/laser,
-/obj/item/gun/energy/laser{
+/obj/item/gun/ballistic/automatic/laser{
 	pixel_x = 3;
 	pixel_y = -3
+	},
+/obj/item/gun/ballistic/automatic/laser,
+/obj/item/gun/ballistic/automatic/laser{
+	pixel_x = -3;
+	pixel_y = 3
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
@@ -20486,6 +20502,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/item/storage/lockbox/dueling,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/bar)
 "aYi" = (
@@ -52055,6 +52072,13 @@
 	},
 /turf/open/floor/plating,
 /area/hallway/secondary/exit/departure_lounge)
+"fUk" = (
+/obj/structure/bodycontainer/crematorium{
+	dir = 4;
+	id = "crematoriummedbay"
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/morgue)
 "fUA" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "bridgespace";
@@ -58928,6 +58952,13 @@
 /obj/item/twohanded/required/kirbyplants/random,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
+"sBh" = (
+/obj/machinery/button/crematorium{
+	id = "crematoriummedbay";
+	pixel_x = -25
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/morgue)
 "sBA" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -59588,13 +59619,12 @@
 /area/storage/primary)
 "ulV" = (
 /obj/structure/rack,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/gun/energy/e_gun/dragnet,
-/obj/item/gun/energy/e_gun/dragnet,
-/obj/item/gun/grenadelauncher,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "ulY" = (
@@ -88251,8 +88281,8 @@ biY
 bjS
 bld
 bmp
-bld
-bld
+fUk
+sBh
 bpH
 biY
 bsB

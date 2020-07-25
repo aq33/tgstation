@@ -9,6 +9,7 @@
 	icon_state = "asteroid"
 	icon_plating = "asteroid"
 	postdig_icon_change = TRUE
+	is_no_slip = TRUE
 	footstep = FOOTSTEP_SAND
 	barefootstep = FOOTSTEP_SAND
 	clawfootstep = FOOTSTEP_SAND
@@ -45,12 +46,6 @@
 	return
 
 /turf/open/floor/plating/asteroid/burn_tile()
-	return
-
-/turf/open/floor/plating/asteroid/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
-	return
-
-/turf/open/floor/plating/asteroid/MakeDry()
 	return
 
 /turf/open/floor/plating/asteroid/attackby(obj/item/W, mob/user, params)
