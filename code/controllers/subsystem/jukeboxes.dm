@@ -33,7 +33,7 @@ SUBSYSTEM_DEF(jukeboxes)
 	active_jukeboxes[active_jukeboxes.len] = jukebox
 
 	var/sound/song_played = sound(songs[jukebox.song_id].path)
-	song_played.status = SOUND_MUTE
+	song_played.status = SOUND_MUTE | SOUND_STREAM
 
 	for(var/mob/M in GLOB.player_list)
 		if(!M.client)
@@ -42,7 +42,7 @@ SUBSYSTEM_DEF(jukeboxes)
 			continue
 
 		M.playsound_local(get_turf(jukebox_obj), null, MUSIC_VOLUME, falloff = falloff, channel = jukebox.channel, S = song_played)
-		stoplag(5)
+		sleep(5)
 	return channel
 
 /datum/controller/subsystem/jukeboxes/proc/remove_jukebox(channel)
@@ -58,7 +58,7 @@ SUBSYSTEM_DEF(jukeboxes)
 		if(!M.client)
 			continue
 		M.stop_sound_channel(channel)
-		stoplag(5)
+		sleep(5)
 	//idk if we have to del the jukebox datum
 	active_jukeboxes.Cut(id, id+1)
 	free_channels += channel
@@ -103,7 +103,7 @@ SUBSYSTEM_DEF(jukeboxes)
 			if(!M.client)
 				continue
 
-			song_played.status = SOUND_UPDATE
+			song_played.status = SOUND_UPDATE | SOUND_STREAM
 			if(!(M.client.prefs.toggles & SOUND_INSTRUMENTS))
 				song_played.status |= SOUND_MUTE
 
