@@ -33,16 +33,16 @@
 	..()
 	switch(stage)
 		if(1)
-			if (prob(stage_prob) && stage1)
+			if (prob(stage_prob) && stage1 && stage1.len > 0)
 				to_chat(affected_mob, pick(stage1))
 		if(2)
-			if (prob(stage_prob) && stage2)
+			if (prob(stage_prob) && stage2 && stage2.len > 0)
 				to_chat(affected_mob, pick(stage2))
 		if(3)
-			if (prob(stage_prob*2) && stage3)
+			if (prob(stage_prob*2) && stage3 && stage3.len > 0)
 				to_chat(affected_mob, pick(stage3))
 		if(4)
-			if (prob(stage_prob*2) && stage4)
+			if (prob(stage_prob*2) && stage4 && stage4.len > 0)
 				to_chat(affected_mob, pick(stage4))
 		if(5)
 			if(is_mutagenic)	//we don't do it normally
@@ -120,6 +120,25 @@
 					"<span class='warning'>You have a craving for bananas.</span>", "<span class='warning'>Your mind feels clouded.</span>")
 	stage5	= list("<span class='warning'>You feel like monkeying around.</span>")
 
+/datum/disease/transformation/jungle_fever/proc/init_monkey(var/mob/living/carbon/monkey/M)
+	M.aggressive = 1
+	M.ventcrawler = VENTCRAWLER_ALWAYS
+
+/datum/disease/transformation/jungle_fever/after_add()
+	if(ismonkey(affected_mob))
+		init_monkey(affected_mob)
+	if(!affected_mob.mind && ismonkey(affected_mob))
+		var/list/candidates = pollGhostCandidates("Do you want to play as an infected monkey?", ROLE_MONKEY, null, ROLE_MONKEY, 150, POLL_IGNORE_MONKEY)
+
+		if(QDELETED(src))
+			return
+
+		if(candidates.len > 0)
+			var/mob/dead/observer/ghost = pick(candidates)
+			affected_mob.key = ghost.key
+			affected_mob.sync_mind()
+			add_monkey(affected_mob.mind)
+
 /datum/disease/transformation/jungle_fever/do_disease_transformation(mob/living/carbon/affected_mob)
 	if(affected_mob.mind && !is_monkey(affected_mob.mind))
 		add_monkey(affected_mob.mind)
@@ -128,7 +147,7 @@
 			affected_mob.junglegorillize()
 		else
 			var/mob/living/carbon/monkey/M = affected_mob.monkeyize(TR_KEEPITEMS | TR_KEEPIMPLANTS | TR_KEEPVIRUS | TR_KEEPSE)
-			M.ventcrawler = VENTCRAWLER_ALWAYS
+			init_monkey(M)
 			var/datum/atom_hud/H = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
 			H.add_hud_to(M)
 

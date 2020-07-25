@@ -157,7 +157,7 @@
 
 	switch(mode)
 		if(MONKEY_IDLE)		// idle
-			if(enemies.len)
+			if(aggressive || enemies.len)
 				var/list/around = view(MONKEY_ENEMY_VISION, src) // scan for enemies
 				for(var/mob/living/L in around)
 					if( should_target(L) )
