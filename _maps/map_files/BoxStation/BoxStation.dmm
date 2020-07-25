@@ -5619,6 +5619,7 @@
 	pixel_y = 32
 	},
 /obj/item/multitool,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/fore)
 "aoj" = (
@@ -41666,7 +41667,9 @@
 	dir = 4
 	},
 /obj/item/tank/internals/plasma,
-/obj/structure/cable/multilayer,
+/obj/structure/cable/multilayer{
+	cable_layer = 3
+	},
 /turf/open/floor/plating,
 /area/engine/supermatter)
 "cET" = (
@@ -41679,7 +41682,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/structure/cable/multilayer,
+/obj/structure/cable/multilayer{
+	cable_layer = 3
+	},
 /turf/open/floor/plating,
 /area/engine/supermatter)
 "cEU" = (
