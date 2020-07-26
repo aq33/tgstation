@@ -1281,3 +1281,10 @@
 /obj/item/circuitboard/machine/clockwork
 	name = "clockwork board (Report This)"
 	icon_state = "clock_mod"
+
+/obj/item/circuitboard/machine/cubedispenser
+	name = "foodcube dispenser (Machine Board)"
+	build_path = /obj/machinery/cubeDispenser
+	req_components = list(
+		/obj/item/stock_parts/manipulator = 2,
+		/obj/item/stock_parts/matter_bin = 2)

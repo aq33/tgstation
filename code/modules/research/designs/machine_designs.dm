@@ -647,3 +647,11 @@
 	build_path = /obj/item/circuitboard/machine/spaceship_navigation_beacon
 	category = list ("Teleportation Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING | DEPARTMENTAL_FLAG_SCIENCE
+
+/datum/design/board/cubedispenser
+	name = "Machine Design (CubeDispenser Board)"
+	desc = "The circuit board for a Cubedispenser."
+	id = "cubedispenser"
+	build_path = /obj/item/circuitboard/machine/cubedispenser
+	category = list ("Misc. Machinery")
+	departmental_flags = DEPARTMENTAL_FLAG_ALL
