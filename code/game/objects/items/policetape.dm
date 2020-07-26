@@ -227,7 +227,7 @@ var/list/tape_roll_applications = list()
 			crumple()
 	return ..(mover)
 
-/obj/item/policetape/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/policetape/attackby(obj/item/W as obj, mob/user as mob)
 	breaktape(user)
 
 /obj/item/policetape/attack_hand(mob/user as mob)
