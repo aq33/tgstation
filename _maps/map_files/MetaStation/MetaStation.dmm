@@ -2754,19 +2754,6 @@
 	pixel_y = 24
 	},
 /obj/structure/rack,
-/obj/item/grenade/barrier{
-	pixel_x = -3;
-	pixel_y = 1
-	},
-/obj/item/grenade/barrier,
-/obj/item/grenade/barrier{
-	pixel_x = 3;
-	pixel_y = -1
-	},
-/obj/item/grenade/barrier{
-	pixel_x = 6;
-	pixel_y = -2
-	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -2777,6 +2764,12 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/item/gun/ballistic/automatic/pistol/m1911,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "aga" = (
@@ -2829,15 +2822,6 @@
 /area/ai_monitored/security/armory)
 "agd" = (
 /obj/structure/rack,
-/obj/item/gun/energy/laser{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/gun/energy/laser,
-/obj/item/gun/energy/laser{
-	pixel_x = 3;
-	pixel_y = -3
-	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -2847,6 +2831,24 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+	},
+/obj/item/gun/ballistic/automatic/laser{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/gun/ballistic/automatic/laser,
+/obj/item/gun/ballistic/automatic/laser{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/ammo_box/magazine/recharge,
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = -3;
+	pixel_y = 3
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
@@ -3249,6 +3251,10 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/grenade/barrier,
+/obj/item/grenade/barrier,
+/obj/item/grenade/barrier,
+/obj/item/grenade/barrier,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "agS" = (
@@ -40274,6 +40280,13 @@
 /obj/structure/sign/warning/securearea,
 /turf/closed/wall/r_wall,
 /area/teleporter)
+"bGF" = (
+/obj/machinery/button/crematorium{
+	id = "crematoriummedbay";
+	pixel_x = -25
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/morgue)
 "bGG" = (
 /obj/structure/chair{
 	dir = 1
@@ -41942,6 +41955,7 @@
 	},
 /obj/item/clothing/mask/cigarette/pipe,
 /obj/structure/table/wood,
+/obj/item/storage/lockbox/dueling,
 /turf/open/floor/carpet,
 /area/crew_quarters/bar)
 "bKo" = (
@@ -63301,7 +63315,10 @@
 /obj/machinery/light_switch{
 	pixel_x = -23
 	},
-/obj/structure/bodycontainer/morgue,
+/obj/structure/bodycontainer/crematorium{
+	dir = 4;
+	id = "crematoriummedbay"
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "cEV" = (
@@ -103859,7 +103876,7 @@ cCf
 cCU
 cDY
 cEU
-cCf
+bGF
 cCe
 cHI
 cID

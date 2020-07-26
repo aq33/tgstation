@@ -1118,25 +1118,27 @@
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "cS" = (
-/obj/machinery/power/smes{
-	charge = 5e+006
-	},
 /obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "cT" = (
 /obj/structure/cable,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/closet/crate/secure/loot,
-/obj/structure/sign/warning/electricshock{
-	pixel_y = 32
+/obj/machinery/power/smes{
+	charge = 5e+006
 	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "cU" = (
 /obj/structure/cable,
+/obj/structure/sign/warning/electricshock{
+	pixel_y = 32
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "cV" = (
@@ -1166,11 +1168,9 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "cY" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/turf/open/floor/plasteel,
-/area/mine/production)
+/obj/structure/closet/crate/secure/loot,
+/turf/open/floor/plating,
+/area/mine/living_quarters)
 "cZ" = (
 /obj/machinery/mineral/equipment_vendor,
 /obj/effect/turf_decal/tile/brown{
@@ -1295,10 +1295,10 @@
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "do" = (
-/obj/machinery/power/terminal{
-	dir = 1
-	},
 /obj/structure/cable,
+/obj/machinery/power/port_gen/pacman{
+	anchored = 1
+	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "dp" = (
@@ -1454,13 +1454,6 @@
 	anchored = 1
 	},
 /obj/structure/cable,
-/turf/open/floor/plating,
-/area/mine/living_quarters)
-"dG" = (
-/obj/structure/cable,
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "dH" = (
@@ -15032,7 +15025,7 @@ aj
 cM
 cT
 cV
-dG
+cV
 cM
 xm
 er
@@ -15544,7 +15537,7 @@ aD
 aj
 ab
 cM
-cV
+cY
 dq
 dI
 cM
@@ -19913,7 +19906,7 @@ Uh
 cE
 Uh
 Pr
-cY
+PQ
 PQ
 PQ
 PQ
