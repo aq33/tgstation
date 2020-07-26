@@ -11,8 +11,6 @@
 	var/tape_type = /obj/item/tape
 	var/icon_base = "tape"
 
-var/list/tape_roll_applications = list()
-
 /obj/item/policetape
 	name = "police tape"
 	icon = 'icons/obj/policetape.dmi'
