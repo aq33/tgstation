@@ -248,14 +248,6 @@
 /obj/structure/mecha_wreckage/phazon
 	name = "\improper Phazon wreckage"
 	icon_state = "phazon-broken"
-	parts = list(
-		/obj/item/mecha_parts/part/phazon_torso,
-		/obj/item/mecha_parts/part/phazon_head,
-		/obj/item/mecha_parts/part/phazon_left_arm,
-		/obj/item/mecha_parts/part/phazon_right_arm,
-		/obj/item/mecha_parts/part/phazon_left_leg,
-		/obj/item/mecha_parts/part/phazon_right_leg)
-
 
 
 /obj/structure/mecha_wreckage/odysseus
