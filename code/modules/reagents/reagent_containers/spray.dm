@@ -416,3 +416,22 @@
 	desc = "A spray filled with sulphuric acid for offensive use."
 	color = "#00FF32"
 	set_reagent = /datum/reagent/toxin/acid
+
+// Pistolet na wodę
+/obj/item/reagent_containers/spray/watergun
+	name = "water gun"
+	desc = "A toy gun designed to shoot water."
+	icon = 'icons/obj/toy.dmi'
+	icon_state = "watergun"
+	item_state = "watergun"
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	volume = 100
+	stream_mode = TRUE
+	stream_range = 5
+	stream_amount = 5
+	spray_range = 5
+	list_reagents = list(/datum/reagent/water = 100)
+
+/obj/item/reagent_containers/spray/watergun/attack_self()
+	return
