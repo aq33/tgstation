@@ -647,3 +647,15 @@
 	filling_color = "#ECA735"
 	tastes = list("fried corn" = 1)
 	foodtype = JUNKFOOD | FRIED
+
+/obj/item/reagent_containers/food/snacks/foodcube
+	name = "foodcube"
+	desc = "Is it edible?"
+	icon_state = "foodcube"
+	bitesize = 4
+	filling_color = "#ECA735"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/toxin/mindbreaker = 5, /datum/reagent/consumable/nutriment/vitamin = 1)
+	w_class = WEIGHT_CLASS_SMALL
+	tastes = list("salt" = 1, "sugar" = 1)
+	foodtype = GROSS
+	prevent_grinding = TRUE

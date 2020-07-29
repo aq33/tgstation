@@ -469,6 +469,9 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/grenade/barrier,
+/obj/item/grenade/barrier,
+/obj/item/grenade/barrier,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "abo" = (
@@ -5616,6 +5619,7 @@
 	pixel_y = 32
 	},
 /obj/item/multitool,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/fore)
 "aoj" = (
@@ -19499,6 +19503,9 @@
 "bhq" = (
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/structure/bodycontainer/crematorium{
+	id = "crematoriummedbay"
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
@@ -38139,19 +38146,28 @@
 /area/engine/engineering)
 "coS" = (
 /obj/structure/rack,
-/obj/item/gun/energy/laser{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/gun/energy/laser,
-/obj/item/gun/energy/laser{
-	pixel_x = 3;
-	pixel_y = -3
-	},
 /obj/effect/turf_decal/bot,
 /obj/structure/window/reinforced{
 	dir = 1;
 	layer = 2.9
+	},
+/obj/item/gun/ballistic/automatic/laser{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/gun/ballistic/automatic/laser,
+/obj/item/gun/ballistic/automatic/laser{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/ammo_box/magazine/recharge,
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = -3;
+	pixel_y = 3
 	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/security/armory)
@@ -38185,13 +38201,6 @@
 /turf/open/space,
 /area/space/nearstation)
 "cpg" = (
-/obj/item/grenade/barrier{
-	pixel_x = 4
-	},
-/obj/item/grenade/barrier,
-/obj/item/grenade/barrier{
-	pixel_x = -4
-	},
 /obj/structure/table,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -38202,6 +38211,15 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+	},
+/obj/item/storage/box/flashbangs{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/storage/box/handcuffs,
+/obj/item/storage/box/teargas{
+	pixel_x = -3;
+	pixel_y = 3
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
@@ -40271,15 +40289,6 @@
 /area/ai_monitored/turret_protected/ai)
 "cwM" = (
 /obj/structure/rack,
-/obj/item/storage/box/teargas{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/storage/box/handcuffs,
-/obj/item/storage/box/flashbangs{
-	pixel_x = 3;
-	pixel_y = -3
-	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -40290,6 +40299,12 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/gun/ballistic/automatic/pistol/m1911/no_mag,
+/obj/item/gun/ballistic/automatic/pistol/m1911/no_mag,
+/obj/item/gun/ballistic/automatic/pistol/m1911/no_mag,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/m45,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "cwT" = (
@@ -41652,7 +41667,9 @@
 	dir = 4
 	},
 /obj/item/tank/internals/plasma,
-/obj/structure/cable/multilayer,
+/obj/structure/cable/multilayer{
+	cable_layer = 3
+	},
 /turf/open/floor/plating,
 /area/engine/supermatter)
 "cET" = (
@@ -41665,7 +41682,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/structure/cable/multilayer,
+/obj/structure/cable/multilayer{
+	cable_layer = 3
+	},
 /turf/open/floor/plating,
 /area/engine/supermatter)
 "cEU" = (
@@ -47058,6 +47077,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness)
+"kdx" = (
+/obj/structure/cable,
+/obj/machinery/button/crematorium{
+	id = "crematoriummedbay";
+	pixel_y = 25
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/morgue)
 "kdH" = (
 /obj/machinery/computer/warrant{
 	dir = 8
@@ -53455,6 +53482,15 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/wood,
 /area/lawoffice)
+"uEK" = (
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/tile/bar,
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/obj/item/storage/lockbox/dueling,
+/turf/open/floor/plasteel,
+/area/crew_quarters/bar)
 "uFk" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -92414,7 +92450,7 @@ aXj
 aVy
 aSY
 aVy
-aVy
+uEK
 aYI
 bah
 aJC
@@ -95763,7 +95799,7 @@ mkg
 mkg
 mkg
 bfL
-biB
+kdx
 biB
 biB
 cTL
