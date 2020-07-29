@@ -9,4 +9,4 @@
 #define MARTIALART_CQC "CQC"
 #define MARTIALART_PLASMAFIST "plasma fist"
 #define MARTIALART_KARATE "karate"
-#define MARTIALART_OSTRYCIENMGLY "ostrycienmgly"
+#define MARTIALART_SHARPSHADOWOFTHEMIST "Sharp Shadow Of The Mist"

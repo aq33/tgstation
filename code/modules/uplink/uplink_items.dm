@@ -2110,12 +2110,12 @@ datum/uplink_item/role_restricted/superior_honkrender
 	cost = 2
 	illegal_tech = FALSE
 
-/datum/uplink_item/role_restricted/ostrycienmglykit
+/datum/uplink_item/role_restricted/sharpshadowofthemistkit
 	name = "Ostry Cien Mgly"
 	desc = "The Silent Brotherhood of mimes has teamed up with the Spider Clan to create this peace of art. \
 	The bundle contains night vision goggles, a spellbook containing Sharpstar and ostry cien mgly - a martial art. \
 	Ostry Cien Mgly provides you with a subduation technique and upgraded grabbing and resisting. It heavily encourages a stealthy plan of action."
-	item = /obj/item/storage/box/syndicate/ostrycienmgly
+	item = /obj/item/storage/box/syndicate/sharpshadowofthemistkit
 	cost = 20
 	restricted_roles = list("Mime")
 	surplus = 20 // Nikt nie gra mimem, a każdy chce spróbować. Noone plays mime, and everyone wants to try this.

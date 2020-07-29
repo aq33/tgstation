@@ -51,7 +51,7 @@
 #define GELADIKINESIS		/datum/mutation/human/geladikinesis
 #define CRYOKINESIS /datum/mutation/human/cryokinesis
 #define CLUWNEMUT   /datum/mutation/human/cluwne
-#define SUPERANTIGLOWY
+#define SUPERANTIGLOWY /datum/mutations/human/glow/superanti
 
 #define UI_CHANGED "ui changed"
 #define UE_CHANGED "ue changed"

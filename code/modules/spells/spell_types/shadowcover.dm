@@ -1,5 +1,5 @@
 /obj/effect/proc_holder/spell/targeted/genetic/mutate_shadowcover
-	name = "Shadow Cover"
+	name = "Shadow Mist Cover"
 	desc = "This spell causes you to generate a dark cover of shadowy mist."
 
 	school = "transmutation"

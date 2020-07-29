@@ -466,22 +466,22 @@
 	oneuse = FALSE
 	remarks = list("So that is how icing is made!", "Placing fruit on top? How simple...", "Huh layering cake seems harder then this...", "This book smells like candy", "A clown must have made this page, or they forgot to spell check it before printing...", "Wait, a way to cook slime to be safe?")
 
-/obj/item/book/granter/martial/ostrycienmgly
-	martial = /datum/martial_art/ostrycienmgly
+/obj/item/book/granter/martial/sharpshadowofthemist
+	martial = /datum/martial_art/sharpshadowofthemist
 	name = "Striped Scroll"
-	martialname = "ostrycienmgly"
+	martialname = "sharp shadow of the mist"
 	desc = "A striped scroll with seemingly nothing written on it."
 	greet = "<span class='boldannounce'>The Silent Brotherhood has given you a way to silence all who oppose you!</span>"
 	icon_state = "mimescroll"
 	icon = 'icons/obj/mimescroll.dmi'
 	remarks = list("Adjust your bones, become one with mimery...", "Noone asked you about your name...", "Fight the sharp shadow of the mist...", "Break them like if they were the Polish Constitution...")
 
-/obj/item/book/granter/martial/ostrycienmgly/onlearned(mob/living/carbon/user)
+/obj/item/book/granter/martial/sharpshadowofthemist/onlearned(mob/living/carbon/user)
 	..()
 	if(oneuse == TRUE)
 		to_chat(user, "<span class='warning'>[src] The Silent Brotherhood did not mean for you to see this...</span>")
 
-/obj/item/book/granter/martial/ostrycienmgly/recoil(mob/living/carbon/user)
+/obj/item/book/granter/martial/sharpshadowofthemist/recoil(mob/living/carbon/user)
 	to_chat(user, "<span class='warning'>[src] explodes!</span>")
 	playsound(src,'sound/effects/explosion1.ogg',40,1)
 	user.flash_act(1, 1)
