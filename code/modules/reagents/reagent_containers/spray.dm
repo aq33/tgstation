@@ -359,6 +359,7 @@
 	list_reagents = list(/datum/reagent/toxin/plantbgone = 100)
 
 // Pistolet na wodę
+
 /obj/item/reagent_containers/spray/watergun
 	name = "water gun"
 	desc = "A toy gun designed to shoot water."
