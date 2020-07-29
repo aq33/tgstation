@@ -220,6 +220,15 @@
 	conflicts = list(/datum/mutation/human/glow)
 	locked = TRUE
 
+/datum/mutation/human/glow/superanti
+	name = "Super Anti-Glow"
+	desc = "Your skin seems to partially become void, consuming all light around you."
+	text_gain_indication = "<span class='notice'>You can barely see yourself.</span>"
+	glow = -100 //Strong variant.
+	range = 10
+	conflicts = list(/datum/mutation/human/glow, /datum/mutation/human/glow/anti)
+	locked = TRUE
+
 /datum/mutation/human/strong
 	name = "Strength"
 	desc = "The user's muscles slightly expand."
