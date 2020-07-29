@@ -311,7 +311,7 @@
 	return INITIALIZE_HINT_QDEL
 
 /obj/item/book/granter/spell/sharpstar
-	spell = /obj/effect/proc_holder/spell/targeted/conjure_item/summon_ostra_gwiazda
+	spell = /obj/effect/proc_holder/spell/targeted/conjure_item/summon_sharpstar
 	spellname = "Sharpstar"
 	icon_state = "bookblind"
 	desc = "non quaeritur de nomine tuo"

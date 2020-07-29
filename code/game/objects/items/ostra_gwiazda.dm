@@ -1,6 +1,6 @@
-/obj/item/ostra_gwiazda
-	name = "Ostra Gwiazda"
-	desc = "Bardzo ostra gwiazda."
+/obj/item/sharp_star
+	name = "Sharp star"
+	desc = "A military-grade combat throwing knife with a signature white star logo on it.."
 	icon_state = "ostra_gwiazda.dmi"
 	icon = 'icons/obj/ostra_gwiazda.dmi'
 	item_state = "eshield0"

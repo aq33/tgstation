@@ -1,11 +1,11 @@
-/obj/effect/proc_holder/spell/targeted/conjure_item/summon_ostra_gwiazda
+/obj/effect/proc_holder/spell/targeted/conjure_item/summon_sharpstar
 	name = "Summon Sharpstar"
 	desc = "A mime's weapon of choice. Activate a second time to get rid of any evidence of the knives! A deadly throwing knife with a signature star logo, it has the words: non quaeritur de nomine tuo ."
 	invocation_type = "none"
 	include_user = 1
 	range = -1
 	clothes_req = 0
-	item_type = /obj/item/ostra_gwiazda
+	item_type = /obj/item/sharp_star
 
 	charge_max = 100
 	cooldown_min = 100
