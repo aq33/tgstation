@@ -86,8 +86,8 @@
 	required_candidates = 1
 	weight = 2
 	cost = 20
-	requirements = list(101,101,70,40,30,20,20,20,20,20)
-	high_population_requirement = 50
+	requirements = list(90,80,70,40,30,20,20,20,20,20)
+	high_population_requirement = 20
 	flags = HIGHLANDER_RULESET
 	var/required_heads = 3
 

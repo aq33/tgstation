@@ -8187,6 +8187,7 @@
 "sV" = (
 /obj/machinery/door/poddoor/shuttledock,
 /obj/effect/turf_decal/delivery,
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel,
 /area/centcom/evac)
 "sW" = (
