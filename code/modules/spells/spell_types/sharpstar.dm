@@ -5,7 +5,7 @@
 	include_user = 1
 	range = -1
 	clothes_req = 0
-	item_type = /obj/item/sharp_star.dm
+	item_type = /obj/item/sharp_star
 
 	charge_max = 100
 	cooldown_min = 100
