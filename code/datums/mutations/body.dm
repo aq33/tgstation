@@ -220,7 +220,7 @@
 	conflicts = list(/datum/mutation/human/glow)
 	locked = TRUE
 
-/datum/mutation/human/glow/superanti
+/datum/mutation/human/glow/superantiglow
 	name = "Super Anti-Glow"
 	desc = "Your skin seems to partially become void, consuming all light around you."
 	text_gain_indication = "<span class='notice'>You can barely see yourself.</span>"

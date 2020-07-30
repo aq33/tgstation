@@ -9,7 +9,7 @@
 	range = -1
 	include_user = TRUE
 
-	mutations = list(SUPERANTIGLOWY)
+	mutations = list(SUPERANTIGLOW)
 	duration = 150
 	cooldown_min = 1000 //25 deciseconds reduction per rank
 

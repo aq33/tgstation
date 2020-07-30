@@ -1,6 +1,6 @@
-/obj/item/sharp_star
+/obj/item/sharp_star.dm
 	name = "Sharp star"
-	desc = "A military-grade combat throwing knife with a signature white star logo on it.."
+	desc = "A military-grade combat throwing knife with a signature white star logo on it. It has the words: 'on quaeritur de nomine tuo' inscribed on it."
 	icon_state = "ostra_gwiazda.dmi"
 	icon = 'icons/obj/ostra_gwiazda.dmi'
 	item_state = "eshield0"

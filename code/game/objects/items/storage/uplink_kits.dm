@@ -561,12 +561,12 @@
 	new /obj/item/sbeacondrop/constructshell(src)
 	new /obj/item/sbeacondrop/constructshell(src)
 
-/obj/item/storage/box/syndicate/sharpshadowofthemist
+/obj/item/storage/box/syndicate/sharpshadowofthemistkit
 	name = "Sharp Shadow Of The Mist Kit"
 	desc = "They don't ask about your name."
 	icon_state = "syndiebox"
 	illustration = "writing_syndie"
-/obj/item/storage/box/syndicate/sharpshadowofthemist/PopulateContents()
+/obj/item/storage/box/syndicate/sharpshadowofthemistkit/PopulateContents()
 	new /obj/item/book/granter/martial/sharpshadowofthemist(src)
 	new /obj/item/clothing/glasses/night(src)
 	new /obj/item/book/granter/spell/sharpstar(src)
