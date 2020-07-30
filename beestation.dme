@@ -522,7 +522,10 @@
 #include "code\datums\martial\mushpunch.dm"
 #include "code\datums\martial\plasma_fist.dm"
 #include "code\datums\martial\psychotic_brawl.dm"
+<<<<<<< HEAD
 #include "code\datums\martial\sharpshadowofthemist.dm"
+=======
+>>>>>>> b6b307efd9b0ec49d9183b52de2622d26a8c889e
 #include "code\datums\martial\sleeping_carp.dm"
 #include "code\datums\martial\wrestling.dm"
 #include "code\datums\materials\_material.dm"
@@ -927,7 +930,10 @@
 #include "code\game\objects\items\RPD.dm"
 #include "code\game\objects\items\RSF.dm"
 #include "code\game\objects\items\scrolls.dm"
-#include "code\game\objects\items\sharp_star.dm"
+<<<<<<< HEAD
+#include "code\game\objects\items\sharp_star"
+=======
+>>>>>>> b6b307efd9b0ec49d9183b52de2622d26a8c889e
 #include "code\game\objects\items\sharpener.dm"
 #include "code\game\objects\items\shields.dm"
 #include "code\game\objects\items\shooting_range.dm"
