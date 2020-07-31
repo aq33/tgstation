@@ -976,6 +976,25 @@
 	crate_name = "shuttle construction crate"
 	crate_type = /obj/structure/closet/crate/large
 
+/datum/supply_pack/engineering/jedenklej
+	name = "Super-klej (jedna sztuka)"
+	desc = "Klej który może zostać użyty do sklejenia czegoś. Zawiera jeden klej."
+	cost = 500
+	small_item = TRUE
+	contains = list(/obj/item/nanotrasen_glue)
+
+/datum/supply_pack/engineering/klej
+	name = "Super-klej" //piedź bótlii klejió
+	desc = "Klej który może zostać użyty do sklejenia czegoś. Zawiera pięć butelek."
+	cost = 2250 //zniżka
+	contains = list(/obj/item/nanotrasen_glue,
+					/obj/item/nanotrasen_glue,
+					/obj/item/nanotrasen_glue,
+					/obj/item/nanotrasen_glue,
+					/obj/item/nanotrasen_glue)
+	crate_name = "Skrzynia z klejem"
+	crate_type = /obj/structure/closet/crate/wooden
+
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////// Engine Construction /////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
