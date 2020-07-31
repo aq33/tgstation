@@ -64,6 +64,7 @@
 		var/pos = 2+spellnum*31
 		CR.button.screen_loc = "6:[pos],4:-2"
 		CR.button.moved = "6:[pos],4:-2"
+	find_candidates()
 
 /mob/living/simple_animal/hostile/construct/Login()
 	..()
@@ -114,6 +115,10 @@
 	. = ..()
 	if(updating_health)
 		update_health_hud()
+
+/mob/living/simple_animal/hostile/construct/attack_ghost(mob/dead/observer/user)
+	. = ..()
+	give_to_ghost(user)
 
 /////////////////Juggernaut///////////////
 /mob/living/simple_animal/hostile/construct/armored
