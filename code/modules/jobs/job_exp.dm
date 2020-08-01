@@ -35,9 +35,8 @@ GLOBAL_PROTECT(exp_to_update)
 	return exp_requirements
 
 /datum/job/proc/get_exp_req_type()
-	if(title in (GLOB.command_positions | list("AI")))
-		if(CONFIG_GET(flag/use_exp_restrictions_heads_department) && exp_type_department)
-			return exp_type_department
+	if(CONFIG_GET(flag/use_exp_restrictions_heads_department) && exp_type_department)
+		return exp_type_department
 	return exp_type
 
 /proc/job_is_xp_locked(jobtitle)
