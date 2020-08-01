@@ -68,7 +68,7 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
 /obj/structure/closet/supplypod/securitypod
-	style = STYLE_SECURITY
+	style = STYLE_CENTCOM
 	bluespace = TRUE
 	explosionSize = list(0,0,0,1)
 	var/obj/item/radio/Radio
@@ -101,7 +101,7 @@
 /obj/structure/closet/supplypod/Initialize(mapload)
 	. = ..()
 	if (!mapload)
-		var/shippingLane = GLOB.areas_by_type[/area/centcom/supplypod/fly_me_to_the_moon]
+		var/shippingLane = GLOB.areas_by_type[/area/centcom/supplypod/loading/four]
 		forceMove(shippingLane)
 	setStyle(style, TRUE) //Upon initialization, give the supplypod an iconstate, name, and description based on the "style" variable. This system is important for the centcom_podlauncher to function correctly
 
@@ -250,8 +250,8 @@
 	else
 		if(!stay_after_drop) // Departing should be handled manually
 			addtimer(CALLBACK(src, .proc/depart, holder), departureDelay) //Finish up the pod's duties after a certain amount of time\
-	for(var/L in queued_announces)
-		var/datum/callback/C = L
+
+	for(var/datum/callback/C in queued_announces)
 		C.Invoke()
 	LAZYCLEARLIST(queued_announces)
 
@@ -365,8 +365,8 @@
 /obj/effect/DPtarget/proc/beginLaunch(effectCircle) //Begin the animation for the pod falling. The effectCircle param determines whether the pod gets to come in from any descent angle
 	fallingPod = new /obj/effect/DPfall(drop_location(), pod)
 	var/matrix/M = matrix(fallingPod.transform) //Create a new matrix that we can rotate
-	for (var/mob/living/M in pod)
-		M.reset_perspective(null)
+	for (var/mob/living/N in pod)
+		N.reset_perspective(null)
 	var/angle = effectCircle ? rand(0,360) : rand(70,110) //The angle that we can come in from
 	fallingPod.pixel_x = cos(angle)*400 //Use some ADVANCED MATHEMATICS to set the animated pod's position to somewhere on the edge of a circle with the center being the target
 	fallingPod.pixel_z = sin(angle)*400

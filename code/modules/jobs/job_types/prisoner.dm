@@ -29,7 +29,7 @@
 		var/droplocation = pick(GLOB.prisoner_start)
 		var/obj/structure/closet/supplypod/securitypod/arrival_pod = new()
 		prisoner.forceMove(arrival_pod)
-		new /obj/effect/pod_landingzone(droplocation, arrival_pod)
+		new /obj/effect/DPtarget(droplocation, arrival_pod)
 
 /datum/job/prisoner/override_latejoin_spawn()
 	return TRUE
