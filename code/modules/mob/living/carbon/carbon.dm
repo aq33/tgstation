@@ -461,7 +461,6 @@
 	if(stun)
 		Paralyze(80)
 
-	playsound(src, 'sound/misc/vomit.ogg', 50, 1)
 	playsound(get_turf(src), 'sound/effects/splat.ogg', 50, 1)
 	var/turf/T = get_turf(src)
 	if(!blood)
