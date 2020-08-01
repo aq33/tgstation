@@ -23,38 +23,44 @@
 	name = "Explorer"
 	jobtype = /datum/job/explorer
 
-	id = /obj/item/card/id/job/mining
-	belt = /obj/item/pda/mining
+	id = /obj/item/card/id/job/miner
+	belt = /obj/item/pda/shaftminer
 	ears = /obj/item/radio/headset/headset_cargo/mining
-	shoes = /obj/item/clothing/shoes/workboots/explorer
+	shoes = /obj/item/clothing/shoes/workboots/mining
+	glasses = /obj/item/clothing/glasses/meson
+	head = /obj/item/clothing/head/fedora/curator
 	gloves = /obj/item/clothing/gloves/color/black
-	uniform = /obj/item/clothing/under/rank/civilian/curator/treasure_hunter(src)
-	l_pocket = /obj/item/kitchen/knife/combat/survival=1
+	uniform = /obj/item/clothing/under/rank/civilian/curator/treasure_hunter
+	l_pocket = /obj/item/camera
 	r_pocket = /obj/item/survivalcapsule
 	backpack_contents = list(
-		/obj/item/flashlight/seclite=1,\
-        /obj/item/extraction_pack = 1 \
-		/obj/item/gun/energy/kinetic_accelerator = 1\
-        /obj/item/gps/miner = 1)
+		/obj/item/t_scanner/adv_mining_scanner/lesser = 1,
+		/obj/item/flashlight/seclite = 1,
+		/obj/item/storage/bag/ore = 1,
+        /obj/item/extraction_pack = 1,
+        /obj/item/kitchen/knife/combat/survival=1,
+		/obj/item/gun/energy/kinetic_accelerator = 1,
+        /obj/item/gps = 1)
 
 	backpack = /obj/item/storage/backpack/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	duffelbag = /obj/item/storage/backpack/duffelbag
-	box = /obj/item/storage/box/survival_explorer
+	box = /obj/item/storage/box/survival_mining
 
 	chameleon_extras = /obj/item/gun/energy/kinetic_accelerator
 
 /datum/outfit/job/explorer/equipped
 	name = "Exploring (Equipment)"
 	suit = /obj/item/clothing/suit/space/eva
-	helmet = /obj/item/clothing/head/helmet/space/eva
+	head = /obj/item/clothing/head/helmet/space/eva
 	mask = /obj/item/clothing/mask/gas/explorer
 	glasses = /obj/item/clothing/glasses/meson
 	suit_store = /obj/item/tank/internals/oxygen
 	internals_slot = SLOT_S_STORE
 	backpack_contents = list(
-		/obj/item/flashlight/seclite=1,\
-		/obj/item/kitchen/knife/combat/survival=1,\
-		/obj/item/gun/energy/kinetic_accelerator = 1\
-		/obj/item/gps/miner = 1\
+		/obj/item/t_scanner/adv_mining_scanner/lesser = 1,
+		/obj/item/flashlight/seclite= 1,
+		/obj/item/kitchen/knife/combat/survival = 1,
+		/obj/item/gun/energy/kinetic_accelerator = 1,
+		/obj/item/gps/mining = 1,
         /obj/item/extraction_pack = 1)
