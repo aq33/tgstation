@@ -224,7 +224,7 @@ Maintenance panel is [open ? "opened" : "closed"]"}
 	if(emagged && L.stat != DEAD)
 		return FALSE
 
-	for(var/X in list(SLOT_HEAD, ITEM_SLOT_MASK, SLOT_W_UNIFORM, SLOT_WEAR_SUIT, SLOT_SHOES, SLOT_GLOVES))
+	for(var/X in list(SLOT_HEAD, ITEM_SLOT_MASK, SLOT_W_UNIFORM, SLOT_SHOES, SLOT_GLOVES))
 
 		var/obj/item/I = L.get_item_by_slot(X)
 		if(I && HAS_BLOOD_DNA(I))
