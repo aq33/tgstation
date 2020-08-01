@@ -179,6 +179,8 @@
 				heirloom_type = /obj/item/clipboard
 			if("Shaft Miner")
 				heirloom_type = pick(/obj/item/pickaxe/mini, /obj/item/shovel)
+			if("Explorer")
+				heirloom_type = pick(obj/item/device/taperecorder)
 
 	if(!heirloom_type)
 		heirloom_type = pick(
