@@ -22991,6 +22991,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "bdM" = (
@@ -23475,6 +23476,7 @@
 /area/quartermaster/miningdock)
 "beO" = (
 /obj/machinery/holopad,
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "beP" = (
@@ -23829,6 +23831,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "bfH" = (

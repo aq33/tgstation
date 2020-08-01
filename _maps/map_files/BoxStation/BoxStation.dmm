@@ -25908,6 +25908,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "bzH" = (
@@ -26432,6 +26433,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "bBc" = (
@@ -48984,6 +48986,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat/hallway)
+"mFa" = (
+/obj/effect/landmark/start_explorer,
+/turf/open/floor/plasteel,
+/area/quartermaster/miningdock)
 "mFY" = (
 /obj/machinery/vending/modularpc,
 /turf/open/floor/plasteel,
@@ -78855,7 +78861,7 @@ bAZ
 byE
 bzF
 bAc
-byE
+mFa
 byE
 cBB
 byE
