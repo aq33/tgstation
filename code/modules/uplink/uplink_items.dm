@@ -1001,7 +1001,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	item = /obj/item/deployablemine/traitor
 	cost = 4
 	include_modes = list(/datum/game_mode/nuclear/clown_ops)
-
+	
 /datum/uplink_item/explosives/virus_grenade
 	name = "Fungal Tuberculosis Grenade"
 	desc = "A primed bio-grenade packed into a compact box. Comes with five Bio Virus Antidote Kit (BVAK) \
@@ -2109,14 +2109,3 @@ datum/uplink_item/role_restricted/superior_honkrender
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
 	cost = 2
 	illegal_tech = FALSE
-
-/datum/uplink_item/role_restricted/sharpshadowofthemistkit
-	name = "Ostry Cien Mgly"
-	desc = "The Silent Brotherhood of mimes has teamed up with the Spider Clan to create this peace of art. \
-	The bundle contains night vision goggles, a spellbook containing Sharpstar and ostry cien mgly - a martial art. \
-	Ostry Cien Mgly provides you with a subduation technique and upgraded grabbing and resisting. It heavily encourages a stealthy plan of action."
-	item = /obj/item/storage/box/syndicate/sharpshadowofthemistkit
-	cost = 20
-	restricted_roles = list("Mime")
-	surplus = 20 // Nikt nie gra mimem, a każdy chce spróbować. Noone plays mime, and everyone wants to try this.
-
