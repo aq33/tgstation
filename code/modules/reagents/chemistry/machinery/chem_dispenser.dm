@@ -250,8 +250,8 @@
 					if(!cell.use(actual / powerefficiency))
 						say("Not enough energy to complete operation!")
 						return
+					playsound(loc, 'sound/effects/dispenser.ogg', 50, 1)
 					R.add_reagent(reagent, actual)
-
 					work_animation()
 			else
 				recording_recipe[reagent_name] += amount

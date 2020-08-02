@@ -98,6 +98,11 @@
 	else
 		..()
 
+/obj/item/tank/jetpack/Moved(atom/OldLoc, Dir)
+	. = ..()
+	if(on)
+		playsound(src, 'sound/vehicles/jetpack.ogg', 100, 1)
+
 /obj/item/tank/jetpack/improvised
 	name = "improvised jetpack"
 	desc = "A jetpack made from two air tanks, a fire extinguisher and some atmospherics equipment. It doesn't look like it can hold much."

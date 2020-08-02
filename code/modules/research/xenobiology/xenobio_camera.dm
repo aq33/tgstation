@@ -218,6 +218,7 @@
 				S.visible_message("[S] vanishes in a flash of light!")
 				S.forceMove(X)
 				X.stored_slimes += S
+				playsound(C.loc, 'sound/effects/stealthoff.ogg', 100, 1)
 	else
 		to_chat(owner, "<span class='warning'>Target is not near a camera. Cannot proceed.</span>")
 

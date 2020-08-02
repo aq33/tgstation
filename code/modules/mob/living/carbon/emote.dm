@@ -95,3 +95,7 @@
 	key = "wink"
 	key_third_person = "winks"
 	message = "winks"
+
+/datum/emote/living/carbon/wink/get_sound(mob/living/user)
+	if(ishuman(user) && !user.mind.miming)
+		return 'sound/misc/wink.ogg'

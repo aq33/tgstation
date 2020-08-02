@@ -7,6 +7,11 @@
 	message = "cries"
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/carbon/human/cry/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	return 'sound/misc/cry.ogg'
+
 /datum/emote/living/carbon/human/dap
 	key = "dap"
 	key_third_person = "daps"
