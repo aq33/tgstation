@@ -266,7 +266,14 @@
 	list_reagents = list(/datum/reagent/consumable/ethanol/ftliver = 30)
 	foodtype = ALCOHOL
 
-/obj/item/reagent_containers/food/drinks/soda_cans/beer/light
+/obj/item/reagent_containers/food/drinks/beer
+	name = "space beer"
+	desc = "Beer. In space."
+	icon_state = "beer"
+	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 30)
+	foodtype = GRAIN | ALCOHOL
+
+/obj/item/reagent_containers/food/drinks/beer/light
 	name = "Carp Lite"
 	desc = "Brewed with \"Pure Ice Asteroid Spring Water\"."
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/light = 30)
@@ -561,7 +568,7 @@
 	icon_state = "air"
 	list_reagents = list(/datum/reagent/nitrogen = 24, /datum/reagent/oxygen = 6)
 
-/obj/item/reagent_containers/food/drinks/soda_cans/beer
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull
 	name = "mocny full"
 	desc = "Najlepsze w całym kosmosie."
 	icon_state = "mocnyfull"
