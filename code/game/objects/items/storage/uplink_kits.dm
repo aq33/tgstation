@@ -571,4 +571,4 @@
 	new /obj/item/clothing/glasses/night(src)
 	new /obj/item/book/granter/spell/sharpstar(src)
 	new /obj/item/pen(src)
-	new /obj/item/book/granter/spell/shadowcover(src)
+	new /obj/item/flashlight/voidlight(src)

@@ -6,7 +6,7 @@
 	item_state = "eshield0"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	force = 15
+	force = 20
 	throwforce = 15
 	throw_speed = 4
 	embedding = list("embedded_pain_multiplier" = 10, "embed_chance" = 100, "embedded_fall_chance" = 20)
