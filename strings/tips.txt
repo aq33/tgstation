@@ -1,113 +1,113 @@
-Miejsca z³¹czeñ map w kosmosie s¹ losowane z ka¿d¹ rund¹, ale poza tym s¹ spójne pomiêdzy rundami. Pamiêtaj ¿e nie zawsze s¹ dwukierunkowe!
-Mo¿esz z³apaæ rzucone przedmity jeœli w³¹czysz tryb rzucania z pust¹, aktywn¹ rêk¹.
-¯eby otworzyæ sejf w skarbcu u¿yj na nim stetoskopu lub trzech plastikowych ³adunków wybuchowych.
-Mo¿esz wspi¹æ siê na stó³ przeci¹gaj¹c siebie na niego. Zajmuje to chwilê i sprawia, ¿e rzeczy, które trzymasz w rêce, k³adziesz na stole. Klikniêcie na stó³, na który ktoœ siê wspina, sprawia ¿e go zrzucisz.
-Mo¿esz przeci¹gn¹æ innych na siebie, ¿eby otworzyæ menu pozwalaj¹ce ci na zdjêcie lub za³o¿enie na nich ekwipunku. WeŸ pod uwagê, ¿e exosuit, czy he³m uniemo¿liwi ci zdjêcie rzeczy spod niego oraz ¿e zdjêcie niektórych rzeczy mo¿e zaj¹æ d³u¿ej ni¿ innych.
-Klikniêcie na drzwi, zamiast wejœcie w nie, pozostawi je otwarte. Mo¿esz je potem zamkn¹æ znowu w nie klikaj¹c.
-Lec¹c przez przestrzeñ kosmiczn¹, mo¿esz prysn¹æ gaœnic¹, strzeliæ z broni, lub rzuciæ czymœ, ¿eby zmieniæ kierunek.
-Mo¿esz zmieniæ tryb sterowania wciskaj¹c tab, jednym steruje siê strza³kami, drugim WASD. Pamiêtaj, ¿e zmieniaj¹ wtedy tak¿e hotkeye.
-Stroje przeciwpo¿arowe i kurtki zimowe zapewniaj¹ ci drobn¹ ochronê przed zimnem kosmosu, przydaje siê to kiedy chcesz przetrwaæ d³u¿ej w pró¿ni, ale nadal nie zastêpuje stroju kosmicznego.
-Od³amki szk³a mo¿na zespawaæ, ¿eby zrobiæ szk³o, a metalowe prêty, ¿eby metalow¹ blachê. Rudy te¿ mo¿na zespawaæ, ale zu¿yje to sporo paliwa.
-Jeœli musisz przytaszczyæ ze sob¹ sporo ludzi, czy to ¿eby ich uratowaæ, czy wys³aæ w kosmos, upchnij ich do skrzynki lub szafki zanim zaczniesz ich ci¹gn¹æ.
-Mo¿ech kogoœ chwyciæ klikaj¹c na niego z grab intent, a potem klikn¹æ jeszcze raz ¿eby chwyciæ go agresywnie. Agresywny chwyt og³usza osobê i pozwala na po³o¿enie jej na stó³ lub rzucenie jej z w³¹czonym trybem rzucania.
-Wciskaj¹c alt i klikaj¹c na kratkê pozwala na zobaczenie jej zawartoœci w oknie po prawej stronie, co jest o wiele szybsze ni¿ klikanie prawym przyciskiem myszy.
-Przycisk resist pozwala ci zdj¹æ kajdanki, odwi¹zaæ siê od ³ó¿ka, krzes³a, czy zamkniêtej szafki. Jeœli utkn¹³eœ, to spróbuj sie opieraæ!
-Mo¿esz przesuwaæ przedmioty ci¹gn¹c je, a nastêpnie klikaj¹c na s¹siedni¹ kratkê pust¹ rêk¹.
-Mo¿esz przefarbowaæ takie rzeczy jak kombinezony, czy rêkawiczki, wrzucaj¹c je do prania razem z pastelami.
-Tunele techniczne pe³ne s¹ ekwipunku losowo wybieranego co rundê, idŸ sprawdziæ, czy coœ z tego mo¿e ci siê przydaæ.
-Niektóre role nie mog¹ byæ antagonistami, ale losowanie antagonisty odbywa siê pierwsze. Na przyk³ad mo¿esz wybraæ Oficera Ochrony na wysoki priorytet bez zmieniania swojej szansy na zostanie antagonist¹ - po prostu dostaniesz inn¹ rolê.
-Jest wiele miejsc do ukrycia kontrabandy. Kilka na pocz¹tek: kosz na bieliznê, sp³uczka klozetowa, torba na zw³oki. Eksperymentuj i znajdŸ ich wiêcej!
-Mo¿esz u¿yæ maszyny w Skarbcu, ¿eby z³o¿yæ depozyt lub okraœæ bud¿et £adowni.
-Kiedy doœwiadczasz problemów technicznych, wyczyœæ pamiêæ cache (byond launcher > cogwheel > preferences > game prefs), zaktualizuj BYONDa i zrób reloga.
-Wiêkszoœæ rzeczy ma specjalne interakcje, kiedy klikniesz na nie z altem, shiftem, controlem lub œrodkowym przyciskiem myszy. Eksperymentuj!
-Mo¿esz u¿yæ œrubokrêta na nie-chemicznych granatach, ¿eby zmieniæ ich czas zap³onu na 5, 3, 1 sekund lub natycmiastowe BOOM. Nitk siê tego nie spodziewa.
-Jeœli jesteœ w trakcie bójki z innym graczem, atak jest najlepsz¹ obron¹. Ucieczka zazwyczaj wiele nie wskóra.
-Ró¿ne bronie maj¹ ró¿ne mocne strony. Niektóre bronie, takie jak w³ócznie, shurikeny, czy p³ytki pod³ogowe, zadaj¹c wiêcej obra¿eñ kiedy siê nimi rzuca.
-Rzucenie szklank¹ wody na pod³ogê sprawi, ¿e kratka zrobi siê œliska, spowalniaj¹c pogoñ za tob¹.
-Kiedy masz do czynienia z ochron¹, twoja kara mo¿e zostaæ ca³kowicie zniesiona poprzez kooperacjê i k³amstwa.
-Chat P2P na tabletach i laptopach zapewnia bezpieczny sposób na komunikacjê z innymi ludŸmi.
-Eksperymentuj z ustawieniami reaktora Supermaterii, ¿eby zmaksymalizowaæ produkcjê mocy, nie nara¿aj jednak zdrowia za³ogi!
-Wszyscy kiedyœ zaczynaliœmy, miej cierpliwoœæ i pomagaj nowym graczom.
-Do wiêkszoœæi ubrañ wchodz¹dzych w slot exosuit'a mo¿na w³o¿yæ ma³y przedmiot, taki jak puszka farby, latarka, czy zapasowa butla powietrza.
-Wiekszoœæ exosuitów powi¹zanych z dan¹ prac¹ mo¿e pomieœciæ w sobie rzeczy zwi¹zane z prac¹, na przyk³ad Technik Atmosferyczny mo¿e do swojego exosuit w³o¿yæ RPD, a fartuch laboratoryjny mo¿e pomieœciæ wiêkszoœæ lekarstw.
-Jeœli u¿ywasz trybu hotkey'owego mo¿esz przestaæ ci¹gn¹æ przedmioty wciskaj¹c H.
-Terminal autodestrukcji stacji jest niezniszczalny. IdŸ znaleŸæ dysk, zamiast próbowaæ go zniszczyæ.
-Jeœli jest coœ czego potrzebujesz z innego departamentu, spróbuj zapytaæ! To nie jest gra jednoosobowa, zdziwi³byœ siê ile rzeczy mo¿na zdzia³aæ razem!
-Szybko stracisz zainteresowanie gr¹, jeœli tylko zabijasz i liczysz na wygran¹. Wrzuæ na luz i zacznij gadaæ do ludzi - to o wiele lepsze doœwiadczenie!
-Felinidy tymczasowo rozpraszaj¹ siê widz¹c œwiat³o lasera. Mo¿esz to wykorzystaæ do zyskania przewagi, kiedy goni ciê jakiœ.
-Nie bój siê prosiæ o pomoc, inncy graczy, czy adminów.
-Jako Kapitan jesteœ najczêstszym celem ataków na stacji. Wszytstko, od rewolucji, przez nukleranych operatorów, a¿ po zdrajców bêdzie chcia³o pozbawiæ ciê twojego antycznego pistoletu laserowego lub twojego ¿ycia.
-Jako Kapitan zawsze na pocz¹tku zmiany zabieraj ze sob¹ dysk uwierzetelniaj¹cy i wskaŸnik. Dobrym pomys³em jest danie go jakiejœ zaufanej g³owie departamentu.
-Jako Kapitan masz pe³ny dostêp i kontrolê nad stacj¹, nie oznacza to jednak, ¿e bycie z³ym goœciem nie doprowadzi do bana.
-Jako Kapitan mo¿esz kupywaæ nowe promy ratunkowe z konsoli komunikacyjnej. Niektóre wymagaj¹ pieniêdzy, a inne dadz¹ ci pieni¹dze w zamian. WeŸ pod uwagê, ¿e kupywanie niebezpiecznych promów mo¿e nie spodobaæ siê twojej za³odze.
-Jako Ordynator posiadasz hypospray, który jest jak natychmiastowy zastrzk, który mo¿na uzupe³niaæ i mo¿e pomieœciæ 30 jednostek danej substancji zamiast standardowych 15.
-Jako Ordyantor podczas kryzysu koordynuj pracê lekarzy, chemików i genetyków, ¿eby utrzymaæ za³ogê ¿yw¹ i zdatn¹ do walki.
-Jako Ordynator twój kombinezon kosmiczny jest w stanie pomieœciæ ca³ego medkita!
-Jako Ordynator mo¿esz spróbowaæ pobraæ krew z huska, ¿eby ustaliæ jego przyczynê. Jeœli uda³o ci siê j¹ pobraæ, to powsta³ on w wyniku wysokiej temperatury lub laserów, jeœli nie, to potwierdzi³eœ obecnoœæ changeling'a na pok³adzie.
-Jako Lekarz mo¿esz zauwa¿yæ, ¿e mimo ¿e wêgiel aktywny i antytoksyna lecz¹ obra¿enia od toksyn, to wêgiel usunie wszystkie substancje z cia³a pacjenta, a antytoksyna jedynie wybrane toksyny oraz jest ryzyko jej przedawkowania.
-Jako Lekarz mo¿esz chirurgicznie wszczepiæ lub usun¹æ przedmioty z cia³a swojego pacjenta. Rodzaj tych przedmiotów wacha siê od bomb, a¿ po larwy Obcych.
-Jako Lekarz musisz u¿ywaæ help intent podczas wykonywania operacji, jeœli chcesz ¿eby siê powiod³a. U¿ywanie disarm intent'a spowoduje, ¿e specjalnie Ÿle wykonasz dan¹ czynnoœæ operacji.
-Jako Lekarz jeœli zobaczysz, ¿e opis cia³a mówi "...and their soul has departed", znaczy to ¿e cia³o nie ma ju¿ duszy i nie ma mo¿liwoœci jego o¿ywienia lub sklonowania.
-Jako Lekarz musisz wiedzieæ, ¿e operowanie plasmamen'ów nie jest niemo¿liwe! Salbutamol chroni ich przed uduszeniem, a prysznic zapobiega spaleniu siê ¿ywcem. Mo¿esz nawet wykonaæ na nich operacjê, jeœli po³o¿ysz ich na noszy pod prysznicem.
-Jako Lekarz mo¿esz wskazaæ swoim penlight na kogoœ, ¿eby utworzyæ medyczny hologram. To da znaæ twojemu pacjentowi, ¿e idziesz mu pomóc.
-Jako Lekarz mo¿esz usun¹æ implanty z cia³a trzymaj¹ w nieaktywnej rêce pude³ko na implanty podczas zabiegu usuniêcia implantu.
-Jako Lekarz u¿ywaj¹c skaneru klonowania na pacjencie automatycznie wszepiasz mu implant monitoruj¹cy jego zdrowie. Przydatne do œledzenia zdrowia cz³onków za³ogi, którzy nie w³¹czyli sensorów!
-Jako Chemik masz do dyspozycji setkê substancji, które mog¹ leczyæ i jeszcze wiêcej, które mog¹ zraniæ. Eksperymentuj!
-Jako Chemik zauwa¿ysz, ¿e niektóre substancje mog¹ zostaæ zsyntetyzowane w odpowiedniej temperaturze za pomoc¹ podgrzewacza lub zapalniczki i tym podobnch.
-Jako Chemik us³yszysz czêsto od za³ogi proœby o konkretne substancje. Dla przyk³adu: clonexadone i mannitol do kriokomór, niestabilny mutagen i saltpetre dla botaniki, a tak¿e pigu³ki i plastry do leczenia.
-Jako Chemik mo¿esz stworzyæ butelki na 100 u za pomoc¹ plastiku. ChemMaster mo¿e tworzyæ nieskoñczonoœæ butelek na 30u, a jeœli posiadasz odpowiednie badania w medycznym techfabie mo¿esz wyprodukowaæ pojemniki na od 120 do 300u.
-Jako Chemik mo¿esz na³adowaæ swój podajnik za pomoc¹ inducera lub wymieniaj¹c bateriê.
-Jako Chemik musisz wiedzieæ, ¿e po³¹czenie wody i potasu produkuje eksplozjê o sile proporcjonalnej do iloœci u¿ytej substancji. Nie rób tego.
-Jako Genetyk mo¿esz szybciej wyj¹æ kogoœ z komory klonowania wy³¹czaj¹c pr¹d. WeŸ pod uwagê, ¿e taka osoba mo¿e mieæ wiêcej obra¿eñ genetycznych i utraciæ czêœæ kluczowych organów.
-Jako Genetyk pamiêtaj, ¿e A ³¹czy siê z T, a G z C.
-Jako Genetyk mo¿esz zmieniæ siê w hulk'a i zadawaæ wiêcej obra¿eñ w walce wrêcz, rozwalaæ œciany go³ymi rêkami i stunlock'owaæ ludzi. Jednak nie mo¿esz strzelaæ, stracisz swój status hulk'a, kiedy bêdziesz w stanie krytycznym, a AI nie bêdzie uznawa³o ciê za cz³owieka.
-Jako Wirolog mo¿esz tworzyæ wirusy lecz¹ce ludzi nawet z krytycznego stanu lub groŸne na tyle, ¿e zabij¹ ca³¹ za³ogê w ci¹gu paru minut. Eksperymentuj!
-Jako Wirolog potrzebujesz tylko ma³ej dawki szczepionki, ¿eby by³a skuteczna. Poproœ Chemika o pomoc, ¿eby rozprowadzaæ szczepionkê efektywniej.
-Jako Dyrektor Naukowy mo¿esz wyj¹æ AI z jego rdzenia i za³adowaæ je na intelliCard, co pozwala ci zobaczyæ ich prawa, nawet ion'owe, czy syndykatu. Nastêpnie mo¿na je umieœciæ w konsoli naprawy integralnoœci systemu, ¿eby je o¿ywiæ/naprawiæ.
-Jako Dyrektor Naukowy mo¿esz usypiaæ cyborgi, zamiast ich wysadzaæ. Potem mo¿esz zresetowaæ ich prawa, a jeœli to nie pomaga, bezpiecznie roz³o¿yæ.
-Jako Naukowiec mo¿esz u¿yæ mutagennej toksyny pozyskiwanej ze slime'ów, ¿eby zmieniæ siê w galaretkowatego mutanta. Ka¿da jego rasa ma wyj¹tkowe umiejêtnoœci - na przyk³ad moce telepatyczne lub duplikuj¹ce siê cia³o!
-Jako Naukowiec mo¿esz zmaksymalizowaæ liczbê u¿yæ silme'a podaj¹c im slime'owe sterydy, pozyskiwane z fioletowych slime'ów, kiedy jeszcze ¿yj¹. Mo¿esz u¿yæ wzmacniacza ekstraktu, robionego z ceruleunowych slime'ów, na ka¿dym ekstrakcie.
-Jako Naukowiec mo¿esz zneutralizowaæ anomaliê analizuj¹c j¹ analizatorem, a nstêpnie wysy³aj¹c sygna³ na czêstotliwoœci jak¹ oddaje anomalia za pomoc¹ urz¹dzeniem zdalnego sygnalizowania lub jeœli posiadasz odpowiednie badania, uderz anomaliê analizatorem anomalii. Wtedy anomalia pozostawi za sob¹ swój rdzeñ, który mo¿na wykorzystaæ do skonstruowania mecha Phazona lub pancerzy reakcyjnych!
+Miejsca zÅ‚Ä…czeÅ„ map w kosmosie sÄ… losowane z kaÅ¼dÄ… rundÄ…, ale poza tym sÄ… spÃ³jne pomiÄ™dzy rundami. PamiÄ™taj Å¼e nie zawsze sÄ… dwukierunkowe!
+MoÅ¼esz zÅ‚apaÄ‡ rzucone przedmity jeÅ›li wÅ‚Ä…czysz tryb rzucania z pustÄ…, aktywnÄ… rÄ™kÄ….
+Å»eby otworzyÄ‡ sejf w skarbcu uÅ¼yj na nim stetoskopu lub trzech plastikowych Å‚adunkÃ³w wybuchowych.
+MoÅ¼esz wspiÄ…Ä‡ siÄ™ na stÃ³Å‚ przeciÄ…gajÄ…c siebie na niego. Zajmuje to chwilÄ™ i sprawia, Å¼e rzeczy, ktÃ³re trzymasz w rÄ™ce, kÅ‚adziesz na stole. KlikniÄ™cie na stÃ³Å‚, na ktÃ³ry ktoÅ› siÄ™ wspina, sprawia Å¼e go zrzucisz.
+MoÅ¼esz przeciÄ…gnÄ…Ä‡ innych na siebie, Å¼eby otworzyÄ‡ menu pozwalajÄ…ce ci na zdjÄ™cie lub zaÅ‚oÅ¼enie na nich ekwipunku. WeÅº pod uwagÄ™, Å¼e exosuit, czy heÅ‚m uniemoÅ¼liwi ci zdjÄ™cie rzeczy spod niego oraz Å¼e zdjÄ™cie niektÃ³rych rzeczy moÅ¼e zajÄ…Ä‡ dÅ‚uÅ¼ej niÅ¼ innych.
+KlikniÄ™cie na drzwi, zamiast wejÅ›cie w nie, pozostawi je otwarte. MoÅ¼esz je potem zamknÄ…Ä‡ znowu w nie klikajÄ…c.
+LecÄ…c przez przestrzeÅ„ kosmicznÄ…, moÅ¼esz prysnÄ…Ä‡ gaÅ›nicÄ…, strzeliÄ‡ z broni, lub rzuciÄ‡ czymÅ›, Å¼eby zmieniÄ‡ kierunek.
+MoÅ¼esz zmieniÄ‡ tryb sterowania wciskajÄ…c tab, jednym steruje siÄ™ strzaÅ‚kami, drugim WASD. PamiÄ™taj, Å¼e zmieniajÄ… wtedy takÅ¼e hotkeye.
+Stroje przeciwpoÅ¼arowe i kurtki zimowe zapewniajÄ… ci drobnÄ… ochronÄ™ przed zimnem kosmosu, przydaje siÄ™ to kiedy chcesz przetrwaÄ‡ dÅ‚uÅ¼ej w prÃ³Å¼ni, ale nadal nie zastÄ™puje stroju kosmicznego.
+OdÅ‚amki szkÅ‚a moÅ¼na zespawaÄ‡, Å¼eby zrobiÄ‡ szkÅ‚o, a metalowe prÄ™ty, Å¼eby metalowÄ… blachÄ™. Rudy teÅ¼ moÅ¼na zespawaÄ‡, ale zuÅ¼yje to sporo paliwa.
+JeÅ›li musisz przytaszczyÄ‡ ze sobÄ… sporo ludzi, czy to Å¼eby ich uratowaÄ‡, czy wysÅ‚aÄ‡ w kosmos, upchnij ich do skrzynki lub szafki zanim zaczniesz ich ciÄ…gnÄ…Ä‡.
+MoÅ¼ech kogoÅ› chwyciÄ‡ klikajÄ…c na niego z grab intent, a potem kliknÄ…Ä‡ jeszcze raz Å¼eby chwyciÄ‡ go agresywnie. Agresywny chwyt ogÅ‚usza osobÄ™ i pozwala na poÅ‚oÅ¼enie jej na stÃ³Å‚ lub rzucenie jej z wÅ‚Ä…czonym trybem rzucania.
+WciskajÄ…c alt i klikajÄ…c na kratkÄ™ pozwala na zobaczenie jej zawartoÅ›ci w oknie po prawej stronie, co jest o wiele szybsze niÅ¼ klikanie prawym przyciskiem myszy.
+Przycisk resist pozwala ci zdjÄ…Ä‡ kajdanki, odwiÄ…zaÄ‡ siÄ™ od Å‚Ã³Å¼ka, krzesÅ‚a, czy zamkniÄ™tej szafki. JeÅ›li utknÄ…Å‚eÅ›, to sprÃ³buj sie opieraÄ‡!
+MoÅ¼esz przesuwaÄ‡ przedmioty ciÄ…gnÄ…c je, a nastÄ™pnie klikajÄ…c na sÄ…siedniÄ… kratkÄ™ pustÄ… rÄ™kÄ….
+MoÅ¼esz przefarbowaÄ‡ takie rzeczy jak kombinezony, czy rÄ™kawiczki, wrzucajÄ…c je do prania razem z pastelami.
+Tunele techniczne peÅ‚ne sÄ… ekwipunku losowo wybieranego co rundÄ™, idÅº sprawdziÄ‡, czy coÅ› z tego moÅ¼e ci siÄ™ przydaÄ‡.
+NiektÃ³re role nie mogÄ… byÄ‡ antagonistami, ale losowanie antagonisty odbywa siÄ™ pierwsze. Na przykÅ‚ad moÅ¼esz wybraÄ‡ Oficera Ochrony na wysoki priorytet bez zmieniania swojej szansy na zostanie antagonistÄ… - po prostu dostaniesz innÄ… rolÄ™.
+Jest wiele miejsc do ukrycia kontrabandy. Kilka na poczÄ…tek: kosz na bieliznÄ™, spÅ‚uczka klozetowa, torba na zwÅ‚oki. Eksperymentuj i znajdÅº ich wiÄ™cej!
+MoÅ¼esz uÅ¼yÄ‡ maszyny w Skarbcu, Å¼eby zÅ‚oÅ¼yÄ‡ depozyt lub okraÅ›Ä‡ budÅ¼et Åadowni.
+Kiedy doÅ›wiadczasz problemÃ³w technicznych, wyczyÅ›Ä‡ pamiÄ™Ä‡ cache (byond launcher > cogwheel > preferences > game prefs), zaktualizuj BYONDa i zrÃ³b reloga.
+WiÄ™kszoÅ›Ä‡ rzeczy ma specjalne interakcje, kiedy klikniesz na nie z altem, shiftem, controlem lub Å›rodkowym przyciskiem myszy. Eksperymentuj!
+MoÅ¼esz uÅ¼yÄ‡ Å›rubokrÄ™ta na nie-chemicznych granatach, Å¼eby zmieniÄ‡ ich czas zapÅ‚onu na 5, 3, 1 sekund lub natycmiastowe BOOM. Nitk siÄ™ tego nie spodziewa.
+JeÅ›li jesteÅ› w trakcie bÃ³jki z innym graczem, atak jest najlepszÄ… obronÄ…. Ucieczka zazwyczaj wiele nie wskÃ³ra.
+RÃ³Å¼ne bronie majÄ… rÃ³Å¼ne mocne strony. NiektÃ³re bronie, takie jak wÅ‚Ã³cznie, shurikeny, czy pÅ‚ytki podÅ‚ogowe, zadajÄ…c wiÄ™cej obraÅ¼eÅ„ kiedy siÄ™ nimi rzuca.
+Rzucenie szklankÄ… wody na podÅ‚ogÄ™ sprawi, Å¼e kratka zrobi siÄ™ Å›liska, spowalniajÄ…c pogoÅ„ za tobÄ….
+Kiedy masz do czynienia z ochronÄ…, twoja kara moÅ¼e zostaÄ‡ caÅ‚kowicie zniesiona poprzez kooperacjÄ™ i kÅ‚amstwa.
+Chat P2P na tabletach i laptopach zapewnia bezpieczny sposÃ³b na komunikacjÄ™ z innymi ludÅºmi.
+Eksperymentuj z ustawieniami reaktora Supermaterii, Å¼eby zmaksymalizowaÄ‡ produkcjÄ™ mocy, nie naraÅ¼aj jednak zdrowia zaÅ‚ogi!
+Wszyscy kiedyÅ› zaczynaliÅ›my, miej cierpliwoÅ›Ä‡ i pomagaj nowym graczom.
+Do wiÄ™kszoÅ›Ä‡i ubraÅ„ wchodzÄ…dzych w slot exosuit'a moÅ¼na wÅ‚oÅ¼yÄ‡ maÅ‚y przedmiot, taki jak puszka farby, latarka, czy zapasowa butla powietrza.
+WiekszoÅ›Ä‡ exosuitÃ³w powiÄ…zanych z danÄ… pracÄ… moÅ¼e pomieÅ›ciÄ‡ w sobie rzeczy zwiÄ…zane z pracÄ…, na przykÅ‚ad Technik Atmosferyczny moÅ¼e do swojego exosuit wÅ‚oÅ¼yÄ‡ RPD, a fartuch laboratoryjny moÅ¼e pomieÅ›ciÄ‡ wiÄ™kszoÅ›Ä‡ lekarstw.
+JeÅ›li uÅ¼ywasz trybu hotkey'owego moÅ¼esz przestaÄ‡ ciÄ…gnÄ…Ä‡ przedmioty wciskajÄ…c H.
+Terminal autodestrukcji stacji jest niezniszczalny. IdÅº znaleÅºÄ‡ dysk, zamiast prÃ³bowaÄ‡ go zniszczyÄ‡.
+JeÅ›li jest coÅ› czego potrzebujesz z innego departamentu, sprÃ³buj zapytaÄ‡! To nie jest gra jednoosobowa, zdziwiÅ‚byÅ› siÄ™ ile rzeczy moÅ¼na zdziaÅ‚aÄ‡ razem!
+Szybko stracisz zainteresowanie grÄ…, jeÅ›li tylko zabijasz i liczysz na wygranÄ…. WrzuÄ‡ na luz i zacznij gadaÄ‡ do ludzi - to o wiele lepsze doÅ›wiadczenie!
+Felinidy tymczasowo rozpraszajÄ… siÄ™ widzÄ…c Å›wiatÅ‚o lasera. MoÅ¼esz to wykorzystaÄ‡ do zyskania przewagi, kiedy goni ciÄ™ jakiÅ›.
+Nie bÃ³j siÄ™ prosiÄ‡ o pomoc, inncy graczy, czy adminÃ³w.
+Jako Kapitan jesteÅ› najczÄ™stszym celem atakÃ³w na stacji. Wszytstko, od rewolucji, przez nukleranych operatorÃ³w, aÅ¼ po zdrajcÃ³w bÄ™dzie chciaÅ‚o pozbawiÄ‡ ciÄ™ twojego antycznego pistoletu laserowego lub twojego Å¼ycia.
+Jako Kapitan zawsze na poczÄ…tku zmiany zabieraj ze sobÄ… dysk uwierzetelniajÄ…cy i wskaÅºnik. Dobrym pomysÅ‚em jest danie go jakiejÅ› zaufanej gÅ‚owie departamentu.
+Jako Kapitan masz peÅ‚ny dostÄ™p i kontrolÄ™ nad stacjÄ…, nie oznacza to jednak, Å¼e bycie zÅ‚ym goÅ›ciem nie doprowadzi do bana.
+Jako Kapitan moÅ¼esz kupywaÄ‡ nowe promy ratunkowe z konsoli komunikacyjnej. NiektÃ³re wymagajÄ… pieniÄ™dzy, a inne dadzÄ… ci pieniÄ…dze w zamian. WeÅº pod uwagÄ™, Å¼e kupywanie niebezpiecznych promÃ³w moÅ¼e nie spodobaÄ‡ siÄ™ twojej zaÅ‚odze.
+Jako Ordynator posiadasz hypospray, ktÃ³ry jest jak natychmiastowy zastrzk, ktÃ³ry moÅ¼na uzupeÅ‚niaÄ‡ i moÅ¼e pomieÅ›ciÄ‡ 30 jednostek danej substancji zamiast standardowych 15.
+Jako Ordyantor podczas kryzysu koordynuj pracÄ™ lekarzy, chemikÃ³w i genetykÃ³w, Å¼eby utrzymaÄ‡ zaÅ‚ogÄ™ Å¼ywÄ… i zdatnÄ… do walki.
+Jako Ordynator twÃ³j kombinezon kosmiczny jest w stanie pomieÅ›ciÄ‡ caÅ‚ego medkita!
+Jako Ordynator moÅ¼esz sprÃ³bowaÄ‡ pobraÄ‡ krew z huska, Å¼eby ustaliÄ‡ jego przyczynÄ™. JeÅ›li udaÅ‚o ci siÄ™ jÄ… pobraÄ‡, to powstaÅ‚ on w wyniku wysokiej temperatury lub laserÃ³w, jeÅ›li nie, to potwierdziÅ‚eÅ› obecnoÅ›Ä‡ changeling'a na pokÅ‚adzie.
+Jako Lekarz moÅ¼esz zauwaÅ¼yÄ‡, Å¼e mimo Å¼e wÄ™giel aktywny i antytoksyna leczÄ… obraÅ¼enia od toksyn, to wÄ™giel usunie wszystkie substancje z ciaÅ‚a pacjenta, a antytoksyna jedynie wybrane toksyny oraz jest ryzyko jej przedawkowania.
+Jako Lekarz moÅ¼esz chirurgicznie wszczepiÄ‡ lub usunÄ…Ä‡ przedmioty z ciaÅ‚a swojego pacjenta. Rodzaj tych przedmiotÃ³w wacha siÄ™ od bomb, aÅ¼ po larwy Obcych.
+Jako Lekarz musisz uÅ¼ywaÄ‡ help intent podczas wykonywania operacji, jeÅ›li chcesz Å¼eby siÄ™ powiodÅ‚a. UÅ¼ywanie disarm intent'a spowoduje, Å¼e specjalnie Åºle wykonasz danÄ… czynnoÅ›Ä‡ operacji.
+Jako Lekarz jeÅ›li zobaczysz, Å¼e opis ciaÅ‚a mÃ³wi "...and their soul has departed", znaczy to Å¼e ciaÅ‚o nie ma juÅ¼ duszy i nie ma moÅ¼liwoÅ›ci jego oÅ¼ywienia lub sklonowania.
+Jako Lekarz musisz wiedzieÄ‡, Å¼e operowanie plasmamen'Ã³w nie jest niemoÅ¼liwe! Salbutamol chroni ich przed uduszeniem, a prysznic zapobiega spaleniu siÄ™ Å¼ywcem. MoÅ¼esz nawet wykonaÄ‡ na nich operacjÄ™, jeÅ›li poÅ‚oÅ¼ysz ich na noszy pod prysznicem.
+Jako Lekarz moÅ¼esz wskazaÄ‡ swoim penlight na kogoÅ›, Å¼eby utworzyÄ‡ medyczny hologram. To da znaÄ‡ twojemu pacjentowi, Å¼e idziesz mu pomÃ³c.
+Jako Lekarz moÅ¼esz usunÄ…Ä‡ implanty z ciaÅ‚a trzymajÄ… w nieaktywnej rÄ™ce pudeÅ‚ko na implanty podczas zabiegu usuniÄ™cia implantu.
+Jako Lekarz uÅ¼ywajÄ…c skaneru klonowania na pacjencie automatycznie wszepiasz mu implant monitorujÄ…cy jego zdrowie. Przydatne do Å›ledzenia zdrowia czÅ‚onkÃ³w zaÅ‚ogi, ktÃ³rzy nie wÅ‚Ä…czyli sensorÃ³w!
+Jako Chemik masz do dyspozycji setkÄ™ substancji, ktÃ³re mogÄ… leczyÄ‡ i jeszcze wiÄ™cej, ktÃ³re mogÄ… zraniÄ‡. Eksperymentuj!
+Jako Chemik zauwaÅ¼ysz, Å¼e niektÃ³re substancje mogÄ… zostaÄ‡ zsyntetyzowane w odpowiedniej temperaturze za pomocÄ… podgrzewacza lub zapalniczki i tym podobnch.
+Jako Chemik usÅ‚yszysz czÄ™sto od zaÅ‚ogi proÅ›by o konkretne substancje. Dla przykÅ‚adu: clonexadone i mannitol do kriokomÃ³r, niestabilny mutagen i saltpetre dla botaniki, a takÅ¼e piguÅ‚ki i plastry do leczenia.
+Jako Chemik moÅ¼esz stworzyÄ‡ butelki na 100 u za pomocÄ… plastiku. ChemMaster moÅ¼e tworzyÄ‡ nieskoÅ„czonoÅ›Ä‡ butelek na 30u, a jeÅ›li posiadasz odpowiednie badania w medycznym techfabie moÅ¼esz wyprodukowaÄ‡ pojemniki na od 120 do 300u.
+Jako Chemik moÅ¼esz naÅ‚adowaÄ‡ swÃ³j podajnik za pomocÄ… inducera lub wymieniajÄ…c bateriÄ™.
+Jako Chemik musisz wiedzieÄ‡, Å¼e poÅ‚Ä…czenie wody i potasu produkuje eksplozjÄ™ o sile proporcjonalnej do iloÅ›ci uÅ¼ytej substancji. Nie rÃ³b tego.
+Jako Genetyk moÅ¼esz szybciej wyjÄ…Ä‡ kogoÅ› z komory klonowania wyÅ‚Ä…czajÄ…c prÄ…d. WeÅº pod uwagÄ™, Å¼e taka osoba moÅ¼e mieÄ‡ wiÄ™cej obraÅ¼eÅ„ genetycznych i utraciÄ‡ czÄ™Å›Ä‡ kluczowych organÃ³w.
+Jako Genetyk pamiÄ™taj, Å¼e A Å‚Ä…czy siÄ™ z T, a G z C.
+Jako Genetyk moÅ¼esz zmieniÄ‡ siÄ™ w hulk'a i zadawaÄ‡ wiÄ™cej obraÅ¼eÅ„ w walce wrÄ™cz, rozwalaÄ‡ Å›ciany goÅ‚ymi rÄ™kami i stunlock'owaÄ‡ ludzi. Jednak nie moÅ¼esz strzelaÄ‡, stracisz swÃ³j status hulk'a, kiedy bÄ™dziesz w stanie krytycznym, a AI nie bÄ™dzie uznawaÅ‚o ciÄ™ za czÅ‚owieka.
+Jako Wirolog moÅ¼esz tworzyÄ‡ wirusy leczÄ…ce ludzi nawet z krytycznego stanu lub groÅºne na tyle, Å¼e zabijÄ… caÅ‚Ä… zaÅ‚ogÄ™ w ciÄ…gu paru minut. Eksperymentuj!
+Jako Wirolog potrzebujesz tylko maÅ‚ej dawki szczepionki, Å¼eby byÅ‚a skuteczna. PoproÅ› Chemika o pomoc, Å¼eby rozprowadzaÄ‡ szczepionkÄ™ efektywniej.
+Jako Dyrektor Naukowy moÅ¼esz wyjÄ…Ä‡ AI z jego rdzenia i zaÅ‚adowaÄ‡ je na intelliCard, co pozwala ci zobaczyÄ‡ ich prawa, nawet ion'owe, czy syndykatu. NastÄ™pnie moÅ¼na je umieÅ›ciÄ‡ w konsoli naprawy integralnoÅ›ci systemu, Å¼eby je oÅ¼ywiÄ‡/naprawiÄ‡.
+Jako Dyrektor Naukowy moÅ¼esz usypiaÄ‡ cyborgi, zamiast ich wysadzaÄ‡. Potem moÅ¼esz zresetowaÄ‡ ich prawa, a jeÅ›li to nie pomaga, bezpiecznie rozÅ‚oÅ¼yÄ‡.
+Jako Naukowiec moÅ¼esz uÅ¼yÄ‡ mutagennej toksyny pozyskiwanej ze slime'Ã³w, Å¼eby zmieniÄ‡ siÄ™ w galaretkowatego mutanta. KaÅ¼da jego rasa ma wyjÄ…tkowe umiejÄ™tnoÅ›ci - na przykÅ‚ad moce telepatyczne lub duplikujÄ…ce siÄ™ ciaÅ‚o!
+Jako Naukowiec moÅ¼esz zmaksymalizowaÄ‡ liczbÄ™ uÅ¼yÄ‡ silme'a podajÄ…c im slime'owe sterydy, pozyskiwane z fioletowych slime'Ã³w, kiedy jeszcze Å¼yjÄ…. MoÅ¼esz uÅ¼yÄ‡ wzmacniacza ekstraktu, robionego z ceruleunowych slime'Ã³w, na kaÅ¼dym ekstrakcie.
+Jako Naukowiec moÅ¼esz zneutralizowaÄ‡ anomaliÄ™ analizujÄ…c jÄ… analizatorem, a nstÄ™pnie wysyÅ‚ajÄ…c sygnaÅ‚ na czÄ™stotliwoÅ›ci jakÄ… oddaje anomalia za pomocÄ… urzÄ…dzeniem zdalnego sygnalizowania lub jeÅ›li posiadasz odpowiednie badania, uderz anomaliÄ™ analizatorem anomalii. Wtedy anomalia pozostawi za sobÄ… swÃ³j rdzeÅ„, ktÃ³ry moÅ¼na wykorzystaÄ‡ do skonstruowania mecha Phazona lub pancerzy reakcyjnych!
 As a Scientist, researchable stock parts can seriously improve the efficiency and speed of machines around the station. In some cases, it can even unlock new functions.
-Jako Naukowiec mo¿esz generowaæ punkty nauki nagrywaj¹c potê¿ne eksplozja za pomoc¹ coraz wiêksze eksplozje za pomoc¹ tachyon-doppler array.
-Jako Naukowiec jeœli upijesz siê w odpowiednim stopniu, bêdziesz generowaæ wiêcej punktów nauki. Na zdrowie!
-Jako Robotyk zwracaj uwagê na og³oszenia o anomaliach. Jeœli po³o¿ysz rêce na rdzeniu anomalii, bêdziesz móg³ zbudowaæ Phazona!
-Jako Robotyk mo¿esz naprawiaæ cyborgi za pomoc¹ spawarki. Jeœli otrzyma³y oparzenia, musisz wyj¹æ ich bateriê, ods³oniæ przewody i je wymieniæ.
-Jako Robotyk mo¿esz zresetowaæ modu³ cyborga ucinaj¹c i ponownie ³¹cz¹c przewód resetuj¹cy za pomoc¹ obcinaczek.
-Jako Robotyk mo¿esz pomóc Górnikom daj¹c im mecha Clarke z szczypcami hydraulicznymi i palnikiem plazmowy. Mech jest odporny na burze py³owe i mo¿e chodziæ po lawie!
-Jako Robotyk mo¿esz ulepszyæ ludzi za pomoc¹ czêœci cyborga. Ulepszone koñczyny mog¹ byæ ³atwo naprawione za pomoc¹ spawarki i przewodów.
-Jako AI mo¿esz klikn¹æ na imiê osoby, ¿eby zobaczyæ jej podgl¹d. Dzia³a to tylko wtedy kiedy s¹ na obrazie z kamer i nie maj¹ ¿adnego kamufarzu.
-Jako AI mo¿esz szybko otwieraæ i zamykac drzwi klikaj¹c je z wciœniêtym shiftem, zablokowaæ je z wciœniêtym ctrl'em lub nawet podpi¹c je do pr¹du trzymaj¹c alt.
-Jako AI mo¿esz robiæ zdjêcia i przesy³aæ je do newscastera.
-Jako AI mo¿esz wcisn¹æ CTRL + 1-9 ¿eby zapisaæ pozycjê kamery i szybko do niej wróciæ wciskaj¹c numer ponownie. Tylda i zero przywróc¹ ciê do twojej ostatniej pozycji, a numpad dzia³a tak jak zwyk³e liczby.
-Jako Cyborg wybieraj swój modu³ rozwa¿nie, jedynie przeciêcie i z³¹czenie ponownie przewodu resetujacego pozwoli ci na ponowne wybranie modu³u. Jeœli to mo¿liwe powstrzymaj siê od wybrania modu³u dopóki nie pojawi siê sytuacja, która któregoœ wymaga.
-Jako Cyborg jesteœ odporny na wiêkszoœæ sposobów na og³uszenie i przewy¿szasz ludzi prawie w ka¿dym wypadku. Jednak flashe mog¹ ³atwo ciê stunlockowaæ i nie jesteœ w stanie wykonywaæ ¿adnej precyzyjnej pracy ze wzglêdu na brak r¹k.
-Jako Cyborg jesteœ odporny na ogieñ i gor¹co. Jeœli siê zbuntowa³eœ dobrym pomys³em jest spowodowanie wycieku plazmy i chodzenie po p³on¹cej stacji jak gdyby nic!
-Jako Cyborg jesteœ bardzo podatny na EMP, które og³usza ciê i zadaje ci obra¿enia. Karabin ionowy w zbrojowni lub zdrajca z zestawem EMP mo¿e zabiæ ciê w kilka sekund.
-Jako Cyborg Us³ugowy mo¿esz u¿yæ spray'u, który powala ludzi. Jednak jest on blokowany przez maski i okulary.
-Jako Cyborg In¿ynieryjny mo¿esz montowaæ alarmy po¿arowe/atmosferyczne lub APC na œcianach k³ad¹c je na pod³odze, a nastêpnie u¿ywaj¹c na nich œrubokrêtu.
-Jako Cyborg Medyczny mo¿esz przeprowadzaæ operacje na ludziach, a nawet ich ulepszaæ cybernetycznie.
-Jako Cyborg Sprz¹taj¹cy jesteœ zmor¹ wszystkich demonów mordu i gum balonowych. Sprz¹tanie krwii skutecznie uprzykrzy im ¿ycie.
-Jako G³ówny In¿ynier mo¿esz zmieniaæ nazwy obszarów lub tworzyæ nowe za pomoc¹ planow stacji.
-As the Chief Engineer, your hardsuit is significantly better than everybody else's. It has the best features of both engineering and atmospherics hardsuits - boasting nigh-invulnerability to radiation and all atmospheric conditions.
-As the Chief Engineer, you can spy on and even forge PDA communications with the message monitor console! The key is in your office.
-As the Chief Engineer, your locker contains a jetpack upgrade that can be attached to hardsuits.
-As the Chief Engineer, the power flow control console in your office will show you APC infos and lets you control them remotely.
-As an Engineer, the supermatter shard is an extremely dangerous piece of equipment: touching it will disintegrate you. So will touching it with telepathy.
-As an Engineer, you can electrify grilles by placing wire "nodes" beneath them: the big seemingly unconnected bulges from a half completed wiring job.
-As an Engineer, return to Engineering once in a while to check on the engine and SMES cells. It's always a good idea to make sure containment isn't compromised.
-As an Engineer, you can temporarily power the station solely with the solar arrays. They will provide just enough electricity to power the station for a while, however their output is just slightly below what is truely needed to consistently power the station.
-As an Engineer, you can cool the supermatter crystal by spraying it with a fire extinguisher. Only for the brave!
-As an Engineer, the Particle Accelerator that powers singularity engines is also effective at killing blobs!
-As an Engineer, you can repair windows by using a welding tool on them while on any intent other than harm.
-As an Engineer, you can lock APCs, fire alarms, emitters and radiation collectors using your ID card to prevent others from disabling them.
-As an Engineer, you can convert tesla coils into corona analyzers by using a screwdriver on the circuit board. They will produce less power, but generate research points!
-As an Engineer, you can use radiation collectors to generate research points. Load them with a 50/50 oxygen/tritium tank and use a multitool to switch them to research mode.
-As an Engineer, don't underestimate the humble P.A.C.M.A.N. generators. With upgraded parts, a couple units working in tandem are sufficient to take over for an exploded engine or shattered solars.
-As an Engineer, your departmental protolathe and circuit printer can manufacture the necessary circuit boards and components to build just about anything. Make extra medical machinery everywhere! Build a gibber for security! Set up an array of emitters pointing down the hall! The possibilities are endless!
-As an Engineer, you can pry open secure storage blast doors by disabling the engine room APC's main breaker. This is obviously a bad idea if the engine is running.
-As an Engineer, your RCD can be reloaded with metal, glass or plasteel sheets instead of just compressed matter cartridges.
-As an Engineer, the Supermatter Monitoring Program on modular computers give you a detailed report on the Supermatter's condition, and the contents of the air inside of the chamber, allowing you to both diagnose and monitor programs from afar!
+Jako Naukowiec moÅ¼esz generowaÄ‡ punkty nauki nagrywajÄ…c potÄ™Å¼ne eksplozja za pomocÄ… coraz wiÄ™ksze eksplozje za pomocÄ… tachyon-doppler array.
+Jako Naukowiec jeÅ›li upijesz siÄ™ w odpowiednim stopniu, bÄ™dziesz generowaÄ‡ wiÄ™cej punktÃ³w nauki. Na zdrowie!
+Jako Robotyk zwracaj uwagÄ™ na ogÅ‚oszenia o anomaliach. JeÅ›li poÅ‚oÅ¼ysz rÄ™ce na rdzeniu anomalii, bÄ™dziesz mÃ³gÅ‚ zbudowaÄ‡ Phazona!
+Jako Robotyk moÅ¼esz naprawiaÄ‡ cyborgi za pomocÄ… spawarki. JeÅ›li otrzymaÅ‚y oparzenia, musisz wyjÄ…Ä‡ ich bateriÄ™, odsÅ‚oniÄ‡ przewody i je wymieniÄ‡.
+Jako Robotyk moÅ¼esz zresetowaÄ‡ moduÅ‚ cyborga ucinajÄ…c i ponownie Å‚Ä…czÄ…c przewÃ³d resetujÄ…cy za pomocÄ… obcinaczek.
+Jako Robotyk moÅ¼esz pomÃ³c GÃ³rnikom dajÄ…c im mecha Clarke z szczypcami hydraulicznymi i palnikiem plazmowy. Mech jest odporny na burze pyÅ‚owe i moÅ¼e chodziÄ‡ po lawie!
+Jako Robotyk moÅ¼esz ulepszyÄ‡ ludzi za pomocÄ… czÄ™Å›ci cyborga. Ulepszone koÅ„czyny mogÄ… byÄ‡ Å‚atwo naprawione za pomocÄ… spawarki i przewodÃ³w.
+Jako AI moÅ¼esz kliknÄ…Ä‡ na imiÄ™ osoby, Å¼eby zobaczyÄ‡ jej podglÄ…d. DziaÅ‚a to tylko wtedy kiedy sÄ… na obrazie z kamer i nie majÄ… Å¼adnego kamufarzu.
+Jako AI moÅ¼esz szybko otwieraÄ‡ i zamykac drzwi klikajÄ…c je z wciÅ›niÄ™tym shiftem, zablokowaÄ‡ je z wciÅ›niÄ™tym ctrl'em lub nawet podpiÄ…c je do prÄ…du trzymajÄ…c alt.
+Jako AI moÅ¼esz robiÄ‡ zdjÄ™cia i przesyÅ‚aÄ‡ je do newscastera.
+Jako AI moÅ¼esz wcisnÄ…Ä‡ CTRL + 1-9 Å¼eby zapisaÄ‡ pozycjÄ™ kamery i szybko do niej wrÃ³ciÄ‡ wciskajÄ…c numer ponownie. Tylda i zero przywrÃ³cÄ… ciÄ™ do twojej ostatniej pozycji, a numpad dziaÅ‚a tak jak zwykÅ‚e liczby.
+Jako Cyborg wybieraj swÃ³j moduÅ‚ rozwaÅ¼nie, jedynie przeciÄ™cie i zÅ‚Ä…czenie ponownie przewodu resetujacego pozwoli ci na ponowne wybranie moduÅ‚u. JeÅ›li to moÅ¼liwe powstrzymaj siÄ™ od wybrania moduÅ‚u dopÃ³ki nie pojawi siÄ™ sytuacja, ktÃ³ra ktÃ³regoÅ› wymaga.
+Jako Cyborg jesteÅ› odporny na wiÄ™kszoÅ›Ä‡ sposobÃ³w na ogÅ‚uszenie i przewyÅ¼szasz ludzi prawie w kaÅ¼dym wypadku. Jednak flashe mogÄ… Å‚atwo ciÄ™ stunlockowaÄ‡ i nie jesteÅ› w stanie wykonywaÄ‡ Å¼adnej precyzyjnej pracy ze wzglÄ™du na brak rÄ…k.
+Jako Cyborg jesteÅ› odporny na ogieÅ„ i gorÄ…co. JeÅ›li siÄ™ zbuntowaÅ‚eÅ› dobrym pomysÅ‚em jest spowodowanie wycieku plazmy i chodzenie po pÅ‚onÄ…cej stacji jak gdyby nic!
+Jako Cyborg jesteÅ› bardzo podatny na EMP, ktÃ³re ogÅ‚usza ciÄ™ i zadaje ci obraÅ¼enia. Karabin ionowy w zbrojowni lub zdrajca z zestawem EMP moÅ¼e zabiÄ‡ ciÄ™ w kilka sekund.
+Jako Cyborg UsÅ‚ugowy moÅ¼esz uÅ¼yÄ‡ spray'u, ktÃ³ry powala ludzi. Jednak jest on blokowany przez maski i okulary.
+Jako Cyborg InÅ¼ynieryjny moÅ¼esz montowaÄ‡ alarmy poÅ¼arowe/atmosferyczne lub APC na Å›cianach kÅ‚adÄ…c je na podÅ‚odze, a nastÄ™pnie uÅ¼ywajÄ…c na nich Å›rubokrÄ™tu.
+Jako Cyborg Medyczny moÅ¼esz przeprowadzaÄ‡ operacje na ludziach, a nawet ich ulepszaÄ‡ cybernetycznie.
+Jako Cyborg SprzÄ…tajÄ…cy jesteÅ› zmorÄ… wszystkich demonÃ³w mordu i gum balonowych. SprzÄ…tanie krwii skutecznie uprzykrzy im Å¼ycie.
+Jako GÅ‚Ã³wny InÅ¼ynier moÅ¼esz zmieniaÄ‡ nazwy obszarÃ³w lub tworzyÄ‡ nowe za pomocÄ… planow stacji.
+Jako GÅ‚Ã³wny InÅ¼ynier wiedz, Å¼e twÃ³j skafander kosmiczny jest lepszy od innych. Ma najlepsze wÅ‚aÅ›ciwoÅ›ci zarÃ³wno kombinezonu inÅ¼ynierÃ³w oraz atmosferykÃ³w - zwiÄ™ksza twojÄ… wytrzymaÅ‚oÅ›Ä‡ na promieniowanie oraz warunki atmosferyczne.
+Jako GÅ‚Ã³wny InÅ¼ynier moÅ¼esz szpiegowaÄ‡, a nawet fabrykowaÄ‡ komunikacjÄ™ przez PDA z konsoli monitorowania wiadomoÅ›ci! Klucz leÅ¼y w twoim biurze.
+Jako GÅ‚Ã³wny InÅ¼ynier w swojej szafce moÅ¼esz znaleÅºÄ‡ ulepszenie jetpacka, ktÃ³re moÅ¼esz przyÅ‚Ä…czyÄ‡ do skafandra kosmicznego.
+Jako GÅ‚Ã³wny InÅ¼ynier masz do dyspozycji konsolÄ™ przepÅ‚ywu energii, ktÃ³ra pozwala na wyÅ›wietlenie informacji o APC na stacji, a takÅ¼e zdalne zarzÄ…dzanie nimi.
+Jako InÅ¼ynier pamiÄ™taj, Å¼e krysztaÅ‚ Supermaterii jest niezwykle niebezpiecznym przedmiotem: dotkniÄ™cie go zrobi z ciebie kupkÄ™ popioÅ‚u. Tyczy siÄ™ to rÃ³wnieÅ¼ dotykaniem za pomocÄ… telepatii.
+Jako InÅ¼ynier moÅ¼esz elektryfikowaÄ‡ kraty kÅ‚adÄ…c pod nimi przewody.
+Jako InÅ¼ynier zaglÄ…daj co jakiÅ› czas do inÅ¼ynierii, Å¼eby sprawdziÄ‡ generator i jednostki SMES. Warto upewniÄ‡ siÄ™, Å¼e zabezpieczenia nie zawiodÅ‚y.
+Jako InÅ¼ynier moÅ¼esz tymczasowo zasiliÄ‡ stacjÄ™ za pomocÄ… paneli sÅ‚onecznych. ZapewniajÄ… wystarczajÄ…co energii, Å¼eby zasiliÄ‡ stacjÄ™ na pewien czas, jednak nie na tyle Å¼eby byÅ‚o to staÅ‚e rozwiÄ…zanie.
+Jako InÅ¼ynier moÅ¼esz schÅ‚odziÄ‡ krysztaÅ‚ Supermaterii gaÅ›nicÄ…. Tylko dla odwaÅ¼nych!
+Jako InÅ¼ynier moÅ¼esz wykorzystaÄ‡ Akcelerator CzÄ…steczek zasilajÄ…cy reaktor osobliwoÅ›ci do walki z blobem!
+Jako InÅ¼ynier moÅ¼esz naprawiaÄ‡ szyby uÅ¼ywajÄ…c na nich spawarki z intentem innym niÅ¼ harm.
+Jako InÅ¼ynier moÅ¼esz blokowaÄ‡ APC, alarmy poÅ¼arowe, emitery i kolektory promieniowaniaza pomocÄ… swojego ID, aby powstrzymaÄ‡ innych od wyÅ‚Ä…czania ich.
+Jako InÅ¼ynier moÅ¼esz przeksztaÅ‚ciÄ‡ cewki tesli w analizatory wieÅ„cowe uÅ¼ywajÄ…c Å›rubokrÄ™tu na obwodzie drukowanym. BÄ™dÄ… produkowaÄ‡ mniej prÄ…du, ale takÅ¼e generowaÄ‡ punkty naukowe!
+Jako InÅ¼ynier moÅ¼esz uÅ¼yÄ‡ kolektorÃ³w promieniowania do generowania punktÃ³w naukowych. Load them with a 50/50 oxygen/tritium tank and use a multitool to switch them to research mode.
+Jako InÅ¼ynierAs an Engineer, don't underestimate the humble P.A.C.M.A.N. generators. With upgraded parts, a couple units working in tandem are sufficient to take over for an exploded engine or shattered solars.
+Jako InÅ¼ynierAs an Engineer, your departmental protolathe and circuit printer can manufacture the necessary circuit boards and components to build just about anything. Make extra medical machinery everywhere! Build a gibber for security! Set up an array of emitters pointing down the hall! The possibilities are endless!
+Jako InÅ¼ynierAs an Engineer, you can pry open secure storage blast doors by disabling the engine room APC's main breaker. This is obviously a bad idea if the engine is running.
+Jako InÅ¼ynierAs an Engineer, your RCD can be reloaded with metal, glass or plasteel sheets instead of just compressed matter cartridges.
+Jako InÅ¼ynierAs an Engineer, the Supermatter Monitoring Program on modular computers give you a detailed report on the Supermatter's condition, and the contents of the air inside of the chamber, allowing you to both diagnose and monitor programs from afar!
 As an Atmospheric Technician, you can unwrench a pipe regardless of the pressures of the gases inside, but if they're too high they can burst out and injure you!
 As an Atmospheric Technician, look into replacing your gas pumps with volumetric gas pumps, as those move air in flat numerical amounts, rather than percentages which leave trace gases.
 As an Atmospheric Technician, you are better suited to fighting fires than anyone else. As such, you have access to better firesuits, backpack firefighter tanks, and a completely heat and fire proof rigsuit.
