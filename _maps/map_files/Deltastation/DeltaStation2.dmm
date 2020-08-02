@@ -74607,7 +74607,7 @@
 	pixel_x = -6;
 	pixel_y = 3
 	},
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/beer{
 	desc = "Whatever it is, it reeks of foul, putrid froth.";
 	icon_state = "beer";
 	list_reagents = list(/datum/reagent/consumable/ethanol/bacchus_blessing = 15);

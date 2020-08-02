@@ -259,13 +259,6 @@
 	isGlass = FALSE
 	custom_price = 38
 
-/obj/item/reagent_containers/food/drinks/beer
-	name = "space beer"
-	desc = "Beer. In space."
-	icon_state = "beer"
-	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 30)
-	foodtype = GRAIN | ALCOHOL
-
 /obj/item/reagent_containers/food/drinks/ftliver
 	name = "Faster-Than-Liver"
 	desc = "They've gone into plaid!"
@@ -273,7 +266,7 @@
 	list_reagents = list(/datum/reagent/consumable/ethanol/ftliver = 30)
 	foodtype = ALCOHOL
 
-/obj/item/reagent_containers/food/drinks/beer/light
+/obj/item/reagent_containers/food/drinks/soda_cans/beer/light
 	name = "Carp Lite"
 	desc = "Brewed with \"Pure Ice Asteroid Spring Water\"."
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/light = 30)
@@ -567,3 +560,10 @@
 	desc = "There is no air shortage. Do not drink."
 	icon_state = "air"
 	list_reagents = list(/datum/reagent/nitrogen = 24, /datum/reagent/oxygen = 6)
+
+/obj/item/reagent_containers/food/drinks/soda_cans/beer
+	name = "mocny full"
+	desc = "Najlepsze w całym kosmosie."
+	icon_state = "mocnyfull"
+	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 30)
+	foodtype = GRAIN | ALCOHOL
