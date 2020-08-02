@@ -918,6 +918,7 @@
 #include "code\game\objects\items\pinpointer.dm"
 #include "code\game\objects\items\plushes.dm"
 #include "code\game\objects\items\pneumaticCannon.dm"
+#include "code\game\objects\items\policetape.dm"
 #include "code\game\objects\items\powerfist.dm"
 #include "code\game\objects\items\RCD.dm"
 #include "code\game\objects\items\RCL.dm"
