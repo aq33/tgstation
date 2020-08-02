@@ -412,8 +412,8 @@
 	dunkable = TRUE
 
 /obj/item/reagent_containers/food/snacks/donkpocket
-	name = "\improper Donk-pocket"
-	desc = "The food of choice for the seasoned traitor."
+	name = "\improper Donk-Pieróg"
+	desc = "The food of choice for the seasoned Pole."
 	icon_state = "donkpocket"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 4)
 	cooked_type = /obj/item/reagent_containers/food/snacks/donkpocket/warm
@@ -422,8 +422,8 @@
 	foodtype = GRAIN
 
 /obj/item/reagent_containers/food/snacks/donkpocket/warm
-	name = "warm Donk-pocket"
-	desc = "The heated food of choice for the seasoned traitor."
+	name = "warm Donk-Pieróg"
+	desc = "The heated food of choice for the seasoned Pole."
 	bonus_reagents = list(/datum/reagent/medicine/omnizine = 3)
 	list_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/medicine/omnizine = 3)
 	cooked_type = null
