@@ -278,6 +278,7 @@
 /area/ruin/space/has_grav/powered/ancient_shuttle)
 "K" = (
 /obj/machinery/door/airlock/research/glass,
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel/airless,
 /area/ruin/space/has_grav/powered/ancient_shuttle)
 "L" = (
