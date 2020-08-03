@@ -10,46 +10,6 @@
 /obj/structure/lattice,
 /turf/template_noop,
 /area/space/nearstation)
-"ad" = (
-/obj/machinery/power/solar,
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
-"ae" = (
-/obj/machinery/power/solar,
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
-"af" = (
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
-"ag" = (
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
-"ah" = (
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
-"ai" = (
-/obj/machinery/power/tracker,
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
-"aj" = (
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
-"ak" = (
-/obj/machinery/power/solar,
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
-"al" = (
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
 "am" = (
 /turf/closed/wall,
 /area/ruin/space/has_grav/hotel)
@@ -248,11 +208,6 @@
 /obj/structure/dresser,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_6)
-"bd" = (
-/obj/machinery/power/solar,
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
 "be" = (
 /obj/structure/window{
 	dir = 8
@@ -809,13 +764,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hotel)
-"cL" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/turf/open/floor/carpet,
-/area/ruin/space/has_grav/hotel)
 "cM" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
@@ -842,11 +790,6 @@
 	dir = 9
 	},
 /turf/open/floor/carpet,
-/area/ruin/space/has_grav/hotel)
-"cQ" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plating,
 /area/ruin/space/has_grav/hotel)
 "cR" = (
 /obj/machinery/light,
@@ -1076,11 +1019,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/hotel/workroom)
-"dB" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel/white,
-/area/ruin/space/has_grav/hotel/workroom)
 "dC" = (
 /obj/structure/table,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -1181,13 +1119,6 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
-	},
-/turf/open/floor/plasteel/white,
-/area/ruin/space/has_grav/hotel/workroom)
-"dY" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
 	},
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/hotel/workroom)
@@ -1398,10 +1329,6 @@
 "eI" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/hotel)
-"eJ" = (
-/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hotel)
 "eK" = (
@@ -2485,11 +2412,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hotel)
-"hR" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/hotel)
 "hS" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/structure/cable,
@@ -2642,14 +2564,6 @@
 	},
 /turf/open/floor/carpet,
 /area/ruin/space/has_grav/hotel/dock)
-"ip" = (
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
-"iq" = (
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
 "ir" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
@@ -3324,11 +3238,6 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/hotel/power)
-"kd" = (
-/obj/machinery/power/terminal,
-/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hotel/power)
 "ke" = (
@@ -4046,10 +3955,6 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/ruin/space/has_grav/hotel/pool)
-"lJ" = (
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
 "lK" = (
 /obj/effect/mob_spawn/human/hotel_staff/security,
 /obj/effect/turf_decal/tile/red{
@@ -4171,22 +4076,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hotel/security)
-"lV" = (
-/obj/machinery/power/solar,
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
-"lW" = (
-/obj/machinery/power/solar,
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
 "lX" = (
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/unpowered/no_grav)
-"lY" = (
-/obj/machinery/power/solar,
 /obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/ruin/unpowered/no_grav)
@@ -4661,18 +4551,6 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/hotel/workroom)
-"mR" = (
-/obj/structure/cable,
-/turf/open/floor/carpet,
-/area/ruin/space/has_grav/hotel)
-"mS" = (
-/obj/structure/cable,
-/turf/open/floor/carpet,
-/area/ruin/space/has_grav/hotel)
-"mT" = (
-/obj/structure/cable,
-/turf/open/floor/carpet,
-/area/ruin/space/has_grav/hotel)
 "mU" = (
 /obj/structure/cable,
 /turf/open/floor/carpet,
@@ -4893,16 +4771,16 @@ aa
 ac
 aa
 aa
-lV
+lZ
 aa
 aa
-lV
+lZ
 aa
 aa
-lV
+lZ
 aa
 aa
-lV
+lZ
 aa
 ab
 aa
@@ -4963,16 +4841,16 @@ aa
 ac
 aa
 aa
-lW
+lZ
 aa
 aa
-lW
+lZ
 aa
 aa
-lW
+lZ
 aa
 aa
-lW
+lZ
 aa
 ab
 aa
@@ -5033,16 +4911,16 @@ lB
 ac
 aa
 aa
-lW
+lZ
 aa
 aa
-lW
+lZ
 aa
 aa
-lW
+lZ
 aa
 aa
-lW
+lZ
 aa
 ab
 aa
@@ -5074,21 +4952,21 @@ ab
 ab
 ab
 aa
-af
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-ip
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
 aa
 aa
 aa
@@ -5103,16 +4981,16 @@ lC
 ac
 aa
 aa
-lW
+lZ
 aa
 aa
-lW
+lZ
 aa
 aa
-lW
+lZ
 aa
 aa
-lW
+lZ
 aa
 ab
 aa
@@ -5144,7 +5022,7 @@ aa
 aa
 ac
 ac
-ag
+lX
 ct
 cH
 cH
@@ -5158,31 +5036,31 @@ cH
 cH
 cH
 ia
-iq
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
 lD
 ac
 aa
 aa
-lW
+lZ
 aa
 aa
-lW
+lZ
 aa
 aa
-lW
+lZ
 aa
 aa
-lW
+lZ
 aa
 aa
 ab
@@ -5199,33 +5077,33 @@ aa
 aa
 ab
 aa
-af
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-aj
-al
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
 cw
 fd
-cQ
-cQ
-cQ
+eI
+eI
+eI
 gj
-cQ
-cQ
+eI
+eI
 hf
-cQ
-cQ
+eI
+eI
 hP
 ib
 ir
@@ -5240,19 +5118,19 @@ ir
 ir
 ir
 lE
-lJ
-aj
-aj
 lX
-aj
-aj
 lX
-aj
-aj
 lX
-aj
-aj
-aj
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
+lX
 mO
 ac
 ab
@@ -5269,7 +5147,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 am
 am
 am
@@ -5310,19 +5188,19 @@ kV
 lp
 kH
 aa
-ag
+lX
 aa
 aa
-lY
+lZ
 aa
 aa
-lY
+lZ
 aa
 aa
-lY
+lZ
 aa
 aa
-lY
+lZ
 aa
 aa
 ab
@@ -5339,7 +5217,7 @@ aa
 aa
 ab
 ac
-ag
+lX
 am
 av
 aw
@@ -5348,13 +5226,13 @@ bL
 ck
 cu
 cI
-cQ
-cQ
-cQ
-cQ
-cQ
-cQ
-cQ
+eI
+eI
+eI
+eI
+eI
+eI
+eI
 eI
 fe
 fi
@@ -5373,26 +5251,26 @@ iI
 iI
 jj
 jB
-kd
+ke
 kr
 kH
 kW
 lp
 kH
 aa
-ag
+lX
 aa
 aa
-lY
+lZ
 aa
 aa
-lY
+lZ
 aa
 aa
-lY
+lZ
 aa
 aa
-lY
+lZ
 aa
 ab
 aa
@@ -5409,7 +5287,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 am
 aw
 aw
@@ -5425,7 +5303,7 @@ aw
 ed
 aw
 aw
-eJ
+eK
 aw
 fj
 fQ
@@ -5436,7 +5314,7 @@ gz
 hi
 gz
 hI
-hR
+my
 ic
 iu
 iJ
@@ -5450,19 +5328,19 @@ kX
 lq
 kH
 aa
-ag
+lX
 aa
 aa
-lY
+lZ
 aa
 aa
-lY
+lZ
 aa
 aa
-lY
+lZ
 aa
 aa
-lY
+lZ
 aa
 ab
 aa
@@ -5479,7 +5357,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 an
 an
 an
@@ -5495,7 +5373,7 @@ cZ
 cZ
 cZ
 cZ
-eJ
+eK
 ck
 fi
 fR
@@ -5520,19 +5398,19 @@ kY
 lp
 kH
 aa
-ag
+lX
 aa
 aa
-lY
+lZ
 aa
 aa
-lY
+lZ
 aa
 aa
-lY
+lZ
 aa
 aa
-lY
+lZ
 aa
 ab
 aa
@@ -5549,7 +5427,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 an
 ax
 az
@@ -5557,7 +5435,7 @@ az
 az
 an
 cx
-cL
+ik
 cF
 cZ
 dk
@@ -5565,7 +5443,7 @@ dH
 dH
 dH
 cZ
-eJ
+eK
 ff
 fi
 fR
@@ -5590,7 +5468,7 @@ kZ
 lp
 kH
 aa
-ag
+lX
 aa
 aa
 lZ
@@ -5619,7 +5497,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 an
 ay
 be
@@ -5627,7 +5505,7 @@ be
 az
 an
 cx
-cL
+ik
 cF
 cZ
 dl
@@ -5635,7 +5513,7 @@ dI
 dI
 dH
 cZ
-eJ
+eK
 fg
 fi
 fS
@@ -5660,7 +5538,7 @@ kH
 kH
 kH
 aa
-ag
+lX
 aa
 aa
 ac
@@ -5689,7 +5567,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 an
 az
 bf
@@ -5697,7 +5575,7 @@ az
 bM
 an
 cx
-cL
+ik
 cF
 cZ
 dm
@@ -5705,7 +5583,7 @@ dH
 ee
 dH
 cZ
-eJ
+eK
 aw
 fi
 fQ
@@ -5728,9 +5606,9 @@ kw
 kJ
 la
 sN
-aj
-aj
-al
+lX
+lX
+lX
 aa
 aa
 ac
@@ -5759,7 +5637,7 @@ aa
 aa
 ab
 ac
-ag
+lX
 an
 aA
 an
@@ -5767,7 +5645,7 @@ an
 an
 an
 cx
-cL
+ik
 cR
 cZ
 cZ
@@ -5787,9 +5665,9 @@ hl
 hw
 fi
 hS
-cQ
-cQ
-cQ
+eI
+eI
+eI
 hP
 jo
 jG
@@ -5829,7 +5707,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 an
 aB
 bg
@@ -5837,7 +5715,7 @@ bD
 bN
 an
 cx
-cL
+ik
 cF
 cZ
 dn
@@ -5899,7 +5777,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ao
 aB
 bh
@@ -5969,7 +5847,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ao
 aC
 bi
@@ -6039,7 +5917,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ao
 aD
 aB
@@ -6047,7 +5925,7 @@ aB
 bQ
 an
 cx
-cL
+ik
 cF
 cZ
 dq
@@ -6109,7 +5987,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 an
 aE
 bj
@@ -6117,7 +5995,7 @@ bj
 bR
 an
 cx
-cL
+ik
 cF
 cZ
 dr
@@ -6179,7 +6057,7 @@ aa
 aa
 ab
 ac
-ag
+lX
 an
 an
 an
@@ -6187,7 +6065,7 @@ an
 an
 an
 cx
-cL
+ik
 cU
 cZ
 cZ
@@ -6249,7 +6127,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ap
 aF
 aH
@@ -6257,7 +6135,7 @@ aH
 aH
 ap
 cx
-cL
+ik
 cF
 dc
 ds
@@ -6319,7 +6197,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ap
 aG
 bk
@@ -6327,7 +6205,7 @@ bk
 aH
 ap
 cx
-cL
+ik
 cR
 dc
 dt
@@ -6389,7 +6267,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ap
 aH
 bl
@@ -6397,7 +6275,7 @@ aH
 bS
 ap
 cx
-cL
+ik
 cF
 dc
 du
@@ -6459,7 +6337,7 @@ aa
 aa
 ab
 ac
-ag
+lX
 ap
 aI
 ap
@@ -6467,7 +6345,7 @@ ap
 ap
 ap
 cx
-cL
+ik
 cF
 dc
 dc
@@ -6529,7 +6407,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ap
 aJ
 bm
@@ -6537,7 +6415,7 @@ bF
 bT
 ap
 cx
-cL
+ik
 cF
 dc
 dv
@@ -6573,8 +6451,8 @@ aw
 aw
 aw
 cI
-cQ
-cQ
+eI
+eI
 hf
 my
 aw
@@ -6599,7 +6477,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 aq
 aJ
 bn
@@ -6632,16 +6510,16 @@ ih
 fi
 hQ
 hf
-cQ
-cQ
-cQ
-cQ
-cQ
-cQ
-cQ
-cQ
-cQ
-cQ
+eI
+eI
+eI
+eI
+eI
+eI
+eI
+eI
+eI
+eI
 fe
 ma
 ck
@@ -6669,7 +6547,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 aq
 aK
 bo
@@ -6739,7 +6617,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 aq
 aL
 aJ
@@ -6747,7 +6625,7 @@ aJ
 bW
 ap
 cx
-cL
+ik
 cF
 dc
 dy
@@ -6809,7 +6687,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ap
 aM
 bp
@@ -6817,7 +6695,7 @@ bp
 bX
 ap
 cx
-cL
+ik
 cF
 dc
 dz
@@ -6879,7 +6757,7 @@ aa
 aa
 ab
 ac
-ag
+lX
 ap
 ap
 ap
@@ -6887,7 +6765,7 @@ ap
 ap
 ap
 cx
-cL
+ik
 cR
 dc
 dc
@@ -6949,7 +6827,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ar
 aN
 aP
@@ -6957,7 +6835,7 @@ aP
 aP
 ar
 cx
-cL
+ik
 cF
 df
 cF
@@ -7019,7 +6897,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ar
 aO
 bq
@@ -7027,7 +6905,7 @@ bq
 aP
 ar
 cx
-cL
+ik
 cF
 am
 cF
@@ -7089,7 +6967,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ar
 aP
 br
@@ -7116,7 +6994,7 @@ gG
 gG
 mP
 mQ
-mR
+mU
 cF
 eT
 am
@@ -7159,7 +7037,7 @@ aa
 aa
 ab
 ac
-ag
+lX
 ar
 aQ
 ar
@@ -7186,7 +7064,7 @@ gG
 gG
 hB
 di
-mS
+mU
 cF
 eT
 am
@@ -7229,7 +7107,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ar
 aR
 bs
@@ -7237,7 +7115,7 @@ bH
 bZ
 ar
 cx
-cL
+ik
 cF
 di
 dA
@@ -7256,7 +7134,7 @@ gG
 gG
 hC
 di
-mS
+mU
 cF
 eT
 am
@@ -7299,7 +7177,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 as
 aR
 bt
@@ -7310,7 +7188,7 @@ cy
 cM
 cS
 dj
-dB
+dW
 dW
 eo
 ey
@@ -7326,7 +7204,7 @@ gG
 gG
 hD
 di
-mS
+mU
 cF
 eT
 iM
@@ -7369,7 +7247,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 as
 aS
 bu
@@ -7396,7 +7274,7 @@ gG
 gG
 hE
 di
-mT
+mU
 mU
 mU
 mU
@@ -7439,7 +7317,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 as
 aT
 aR
@@ -7447,11 +7325,11 @@ aR
 cc
 ar
 cx
-cL
+ik
 cF
 di
 dD
-dY
+dZ
 ep
 ez
 di
@@ -7470,7 +7348,7 @@ cF
 cF
 cF
 cF
-cL
+ik
 jv
 jW
 jW
@@ -7509,7 +7387,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 ar
 aU
 bv
@@ -7517,7 +7395,7 @@ bv
 cd
 ar
 cx
-cL
+ik
 cF
 di
 dE
@@ -7579,7 +7457,7 @@ aa
 aa
 ab
 ac
-ag
+lX
 ar
 ar
 ar
@@ -7587,7 +7465,7 @@ ar
 ar
 ar
 cx
-cL
+ik
 cF
 di
 di
@@ -7649,7 +7527,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 at
 aV
 aX
@@ -7657,7 +7535,7 @@ aX
 aX
 at
 cD
-cL
+ik
 cF
 di
 dF
@@ -7677,7 +7555,7 @@ gG
 hH
 di
 cF
-cL
+ik
 am
 iO
 jd
@@ -7719,7 +7597,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 at
 aW
 bw
@@ -7727,7 +7605,7 @@ bw
 aX
 at
 cx
-cL
+ik
 cF
 di
 dG
@@ -7789,7 +7667,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 at
 aX
 bx
@@ -7797,7 +7675,7 @@ aX
 ce
 at
 cx
-cL
+ik
 cF
 di
 dF
@@ -7859,7 +7737,7 @@ aa
 aa
 ab
 ac
-ag
+lX
 at
 aY
 at
@@ -7867,7 +7745,7 @@ at
 at
 at
 cx
-cL
+ik
 cF
 di
 di
@@ -7929,7 +7807,7 @@ aa
 aa
 ab
 aa
-ag
+lX
 at
 aZ
 by
@@ -7937,7 +7815,7 @@ bJ
 cf
 at
 cx
-cL
+ik
 cR
 am
 ac
@@ -7999,7 +7877,7 @@ aa
 ab
 aa
 aa
-ag
+lX
 au
 aZ
 bz
@@ -8069,7 +7947,7 @@ aa
 ab
 ac
 aa
-ag
+lX
 au
 ba
 bA
@@ -8139,7 +8017,7 @@ ab
 aa
 ac
 ac
-ag
+lX
 au
 bb
 aZ
@@ -8209,7 +8087,7 @@ aa
 aa
 aa
 aa
-ag
+lX
 at
 bc
 bB
@@ -8276,10 +8154,10 @@ aa
 ac
 aa
 aa
-af
-aj
-aj
-al
+lX
+lX
+lX
+lX
 at
 at
 at
@@ -8346,7 +8224,7 @@ aa
 ac
 aa
 aa
-ag
+lX
 aa
 aa
 aa
@@ -8411,17 +8289,17 @@ aa
 ab
 ac
 ac
-ad
-ae
-ae
-ae
-ae
-ah
-ak
-ak
-ak
-ak
-bd
+lZ
+lZ
+lZ
+lZ
+lZ
+lX
+lZ
+lZ
+lZ
+lZ
+lZ
 aa
 aa
 ac
@@ -8486,7 +8364,7 @@ aa
 aa
 aa
 aa
-ag
+lX
 aa
 aa
 aa
@@ -8556,7 +8434,7 @@ aa
 aa
 aa
 aa
-ag
+lX
 aa
 aa
 aa
@@ -8621,17 +8499,17 @@ aa
 ab
 ac
 ac
-ad
-ae
-ae
-ae
-ae
-ah
-ak
-ak
-ak
-ak
-bd
+lZ
+lZ
+lZ
+lZ
+lZ
+lX
+lZ
+lZ
+lZ
+lZ
+lZ
 ac
 ac
 ab
@@ -8696,7 +8574,7 @@ aa
 aa
 aa
 aa
-ag
+lX
 aa
 aa
 aa
@@ -8766,7 +8644,7 @@ aa
 aa
 aa
 aa
-ag
+lX
 aa
 aa
 aa
@@ -8831,17 +8709,17 @@ aa
 ab
 ac
 ac
-ad
-ae
-ae
-ae
-ae
-ah
-ak
-ak
-ak
-ak
-bd
+lZ
+lZ
+lZ
+lZ
+lZ
+lX
+lZ
+lZ
+lZ
+lZ
+lZ
 ac
 ac
 ab
@@ -8906,7 +8784,7 @@ aa
 aa
 aa
 aa
-ag
+lX
 aa
 aa
 aa
@@ -8976,7 +8854,7 @@ aa
 aa
 aa
 aa
-ag
+lX
 aa
 aa
 aa
@@ -9041,17 +8919,17 @@ aa
 ab
 ac
 ac
-ad
-ae
-ae
-ae
-ae
-ah
-ak
-ak
-ak
-ak
-bd
+lZ
+lZ
+lZ
+lZ
+lZ
+lX
+lZ
+lZ
+lZ
+lZ
+lZ
 ac
 ac
 ab
@@ -9116,7 +8994,7 @@ aa
 aa
 aa
 aa
-ai
+mO
 aa
 aa
 aa

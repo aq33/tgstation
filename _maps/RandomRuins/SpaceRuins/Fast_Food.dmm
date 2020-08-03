@@ -935,6 +935,7 @@
 /area/ruin/space/has_grav/powered/macspace)
 "dr" = (
 /obj/machinery/door/airlock/silver,
+/obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium,
 /area/ruin/space/has_grav/powered/macspace)
 "ds" = (

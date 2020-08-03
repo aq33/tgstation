@@ -57,10 +57,6 @@
 "am" = (
 /turf/open/floor/engine,
 /area/ruin/space/has_grav/derelictoutpost/cargobay)
-"an" = (
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/derelictoutpost/cargobay)
 "ao" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -97,10 +93,6 @@
 "at" = (
 /turf/closed/wall/mineral/titanium,
 /area/ruin/space/has_grav/derelictoutpost/dockedship)
-"au" = (
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/derelictoutpost/cargobay)
 "av" = (
 /obj/structure/table,
 /obj/machinery/light{
@@ -147,6 +139,7 @@
 "aB" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/derelictoutpost/powerstorage)
 "aC" = (
@@ -197,6 +190,7 @@
 "aL" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/derelictoutpost)
 "aM" = (
@@ -285,11 +279,6 @@
 /area/ruin/space/has_grav/derelictoutpost)
 "ba" = (
 /obj/item/clothing/head/helmet,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/derelictoutpost/powerstorage)
-"bb" = (
-/obj/machinery/power/smes,
-/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/derelictoutpost/powerstorage)
 "bc" = (
@@ -437,10 +426,6 @@
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/derelictoutpost/powerstorage)
-"bs" = (
-/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/derelictoutpost/powerstorage)
 "bt" = (
@@ -783,10 +768,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/derelictoutpost/powerstorage)
-"bZ" = (
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/derelictoutpost/powerstorage)
 "ca" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -820,15 +801,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/derelictoutpost/dockedship)
-"ce" = (
-/obj/structure/alien/weeds{
-	color = "#4BAE56";
-	desc = "A thick gelatinous surface covers the floor.  Someone get the golashes.";
-	name = "gelatinous floor"
-	},
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/derelictoutpost/cargobay)
 "cf" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
@@ -886,10 +858,6 @@
 	name = "gelatinous floor"
 	},
 /obj/structure/glowshroom/single,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/derelictoutpost)
-"cj" = (
-/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/derelictoutpost)
 "ck" = (
@@ -954,10 +922,6 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/derelictoutpost/powerstorage)
-"cs" = (
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/derelictoutpost/cargobay)
 "ct" = (
 /obj/structure/cable,
 /turf/open/floor/plasteel,
@@ -982,24 +946,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/derelictoutpost/cargobay)
-"cw" = (
-/obj/structure/alien/weeds{
-	color = "#4BAE56";
-	desc = "A thick gelatinous surface covers the floor.  Someone get the golashes.";
-	name = "gelatinous floor"
-	},
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/derelictoutpost/cargobay)
-"cx" = (
-/obj/structure/alien/weeds{
-	color = "#4BAE56";
-	desc = "A thick gelatinous surface covers the floor.  Someone get the golashes.";
-	name = "gelatinous floor"
-	},
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/derelictoutpost/cargobay)
 "cy" = (
 /obj/machinery/door/airlock/public/glass,
 /obj/machinery/door/poddoor{
@@ -1008,10 +954,6 @@
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/derelictoutpost)
-"cz" = (
-/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/derelictoutpost)
 "cA" = (
@@ -2254,7 +2196,7 @@ aa
 aA
 aA
 aA
-bb
+bd
 br
 bI
 bY
@@ -2291,9 +2233,9 @@ aC
 aC
 aA
 bc
-bs
-bs
-bZ
+cp
+cp
+cp
 cp
 aS
 cT
@@ -2402,7 +2344,7 @@ aJ
 az
 bK
 cb
-cs
+ct
 cG
 ak
 db
@@ -2475,7 +2417,7 @@ ae
 ae
 ae
 ae
-cs
+ct
 bx
 bx
 ab
@@ -2583,7 +2525,7 @@ be
 bL
 cc
 ae
-cx
+cN
 aX
 cW
 ab
@@ -2619,7 +2561,7 @@ bv
 bM
 cc
 ae
-cx
+cN
 cW
 aN
 ab
@@ -2763,7 +2705,7 @@ ae
 ae
 ae
 cv
-cx
+cN
 bx
 de
 ab
@@ -2788,19 +2730,19 @@ ab
 ab
 ab
 aj
-an
-au
-au
-au
-au
-au
-au
-au
-au
-ce
-cw
+ct
+ct
+ct
+ct
+ct
+ct
+ct
+ct
+ct
 cN
-ce
+cN
+cN
+cN
 df
 ab
 dA
@@ -2834,7 +2776,7 @@ av
 bx
 bP
 bx
-cx
+cN
 ak
 ak
 dg
@@ -2870,7 +2812,7 @@ ab
 bx
 bx
 ak
-cs
+ct
 ak
 ab
 dh
@@ -2942,7 +2884,7 @@ aK
 bz
 bQ
 bC
-cz
+cB
 cO
 aZ
 aZ
@@ -2978,7 +2920,7 @@ aK
 bz
 bR
 cf
-cz
+cB
 cP
 aK
 cR
@@ -3050,7 +2992,7 @@ aK
 bB
 bT
 bC
-cz
+cB
 cQ
 aK
 cR
@@ -3158,7 +3100,7 @@ bi
 bj
 bn
 bj
-cz
+cB
 bF
 ci
 bl
@@ -3229,7 +3171,7 @@ aZ
 bk
 bl
 bn
-cj
+cB
 cB
 bF
 bl

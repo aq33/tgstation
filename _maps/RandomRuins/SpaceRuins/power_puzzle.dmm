@@ -88,10 +88,6 @@
 /mob/living/carbon/human/species/golem/alien_alloy,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/central)
-"as" = (
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/storage/materials1)
 "at" = (
 /obj/structure/cable,
 /turf/open/floor/plasteel,
@@ -212,18 +208,6 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/materials1)
-"aO" = (
-/obj/structure/cable,
-/turf/closed/wall/r_wall,
-/area/ruin/space/has_grav/storage/power2)
-"aP" = (
-/obj/structure/cable,
-/turf/closed/wall/r_wall,
-/area/ruin/space/has_grav/storage/power2)
-"aQ" = (
-/obj/structure/cable,
-/turf/closed/wall/r_wall,
-/area/ruin/space/has_grav/storage/power2)
 "aR" = (
 /turf/closed/wall/r_wall,
 /area/ruin/space/has_grav/storage/power2)
@@ -240,14 +224,6 @@
 /area/ruin/space/has_grav/storage/power3)
 "aV" = (
 /obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/storage/power1)
-"aW" = (
-/obj/structure/cable,
-/obj/effect/decal/cleanable/blood/footprints{
-	dir = 1;
-	icon_state = "blood1"
-	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/power1)
 "aX" = (
@@ -323,10 +299,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/central)
-"bo" = (
-/obj/structure/cable,
-/turf/closed/wall/r_wall,
-/area/ruin/space/has_grav/storage/central2)
 "bp" = (
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/central)
@@ -452,14 +424,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/power1)
-"bN" = (
-/obj/structure/cable,
-/obj/effect/decal/cleanable/blood/footprints{
-	dir = 8;
-	icon_state = "blood1"
-	},
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/storage/power1)
 "bO" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/blood/footprints{
@@ -516,6 +480,7 @@
 /area/ruin/space/has_grav/storage/central2)
 "bW" = (
 /obj/machinery/door/airlock/hatch,
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/storage/central)
 "bX" = (
@@ -791,10 +756,6 @@
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
 /area/ruin/space/has_grav/storage/materials1)
-"RF" = (
-/obj/structure/cable,
-/turf/closed/wall/r_wall,
-/area/ruin/space/has_grav/storage/central2)
 "Wu" = (
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
@@ -1191,7 +1152,7 @@ ah
 ah
 ai
 aq
-as
+at
 bu
 aF
 aF
@@ -1206,8 +1167,8 @@ cF
 bA
 cn
 bP
-aW
-aW
+bM
+bM
 bM
 cV
 aX
@@ -1240,7 +1201,7 @@ bp
 co
 aX
 aX
-bN
+bO
 aX
 aX
 aM
@@ -1357,7 +1318,7 @@ ad
 am
 am
 bf
-RF
+Wu
 bz
 bz
 bk
@@ -1365,7 +1326,7 @@ bH
 bk
 bz
 bz
-aO
+bx
 bc
 bi
 bQ
@@ -1389,7 +1350,7 @@ ad
 cr
 bZ
 cq
-RF
+Wu
 bk
 bk
 bk
@@ -1397,7 +1358,7 @@ bC
 bk
 bk
 bk
-aO
+bx
 bi
 cP
 bQ
@@ -1421,7 +1382,7 @@ aH
 aK
 ad
 cw
-RF
+Wu
 bk
 bk
 bk
@@ -1429,7 +1390,7 @@ bI
 bk
 bk
 bk
-aO
+bx
 bi
 cQ
 cm
@@ -1453,7 +1414,7 @@ ax
 ad
 ad
 cx
-RF
+Wu
 bk
 bB
 bC
@@ -1461,7 +1422,7 @@ bC
 cf
 cj
 bk
-aO
+bx
 bj
 bi
 cp
@@ -1485,7 +1446,7 @@ ax
 ad
 ad
 am
-RF
+Wu
 bk
 bC
 bC
@@ -1493,7 +1454,7 @@ bC
 bC
 bC
 bk
-aP
+bx
 bx
 aR
 aR
@@ -1517,7 +1478,7 @@ ad
 ad
 ad
 am
-RF
+Wu
 bk
 bD
 bC
@@ -1525,7 +1486,7 @@ tt
 bC
 ck
 bk
-aO
+bx
 bE
 bi
 cQ
@@ -1550,14 +1511,14 @@ am
 aK
 bg
 Wu
-bo
+Wu
 bR
 bV
 bR
 bR
 bR
-bo
-aQ
+Wu
+bx
 bF
 bJ
 cS

@@ -107,6 +107,7 @@
 /area/ruin/powered/clownplanet)
 "aw" = (
 /obj/machinery/door/airlock/bananium,
+/obj/structure/fans/tiny,
 /turf/open/floor/grass,
 /area/ruin/powered/clownplanet)
 "ax" = (
