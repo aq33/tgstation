@@ -125,10 +125,6 @@
 /obj/structure/table,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/deepstorage/crusher)
-"aC" = (
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/deepstorage/crusher)
 "aD" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -808,12 +804,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/deepstorage)
-"cb" = (
-/obj/machinery/atmospherics/pipe/simple/supplymain/hidden,
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/deepstorage)
 "cc" = (
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -1074,15 +1064,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/deepstorage/storage)
-"cE" = (
-/obj/machinery/atmospherics/pipe/simple/supplymain/hidden{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/deepstorage)
 "cF" = (
 /obj/machinery/atmospherics/pipe/manifold/supplymain/hidden,
 /obj/effect/decal/cleanable/dirt,
@@ -1160,12 +1141,6 @@
 	pixel_x = 24
 	},
 /turf/open/floor/plasteel/freezer,
-/area/ruin/space/has_grav/deepstorage)
-"cP" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
 /area/ruin/space/has_grav/deepstorage)
 "cQ" = (
 /obj/structure/cable,
@@ -1248,12 +1223,6 @@
 /obj/machinery/atmospherics/pipe/simple/supplymain/hidden,
 /turf/open/floor/plasteel/freezer,
 /area/ruin/space/has_grav/deepstorage)
-"da" = (
-/obj/structure/cable,
-/obj/machinery/door/firedoor,
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/deepstorage/armory)
 "db" = (
 /obj/structure/table,
 /obj/item/healthanalyzer,
@@ -1332,11 +1301,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/deepstorage)
-"dl" = (
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/deepstorage)
 "dm" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -1365,12 +1329,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/deepstorage)
-"ds" = (
-/obj/structure/cable,
-/obj/machinery/door/firedoor,
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/deepstorage/armory)
 "dt" = (
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/deepstorage/armory)
@@ -1631,12 +1589,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/deepstorage/dorm)
-"dT" = (
-/obj/machinery/atmospherics/pipe/manifold/supplymain/hidden,
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/deepstorage)
 "dU" = (
 /obj/machinery/atmospherics/pipe/simple/supplymain/hidden{
 	dir = 4
@@ -1677,15 +1629,6 @@
 /obj/machinery/atmospherics/pipe/manifold/supplymain/hidden{
 	dir = 1
 	},
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/deepstorage)
-"dZ" = (
-/obj/machinery/atmospherics/pipe/simple/supplymain/hidden{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
@@ -1837,12 +1780,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/deepstorage)
-"eu" = (
-/obj/structure/cable,
-/obj/machinery/door/firedoor,
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/deepstorage/armory)
 "ev" = (
 /obj/machinery/atmospherics/pipe/simple/supplymain/hidden{
 	dir = 5
@@ -2074,15 +2011,6 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/deepstorage)
-"eT" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "bunkershutter"
-	},
-/obj/structure/cable,
-/obj/machinery/door/firedoor,
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/deepstorage/airlock)
 "eU" = (
 /obj/structure/chair{
 	dir = 8
@@ -2604,12 +2532,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/deepstorage/power)
-"gj" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/deepstorage/power)
 "gk" = (
 /obj/machinery/light{
 	dir = 4
@@ -2642,10 +2564,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/deepstorage)
-"gq" = (
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/deepstorage/power)
 "gr" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable,
@@ -2653,12 +2571,6 @@
 	pixel_y = -32
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav/deepstorage/power)
-"gt" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable,
-/turf/open/floor/plasteel,
 /area/ruin/space/has_grav/deepstorage/power)
 "gu" = (
 /obj/machinery/atmospherics/pipe/simple/supplymain/visible{
@@ -2820,6 +2732,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/deepstorage)
 "gR" = (
@@ -2867,11 +2780,6 @@
 /obj/item/storage/toolbox/mechanical,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/ruin/space/has_grav/deepstorage/power)
-"gX" = (
-/obj/machinery/power/rtg/advanced,
-/obj/structure/cable,
-/turf/open/floor/plating,
 /area/ruin/space/has_grav/deepstorage/power)
 "gY" = (
 /obj/machinery/door/airlock/highsecurity{
@@ -3869,7 +3777,7 @@ bo
 bE
 bW
 ci
-cE
+ec
 cR
 dh
 dA
@@ -3977,7 +3885,7 @@ cG
 bz
 dj
 dC
-dT
+ea
 en
 eD
 eD
@@ -4079,7 +3987,7 @@ af
 cl
 cI
 cT
-dl
+dm
 dE
 dV
 cp
@@ -4240,7 +4148,7 @@ dH
 hi
 eq
 eH
-eT
+fh
 fh
 fs
 eq
@@ -4393,7 +4301,7 @@ cN
 cY
 dp
 dJ
-dZ
+ec
 es
 eK
 eW
@@ -4402,11 +4310,11 @@ fv
 eq
 fW
 gh
-gq
+gK
 fp
 gJ
 gR
-gX
+gZ
 gZ
 fp
 ab
@@ -4458,7 +4366,7 @@ gr
 fp
 gK
 gR
-gX
+gZ
 ha
 fp
 ab
@@ -4538,27 +4446,27 @@ ab
 ag
 ak
 at
-aC
+aD
 aO
 be
 by
 bP
 ca
 ct
-cP
-cP
+dr
+dr
 dr
 dL
 ec
 et
-cP
+dr
 eY
 fl
 fx
 hl
 fZ
-gj
-gt
+gM
+gM
 gA
 gM
 gT
@@ -4595,14 +4503,14 @@ aP
 bf
 bz
 bz
-cb
+dn
 cu
 bz
 bz
-cb
+dn
 cu
 ed
-cb
+dn
 bz
 eZ
 fm
@@ -4650,11 +4558,11 @@ bQ
 cc
 cv
 aQ
-da
-ds
+eM
+eM
 dM
 ee
-eu
+eM
 eM
 fa
 fn

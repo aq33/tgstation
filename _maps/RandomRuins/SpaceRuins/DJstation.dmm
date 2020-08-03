@@ -61,10 +61,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/djstation)
-"ao" = (
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/ruin/space/djstation)
 "ap" = (
 /obj/machinery/power/apc{
 	name = "Worn-out APC";
@@ -372,6 +368,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/space/djstation)
 
@@ -586,7 +583,7 @@ ai
 ah
 aj
 an
-ao
+ar
 ar
 at
 aw
