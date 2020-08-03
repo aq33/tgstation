@@ -227,6 +227,7 @@ All foods are distributed among various categories. Use common sense.
 		to_chat(user, "<span class='warning'>You cannot slice [src] here! You need a table or at least a tray.</span>")
 		return FALSE
 
+	playsound(src.loc, 'sound/effects/slice.ogg', 50, 1)
 	var/slices_lost = 0
 	if (accuracy >= IS_SHARP_ACCURATE)
 		user.visible_message( \

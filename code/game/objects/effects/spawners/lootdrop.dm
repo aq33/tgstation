@@ -225,11 +225,15 @@
 		/obj/item/reagent_containers/food/snacks/pie/cream = 3)
 
 
-/obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner
-	name = "20% chance xeno egg spawner"
+/obj/effect/spawner/lootdrop/xenobiology_fun_spawner
+	name = "xenobiology fun spawner"
 	loot = list(
-		/obj/effect/decal/remains/xeno = 4,
-		/obj/effect/spawner/xeno_egg_delivery = 1)
+		/obj/effect/spawner/xeno_egg_delivery = 1,
+		/obj/effect/spawner/infectious_zombie_delivery = 1,
+		/obj/effect/spawner/swarmer_fabricator_delivery = 1,
+		/obj/effect/spawner/spider_egg_delivery = 1,
+		/obj/effect/spawner/infected_monkey_delivery = 1,
+		/obj/effect/spawner/hivebot_delivery = 1)
 
 /obj/effect/spawner/lootdrop/sanitarium
 	name = "patient spawner"
@@ -247,7 +251,7 @@
 		/mob/living/simple_animal/hostile/retaliate/spaceman = 2,
 		/obj/effect/mob_spawn/human/corpse/assistant/brainrot_infection = 1,
 		/mob/living/simple_animal/hostile/retaliate/frog = 2)
-	
+
 /obj/effect/spawner/lootdrop/costume
 	name = "random costume spawner"
 

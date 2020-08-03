@@ -33,6 +33,7 @@
 /area/ruin/unpowered)
 "j" = (
 /obj/machinery/door/airlock,
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "k" = (

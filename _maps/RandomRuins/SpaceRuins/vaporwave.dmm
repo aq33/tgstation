@@ -113,6 +113,7 @@
 "z" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/hatch,
+/obj/structure/fans/tiny,
 /turf/open/floor/pod/dark,
 /area/ruin/space/has_grav/powered/aesthetic)
 "A" = (

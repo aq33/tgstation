@@ -2,47 +2,6 @@
 "aa" = (
 /turf/template_noop,
 /area/template_noop)
-"ab" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/space/has_grav/abandonedzoo)
-"ac" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/abandonedzoo)
-"ad" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/space/has_grav/abandonedzoo)
-"ae" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/space/has_grav/abandonedzoo)
-"af" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/space/has_grav/abandonedzoo)
 "ag" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -161,23 +120,6 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/grass,
 /area/ruin/space/has_grav/abandonedzoo)
-"aD" = (
-/obj/machinery/door/airlock/highsecurity{
-	name = "Bio Containment";
-	req_one_access_txt = "47"
-	},
-/obj/structure/cable,
-/turf/open/floor/plasteel/dark/side,
-/area/ruin/space/has_grav/abandonedzoo)
-"aE" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/abandonedzoo)
 "aG" = (
 /obj/structure/table/reinforced,
 /obj/item/gun/energy/floragun,
@@ -191,25 +133,12 @@
 	},
 /turf/open/floor/plasteel/dark/side,
 /area/ruin/space/has_grav/abandonedzoo)
-"aJ" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/abandonedzoo)
 "aK" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /turf/template_noop,
 /area/space/nearstation)
-"aL" = (
-/obj/structure/cable,
-/turf/open/floor/plasteel/dark/side,
-/area/ruin/space/has_grav/abandonedzoo)
 "aN" = (
 /obj/structure/table/reinforced,
 /obj/item/folder,
@@ -447,11 +376,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/abandonedzoo)
-"bt" = (
-/obj/machinery/shieldwallgen,
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/space/has_grav/abandonedzoo)
 "bu" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/open/floor/plating,
@@ -629,33 +553,6 @@
 "bX" = (
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/abandonedzoo)
-"eY" = (
-/obj/structure/cable,
-/turf/open/floor/plasteel/dark/side,
-/area/ruin/space/has_grav/abandonedzoo)
-"fM" = (
-/obj/effect/turf_decal/tile/green{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/green,
-/obj/effect/turf_decal/tile/green{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/green{
-	dir = 8
-	},
-/obj/structure/cable,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/abandonedzoo)
-"jz" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/space/has_grav/abandonedzoo)
 "kj" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -676,29 +573,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/abandonedzoo)
-"nQ" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/ruin/space/has_grav/abandonedzoo)
-"oK" = (
-/obj/effect/turf_decal/tile/green{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/green,
-/obj/effect/turf_decal/tile/green{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/green{
-	dir = 8
-	},
-/obj/structure/cable,
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/abandonedzoo)
 "rY" = (
@@ -717,20 +592,6 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark/side,
 /area/ruin/space/has_grav/abandonedzoo)
-"tP" = (
-/obj/effect/turf_decal/tile/green{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/green,
-/obj/effect/turf_decal/tile/green{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/green{
-	dir = 8
-	},
-/obj/structure/cable,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/abandonedzoo)
 "wF" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Bio-Research Station"
@@ -748,14 +609,6 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/abandonedzoo)
-"AX" = (
-/obj/machinery/door/airlock/highsecurity{
-	name = "Bio Containment";
-	req_one_access_txt = "47"
-	},
-/obj/structure/cable,
-/turf/open/floor/plasteel/dark/side,
-/area/ruin/space/has_grav/abandonedzoo)
 "Ck" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 1
@@ -769,14 +622,6 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/abandonedzoo)
-"Hx" = (
-/obj/machinery/door/airlock/highsecurity{
-	name = "Bio Containment";
-	req_one_access_txt = "47"
-	},
-/obj/structure/cable,
-/turf/open/floor/plasteel/dark/side,
 /area/ruin/space/has_grav/abandonedzoo)
 "KN" = (
 /turf/template_noop,
@@ -800,117 +645,117 @@
 /area/ruin/space/has_grav/abandonedzoo)
 
 (1,1,1) = {"
-ab
+Ld
 kj
 kj
 kj
 kj
-jz
+Ld
 aa
 aa
 aa
 aa
 aa
 aa
-ae
+Ld
 kj
 kj
 kj
 kj
-nQ
+Ld
 aa
 "}
 (2,1,1) = {"
-ac
+kj
 ah
 ai
 ar
 ah
-ac
+kj
 aK
 aK
 aK
 aK
 aK
 aK
-ac
+kj
 bu
 bv
 bI
 bv
-ac
+kj
 aa
 "}
 (3,1,1) = {"
-ac
+kj
 ah
 ap
 ai
 ai
-aD
-aL
+VW
+sC
 aR
-aL
-eY
+sC
+sC
 aR
-aL
+sC
 VW
 bv
 bv
 bJ
 bv
-ac
+kj
 aa
 "}
 (4,1,1) = {"
-ac
+kj
 ai
 ah
 ai
 aw
-ac
+kj
 at
 at
 bb
 wF
 at
 at
-ac
+kj
 bw
 bv
 bv
 bv
-ac
+kj
 aa
 "}
 (5,1,1) = {"
-ac
+kj
 aj
 ai
 as
 ar
-ac
+kj
 at
 aS
 Ck
-oK
+Ck
 be
 at
-ac
+kj
 bx
 bE
 bv
 bv
-ac
+kj
 aa
 "}
 (6,1,1) = {"
-ad
+Ld
 kj
 kj
 kj
 kj
-aE
+bo
 at
 aT
 ay
@@ -935,7 +780,7 @@ at
 at
 aU
 ay
-fM
+Ck
 bg
 at
 at
@@ -956,7 +801,7 @@ aG
 aN
 aV
 ay
-tP
+Ck
 bh
 bm
 bp
@@ -977,7 +822,7 @@ ay
 aO
 ay
 ay
-tP
+Ck
 ay
 ay
 ay
@@ -998,7 +843,7 @@ ay
 ay
 ay
 ay
-tP
+Ck
 ay
 ay
 ay
@@ -1019,7 +864,7 @@ aI
 aP
 aW
 ay
-tP
+Ck
 bi
 bn
 br
@@ -1040,7 +885,7 @@ at
 at
 aX
 ay
-tP
+Ck
 bj
 at
 at
@@ -1052,16 +897,16 @@ aa
 aa
 "}
 (13,1,1) = {"
-ae
+Ld
 kj
 kj
 kj
 kj
-aJ
+bo
 at
 aY
 ay
-tP
+Ck
 bk
 at
 bs
@@ -1073,40 +918,40 @@ bS
 aa
 "}
 (14,1,1) = {"
-ac
+kj
 al
 an
 an
 aA
-ac
+kj
 at
 aZ
 ay
-tP
+Ck
 bl
 at
-ac
+kj
 bB
 bB
 bD
 bH
-ac
+kj
 aa
 "}
 (15,1,1) = {"
-ac
+kj
 am
 am
 ao
 aB
-ac
+kj
 at
 at
 bb
 wF
 at
 at
-ac
+kj
 bC
 bH
 bH
@@ -1115,19 +960,19 @@ bT
 aa
 "}
 (16,1,1) = {"
-ac
+kj
 an
 aq
 au
 am
-Hx
-aL
+VW
+sC
 ba
-aL
+sC
 sC
 rY
-aL
-AX
+sC
+VW
 bD
 bB
 bX
@@ -1136,19 +981,19 @@ bU
 bW
 "}
 (17,1,1) = {"
-ac
+kj
 ao
 an
 av
 aC
-ac
+kj
 aQ
 aQ
 aQ
 aQ
 aQ
 aQ
-ac
+kj
 bB
 bB
 bX
@@ -1157,7 +1002,7 @@ bP
 aa
 "}
 (18,1,1) = {"
-af
+Ld
 kj
 kj
 kj
@@ -1169,7 +1014,7 @@ aa
 aa
 aa
 aa
-bt
+bS
 kj
 kj
 bN
