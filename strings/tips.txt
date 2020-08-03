@@ -103,21 +103,21 @@ Jako Inżynier możesz naprawiać szyby używając na nich spawarki z intentem i
 Jako Inżynier możesz blokować APC, alarmy pożarowe, emitery i kolektory promieniowaniaza pomocą swojego ID, aby powstrzymać innych od wyłączania ich.
 Jako Inżynier możesz przekształcić cewki tesli w analizatory wieńcowe używając śrubokrętu na obwodzie drukowanym. Będą produkować mniej prądu, ale także generować punkty naukowe!
 Jako Inżynier możesz użyć kolektorów promieniowania do generowania punktów naukowych. Load them with a 50/50 oxygen/tritium tank and use a multitool to switch them to research mode.
-Jako InżynierAs an Engineer, don't underestimate the humble P.A.C.M.A.N. generators. With upgraded parts, a couple units working in tandem are sufficient to take over for an exploded engine or shattered solars.
-Jako InżynierAs an Engineer, your departmental protolathe and circuit printer can manufacture the necessary circuit boards and components to build just about anything. Make extra medical machinery everywhere! Build a gibber for security! Set up an array of emitters pointing down the hall! The possibilities are endless!
-Jako InżynierAs an Engineer, you can pry open secure storage blast doors by disabling the engine room APC's main breaker. This is obviously a bad idea if the engine is running.
-Jako InżynierAs an Engineer, your RCD can be reloaded with metal, glass or plasteel sheets instead of just compressed matter cartridges.
-Jako InżynierAs an Engineer, the Supermatter Monitoring Program on modular computers give you a detailed report on the Supermatter's condition, and the contents of the air inside of the chamber, allowing you to both diagnose and monitor programs from afar!
-As an Atmospheric Technician, you can unwrench a pipe regardless of the pressures of the gases inside, but if they're too high they can burst out and injure you!
-As an Atmospheric Technician, look into replacing your gas pumps with volumetric gas pumps, as those move air in flat numerical amounts, rather than percentages which leave trace gases.
-As an Atmospheric Technician, you are better suited to fighting fires than anyone else. As such, you have access to better firesuits, backpack firefighter tanks, and a completely heat and fire proof rigsuit.
-As an Atmospheric Technician, your backpack firefighter tank can launch resin. This resin will extinguish fires and replace any gases with a safe, room-temperature airmix.
-As an Atmospheric Technician, your ATMOS holofan projector blocks gases while allowing objects to pass through. With it, you can quickly contain gas spills, fires and hull breaches. Or, use it to seal a plasmaman cloning room.
-As an Atmospheric Technician, burning a plasma/oxygen mix inside the incinerator will not only produce power, but also gases such as tritium, water vapor and carbon dioxide.
-As an Atmospheric Technician, you can change the layer of a pipe by clicking with it on a wrenched pipe or other atmos component of the desired layer.
-As the Head of Security, you are expected to coordinate your security force to handle any threat that comes to the station. Sometimes it means making use of the armory to handle a blob, sometimes it means being ruthless during a revolution or cult.
-As the Head of Security, you can call for executions or forced cyborgization, but may require the Captain's approval.
-As the Head of Security, don't let the power go to your head. You may have high access, great equipment, and a miniature army at your side, but being a terrible person without a good reason is grounds for banning.
+Jako Inżynier nie lekceważ generatorów P.A.C.M.A.N. Po ulepszeniach kilka jednostek jest w stanie zastąpić wysadzony reaktor lub połamane panele słoneczne.
+Jako Inżynie możesz w protolathe lub drukarce odwodów swojego departamentu wydrukować obwody potrzebne do skonstruowania praktycznie wszystkiego. Postaw wszędzie dodatkowy ekwipunek medyczny! Zbuduj mielarkę dla ochrony! Postaw rząd emiterów wycelowanych w korytarz! Możliwości są nieograniczone!
+Jako Inżynier możesz podważyć drzwi do zabezpieczonego schowka wyłączając APC w pomieszczeniu reaktora. To zły pomysł jeśli reaktor pracuje.
+Jako Inżynier możesz naładowac RCD za pomoca arkuszy metalu, szkła i plastali, zamiast naładowanych kartridży skompresowanej materii.
+Jako Inżynier możesz skorzystać z programu Monitora Supermaterii w komputerach modularnych do otrzymania szczegółowych informacji na temat stanu kryształu oraz poietrza znajdującego się w reaktorze, pozwalając na zdalną diagnostykę!
+Jako Technik Atmosferyczny możesz odkręcić kluczem dowolną rurę, niezależnie od ciśnienia, ale jeśli ciśnienie gazów wewnątrz jest zbyt wysokie, może ona wystrzelić i cię zranić!
+Jako Technik Atmosferyczny weź pod uwagę wymianę pomp gazowych na woluemetryczne pompy gazowe, ponieważ pompują one powietrze w określonych liczbowo wartościach, a nie procentowo, zostawiając śladowe gazy.
+Jako Technik Atmosferyczny jesteś najlepiej przygotowany do zwalczania pożarów. Masz dostęp do lepszych strojów strażackich, zbiornika gaśniczego na plecy i kombinezonu całkowicie odpornego na ciepło i ogień.
+Jako Technik Atmosferyczny możesz pryskać specjalną żywicą ze zbiornika gaśniczego. Ta żywica gasi ogień i zastępuje gazy bezpieczną mieszanką atmosferyczną w temperaturze pokojowej.
+Jako Technik Atmosferyczny możesz użyć swojego projektora ATMOS holofanów do stawiania hologramów, które blokuja gazy, ale pozwalają przechodzić obiektom. W ten sposób łatwo opanujesz wycieki gazów, pożary, czy uszkodzenia powłoki stacji. Lub możesz też uszczelnić pokój do klonowania plazmoludzi.
+Jako Technik Atmosferyczny spalając mieszankę plazmy i tlenu w komorze spalania, nie tylko generujesz prąd, ale także gazy takie jak tritium, para wodna, czy dwutlenek węgla.
+Jako Technik Atmosferyczny możesz zmienić warstwę rury klikając nią na przymocowaną rurę lub inny komponent atmosferyczny na danej warstwie.
+Jako Szef Ochrony masz za zadanie koordynować pracę ochrony, tak żeby była w stanie sprostać każdemu zagrożeniu jakie może spotkać stację. Czasami oznacza to rozdawanie broni do walki z blobem, a innym razem bycie bezwzględnym w obliczu rewolucji lub kultu.
+Jako Szef Ochrony możesz wnioskować o egzekucje lub przymusową cyborgizację, ale musisz wymagać zgody Kapitana.
+Jako Szef Ochrony nie pozwól, żeby władza uderzyła ci do głowy. Może masz wysoki dostęp, dobry ekwipunek i miniaturową armię po swojej stronie, ale bycie okropną osobą bez powodu przyczyni się do twojego bana.
 As the Warden, your duty is to be the watchdog of the brig and handler of prisoners when little is happening, and to hand out equipment and weapons to the security officers when a crisis strikes.
 As the Warden, keep a close eye on the armory at all times, as it is a favored strike point of nuclear operatives and cocky traitors.
 As the Warden, if a prisoner's crimes are heinous enough you can put them in permabrig or the gulag. Make sure to check on them once in a while!
