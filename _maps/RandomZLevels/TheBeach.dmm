@@ -214,7 +214,7 @@
 /turf/open/floor/plating/beach/water,
 /area/awaymission/beach)
 "aJ" = (
-/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull/light{
+/obj/item/reagent_containers/food/drinks/beer/light{
 	pixel_x = -14;
 	pixel_y = 15
 	},
