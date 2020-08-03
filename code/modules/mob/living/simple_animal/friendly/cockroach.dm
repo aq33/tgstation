@@ -28,10 +28,6 @@
 	del_on_death = 1
 	mobsay_color = "#BC7658"
 
-/mob/living/simple_animal/cockroach/Initialize()
-	. = ..()
-	find_candidates()
-
 /mob/living/simple_animal/cockroach/attack_ghost(mob/dead/observer/user)
 	. = ..()
 	give_to_ghost(user)
