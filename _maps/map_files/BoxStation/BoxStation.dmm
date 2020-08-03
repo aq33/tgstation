@@ -689,6 +689,7 @@
 	specialfunctions = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "abL" = (
@@ -1104,6 +1105,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel/freezer,
 /area/security/prison)
 "acL" = (
@@ -47688,6 +47690,11 @@
 /obj/machinery/door/firedoor/window,
 /turf/open/floor/plating,
 /area/crew_quarters/fitness)
+"kSy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "kTx" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 1
@@ -50635,7 +50642,7 @@
 /turf/open/floor/plasteel/white,
 /area/science/lab)
 "pDL" = (
-/obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner,
+/obj/effect/spawner/lootdrop/xenobiology_fun_spawner,
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "pET" = (
@@ -81602,7 +81609,7 @@ umD
 aap
 aay
 aaD
-aat
+kSy
 aat
 aat
 aat

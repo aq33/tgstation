@@ -37,6 +37,13 @@
         poison_per_bite = 3
         poison_type = /datum/reagent/toxin/venom
 
+/mob/living/simple_animal/hostile/retaliate/poison/snake/Initialize()
+	. = ..()
+	find_candidates()
+
+/mob/living/simple_animal/hostile/retaliate/poison/snake/attack_ghost(mob/dead/observer/user)
+	. = ..()
+	give_to_ghost(user)
 
 /mob/living/simple_animal/hostile/retaliate/poison/snake/ListTargets(atom/the_target)
 	. = oview(vision_range, targets_from) //get list of things in vision range

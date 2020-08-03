@@ -31,6 +31,10 @@
 	loot = list(/obj/item/organ/regenerative_core)
 	var/brood_type = /mob/living/simple_animal/hostile/asteroid/hivelordbrood
 
+/mob/living/simple_animal/hostile/asteroid/hivelord/attack_ghost(mob/dead/observer/user)
+	. = ..()
+	give_to_ghost(user, TRUE)
+
 /mob/living/simple_animal/hostile/asteroid/hivelord/OpenFire(the_target)
 	if(world.time >= ranged_cooldown)
 		var/mob/living/simple_animal/hostile/asteroid/hivelordbrood/A = new brood_type(src.loc)

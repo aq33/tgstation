@@ -105,6 +105,11 @@
 	},
 /turf/open/floor/oldshuttle,
 /area/ruin/powered)
+"W" = (
+/obj/machinery/door/airlock/public/glass,
+/obj/structure/fans/tiny,
+/turf/open/floor/oldshuttle,
+/area/ruin/powered)
 
 (1,1,1) = {"
 a
@@ -260,7 +265,7 @@ g
 c
 "}
 (10,1,1) = {"
-d
+W
 g
 g
 g
@@ -274,7 +279,7 @@ c
 t
 K
 g
-d
+W
 "}
 (11,1,1) = {"
 c

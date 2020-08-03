@@ -67,6 +67,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	jobspawn_override = TRUE
 	delete_after_roundstart = FALSE
 
+/obj/effect/landmark/start/prisoner
+	name = "Prisoner"
+	icon_state = "Prisoner"
+
+/obj/effect/landmark/start/prisoner/Initialize()
+	..()
+	GLOB.prisoner_start += loc
+
 /obj/effect/landmark/start/janitor
 	name = "Janitor"
 	icon_state = "Janitor"
@@ -214,8 +222,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/randommaint
 	name = "maintjobstart"
-	icon_state = "x3" 
-	var/job = "Gimmick" //put the title of the job here. 
+	icon_state = "x3"
+	var/job = "Gimmick" //put the title of the job here.
 
 /obj/effect/landmark/start/randommaint/New() //automatically opens up a job slot when the job's spawner loads in
 	..()
@@ -234,7 +242,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/start/randommaint/hobo
 	name = "Debtor"
 	job = "Debtor"
-	
+
 /obj/effect/landmark/start/randommaint/shrink
 	name = "Psychiatrist"
 	job = "Psychiatrist"
@@ -337,7 +345,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	GLOB.xeno_spawn += loc
 	return INITIALIZE_HINT_QDEL
 
-//objects with the stationloving component (nuke disk) respawn here. 
+//objects with the stationloving component (nuke disk) respawn here.
 //also blobs that have their spawn forcemoved (running out of time when picking their spawn spot), santa and respawning devils
 /obj/effect/landmark/blobstart
 	name = "blobstart"

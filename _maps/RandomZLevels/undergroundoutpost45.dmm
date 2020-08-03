@@ -2104,15 +2104,6 @@
 	icon_state = "platingdmg1"
 	},
 /area/awaymission/undergroundoutpost45/central)
-"eu" = (
-/turf/open/floor/plating{
-	heat_capacity = 1e+006;
-	icon_plating = "asteroidplating";
-	icon_state = "asteroidplating";
-	initial_gas_mix = "co2=173.4;n2=135.1;plasma=229.8;TEMP=351.9";
-	temperature = 363.9
-	},
-/area/awaymission/undergroundoutpost45/caves)
 "ev" = (
 /obj/item/clothing/under/misc/pj,
 /obj/structure/closet/secure_closet/personal/cabinet{
@@ -4392,12 +4383,6 @@
 	icon_state = "floorscorched1"
 	},
 /area/awaymission/undergroundoutpost45/gateway)
-"iP" = (
-/obj/structure/cable,
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006
-	},
-/area/awaymission/undergroundoutpost45/gateway)
 "iQ" = (
 /obj/structure/table,
 /obj/machinery/recharger,
@@ -4592,15 +4577,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006
-	},
-/area/awaymission/undergroundoutpost45/gateway)
-"ji" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /turf/open/floor/plasteel{
 	heat_capacity = 1e+006
 	},
@@ -6669,12 +6645,6 @@
 	heat_capacity = 1e+006
 	},
 /area/awaymission/undergroundoutpost45/research)
-"mL" = (
-/obj/structure/cable,
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006
-	},
-/area/awaymission/undergroundoutpost45/engineering)
 "mM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -8034,19 +8004,6 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark{
-	heat_capacity = 1e+006
-	},
-/area/awaymission/undergroundoutpost45/engineering)
-"oV" = (
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/obj/machinery/power/port_gen/pacman{
-	desc = "A portable generator for emergency backup power.";
-	name = "P.A.C.M.A.N.-type portable generator"
-	},
-/obj/structure/cable,
-/turf/open/floor/plating{
 	heat_capacity = 1e+006
 	},
 /area/awaymission/undergroundoutpost45/engineering)
@@ -11767,12 +11724,6 @@
 	heat_capacity = 1e+006
 	},
 /area/awaymission/undergroundoutpost45/engineering)
-"vA" = (
-/obj/structure/cable,
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006
-	},
-/area/awaymission/undergroundoutpost45/engineering)
 "vB" = (
 /obj/structure/cable,
 /turf/open/floor/plasteel{
@@ -12340,14 +12291,6 @@
 "wE" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006
-	},
-/area/awaymission/undergroundoutpost45/mining)
-"wF" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel{
 	heat_capacity = 1e+006
 	},
@@ -33133,11 +33076,11 @@ gS
 hu
 hZ
 iu
-iP
-ji
-iP
+lp
+ls
+lp
 ed
-iP
+lp
 lp
 jI
 mC
@@ -33653,7 +33596,7 @@ jI
 gv
 gK
 lr
-iP
+lp
 mE
 gK
 ad
@@ -42150,7 +42093,7 @@ tT
 gy
 uN
 hH
-eu
+eJ
 eJ
 ad
 ad
@@ -42407,7 +42350,7 @@ tU
 uw
 uO
 vk
-eu
+eJ
 eJ
 eJ
 ad
@@ -42664,7 +42607,7 @@ tV
 ux
 uP
 hH
-eu
+eJ
 eJ
 eJ
 eJ
@@ -48335,7 +48278,7 @@ ww
 xZ
 yc
 ww
-eu
+eJ
 eJ
 eJ
 eJ
@@ -48592,7 +48535,7 @@ xX
 ya
 yd
 yf
-eu
+eJ
 eJ
 eJ
 eJ
@@ -48835,7 +48778,7 @@ vr
 vO
 wi
 wv
-wF
+wQ
 wQ
 xa
 xh
@@ -48849,7 +48792,7 @@ xY
 yb
 ye
 ww
-eu
+eJ
 eJ
 eJ
 eJ
@@ -50850,9 +50793,9 @@ ad
 ad
 ad
 ad
-eu
-eu
-eu
+eJ
+eJ
+eJ
 fn
 eJ
 eJ
@@ -53971,7 +53914,7 @@ tC
 ui
 ln
 va
-vA
+vB
 vY
 ln
 ad
@@ -54217,11 +54160,11 @@ mz
 ln
 nK
 ot
-oV
+oX
 pA
 qb
 qF
-mL
+vB
 qH
 sV
 tD

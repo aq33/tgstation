@@ -18295,6 +18295,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plating{
 	icon_state = "platingdmg3"
 	},
@@ -22617,10 +22618,12 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aUB" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
@@ -110164,7 +110167,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner,
+/obj/effect/spawner/lootdrop/xenobiology_fun_spawner,
 /turf/open/floor/plasteel/dark,
 /area/science/xenobiology)
 "exE" = (
