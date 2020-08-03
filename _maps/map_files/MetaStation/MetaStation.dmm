@@ -931,6 +931,7 @@
 /obj/structure/toilet{
 	dir = 4
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel/freezer,
 /area/security/prison)
 "acq" = (
@@ -1841,6 +1842,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "adT" = (
@@ -77596,6 +77598,11 @@
 	icon_state = "panelscorched"
 	},
 /area/maintenance/port)
+"pMQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "pMX" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -101474,7 +101481,7 @@ aaI
 acE
 adb
 abE
-abE
+pMQ
 aem
 aeN
 afI
