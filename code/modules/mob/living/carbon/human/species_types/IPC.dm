@@ -82,7 +82,7 @@ datum/species/ipc/on_species_loss(mob/living/carbon/C)
 	C.dna.features["ipc_screen"] = "BSOD"
 	C.update_body()
 	sleep(3 SECONDS)
-	C.dna.features["ipc_screen"] = null // Turns off their monitor on death.
+	C.dna.features["ipc_screen"] = "BSOD" // Turns off their monitor on death.
 	C.update_body()
 
 /datum/action/innate/change_screen
