@@ -27,10 +27,9 @@
 /turf/closed/wall/r_wall,
 /area/engine/atmos)
 "ai" = (
-/obj/machinery/power/rtg/advanced,
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/space/nearstation)
+/obj/effect/spawner/engine,
+/turf/open/floor/plating,
+/area/construction)
 "aj" = (
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
@@ -41,16 +40,6 @@
 /obj/machinery/atmospherics/components/unary/tank/air,
 /turf/open/floor/plating,
 /area/engine/atmos)
-"an" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/cable,
-/turf/open/space,
-/area/space/nearstation)
-"ao" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/cable,
-/turf/open/space,
-/area/space/nearstation)
 "ap" = (
 /obj/machinery/airalarm/unlocked{
 	pixel_y = 23
@@ -135,16 +124,6 @@
 /obj/machinery/meter,
 /turf/open/floor/plating,
 /area/engine/atmos)
-"aA" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/cable,
-/turf/open/space,
-/area/space/nearstation)
-"aB" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/cable,
-/turf/open/space,
-/area/space/nearstation)
 "aC" = (
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -180,13 +159,6 @@
 	dir = 8
 	},
 /obj/structure/closet/radiation,
-/turf/open/floor/plasteel,
-/area/engine/gravity_generator)
-"aH" = (
-/obj/structure/cable,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
 /turf/open/floor/plasteel,
 /area/engine/gravity_generator)
 "aI" = (
@@ -230,11 +202,6 @@
 	},
 /turf/open/floor/plating,
 /area/engine/atmos)
-"aQ" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/cable,
-/turf/open/space,
-/area/space/nearstation)
 "aR" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
@@ -417,11 +384,6 @@
 	pixel_y = 23
 	},
 /obj/machinery/rnd/destructive_analyzer,
-/turf/open/floor/plasteel,
-/area/science)
-"bt" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/science)
 "bu" = (
@@ -636,15 +598,6 @@
 /obj/machinery/autolathe/hacked,
 /turf/open/floor/plasteel,
 /area/science)
-"cb" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/science)
-"cc" = (
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/science)
 "cd" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock,
@@ -676,15 +629,6 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/medical/chemistry)
-"ci" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel,
-/area/security/brig)
-"cj" = (
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/medical/chemistry)
@@ -748,11 +692,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/bridge)
-"cs" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/medical/chemistry)
 "ct" = (
 /obj/machinery/light{
 	dir = 8
@@ -1310,11 +1249,6 @@
 /turf/open/floor/plasteel,
 /area/security/brig)
 "eh" = (
-/turf/open/floor/plasteel,
-/area/hallway/secondary/entry)
-"ei" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "ej" = (
@@ -2374,11 +2308,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/department/bridge)
-"sE" = (
-/obj/machinery/power/rtg/advanced,
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/space/nearstation)
 "ut" = (
 /obj/structure/closet/secure_closet/atmospherics{
 	locked = 0
@@ -4370,7 +4299,7 @@ gi
 gm
 go
 gp
-ei
+eB
 gr
 dY
 aa
@@ -5744,20 +5673,20 @@ gn
 aD
 aD
 bH
-ci
+df
 df
 df
 df
 df
 eg
-ei
+eB
 gu
-ei
+eB
 ep
-ei
-ei
-ei
-ei
+eB
+eB
+eB
+eB
 eB
 eL
 eL
@@ -6115,9 +6044,9 @@ ba
 jE
 MY
 bk
-bt
 fT
-cb
+fT
+fT
 AP
 pA
 kQ
@@ -6134,7 +6063,7 @@ dn
 dn
 dn
 dn
-dn
+ai
 dL
 cN
 Tt
@@ -6301,7 +6230,7 @@ ZD
 ah
 bF
 OU
-cc
+XC
 Ct
 gd
 cA
@@ -6393,7 +6322,7 @@ Xp
 ah
 NZ
 bD
-cc
+XC
 co
 bA
 wS
@@ -6661,11 +6590,11 @@ aa
 aa
 ae
 ab
-ai
-an
 RC
-aQ
-sE
+aR
+RC
+aR
+RC
 ab
 bv
 bI
@@ -6753,11 +6682,11 @@ aa
 aa
 ae
 ab
-ai
-ao
-aA
+RC
 aR
-sE
+aR
+aR
+RC
 ab
 bv
 BG
@@ -6847,7 +6776,7 @@ ae
 ab
 ab
 ab
-aB
+aR
 ab
 ab
 ab
@@ -6939,7 +6868,7 @@ ae
 ac
 ac
 ab
-aB
+aR
 ab
 ac
 ac
@@ -7313,7 +7242,7 @@ bd
 bo
 aj
 hD
-cj
+pQ
 ct
 Ce
 cF
@@ -7407,7 +7336,7 @@ bx
 CV
 fL
 ch
-cs
+fL
 cT
 cU
 cU
@@ -7767,7 +7696,7 @@ ad
 qn
 Bl
 at
-aH
+aW
 aW
 bh
 br

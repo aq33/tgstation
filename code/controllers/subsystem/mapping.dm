@@ -20,6 +20,7 @@ SUBSYSTEM_DEF(mapping)
 	var/list/shuttle_templates = list()
 	var/list/shelter_templates = list()
 	var/list/random_room_templates = list()
+	var/list/random_engine_templates = list()
 
 	var/list/areas_in_z = list()
 
