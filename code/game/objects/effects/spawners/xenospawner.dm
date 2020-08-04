@@ -108,7 +108,7 @@
 	icon_state = "hivebot_fab"
 	var/announcement_time = 1200
 
-/obj/effect/spawner/infected_monkey_delivery/Initialize(mapload)
+/obj/effect/spawner/hivebot_delivery/Initialize(mapload)
 	..()
 	var/turf/T = get_turf(src)
 
