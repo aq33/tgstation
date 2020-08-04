@@ -118,30 +118,30 @@ Jako Technik Atmosferyczny możesz zmienić warstwę rury klikając nią na przy
 Jako Szef Ochrony masz za zadanie koordynować pracę ochrony, tak żeby była w stanie sprostać każdemu zagrożeniu jakie może spotkać stację. Czasami oznacza to rozdawanie broni do walki z blobem, a innym razem bycie bezwzględnym w obliczu rewolucji lub kultu.
 Jako Szef Ochrony możesz wnioskować o egzekucje lub przymusową cyborgizację, ale musisz wymagać zgody Kapitana.
 Jako Szef Ochrony nie pozwól, żeby władza uderzyła ci do głowy. Może masz wysoki dostęp, dobry ekwipunek i miniaturową armię po swojej stronie, ale bycie okropną osobą bez powodu przyczyni się do twojego bana.
-As the Warden, your duty is to be the watchdog of the brig and handler of prisoners when little is happening, and to hand out equipment and weapons to the security officers when a crisis strikes.
-As the Warden, keep a close eye on the armory at all times, as it is a favored strike point of nuclear operatives and cocky traitors.
-As the Warden, if a prisoner's crimes are heinous enough you can put them in permabrig or the gulag. Make sure to check on them once in a while!
-As the Warden, you can implant criminals you suspect might re-offend with devices that will track their location and allow you to remotely inject them with disabling chemicals.
-As the Warden, you can use handcuffs on orange prisoner shoes to turn them into cuffed shoes, forcing prisoners to walk and potentially thwarting an escape.
-As a Security Officer, communicate and coordinate with your fellow officers using the security channel (:s) to avoid confusion.
-As a Security Officer, your sechuds or HUDsunglasses can not only see crewmates' job assignments and criminal status, but also if they are mindshield implanted. You can tell by the flashing blue outline around their job icon. Use this to your advantage in a revolution to definitively tell who is on your side!
-As a Security Officer, mindshield implants can only prevent someone from being turned into a cultist: unlike revolutionaries, it will not de-cult them if they have already been converted.
-As a Security Officer, examining someone while wearing sechuds or HUDsunglasses will let you set their arrest level, which will cause Beepsky and other security bots to chase after them.
-As the Detective, people leave fingerprints everywhere and on everything. With the exception of white latex, gloves will hide them. All is not lost, however, as gloves leave fibers specific to their kind such as black or nitrile, pointing to a general department.
-As the Detective, you can use your forensics scanner from a distance.
-As the Detective, your revolver can be loaded with .357 ammunition obtained from a hacked autolathe. Firing it has a decent chance to blow up your revolver.
-As the Lawyer, try to negotiate with the Warden if sentences seem too high for the crime.
-As the Lawyer, you can try to convince the captain and Head of Security to hold trials for prisoners in the courtroom.
-As the Head of Personnel, you are not higher ranking than other heads of staff, even though you are expected to take the Captain's place first should he go missing. If the situation seems too rough for you, consider allowing another head to become temporary Captain.
-As the Head of Personnel, you are just as large a target as the Captain because of the potential power your ID and computer can hand out.
-As the Mime, your invisible wall power blocks people as well as projectiles. You can use it in a pinch to delay your pursuer.
-As the Mime, you can use :r and :l to speak through your ventriloquist dummy.
-As the Mime, your oath of silence is your source of power. Breaking it robs you of your powers and of your honor.
-As the Clown, if you lose your banana peel, you can still slip people with your PDA! Honk!
-As the Clown, eating bananas heals you slightly. Honk!
-As the Clown, your Grail is the mineral bananium, which can be given to the Roboticist to build you a fun and robust mech beloved by everyone.
-As the Clown, you can use your stamp on a sheet of cardboard as the first step of making a honkbot. Fun for the whole crew!
-As the Clown, spice your gimmicks up! Nobody likes a one-trick pony.
+Jako Naczelnik twoim obowiązkiem jest strzeżenie aresztu i zajmowanie się więźniami, kiedy panuje spoków i rozdawanie ekwipunku oraz broni oficerom w czasie kryzysu.
+Jako Naczelnik miej oko na zbrojownię, ponieważ jest to ulubiony cel nuklearnych operatorów oraz śmiałych zdrajców.
+Jako Naczelnik możesz umieścić więźnia w stałym areszcie lub wysłać go do gułagu, jeśli jego zbrodnie są wystarczająco poważne. Zaglądaj do niego od czasu do czasu!
+Jako Naczelnik możesz wszczepiać więźniom, których podejrzewasz, że mogą powtórzyć swoje zbrodnie, implanty pozwalające na ustalenie ich lokacji i zdalne podanie środków usypiających.
+Jako Naczelnik możesz użyć kajdanek na pomarańczowych butach więźnia, żeby zmienić je w zakute buty, zmuszając więźniów do chodzenia i udaremniając ich potencjalną ucieczkę.
+Jako Oficer Ochrony komunikuj się i koordynuj swoje działania z innymi oficerami za pomocą kanału ochrony (:s) w celu uniknięcia zamieszania.
+Jako Oficer Ochrony możesz zobaczyć za pomocą swojego sechuda lub okularów HUD pracę i status kryminalny innego załoganta, ale także to czy ma on wszczepiony implant mindshield. Możesz poznać po migającej niebieskiej obwódce ikony pracy. Użyj tego na swoją korzyść w trakcie rewolucji, żeby mieć pewność kto stoi po twojej stronie!
+Jako Oficer Ochrony pamiętaj, że implant mindshield może jedynie zapobiec zostaniu kultystą, w odróżnieniu od zostania rewolucjonistą, nie zadziała na załogantów, którzy już zostali nawróceni.
+Jako Oficer Ochrony możesz zmienić czyjś status kryminalny przyglądając mu się, mając założony sechud lub okulary HUD, co spowoduje że Beepsky i inne boty ochrony zaczną go gonić.
+Jako Detektyw pamiętaj że ludzie zostawiają odciski palców na wszystkim i wszędzie. Poza białymi lateksowymi, wszystkie rękawice są w stanie ukryć odciski. Nie wszystko jednak stracone, ponieważ rękawice pozostawiają za sobą włókna specyficzne dla każdego typu, pozwalając wskazać department.
+Jako Detektyw możesz używać skanera śledczego na odległość.
+Jako Detektyw możesz załadować swój rewoler amunicją .357, którą można pozyskać z hakowanego autolathe. Strzelając nią, masz sporą szansę że wysadzi twój rewolwer.
+Jako Prawnik staraj się negocjować z Naczelnikiem, jeśli kary wydają się zbyt wysokie w porównaniu do zbrodni.
+Jako Prawnik możesz spróbować przekonać Kapitana lub Szefa Ochrony, żeby przeprowadzić proces więźnia w sali sądowej.
+Jako Głowa Personelu nie jesteś wyżej w hierarchii niż inni szefowie departamentów, mimo że jesteś pierwszym, który ma przejąć rolę Kapitana, w wypadku gdyby zaginął. Jeśli sytuacja cię przerasta możesz  If the situation seems too rough for you, consider allowing another head to become temporary Captain.
+Jako Głowa Personelu jesteś podobnie jak Kapitan, głównym celem wszystkich antagonistów, ze względu na moc jaką można zdobyć za pomocą twojego ID i komputera.
+Jako Mim możesz blokować ludzi i pociski za pomocą mocy twojej niewidzialnej ściany. Użyj jej żeby spowolnić swojego prześladowcę.
+Jako Mim możesz mówić za pomocą :r lub :l trzymając w odpowiedniej ręce kukłę do brzuchomówstwa.
+Jako Mim pamiętaj, że przysięga milczenia jest źródłem twojej mocy. Złamanie jej zabierze ci twoją moc i honor.
+Jako Klaun możesz przewracać ludzi na swoim PDA, jeśli zgubiłeś skórkę od banana! Honk!
+Jako Klaun jedzenie bananów będzie cię leczyć. Honk!
+Jako Klaun możesz dac Robotykowi odrobinę bananium, żeby zbudował ci śmiesznego i robustnego mecha uwielbianego przez każdego.
+Jako Klaun użyj swojej pieczątki na kawałku kartonu, żeby rozpocząć konstrukcję honkbota. Zabawa dla całej załogi!
+Jako Klaun wymyśl masę różnych kawałów! Nikt nie lubi starych dowcipów.
 As the Clown, if you're a Traitor and get an emag on sale (or convince another traitor), you can emag your Clown Car to unlock a variety of new functions, including the Siege Mode, which will allow you to launch your passengers, preferably directly into the Supermatter! Or into space.
 As the Chaplain, your null rod has anti magic functions: it can destroy cultist runes by hitting them, and it makes you immune to wizard spells and cult magic.
 As the Chaplain, your bible is also a container that can store small items. Depending on your god, your starting bible may come with a surprise!
