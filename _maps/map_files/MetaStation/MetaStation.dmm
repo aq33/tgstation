@@ -13697,7 +13697,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "aAG" = (
@@ -76642,7 +76641,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "kMV" = (
@@ -78308,10 +78306,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/crew_quarters/locker)
-"tSd" = (
-/obj/effect/landmark/start_explorer,
-/turf/open/floor/plasteel,
-/area/quartermaster/miningoffice)
 "tUm" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -96363,7 +96357,7 @@ ayj
 azm
 aAF
 kKW
-tSd
+aAC
 aEw
 aFG
 ayj

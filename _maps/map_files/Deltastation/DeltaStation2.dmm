@@ -31925,7 +31925,6 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
-/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "bka" = (
@@ -31944,7 +31943,6 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
-/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "bkb" = (
