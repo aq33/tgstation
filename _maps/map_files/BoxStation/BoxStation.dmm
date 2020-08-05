@@ -26432,6 +26432,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "bBc" = (
@@ -40943,6 +40944,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 8
 	},
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "cBC" = (
@@ -53156,6 +53158,20 @@
 /obj/structure/rack,
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
+"uhQ" = (
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/effect/landmark/start_explorer,
+/turf/open/floor/plasteel,
+/area/quartermaster/miningdock)
 "uiY" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 8
@@ -78854,7 +78870,7 @@ kSb
 bAZ
 byE
 bzF
-bAc
+uhQ
 byE
 byE
 cBB

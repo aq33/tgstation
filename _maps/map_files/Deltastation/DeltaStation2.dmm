@@ -29915,6 +29915,7 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "bgO" = (
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "bgP" = (
@@ -113443,6 +113444,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/port)
+"rJH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start_explorer,
+/turf/open/floor/plasteel,
+/area/quartermaster/miningoffice)
 "rOf" = (
 /obj/item/twohanded/required/kirbyplants/random,
 /obj/effect/turf_decal/delivery,
@@ -159943,7 +159949,7 @@ baX
 bcB
 bed
 bfB
-bgP
+rJH
 bip
 bka
 baQ
@@ -160200,7 +160206,7 @@ aQP
 bcC
 bee
 bfC
-bgP
+rJH
 biq
 bjZ
 blX
