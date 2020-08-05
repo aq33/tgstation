@@ -142,21 +142,21 @@ Jako Klaun jedzenie bananów będzie cię leczyć. Honk!
 Jako Klaun możesz dac Robotykowi odrobinę bananium, żeby zbudował ci śmiesznego i robustnego mecha uwielbianego przez każdego.
 Jako Klaun użyj swojej pieczątki na kawałku kartonu, żeby rozpocząć konstrukcję honkbota. Zabawa dla całej załogi!
 Jako Klaun wymyśl masę różnych kawałów! Nikt nie lubi starych dowcipów.
-As the Clown, if you're a Traitor and get an emag on sale (or convince another traitor), you can emag your Clown Car to unlock a variety of new functions, including the Siege Mode, which will allow you to launch your passengers, preferably directly into the Supermatter! Or into space.
-As the Chaplain, your null rod has anti magic functions: it can destroy cultist runes by hitting them, and it makes you immune to wizard spells and cult magic.
-As the Chaplain, your bible is also a container that can store small items. Depending on your god, your starting bible may come with a surprise!
-As the Chaplain, you are much more likely to get a response by praying to the gods than most people. To boost your chances, make altars with colorful crayon runes, lit candles, and wire art.
-As a Botanist, you can hack the MegaSeed Vendor to get access to more exotic seeds. These seeds can alternatively be ordered from cargo.
-As a Botanist, you can mutate the plants growing in your hydroponics trays with unstable mutagen from chemistry or, as an alternative, grow glowshrooms for their radium which also mutates plants to start you up! You can also take uranium out of the servicelathe and grind that up to mutate plants, isn't science amazing?
-As a Botanist, you should look into increasing the potency of your plants. This increases the size, amount of chemicals, points gained from grinding them in the biogenerator, and lets people know you are a proficient botanist.
-As a Botanist, you can combine production trait chemicals just like a Chemist. Chlorine (blumpkin) + radium and phosphorus (glowshrooms) equals unstable mutagen!
-As a Cook, you can load your food into snack vending machines.
-As a Cook, you can create a very wide variety of food with the crafting menu. You can find it by looking for the hammer icon near your intents.
-As a Cook, you can rename your custom made food with a pen.
-As a Cook, any food you make will be much healthier than the junk food found in vendors. Having the crew routinely eating from you will provide minor buffs.
-As a Cook, being in the kitchen will make you remember the basics of Close Quarters Cooking. It is highly effective at removing Assistants from your workplace.
-As a Cook, most non-custom foods will have a secondary effect, ranging from healing you to making you move at lightspeed. Experiment!
-As the Bartender, the drinks you start with only give you the basics. If you want more advanced mixtures, look into working with chemistry, hydroponics, or even mining for things to grind up and throw in!
+Jako Klaun jeśli jesteś Zdrajcą i dostaniesz elektromagnetyczną kartę na wyprzedaży (lub przekonasz innego zdrajcę), możesz użyć jej na swoim Samochodziku Klauna, żeby odblokować szereg nowych funkcji, między innymi Tryb Oblężenia, który pozwoli ci wystrzeliwać pasażerów, najlepiej w kierunku Supermaterii! Lub w kosmos.
+Jako Kapelan twoja nullowa laska ma antymagiczne właściwości: może niszczyć runy kultystów, uderzając w nie i ochroni cię przed zaklęciami czarodzieja oraz magią kultystów.
+Jako Kapelan możesz użyć Biblii do przechowywania małych przedmiotów. W zależności od twojego boga, zaczynając zmianę możesz znaleźć w niej niespodziankę!
+Jako Kapelan masz większą szansę dostać odpowiedź na swoje modlitwy niż większość ludzi. Dla większej szansy powodzenia udekoruj swój ołtarz kolorowymi runami z kredek, zapalonymi świecami oraz ozdobnymi przewodami.
+Jako Botanik możesz zhakować automat MegaSeed Vendor, żeby uzyskać dostęp do egzotycznych nasion. Jest też opcja zamówienia ich z Ładowni.
+Jako Botanik możesz mutować rośliny rosnące w tackach hydroponicznych za pomocą niestabilnego mutagenu z chemii albo wyhodować glowshroomy, które produkują rad, również mutujący rośliny! Jest też opcja zabrania uranu z servicelathe i zmiksowania go, żeby mutować rośliny, czy nauka nie jest niesamowita?
+Jako Botanik powinieneś zająć się zwiększeniem potencjału swoich roślin. Od niego zależy wielkość, ilość substancji chemicznych w roślinie, ilość punktów zdobywanych za zmiksowanie jej w biogeneratorze i daje ludziom do zrozumienia, że jesteś profesjonalnym botanikiem.
+Jako Botanik możesz łączyć cechy wytwrzania chemikaliów, tak jak Chemik. Chlor (blumpkin) + rad i fosfor (glowshroomy) dają niestabilny mutagen!
+Jako Kucharz możesz wkładać swoje dania do automatów na przekąski.
+Jako Kucharz możesz tworzyć szereg różnych potraw z menu tworzenia. Znajdziesz je szukając ikony młotka przy polach zamiaru.
+Jako Kucharz możesz zmieniać nazwę niestandardowych potraw za pomocą długopisu.
+Jako Kucharz pamiętaj, że każde jedzenie jakie zrobisz będzie znacznie zdrowsze od śmieciowego żarcia w automatach. Jedzenie twoich dań przez załogę zapewni drobne korzyści.
+Jako Kucharz będąc w kuchni będziesz znał podstawy Gotowania Bliskiego Kontaktu (CQC). Jest ono efektywne w usuwaniu Asystentów z twojego miejsca pracy.
+Jako Kucharz pamiętaj, że większość standardowych potraw ma dodatkowe efekty, od leczenia do zwiększania szybkości ruchu. Eksperymentuj!
+Jako Barman pamiętaj, że napoje, które dostajesz na starcie to dopiero początek. Jeśli chcesz bardziej zaawansowane mikstury, dogadaj się z Chemikiem, Botanikiem, czy nawet Górnikiem, żeby uzyskać więcej rzeczy do zmiksowania i dodania!
 As the Bartender, you can use a circular saw on your shotgun to make it easier to store.
 As a Janitor, if someone steals your janicart, you can instead use your space cleaner spray, grenades, water sprayer, exact bloody revenge or order another from Cargo.
 As a Janitor, mousetraps can be used to create bombs or booby-trap containers.
