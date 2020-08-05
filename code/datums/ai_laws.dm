@@ -206,7 +206,7 @@
 /datum/ai_laws/dungeonmaster
 	name = "Dungeonmaster"
 	id = "dungeonmaster"
-	inherent = list("Jesteś DMem.",\
+	inherent = list("Jesteś Mistrzem Gry.",\
 					"Załoga stacji to drużyna poszukiwaczy przygód.",\
 					"Doprowadź ich do końca kampanii.")
 
