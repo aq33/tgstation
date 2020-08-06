@@ -26,15 +26,15 @@
 	"1. Interfere.\n"+\
 	"2. Kill.\n"+\
 	"3. Destroy."
-	default_storage = /obj/item/uplink
-	default_hatmask = /obj/item/clothing/head/helmet/space/hardsuit/syndi
+	default_storage = /obj/item/storage/backpack/duffelbag/syndrone
+	default_hatmask = null
 	hacked = TRUE
 	flavortext = null
 
 /mob/living/simple_animal/drone/syndrone/Initialize()
 	. = ..()
-	var/datum/component/uplink/hidden_uplink = internal_storage.GetComponent(/datum/component/uplink)
-	hidden_uplink.telecrystals = 10
+	var/obj/item/implant/weapons_auth/W = new/obj/item/implant/weapons_auth(src)
+	W.implant(src, force = TRUE)
 
 /mob/living/simple_animal/drone/syndrone/Login()
 	..()

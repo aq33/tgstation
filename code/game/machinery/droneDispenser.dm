@@ -4,12 +4,11 @@
 
 /obj/machinery/droneDispenser //Most customizable machine 2015
 	name = "drone shell dispenser"
-	desc = "Maszyna która automatycznie produkuje drony po załadowaniu żelazem i szkłem."
+	desc = "Maszyna która automatycznie produkuje drony po załadowaniu żelazem, szkłem, złotem i miedzią. NanoTrasen nie odpowiada za zaginione kredki."
 
 	icon = 'icons/obj/machines/droneDispenser.dmi'
 	icon_state = "on"
 	density = TRUE
-
 	max_integrity = 250
 	integrity_failure = 80
 
@@ -18,19 +17,21 @@
 	var/icon_on = "on"
 	var/icon_recharging = "recharge"
 	var/icon_creating = "make"
-
+	var/icon_open = "open"
+	//10 drones from one ingot of gold and copper and a full stack of glass and iron
+	var/has_parts
+	has_parts = TRUE
 	var/list/using_materials
 	var/starting_amount = 0
-	var/iron_cost = 1000
-	var/glass_cost = 1000
+	var/iron_cost = 10000
+	var/glass_cost = 10000
 	var/power_used = 1000
-	var/gold_cost = 0
-	var/copper_cost = 0
-	
+	var/gold_cost = 200
+	var/copper_cost = 200
 
 	var/mode = DRONE_READY
 	var/timer
-	var/cooldownTime = 1800 //3 minutes
+	var/cooldownTime = 2100 //600 - 1 minute
 	var/production_time = 30
 	//The item the dispenser will create
 	var/dispense_type = /obj/item/drone_shell
@@ -57,38 +58,59 @@
 	materials.insert_amount_mat(starting_amount)
 	materials.precise_insertion = TRUE
 	using_materials = list(/datum/material/iron = iron_cost, /datum/material/glass = glass_cost, /datum/material/copper = copper_cost, /datum/material/gold = gold_cost)
+	if(has_parts == TRUE)
+		component_parts = list(new /obj/item/circuitboard/machine/droneDispenser,
+		new /obj/item/mmi/posibrain,
+		new /obj/item/stack/sheet/glass, /obj/item/stock_parts/matter_bin,
+		new /obj/item/stock_parts/matter_bin,
+		new /obj/item/stock_parts/manipulator,
+		new /obj/item/stock_parts/manipulator)
+	else
+		component_parts = list(new /obj/item/stack/sheet/iron/twenty)
 
 /obj/machinery/droneDispenser/preloaded
-	starting_amount = 5000
+	has_parts = TRUE
+	starting_amount = 100000
 
 /obj/machinery/droneDispenser/syndrone //Please forgive me
 	name = "syndrone shell dispenser"
-	desc = "A suspicious machine that will create Syndicate exterminator drones when supplied with iron and glass. Disgusting."
+	desc = "Krwistoczerwony dyspenser automatycznie produkujący syndrony po załadowaniu żelazem, szkłem, złotem i miedzią. Syndykat odpowiada za zaginione kredki i załogę."
+	icon = 'icons/obj/machines/droneDispenser.dmi'
+	icon_off = "syndrone_off"
+	icon_on = "syndrone_on"
+	icon_recharging = "syndrone_recharge"
+	icon_creating = "syndrone_make"
+	icon_open = "syndrone_open"
 	dispense_type = /obj/item/drone_shell/syndrone
-	//If we're gonna be a jackass, go the full mile - 10 second recharge timer
-	cooldownTime = 100
+	has_parts = TRUE
 	end_create_message = "dispenses a suspicious drone shell."
-	starting_amount = 25000
 
 /obj/machinery/droneDispenser/syndrone/badass //Please forgive me
 	name = "badass syndrone shell dispenser"
 	desc = "A suspicious machine that will create Syndicate exterminator drones when supplied with iron and glass. Disgusting. This one seems ominous."
+	icon_off = "syndrone_off"
+	icon_on = "syndrone_on"
+	icon_recharging = "syndrone_recharge"
+	icon_creating = "syndrone_make"
+	icon_open = "syndrone_open"
 	dispense_type = /obj/item/drone_shell/syndrone/badass
+	has_parts = TRUE
 	end_create_message = "dispenses an ominous suspicious drone shell."
 
 // I don't need your forgiveness, this is awesome.
 /obj/machinery/droneDispenser/snowflake
 	name = "snowflake drone shell dispenser"
-	desc = "Maszyna która automatycznie produkuje drony po załadowaniu żelazem, szkłem, miedzią i złotem."
+	desc = "Maszyna która automatycznie produkuje drony po załadowaniu żelazem, szkłem, miedzią i złotem. NanoTrasen nie odpowiada za zaginione kredki."
 	dispense_type = /obj/item/drone_shell/snowflake
 	end_create_message = "dispenses a snowflake drone shell."
 	// Those holoprojectors aren't cheap
+	has_parts = TRUE
 	iron_cost = 10000
 	glass_cost = 10000
-	gold_cost = 500
-	copper_cost = 500
-	power_used = 2000
-	starting_amount = 10000
+	power_used = 1000
+	gold_cost = 200
+	copper_cost = 200
+	starting_amount = 2000
 
 // An example of a custom drone dispenser.
 // This one requires no materials and creates basic hivebots
@@ -101,9 +123,13 @@
 	icon_on = "hivebot_fab"
 	icon_recharging = "hivebot_fab"
 	icon_creating = "hivebot_fab_on"
+	has_parts = FALSE
 	iron_cost = 0
 	glass_cost = 0
+	gold_cost = 0
+	copper_cost = 0
 	power_used = 0
+	starting_amount = 1
 	cooldownTime = 10 //Only 1 second - hivebots are extremely weak
 	dispense_type = /mob/living/simple_animal/hostile/hivebot
 	begin_create_message = "closes and begins fabricating something within."
@@ -120,8 +146,13 @@
 	icon_on = "toffcenter"
 	icon_recharging = "toffcenter"
 	icon_creating = "offcenter"
+	has_parts = FALSE
 	iron_cost = 0
 	glass_cost = 0
+	gold_cost = 0
+	copper_cost = 0
+	power_used = 0
+	starting_amount = 1
 	cooldownTime = 300 //30 seconds
 	maximum_idle = 0 // Swarmers have no restraint
 	dispense_type = /obj/effect/mob_spawn/swarmer
@@ -204,24 +235,15 @@
 		if(istype(a, dispense_type))
 			.++
 
-/obj/machinery/droneDispenser/update_icon()
-	if(stat & (BROKEN|NOPOWER))
-		icon_state = icon_off
-	else if(mode == DRONE_RECHARGING)
-		icon_state = icon_recharging
-	else if(mode == DRONE_PRODUCTION)
-		icon_state = icon_creating
-	else
-		icon_state = icon_on
-
-/obj/machinery/droneDispenser/attackby(obj/item/I, mob/living/user)
-	if(I.tool_behaviour == TOOL_CROWBAR)
+//When alt-clicked the dispenser will drop stored mats.
+/obj/machinery/droneDispenser/AltClick(mob/user)
+	if(user.canUseTopic(src, !issilicon(usr)))
 		var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
 		materials.retrieve_all()
-		I.play_tool_sound(src)
 		to_chat(user, "<span class='notice'>You retrieve the materials from [src].</span>")
 
-	else if(I.tool_behaviour == TOOL_WELDER)
+/obj/machinery/droneDispenser/attackby(obj/item/I, mob/living/user)
+	if(I.tool_behaviour == TOOL_WELDER)
 		if(!(stat & BROKEN))
 			to_chat(user, "<span class='warning'>[src] doesn't need repairs.</span>")
 			return
@@ -245,6 +267,10 @@
 		update_icon()
 	else
 		return ..()
+//When Deconstructed, dispenser will drop stored mats.
+/obj/machinery/droneDispenser/on_deconstruction()
+	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
+	materials.retrieve_all()
 
 /obj/machinery/droneDispenser/obj_break(damage_flag)
 	if(!(flags_1 & NODECONSTRUCT_1))
@@ -256,10 +282,40 @@
 			stat |= BROKEN
 			update_icon()
 
-/obj/machinery/droneDispenser/deconstruct(disassembled = TRUE)
-	if(!(flags_1 & NODECONSTRUCT_1))
-		new /obj/item/stack/sheet/iron(loc, 5)
-	qdel(src)
+/obj/machinery/droneDispenser/attackby(obj/item/I, mob/user, params)
+	if(default_deconstruction_screwdriver(user, icon_open, icon_on, I))
+		return
+	if(default_pry_open(I))
+		return
+	if(default_deconstruction_crowbar(I))
+		var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
+		materials.retrieve_all()
+		return
+	return ..()
+
+/obj/machinery/droneDispenser/update_icon()
+	if(stat & (BROKEN|NOPOWER))
+		icon_state = icon_off
+	else if((stat & MAINT) || panel_open)
+		icon_state = icon_open
+	else if(mode == DRONE_RECHARGING)
+		icon_state = icon_recharging
+	else if(mode == DRONE_PRODUCTION)
+		icon_state = icon_creating
+	else
+		icon_state = icon_on
+
+//KODZIE KURWO JEBANA, PRZESTAŃ MI KURWA COOLDOWN OBNIŻAĆ
+/obj/machinery/droneDispenser/RefreshParts()
+	var/T = 0
+	var/cdT = 0
+	for(var/obj/item/stock_parts/matter_bin/MB in component_parts)
+		T += MB.rating*102000
+	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
+	materials.max_amount = T
+	for(var/obj/item/stock_parts/manipulator/M in component_parts)
+		cdT = M.rating * 300
+		cooldownTime = 2100 - cdT //chuj, może zadziała ze stałym cooldownem, nie wiem już kurwa
 
 #undef DRONE_PRODUCTION
 #undef DRONE_RECHARGING
