@@ -164,6 +164,7 @@ SUBSYSTEM_DEF(mapping)
 	lava_ruins_templates = SSmapping.lava_ruins_templates
 	shuttle_templates = SSmapping.shuttle_templates
 	random_room_templates = SSmapping.random_room_templates
+	random_engine_templates = SSmapping.random_engine_templates
 	shelter_templates = SSmapping.shelter_templates
 	unused_turfs = SSmapping.unused_turfs
 	turf_reservations = SSmapping.turf_reservations
@@ -353,6 +354,7 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 	preloadShuttleTemplates()
 	preloadShelterTemplates()
 	preloadRandomRoomTemplates()
+	preloadRandomEngineTemplates()
 
 /datum/controller/subsystem/mapping/proc/preloadRandomRoomTemplates()
 	for(var/item in subtypesof(/datum/map_template/random_room))
@@ -361,6 +363,15 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 			continue
 		var/datum/map_template/random_room/R = new room_type()
 		random_room_templates[R.room_id] = R
+		map_templates[R.room_id] = R
+
+/datum/controller/subsystem/mapping/proc/preloadRandomEngineTemplates()
+	for(var/item in subtypesof(/datum/map_template/random_engine))
+		var/datum/map_template/random_engine/engine_type = item
+		if(!(initial(engine_type.mappath)))
+			continue
+		var/datum/map_template/random_engine/R = new engine_type()
+		random_engine_templates[R.room_id] = R
 		map_templates[R.room_id] = R
 
 /datum/controller/subsystem/mapping/proc/preloadRuinTemplates()

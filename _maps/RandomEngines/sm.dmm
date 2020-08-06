@@ -1,14 +1,8 @@
-"a" = (/turf/open/floor/bronze,/area/space)
+"a" = (/turf/open/floor/plating,/area/space)
+"n" = (/obj/item/chair,/turf/open/floor/plating,/area/space)
+"T" = (/obj/item/chair/stool/bar,/turf/open/floor/plating,/area/space)
 
 (1,1,1) = {"
-aaaaaaaaaa
-aaaaaaaaaa
-aaaaaaaaaa
-aaaaaaaaaa
-aaaaaaaaaa
-aaaaaaaaaa
-aaaaaaaaaa
-aaaaaaaaaa
-aaaaaaaaaa
-aaaaaaaaaa
+na
+aT
 "}

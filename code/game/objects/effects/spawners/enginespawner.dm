@@ -13,10 +13,7 @@
 	qdel(src)
 
 /obj/effect/spawner/engine/Initialize()
-	..()
-	return INITIALIZE_HINT_LATELOAD
-
-/obj/effect/spawner/engine/LateInitialize()
+	. = ..()
 	var/list/possibletemplates = list()
 	var/datum/map_template/random_engine/cantidate = null
 	shuffle_inplace(SSmapping.random_engine_templates)
