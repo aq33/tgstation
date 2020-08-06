@@ -58,11 +58,13 @@
 	materials.insert_amount_mat(starting_amount)
 	materials.precise_insertion = TRUE
 	using_materials = list(/datum/material/iron = iron_cost, /datum/material/glass = glass_cost, /datum/material/copper = copper_cost, /datum/material/gold = gold_cost)
-	if(has_parts == TRUE)
+	if(has_parts)
 		component_parts = list(new /obj/item/circuitboard/machine/droneDispenser,
 		new /obj/item/mmi/posibrain,
-		new /obj/item/stack/sheet/glass, /obj/item/stock_parts/matter_bin,
+		new /obj/item/stack/sheet/glass,
 		new /obj/item/stock_parts/matter_bin,
+		new /obj/item/stock_parts/matter_bin,
+		new /obj/item/stock_parts/manipulator,
 		new /obj/item/stock_parts/manipulator,
 		new /obj/item/stock_parts/manipulator)
 	else
