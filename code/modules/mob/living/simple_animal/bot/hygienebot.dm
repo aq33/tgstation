@@ -124,20 +124,38 @@
 				if(target.loc == loc && isturf(target.loc)) //LADIES AND GENTLEMAN WE GOTEM PREPARE TO DUMP
 					start_washing()
 					if(mad)
-						speak("Well about fucking time you degenerate.", "Fucking finally.", "Thank god, you finally stopped.")
-						playsound(loc, 'sound/effects/hygienebot_angry.ogg', 60, 1)
+						var/list/messagevoice = list("Kurwa, w końcu." = 'sound/effects/hygienebot_kurwa.ogg',
+						"Nareszcie cię złapałem, złamasie." = 'sound/effects/hygienebot_angry.ogg',
+						"Widzisz, nie jest tak źle." = 'sound/effects/hygienebot_angry.ogg')
+						var/message = pick(messagevoice)
+						speak(message)
+						playsound(src, messagevoice[message], 60, 1)
 						mad = FALSE
 					mode = BOT_SHOWERSTANCE
 				else
 					stop_washing()
 					var/olddist = get_dist(src, target)
 					if(olddist > 20 || frustration > 100) // Focus on something else
+						var/list/messagevoice = list("Pierdole to." = 'sound/effects/hygienebot_angry.ogg',
+						"A idź ty złamasie." = 'sound/effects/hygienebot_angry.ogg',
+						"Spierdalaj z taką robotą." = 'sound/effects/hygienebot_angry.ogg')
+						var/message = pick(messagevoice) 
+						speak(message)
+						playsound(src, messagevoice[message], 60, 1)
 						back_to_idle()
 						return
 					walk_to(src, target,0, currentspeed)
 					if(mad && prob(min(frustration * 2, 60)))
-						playsound(loc, 'sound/effects/hygienebot_angry.ogg', 60, 1)
-						speak(pick("Get back here you foul smelling fucker.", "STOP RUNNING OR I WILL CUT YOUR ARTERIES!", "Just fucking let me clean you you arsehole!", "STOP. RUNNING.", "Either you stop running or I will fucking drag you out of an airlock.", "I just want to fucking clean you you troglodyte.", "If you don't come back here I'll put a green cloud around you cunt."))
+						var/list/messagevoice = list("Wracaj tu, śmierdzielu." = 'sound/effects/hygienebot_angry.ogg',
+						"Nie biegaj bo podłoge brudzisz." = 'sound/effects/hygienebot_angry.ogg',
+						"Daj się umyć bo śmierdzisz. " = 'sound/effects/hygienebot_angry.ogg',
+						"Myj dupe." = 'sound/effects/hygienebot_myjdupe.ogg',
+						"Albo przestaniesz uciekać albo dowiesz się gdzie zniknął klaun." = 'sound/effects/hygienebot_angry.ogg',
+						"Ja cię tylko chcę kurwa umyć." = 'sound/effects/hygienebot_angry.ogg',
+						"Pierdole, dzwonię na milicje." =	'sound/effects/hygienebot_milicja.ogg')
+						var/message = pick(messagevoice) 
+						speak(message)
+						playsound(src, messagevoice[message], 60, 1)
 					if((get_dist(src, target)) >= olddist)
 						frustration++
 					else
@@ -147,7 +165,7 @@
 
 		if(BOT_SHOWERSTANCE)
 			if(check_purity(target))
-				speak("Enjoy your clean and tidy day!")
+				speak("Miłego, czystego dnia!")
 				playsound(loc, 'sound/effects/hygienebot_happy.ogg', 60, 1)
 				back_to_idle()
 				return
@@ -186,7 +204,7 @@
 		if(!check_purity(H)) //Theyre impure
 			target = H
 			oldtarget_name = H.name
-			speak("Unhygienic client found. Please stand still so I can clean you.")
+			speak("Niehigieniczny klient znaleziony. Proszę stać w miejscu i dać się umyć.")
 			playsound(loc, 'sound/effects/hygienebot_happy.ogg', 60, 1)
 			visible_message("<b>[src]</b> points at [H.name]!")
 			mode = BOT_HUNT
