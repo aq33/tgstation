@@ -126,10 +126,10 @@
 	icon_recharging = "hivebot_fab"
 	icon_creating = "hivebot_fab_on"
 	has_parts = FALSE
-	iron_cost = 0
-	glass_cost = 0
-	gold_cost = 0
-	copper_cost = 0
+	iron_cost = 2000
+	glass_cost = 2000
+	gold_cost = 2000
+	copper_cost = 2000
 	power_used = 0
 	starting_amount = 1
 	cooldownTime = 10 //Only 1 second - hivebots are extremely weak
