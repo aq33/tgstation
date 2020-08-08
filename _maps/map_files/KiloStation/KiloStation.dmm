@@ -25415,12 +25415,20 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
+/obj/machinery/button/crematorium{
+	id = "crematoriumMorgue";
+	pixel_x = -24
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "aWw" = (
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
+	},
+/obj/structure/bodycontainer/crematorium{
+	dir = 8;
+	id = "crematoriumMorgue"
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
@@ -32668,6 +32676,7 @@
 "bjG" = (
 /obj/structure/table/wood,
 /obj/structure/cable,
+/obj/item/storage/lockbox/dueling,
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
 "bjH" = (
@@ -65801,21 +65810,30 @@
 /area/ai_monitored/security/armory)
 "cuZ" = (
 /obj/structure/rack,
-/obj/item/gun/energy/laser{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/gun/energy/laser,
-/obj/item/gun/energy/laser{
-	pixel_x = 3;
-	pixel_y = -3
-	},
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/item/gun/ballistic/automatic/laser{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/gun/ballistic/automatic/laser{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/gun/ballistic/automatic/laser,
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/ammo_box/magazine/recharge{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/ammo_box/magazine/recharge,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "cva" = (
@@ -66271,6 +66289,24 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/item/gun/energy/pulse/pistol/m1911,
+/obj/item/gun/energy/pulse/pistol/m1911{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/gun/energy/pulse/pistol/m1911{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/ammo_box/magazine/m45{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/ammo_box/magazine/m45{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/ammo_box/magazine/m45,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "cvU" = (
@@ -72161,14 +72197,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/storage)
-"dRi" = (
-/obj/machinery/atmospherics/pipe/simple/cyan/visible,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/cable,
-/turf/open/floor/engine,
-/area/engine/engineering)
 "ehY" = (
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
@@ -72316,6 +72344,14 @@
 /obj/item/clothing/mask/gas,
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
+"hdT" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/visible,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/engine/engineering)
 "hmR" = (
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
@@ -72384,6 +72420,15 @@
 "ilt" = (
 /turf/closed/wall/r_wall,
 /area/crew_quarters/fitness/recreation)
+"iGy" = (
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "engsm";
+	name = "Radiation Chamber Shutters"
+	},
+/obj/effect/turf_decal/caution/stand_clear,
+/obj/structure/cable/layer1,
+/turf/open/floor/plasteel/dark,
+/area/engine/supermatter)
 "iTA" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/decal/cleanable/dirt,
@@ -72705,16 +72750,6 @@
 	},
 /turf/closed/wall,
 /area/maintenance/solars/starboard/fore)
-"rrj" = (
-/obj/structure/flora/rock/pile,
-/obj/machinery/power/apc{
-	areastring = "/area/maintenance/solars/starboard/aft";
-	dir = 2;
-	name = "Starboard Quarter Solar APC";
-	pixel_y = -26
-	},
-/turf/open/floor/plating/asteroid/airless,
-/area/space/nearstation)
 "rSM" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -72927,6 +72962,16 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
 /turf/open/floor/plating,
 /area/security/processing)
+"xDm" = (
+/obj/structure/flora/rock/pile,
+/obj/machinery/power/apc{
+	areastring = "/area/maintenance/solars/starboard/aft";
+	dir = 2;
+	name = "Starboard Quarter Solar APC";
+	pixel_y = -26
+	},
+/turf/open/floor/plating/asteroid/airless,
+/area/space/nearstation)
 "xXt" = (
 /obj/machinery/light{
 	dir = 1
@@ -72940,15 +72985,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/virology)
-"yhQ" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "engsm";
-	name = "Radiation Chamber Shutters"
-	},
-/obj/effect/turf_decal/caution/stand_clear,
-/obj/structure/cable/layer1,
-/turf/open/floor/plasteel/dark,
-/area/engine/supermatter)
 
 (1,1,1) = {"
 aaa
@@ -107573,7 +107609,7 @@ czI
 cAq
 aLF
 cBG
-yhQ
+iGy
 cBG
 aLG
 cEg
@@ -109629,7 +109665,7 @@ czL
 cAt
 aLF
 cBG
-yhQ
+iGy
 cBG
 aLF
 cEl
@@ -109887,7 +109923,7 @@ cAu
 cAU
 cBM
 cBM
-dRi
+hdT
 cDF
 cEm
 cEH
@@ -114260,7 +114296,7 @@ aeu
 aeU
 aeU
 aeU
-rrj
+xDm
 bnW
 cFC
 bnW
