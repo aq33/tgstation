@@ -1988,7 +1988,6 @@
 /turf/open/floor/engine,
 /area/ai_monitored/turret_protected/aisat_interior)
 "aee" = (
-/obj/machinery/clonepod,
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
@@ -13281,7 +13280,6 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/machinery/computer/cloning,
 /obj/item/radio/intercom{
 	pixel_y = 22
 	},
@@ -13292,7 +13290,6 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/machinery/dna_scannernew,
 /obj/machinery/airalarm{
 	pixel_y = 24
 	},
@@ -25346,16 +25343,6 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/security/checkpoint/medical)
-"aWs" = (
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/machinery/sleeper{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/medical/medbay/central)
 "aWt" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8;
@@ -91778,7 +91765,7 @@ aFl
 aKy
 abl
 aSW
-aWs
+bzc
 bzc
 aOW
 aRg
