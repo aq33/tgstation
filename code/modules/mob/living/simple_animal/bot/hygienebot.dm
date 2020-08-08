@@ -124,7 +124,7 @@
 				if(target.loc == loc && isturf(target.loc)) //LADIES AND GENTLEMAN WE GOTEM PREPARE TO DUMP
 					start_washing()
 					if(mad)
-						var/list/messagevoice = list("Kurwa, w końcu." = 'sound/effects/hygienebot_kurwa.ogg',
+						var/list/messagevoice = list("Kurwa, w końcu." = 'sound/effects/hygienebot_angry.ogg',//'sound/effects/hygienebot_kurwa.ogg',
 						"Nareszcie cię złapałem, złamasie." = 'sound/effects/hygienebot_angry.ogg',
 						"Widzisz, nie jest tak źle." = 'sound/effects/hygienebot_angry.ogg')
 						var/message = pick(messagevoice)
@@ -149,10 +149,10 @@
 						var/list/messagevoice = list("Wracaj tu, śmierdzielu." = 'sound/effects/hygienebot_angry.ogg',
 						"Nie biegaj bo podłoge brudzisz." = 'sound/effects/hygienebot_angry.ogg',
 						"Daj się umyć bo śmierdzisz. " = 'sound/effects/hygienebot_angry.ogg',
-						"Myj dupe." = 'sound/effects/hygienebot_myjdupe.ogg',
+						"Myj dupe." = 'sound/effects/hygienebot_angry.ogg',//'sound/effects/hygienebot_myjdupe.ogg',
 						"Albo przestaniesz uciekać albo dowiesz się gdzie zniknął klaun." = 'sound/effects/hygienebot_angry.ogg',
 						"Ja cię tylko chcę kurwa umyć." = 'sound/effects/hygienebot_angry.ogg',
-						"Pierdole, dzwonię na milicje." =	'sound/effects/hygienebot_milicja.ogg')
+						"Pierdole, dzwonię na milicje." =	'sound/effects/hygienebot_angry.ogg')//'sound/effects/hygienebot_milicja.ogg')
 						var/message = pick(messagevoice) 
 						speak(message)
 						playsound(src, messagevoice[message], 60, 1)
