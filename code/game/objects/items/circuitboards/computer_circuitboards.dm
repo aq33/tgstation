@@ -236,6 +236,11 @@
 	name = "Crew Monitoring Console (Computer Board)"
 	build_path = /obj/machinery/computer/crew
 
+/obj/item/circuitboard/computer/mechpad
+	name = "Mecha Orbital Pad Console (Computer Board)"
+	icon_state = "science"
+	build_path = /obj/machinery/computer/mechpad
+
 /obj/item/circuitboard/computer/mech_bay_power_console
 	name = "Mech Bay Power Control Console (Computer Board)"
 	build_path = /obj/machinery/computer/mech_bay_power_console
