@@ -26,10 +26,6 @@
 "ah" = (
 /turf/closed/wall/r_wall,
 /area/engine/atmos)
-"ai" = (
-/obj/effect/spawner/engine,
-/turf/open/floor/plating,
-/area/construction)
 "aj" = (
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
@@ -6063,7 +6059,7 @@ dn
 dn
 dn
 dn
-ai
+dn
 dL
 cN
 Tt

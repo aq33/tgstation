@@ -77518,6 +77518,14 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/aft/secondary)
+"tXx" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/turf/open/floor/plasteel/dark,
+/area/engine/engineering)
 "tXK" = (
 /obj/machinery/air_sensor/atmos/toxins_mixing_tank,
 /turf/open/floor/engine/vacuum,
@@ -122246,7 +122254,7 @@ ayc
 aza
 aAw
 bUw
-aCY
+tXx
 aJu
 aJu
 tDM
