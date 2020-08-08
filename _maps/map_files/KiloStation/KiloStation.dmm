@@ -13207,6 +13207,7 @@
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "aAC" = (
+/obj/machinery/droneDispenser/snowflake,
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/robotics/lab)
 "aAD" = (
@@ -25343,6 +25344,13 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/security/checkpoint/medical)
+"aWs" = (
+/obj/structure/cable/layer1,
+/turf/open/floor/engine{
+	initial_gas_mix = "n2=100;TEMP=80";
+	name = "mainframe floor"
+	},
+/area/tcommsat/server)
 "aWt" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8;
@@ -30854,6 +30862,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
+"bgh" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/turf/open/floor/engine{
+	initial_gas_mix = "n2=100;TEMP=80";
+	name = "mainframe floor"
+	},
+/area/tcommsat/server)
 "bgi" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -68224,6 +68240,14 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
+"czM" = (
+/obj/structure/cable,
+/obj/structure/cable/layer1,
+/turf/open/floor/engine{
+	initial_gas_mix = "n2=100;TEMP=80";
+	name = "mainframe floor"
+	},
+/area/tcommsat/server)
 "czN" = (
 /obj/machinery/atmospherics/pipe/manifold/cyan/visible{
 	dir = 8
@@ -70592,6 +70616,15 @@
 /obj/structure/cable,
 /turf/open/floor/engine,
 /area/engine/engineering)
+"cEn" = (
+/obj/effect/turf_decal/sand/plating,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plating/airless{
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	},
+/area/space/nearstation)
 "cEo" = (
 /obj/machinery/door/airlock/maintenance{
 	req_access_txt = "12";
@@ -72063,15 +72096,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/storage)
-"dBT" = (
-/obj/effect/turf_decal/sand/plating,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/turf/open/floor/plating/airless{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
-	},
-/area/space/nearstation)
 "ehY" = (
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
@@ -72219,6 +72243,16 @@
 /obj/item/clothing/mask/gas,
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
+"hjy" = (
+/obj/structure/flora/rock/pile,
+/obj/machinery/power/apc{
+	areastring = "/area/maintenance/solars/starboard/aft";
+	dir = 2;
+	name = "Starboard Quarter Solar APC";
+	pixel_y = -26
+	},
+/turf/open/floor/plating/asteroid/airless,
+/area/space/nearstation)
 "hmR" = (
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
@@ -72287,16 +72321,6 @@
 "ilt" = (
 /turf/closed/wall/r_wall,
 /area/crew_quarters/fitness/recreation)
-"iRe" = (
-/obj/structure/flora/rock/pile,
-/obj/machinery/power/apc{
-	areastring = "/area/maintenance/solars/starboard/aft";
-	dir = 2;
-	name = "Starboard Quarter Solar APC";
-	pixel_y = -26
-	},
-/turf/open/floor/plating/asteroid/airless,
-/area/space/nearstation)
 "iTA" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/decal/cleanable/dirt,
@@ -72319,6 +72343,14 @@
 /obj/machinery/door/firedoor/window,
 /turf/open/floor/plating,
 /area/security/prison)
+"jMJ" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/visible,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/engine/engineering)
 "jYF" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 5;
@@ -72618,14 +72650,6 @@
 	},
 /turf/closed/wall,
 /area/maintenance/solars/starboard/fore)
-"rcU" = (
-/obj/machinery/atmospherics/pipe/simple/cyan/visible,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/cable,
-/turf/open/floor/engine,
-/area/engine/engineering)
 "rSM" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -72656,15 +72680,6 @@
 	},
 /turf/closed/wall,
 /area/maintenance/solars/port/fore)
-"sEC" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "engsm";
-	name = "Radiation Chamber Shutters"
-	},
-/obj/effect/turf_decal/caution/stand_clear,
-/obj/structure/cable/layer1,
-/turf/open/floor/plasteel/dark,
-/area/engine/supermatter)
 "sTc" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -72684,6 +72699,15 @@
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
+"tld" = (
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "engsm";
+	name = "Radiation Chamber Shutters"
+	},
+/obj/effect/turf_decal/caution/stand_clear,
+/obj/structure/cable/layer1,
+/turf/open/floor/plasteel/dark,
+/area/engine/supermatter)
 "too" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -72698,13 +72722,6 @@
 	},
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
-"tBY" = (
-/obj/structure/cable/layer1,
-/turf/open/floor/engine{
-	initial_gas_mix = "n2=100;TEMP=80";
-	name = "mainframe floor"
-	},
-/area/tcommsat/server)
 "tOb" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -72756,14 +72773,6 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/medical/virology)
-"uGB" = (
-/obj/structure/cable/layer1,
-/obj/structure/cable,
-/turf/open/floor/engine{
-	initial_gas_mix = "n2=100;TEMP=80";
-	name = "mainframe floor"
-	},
-/area/tcommsat/server)
 "uKh" = (
 /obj/structure/table,
 /obj/item/folder/white,
@@ -72875,14 +72884,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/virology)
-"yjA" = (
-/obj/structure/cable,
-/obj/structure/cable/layer1,
-/turf/open/floor/engine{
-	initial_gas_mix = "n2=100;TEMP=80";
-	name = "mainframe floor"
-	},
-/area/tcommsat/server)
 
 (1,1,1) = {"
 aaa
@@ -86658,7 +86659,7 @@ bRm
 bSs
 bTE
 bUz
-dBT
+cEn
 aeu
 aeu
 aat
@@ -86915,7 +86916,7 @@ bRn
 bPX
 bTF
 bUz
-dBT
+cEn
 bvY
 aeu
 aav
@@ -88200,7 +88201,7 @@ aQU
 bTG
 bTJ
 bUz
-dBT
+cEn
 aDQ
 bWA
 asO
@@ -88714,7 +88715,7 @@ aQU
 bSx
 bTL
 bUz
-dBT
+cEn
 bWA
 aeu
 aat
@@ -102805,10 +102806,10 @@ ans
 aps
 ajC
 adB
-tBY
-tBY
-tBY
-tBY
+aWs
+aWs
+aWs
+aWs
 btD
 amj
 buf
@@ -103065,9 +103066,9 @@ asc
 aoF
 bsY
 btl
-uGB
-uGB
-yjA
+bgh
+bgh
+czM
 bug
 aRk
 aKC
@@ -107507,7 +107508,7 @@ czI
 cAq
 aLF
 cBG
-sEC
+tld
 cBG
 aLG
 cEg
@@ -109563,7 +109564,7 @@ czL
 cAt
 aLF
 cBG
-sEC
+tld
 cBG
 aLF
 cEl
@@ -109821,7 +109822,7 @@ cAu
 cAU
 cBM
 cBM
-rcU
+jMJ
 cDF
 cEm
 cEH
@@ -114194,7 +114195,7 @@ aeu
 aeU
 aeU
 aeU
-iRe
+hjy
 bnW
 cFC
 bnW
