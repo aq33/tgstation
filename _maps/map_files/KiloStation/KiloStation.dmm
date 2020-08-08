@@ -22423,6 +22423,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/jukebox,
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
 "aRN" = (
@@ -72160,6 +72161,14 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/storage)
+"dRi" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/visible,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/engine/engineering)
 "ehY" = (
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
@@ -72391,15 +72400,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
-"jqi" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "engsm";
-	name = "Radiation Chamber Shutters"
-	},
-/obj/effect/turf_decal/caution/stand_clear,
-/obj/structure/cable/layer1,
-/turf/open/floor/plasteel/dark,
-/area/engine/supermatter)
 "jwM" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -72608,14 +72608,6 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/virology)
-"odE" = (
-/obj/machinery/atmospherics/pipe/simple/cyan/visible,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/cable,
-/turf/open/floor/engine,
-/area/engine/engineering)
 "oIe" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 5;
@@ -72713,7 +72705,7 @@
 	},
 /turf/closed/wall,
 /area/maintenance/solars/starboard/fore)
-"rsV" = (
+"rrj" = (
 /obj/structure/flora/rock/pile,
 /obj/machinery/power/apc{
 	areastring = "/area/maintenance/solars/starboard/aft";
@@ -72948,6 +72940,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/virology)
+"yhQ" = (
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "engsm";
+	name = "Radiation Chamber Shutters"
+	},
+/obj/effect/turf_decal/caution/stand_clear,
+/obj/structure/cable/layer1,
+/turf/open/floor/plasteel/dark,
+/area/engine/supermatter)
 
 (1,1,1) = {"
 aaa
@@ -107572,7 +107573,7 @@ czI
 cAq
 aLF
 cBG
-jqi
+yhQ
 cBG
 aLG
 cEg
@@ -109628,7 +109629,7 @@ czL
 cAt
 aLF
 cBG
-jqi
+yhQ
 cBG
 aLF
 cEl
@@ -109886,7 +109887,7 @@ cAu
 cAU
 cBM
 cBM
-odE
+dRi
 cDF
 cEm
 cEH
@@ -114259,7 +114260,7 @@ aeu
 aeU
 aeU
 aeU
-rsV
+rrj
 bnW
 cFC
 bnW
