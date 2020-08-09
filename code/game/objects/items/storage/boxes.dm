@@ -459,7 +459,7 @@
         new donktype(src)
 
 /obj/item/storage/box/donkpockets
-	name = "box of donk-pockets"
+	name = "box of donk-pierogi"
 	desc = "<B>Instructions:</B> <I>Heat in microwave. Product will cool if not eaten within seven minutes.</I>"
 	icon_state = "donkpocketbox"
 	illustration=null
