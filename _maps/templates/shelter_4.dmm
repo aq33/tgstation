@@ -204,7 +204,7 @@
 /obj/structure/closet,
 /obj/item/clothing/shoes/workboots/mining,
 /obj/item/clothing/gloves/fingerless,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -231,7 +231,7 @@
 /obj/structure/closet,
 /obj/item/clothing/shoes/workboots/mining,
 /obj/item/clothing/gloves/fingerless,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /obj/item/pickaxe/mini,
 /obj/item/clothing/under/rank/cargo/miner/lavaland,
 /turf/open/floor/pod/light,
