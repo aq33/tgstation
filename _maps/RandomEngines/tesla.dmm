@@ -195,7 +195,7 @@
 "zJ" = (
 /obj/structure/lattice,
 /obj/machinery/camera{
-	c_tag = "Engineering Supermatter Port";
+	c_tag = "Engineering Tesla";
 	dir = 8;
 	network = list("ss13","engine")
 	},
@@ -258,7 +258,7 @@
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/camera{
-	c_tag = "Engineering Supermatter Aft";
+	c_tag = "Engineering Tesla Control";
 	dir = 1;
 	network = list("ss13","engine")
 	},
@@ -289,7 +289,7 @@
 	pixel_y = 21
 	},
 /obj/machinery/camera{
-	c_tag = "Engineering Supermatter Aft";
+	c_tag = "Engineering Tesla Control";
 	network = list("ss13","engine")
 	},
 /turf/open/floor/plating,

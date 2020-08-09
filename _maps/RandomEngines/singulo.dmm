@@ -184,9 +184,10 @@
 "It" = (
 /obj/structure/lattice,
 /obj/machinery/camera{
-	c_tag = "Engineering Supermatter Port";
+	c_tag = "Engineering Singularity";
 	dir = 8;
-	network = list("ss13","engine")
+	network = list("ss13","engine");
+	upgrades = 2
 	},
 /turf/open/space/basic,
 /area/engine/engineering)
@@ -221,8 +222,9 @@
 	pixel_y = 21
 	},
 /obj/machinery/camera{
-	c_tag = "Engineering Supermatter Aft";
-	network = list("ss13","engine")
+	c_tag = "Engineering Singularity Control";
+	network = list("ss13","engine");
+	upgrades = 2
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
@@ -269,6 +271,10 @@
 "RM" = (
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "engsing";
+	name = "Singularity Access"
+	},
 /turf/open/floor/plating,
 /area/engine/engineering)
 "SF" = (
@@ -350,9 +356,10 @@
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/camera{
-	c_tag = "Engineering Supermatter Aft";
+	c_tag = "Engineering Singularity Control";
 	dir = 1;
-	network = list("ss13","engine")
+	network = list("ss13","engine");
+	upgrades = 2
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
