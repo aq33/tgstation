@@ -15017,6 +15017,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
 "aEc" = (
@@ -15206,6 +15207,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
 "aEy" = (
@@ -32864,6 +32866,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/purple,
+/obj/structure/cable,
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/mixing)
 "bjV" = (
