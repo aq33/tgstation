@@ -73,7 +73,7 @@
 	name = "EngiDrobe"
 	desc = "A vending machine renowned for vending industrial grade clothing."
 	icon_state = "engidrobe"
-	product_ads = "Hwarantuje twoim stopom ochronę przed wypadkami w pracy!;Przerażony radiacją? W takim razie wskakuj w żółte!"
+	product_ads = "Gwarantuje twoim stopom ochronę przed wypadkami w pracy!;Przerażony radiacją? W takim razie wskakuj w żółte!"
 	vend_reply = "Dziękujemy za użycie EngiDrobe!"
 	light_color = LIGHT_COLOR_YELLOW
 	products = list(/obj/item/clothing/accessory/pocketprotector = 3,
