@@ -91,7 +91,7 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 	else if(message_type == "AIWIPE" && newheadToggle)
 		message = CompileText("%PERSON has been moved to intelligence storage.", user, rank)
 	else if(message_type == "CRYOSTORAGE")
-		message = CompileText("%PERSON, %RANK został przeniesiony do cryo schowka.", user, rank)
+		message = CompileText("%PERSON, %RANK został przeniesiony do krio schowka.", user, rank)
 	else if(message_type == "ARRIVALS_BROKEN")
 		message = "Prom przylotów został uszkodzony. Dokowanie w celu naprawy..."
 
