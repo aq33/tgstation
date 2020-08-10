@@ -2,7 +2,7 @@
 	name = "\improper Sustenance Vendor"
 	desc = "A vending machine which vends food, as required by section 47-C of the NT's Prisoner Ethical Treatment Agreement."
 	product_slogans = "Smacznego.;Wystraczająco kalorii by wesprzeć intensywną pracę."
-	product_ads = "Wydajnie zdrowe.;Wydajnie wyprodukowane tofu!;Mmm! Jakie dobre!;Poczęstuj się. NIE DLA PSA!;Potrzebujesz jedzenia, by żyć!;Weź jeszcze trochę cukrowej kukurydzy!;Spróbuj naszych nowych mrożonych kubków!"
+	product_ads = "Wystarczjąco zdrowe.;Wydajnie wyprodukowane tofu!;Mmm! Jakie dobre!;Poczęstuj się. NIE DLA PSA!;Potrzebujesz jedzenia, by żyć!;Weź jeszcze trochę cukrowej kukurydzy!;Spróbuj naszych nowych mrożonych kubków!"
 	icon_state = "sustenance"
 	light_color = LIGHT_COLOR_BLUEGREEN
 	products = list(/obj/item/reagent_containers/food/snacks/tofu/prison = 24,
