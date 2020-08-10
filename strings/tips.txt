@@ -157,22 +157,22 @@ Jako Kucharz pamiętaj, że każde jedzenie jakie zrobisz będzie znacznie zdrow
 Jako Kucharz będąc w kuchni będziesz znał podstawy Gotowania Bliskiego Kontaktu (CQC). Jest ono efektywne w usuwaniu Asystentów z twojego miejsca pracy.
 Jako Kucharz pamiętaj, że większość standardowych potraw ma dodatkowe efekty, od leczenia do zwiększania szybkości ruchu. Eksperymentuj!
 Jako Barman pamiętaj, że napoje, które dostajesz na starcie to dopiero początek. Jeśli chcesz bardziej zaawansowane mikstury, dogadaj się z Chemikiem, Botanikiem, czy nawet Górnikiem, żeby uzyskać więcej rzeczy do zmiksowania i dodania!
-As the Bartender, you can use a circular saw on your shotgun to make it easier to store.
-As a Janitor, if someone steals your janicart, you can instead use your space cleaner spray, grenades, water sprayer, exact bloody revenge or order another from Cargo.
-As a Janitor, mousetraps can be used to create bombs or booby-trap containers.
-As the Curator, you are not completely defenseless. Your whip easily disarms people, your laser pointer can blind humans and cyborgs, and you can hide items in wirecut books.
-As the Curator, be sure to keep the shelves stocked and the library clean for crew.
-As a Cargo Technician, you can hack MULEbots to make them faster, run over people in their way, and even let you ride them!
-As a Cargo Technician, you can order contraband items from the supply shuttle console by de-constructing it and using a multitool on the circuit board, the re-assembling it.
-As a Cargo Technician, you can earn more cargo points by shipping back crates from maintenance, liquid containers, plasma sheets, rare seeds from hydroponics, and more!
-As the Quartermaster, be sure to check the manifests on crates you receive to make sure all the info is correct. If there's a mistake, stamp the manifest DENIED and send it back in a crate with the items untouched for a refund!
-As the Quartermaster, you can construct an express supply console that instantly delivers crates by drop pod. The impact will cause a small explosion as well.
-As a Shaft Miner, the northern side of Lavaland has a lot more rare minerals than on the south.
-As a Shaft Miner, every monster on Lavaland has a pattern you can exploit to minimize damage from the encounters.
-As a Shaft Miner, you can harvest goliath plates from goliaths and upgrade your explorer's suit, mining hardsuits as well as Firefighter APLUs with them, greatly reducing incoming melee damage.
-As a Shaft Miner, always have a GPS on you, so a fellow miner or cyborg can come to save you if you die.
-As a Shaft Miner, you can craft a variety of equipment from the local fauna. Bone axes, lava boats and ash drake armour are just a few of them!
-As a Traitor, the cryptographic sequencer (emag) can not only open doors, but also lockers, crates, APCs and more. It can hack cyborgs, and even cause bots to go berserk. Use it on the right machines, and you can even order more traitor gear or contact the Syndicate. Experiment!
+Jako Barman możesz użyć piły na swojej strzelbie, żeby dało się ją łatwiej przechowywać.
+Jako Woźny jeśli ktoś ukradnie twój wózek, możesz użyć kosmicznego odkażacza, granatów, zraszacza wody, przygotować krwawą zemstę lub zamówić nowy z Ładowni.
+Jako Woźny możesz użyć pułapek na myszy do stworzenia bomb lub zaminowane pojemniki.
+Jako Kurator nie jesteś całkowicie bezbronny. Twój bicz może z łatwością pozbawić przeciwnika broni, wskaźnik laserowy oślepia ludzi i cyborgi, a w wyciętych książkach możesz ukryć przedmioty.
+Jako Kurator upewnij się, że w bibliotece panuje czystość i jest co czytać.
+Jako Technik Załadunku możesz hakować MULEboty, żeby były szybsze, rozjeżdżały ludzi na ich drodze, a nawet żebyś mógł na nich jeździć!
+Jako Technik Załadunku możesz zamawiać nielegalne przedmioty z konsoli zamówień, jeśli rozłożysz ją, użyjesz multitoola na płytce drukowanej i złożysz ją z powrotem.
+Jako Technik Załadunku możesz zdobyć więcej pieniędzy wysyłając skrzynki z tuneli technicznych, zbiorniki na płyny, kawałki plazmy, rzadkie nasiona z hydroponiki i wiele więcej!
+Jako Kwatermistrz sprawdzaj manifest na skrzynkach, które odbierasz, żeby upewnić się, że wszystkie informacje się zgadzają. Jeśli zauważysz błąd, użyj pieczątki DENIED na manifeście i odeślij skrzynkę z nietkniętym ładunkiem, żeby otrzymać zwrot pieniędzy!
+Jako Kwatermistrz możesz skonstruować konsolę ekspresowych zamówień, która natychmiastowo dostarcza przez drop poda. Uderzenie przy okazji powoduje mała eksplozję.
+Jako Górnik pamiętaj, że północna część Kolonii ma o wiele więcej rzadkich minerałów niż południowa.
+Jako Górnik pamiętaj, że każdy potwór z Kolonii ma własny model walki, który możesz wykorzystać, żeby zminimalizować obrażenia podczas potyczki.
+Jako Górnik możesz zebrać płytki Goliata z jego ciala, żeby ulepszyć kombinezon eksploratora, kombinezony górnicze, a także strażackie APLU, zmniejszając otrzymywane obrażenia w walce wręcz.
+Jako Górnik zawsze miej przy sobie GPS, żeby twoi koledzy górnicy lub cyborg, mogli znaleźć twoje ciało po śmierci.
+Jako Górnik możesz wytwarzać szereg przydatnych rzeczy z lokalnej fauny. Topory z kości, łódki do pływania po lawie i zbroja z łusek Popielisego Smoka to tylko kilka z nich!
+Jako Zdrajca możesz użyć sekwencera kryptograficznego (emaga) nie tylko do otwierania drzwi, ale także szafek, skrzyń, APC i innych. Możesz hakować nim cyborgi lub nawet sprawić, że boty wpadną w szał. Używając go na odpowiednich maszynach będziesz mieć możliwość zamówienia większej ilości sprzętu lub nawet skontaktowania się z Syndykatem. Eksperymentuj!
 As a Traitor, subverting the AI to serve you can make it an extremely powerful ally. However, be careful of the wording in the laws you give it, as it may use your poorly written laws against you!
 As a Traitor, the Captain and the Head of Security are two of the most difficult to kill targets on the station. If either one is your target, plan carefully.
 As a Traitor, you can manufacture and recycle revolver bullets at a hacked autolathe, making the revolver an extremely powerful tool.
