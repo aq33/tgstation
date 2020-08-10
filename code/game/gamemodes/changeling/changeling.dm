@@ -78,10 +78,9 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 						changelings += character.mind
 
 /datum/game_mode/changeling/generate_report()
-	return "The Gorlex Marauders have announced the successful raid and destruction of Central Command containment ship #S-[rand(1111, 9999)]. This ship housed only a single prisoner - \
-			codenamed \"Thing\", and it was highly adaptive and extremely dangerous. We have reason to believe that the Thing has allied with the Syndicate, and you should note that likelihood \
-			of the Thing being sent to a station in this sector is highly likely. It may be in the guise of any crew member. Trust nobody - suspect everybody. Do not announce this to the crew, \
-			as paranoia may spread and inhibit workplace efficiency."
+	return "Kosmiczni Piraci oficjalnie ogłosili zniszczenie statku naukowego Centrali #S-[rand(1111, 9999)]. Statek ten trzymał obiekt laboratoryjny o nazwie - \
+			 \"Coś\", bardzo szybko adaptuje się ono do środowiska i jest wysoce niebezpieczne. Mamy podstawy by uważać że 'Coś" sprzymierzyło się z Syndykatem. Bardzo prawdopobone jest to że zostało ono wysłane na stację. Może wyglądać jak zwykły Kowalski ze stacji, może być każdym. Nie ufajcie nikomu - wszyscy mogą być tym czymś. Nie ogłaszajcie tego załodze, \
+			paranoja i strach obniżają produktywność."
 
 //////////////////////////////////////////
 //Checks to see if someone is changeling//
