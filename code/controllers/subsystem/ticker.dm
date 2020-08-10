@@ -160,6 +160,7 @@ SUBSYSTEM_DEF(ticker)
 				window_flash(C, ignorepref = TRUE) //let them know lobby has opened up.
 			to_chat(world, "<span class='boldnotice'>Witaj na [station_name()]!</span>")
 			send2chat("Nowa runda zaczyna się na [SSmapping.config.map_name]!", CONFIG_GET(string/chat_announce_new_game))
+			SSblackbox.record_feedback("text", "map", 1, "[SSmapping.config.map_name]")
 			current_state = GAME_STATE_PREGAME
 			//Everyone who wants to be an observer is now spawned
 			create_observers()
