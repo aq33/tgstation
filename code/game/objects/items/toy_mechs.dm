@@ -257,7 +257,7 @@
 /**
   * Override the say proc if they're mute
   */
-/obj/item/toy/prize/say()
+/obj/item/toy/prize/say(language=null)
 	if(!quiet)
 		. = ..()
 
