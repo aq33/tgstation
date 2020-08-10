@@ -44,7 +44,7 @@
 				   /obj/item/reagent_containers/food/drinks/bottle/trappist = 5)
 
 	product_slogans = "Mam nadzieję, że nikt nie poprosi o cholerny kubek herbaty...;Alkohol to przyjaciel ludzkości. Ze mną się nie napijesz?;Całkiem zadowolony, że mogę ci służyć!;Czy nikt na tej stacji nie jest spragniony?"
-	product_ads = "Do dna!;Gorzała est dla ciebie dobra!;Alkohol to najlepszy przyjaciel ludzkości.;Całkiem zadowolony, że mogę ci służyć!;A może tak zimnego piwka?;Nic tak nie wyleczy jak gorzała!;Weź łyla!;Napij się!;Strzel sobie browara!;Piwo jest dla ciebie dobre!;Tylko najlepsze alkohole!;Najlepsza jakość gorzały od 2137!;Prestiżowe wino!;Maksimum alkoholu!;Człowiek kocha piwo.;Toast za postęp!"
+	product_ads = "Do dna!;Gorzała jest dla ciebie dobra!;Alkohol to najlepszy przyjaciel ludzkości.;Całkiem zadowolony, że mogę ci służyć!;A może tak zimnego piwka?;Nic tak nie wyleczy jak gorzała!;Weź łyla!;Napij się!;Strzel sobie browara!;Piwo jest dla ciebie dobre!;Tylko najlepsze alkohole!;Najlepsza jakość gorzały od 2137!;Prestiżowe wino!;Maksimum alkoholu!;Człowiek kocha piwo.;Toast za postęp!"
 	req_access = list(ACCESS_BAR)
 	refill_canister = /obj/item/vending_refill/boozeomat
 	default_price = 20
