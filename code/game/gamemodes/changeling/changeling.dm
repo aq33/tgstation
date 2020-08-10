@@ -135,14 +135,14 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 	var/list/round_credits = list()
 	var/len_before_addition
 
-	round_credits += "<center><h1>The Slippery Changelings:</h1>"
+	round_credits += "<center><h1>Śliscy Zmiennokształtni:</h1>"
 	len_before_addition = round_credits.len
 	for(var/datum/mind/M in changelings)
 		var/datum/antagonist/changeling/cling = M.has_antag_datum(/datum/antagonist/changeling)
 		if(cling)
-			round_credits += "<center><h2>[cling.changelingID] in the body of [M.name]</h2>"
+			round_credits += "<center><h2>[cling.changelingID] w ciele [M.name]</h2>"
 	if(len_before_addition == round_credits.len)
-		round_credits += list("<center><h2>Uh oh, we lost track of the shape shifters!</h2>", "<center><h2>Nobody move!</h2>")
+		round_credits += list("<center><h2>Uh oh, nie mogliśmy namierzyć zmiennokształtnych!</h2>", "<center><h2>Nobody move!</h2>")
 	round_credits += "<br>"
 
 	round_credits += ..()
