@@ -190,7 +190,7 @@
 		playsound(src, 'sound/machines/cryo_warning.ogg', volume) // Bug the doctors.
 		var/msg = "Pacjent w pełni wyleczony."
 		if(autoeject) // Eject if configured.
-			msg += " Automatyczny wypuszczanie w toku."
+			msg += " Automatyczne wypuszczanie w toku."
 			open_machine()
 		radio.talk_into(src, msg, radio_channel)
 		return
