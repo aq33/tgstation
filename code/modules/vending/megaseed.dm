@@ -2,7 +2,7 @@
 	name = "\improper MegaSeed Servitor"
 	desc = "When you need seeds fast!"
 	product_slogans = "TO TU ŻYJĄ NASIONKA! WEŹ TROSZKU!;Czapki z głow, nalepszy wybór nasion na stacji!;Więcej odmian grzybów dla ekspertów! Zdobądź dyplom już dziś!"
-	product_ads = Lubimy rośliny!;Zbierz trochę plonów !;Rośnij, skarbie, rośniiiij!;Oh tak, synu!"
+	product_ads = "Lubimy rośliny!;Zbierz trochę plonów !;Rośnij, skarbie, rośniiiij!;Oh tak, synu!"
 	icon_state = "seeds"
 	light_color = LIGHT_COLOR_GREEN
 	products = list(/obj/item/seeds/ambrosia = 3,
