@@ -199,16 +199,16 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 		if(40 to 65)
 			. += "<b>System Sporny</b></center><BR>"
 			. += "Orbita waszej stacji przebiega na pograniczu przestrzeni kosmicznej Nanotrasenu. Inne korporacje mogą spróbować przejąć stację. Najczęstszym zagrorzeniem prawdopodobnie będą działania wywrotowe, lecz inne wrogie grupy, głównie elitarne jednostki uderzeniowe Syndykatu, działają w tym regione gdzie nasza siła jest mniejsza. Zachowajcie wysoką czujność."
-		if(66 to 79)
-            . += "<b>Niezbadany Kosmos</b></center><BR>"
-            . += "Gratulacje i podziękowania za wzięcie udziału w programie kosmicznym NT 'Kresy'. Wasza stacja obecnie orbituje wysoko wartościowy system bardzo oddalony od najbliższych stacji zaopatrzeniowych. Niewiele wiadomo o tym regionie kosmosu, a możliwość napotkania nieznanego otwiera drogę do chwały. Zalecane jest podniesienie poziomu ochrony według potrzeb by chronić dobytek Nanotrasen."
-        if(80 to 99)
-            . += "<b>Czarna Orbita</b></center><BR>"
-            . += "Jako część obowiązkowego protokołu bezpieczeństwa, jesteśmy zobowiązani zainformować, że jako wynik waszego ruchu orbitalnego dokładnie za ciałem niebieskim (z punktu naszego najbliżeszego obserwatorium) wasza stacja będzie pod zmniejszonym monitoringiem i wsparciem. Przewidywane jest, że ekstremalna lokacja i trudniejsza komunikacja mogą spowodować zagrożenia bezpieczeństwa. Nie podejmujcie niepotrzebnego ryzyka i próbujcie utrzymać stację w jednym kawałku."
-        if(100)
-            . += "<b>Nadchodzące Piekło</b></center><BR>"
-            . += "Wasza stacja jakimś cudem znalazła się w centrum wrogiego terytorium, na tacy dla wrogów korporacji. Wasze szanse na przeżycie są niskie, a zniszczenie stacji jest przewidywane i niemalże nieuniknione. Zabezpieczcie wszelkie delikatne sprawy i zneutralizujcie każdego wroga jakiego napotkacie. Ważne jest byście chociaż spróbowali utrzymać stację w porządku.<BR>"
-            . += "Powodzenia."
+        if(66 to 79)
+			. += "<b>Niezbadany Kosmos</b></center><BR>"
+			. += "Gratulacje i podziękowania za wzięcie udziału w programie kosmicznym NT 'Kresy'. Wasza stacja obecnie orbituje wysoko wartościowy system bardzo oddalony od najbliższych stacji zaopatrzeniowych. Niewiele wiadomo o tym regionie kosmosu, a możliwość napotkania nieznanego otwiera drogę do chwały. Zalecane jest podniesienie poziomu ochrony według potrzeb by chronić dobytek Nanotrasen."
+		if(80 to 99)
+			. += "<b>Czarna Orbita</b></center><BR>"
+			. += "Jako część obowiązkowego protokołu bezpieczeństwa, jesteśmy zobowiązani zainformować, że jako wynik waszego ruchu orbitalnego dokładnie za ciałem niebieskim (z punktu naszego najbliżeszego obserwatorium) wasza stacja będzie pod zmniejszonym monitoringiem i wsparciem. Przewidywane jest, że ekstremalna lokacja i trudniejsza komunikacja mogą spowodować zagrożenia bezpieczeństwa. Nie podejmujcie niepotrzebnego ryzyka i próbujcie utrzymać stację w jednym kawałku."
+		if(100)
+			. += "<b>Nadchodzące Piekło</b></center><BR>"
+			. += "Wasza stacja jakimś cudem znalazła się w centrum wrogiego terytorium, na tacy dla wrogów korporacji. Wasze szanse na przeżycie są niskie, a zniszczenie stacji jest przewidywane i niemalże nieuniknione. Zabezpieczcie wszelkie delikatne sprawy i zneutralizujcie każdego wroga jakiego napotkacie. Ważne jest byście chociaż spróbowali utrzymać stację w porządku.<BR>"
+			. += "Powodzenia."
 
 	if(station_goals.len)
 		. += "<hr><b>Special Orders for [station_name()]:</b>"
