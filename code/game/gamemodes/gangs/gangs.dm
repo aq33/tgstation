@@ -79,7 +79,7 @@ GLOBAL_LIST_EMPTY(gangs)
 		for(var/datum/mind/boss in G.leaders)
 			round_credits += "<center><h2>[boss.name] jako lider gangu [G.name] </h2>"
 		for(var/datum/mind/gangster in (G.members - G.leaders))
-			round_credits += "<center><h2>[gangster.name] jako gangster gangu [G.name] </h2>"
+			round_credits += "<center><h2>[gangster.name] jako członek gangu [G.name] </h2>"
 		if(len_before_addition == round_credits.len)
 			round_credits += list("<center><h2>The [G.name] Gang upadł!</h2>", "<center><h2>Ich rywale byli zbyt silni!</h2>")
 		round_credits += "<br>"
