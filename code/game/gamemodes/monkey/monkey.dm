@@ -100,12 +100,12 @@
 
 /datum/game_mode/monkey/special_report()
 	if(check_monkey_victory())
-		return "<div class='panel redborder'><span class='redtext big'>The monkeys have overthrown their captors! Eeek eeeek!!</span></div>"
+		return "<div class='panel redborder'><span class='redtext big'>Małpia rewolucja wyniosła sukces! !!</span></div>"
 	else
-		return "<div class='panel redborder'><span class='redtext big'>The staff managed to contain the monkey infestation!</span></div>"
+		return "<div class='panel redborder'><span class='redtext big'>Załodze udało się powstrzymać małpią rewolucję!</span></div>"
 
 /datum/game_mode/monkey/generate_report()
-	return "Reports of an ancient [pick("retrovirus", "flesh eating bacteria", "disease", "magical curse blamed on viruses", "banana blight")] outbreak that turn humans into monkeys has been reported in your quadrant.  Any such infections may be treated with banana juice.  If an outbreak occurs, ensure the station is quarantined to prevent a largescale outbreak at CentCom."
+	return "Odebraliśmy zgłoszenia [pick("retrowirusa", "choroby", "magicznego zaklęcia które jest uważane na chorbę", "bananowego uroku")] który zamienia ludzi w małpy w waszym sektorze.  Jakakolwiek infekcja powinna być leczona sokiem z banana. Jeżeli stracicie kontrolę nad pandemią, zapewnijcie że żaden zainfekowany nie wydostaenie się poza stację oraz nie przybędzie na stację Centrali."
 
 /proc/add_monkey_leader(datum/mind/monkey_mind)
 	if(is_monkey_leader(monkey_mind))
