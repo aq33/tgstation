@@ -110,7 +110,7 @@
 	gold_cost = 200
 	copper_cost = 200
 	starting_amount = 2000
-.
+
 /obj/machinery/droneDispenser/hivebot //This one requires no materials and creates basic hivebots
 	name = "hivebot fabricator"
 	desc = "A large, bulky machine that whirs with activity, steam hissing from vents in its sides."
