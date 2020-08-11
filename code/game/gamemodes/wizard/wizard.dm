@@ -41,7 +41,7 @@
 	return ..()
 
 /datum/game_mode/wizard/generate_report()
-	return "Bardzo niebezpieczny osobnik z Federacji Czarodzieji zwący się [pick(GLOB.wizard_first)] [pick(GLOB.wizard_second)] uciekł niedawno z głęboko ukrytej placówki badawczej. Osobnik ten posiada wysokie umiejętności formowania swojego ciała oraz rzeczywistości na życzenie, niektórzy podejrzewają że jest to sprawka magii. Jeżeli osobnik ten zaatakuje waszą stację, jego egzekucja jest wysoce zalecana jak również zachowanie zwłok do dalszych badań."
+	return "Bardzo niebezpieczny osobnik z Federacji Kosmicznych Czarodziejów zwący się [pick(GLOB.wizard_first)] [pick(GLOB.wizard_second)] uciekł niedawno z głęboko ukrytej placówki badawczej. Osobnik ten posiada wysokie umiejętności formowania swojego ciała oraz rzeczywistości na życzenie, niektórzy podejrzewają że jest to sprawka magii. Jeżeli osobnik ten zaatakuje waszą stację, jego egzekucja jest wysoce zalecana jak również zachowanie zwłok do dalszych badań."
 
 /datum/game_mode/wizard/are_special_antags_dead()
 	for(var/datum/mind/wizard in wizards)
