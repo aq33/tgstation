@@ -199,7 +199,7 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 		if(40 to 65)
 			. += "<b>System Sporny</b></center><BR>"
 			. += "Orbita waszej stacji przebiega na pograniczu przestrzeni kosmicznej Nanotrasenu. Inne korporacje mogą spróbować przejąć stację. Najczęstszym zagrorzeniem prawdopodobnie będą działania wywrotowe, lecz inne wrogie grupy, głównie elitarne jednostki uderzeniowe Syndykatu, działają w tym regione gdzie nasza siła jest mniejsza. Zachowajcie wysoką czujność."
-        if(66 to 79)
+		if(66 to 79)
 			. += "<b>Niezbadany Kosmos</b></center><BR>"
 			. += "Gratulacje i podziękowania za wzięcie udziału w programie kosmicznym NT 'Kresy'. Wasza stacja obecnie orbituje wysoko wartościowy system bardzo oddalony od najbliższych stacji zaopatrzeniowych. Niewiele wiadomo o tym regionie kosmosu, a możliwość napotkania nieznanego otwiera drogę do chwały. Zalecane jest podniesienie poziomu ochrony według potrzeb by chronić dobytek Nanotrasen."
 		if(80 to 99)
