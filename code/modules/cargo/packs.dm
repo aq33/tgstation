@@ -1068,6 +1068,22 @@
 	crate_name = "solar panel crate"
 	crate_type = /obj/structure/closet/crate/engineering/electrical
 
+/datum/supply_pack/engine/treadmill
+	name = "Treadmill Generator Crate Single-Pack"
+	desc = "Brand new fitness program designed entirely by Nanotrasen specialists. Lose weight in 30 days or get a full refund!"
+	cost = 5000
+	contains = list(/obj/machinery/power/treadmill)
+	crate_name = "treadmill generator crate"
+
+/datum/supply_pack/engine/treadmill3
+	name = "Treadmill Generator Crate"
+	desc = "Brand new fitness program designed entirely by Nanotrasen specialists. Lose weight with your friends in 30 days or get a full refund!"
+	cost = 10000
+	contains = list(/obj/machinery/power/treadmill,
+					/obj/machinery/power/treadmill,
+					/obj/machinery/power/treadmill)
+	crate_name = "treadmill generator crate"
+
 /datum/supply_pack/engine/supermatter_shard
 	name = "Supermatter Shard Crate"
 	desc = "The power of the heavens condensed into a single crystal. Requires CE access to open."
