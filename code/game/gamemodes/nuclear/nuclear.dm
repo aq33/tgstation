@@ -187,9 +187,9 @@
 	round_credits += "<center><h1>Operatorzy [syndicate_name()]:</h1>"
 	len_before_addition = round_credits.len
 	for(var/datum/mind/operative in nuke_team.members)
-		round_credits += "<center><h2>[operative.name] jako agent Syndykatu</h2>"
+		round_credits += "<center><h2>[operative.name] jako komandos Syndykatu</h2>"
 	if(len_before_addition == round_credits.len)
-		round_credits += list("<center><h2>Agenci wylecieli w powietrze!</h2>", "<center><h2>Ich szczątki nie mogły zostać zidentyfikowane!</h2>")
+		round_credits += list("<center><h2>Komandosi Syndykatu wylecieli w powietrze!</h2>", "<center><h2>Ich szczątki nie mogły zostać zidentyfikowane!</h2>")
 		round_credits += "<br>"
 
 	round_credits += ..()
