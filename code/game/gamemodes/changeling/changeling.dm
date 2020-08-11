@@ -79,7 +79,7 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 
 /datum/game_mode/changeling/generate_report()
 	return "Kosmiczni Piraci oficjalnie ogłosili zniszczenie statku naukowego Centrali #S-[rand(1111, 9999)]. Statek ten trzymał obiekt laboratoryjny o nazwie - \
-			 \"Coś\", bardzo szybko adaptuje się ono do środowiska i jest wysoce niebezpieczne. Mamy podstawy by uważać że 'Coś' sprzymierzyło się z Syndykatem. Bardzo prawdopobone jest to że zostało ono wysłane na stację. Może wyglądać jak zwykły Kowalski ze stacji, może być każdym. Nie ufajcie nikomu - wszyscy mogą być tym czymś. Nie ogłaszajcie tego załodze, \
+			 \"Coś\", bardzo szybko adaptuje się ono do środowiska i jest wysoce niebezpieczne. Mamy podstawy by uważać że 'Coś' sprzymierzyło się z Syndykatem. Bardzo prawdopobone jest to że zostało ono wysłane na stację. Może wyglądać jak zwykły Kowalski ze stacji, może być każdym. Nie ufajcie nikomu - każdy może być tym czymś. Nie ogłaszajcie tego załodze, \
 			paranoja i strach obniżają produktywność."
 
 //////////////////////////////////////////
