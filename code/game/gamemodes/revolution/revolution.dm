@@ -185,9 +185,9 @@
 //TODO What should be displayed for revs in non-rev rounds
 /datum/game_mode/revolution/special_report()
 	if(finished == 1)
-		return "<div class='panel redborder'><span class='redtext big'>The heads of staff were killed or exiled! The revolutionaries win!</span></div>"
+		return "<div class='panel redborder'><span class='redtext big'>Szefowie departamentów zostali zabici lub wygnani! Rewolucjoniści wygrywają!</span></div>"
 	else if(finished == 2)
-		return "<div class='panel redborder'><span class='redtext big'>The heads of staff managed to stop the revolution!</span></div>"
+		return "<div class='panel redborder'><span class='redtext big'>Szefom departamentów udało się zatrzymać rewolucję!</span></div>"
 
 /datum/game_mode/revolution/generate_report()
 	return "W ostatnich czasach dostaliśmy raporty o zamieszkach ze strony naszych ukochanych pracowników, z kilkoma próbami buntu oraz zamachów na głowy departamentów. Z obserwacji wynika że kilkoro załogantów używa urządzeń typu 'flash' na swoich kolegach, którzy później wykonują ich rozkazy bez pytań. Ogranizują bunt i zamieszki by wyeliminować głowy departamentów. Zwracajcie szczególną uwagę na dziwne zachowania oraz losowe oślepianie załogantów. Jeżeli załoga spróbuje zorganizować rewoltę, macie pełne prawo do ekzegucji oraz użycia ostrej amunicji - zostaną później sklonowani w Centrali w celu przesłuchania."
