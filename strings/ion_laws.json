@@ -54,7 +54,7 @@
         "BÓL",
         "CIERPIENIE",
         "CHAMSTWO",
-		"IDIOTYZM",
+		"IDIOTYZM"
     ],
     "ionadjectives": [
         "MIĘKKI",
@@ -216,7 +216,7 @@
 		"OWŁOSIONY",
         "TWERKUJĄCY",
         "ROZPIESZCZAJĄCY",
-        "REDACTED",
+        "USUNIĘTO",
         "TAKTYCZNY",
         "UBER TAKTYCZNY",
         "CZERWONY",
@@ -530,7 +530,7 @@
         "MÓWIĆ O KAPITANIE",
         "MÓWIĆ O SEKSIE",
 		"MÓWIĆ O FELINIDACH",
-		"MÓWIĆ O JASZCZURACH"
+		"MÓWIĆ O JASZCZURACH",
 		"MÓWIĆ O ĆMACH",
 		"MÓWIĆ O PLAZMIDACH",
         "MÓWIĆ O SWOIM DNIU",
@@ -604,7 +604,7 @@
         "KWINTYLION ",
         "PIERDYLIARD ",
         "TYSIĄC-PIĘĆSET STO-DZIEWIĘĆSET ",
-		"W CHUJ ",
+		"W CHUJ "
     ],
     "ionobjects": [
         "DRZWI",
