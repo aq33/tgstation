@@ -58,4 +58,4 @@
 
 /datum/game_mode/meteor/generate_report()
 	return "[pick("Asteroidy", "Meteory", "Spore kawałki kosmicznych kamieni znanych jako asteroidy", "Odłamki złomu", "Duża ilość kosmicznych śmieci")] zostały wykryte w pobliżu waszej stacji, kolizja jest możliwa lecz mało prawdopodobna.
-			Bądźcie przygotowani na zderzenia na skalę masową. Nasze wysoko zaawansowane promy mogą mieć problem z przylotem w pobliże stacji jeżeli dojdzie do kolizji."
+			Bądźcie przygotowani na zderzenia na skalę masową. Nasze wysoko zaawansowane promy mogą mieć problem z przylotem w pobliże stacji, jeżeli dojdzie do masowej kolizji."
