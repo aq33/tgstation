@@ -124,9 +124,9 @@
 				if(target.loc == loc && isturf(target.loc)) //LADIES AND GENTLEMAN WE GOTEM PREPARE TO DUMP
 					start_washing()
 					if(mad)
-						var/list/messagevoice = list("Kurwa, w końcu." = 'sound/effects/hygienebot_angry.ogg',//'sound/effects/hygienebot_kurwa.ogg',
+						var/list/messagevoice = list("Kurwa, w końcu." = 'sound/effects/hygienebot_angry.ogg',
 						"Nareszcie cię złapałem, złamasie." = 'sound/effects/hygienebot_angry.ogg',
-						"Widzisz, nie jest tak źle." = 'sound/effects/hygienebot_angry.ogg')
+						"Degenerat." = 'sound/effects/hygienebot_angry.ogg')
 						var/message = pick(messagevoice)
 						speak(message)
 						playsound(src, messagevoice[message], 60, 1)
@@ -137,7 +137,7 @@
 					var/olddist = get_dist(src, target)
 					if(olddist > 20 || frustration > 100) // Focus on something else
 						var/list/messagevoice = list("Pierdole to." = 'sound/effects/hygienebot_angry.ogg',
-						"A idź ty złamasie." = 'sound/effects/hygienebot_angry.ogg',
+						"Dobra, spierdalaj gówniarzu." = 'sound/effects/hygienebot_angry.ogg',
 						"Spierdalaj z taką robotą." = 'sound/effects/hygienebot_angry.ogg')
 						var/message = pick(messagevoice) 
 						speak(message)
@@ -146,13 +146,13 @@
 						return
 					walk_to(src, target,0, currentspeed)
 					if(mad && prob(min(frustration * 2, 60)))
-						var/list/messagevoice = list("Wracaj tu, śmierdzielu." = 'sound/effects/hygienebot_angry.ogg',
-						"Nie biegaj bo podłoge brudzisz." = 'sound/effects/hygienebot_angry.ogg',
-						"Daj się umyć bo śmierdzisz. " = 'sound/effects/hygienebot_angry.ogg',
-						"Myj dupe." = 'sound/effects/hygienebot_angry.ogg',//'sound/effects/hygienebot_myjdupe.ogg',
-						"Albo przestaniesz uciekać albo dowiesz się gdzie zniknął klaun." = 'sound/effects/hygienebot_angry.ogg',
-						"Ja cię tylko chcę kurwa umyć." = 'sound/effects/hygienebot_angry.ogg',
-						"Pierdole, dzwonię na milicje." =	'sound/effects/hygienebot_angry.ogg')//'sound/effects/hygienebot_milicja.ogg')
+						var/list/messagevoice = list("Wracaj, hultaju." = 'sound/effects/hygienebot_angry.ogg',
+						"Kiedy się myłeś ostatnio, szczerze?" = 'sound/effects/hygienebot_angry.ogg',
+						"Inspekcja wacka, proszę stać." = 'sound/effects/hygienebot_angry.ogg',
+						"Myj dupe." = 'sound/effects/hygienebot_angry.ogg',
+						"Czy ty kiedykolwiek słyszałeś słowo \"prysznic\"?." = 'sound/effects/hygienebot_angry.ogg',
+						"Przestań biegać, troglodyto jebany." = 'sound/effects/hygienebot_angry.ogg',
+						"Czy ty się myjesz w ogóle?" =	'sound/effects/hygienebot_angry.ogg')
 						var/message = pick(messagevoice) 
 						speak(message)
 						playsound(src, messagevoice[message], 60, 1)
@@ -165,7 +165,7 @@
 
 		if(BOT_SHOWERSTANCE)
 			if(check_purity(target))
-				speak("Miłego, czystego dnia!")
+				speak("Miłego dnia!")
 				playsound(loc, 'sound/effects/hygienebot_happy.ogg', 60, 1)
 				back_to_idle()
 				return
