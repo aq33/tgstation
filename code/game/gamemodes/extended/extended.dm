@@ -35,4 +35,4 @@
 /datum/game_mode/extended/send_intercept(report = 0)
 	if(secret)
 		return ..()
-	priority_announce("Z pomocą naszego wydziału kontrwywiadu, Stacja [station_name()] jest wolna od zagrożeń. Wszystkie projekty konstrukcyjne zostały autoryzowane. Miłej zmiany załogo!", "Raport Ochrony", 'sound/ai/commandreport.ogg')
+	priority_announce("Z pomocą naszego wydziału kontrwywiadu stwierdzamy, że Stacja [station_name()] jest wolna od zagrożeń. Wszystkie projekty konstrukcyjne zostały autoryzowane. Miłej zmiany załogo!", "Raport Ochrony", 'sound/ai/commandreport.ogg')
