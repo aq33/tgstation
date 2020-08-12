@@ -188,7 +188,7 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 		if(0 to 19)
 			update_playercounts()
 			if(!current_players[CURRENT_LIVING_ANTAGS].len)
-				. += "<b>Bezpieczny Punkt</b></center><BR>"
+				. += "<b>Bezpieczny Przyczółek</b></center><BR>"
 				. += "Wasza stacja znajduje się w bardzo dobrze chronionym regionie centralnym. Stacja jest często odwiedzana przez patrole Nanotrasenu. Wasz sektor kipi życiem oraz handlem.  Z powodu kombinacji wysokiego poziomu bezpieczeństwa, bezpośredniego szlaku handlowego , częstych podróży międzygwiezdnych oraz małej wartości strategicznej, bezpośrednie zagrożenia są bardzo bardzo mało prawdopodobne. Największym przeciwnikiem będzie niekompetencja oraz znudzona załoga: spróbujcie zorganizować cel stacji oraz imprezy w barze trzymać produktywność oraz zadowolenie w wysokiej formie."
 			else
 				. += "<b>Terrytorium Centralne</b></center><BR>"
