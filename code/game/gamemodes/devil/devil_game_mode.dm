@@ -59,7 +59,7 @@
 	return 1
 
 /datum/game_mode/devil/generate_report()
-	return "Na kilku stacjach wykryto piekielne kreatury, oferujące załodze przeróżne moce w zamian za dusze. Zalicza się to jako kradzież własności firmy, jako iż wasze dusze należą do naszego ukochanego NanoTrasenu. Jeżeli ktokolwiek przez przypadek sprzeda swoją duszę, proszę skontaktować się z lokalnym prawnikiem, aby unieważnić umowę sprzedaży. Uwaga, piekielne stworzenia po uzyskaniu wystarczającej ilości dusz otworzą drzwi do piekła, zostaliście ostrzeżeni."
+	return "W pobliżu stacji wykryto piekielne kreatury oferujące załodze wielkie korzyści w zamian za ich dusze. Chcemy uprzejmie przypomnieć, że sprzedaż duszy jest wliczana jako kradzież własności firmy Nanotrasen, wszyscy pracownicy zrzekli się posiadania duszy na rzecz Nanotrasen w umowie o pracę. Jeżeli ktokolwiek przez przypadek sprzeda swoją duszę, proszę skontaktować się z lokalnym prawnikiem, aby unieważnić umowę sprzedaży. Uwaga, piekielne stworzenia po uzyskaniu wystarczającej ilości dusz otworzą drzwi do piekła, zostaliście ostrzeżeni."
 /datum/game_mode/devil/proc/post_setup_finalize(datum/mind/devil)
 	add_devil(devil.current, ascendable = TRUE) //Devil gamemode devils are ascendable.
 	add_devil_objectives(devil,2)
