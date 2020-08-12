@@ -139,7 +139,7 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 		if(cling)
 			round_credits += "<center><h2>[cling.changelingID] w ciele [M.name]</h2>"
 	if(len_before_addition == round_credits.len)
-		round_credits += list("<center><h2>Uh oh, nie mogliśmy namierzyć zmiennokształtnych!</h2>", "<center><h2>Nobody move!</h2>")
+		round_credits += list("<center><h2>Uh oh, nie mogliśmy namierzyć zmiennokształtnych!</h2>", "<center><h2>Niech nikt się nie rusza!</h2>")
 	round_credits += "<br>"
 
 	round_credits += ..()
