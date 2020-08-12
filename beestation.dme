@@ -2921,7 +2921,6 @@
 #include "code\modules\spells\spell_types\rod_form.dm"
 #include "code\modules\spells\spell_types\santa.dm"
 #include "code\modules\spells\spell_types\shadow_walk.dm"
-#include "code\modules\spells\spell_types\shadowcover.dm"
 #include "code\modules\spells\spell_types\shapeshift.dm"
 #include "code\modules\spells\spell_types\sharpstar.dm"
 #include "code\modules\spells\spell_types\soultap.dm"

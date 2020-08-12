@@ -322,11 +322,6 @@
 	to_chat(user,"<span class='warning'>This knowledge was written in an ancient tongue, it was filled with nothingness, so much, that it dried up your eyes. Only one of many tears should be allowed to read this. </span>")
 	user.blind_eyes(200)
 
-/obj/item/book/granter/spell/shadowcover
-	spell = /obj/effect/proc_holder/spell/targeted/genetic/mutate_shadowcover
-	spellname = "Shadow Cover"
-	desc = "Harvest the power of the sharp shadow of the mist."
-	remarks = list("Harvest the void, which fills space.", "Become one with space.", "Do not ask about their name.")
 
 /obj/item/book/granter/spell/charge/recoil(mob/user)
 	..()
