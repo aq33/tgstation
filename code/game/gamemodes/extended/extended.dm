@@ -22,7 +22,7 @@
 	return 1
 
 /datum/game_mode/extended/generate_report()
-	return "Istnieje możliwość że wasza stacja nie jest w zasięgu interesów Syndykatu i nic waszej stacji nie zagraża."
+	return "Istnieje możliwość że wasza stacja nie jest w zasięgu interesów Syndykatu i waszej stacji nic nie zagraża."
 
 /datum/game_mode/extended/generate_station_goals()
 	if(secret)
