@@ -160,7 +160,7 @@
 
 
 /datum/game_mode/cult/generate_report()
-	return "Kilka stacji w tym sektorze zgłosiło przypadki wystąpienia ofiar z krwi oraz nieznanej magii. Powiązania z Federacją Czarodzieji zostały wykluczone, a wielu pracowników zniknęło w nieznanych okolicznościach ; nawet pracownicy Centrali lata świetlne dalej odczuwali dziwną obecność, a czasami doświadczali histerycznych konwulsji. Intensywne dochodzenie wskazuje na to, że może to być sprawka kultu Nar'Sie. Jeżeli odkryjecie jakieś dowody aktywności kultu, zachowajcie najwyższe środki ostrożności, a wszystkie możliwe zasoby skierujcie w celu jego zatrzymania. Woda święcona zdaje się osłabiać i ewentualnie nawracać umysły kultystów, którzy ją spożyli, a implanty typu 'mindshield' zapobiegają przekonwertowaniu na wiarę kultu."
+	return "Kilka stacji w tym sektorze zgłosiło przypadki wystąpienia ofiar z krwi oraz nieznanej magii. Powiązania z Federacją Czarodzieji zostały wykluczone, a wielu pracowników zniknęło w nieznanych okolicznościach, nawet pracownicy Centrali lata świetlne dalej odczuwali dziwną obecność, a czasami doświadczali histerycznych konwulsji. Intensywne dochodzenie wskazuje na to, że może to być sprawka kultu Nar'Sie. Jeżeli odkryjecie jakieś dowody aktywności kultu, zachowajcie najwyższe środki ostrożności, a wszystkie możliwe zasoby skierujcie w celu jego zatrzymania. Woda święcona zdaje się osłabiać i ewentualnie nawracać umysły kultystów, którzy ją spożyli, a implanty typu 'mindshield' zapobiegają przekonwertowaniu na wiarę kultu."
 
 
 
