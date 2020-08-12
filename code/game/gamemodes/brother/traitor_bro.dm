@@ -59,8 +59,9 @@
 	return ..()
 
 /datum/game_mode/traitor/bros/generate_report()
-	return "W tym miesiącu wypada sezon rekrutacyjny Syndykatu. Bądźcie czujni na potencjalnych infiltratorów Syndykatu oraz niezadowolonych pracowników, którzy starają się uciec. W przeciwięstwie do Nanotrasenu, Syndykat szczyci się pracą zespołową i będzie rekrutował tylko te pary, które mają wspólne, braterskie zaufanie."
-	
+return "W tym miesiącu wypada sezon rekrutacyjny Syndykatu. Bądźcie czujni na potencjalnych infiltratorów Syndykatu oraz niezadowolonych pracowników, którzy starają się uciec. W przeciwięstwie do Nanotrasenu, Syndykat szczyci się pracą zespołową i będzie rekrutował tylko te pary, które mają wspólne, braterskie zaufanie."
+
+/datum/game_mode/proc/update_brother_icons_added(datum/mind/brother_mind)	
 	var/datum/atom_hud/antag/brotherhud = GLOB.huds[ANTAG_HUD_BROTHER]
 	brotherhud.join_hud(brother_mind.current)
 	set_antag_hud(brother_mind.current, "brother")
