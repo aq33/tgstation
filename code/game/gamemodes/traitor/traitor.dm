@@ -101,8 +101,7 @@
 	character.add_antag_datum(new_antag)
 
 /datum/game_mode/traitor/generate_report()
-	return "Komunikacje pomiędzy stacjami Syndykatu wykazały że na waszej stacji istnieje możliwość ukrytych komórek śpiących agentów. Posiadają oni wszczepioną pamięć która może zostać uruchomiona w każdej chwili, możliwe że sami agenci jeszcze nie wiedzą że są agentami. Zachowajcie czujność."
-
+	return "Przechwycona komunikacja pomiędzy stacjami Syndykatu wykazała, że na waszej stacji istnieje możliwość ukrytych komórek śpiących agentów. Posiadają oni wszczepioną pamięć, która może zostać uruchomiona w każdej chwili, możliwe, że sami agenci jeszcze nie wiedzą, że są agentami. Zachowajcie czujność."
 
 /datum/game_mode/traitor/generate_credit_text()
 	var/list/round_credits = list()
