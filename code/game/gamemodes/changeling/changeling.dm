@@ -78,7 +78,7 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 						changelings += character.mind
 
 /datum/game_mode/changeling/generate_report()
-	return "Kosmiczni Piraci oficjalnie ogłosili zniszczenie statku naukowego Centrali #S-[rand(1111, 9999)]. Statek ten trzymał obiekt laboratoryjny o nazwie - \"Coś\", bardzo szybko adaptuje się ono do środowiska i jest wysoce niebezpieczne. Nasz agent wywiadu Szymon-CH potwierdził że obiekt sprzymierzył się z Syndykatem, niestety słuch po naszym agencie zaginął w tunelach technicznych niedaleko wydziału robotyki na stacji |REDACTED|. Bardzo prawdopobone jest to że zostało ono wysłane na waszą stację. Może wyglądać jak zwykły Kowalski, może być każdym. Nie ufajcie nikomu - każdy może być tym czymś. Nie ogłaszajcie tego załodze, paranoja i strach obniżają produktywność."
+	return "Kosmiczni Piraci oficjalnie ogłosili zniszczenie statku naukowego Centrali #S-[rand(1111, 9999)]. Statek ten trzymał obiekt laboratoryjny o nazwie - \"Coś\", bardzo szybko adaptuje się ono do środowiska i jest wysoce niebezpieczne. Nasz agent wywiadu Szymon-CH potwierdził że obiekt sprzymierzył się z Syndykatem, niestety słuch po naszym agencie zaginął w tunelach technicznych niedaleko wydziału robotyki na stacji \[REDACTED\]. Bardzo prawdopobone jest to że zostało ono wysłane na waszą stację. Może wyglądać jak zwykły Kowalski, może być każdym. Nie ufajcie nikomu - każdy może być tym czymś. Nie ogłaszajcie tego załodze, paranoja i strach obniżają produktywność."
 
 //////////////////////////////////////////
 //Checks to see if someone is changeling//
