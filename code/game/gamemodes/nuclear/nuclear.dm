@@ -107,7 +107,7 @@
 			SSticker.news_report = OPERATIVE_SKIRMISH
 
 /datum/game_mode/nuclear/generate_report()
-	return "Jeden ze szlaków handlowych Centrali został niedawno zaatakowany przez kosmicznych piratów. Szukali oni jednego statku - przewoził on broń atomową o wysokim rażeniu. Nasz wywiad ustalił że po kilku transakcjach prawdopodobnie ładunek trafił w ręce Syndykatu. Sama bomba jest bezużyteczna bez kodu oraz dysku autoryzacyjnego. Kod został prawdopodobnie szybko znaleziony, lecz dysku nie było na pokładzie, a wasza stacja posiada jeden taki dysk. Istnieje możliwość że spróbują oni zaatakować stację w celu jego zdobycia oraz użycia broni jądrowej na waszej stacji. Upewnijcie się że dysk jest chroniony oraz bądźcie przygotowani na abordaż,"
+	return "Jeden ze szlaków handlowych Centrali został niedawno zaatakowany przez kosmicznych piratów. Szukali oni jednego statku - przewoził on broń atomową o wysokim rażeniu. Nasz wywiad ustalił, że po kilku transakcjach prawdopodobnie ładunek trafił w ręce Syndykatu. Sama bomba jest bezużyteczna bez kodu oraz dysku autoryzacyjnego. Kod został prawdopodobnie szybko znaleziony, lecz dysku nie było na pokładzie, a wasza stacja posiada jeden taki dysk. Istnieje możliwość, że spróbują oni zaatakować stację w celu jego zdobycia oraz użycia broni jądrowej na waszej stacji. Upewnijcie się, że dysk jest chroniony oraz bądźcie przygotowani na abordaż,"
 
 
 /proc/is_nuclear_operative(mob/M)
