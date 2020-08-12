@@ -189,7 +189,7 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 			update_playercounts()
 			if(!current_players[CURRENT_LIVING_ANTAGS].len)
 				. += "<b>Bezpieczny Przyczółek</b></center><BR>"
-				. += "Wasza stacja znajduje się w bardzo dobrze chronionym regionie centralnym. Stacja jest często odwiedzana przez patrole Nanotrasenu. Z powodu kombinacji wysokiego poziomu bezpieczeństwa, bezpośredniego szlaku handlowego , częstych podróży międzygwiezdnych oraz małej wartości strategicznej, bezpośrednie zagrożenia są bardzo bardzo mało prawdopodobne. Największym przeciwnikiem będzie niekompetencja oraz znudzona załoga: spróbujcie zorganizować cel stacji oraz imprezy w barze trzymać produktywność oraz zadowolenie w wysokiej formie."
+				. += "Wasza stacja orbituje głęboko pomiędzy systemami głównych, kontrolowanych sektorów i jest węzłem w rutynowym ruchu przez imperium handlowe Nanotrasenu. Z powodu kombinacji wysokiego poziomu bezpieczeństwa, bezpośredniego szlaku handlowego , częstych podróży międzygwiezdnych oraz małej wartości strategicznej, bezpośrednie zagrożenia są bardzo bardzo mało prawdopodobne. Największym przeciwnikiem będzie niekompetencja oraz znudzona załoga: spróbujcie zorganizować cel stacji oraz imprezy w barze trzymać produktywność oraz zadowolenie w wysokiej formie."
 			else
 				. += "<b>Terrytorium Centralne</b></center><BR>"
 				. += "Wasza stacja znajduje się w dobrze bronionym regionie, lecz wartościowe zasoby oraz pozycja strategiczna stacji może okazać się celem infiltracji. Zalecana jest obserwacja załogi pod kątem dziwnego i nielojalnego zachowania, ale oczekujcie w miarę spokojnej zmiany wolnej od masowej destrukcji. Oczekujemy dobrej pracy z waszej strony."
