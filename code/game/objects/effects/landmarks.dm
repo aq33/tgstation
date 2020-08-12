@@ -103,9 +103,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Shaft Miner"
 	icon_state = "Shaft Miner"
 
-/obj/effect/landmark/start_explorer
+/obj/effect/landmark/start/explorer
 	name = "Explorer"
-	icon_state = "Shaft Miner"
+	icon_state = "Explorer"
 
 /obj/effect/landmark/start/security_officer
 	name = "Security Officer"
