@@ -406,7 +406,8 @@
 				/obj/item/stock_parts/micro_laser = 1,
 				/obj/item/stock_parts/cell = 1)
 	tools = list(TOOL_SCREWDRIVER)
-	parts = list(/obj/item/stock_parts/cell = 1, /obj/item/stock_parts/micro_laser = 1)
+	//parts = list(/obj/item/stock_parts/cell = 1, /obj/item/stock_parts/micro_laser = 1)
+	//TODO: zroznicowane statystyki w zaleznosci od uzytych czesci
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
