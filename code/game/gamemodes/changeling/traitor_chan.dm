@@ -80,7 +80,7 @@
 	..()
 
 /datum/game_mode/traitor/changeling/generate_report()
-	return "Niedawno Syndykat rozpoczął badania nad zmiennokształtnymi humanoidami. Wycieki z ich bazy danych sugerują że ta technologia jest testowana na jednej z naszych stacji. Dodatkowo informujemy że Syndykat przydzielił personel ochronny by bronić zmiennokształtnych. Nie ufajcie nikomu - każdy może być tym czymś lub agentem Syndykatu. Nie ogłaszajcie tego załodze, paranoja i strach obniżają produktywność."
+	return "Niedawno Syndykat rozpoczął badania nad zmiennokształtnymi humanoidami. Wycieki z ich bazy danych sugerują że ta technologia jest testowana na jednej z naszych stacji. Dodatkowo informujemy że Syndykat przydzielił agentów by bronić zmiennokształtnych. Nie ufajcie nikomu - każdy może być tym czymś lub agentem Syndykatu. Nie ogłaszajcie tego załodze, paranoja i strach obniżają produktywność."
 
 
 /datum/game_mode/traitor/changeling/trustnobody
