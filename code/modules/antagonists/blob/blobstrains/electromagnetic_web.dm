@@ -3,8 +3,8 @@
 	name = "Galaretnica Elektromagnetyczna"
 	color = "#83ECEC"
 	complementary_color = "#EC8383"
-	description = "zadaje ciężkie poparzenia oraz wytwarza impulsy EMP."
-	effectdesc = "otrzymuje również masywne obrażenia wszystkich typów jak również wytwarza impulsy EMP przy śmierci."
+	description = "zadajesz ciężkie poparzenia oraz wytwarzasz impulsy EMP przy atakowaniu."
+	effectdesc = "otrzymujesz również masywne obrażenia od wszystkich typów obrażeń, jak również wytwarzasz impulsy EMP przy śmierci."
 	analyzerdescdamage = "Wywołuje lekkie poparzenia oraz wytwarza impulsy EMP."
 	analyzerdesceffect = "Jest podatny na wszystkie typy obrażeń, jak również otrzymuje ogromne obrażenia od źródeł fizycznych. Dodatkowo wytwarza mały impuls EMP przy śmierci."
 	reagent = /datum/reagent/blob/electromagnetic_web
