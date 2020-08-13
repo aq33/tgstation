@@ -2,7 +2,7 @@
 /datum/blobstrain/reagent/cryogenic_poison
 	name = "Huba Syberyjska"
 	description = "wstrzykujesz zamrażającą truciznę, która zadaje duże obrażenia w czasie."
-	analyzerdescdamage = "Wstrzykujesz we wrogów zamrażającą truciznę, która stopniowo zabija organy wewnętrzne."
+	analyzerdescdamage = "Wstrzykuje we wrogów zamrażającą truciznę, która stopniowo zabija organy wewnętrzne."
 	color = "#8BA6E9"
 	complementary_color = "#7D6EB4"
 	blobbernaut_message = "wstrzykuje"
