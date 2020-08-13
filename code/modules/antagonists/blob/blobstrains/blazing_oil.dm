@@ -4,7 +4,7 @@
 	name = "Kolczakówka Piekąca"
 	description = "zadaje średnie oparzenia, oraz podpala przeciwników."
 	effectdesc = "dodatkowo uwalnia serię płomieni gdy zostanie poparzony, ale dostaje obrażenia od wody."
-	analyzerdescdamage = "Zadaje średnie poparzenia oraz podpala wrogów.."
+	analyzerdescdamage = "Zadaje średnie poparzenia oraz podpala wrogów."
 	analyzerdesceffect = "Uwalnia płomienie gdy zostanie poparzony, ale otrzymuje obrażenia od wody i innych cieczy do zwalczania ognia."
 	color = "#B68D00"
 	complementary_color = "#BE5532"
