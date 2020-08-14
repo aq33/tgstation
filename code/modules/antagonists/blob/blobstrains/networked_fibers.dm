@@ -1,6 +1,6 @@
 //does massive brute and burn damage, but can only expand manually
 /datum/blobstrain/reagent/networked_fibers
-	name = "Grzybnia Włóknista"
+	name = "Sowa Włóknista"
 	description = "zadajesz bardzo poważne obrażenia fizyczne oraz ciężkie poparzenia, oraz generujesz zasoby szybciej, ale możesz tylko rozprzestrzeniać się manualnie."
 	shortdesc = "zadajesz wysokie obrażenia fizyczne oraz poważne poparzenia."
 	effectdesc = "twój rdzeń zostanie przesunięty jeżeli rozprzestrzenisz się w jego pobliżu."
