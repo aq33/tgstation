@@ -2,7 +2,7 @@
 /datum/blobstrain/reagent/energized_jelly
 	name = "Czubajka Elektryczna"
 	description = "twoje ataki powodują wyczerpanie oraz wysokie obrażenia od niedotlenienia. Dodatkowo powodują, że osoby zaatakowane na krótką chwilę tracą możliwość oddychania."
-	effectdesc = "dodatkowo przewodzisz prąd elektryczny oraz otrzymujsz obrażenia od impulsów EMP."
+	effectdesc = "przewodzisz prąd elektryczny oraz otrzymujsz obrażenia od impulsów EMP."
 	analyzerdescdamage = "Jego ataki powodują wyczerpanie oraz wysokie obrażenia od niedotlenienia. Dodatkowo powoduje, że osoby zaatakowane na krótką chwilę tracą możliwość oddychania."
 	analyzerdesceffect = "Jest odporny na prąd elektryczny i z łatwością go przewodzi, ale jest podatny na obrażenia ze strony EMP."
 	color = "#EFD65A"
