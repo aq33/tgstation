@@ -2,7 +2,7 @@
 /datum/blobstrain/reagent/synchronous_mesh
 	name = "Pieczarka Synchroniczna"
 	description = "Zadajesz o wiele większe obrażenia fizyczne za każdego bloba obok ofiary."
-	effectdesc = "Dodatkowo zaatakowany blob rozłoży obrażenia na wszystkie bloby stykające się z tym zaatakowanym."
+	effectdesc = zaatakowany blob rozłoży obrażenia na wszystkie bloby stykające się z tym zaatakowanym."
 	analyzerdescdamage = "Zadaje obrażenia fizyczne, skalujące się z każdym blobem wokół ofiary."
 	analyzerdesceffect = "Zaatakowany blob rozłoży obrażenia na wszystkie bloby stykające się z tym zaatakowanym."
 	color = "#65ADA2"
