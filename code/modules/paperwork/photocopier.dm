@@ -33,7 +33,7 @@
 
 	user.set_machine(src)
 
-	var/dat = "Photocopier<BR><BR>"
+	var/list/dat = list("Photocopier<BR><BR>")
 	if(copy || photocopy || doccopy || (ass && (ass.loc == src.loc)))
 		dat += "<a href='byond://?src=[REF(src)];remove=1'>Remove Paper</a><BR>"
 		if(toner)
