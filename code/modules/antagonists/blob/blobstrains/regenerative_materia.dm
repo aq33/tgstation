@@ -1,7 +1,7 @@
 //does toxin damage, hallucination, targets think they're not hurt at all
 /datum/blobstrain/reagent/regenerative_materia
 	name = "Muchomor Jadowity"
-	description = "Wstrzykujesz ofiarom toksyny, które dodatkowo okłamują system nerwowy, że nic im nie dolega."
+	description = "wstrzykujesz ofiarom toksyny, które dodatkowo okłamują system nerwowy, że nic im nie dolega."
 	analyzerdescdamage = "Wstrzykuje on ofiarom toksyny, które dodatkowo okłamują system nerwowy, że nic im nie dolega."
 	color = "#C8A5DC"
 	complementary_color = "#CD7794"
