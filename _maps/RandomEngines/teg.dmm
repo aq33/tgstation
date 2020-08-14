@@ -49,6 +49,18 @@
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
+"eb" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/camera{
+	c_tag = "Engineering TEG";
+	dir = 8;
+	network = list("ss13","engine");
+	upgrades = 2
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "es" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 5
@@ -161,6 +173,19 @@
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
+"lu" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/cable/layer1,
+/obj/machinery/camera{
+	c_tag = "Engineering TEG";
+	dir = 4;
+	network = list("ss13","engine");
+	upgrades = 2
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "lv" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -232,7 +257,7 @@
 /turf/open/floor/engine,
 /area/engine/engineering)
 "pk" = (
-/obj/machinery/atmospherics/pipe/manifold/purple{
+/obj/machinery/atmospherics/pipe/manifold/purple/visible{
 	dir = 1
 	},
 /turf/open/floor/engine,
@@ -258,6 +283,7 @@
 /obj/machinery/atmospherics/pipe/simple/purple/visible/layer1{
 	dir = 6
 	},
+/obj/machinery/meter,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "rT" = (
@@ -299,8 +325,14 @@
 /obj/machinery/button/door{
 	id = "burnchamb";
 	name = "Burn Chamber Shutters Control";
-	pixel_x = 24;
+	pixel_x = 26;
+	pixel_y = 6;
 	req_access_txt = "10"
+	},
+/obj/machinery/button/ignition{
+	id = "burnigniter";
+	pixel_x = 26;
+	pixel_y = -6
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
@@ -326,6 +358,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
 	dir = 10
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 1
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
@@ -432,6 +467,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+/obj/machinery/meter,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "Er" = (
@@ -440,6 +476,16 @@
 	dir = 1;
 	pixel_x = 5
 	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"EE" = (
+/obj/machinery/atmospherics/pipe/simple/orange/visible{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/meter,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "FL" = (
@@ -499,6 +545,20 @@
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
+"Mv" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
+	dir = 4
+	},
+/obj/machinery/camera{
+	c_tag = "Engineering TEG";
+	network = list("ss13","engine");
+	upgrades = 2
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "Nk" = (
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
@@ -541,6 +601,15 @@
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
+"PW" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "Qt" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /obj/structure/cable/layer1,
@@ -573,6 +642,10 @@
 /area/engine/engineering)
 "Sm" = (
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple,
+/obj/machinery/igniter{
+	id = "burnigniter";
+	luminosity = 2
+	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "UE" = (
@@ -654,6 +727,11 @@
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
+"Xe" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/atmospherics/components/unary/vent_pump/on,
+/turf/open/floor/engine,
+/area/engine/engineering)
 "Xv" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -698,7 +776,7 @@ vU
 aG
 aG
 aG
-aG
+lu
 aG
 aG
 Xv
@@ -734,7 +812,7 @@ sL
 tI
 "}
 (4,1,1) = {"
-DP
+oh
 sL
 jp
 sL
@@ -764,7 +842,7 @@ sL
 tI
 "}
 (6,1,1) = {"
-DP
+PW
 sL
 XR
 tZ
@@ -776,7 +854,7 @@ lj
 aj
 pz
 wb
-tI
+Xe
 "}
 (7,1,1) = {"
 DP
@@ -824,7 +902,7 @@ sL
 tI
 "}
 (10,1,1) = {"
-DP
+oh
 HO
 lZ
 kA
@@ -854,11 +932,11 @@ pN
 Io
 "}
 (12,1,1) = {"
-WY
+Mv
 sL
 sL
 tv
-Ax
+EE
 uT
 Ax
 lC
@@ -896,7 +974,7 @@ DP
 sL
 GE
 KL
-tI
+Xe
 "}
 (15,1,1) = {"
 NX
@@ -924,7 +1002,7 @@ dm
 VA
 lv
 uT
-uT
+eb
 iX
 aL
 "}
