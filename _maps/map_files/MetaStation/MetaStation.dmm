@@ -3142,6 +3142,12 @@
 /obj/item/book/manual/wiki/security_space_law,
 /obj/item/cartridge/detective,
 /obj/structure/cable,
+/obj/item/radio/off{
+	pixel_y = 3
+	},
+/obj/item/taperecorder{
+	pixel_x = -4
+	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hos)
 "agg" = (
@@ -3671,11 +3677,8 @@
 /area/crew_quarters/heads/hos)
 "ahb" = (
 /obj/structure/table/wood,
-/obj/item/taperecorder{
-	pixel_x = -4
-	},
-/obj/item/radio/off{
-	pixel_y = 3
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "Head of Security"
 	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hos)
@@ -20574,6 +20577,13 @@
 	departmentType = 2;
 	pixel_x = 32
 	},
+/obj/item/clipboard{
+	pixel_x = 7
+	},
+/obj/item/stamp/qm{
+	pixel_x = -8;
+	pixel_y = -3
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
 "aPl" = (
@@ -21072,10 +21082,11 @@
 /area/quartermaster/qm)
 "aQt" = (
 /obj/structure/table,
-/obj/item/clipboard,
-/obj/item/stamp/qm,
 /obj/machinery/status_display/supply{
 	pixel_x = 32
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Quartermaster"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
@@ -25410,11 +25421,12 @@
 /area/crew_quarters/heads/chief)
 "aZF" = (
 /obj/structure/table/reinforced,
-/obj/item/clipboard,
-/obj/item/paper/monitorkey,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Chief Engineer"
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/chief)
@@ -26536,6 +26548,8 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/paper/monitorkey,
+/obj/item/clipboard,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/chief)
 "bbx" = (
@@ -32828,11 +32842,8 @@
 	dir = 4
 	},
 /obj/structure/table/glass,
-/obj/item/folder/blue{
-	pixel_y = 2
-	},
-/obj/item/folder/blue{
-	pixel_y = 2
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "Bridge"
 	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
@@ -35126,11 +35137,12 @@
 	},
 /obj/item/pen,
 /obj/structure/window/reinforced,
+/obj/item/stamp/captain,
+/obj/item/folder/blue,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain/private)
 "btf" = (
 /obj/structure/table/wood,
-/obj/item/folder/blue,
 /obj/machinery/door/window{
 	base_state = "right";
 	icon_state = "right";
@@ -35139,7 +35151,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
-/obj/item/stamp/captain,
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "Captain"
+	},
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain/private)
 "btg" = (
@@ -36528,8 +36542,9 @@
 "bwj" = (
 /obj/structure/cable,
 /obj/structure/table/wood,
-/obj/item/stack/packageWrap,
-/obj/item/hand_labeler,
+/obj/machinery/photocopier/faxmachine{
+	department = "Head of Personnel"
+	},
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
 "bwk" = (
@@ -37364,6 +37379,9 @@
 /obj/structure/table/wood,
 /obj/machinery/newscaster{
 	pixel_x = -32
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Library"
 	},
 /turf/open/floor/wood,
 /area/library)
@@ -38758,6 +38776,8 @@
 /obj/item/storage/box/silver_ids,
 /obj/item/storage/box/ids,
 /obj/machinery/light,
+/obj/item/hand_labeler,
+/obj/item/stack/packageWrap,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
 "bBa" = (
@@ -55382,14 +55402,15 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/heads/cmo)
 "cnE" = (
-/obj/item/folder/blue,
 /obj/structure/table/glass,
-/obj/item/stamp/cmo,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Chief Medical Officer"
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/heads/cmo)
@@ -55407,6 +55428,8 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/folder/blue,
+/obj/item/stamp/cmo,
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/heads/cmo)
 "cnG" = (
@@ -59892,27 +59915,30 @@
 	pixel_y = -1
 	},
 /obj/item/pen,
+/obj/item/cartridge/signal/toxins{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/cartridge/signal/toxins{
+	pixel_x = -4;
+	pixel_y = 2
+	},
+/obj/item/cartridge/signal/toxins,
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
 /area/crew_quarters/heads/hor)
 "cwR" = (
 /obj/structure/table,
-/obj/item/cartridge/signal/toxins,
-/obj/item/cartridge/signal/toxins{
-	pixel_x = -4;
-	pixel_y = 2
-	},
-/obj/item/cartridge/signal/toxins{
-	pixel_x = 4;
-	pixel_y = 6
-	},
 /obj/machinery/camera{
 	c_tag = "Research Director's Office";
 	dir = 1;
 	network = list("ss13","rd")
 	},
 /obj/machinery/light,
+/obj/machinery/photocopier/faxmachine{
+	department = "Research Director"
+	},
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
