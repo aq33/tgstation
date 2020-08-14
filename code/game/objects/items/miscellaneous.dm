@@ -297,10 +297,21 @@
 	return ouija_spaghetti_list
 
 /obj/item/upgradewand
-	desc = "A wand laced with nanotech calibration devices, used to enhance gear commonly used by modern stage magicians."
 	name = "Upgrade Wand"
+	desc = "A wand laced with nanotech calibration devices, used to enhance gear commonly used by modern stage magicians."
 	icon = 'icons/obj/guns/magic.dmi'
 	icon_state = "nothingwand"
 	item_state = "wand"
 	w_class = WEIGHT_CLASS_SMALL
 	var/used = FALSE
+
+/obj/item/storage/box/microwavekit
+	name = "Microwave Construction Kit"
+
+/obj/item/storage/box/microwavekit/PopulateContents()
+	new /obj/item/circuitboard/machine/microwave(src)
+	new /obj/item/stock_parts/micro_laser(src)
+	new /obj/item/stock_parts/matter_bin(src)
+	new /obj/item/stack/cable_coil(src, 15)
+	new /obj/item/stack/sheet/glass(src, 10)
+	new /obj/item/stack/sheet/iron(src, 10)
