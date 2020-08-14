@@ -1,7 +1,7 @@
 //does low brute damage, oxygen damage, and stamina damage and wets tiles when damaged
 /datum/blobstrain/reagent/pressurized_slime
 	name = "Maślak Śliski"
-	description = "Zadajesz niskie obrażenia fizyczne, lekkie oparzenia oraz wywołujesz wyczerpanie, jak również pryskasz wodą pod stopy przeciwników."
+	description = "zadajesz niskie obrażenia fizyczne, lekkie oparzenia oraz wywołujesz wyczerpanie, jak również pryskasz wodą pod stopy przeciwników."
 	effectdesc = "pryskasz wodą wokoło blobów, które są atakowane lub zostały zabite."
 	analyzerdescdamage = "Zadaje niskie obrażenia fizyczne, wywołuje lekkie oparzenia, oraz powoduje wyczerpanie, jak również pryska wodą pod stopy ofiar, gasząc je."
 	analyzerdesceffect = "Gdy zostanie zaatakowany lub zabity, opryskuje pobliskie podłoże gasząc wszystko, co się na nim znajduje."
