@@ -2373,6 +2373,7 @@
 	},
 /obj/structure/chair,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "agO" = (
@@ -12559,6 +12560,7 @@
 "aEy" = (
 /obj/structure/table/wood,
 /obj/item/hand_tele,
+/obj/item/phone/real,
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/captain)
 "aEz" = (
@@ -55812,8 +55814,8 @@
 "mMz" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
-/obj/machinery/door/poddoor/preopen{
-	id = "misclab";
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
 	name = "test chamber blast door"
 	},
 /turf/open/floor/plating,
@@ -56196,8 +56198,8 @@
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 4
 	},
-/obj/machinery/door/poddoor/preopen{
-	id = "misclab";
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
 	name = "test chamber blast door"
 	},
 /turf/open/floor/plating,
@@ -57576,6 +57578,10 @@
 	id = "misclab";
 	name = "test chamber blast door"
 	},
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
+	name = "test chamber blast door"
+	},
 /turf/open/floor/plating,
 /area/science/xenobiology)
 "pWv" = (
@@ -58408,6 +58414,10 @@
 	luminosity = 2
 	},
 /area/maintenance/department/science)
+"rqG" = (
+/obj/structure/cable,
+/turf/open/floor/plasteel/dark,
+/area/security/prison)
 "rrb" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -58534,6 +58544,10 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/science)
+"rEb" = (
+/obj/structure/cable,
+/turf/closed/wall/r_wall,
+/area/security/prison)
 "rEh" = (
 /obj/effect/spawner/room/fivexfour,
 /turf/open/floor/plating,
@@ -59741,8 +59755,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/poddoor/preopen{
-	id = "misclab";
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
 	name = "test chamber blast door"
 	},
 /turf/open/floor/plating,
@@ -59944,6 +59958,14 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/engine)
+"uUV" = (
+/obj/structure/table,
+/obj/item/paper,
+/obj/item/pen,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "uVf" = (
 /obj/structure/table/wood,
 /obj/item/book/manual/wiki/security_space_law,
@@ -61605,6 +61627,13 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
+"ycQ" = (
+/obj/machinery/power/treadmill{
+	dir = 4
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel/dark,
+/area/security/prison)
 "ydb" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -83091,12 +83120,12 @@ aeI
 lGp
 aeU
 afI
-aeU
-aeU
-aem
+ycQ
+rqG
+rEb
 agN
-agY
-aem
+uUV
+rEb
 ahI
 aif
 aiB
