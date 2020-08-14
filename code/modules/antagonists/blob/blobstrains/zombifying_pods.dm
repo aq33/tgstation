@@ -2,7 +2,7 @@
 /datum/blobstrain/reagent/zombifying_pods
 	name = "Kurka Śmigająca"
 	description = "Twoje ataki wstrzykują niewielką ilość toksyn oraz przerabiają nieprzytomne ofiary na dodatkowe zasoby, zamieniając ją w blobowe zombie."
-	effectdesc = "Dodatkowo produkuje słabe zarodniki podczas śmierci lub rozrastania."
+	effectdesc = "produkujesz słabe zarodniki podczas śmierci i rozrastania."
 	analyzerdescdamage = "Wstrzykuje niewielkie ilości toksyn oraz zabija nieprzytomne ofiary, zamienaijąc je w blobowe zombie."
 	analyzerdesceffect = "Wytwarza zarodniki podczas śmierci i rozrastania."
 	color = "#E88D5D"
