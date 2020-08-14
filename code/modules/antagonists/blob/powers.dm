@@ -1,6 +1,6 @@
 /mob/camera/blob/proc/can_buy(cost = 15)
 	if(blob_points < cost)
-		to_chat(src, "<span class='warning'>You cannot afford this, you need at least [cost] resources!</span>")
+		to_chat(src, "<span class='warning'>Nie masz wystarczająco zasobów by to kupić, potrzebujesz co najmniej [cost]!</span>")
 		return 0
 	add_points(-cost)
 	return 1
@@ -16,30 +16,30 @@
 				if(ROLE_BLOB in M.faction)
 					continue
 				if(M.client)
-					to_chat(src, "<span class='warning'>There is someone too close to place your blob core!</span>")
+					to_chat(src, "<span class='warning'>Ktoś jest za blisko by postawić tutaj twój rdzeń!</span>")
 					return 0
 			for(var/mob/living/M in view(13, src))
 				if(ROLE_BLOB in M.faction)
 					continue
 				if(M.client)
-					to_chat(src, "<span class='warning'>Someone could see your blob core from here!</span>")
+					to_chat(src, "<span class='warning'>Ktoś mógłby zobaczyć tutaj twój rdzeń!</span>")
 					return 0
 		var/turf/T = get_turf(src)
 		if(T.density)
-			to_chat(src, "<span class='warning'>This spot is too dense to place a blob core on!</span>")
+			to_chat(src, "<span class='warning'>W tym miejscu jest zbyt gęsto by postawić tutaj twój rdzeń!</span>")
 			return 0
 		for(var/obj/O in T)
 			if(istype(O, /obj/structure/blob))
 				if(istype(O, /obj/structure/blob/normal))
 					qdel(O)
 				else
-					to_chat(src, "<span class='warning'>There is already a blob here!</span>")
+					to_chat(src, "<span class='warning'>Jest tu już blob!</span>")
 					return 0
 			else if(O.density)
-				to_chat(src, "<span class='warning'>This spot is too dense to place a blob core on!</span>")
+				to_chat(src, "<span class='warning'>>W tym miejscu jest zbyt gęsto by postawić tutaj twój rdzeń!</span>")
 				return 0
 		if(!pop_override && world.time <= manualplace_min_time && world.time <= autoplace_max_time)
-			to_chat(src, "<span class='warning'>It is too early to place your blob core!</span>")
+			to_chat(src, "<span class='warning'>Jest zbyt wcześnie by postawić twój rdzeń!</span>")
 			return 0
 	else if(placement_override == 1)
 		var/turf/T = pick(GLOB.blobstart)
@@ -58,15 +58,15 @@
 
 /mob/camera/blob/verb/transport_core()
 	set category = "Blob"
-	set name = "Jump to Core"
-	set desc = "Move your camera to your core."
+	set name = "Skocz do Rdzenia"
+	set desc = "Przenosi twój widok do rdzenia."
 	if(blob_core)
 		forceMove(blob_core.drop_location())
 
 /mob/camera/blob/verb/jump_to_node()
 	set category = "Blob"
-	set name = "Jump to Node"
-	set desc = "Move your camera to a selected node."
+	set name = "Skocz do Węzła"
+	set desc = "Przenosi twój widok do wybranego węzła."
 	if(GLOB.blob_nodes.len)
 		var/list/nodes = list()
 		for(var/i in 1 to GLOB.blob_nodes.len)
@@ -82,19 +82,19 @@
 		T = get_turf(src)
 	var/obj/structure/blob/B = (locate(/obj/structure/blob) in T)
 	if(!B)
-		to_chat(src, "<span class='warning'>There is no blob here!</span>")
+		to_chat(src, "<span class='warning'>Tutaj nie ma bloba!</span>")
 		return
 	if(!istype(B, /obj/structure/blob/normal))
-		to_chat(src, "<span class='warning'>Unable to use this blob, find a normal one.</span>")
+		to_chat(src, "<span class='warning'>Nie można użyć na tym typie bloba, znajdź zwykły.</span>")
 		return
 	if(needsNode && nodes_required)
 		if(!(locate(/obj/structure/blob/node) in orange(3, T)) && !(locate(/obj/structure/blob/core) in orange(4, T)))
-			to_chat(src, "<span class='warning'>You need to place this blob closer to a node or core!</span>")
+			to_chat(src, "<span class='warning'>Musisz być bliżej rdzenia lub węzła by postawić ten blob!</span>")
 			return //handholdotron 2000
 	if(nearEquals)
 		for(var/obj/structure/blob/L in orange(nearEquals, T))
 			if(L.type == blobstrain)
-				to_chat(src, "<span class='warning'>There is a similar blob nearby, move more than [nearEquals] tiles away from it!</span>")
+				to_chat(src, "<span class='warning'>Niedaleko jest podobny typ bloba, oddal się o tyle kratek: [nearEquals]</span>")
 				return
 	if(!can_buy(price))
 		return
@@ -113,8 +113,8 @@
 
 /mob/camera/blob/verb/create_shield_power()
 	set category = "Blob"
-	set name = "Create/Upgrade Shield Blob (15)"
-	set desc = "Create a shield blob, which will block fire and is hard to kill. Using this on an existing shield blob turns it into a reflective blob, capable of reflecting most projectiles but making it twice as weak to brute attacks."
+	set name = "Stwórz silnego bloba (15)"
+	set desc = "Tworzy silnego bloba, który blokuje ogień oraz jest trudniejszy w zabicu. Użycie tej umiejętności na silnym blobie zamieni go w Bloba Lustrzanego, który odbija większość pocisków za cenę otrzymywania podwójnych obrażeń fizycznych."
 	create_shield()
 
 /mob/camera/blob/proc/create_shield(turf/T)
@@ -124,9 +124,9 @@
 			return
 		if(S.obj_integrity < S.max_integrity * 0.5)
 			add_points(BLOB_REFLECTOR_COST)
-			to_chat(src, "<span class='warning'>This shield blob is too damaged to be modified properly!</span>")
+			to_chat(src, "<span class='warning'>Ten blob jest zbyt mocno uszkodzony by go ulepszyć!</span>")
 			return
-		to_chat(src, "<span class='warning'>You secrete a reflective ooze over the shield blob, allowing it to reflect projectiles at the cost of reduced integrity.</span>")
+		to_chat(src, "<span class='warning'>Pokrywasz silnego bloba specjalną wydzieliną, pozwalając mu odbijać pociski  koszt |||| he shield blob, allowing it to reflect projectiles at the cost of reduced integrity.</span>")
 		S.change_to(/obj/structure/blob/shield/reflective, src)
 	else
 		createSpecial(15, /obj/structure/blob/shield, 0, 0, T)
