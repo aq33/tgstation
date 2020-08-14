@@ -1,7 +1,7 @@
 //does brute damage through armor and bio resistance
 /datum/blobstrain/reagent/reactive_spines
 	name = "Pleśń Agresywna"
-	description = "Zadajesz średnie obrażenia fizyczne przebijając pancerz oraz kombinezony biologiczne."
+	description = "zadajesz średnie obrażenia fizyczne przebijając pancerz oraz kombinezony biologiczne."
 	effectdesc = "automatycznie zaatakujesz agresora oraz wszystko w jego pobliżu, kiedy zostaniesz zaatakowany fizycznie."
 	analyzerdescdamage = "Zadaje średnie obrażenia fizyczne, przebijając pancerz oraz kombinezony biologiczne."
 	analyzerdesceffect = "Po zaatakowaniu go fizycznie samoistnie zaatakuje agresora oraz wszystko w jego pobliżu."
