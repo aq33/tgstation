@@ -2,7 +2,7 @@
 	name = "Grzybnia Replikująca"
 	description = "Zadajesz średnie obrażenia fizyczne oraz okazjonalnie rozrośniesz się podwójnie."
 	shortdesc = "Zadajesz średnie obrażenia fizyczne."
-	effectdesc = "Dodatkowo rozrastasz się, kiedy zostaniesz poparzony, ale jesteś podatny na obrażenia fizyczne."
+	effectdesc = "rozrastasz się, kiedy zostaniesz poparzony, ale kosztem podatności na obrażenia fizyczne."
 	color = "#7B5A57"
 	complementary_color = "#57787B"
 	analyzerdescdamage = "Zadaje on średnie obrażenia fizyczne."
