@@ -82,9 +82,9 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 		blobstrain.on_gain()
 		if (hadstrain)
 			to_chat(src, "Twoja odmiana to teraz: <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font>!")
-			to_chat(src, "<b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font> [blobstrain.description]")
+			to_chat(src, "Jako <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font> [blobstrain.description]")
 			if(blobstrain.effectdesc)
-				to_chat(src, "<b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font> [blobstrain.effectdesc]")
+				to_chat(src, "Co więcej, jako <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font> [blobstrain.effectdesc]")
 
 
 /mob/camera/blob/proc/is_valid_turf(turf/T)
@@ -106,7 +106,7 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 			qdel(src)
 	else if(!victory_in_progress && (blobs_legit.len >= blobwincount))
 		victory_in_progress = TRUE
-		priority_announce("Zagrożenie biologiczne osiągnęło masę krytyczną. Utrata stacji jest nieunikniona.", "Alert Biologiczny")
+		priority_announce("Zagrożenie biologiczne osiągnęło masę krytyczną. Zagłada stacji jest nieunikniona.", "Alert Biologiczny")
 		set_security_level("delta")
 		max_blob_points = INFINITY
 		blob_points = INFINITY
