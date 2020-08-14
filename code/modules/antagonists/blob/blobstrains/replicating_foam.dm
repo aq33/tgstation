@@ -1,7 +1,7 @@
 /datum/blobstrain/reagent/replicating_foam
 	name = "Grzybnia Replikująca"
-	description = "Zadajesz średnie obrażenia fizyczne oraz okazjonalnie rozrośniesz się podwójnie."
-	shortdesc = "Zadajesz średnie obrażenia fizyczne."
+	description = "zadajesz średnie obrażenia fizyczne oraz okazjonalnie rozrośniesz się podwójnie."
+	shortdesc = "zadajesz średnie obrażenia fizyczne."
 	effectdesc = "rozrastasz się, kiedy zostaniesz poparzony, ale kosztem podatności na obrażenia fizyczne."
 	color = "#7B5A57"
 	complementary_color = "#57787B"
