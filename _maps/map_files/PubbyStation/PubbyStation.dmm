@@ -57970,6 +57970,10 @@
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
 /area/space)
+"qwg" = (
+/obj/structure/closet/crate/large/shuttlekit,
+/turf/open/floor/plating,
+/area/engine/engineering)
 "qxq" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	name = "Air Out"
@@ -88628,7 +88632,7 @@ nWP
 nZw
 cri
 eVW
-cbX
+qwg
 ceq
 ceq
 ceq

@@ -44270,6 +44270,10 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/chapel/office)
+"ffW" = (
+/obj/structure/closet/crate/large/shuttlekit,
+/turf/open/floor/plating,
+/area/engine/engineering)
 "fgg" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -82263,7 +82267,7 @@ ced
 bVI
 cay
 ccw
-ciZ
+ffW
 ciZ
 ciZ
 ckC
