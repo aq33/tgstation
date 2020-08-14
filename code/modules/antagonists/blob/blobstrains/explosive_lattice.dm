@@ -2,9 +2,9 @@
 /datum/blobstrain/reagent/explosive_lattice
 	name = "Purchawka Wybuchowa"
 	description = "zadajesz obszarowe obrażenia fizyczne."
-	effectdesc = "jesteś wysoce odporne na wybuchy, ale otrzymujesz większe obrażenia od ognia oraz innych typów energii."
+	effectdesc = "jesteś wysoce odporny na wybuchy, ale otrzymujesz większe obrażenia od ognia oraz innych typów energii."
 	analyzerdescdamage = "Zadaje średnie obrażenia fizyczne oraz obszarowe."
-	analyzerdesceffect = "Jest wysoce odporne na wybuchy, ale otrzymuje większe obrażenia od ognia oraz innych typów energii."
+	analyzerdesceffect = "Jest wysoce odporny na wybuchy, ale otrzymuje większe obrażenia od ognia oraz innych typów energii."
 	color = "#8B2500"
 	complementary_color = "#00668B"
 	blobbernaut_message = "blasts"
