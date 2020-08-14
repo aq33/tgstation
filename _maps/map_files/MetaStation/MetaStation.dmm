@@ -76783,6 +76783,7 @@
 "lrU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/treadmill{
+	anchored = 1;
 	dir = 1
 	},
 /obj/structure/cable,

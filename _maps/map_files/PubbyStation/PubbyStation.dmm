@@ -61633,6 +61633,7 @@
 /area/hallway/secondary/exit/departure_lounge)
 "ycQ" = (
 /obj/machinery/power/treadmill{
+	anchored = 1;
 	dir = 4
 	},
 /obj/structure/cable,
