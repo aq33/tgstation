@@ -1166,6 +1166,9 @@
 /mob/living/carbon/human/species/dullahan
 	race = /datum/species/dullahan
 
+/mob/living/carbon/human/species/egg
+	race = /datum/species/egg
+
 /mob/living/carbon/human/species/felinid
 	race = /datum/species/human/felinid
 
@@ -1261,6 +1264,9 @@
 
 /mob/living/carbon/human/species/golem/soviet
 	race = /datum/species/golem/soviet
+
+/mob/living/carbon/human/species/ipc
+	race = /datum/species/ipc
 
 /mob/living/carbon/human/species/jelly
 	race = /datum/species/jelly
