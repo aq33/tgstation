@@ -1,6 +1,6 @@
 //kills sleeping targets and turns them into blob zombies, produces fragile spores when killed or on expanding
 /datum/blobstrain/reagent/zombifying_pods
-	name = "Kurka Śmigająca"
+	name = "Kordyceps Zaraźliwy"
 	description = "twoje ataki wstrzykują niewielką ilość toksyn oraz przerabiają nieprzytomne ofiary na dodatkowe zasoby, zamieniając ją w blobowe zombie."
 	effectdesc = "produkujesz słabe zarodniki podczas śmierci i rozrastania."
 	analyzerdescdamage = "Wstrzykuje niewielkie ilości toksyn oraz zabija nieprzytomne ofiary, zamienaijąc je w blobowe zombie."
