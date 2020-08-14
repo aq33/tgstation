@@ -2,7 +2,7 @@
 /datum/blobstrain/reagent/reactive_spines
 	name = "Pleśń Agresywna"
 	description = "Zadajesz średnie obrażenia fizyczne przebijając pancerz oraz kombinezony biologiczne."
-	effectdesc = "Dodatkowo, kiedy zostaniesz zaatakowany fizycznie, automatycznie zaatakujesz agresora oraz wszystko w jego pobliżu."
+	effectdesc = "automatycznie zaatakujesz agresora oraz wszystko w jego pobliżu, kiedy zostaniesz zaatakowany fizycznie."
 	analyzerdescdamage = "Zadaje średnie obrażenia fizyczne, przebijając pancerz oraz kombinezony biologiczne."
 	analyzerdesceffect = "Po zaatakowaniu go fizycznie samoistnie zaatakuje agresora oraz wszystko w jego pobliżu."
 	color = "#9ACD32"
