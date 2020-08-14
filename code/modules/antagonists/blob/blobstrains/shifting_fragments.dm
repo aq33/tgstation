@@ -2,7 +2,7 @@
 /datum/blobstrain/reagent/shifting_fragments
 	name = "Kurka Ruchliwa"
 	description = "Zadajesz średnie obrażenia fizyczne."
-	effectdesc = "Dodatkowo zamieniasz się miejscami z sąsiednimi blobami, gdy jesteś atakowany."
+	effectdesc = "zamieniasz się miejscami z sąsiednimi blobami, gdy jesteś atakowany."
 	analyzerdescdamage = "Zadaje on średnie obrażenia fizyczne."
 	analyzerdesceffect = "Gdy zostanie zaatakowany, może zamienić się miejscami z sąsiednim blobem."
 	color = "#C8963C"
