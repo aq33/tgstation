@@ -3,7 +3,7 @@
 /datum/blobstrain/reagent/blazing_oil
 	name = "Kolczakówka Piekąca"
 	description = "zadajesz średnie oparzenia, oraz podpalasz przeciwników."
-	effectdesc = "dodatkowo uwalniasz serię płomieni gdy zostaniesz poparzony, ale otrzymujesz obrażenia od wody."
+	effectdesc = "uwalniasz serię płomieni gdy zostaniesz poparzony, ale otrzymujesz obrażenia od wody."
 	analyzerdescdamage = "Zadaje średnie poparzenia oraz podpala wrogów."
 	analyzerdesceffect = "Uwalnia płomienie gdy zostanie poparzony, ale otrzymuje obrażenia od wody i innych cieczy do zwalczania ognia."
 	color = "#B68D00"
