@@ -107,3 +107,8 @@
 	desc = "A single use autosurgeon that contains an energy saw arm implant."
 	uses = 1
 	starting_organ = /obj/item/organ/cyberimp/arm/esaw
+
+/obj/item/autosurgeon/techpriest
+	desc = "A single use autosurgeon that contains a voicebox replacement for your tongue. A screwdriver can be used to remove it, but implants can't be placed back in."
+	uses = 1
+	starting_organ = /obj/item/organ/tongue/robot
