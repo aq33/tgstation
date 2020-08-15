@@ -188,11 +188,11 @@
 		blobber.key = C.key
 		SEND_SOUND(blobber, sound('sound/effects/blobattack.ogg'))
 		SEND_SOUND(blobber, sound('sound/effects/attackblob.ogg'))
-		to_chat(blobber, "<b>You are a blobbernaut!</b>")
-		to_chat(blobber, "You are powerful, hard to kill, and slowly regenerate near nodes and cores, <span class='cultlarge'>but will slowly die if not near the blob</span> or if the factory that made you is killed.")
-		to_chat(blobber, "You can communicate with other blobbernauts and overminds via <b>:b</b>")
-		to_chat(blobber, "Your overmind's blob reagent is: <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font>!")
-		to_chat(blobber, "The <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font> reagent [blobstrain.shortdesc ? "[blobstrain.shortdesc]" : "[blobstrain.description]"]")
+		to_chat(blobber, "<b>Jesteś Grzybonautą!</b>")
+		to_chat(blobber, "Jesteś potężnym i trudnym w zabiciu wojownikiem. Powoli się regenerujesz, gdy jesteś w pobliżu rdzenia lub węzłów, <span class='cultlarge'>ale będziesz powoli tracić zdrowie, jeżeli nie jesteś w pobliżu grzyba</span> lub gdy twoja zarodnia zostanie zniszczona.")
+		to_chat(blobber, "Możesz komunikować się z innymi grzybonautami oraz grzybem za pomocą <b>:b</b>")
+		to_chat(blobber, "Odmiana twojego grzyba to: <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font>!")
+		to_chat(blobber, "Jako <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font> [blobstrain.shortdesc ? "[blobstrain.shortdesc]" : "[blobstrain.description]"]")
 	else
 		to_chat(src, "<span class='warning'>Nie udało ci się przywołać świadomości dla twojego grzybonauty. Twoje zasoby zostały zwrócone.</span>")
 		add_points(40)
@@ -200,19 +200,19 @@
 
 /mob/camera/blob/verb/relocate_core()
 	set category = "Blob"
-	set name = "Relocate Core (80)"
-	set desc = "Swaps the locations of your core and the selected node."
+	set name = "Przenieś Rdzeń (80)"
+	set desc = "Zamienia miejscami twój rdzeń z wybranym węzłem."
 	var/turf/T = get_turf(src)
 	var/obj/structure/blob/node/B = locate(/obj/structure/blob/node) in T
 	if(!B)
-		to_chat(src, "<span class='warning'>You must be on a blob node!</span>")
+		to_chat(src, "<span class='warning'>Musisz znajować się na węźle by to zrobić!</span>")
 		return
 	if(!blob_core)
-		to_chat(src, "<span class='userdanger'>You have no core and are about to die! May you rest in peace.</span>")
+		to_chat(src, "<span class='userdanger'>Utraciłeś swój rdzeń i niedługo zgninesz! Spoczywaj w pokoju.</span>")
 		return
 	var/area/A = get_area(T)
 	if(isspaceturf(T) || A && !A.blob_allowed)
-		to_chat(src, "<span class='warning'>You cannot relocate your core here!</span>")
+		to_chat(src, "<span class='warning'>Nie możesz przenieść tutaj swojego rdzenia!</span>")
 		return
 	if(!can_buy(80))
 		return
@@ -225,31 +225,31 @@
 
 /mob/camera/blob/verb/revert()
 	set category = "Blob"
-	set name = "Remove Blob"
-	set desc = "Removes a blob, giving you back some resources."
+	set name = "Usuń Grzyba"
+	set desc = "Usuwa grzyba, zwracając część zasobów."
 	var/turf/T = get_turf(src)
 	remove_blob(T)
 
 /mob/camera/blob/proc/remove_blob(turf/T)
 	var/obj/structure/blob/B = locate() in T
 	if(!B)
-		to_chat(src, "<span class='warning'>There is no blob there!</span>")
+		to_chat(src, "<span class='warning'>Nie ma tutaj grzyba!</span>")
 		return
 	if(B.point_return < 0)
-		to_chat(src, "<span class='warning'>Unable to remove this blob.</span>")
+		to_chat(src, "<span class='warning'>Nie udało się usunąć tego grzyba!</span>")
 		return
 	if(max_blob_points < B.point_return + blob_points)
-		to_chat(src, "<span class='warning'>You have too many resources to remove this blob!</span>")
+		to_chat(src, "<span class='warning'>Posiadasz za dużo zasobów by usunąć tego grzyba!</span>")
 		return
 	if(B.point_return)
 		add_points(B.point_return)
-		to_chat(src, "<span class='notice'>Gained [B.point_return] resources from removing \the [B].</span>")
+		to_chat(src, "<span class='notice'>Zyskałeś [B.point_return] zasobów za usunięcie tego grzyba.</span>")
 	qdel(B)
 
 /mob/camera/blob/verb/expand_blob_power()
 	set category = "Blob"
-	set name = "Expand/Attack Blob ([BLOB_SPREAD_COST])"
-	set desc = "Attempts to create a new blob in this tile. If the tile isn't clear, instead attacks it, damaging mobs and objects and refunding [BLOB_ATTACK_REFUND] points."
+	set name = "Rozrost/Atak ([BLOB_SPREAD_COST])"
+	set desc = "Grzyb spróbuje rozrosnąć się w tym kierunku. Jeżeli kratka jest zablokowana, zostanie zaatakowana, zadając obrażenia obiektom oraz przeciwników, zwracając [BLOB_ATTACK_REFUND] zasobów."
 	var/turf/T = get_turf(src)
 	expand_blob(T)
 
@@ -313,7 +313,7 @@
 	rally_spores(T)
 
 /mob/camera/blob/proc/rally_spores(turf/T)
-	to_chat(src, "You rally your spores.")
+	to_chat(src, "Zbierasz swoje zarodniki.")
 	var/list/surrounding_turfs = block(locate(T.x - 1, T.y - 1, T.z), locate(T.x + 1, T.y + 1, T.z))
 	if(!surrounding_turfs.len)
 		return
@@ -324,13 +324,13 @@
 
 /mob/camera/blob/verb/blob_broadcast()
 	set category = "Blob"
-	set name = "Blob Broadcast"
-	set desc = "Speak with your blob spores and blobbernauts as your mouthpieces."
-	var/speak_text = input(src, "What would you like to say with your minions?", "Blob Broadcast", null) as text
+	set name = "Grzybowa Transmisja"
+	set desc = "Powiedz coś ustami swoich zarodników oraz grzybonautów."
+	var/speak_text = input(src, "Co chciałbyś powiedzieć za pomocą swoich sługusów?", "Grzybowa Transmisja", null) as text
 	if(!speak_text)
 		return
 	else
-		to_chat(src, "You broadcast with your minions, <B>[speak_text]</B>")
+		to_chat(src, "Mówisz za pomocą swoich sług, <B>[speak_text]</B>")
 	for(var/BLO in blob_mobs)
 		var/mob/living/simple_animal/hostile/blob/BM = BLO
 		if(BM.stat == CONSCIOUS)
@@ -338,8 +338,8 @@
 
 /mob/camera/blob/verb/strain_reroll()
 	set category = "Blob"
-	set name = "Reactive Strain Adaptation (40)"
-	set desc = "Replaces your strain with a random, different one."
+	set name = "Zmiana Odmiany (40)"
+	set desc = "Zmienia twoją odmianę na inną, wybraną losowo."
 	if(!rerolling && (free_strain_rerolls || can_buy(40)))
 		rerolling = TRUE
 		reroll_strain()
@@ -354,7 +354,7 @@
 		var/datum/blobstrain/bs = pick((GLOB.valid_blobstrains))
 		choices[initial(bs.name)] = bs
 
-	var/choice = input(usr, "Please choose a new strain","Strain") as anything in sortList(choices, /proc/cmp_typepaths_asc)
+	var/choice = input(usr, "Wybierz nową odmianę","Odmiana") as anything in sortList(choices, /proc/cmp_typepaths_asc)
 	if (choice && choices[choice] && !QDELETED(src))
 		var/datum/blobstrain/bs = choices[choice]
 		set_strain(bs)
