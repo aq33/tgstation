@@ -22,7 +22,7 @@
 /datum/antagonist/special/undercover/greet()
 	to_chat(owner, "<span class='userdanger'>You are an ex-security agent.</span>")
 	to_chat(owner, "<b>Due to your loyality to nanotrasen in the past, you have been granted with a weapon permit.</b>")
-	to_chat(owner, "<b>Additionally nanotrasen has authorised you to have a disabler for personal defense.</b>")
+	to_chat(owner, "<b>Additionally nanotrasen has authorised you to have a miniature energy gun for personal defense.</b>")
 	to_chat(owner, "<b>You are not a member of security, and shouldn't hunt criminals, but may use your weapon for self defense.</b>")
 	to_chat(owner, "<span class='boldannounce'>Do NOT commit traitorous acts in persuit of your objectives.</span>")
 
@@ -58,7 +58,7 @@
 	if(!ishuman(H) && !ismonkey(H))
 		return
 
-	var/obj/item/gun/energy/disabler/T = new(H)
+	var/obj/item/gun/energy/e_gun/mini/T = new(H)
 	var/obj/item/restraints/handcuffs/cable/zipties/T2 = new(H)
 	var/list/slots = list (
 		"backpack" = ITEM_SLOT_BACKPACK,
@@ -75,6 +75,11 @@
 	var/obj/item/card/id/ID = H.get_idcard()
 	if(ID)
 		ID.access += ACCESS_WEAPONS
+
+	//Mindshield
+	var/obj/item/implant/mindshield/P = new
+	if(!P.implant(H))
+		to_chat(owner, "<span class='warning'Through countless generations your mindshield has finally started to break, you are free!</span>")
 
 ////////////////////////////////
 //////     Objectives    ///////

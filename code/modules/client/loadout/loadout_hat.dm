@@ -43,6 +43,10 @@
 	display_name = "space ushanka"
 	path = /obj/item/clothing/head/ushanka
 
+/datum/gear/hat/battleushanka
+	display_name = "discount battle ushanka"
+	path = /obj/item/clothing/head/helmet/rus_ushanka/cosmetic
+
 /datum/gear/hat/flatcap
 	display_name = "flatcap"
 	path = /obj/item/clothing/head/flatcap

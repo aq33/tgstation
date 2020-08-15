@@ -72,6 +72,8 @@
 		return 'sound/voice/moth/scream_moth.ogg'
 	else if(islizard(H))
 		return pick('sound/voice/lizard/lizard_scream_1.ogg', 'sound/voice/lizard/lizard_scream_2.ogg', 'sound/voice/lizard/lizard_scream_3.ogg', 'sound/voice/lizard/lizard_scream_4.ogg')
+	else if(istype(H.dna.species, /datum/species/egg))
+		return 'sound/voice/eggperson/egg_scream.ogg'
 
 
 /datum/emote/living/carbon/human/pale
