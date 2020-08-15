@@ -82,19 +82,19 @@
 		T = get_turf(src)
 	var/obj/structure/blob/B = (locate(/obj/structure/blob) in T)
 	if(!B)
-		to_chat(src, "<span class='warning'>Tutaj nie ma bloba!</span>")
+		to_chat(src, "<span class='warning'>Tutaj nie ma grzyba!</span>")
 		return
 	if(!istype(B, /obj/structure/blob/normal))
-		to_chat(src, "<span class='warning'>Nie można użyć na tym typie bloba, znajdź zwykły.</span>")
+		to_chat(src, "<span class='warning'>Nie można użyć na tym typie grzyba, znajdź zwykłego grzyba.</span>")
 		return
 	if(needsNode && nodes_required)
 		if(!(locate(/obj/structure/blob/node) in orange(3, T)) && !(locate(/obj/structure/blob/core) in orange(4, T)))
-			to_chat(src, "<span class='warning'>Musisz być bliżej rdzenia lub węzła by postawić ten blob!</span>")
+			to_chat(src, "<span class='warning'>Musisz być bliżej rdzenia lub węzła by postawić tego grzyba!</span>")
 			return //handholdotron 2000
 	if(nearEquals)
 		for(var/obj/structure/blob/L in orange(nearEquals, T))
 			if(L.type == blobstrain)
-				to_chat(src, "<span class='warning'>Niedaleko jest podobny typ bloba, oddal się o tyle kratek: [nearEquals]</span>")
+				to_chat(src, "<span class='warning'>Niedaleko jest podobny typ grzyba, oddal się o tyle kratek: [nearEquals]</span>")
 				return
 	if(!can_buy(price))
 		return
@@ -113,8 +113,8 @@
 
 /mob/camera/blob/verb/create_shield_power()
 	set category = "Blob"
-	set name = "Stwórz silnego bloba (15)"
-	set desc = "Tworzy silnego bloba, który blokuje ogień oraz jest trudniejszy w zabicu. Użycie tej umiejętności na silnym blobie zamieni go w Bloba Lustrzanego, który odbija większość pocisków za cenę otrzymywania podwójnych obrażeń fizycznych."
+	set name = "Stwórz silnego grzyba (15)"
+	set desc = "Tworzy silnego grzyba, który blokuje ogień oraz jest trudniejszy w zabicu. Użycie tej umiejętności na silnym grzybie zamieni go w Grzyba Lustrzanego, który odbija większość pocisków za cenę otrzymywania podwójnych obrażeń fizycznych."
 	create_shield()
 
 /mob/camera/blob/proc/create_shield(turf/T)
@@ -124,57 +124,57 @@
 			return
 		if(S.obj_integrity < S.max_integrity * 0.5)
 			add_points(BLOB_REFLECTOR_COST)
-			to_chat(src, "<span class='warning'>Ten blob jest zbyt mocno uszkodzony by go ulepszyć!</span>")
+			to_chat(src, "<span class='warning'>Ten grzyb jest zbyt mocno uszkodzony by go ulepszyć!</span>")
 			return
-		to_chat(src, "<span class='warning'>Pokrywasz silnego bloba specjalną wydzieliną, pozwalając mu odbijać pociski  koszt |||| he shield blob, allowing it to reflect projectiles at the cost of reduced integrity.</span>")
+		to_chat(src, "<span class='warning'>Pokrywasz silnego grzyba specjalną wydzieliną, pozwalając mu odbijać pociski kosztem mniejszej wytrzymałości.</span>")
 		S.change_to(/obj/structure/blob/shield/reflective, src)
 	else
 		createSpecial(15, /obj/structure/blob/shield, 0, 0, T)
 
 /mob/camera/blob/verb/create_resource()
 	set category = "Blob"
-	set name = "Create Resource Blob (40)"
-	set desc = "Create a resource tower which will generate resources for you."
+	set name = "Stwórz Zasobnik (40)"
+	set desc = "Tworzy Zasobnik, który będzie generować dla ciebie zasoby."
 	createSpecial(40, /obj/structure/blob/resource, 4, 1)
 
 /mob/camera/blob/verb/create_node()
 	set category = "Blob"
-	set name = "Create Node Blob (50)"
-	set desc = "Create a node, which will power nearby factory and resource blobs."
+	set name = "Stwórz Węzeł (50)"
+	set desc = "Stwórz węzeł, który zasili twoje zasobniki oraz zarodnie."
 	createSpecial(50, /obj/structure/blob/node, 5, 0)
 
 /mob/camera/blob/verb/create_factory()
 	set category = "Blob"
-	set name = "Create Factory Blob (60)"
-	set desc = "Create a spore tower that will spawn spores to harass your enemies."
+	set name = "Stwórz Zarodnię (60)"
+	set desc = "Stwórz zardonię, która będzie wytwarzać zarodniki, by dokuczać twoim przeciwnikom."
 	createSpecial(60, /obj/structure/blob/factory, 7, 1)
 
 /mob/camera/blob/verb/create_blobbernaut()
 	set category = "Blob"
-	set name = "Create Blobbernaut (40)"
-	set desc = "Create a powerful blobbernaut which is mildly smart and will attack enemies."
+	set name = "Stwórz Grzybonautę (40)"
+	set desc = "Stwórz potężnego grzybonautę, który jest (zazwyczaj) inteligentny oraz atakuje przeciwników."
 	var/turf/T = get_turf(src)
 	var/obj/structure/blob/factory/B = locate(/obj/structure/blob/factory) in T
 	if(!B)
-		to_chat(src, "<span class='warning'>You must be on a factory blob!</span>")
+		to_chat(src, "<span class='warning'>Musisz znajdować się na zarodni!</span>")
 		return
 	if(B.naut) //if it already made a blobbernaut, it can't do it again
-		to_chat(src, "<span class='warning'>This factory blob is already sustaining a blobbernaut.</span>")
+		to_chat(src, "<span class='warning'>Ta zarodnia podtrzumuje już grzybonautę.</span>")
 		return
 	if(B.obj_integrity < B.max_integrity * 0.5)
-		to_chat(src, "<span class='warning'>This factory blob is too damaged to sustain a blobbernaut.</span>")
+		to_chat(src, "<span class='warning'>Ta zarodnia jest zbyt uszkodzona by podtrzymać grzybonautę.</span>")
 		return
 	if(!can_buy(40))
 		return
 
 	B.naut = TRUE	//temporary placeholder to prevent creation of more than one per factory.
 	to_chat(src, "<span class='notice'>You attempt to produce a blobbernaut.</span>")
-	var/list/mob/dead/observer/candidates = pollGhostCandidates("Do you want to play as a [blobstrain.name] blobbernaut?", ROLE_BLOB, null, ROLE_BLOB, 50) //players must answer rapidly
+	var/list/mob/dead/observer/candidates = pollGhostCandidates("Czy chesz zagrać jako Grzybonauta odmiany [blobstrain.name]?", ROLE_BLOB, null, ROLE_BLOB, 50) //players must answer rapidly
 	if(LAZYLEN(candidates)) //if we got at least one candidate, they're a blobbernaut now.
 		B.max_integrity = initial(B.max_integrity) * 0.25 //factories that produced a blobbernaut have much lower health
 		B.obj_integrity = min(B.obj_integrity, B.max_integrity)
 		B.update_icon()
-		B.visible_message("<span class='warning'><b>The blobbernaut [pick("rips", "tears", "shreds")] its way out of the factory blob!</b></span>")
+		B.visible_message("<span class='warning'><b>Zarodnia przekształca się w potężnego Grzybonautę, bez implikacji swojego zniknięcia!</b></span>")
 		playsound(B.loc, 'sound/effects/splat.ogg', 50, 1)
 		var/mob/living/simple_animal/hostile/blob/blobbernaut/blobber = new /mob/living/simple_animal/hostile/blob/blobbernaut(get_turf(B))
 		flick("blobbernaut_produce", blobber)
@@ -194,7 +194,7 @@
 		to_chat(blobber, "Your overmind's blob reagent is: <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font>!")
 		to_chat(blobber, "The <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font> reagent [blobstrain.shortdesc ? "[blobstrain.shortdesc]" : "[blobstrain.description]"]")
 	else
-		to_chat(src, "<span class='warning'>You could not conjure a sentience for your blobbernaut. Your points have been refunded. Try again later.</span>")
+		to_chat(src, "<span class='warning'>Nie udało ci się przywołać świadomości dla twojego grzybonauty. Twoje zasoby zostały zwrócone.</span>")
 		add_points(40)
 		B.naut = null
 
