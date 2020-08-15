@@ -100,12 +100,12 @@
 
 /datum/game_mode/monkey/special_report()
 	if(check_monkey_victory())
-		return "<div class='panel redborder'><span class='redtext big'>Małpia rewolucja wyniosła sukces! !!</span></div>"
+		return "<div class='panel redborder'><span class='redtext big'>Małpia rewolucja odniosła sukces! OOK OOK AAK OOH HMM MONKE!!</span></div>"
 	else
 		return "<div class='panel redborder'><span class='redtext big'>Załodze udało się powstrzymać małpią rewolucję!</span></div>"
 
 /datum/game_mode/monkey/generate_report()
-	return "Odebraliśmy zgłoszenia [pick("retrowirusa", "choroby", "magicznego zaklęcia które jest uważane na chorbę", "bananowego uroku")] który zamienia ludzi w małpy w waszym sektorze.  Jakakolwiek infekcja powinna być leczona sokiem z banana. W przypadku utracenia kontroli nad pandemią, nie dopuśćcie by ani jeden zarażony nie opuścił stacji, ani nie przybył na stację Centrali."
+	return "Odebraliśmy zgłoszenia na temat [pick("retrowirusa, który zamienia", "choroby, która zamienia", "magicznego zaklęcia, które jest uważane na chorbę zamieniającą", "bananowego uroku, który zamienia")] ludzi w małpy w waszym sektorze.  Jakakolwiek infekcja powinna być leczona sokiem z banana. W przypadku utracenia kontroli nad pandemią ogłoście kwarantannę i nie dopuśćcie by zaraza dostała się stację Centrali"
 
 /proc/add_monkey_leader(datum/mind/monkey_mind)
 	if(is_monkey_leader(monkey_mind))
