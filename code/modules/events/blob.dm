@@ -3,6 +3,8 @@
 	typepath = /datum/round_event/ghost_role/blob
 	weight = 15
 	max_occurrences = 1
+	earliest_start = 45
+
 
 	min_players = 20
 
