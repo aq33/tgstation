@@ -47,7 +47,7 @@
 	return ..()
 
 /datum/game_mode/overthrow/generate_report()
-	return "Nasz kontrwywiad doniósł że na stacji możliwie znajdują się uśpione komórki Syndykatu. Ich zadanie to przygotować przewrót dowódctwa na stacji, bądźcie czujni."
+	return "Nasz kontrwywiad doniósł, że na stacji mogą znajdować się uśpieni agenci Syndykatu. Ich zadanie to przygotować przewrót dowódctwa na stacji, bądźcie czujni."
 
 // Calculates points for each team and displays the winners.
 /datum/game_mode/overthrow/special_report() // so many for loops, I am deeply sorry
