@@ -79,4 +79,4 @@
 
 
 /datum/game_mode/traitor/internal_affairs/generate_report()
-	return "Nanotrasen zaprzecza, że umieściliśmy agentów spraw wewnętrznych na waszej stacji by pozbywać się uciążliwych pracowników. Jakiekolwiek oskarżenia przeciwko Centrali w tej sprawie skonczą się rozmową z agentem spraw wewnętrznych."
+	return "Nanotrasen zaprzecza, że umieściliśmy agentów spraw wewnętrznych na waszej stacji, by pozbywać się uciążliwych pracowników. Jakiekolwiek oskarżenia przeciwko Centrali w tej sprawie skonczą się rozmową z agentem spraw wewnętrznych."
