@@ -1083,6 +1083,7 @@
 	},
 /area/security/prison)
 "acE" = (
+/obj/structure/cable,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
@@ -1425,6 +1426,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/line,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "adc" = (
@@ -2016,6 +2018,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aen" = (
@@ -28463,6 +28466,7 @@
 	pixel_x = -30;
 	pixel_y = 1
 	},
+/obj/item/phone/real,
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/captain/private)
 "bfz" = (
@@ -69898,11 +69902,11 @@
 /area/science/xenobiology)
 "cRY" = (
 /obj/structure/cable,
-/obj/machinery/door/poddoor/preopen{
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor{
 	id = "Xenolab";
 	name = "test chamber blast door"
 	},
-/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/science/xenobiology)
 "cRZ" = (
@@ -70386,11 +70390,11 @@
 "cTm" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/general/visible,
-/obj/machinery/door/poddoor/preopen{
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor{
 	id = "Xenolab";
 	name = "test chamber blast door"
 	},
-/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/science/xenobiology)
 "cTn" = (
@@ -70946,11 +70950,11 @@
 	name = "Maximum Security Test Chamber";
 	req_access_txt = "55"
 	},
-/obj/machinery/door/poddoor/preopen{
+/obj/structure/cable,
+/obj/machinery/door/poddoor{
 	id = "Xenolab";
 	name = "test chamber blast door"
 	},
-/obj/structure/cable,
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "daB" = (
@@ -72110,12 +72114,12 @@
 /area/science/xenobiology)
 "ddu" = (
 /obj/structure/cable,
-/obj/machinery/door/poddoor/preopen{
+/obj/structure/disposalpipe/segment,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor{
 	id = "Xenolab";
 	name = "test chamber blast door"
 	},
-/obj/structure/disposalpipe/segment,
-/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/science/xenobiology)
 "ddw" = (
@@ -76802,6 +76806,15 @@
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space)
+"lrU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/treadmill{
+	anchored = 1;
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "lvY" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -77648,6 +77661,7 @@
 "pMQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/start/prisoner,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "pMX" = (
@@ -77931,6 +77945,11 @@
 /obj/machinery/door/firedoor/window,
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
+"rpD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "rrB" = (
 /turf/closed/wall,
 /area/vacant_room/commissary)
@@ -78843,6 +78862,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
+"wfQ" = (
+/obj/structure/closet/crate/large/shuttlekit,
+/turf/open/floor/plating,
+/area/engine/engineering)
 "wgp" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -101521,13 +101544,13 @@ aaf
 aaf
 aaf
 aax
-abE
-abE
-abE
-abE
+lrU
+rpD
+rpD
+rpD
 acE
 adb
-abE
+rpD
 pMQ
 aem
 aeN
@@ -118776,7 +118799,7 @@ aGS
 axY
 aJl
 aKx
-aJu
+wfQ
 aNo
 axY
 aPW

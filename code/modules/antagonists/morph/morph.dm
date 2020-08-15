@@ -55,6 +55,10 @@
 	S.Grant(src)
 	. = ..()
 
+/mob/living/simple_animal/hostile/morph/attack_ghost(mob/dead/observer/user)
+	. = ..()
+	give_to_ghost(user)
+
 /datum/action/innate/morph/stomach
 	name = "Stomach Contents"
 	button_icon_state = "morph"
@@ -151,7 +155,7 @@
 		throwatom = null
 		playsound(src, 'sound/effects/splat.ogg', 50, 1)
 	. = ..()
-	
+
 
 /mob/living/simple_animal/hostile/morph/examine(mob/user)
 	if(morphed)

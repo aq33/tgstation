@@ -397,6 +397,7 @@
 "abh" = (
 /obj/machinery/holopad,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "abi" = (
@@ -686,6 +687,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/start/prisoner,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "abL" = (
@@ -1676,6 +1678,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aei" = (
@@ -18905,6 +18908,7 @@
 "bfA" = (
 /obj/structure/table/wood,
 /obj/item/hand_tele,
+/obj/item/phone/real,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "bfB" = (
@@ -29341,11 +29345,11 @@
 "bJK" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
-/obj/machinery/door/poddoor/preopen{
-	id = "misclab";
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
 	name = "test chamber blast door"
 	},
-/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "bJL" = (
@@ -29355,19 +29359,19 @@
 	req_access_txt = "55"
 	},
 /obj/structure/cable,
-/obj/machinery/door/poddoor/preopen{
-	id = "misclab";
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
 	name = "test chamber blast door"
 	},
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "bJM" = (
 /obj/structure/cable,
-/obj/machinery/door/poddoor/preopen{
-	id = "misclab";
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
 	name = "test chamber blast door"
 	},
-/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "bJN" = (
@@ -43178,6 +43182,15 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/locker)
+"dlu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/security/prison)
+"dlM" = (
+/obj/structure/cable,
+/turf/closed/wall/r_wall,
+/area/security/prison)
 "dni" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -44281,6 +44294,10 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/chapel/office)
+"ffW" = (
+/obj/structure/closet/crate/large/shuttlekit,
+/turf/open/floor/plating,
+/area/engine/engineering)
 "fgg" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -47015,6 +47032,7 @@
 "jSi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/cola/random,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "jVl" = (
@@ -49257,6 +49275,12 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/security/courtroom)
+"mZB" = (
+/obj/structure/chair/stool,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "naq" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 8
@@ -55226,6 +55250,15 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
+"xcN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/treadmill{
+	anchored = 1;
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "xcW" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -55935,6 +55968,17 @@
 /obj/machinery/computer/med_data,
 /turf/open/floor/plasteel/grimy,
 /area/security/detectives_office)
+"yaW" = (
+/obj/structure/table,
+/obj/item/paper,
+/obj/item/pen,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "ybT" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
@@ -81377,15 +81421,15 @@ aai
 aan
 aaw
 aaB
-aat
-aaJ
-aat
+xcN
+mZB
+dlu
 abh
 jSi
-aai
+dlM
 abK
-acY
-aai
+yaW
+dlM
 aeh
 cFW
 afI
@@ -81634,8 +81678,8 @@ aai
 aap
 aay
 aaD
+xcN
 kSy
-aat
 aat
 aat
 qnr
@@ -82255,7 +82299,7 @@ ced
 bVI
 cay
 ccw
-ciZ
+ffW
 ciZ
 ciZ
 ckC
