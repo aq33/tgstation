@@ -119,7 +119,7 @@
 
 			if(istype(item, /obj/item/organ))
 				var/obj/item/organ/org = item
-				org.Insert(H, drop_if_replaced=FALSE)
+				org.Insert(H,special = 0, drop_if_replaced = FALSE)
 				to_chat(M, "<span class='notice'>Your [G.display_name] has been automatically implanted in you!</span>")
 				continue
 			if(istype(placed_in))
