@@ -4,6 +4,7 @@
     sort_category = "Organs"
 
 /datum/gear/organ/tongue
+    subtype_path = /datum/gear/organ/tongue
     display_name = "Tongue"
     cost = 500
     path = /obj/item/organ/tongue
@@ -25,6 +26,7 @@
     path = /obj/item/organ/tongue/fly
 
 /datum/gear/organ/tail
+    subtype_path = /datum/gear/organ/tail
     display_name = "Lizard Tail"
     cost = 1000
     path = /obj/item/organ/tail/lizard
@@ -35,6 +37,7 @@
     path = /obj/item/organ/tail/cat
 
 /datum/gear/organ/lungs
+    subtype_path = /datum/gear/organ/lungs
     display_name = "Lungs"
     cost = 1000
     path = /obj/item/organ/lungs
@@ -47,6 +50,7 @@
     path = /obj/item/organ/lungs/plasmaman
 
 /datum/gear/organ/ears
+    subtype_path = /datum/gear/organ/ears
     display_name = "Ears"
     cost = 1000
     path = /obj/item/organ/ears
