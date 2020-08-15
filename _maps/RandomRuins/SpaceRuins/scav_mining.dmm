@@ -134,6 +134,11 @@
 "q" = (
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/powered)
+"r" = (
+/obj/machinery/door/airlock/hatch,
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/powered)
 "s" = (
 /obj/item/gps{
 	gpstag = "X-23"
@@ -577,7 +582,7 @@ b
 o
 o
 o
-x
+r
 o
 o
 o

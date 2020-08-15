@@ -33,6 +33,22 @@
 	. += "; Czas rundy: [worldtime2text()]"
 	. += " -- <byond://[world.internet_address]:[world.port]>"
 
+/datum/tgs_chat_command/ircramranch
+	name = "ramranch"
+	help_text = "Gets the playercount, gamemode, and address of the Ram Ranch"
+	var/last_irc_check = 0
+
+/datum/tgs_chat_command/ircramranch/Run(datum/tgs_chat_user/sender, params)
+	var/rtod = REALTIMEOFDAY
+	if(rtod - last_irc_check < IRC_STATUS_THROTTLE)
+		return
+	last_irc_check = rtod
+	var/plural = GLOB.clients.len != 1
+	. = "[GLOB.round_id ? "Runda #[GLOB.round_id]: " : ""]"
+	. += "[GLOB.clients.len] [plural ? "nagich kowbojów" : "nagi kowboj"] na Baranim Ranczo"
+	. += "; Czas rundy: [worldtime2text()]"
+	. += " -- <byond://[world.internet_address]:[world.port]>"
+
 /datum/tgs_chat_command/ahelp
 	name = "ahelp"
 	help_text = "<ckey|ticket #> <message|ticket <close|resolve|icissue|reject|reopen <ticket #>|list>>"
@@ -81,7 +97,6 @@ GLOBAL_LIST(round_end_notifiees)
 /datum/tgs_chat_command/notify
 	name = "notify"
 	help_text = "Pings the invoker when the round ends"
-	admin_only = TRUE
 
 /datum/tgs_chat_command/notify/Run(datum/tgs_chat_user/sender, params)
 	if(!SSticker.IsRoundInProgress() && SSticker.HasRoundStarted())
@@ -106,7 +121,7 @@ GLOBAL_LIST(round_end_notifiees)
 	var/list/text_res = results.Copy(1, 3)
 	var/list/refs = results.len > 3 ? results.Copy(4) : null
 	. = "[text_res.Join("\n")][refs ? "\nRefs: [refs.Join(" ")]" : ""]"
-	
+
 /datum/tgs_chat_command/reload_admins
 	name = "reload_admins"
 	help_text = "Forces the server to reload admins."

@@ -703,7 +703,8 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 		message_admins("[src] has consumed [key_name_admin(user)] [ADMIN_JMP(src)].")
 		investigate_log("has consumed [key_name(user)].", INVESTIGATE_SUPERMATTER)
 		user.dust(force = TRUE)
-		matter_power += 200
+		if(!sm_virgin_sacrifice(AM))
+			matter_power += 200
 	else if(istype(AM, /obj/singularity))
 		return
 	else if(isobj(AM))
@@ -726,6 +727,17 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 				"<span class='danger'>The unearthly ringing subsides and you notice you have new radiation burns.</span>", 2)
 		else
 			L.show_message("<span class='italics'>You hear an unearthly ringing and notice your skin is covered in fresh radiation burns.</span>", 2)
+
+/obj/machinery/power/supermatter_crystal/proc/sm_virgin_sacrifice(mob/living/user)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.has_dna() && istype(H.dna.species, /datum/species/human/felinid))
+			visible_message("<span class='notice'>\The [src] visibly calms down as [H] is consumed...</span>")
+			power *= 0.75
+			matter_power *= 0.75
+			damage *= 0.90
+			return TRUE
+	return FALSE
 
 //Do not blow up our internal radio
 /obj/machinery/power/supermatter_crystal/contents_explosion(severity, target)

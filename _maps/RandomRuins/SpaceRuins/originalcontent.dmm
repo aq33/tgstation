@@ -56,6 +56,7 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/structure/fans/tiny,
 /turf/open/indestructible/paper,
 /area/ruin/powered)
 "ak" = (
