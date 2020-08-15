@@ -478,7 +478,7 @@
 
 /obj/item/storage/backpack/duffelbag/drone
 	name = "drone duffel bag"
-	desc = "A large duffel bag for holding tools and hats."
+	desc = "A large duffel bag for holding tools, hats and crayons."
 	icon_state = "duffel-drone"
 	item_state = "duffel-drone"
 	resistance_flags = FIRE_PROOF
@@ -491,6 +491,27 @@
 	new /obj/item/stack/cable_coil/random(src)
 	new /obj/item/wirecutters(src)
 	new /obj/item/multitool(src)
+
+/obj/item/storage/backpack/duffelbag/syndrone
+	name = "suspicious drone duffel bag"
+	desc = "A large duffel bag for holding tools of destruction, hats, and crayons."
+	icon_state = "duffel-syndie"
+	item_state = "duffel-syndieammo"
+	resistance_flags = FIRE_PROOF
+
+/obj/item/storage/backpack/duffelbag/syndrone/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.silent = TRUE
+
+/obj/item/storage/backpack/duffelbag/syndrone/PopulateContents()
+	new /obj/item/screwdriver/nuke(src)
+	new /obj/item/wrench(src)
+	new /obj/item/weldingtool/largetank(src)
+	new /obj/item/crowbar/red(src)
+	new /obj/item/wirecutters(src, "red")
+	new /obj/item/multitool(src)
+	new /obj/item/stack/cable_coil(src)
 
 /obj/item/storage/backpack/duffelbag/clown
 	name = "clown's duffel bag"

@@ -966,6 +966,24 @@
 		/obj/item/stack/cable_coil = 1)
 	def_components = list(/obj/item/stack/ore/bluespace_crystal = /obj/item/stack/ore/bluespace_crystal/artificial)
 
+/obj/item/circuitboard/machine/droneDispenser
+	name = "Drone Dispenser (Machine Board)"
+	build_path = /obj/machinery/droneDispenser
+	req_components = list(
+		/obj/item/stock_parts/matter_bin = 2,
+		/obj/item/stock_parts/manipulator = 3,
+		/obj/item/mmi/posibrain = 1,
+		/obj/item/stack/sheet/glass = 1)
+
+/obj/item/circuitboard/machine/droneDispenser/syndrone
+	name = "Syndrone Dispenser (Syndicate Machine Board)"
+	build_path = /obj/machinery/droneDispenser/syndrone
+	req_components = list(
+		/obj/item/stock_parts/matter_bin = 2,
+		/obj/item/stock_parts/manipulator = 3,
+		/obj/item/mmi/posibrain = 1,
+		/obj/item/stack/sheet/glass = 1)
+
 /obj/item/circuitboard/machine/rdserver
 	name = "R&D server (Machine Board)"
 	icon_state = "science"

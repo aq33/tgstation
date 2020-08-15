@@ -354,6 +354,14 @@
 	category = list("Research Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
+/datum/design/board/droneDispenser
+	name = "Machine Design (Drone Dispenser)"
+	desc = "The circuit board for a Drone Dispenser."
+	id = "droneDispenser"
+	build_path = /obj/item/circuitboard/machine/droneDispenser
+	category = list("Research Machinery")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
+
 /datum/design/board/microwave
 	name = "Machine Design (Microwave Board)"
 	desc = "The circuit board for a microwave."

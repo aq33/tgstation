@@ -385,7 +385,7 @@
 	design_ids = list("aifixer", "aicore", "safeguard_module", "onehuman_module", "protectstation_module", "quarantine_module", "oxygen_module", "freeform_module",
 	"reset_module", "purge_module", "remove_module", "freeformcore_module", "asimov_module", "paladin_module", "tyrant_module", "overlord_module", "corporate_module",
 	"dungeonmaster_module", "boomer_module", "zoomer_module", "science_module", "service_module", "weeb_module", "gamer_module", "lizardimov_module",
-	"corgi_module", "cowboy_module", "default_module", "borg_ai_control", "mecha_tracking_ai_control", "aiupload", "intellicard")
+	"corgi_module", "cowboy_module", "default_module", "borg_ai_control", "mecha_tracking_ai_control", "aiupload", "intellicard", "droneDispenser")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
