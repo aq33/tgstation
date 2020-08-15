@@ -1170,6 +1170,9 @@
 "acS" = (
 /obj/item/book/manual/wiki/security_space_law,
 /obj/structure/table/wood,
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "Head of Security"
+	},
 /turf/open/floor/carpet/red,
 /area/crew_quarters/heads/hos)
 "acT" = (
@@ -9880,6 +9883,9 @@
 	pixel_x = 3;
 	pixel_y = -2
 	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Research Director"
+	},
 /turf/open/floor/carpet/purple,
 /area/crew_quarters/heads/hor)
 "aDI" = (
@@ -14798,6 +14804,9 @@
 /obj/structure/table/reinforced,
 /obj/item/assembly/flash/handheld,
 /obj/item/assembly/flash/handheld,
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "Bridge"
+	},
 /turf/open/floor/plasteel,
 /area/bridge)
 "aSw" = (
@@ -18888,6 +18897,9 @@
 	pixel_y = 7
 	},
 /obj/item/pen,
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "Captain"
+	},
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "bfA" = (
@@ -23703,6 +23715,9 @@
 	},
 /obj/item/pen,
 /obj/item/stamp/hop,
+/obj/machinery/photocopier/faxmachine{
+	department = "Head of Personnel"
+	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/hop)
 "btE" = (
@@ -25223,6 +25238,9 @@
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Quartermaster"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
@@ -27615,6 +27633,9 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Chief Medical Officer"
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/heads/cmo)
@@ -35332,6 +35353,9 @@
 /obj/item/paper/monitorkey,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
+/obj/machinery/photocopier/faxmachine{
+	department = "Chief Engineer"
+	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/chief)
 "cdn" = (
@@ -51912,6 +51936,13 @@
 /obj/machinery/door/firedoor/window,
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
+"rTh" = (
+/obj/structure/table/wood,
+/obj/machinery/photocopier/faxmachine{
+	department = "Library"
+	},
+/turf/open/floor/wood,
+/area/library)
 "rWq" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 8
@@ -100153,7 +100184,7 @@ aHd
 aIx
 aJF
 aLh
-aIt
+rTh
 aNV
 aPd
 aIt
