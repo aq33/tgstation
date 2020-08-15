@@ -113,8 +113,8 @@
 
 /mob/camera/blob/verb/create_shield_power()
 	set category = "Blob"
-	set name = "Stwórz silnego grzyba (15)"
-	set desc = "Tworzy silnego grzyba, który blokuje ogień oraz jest trudniejszy w zabicu. Użycie tej umiejętności na silnym grzybie zamieni go w Grzyba Lustrzanego, który odbija większość pocisków za cenę otrzymywania podwójnych obrażeń fizycznych."
+	set name = "Stwórz gęstego grzyba (15)"
+	set desc = "Tworzy Gęstego Grzyba, który blokuje ogień oraz jest trudniejszy w zabiciu. Użycie tej umiejętności na Gęstym Grzybie zamieni go w Grzyba Lustrzanego, który odbija większość pocisków za cenę otrzymywania podwójnych obrażeń fizycznych."
 	create_shield()
 
 /mob/camera/blob/proc/create_shield(turf/T)
