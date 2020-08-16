@@ -15,7 +15,7 @@
 	if(isovermind(owner.current)) //embarrasing if not
 		var/mob/camera/blob/overmind = owner.current
 		if(!overmind.victory_in_progress) //if it won this doesn't really matter
-			var/point_report = "<br><b>[owner.name]</b> rozrósł się na [overmind.max_count] kratek w jego szczytowym punkcie."
+			var/point_report = "<br><b>[owner.name]</b> rozrósł się na [overmind.max_count] kafelków w jego szczytowym punkcie."
 			return basic_report+point_report
 	return basic_report
 
