@@ -1,9 +1,9 @@
 //I will need to recode parts of this but I am way too tired atm //I don't know who left this comment but they never did come back
 /obj/structure/blob
-	name = "blob"
+	name = "grzyb"
 	icon = 'icons/mob/blob.dmi'
 	light_range = 2
-	desc = "A thick wall of writhing tendrils."
+	desc = "Gruba ściana wijących się grzybich pędów."
 	density = FALSE //this being false causes two bugs, being able to attack blob tiles behind other blobs and being unable to move on blob tiles in no gravity, but turning it to 1 causes the blob mobs to be unable to path through blobs, which is probably worse.
 	opacity = 0
 	anchored = TRUE
