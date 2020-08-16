@@ -71,8 +71,8 @@
 ////////////////
 
 /mob/living/simple_animal/hostile/blob/blobspore
-	name = "blob spore"
-	desc = "A floating, fragile spore."
+	name = "zarodnik"
+	desc = "Delikanty, latający zarodnik."
 	icon_state = "blobpod"
 	icon_living = "blobpod"
 	health = 30
@@ -88,7 +88,7 @@
 	attack_sound = 'sound/weapons/genhit1.ogg'
 	movement_type = FLYING
 	del_on_death = 1
-	deathmessage = "explodes into a cloud of gas!"
+	deathmessage = "eksploduje, zostawiając za sobą chmurę gazu!"
 	var/death_cloud_size = 1 //size of cloud produced from a dying spore
 	var/mob/living/carbon/human/oldguy
 	var/is_zombie = 0
@@ -203,8 +203,8 @@
 /////////////////
 
 /mob/living/simple_animal/hostile/blob/blobbernaut
-	name = "blobbernaut"
-	desc = "A hulking, mobile chunk of blobmass."
+	name = "grzybonauta"
+	desc = "Potężny, mobilny kawałek grzybowej masy."
 	icon_state = "blobbernaut"
 	icon_living = "blobbernaut"
 	icon_dead = "blobbernaut_dead"
