@@ -162,6 +162,13 @@ Credit dupes that require a lot of manual work shouldn't be removed, unless they
 		report.total_amount[src] += amount
 
 	if(!dry_run)
+		if(istype(O, /obj/machinery/power/battery))
+			var/obj/machinery/power/battery/B = O
+			if(B.taxes && B.owner)
+				///after selling part of the credits gained from selling the battery is sent back to whoever set it as owner from cargo funds
+				var/texas = B.charge * B.taxes*0.01
+				var/datum/bank_account/cargo_funds = SSeconomy.get_dep_account(ACCOUNT_CAR)
+				B.owner.transfer_money(cargo_funds, texas)
 		if(apply_elastic)
 			cost *= NUM_E**(-1*k_elasticity*amount)		//marginal cost modifier
 		SSblackbox.record_feedback("nested tally", "export_sold_cost", 1, list("[O.type]", "[the_cost]"))

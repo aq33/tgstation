@@ -1306,3 +1306,10 @@
 	req_components = list(
 		/obj/item/stock_parts/manipulator = 2,
 		/obj/item/stock_parts/matter_bin = 2)
+
+/obj/item/circuitboard/machine/battery
+	name = "battery (Machine Board)"
+	build_path = /obj/machinery/power/battery
+	req_components = list(
+		/obj/item/stock_parts/capacitor = 5)
+
