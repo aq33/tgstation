@@ -84,7 +84,7 @@
 	melee_damage = 4
 	obj_damage = 20
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
-	attacktext = "hits"
+	attacktext = "uderza"
 	attack_sound = 'sound/weapons/genhit1.ogg'
 	movement_type = FLYING
 	del_on_death = 1
@@ -213,7 +213,7 @@
 	damage_coeff = list(BRUTE = 0.5, BURN = 1, TOX = 1, CLONE = 1, STAMINA = 0, OXY = 1)
 	melee_damage = 20
 	obj_damage = 60
-	attacktext = "slams"
+	attacktext = "miażdży"
 	attack_sound = 'sound/effects/blobattack.ogg'
 	verb_say = "gurgles"
 	verb_ask = "demands"
