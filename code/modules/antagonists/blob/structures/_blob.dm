@@ -3,7 +3,7 @@
 	name = "grzyb"
 	icon = 'icons/mob/blob.dmi'
 	light_range = 2
-	desc = "Gruba ściana wijących się grzybich pędów."
+	desc = "Gruba ściana wijących się zgrzybiałych pędów."
 	density = FALSE //this being false causes two bugs, being able to attack blob tiles behind other blobs and being unable to move on blob tiles in no gravity, but turning it to 1 causes the blob mobs to be unable to path through blobs, which is probably worse.
 	opacity = 0
 	anchored = TRUE
@@ -331,7 +331,7 @@
 	return "some kind of organic tissue"
 
 /obj/structure/blob/normal
-	name = "normal blob"
+	name = "zwyczajny grzyb"
 	icon_state = "blob"
 	light_range = 0
 	obj_integrity = 21 //doesn't start at full health
@@ -349,15 +349,15 @@
 	if(obj_integrity <= 15)
 		icon_state = "blob_damaged"
 		name = "delikatny grzyb"
-		desc = "Cienka siatka lekko drgających grzybowych pnączy."
+		desc = "Cienka siatka lekko drgających zgrzybiałych pnączy."
 		brute_resist = 0.5
 	else if (overmind)
 		icon_state = "blob"
 		name = "grzyb"
-		desc = "Gruba ściana wijących się grzybowych pnączy."
+		desc = "Gruba ściana wijących się zgrzybiałych pnączy."
 		brute_resist = 0.25
 	else
 		icon_state = "blob"
 		name = "martwy grzyb"
-		desc = "Gruba ściana martwych grzybowych pnączy."
+		desc = "Gruba ściana martwych zgrzybiałych pnączy."
 		brute_resist = 0.25
