@@ -3,13 +3,13 @@
 	var/spawned //Whether this template (on the random_room template list) has been spawned
 	var/centerspawner = TRUE
 
-datum/map_template/random_engine/sm
+/datum/map_template/random_engine/sm
 	name = "Supermatter engine"
 	room_id = "supermatter_engine"
 	mappath = "_maps/RandomEngines/supermatter.dmm"
 	centerspawner = FALSE
 
-datum/map_template/random_engine/singulo
+/datum/map_template/random_engine/singulo
 	name = "Singularity engine"
 	room_id = "singularity_engine"
 	mappath = "_maps/RandomEngines/singulo.dmm"
