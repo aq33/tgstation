@@ -12689,7 +12689,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine";
+	name = "Engine";
 	req_access_txt = "10"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -14863,7 +14863,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine";
+	name = "Engine";
 	req_access_txt = "10"
 	},
 /obj/effect/turf_decal/stripes/line,
@@ -16168,7 +16168,7 @@
 /area/maintenance/solars/starboard/fore)
 "aFz" = (
 /obj/machinery/door/airlock/engineering/glass{
-	name = "Supermatter Engine";
+	name = "Engine";
 	req_access_txt = "10"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -23042,7 +23042,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/engineering{
-	name = "Supermatter Engine";
+	name = "Engine";
 	req_access_txt = "10"
 	},
 /obj/machinery/door/firedoor/border_only{
@@ -71882,7 +71882,7 @@
 	dir = 6
 	},
 /obj/machinery/camera{
-	c_tag = "Engineering Supermatter Fore";
+	c_tag = "Engineering Fore";
 	dir = 4;
 	network = list("ss13","engine")
 	},
