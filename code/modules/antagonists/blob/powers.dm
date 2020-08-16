@@ -249,7 +249,7 @@
 /mob/camera/blob/verb/expand_blob_power()
 	set category = "Blob"
 	set name = "Rozrost/Atak ([BLOB_SPREAD_COST])"
-	set desc = "Grzyb spróbuje rozrosnąć się w tym kierunku. Jeżeli kratka jest zablokowana, zostanie zaatakowana, zadając obrażenia obiektom oraz przeciwników, zwracając [BLOB_ATTACK_REFUND] zasobów."
+	set desc = "Grzyb spróbuje rozrosnąć się w tym kierunku. Jeżeli kafelek jest zablokowany, zostanie zaatakowany, zadając obrażenia obiektom oraz przeciwników, zwracając [BLOB_ATTACK_REFUND] zasobów."
 	var/turf/T = get_turf(src)
 	expand_blob(T)
 
@@ -260,7 +260,7 @@
 	for(var/obj/structure/blob/AB in range(T, 1))
 		possibleblobs += AB
 	if(!possibleblobs.len)
-		to_chat(src, "<span class='warning'>There is no blob adjacent to the target tile!</span>")
+		to_chat(src, "<span class='warning'>Na przylegającym kafelku musi być grzyb, by to zrobić!!</span>")
 		return
 	if(can_buy(BLOB_SPREAD_COST))
 		var/attacksuccess = FALSE
@@ -276,7 +276,7 @@
 				B.blob_attack_animation(T, src)
 				add_points(BLOB_ATTACK_REFUND)
 			else
-				to_chat(src, "<span class='warning'>There is a blob there!</span>")
+				to_chat(src, "<span class='warning'>Tutaj znajduje się już grzyb!</span>")
 				add_points(BLOB_SPREAD_COST) //otherwise, refund all of the cost
 		else
 			var/list/cardinalblobs = list()
