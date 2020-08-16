@@ -29889,7 +29889,6 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "bgO" = (
-/obj/effect/landmark/start/explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "bgP" = (
