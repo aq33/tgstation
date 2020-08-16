@@ -11,6 +11,15 @@
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
+"cO" = (
+/obj/structure/particle_accelerator/particle_emitter/center,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"cT" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/engine/engineering)
 "dy" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -48,7 +57,7 @@
 "iz" = (
 /obj/structure/lattice,
 /turf/open/space/basic,
-/area/engine/engineering)
+/area/space/nearstation)
 "jc" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -97,14 +106,9 @@
 /turf/open/floor/plating,
 /area/engine/engineering)
 "oY" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 9
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 6
-	},
+/obj/effect/turf_decal/stripes/box,
 /turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "pJ" = (
 /turf/open/floor/plating,
 /area/engine/engineering)
@@ -117,6 +121,10 @@
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
+"tm" = (
+/obj/structure/particle_accelerator/particle_emitter/right,
+/turf/open/floor/plating,
+/area/engine/engineering)
 "uz" = (
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
@@ -126,19 +134,19 @@
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
-"ye" = (
-/obj/structure/cable,
-/turf/closed/wall/r_wall,
-/area/engine/engineering)
 "yK" = (
 /obj/structure/particle_accelerator/fuel_chamber,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"yQ" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "Cc" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/structure/particle_accelerator/particle_emitter/right,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "Ct" = (
@@ -170,17 +178,14 @@
 /obj/structure/cable/layer1,
 /turf/open/floor/plating,
 /area/engine/engineering)
-"Dq" = (
-/obj/structure/particle_accelerator/particle_emitter/center,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
+"FX" = (
+/obj/structure/particle_accelerator/particle_emitter/left,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "HG" = (
 /obj/machinery/the_singularitygen,
 /turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "It" = (
 /obj/structure/lattice,
 /obj/machinery/camera{
@@ -190,7 +195,7 @@
 	upgrades = 2
 	},
 /turf/open/space/basic,
-/area/engine/engineering)
+/area/space/nearstation)
 "IQ" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -205,13 +210,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"Km" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/structure/particle_accelerator/particle_emitter/left,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "Kq" = (
@@ -267,7 +265,7 @@
 /area/engine/engineering)
 "PZ" = (
 /turf/open/space/basic,
-/area/engine/engineering)
+/area/space)
 "RM" = (
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/plasma/reinforced,
@@ -327,15 +325,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/engine/engineering)
-"XM" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 6
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 9
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
 "Yb" = (
 /obj/structure/cable,
 /obj/machinery/field/generator,
@@ -353,7 +342,6 @@
 /turf/open/floor/plating,
 /area/engine/engineering)
 "ZF" = (
-/obj/structure/cable,
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/camera{
 	c_tag = "Engineering Singularity Control";
@@ -386,7 +374,7 @@ Df
 Jv
 pJ
 pJ
-pJ
+Zw
 pJ
 pJ
 dL
@@ -401,12 +389,12 @@ Df
 Jv
 pJ
 pJ
-Zw
-pJ
-pJ
-dL
-Df
-pJ
+yK
+Jf
+oK
+yQ
+cT
+oK
 Dl
 "}
 (4,1,1) = {"
@@ -416,12 +404,12 @@ uz
 Kq
 pJ
 pJ
-yK
-Jf
-oK
+Mm
+pJ
+pJ
 ZF
-ye
-oK
+uz
+pJ
 Vh
 "}
 (5,1,1) = {"
@@ -430,9 +418,9 @@ hA
 jc
 Lb
 pJ
-pJ
-Mm
-pJ
+tm
+cO
+FX
 pJ
 CW
 IQ
@@ -446,8 +434,8 @@ ny
 Md
 qG
 Cc
-Dq
-Km
+Cc
+Cc
 SJ
 SV
 ny
@@ -584,7 +572,7 @@ iz
 iz
 iz
 iz
-XM
+oY
 pJ
 aa
 jR

@@ -45,7 +45,7 @@
 "gO" = (
 /obj/machinery/the_singularitygen/tesla,
 /turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "iR" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
 /turf/open/floor/plating,
@@ -68,15 +68,10 @@
 /area/engine/engineering)
 "lg" = (
 /turf/open/space/basic,
-/area/engine/engineering)
-"mO" = (
-/obj/machinery/field/generator,
-/obj/effect/turf_decal/stripes/line{
-	dir = 6
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 9
-	},
+/area/space)
+"nY" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "oq" = (
@@ -94,6 +89,10 @@
 /area/engine/engineering)
 "pt" = (
 /obj/structure/particle_accelerator/fuel_chamber,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"rh" = (
+/obj/structure/particle_accelerator/particle_emitter/right,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "sa" = (
@@ -128,13 +127,6 @@
 /turf/open/floor/plating,
 /area/engine/engineering)
 "tl" = (
-/turf/open/floor/plating,
-/area/engine/engineering)
-"tU" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/structure/particle_accelerator/particle_emitter/left,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "uP" = (
@@ -178,6 +170,11 @@
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
+"zc" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/engine/engineering)
 "zo" = (
 /obj/structure/cable,
 /obj/structure/cable/layer1,
@@ -200,10 +197,14 @@
 	network = list("ss13","engine")
 	},
 /turf/open/space/basic,
-/area/engine/engineering)
+/area/space/nearstation)
 "Ao" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"AC" = (
+/obj/structure/particle_accelerator/particle_emitter/center,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "AO" = (
@@ -214,7 +215,7 @@
 "Bv" = (
 /obj/structure/lattice,
 /turf/open/space/basic,
-/area/engine/engineering)
+/area/space/nearstation)
 "By" = (
 /obj/structure/cable,
 /obj/structure/cable/layer1,
@@ -255,7 +256,6 @@
 /turf/open/floor/plating,
 /area/engine/engineering)
 "Je" = (
-/obj/structure/cable,
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/camera{
 	c_tag = "Engineering Tesla Control";
@@ -266,21 +266,9 @@
 /area/engine/engineering)
 "Ld" = (
 /obj/machinery/field/generator,
-/obj/effect/turf_decal/stripes/line{
-	dir = 9
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 6
-	},
+/obj/effect/turf_decal/stripes/box,
 /turf/open/floor/plating,
-/area/engine/engineering)
-"Mk" = (
-/obj/structure/particle_accelerator/particle_emitter/center,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "NG" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -322,6 +310,10 @@
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
+"Qf" = (
+/obj/structure/particle_accelerator/particle_emitter/left,
+/turf/open/floor/plating,
+/area/engine/engineering)
 "Sg" = (
 /obj/machinery/power/emitter/anchored{
 	state = 2
@@ -347,7 +339,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/structure/particle_accelerator/particle_emitter/right,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "ZR" = (
@@ -377,7 +368,7 @@ iR
 ji
 tl
 tl
-tl
+Ot
 tl
 tl
 BZ
@@ -392,12 +383,12 @@ iR
 ji
 tl
 tl
-Ot
-tl
-tl
-BZ
-iR
-tl
+pt
+kJ
+uP
+nY
+zc
+uP
 Uo
 "}
 (4,1,1) = {"
@@ -407,12 +398,12 @@ sa
 NG
 tl
 tl
-pt
-kJ
-uP
+Iz
+tl
+tl
 Je
-eU
-uP
+sa
+tl
 EX
 "}
 (5,1,1) = {"
@@ -421,9 +412,9 @@ ZR
 sB
 Ff
 tl
-tl
-Iz
-tl
+rh
+AC
+Qf
 tl
 Ao
 pj
@@ -437,8 +428,8 @@ yz
 BH
 UC
 WH
-Mk
-tU
+WH
+WH
 wt
 zy
 yz
@@ -575,7 +566,7 @@ Bv
 Bv
 Bv
 Bv
-mO
+Ld
 tl
 ft
 oq
