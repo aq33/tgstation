@@ -310,7 +310,7 @@
 	. = ..()
 	var/datum/atom_hud/hud_to_check = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
 	if(user.research_scanner || hud_to_check.hudusers[user])
-		. += "<b>Twój hUD wyświetla szczegółowy raport...</b><br>"
+		. += "<b>Twój HUD wyświetla szczegółowy raport...</b><br>"
 		if(overmind)
 			. += "<b>Postęp do masy krytycznej:</b> <span class='notice'>[overmind.blobs_legit.len]/[overmind.blobwincount].</span>"
 		else
@@ -359,5 +359,5 @@
 	else
 		icon_state = "blob"
 		name = "martwy grzyb"
-		desc = Gruba ściana martwych grzybowych pnączy."
+		desc = "Gruba ściana martwych grzybowych pnączy."
 		brute_resist = 0.25
