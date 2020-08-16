@@ -364,7 +364,7 @@
 	set category = "Blob"
 	set name = "*Pomoc*"
 	set desc = "Pomoc jak grać grzybem."
-	to_chat(src, "<b>Jesteś grzybem!</b>")
+	to_chat(src, "<b>Jesteś Grzybogiem!</b>")
 	to_chat(src, "Twoja odmiana to: <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font>!")
 	to_chat(src, "Jako <b><font color=\"[blobstrain.color]\">[blobstrain.name]</b></font> [blobstrain.description]")
 	if(blobstrain.effectdesc)
