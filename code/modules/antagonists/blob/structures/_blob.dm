@@ -226,13 +226,13 @@
 /obj/structure/blob/attackby(obj/item/I, mob/user, params)
 	if(I.tool_behaviour == TOOL_ANALYZER)
 		user.changeNext_move(CLICK_CD_MELEE)
-		to_chat(user, "<b>Analizer pipczy raz, po czym pokazuje raport:</b><br>")
+		to_chat(user, "<b>Analizer pipczy, po czym wyświetla szczegółowy raport:</b><br>")
 		SEND_SOUND(user, sound('sound/machines/ping.ogg'))
 		if(overmind)
 			to_chat(user, "<b>Postęp do masy krytycznej:</b> <span class='notice'>[overmind.blobs_legit.len]/[overmind.blobwincount].</span>")
 			to_chat(user, chemeffectreport(user).Join("\n"))
 		else
-			to_chat(user, "<b>Rdzeń grzyba został zneutralizowany. Masa krytyczna nie jest możliwa w osiągnięciu.</b>")
+			to_chat(user, "<b>Rdzeń grzyba został zneutralizowany. Masa krytyczna nie jest już osiągalna.</b>")
 		to_chat(user, typereport(user).Join("\n"))
 	else
 		return ..()
@@ -314,7 +314,7 @@
 		if(overmind)
 			. += "<b>Postęp do masy krytycznej:</b> <span class='notice'>[overmind.blobs_legit.len]/[overmind.blobwincount].</span>"
 		else
-			. += "<b>Rdzeń grzyba został zneutralizowany. Masa krytyczna nie jest możliwa w osiągnięciu.</b>"
+			. += "<b>Rdzeń grzyba został zneutralizowany. Masa krytyczna nie jest już osiągalna.</b>"
 		. += chemeffectreport(user)
 		. += typereport(user)
 	else
