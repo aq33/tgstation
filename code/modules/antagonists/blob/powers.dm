@@ -133,14 +133,14 @@
 
 /mob/camera/blob/verb/create_resource()
 	set category = "Blob"
-	set name = "Stwórz Zasobnik (40)"
-	set desc = "Tworzy Zasobnik, który będzie generować dla ciebie zasoby."
+	set name = "Stwórz Owocnik (40)"
+	set desc = "Tworzy Owocnik, który będzie generować dla ciebie zasoby."
 	createSpecial(40, /obj/structure/blob/resource, 4, 1)
 
 /mob/camera/blob/verb/create_node()
 	set category = "Blob"
 	set name = "Stwórz Węzeł (50)"
-	set desc = "Stwórz węzeł, który zasili twoje zasobniki oraz zarodnie."
+	set desc = "Stwórz węzeł, który zasili twoje owocniki oraz zarodnie."
 	createSpecial(50, /obj/structure/blob/node, 5, 0)
 
 /mob/camera/blob/verb/create_factory()
@@ -373,10 +373,10 @@
 	to_chat(src, "<i>Zwykłe Grzyby</i> zwiększają zasięg twojej kolonii oraz mogą zostać ulepszone, by pełniły poszczególne funkcje.")
 	to_chat(src, "<b>Możesz ulepszać zwykłe grzyby w następujące typy:</b>")
 	to_chat(src, "<i>Gęste Grzyby</i> są silniejsze i mogą przyjąć większą ilość obrażeń. Dodatkowo są ognioodporne i blokują atmosferę, są bardzo pomocne przy pożarach. Ulepszenie Gęstego Grzyba jeszcze raz stworzy Grzyba Lustrzanego, którego umiejętnością jest obijanie większości pocisków kosztem niskiej wytrzymałości.")
-	to_chat(src, "<i>Zasobniki</i> są typem grzyba, które produkują dla ciebie zasoby. Postaraj się budować je w dużych ilościach, by zaspokoić twój zapas zasobów. Ten typ grzyba musi znajdować się w okolicy rdzenia lub węzła, by działać poprawnie.")
+	to_chat(src, "<i>Owocniki</i> są typem grzyba, które produkują dla ciebie zasoby. Postaraj się budować je w dużych ilościach, by zaspokoić twój zapas zasobów. Ten typ grzyba musi znajdować się w okolicy rdzenia lub węzła, by działać poprawnie.")
 	to_chat(src, "<i>Zarodnie</i> są typem grzyba, które produkują zarodniki, które na bierząco atakują przeciwników w okolicy. Ten typ grzyba musi znajdować się w okolicy rdzenia lub węzła, by działać poprawnie.")
 	to_chat(src, "<i>Grzybonauci</i> mogą zostać wyhodowani z zarodni kosztem zasobów. Są oni silni i trudni w zabiciu oraz umiarkowanie inteligentni. Zarodnia, która została wykorzystana do wytworzenia grzybonauty, zostanie osłabiona oraz przez jakiś czas nie będzie w stanie wytwarzać zarodników.")
-	to_chat(src, "<i>Węzły</i> są typem grzyba, które automatycznie się rozrastają tak jak twój rdzeń. Również tak jak rdzeń, aktywują one twoje zarodnie oraz zasobniki.")
+	to_chat(src, "<i>Węzły</i> są typem grzyba, które automatycznie się rozrastają tak jak twój rdzeń. Również tak jak rdzeń, aktywują one twoje zarodnie oraz owocniki.")
 	to_chat(src, "<b>Dodatkowo poza przyciskami na twoim HUD, istnieje kilka skrótów klawiszowych ułatwiających obronę oraz ekspansję..</b>")
 	to_chat(src, "<b>Skróty Klawiszowe:</b> Kliknięcie = Rozrost <b>|</b> Kliknięcie Kółkiem Myszki = Zwołanie Zarodników <b>|</b> Ctrl Klik = Stworzenie Gęstego Grzyba <b>|</b> Alt Klik = Usunięcie Grzyba")
 	to_chat(src, "Próba mówienia wyśle wiadomość do wszystkich grzybonautów oraz innych grzybów, pozwalając ci na koordynację z nimi.")
