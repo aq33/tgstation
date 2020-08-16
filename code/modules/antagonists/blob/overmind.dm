@@ -159,7 +159,7 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 		var/datum/objective/blob_takeover/main_objective = locate() in B.objectives
 		if(main_objective)
 			main_objective.completed = TRUE
-	to_chat(world, "<B>[real_name] zagrzybił stację!</B>")
+	to_chat(world, "<B>[real_name] zagrzybił całą stację!</B>")
 	SSticker.news_report = BLOB_WIN
 	SSticker.force_ending = 1
 
