@@ -6,9 +6,9 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 
 
 /mob/camera/blob
-	name = "Blob Overmind"
-	real_name = "Blob Overmind"
-	desc = "The overmind. It controls the blob."
+	name = "Grzybóg"
+	real_name = "Grzybóg"
+	desc = "Grzybóg. Kontroluje on grzyba"
 	icon = 'icons/mob/cameramob.dmi'
 	icon_state = "marker"
 	mouse_opacity = MOUSE_OPACITY_ICON
@@ -183,7 +183,7 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 
 /mob/camera/blob/Login()
 	..()
-	to_chat(src, "<span class='notice'>You are the overmind!</span>")
+	to_chat(src, "<span class='notice'>Jesteś Grzybogiem!</span>")
 	blob_help()
 	update_health_hud()
 	add_points(0)
@@ -230,7 +230,7 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 	src.log_talk(message, LOG_SAY)
 
 	var/message_a = say_quote(message)
-	var/rendered = "<span class='big'><font color=\"#EE4000\"><b>\[Telepatia Blobów\] [name](<font color=\"[blobstrain.color]\">[blobstrain.name]</font>)</b> [message_a]</font></span>"
+	var/rendered = "<span class='big'><font color=\"#EE4000\"><b>\[Grzybia Telepatia\] [name](<font color=\"[blobstrain.color]\">[blobstrain.name]</font>)</b> [message_a]</font></span>"
 
 	for(var/mob/M in GLOB.mob_list)
 		if(isovermind(M) || istype(M, /mob/living/simple_animal/hostile/blob))
