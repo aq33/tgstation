@@ -34289,7 +34289,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/obj/effect/landmark/start/explorer,
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "baJ" = (
@@ -44539,7 +44539,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/effect/landmark/start/explorer,
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "bpw" = (
@@ -44576,7 +44576,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/effect/landmark/start/explorer,
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "bpy" = (

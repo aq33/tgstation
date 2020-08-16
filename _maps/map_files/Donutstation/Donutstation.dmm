@@ -38,7 +38,7 @@
 /turf/open/floor/plasteel,
 /area/engine/engine_room)
 "aag" = (
-/obj/effect/landmark/start/explorer,
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "aah" = (
@@ -154,7 +154,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
-/obj/effect/landmark/start/explorer,
+/obj/effect/landmark/start_explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "aax" = (
