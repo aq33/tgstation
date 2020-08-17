@@ -7,7 +7,7 @@
 	complementary_color = "#7D6EB4"
 	blobbernaut_message = "wstrzykuje"
 	message = "Blob wbija w ciebie kolce"
-	message_living = "i czujesz jakby twoje wnętrzności zamarzały."
+	message_living = " i czujesz jakby twoje wnętrzności zamarzały."
 	reagent = /datum/reagent/blob/cryogenic_poison
 
 /datum/reagent/blob/cryogenic_poison
