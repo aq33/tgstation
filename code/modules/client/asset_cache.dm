@@ -751,8 +751,6 @@ GLOBAL_LIST_EMPTY(asset_datums)
 		"xenolarva.png" = 'html/img/xenolarva.png',
 		"blobcore.png" = 'html/img/blobcore.png',
 		"blobnode.png" = 'html/img/blobnode.png',
-		"blobcoregrzyb.png" = 'html/img/blobcoregrzyb.png',
-		"blobnodegrzyb.png" = 'html/img/blobnodegrzyb.png',
 		"blobresource.png" = 'html/img/blobresource.png',
 		"blobfactory.png" = 'html/img/blobfactory.png',
 		"changeling.gif" = 'html/img/changeling.gif',
