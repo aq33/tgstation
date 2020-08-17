@@ -8910,10 +8910,6 @@
 /turf/open/floor/plating,
 /area/maintenance/fore)
 "ary" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "Xenolab";
-	name = "Containment Chamber Blast Door"
-	},
 /obj/structure/sign/warning/electricshock{
 	pixel_x = -32
 	},
@@ -8922,6 +8918,10 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
+	name = "test chamber blast door"
+	},
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "arz" = (
@@ -11686,16 +11686,16 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/break_room)
 "axR" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "Xenolab";
-	name = "Containment Chamber Blast Door"
-	},
 /obj/machinery/atmospherics/pipe/simple/general/hidden,
 /obj/effect/turf_decal/caution/stand_clear,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
+	name = "test chamber blast door"
+	},
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "axS" = (
@@ -12149,10 +12149,6 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "ayL" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "Xenolab";
-	name = "Containment Chamber Blast Door"
-	},
 /obj/structure/sign/warning/biohazard{
 	pixel_x = 32
 	},
@@ -12161,6 +12157,10 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
+	name = "test chamber blast door"
+	},
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "ayM" = (
