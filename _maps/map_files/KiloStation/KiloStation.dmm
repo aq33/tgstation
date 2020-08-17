@@ -12642,6 +12642,7 @@
 "azC" = (
 /obj/item/storage/fancy/donut_box,
 /obj/structure/table/wood,
+/obj/item/phone/real,
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/captain)
 "azD" = (
@@ -58668,9 +58669,6 @@
 	dir = 1
 	},
 /obj/machinery/light,
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-21"
-	},
 /obj/structure/sign/warning/electricshock{
 	pixel_y = -32
 	},
@@ -58678,6 +58676,9 @@
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+	},
+/obj/machinery/power/treadmill{
+	anchored = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
@@ -68193,6 +68194,7 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "czF" = (
+/obj/structure/closet/crate/large/shuttlekit,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
