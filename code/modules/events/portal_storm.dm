@@ -12,7 +12,7 @@
 
 /datum/round_event_control/portal_storm_narsie
 	name = "Portal Storm: Constructs"
-	typepath = /dat0
+	typepath = /datum/round_event/portal_storm/portal_storm_narsie
 	max_occurrences = 0
 	min_players = 20
 	earliest_start = 60 MINUTES
