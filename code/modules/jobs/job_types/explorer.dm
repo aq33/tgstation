@@ -31,7 +31,7 @@
 	head = /obj/item/clothing/head/fedora/curator
 	gloves = /obj/item/clothing/gloves/color/black
 	uniform = /obj/item/clothing/under/rank/civilian/curator/treasure_hunter
-	l_pocket = /obj/item/camera
+	l_pocket = /obj/item/gps
 	r_pocket = /obj/item/survivalcapsule
 	backpack_contents = list(
 		/obj/item/t_scanner/adv_mining_scanner/lesser = 1,
@@ -39,8 +39,7 @@
 		/obj/item/fulton_core = 1,
         /obj/item/extraction_pack = 1,
         /obj/item/kitchen/knife/combat/survival=1,
-		/obj/item/gun/energy/kinetic_accelerator = 1,
-        /obj/item/gps = 1)
+		/obj/item/gun/energy/kinetic_accelerator = 1)
 
 	backpack = /obj/item/storage/backpack/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
