@@ -22,7 +22,7 @@
 	. = ..()
 
 /obj/structure/blob/core/proc/generate_announcement()
-	priority_announce("Na stacji [station_name()] wykryto zagrożenie biologiczne poziomu piątego. Cały personel proszony jest o opanowanie zagrożenia", "Alert Biologiczny", 'sound/ai/outbreak5.ogg')
+	priority_announce("Na stacji [station_name()] wykryto zagrożenie biologiczne poziomu piątego. Cały personel proszony jest o wyeliminowanie zagrożenia", "Alert Biologiczny", 'sound/ai/outbreak5.ogg')
 
 /obj/structure/blob/core/scannerreport()
 	return "Kieruje rozrostrem całego grzyba oraz podtrzymuje zarodniki i grzybonautów."
