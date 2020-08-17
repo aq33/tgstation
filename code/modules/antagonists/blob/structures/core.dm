@@ -25,7 +25,7 @@
 	priority_announce("Na stacji [station_name()] wykryto zagrożenie biologiczne poziomu piątego. Cały personel proszony jest o wyeliminowanie zagrożenia", "Alert Biologiczny", 'sound/ai/outbreak5.ogg')
 
 /obj/structure/blob/core/scannerreport()
-	return "Kieruje rozrostrem całego grzyba oraz podtrzymuje zarodniki i grzybonautów."
+	return "Kieruje ekspansją całego grzyba oraz podtrzymuje zarodniki i grzybonautów."
 
 /obj/structure/blob/core/update_icon()
 	cut_overlays()
