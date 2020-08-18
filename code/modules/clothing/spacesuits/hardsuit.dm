@@ -559,14 +559,15 @@
 
 	//Research Director hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/rd
-	name = "prototype hardsuit helmet"
-	desc = "A prototype helmet designed for research in a hazardous, low pressure environment. Scientific data flashes across the visor."
-	icon_state = "hardsuit0-rd"
+	name = "HEV suit helmet"
+	desc = "A Hazardous Environment Helmet. It fits snug over the suit and has a heads-up display for researchers. The flashlight seems broken, fitting considering this was made before the start of the milennium."
+	icon_state = "hardsuit-rd"
 	item_color = "rd"
 	resistance_flags = ACID_PROOF | FIRE_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 10, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 60, "fire" = 60, "acid" = 80, "stamina" = 30)
 	var/obj/machinery/doppler_array/integrated/bomb_radar
+	scan_reagents = TRUE
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL | SHOWEROKAY | SNUG_FIT | SCAN_REAGENTS
 	actions_types = list(/datum/action/item_action/toggle_helmet_light, /datum/action/item_action/toggle_research_scanner)
 
@@ -587,18 +588,38 @@
 		DHUD.remove_hud_from(user)
 
 /obj/item/clothing/suit/space/hardsuit/rd
-	icon_state = "hardsuit-rd"
-	name = "prototype hardsuit"
-	desc = "A prototype suit that protects against hazardous, low pressure environments. Fitted with extensive plating for handling explosives and dangerous research materials."
+	name = "HEV Suit"
+	desc = "A Hazardous Environment suit, often called the Hazard suit. It was designed to protect scientists from the blunt trauma, radiation, energy discharge that hazardous materials might produce or entail. Fits you like a glove. The automatic medical system seems broken."
 	item_state = "hardsuit-rd"
+	icon_state = "hardsuit-rd"
 	resistance_flags = ACID_PROOF | FIRE_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT //Same as an emergency firesuit. Not ideal for extended exposure.
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/gun/energy/wormhole_projector,
 	/obj/item/hand_tele, /obj/item/aicard)
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 10, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 60, "fire" = 60, "acid" = 80, "stamina" = 30)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/rd
+	slowdown = 0.7
+	var/morphine_cooldown = 0
+	var/morphine_cooldown_duration = 500
 
+/obj/item/clothing/suit/space/hardsuit/rd/equipped(mob/user, slot)
+	. = ..()
+	if(!ishuman(user))
+		return
+	if(slot == SLOT_WEAR_SUIT)
+		say("Welcome to the H.E.V. mark IV protective system, for use in hazardous environment conditions.")
+		playsound(src, 'sound/items/hev/hev_logon.ogg', 50, 0)
+	return
 
+/obj/item/clothing/suit/space/hardsuit/rd/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	if(world.time > morphine_cooldown)
+		if(owner.health < 20)
+			owner.reagents.add_reagent(/datum/reagent/medicine/epinephrine, 10)
+			to_chat(owner, "<span class='warning'>You feel a tiny prick!</span>")
+			say("Adrenaline administered.")
+			playsound(src, 'sound/items/hev/hev_morphine.ogg', 50, 0)
+			morphine_cooldown = world.time + morphine_cooldown_duration
+	. = ..()
 
 	//Security hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/security
