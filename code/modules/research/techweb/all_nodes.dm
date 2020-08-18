@@ -188,7 +188,7 @@
 	display_name = "Advanced Power Manipulation"
 	description = "How to get more zap."
 	prereq_ids = list("engineering")
-	design_ids = list("smes", "super_cell", "hyper_cell", "super_capacitor", "superpacman", "mrspacman", "power_turbine", "power_turbine_console", "power_compressor", "circulator", "teg")
+	design_ids = list("smes", "super_cell", "hyper_cell", "super_capacitor", "superpacman", "mrspacman", "power_turbine", "power_turbine_console", "power_compressor", "circulator", "teg", "export_battery")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -685,7 +685,7 @@
 	display_name = "Weapon Development Technology"
 	description = "Our researchers have found new ways to weaponize just about everything now."
 	prereq_ids = list("engineering")
-	design_ids = list("pin_testing", "tele_shield", "sleepy")
+	design_ids = list("pin_testing", "tele_shield", "sleepy", "gun_cell")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 
@@ -703,7 +703,7 @@
 	display_name = "Advanced Weapon Development Technology"
 	description = "Our weapons are breaking the rules of reality by now."
 	prereq_ids = list("adv_engi", "weaponry")
-	design_ids = list("pin_loyalty", "taser")
+	design_ids = list("pin_loyalty", "taser", "gun_cell_upgraded")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 
