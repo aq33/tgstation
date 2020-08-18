@@ -176,7 +176,6 @@
 	new /obj/item/crowbar(src)
 	new /obj/item/wirecutters(src)
 	new /obj/item/multitool(src)
-	new /obj/item/construction/rcd/loaded(src)
 	new /obj/item/reagent_containers/medspray/synthflesh(src)
 
 /obj/item/storage/box/exploring/medic
@@ -195,7 +194,7 @@
 	new /obj/item/pinpointer/crew(src)
 
 /obj/item/storage/box/exploring/engi
-	name = "Dekonstruktor"
+	name = "Polowy Budownik"
 
 /obj/item/storage/box/exploring/engi/PopulateContents()
 	new /obj/item/clothing/suit/space(src)
@@ -210,7 +209,6 @@
 	new /obj/item/crowbar(src)
 	new /obj/item/wirecutters(src)
 	new /obj/item/multitool(src)
-	new /obj/item/construction/rcd/loaded(src)
 
 
 /obj/item/choice_beacon/magic
