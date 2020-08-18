@@ -148,3 +148,14 @@
 	worth += C.air_contents.get_moles(/datum/gas/tritium)*5
 	worth += C.air_contents.get_moles(/datum/gas/pluoxium)*5
 	return worth
+
+/datum/export/large/battery
+	cost = 100
+	unit_name = "battery"
+	message = ". Taxes not included"
+	export_types = list(/obj/machinery/power/battery)
+
+/datum/export/large/battery/get_cost(obj/O)
+	var/obj/machinery/power/battery/B = O
+	var/worth = B.charge
+	return worth
