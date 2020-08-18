@@ -205,7 +205,7 @@
 	new /obj/item/storage/belt/utility(src)
 	new /obj/item/screwdriver(src)
 	new /obj/item/wrench(src)
-	new /obj/item/weldingtool(src)
+	new /obj/item/weldingtool/largetank
 	new /obj/item/crowbar(src)
 	new /obj/item/wirecutters(src)
 	new /obj/item/multitool(src)
