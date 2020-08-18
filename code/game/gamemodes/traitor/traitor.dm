@@ -110,7 +110,7 @@
 	round_credits += "<center><h1>Agenci Syndykatu [syndicate_name()]:</h1>"
 	len_before_addition = round_credits.len
 	for(var/datum/mind/traitor in traitors)
-		round_credits += "<center><h2>[traitor.name] jako [syndicate_name()] zdrajca</h2>"
+		round_credits += "<center><h2>[traitor.name] jako zdrajca [syndicate_name()]</h2>"
 	if(len_before_addition == round_credits.len)
 		round_credits += list("<center><h2>Zdrajcy ukryli swoją zdradliwość!</h2>", "<center><h2>Nie mogliśmy ich zlokalizować!</h2>")
 	round_credits += "<br>"
