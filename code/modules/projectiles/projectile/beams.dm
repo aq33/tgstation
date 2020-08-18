@@ -119,14 +119,6 @@
 /obj/item/projectile/beam/emitter/singularity_pull()
 	return //don't want the emitters to miss
 
-/obj/item/projectile/beam/laser/makeshiftlasrifle
-	damage = 15 //w Initialize() losowo dodajemy 10 dmg, wiec bron srednio zadaje 20 dmg
-
-/obj/item/projectile/beam/laser/makeshiftlasrifle/Initialize()
-	. = ..()
-	if(rand(1,2)==1)
-		damage += 10
-
 /obj/item/projectile/beam/lasertag
 	name = "laser tag beam"
 	icon_state = "omnilaser"
