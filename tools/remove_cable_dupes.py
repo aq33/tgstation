@@ -5,24 +5,21 @@ if len(sys.argv) != 2:
     print(f"usage: {sys.argv[0]} DMM_FILE_PATH")
     sys.exit(-1)
 
-cable = "/obj/structure/cable"
+cable = "/obj/structure/cable,\n"
 file = sys.argv[1]
 
 data = ""
 with open(file, "r") as fr:
-    data = fr.read()
+    data = fr.read()    
 
 turfs = re.split("\)", data)
 final_count = 0
 for i, x in enumerate(turfs):
-    turfs[i] = re.sub(r'/obj/structure/cable(/yellow)?(\{(.|\n)*?\})?', cable, x)
-
-for i, x in enumerate(turfs):
-    num = x.count(cable) - 1
-    if(num <= 0):
+    num = x.count(cable)
+    if(num == 0):
         continue
-    turfs[i] = re.sub(r',\n' + cable, "", x, count = num)
-    final_count += num
+    turfs[i] = x.replace(cable, "", num - 1)
+    final_count += num - 1
 
 print(f"removed {final_count} cables")
 
