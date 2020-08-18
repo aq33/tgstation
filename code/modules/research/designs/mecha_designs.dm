@@ -220,7 +220,7 @@
 	id = "mech_xray"
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/xray
-	materials = list(/datum/material/iron = 10000,/datum/material/gold = 6000,/datum/material/silver = 3000,/datum/material/uranium = 5000)
+	materials = list(MAT_METAL=10000,MAT_GOLD = 6000,MAT_URANIUM = 5000,MAT_TITANIUM = 3000,MAT_BLUESPACE = 3000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
 

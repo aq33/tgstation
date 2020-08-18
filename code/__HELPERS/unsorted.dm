@@ -261,16 +261,6 @@ Turf and target are separate in case you want to teleport some distance from a t
 		. += A
 	return .
 
-/// Returns a list of IPCs
-/proc/active_ipcs()
-	. = list()
-	for(var/mob/living/carbon/human/H in GLOB.alive_mob_list)
-		if(isipc(H))
-			if(H.stat == DEAD)
-				continue
-			. += H
-	return .
-
 /// Find an active ai with the least borgs. VERBOSE PROCNAME HUH!
 /proc/select_active_ai_with_fewest_borgs()
 	var/mob/living/silicon/ai/selected
@@ -299,16 +289,6 @@ Turf and target are separate in case you want to teleport some distance from a t
 			. = input(user,"AI signals detected:", "AI Selection", ais[1]) in sortList(ais)
 		else
 			. = pick(ais)
-	return .
-
-/// Select a random and active IPC
-/proc/select_active_ipc(mob/user)
-	var/list/ipcs = active_ipcs()
-	if(ipcs.len)
-		if(user)
-			. = input(user,"IPC signals detected:", "IPC Selection", ipcs[1]) in ipcs
-		else
-			. = pick(ipcs)
 	return .
 
 /// Returns a list of all items of interest with their name

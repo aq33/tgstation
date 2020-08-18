@@ -34,10 +34,6 @@
 	name = "Cyborg Upload (Computer Board)"
 	build_path = /obj/machinery/computer/upload/borg
 
-/obj/item/circuitboard/computer/ipcupload
-	name = "IPC Upload (Computer Board)"
-	build_path = /obj/machinery/computer/upload/ipc
-
 /obj/item/circuitboard/computer/med_data
 	name = "Medical Records Console (Computer Board)"
 	build_path = /obj/machinery/computer/med_data
