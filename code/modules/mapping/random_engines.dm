@@ -2,27 +2,35 @@
 	var/room_id //The SSmapping random_room_template list is ordered by this var
 	var/spawned //Whether this template (on the random_room template list) has been spawned
 	var/centerspawner = TRUE
+	var/meta_engines = list("_maps/RandomEngines/meta_supermatter.dmm", "_maps/RandomEngines/meta_singulo.dmm", "_maps/RandomEngines/meta_tesla.dmm", "_maps/RandomEngines/meta_teg.dmm")
+	var/kilo_engines = list("_maps/RandomEngines/kilo_supermatter.dmm", "_maps/RandomEngines/kilo_singulo.dmm", "_maps/RandomEngines/kilo_tesla.dmm", "_maps/RandomEngines/kilo_teg.dmm")
 
-/datum/map_template/random_engine/sm
+/datum/map_template/random_engine/engine/New()
+	switch(SSmapping.config?.map_name)
+		if("Box Station")
+			mappath = pick(meta_engines)
+		if("MetaStation")
+			mappath = pick(meta_engines)
+		if("Kilo Station")
+			mappath = pick(kilo_engines)
+
+/datum/map_template/random_engine/engine
 	name = "Supermatter engine"
 	room_id = "supermatter_engine"
-	mappath = "_maps/RandomEngines/supermatter.dmm"
 	centerspawner = FALSE
+	mappath = "_maps/RandomEngines/emergency_engine.dmm"
 
-/datum/map_template/random_engine/singulo
-	name = "Singularity engine"
-	room_id = "singularity_engine"
-	mappath = "_maps/RandomEngines/singulo.dmm"
-	centerspawner = FALSE
+//datum/map_template/random_engine/singulo
+//	name = "Singularity engine"
+//	room_id = "singularity_engine"
+//	centerspawner = FALSE
 
-/datum/map_template/random_engine/tesla
-	name = "Tesla engine"
-	room_id = "tesla_engine"
-	mappath = "_maps/RandomEngines/tesla.dmm"
-	centerspawner = FALSE
+//datum/map_template/random_engine/tesla
+//	name = "Tesla engine"
+//	room_id = "tesla_engine"
+//	centerspawner = FALSE
 
-/datum/map_template/random_engine/teg
-	name = "Thermo-Electric Generator"
-	room_id = "teg"
-	mappath = "_maps/RandomEngines/teg.dmm"
-	centerspawner = FALSE
+//datum/map_template/random_engine/teg
+//	name = "Thermo-Electric Generator"
+//	room_id = "teg"
+//	centerspawner = FALSE
