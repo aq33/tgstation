@@ -207,7 +207,7 @@
 	to_chat(world, "<BR><BR><BR><span class='big bold'>The round has ended.</span>")
 	log_game("The round has ended.")
 	if(LAZYLEN(GLOB.round_end_notifiees))
-		send2irc("Notice", "[GLOB.round_end_notifiees.Join(", ")] the round has ended.")
+		send2chat("[GLOB.round_end_notifiees.Join(", ")] the round has ended.", "")
 
 	RollCredits()
 
