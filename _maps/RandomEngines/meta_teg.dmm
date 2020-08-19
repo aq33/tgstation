@@ -591,8 +591,9 @@
 /turf/open/floor/engine,
 /area/engine/engineering)
 "Pf" = (
+/obj/structure/lattice,
 /turf/open/space/basic,
-/area/engine/engineering)
+/area/space/nearstation)
 "PG" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
 /obj/machinery/atmospherics/pipe/simple/purple/visible,
