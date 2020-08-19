@@ -640,343 +640,377 @@
 	},
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
-"dP" = (
+"dy" = (
+/obj/machinery/door/airlock/alarmlock,
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"dO" = (
+/obj/structure/statue/silver/md,
+/turf/open/floor/plating/dirt,
+/area/space)
+"eB" = (
 /obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/snacks/pizza/dank,
+/obj/item/reagent_containers/food/snacks/pizza/arnold,
 /obj/item/trash/plate,
 /turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"fp" = (
+/obj/item/statuebust,
+/turf/open/floor/plating/dirt,
 /area/space)
-"dX" = (
-/turf/open/floor/carpet/purple,
+"gd" = (
+/obj/structure/statue/bananium/clown,
+/turf/open/floor/plating/dirt,
 /area/space)
-"eo" = (
+"gm" = (
+/obj/structure/table/wood/fancy,
+/obj/item/trash/plate,
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"gB" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"gF" = (
+/obj/item/claymore/bone,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"hL" = (
 /obj/machinery/gateway{
 	dir = 8
 	},
 /turf/open/floor/carpet/purple,
-/area/space)
-"eN" = (
+/area/awaymission/challenge/end)
+"iF" = (
+/obj/item/gun/ballistic/revolver/nagant,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"iO" = (
+/obj/item/toy/figure/ian,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/end)
+"jn" = (
+/mob/living/simple_animal/hostile/russian/ranged,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"jq" = (
+/turf/closed/indestructible{
+	icon_state = "iron0"
+	},
+/area/awaymission/challenge)
+"ju" = (
+/obj/structure/chair/sofa/corner{
+	dir = 1
+	},
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"jP" = (
+/obj/item/clothing/suit/armor/riot/knight/red,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"jY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/turf/open/floor/plating/airless,
+/area/awaymission/challenge/main)
+"lx" = (
+/mob/living/simple_animal/hostile/russian/ranged/trooper,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"lC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1
 	},
 /obj/item/gun/ballistic/revolver/russian,
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
-"eW" = (
-/obj/structure/fluff/drake_statue,
+"lR" = (
+/obj/structure/statue/silver/sec,
 /turf/open/floor/plating/dirt,
 /area/space)
-"fn" = (
-/obj/item/gun/ballistic/revolver/nagant,
+"mb" = (
+/obj/item/statuebust/hippocratic,
 /turf/open/floor/plating/dirt,
-/area/space)
-"fo" = (
-/obj/item/storage/firstaid/brute,
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"fP" = (
-/obj/item/clothing/suit/armor/riot/knight/red,
-/turf/open/floor/plating/dirt,
-/area/space)
-"fQ" = (
-/obj/effect/decal/cleanable/blood/gibs/up,
-/turf/open/floor/plating/dirt,
-/area/space)
-"gf" = (
-/mob/living/simple_animal/hostile/russian/ranged/officer,
-/turf/open/floor/plating/dirt,
-/area/space)
-"iw" = (
-/obj/item/clothing/gloves/combat,
-/turf/open/floor/plating/dirt,
-/area/space)
-"iK" = (
-/obj/item/clothing/suit/hooded/cloak/bone,
-/turf/open/floor/plating/dirt,
-/area/space)
-"jq" = (
-/obj/item/twohanded/bonespear,
-/turf/open/floor/plating/dirt,
-/area/space)
-"jV" = (
-/obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/snacks/pizza/arnold,
-/obj/item/trash/plate,
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"kp" = (
-/obj/structure/headpike/bone,
-/turf/open/floor/plating/dirt,
-/area/space)
-"mh" = (
-/obj/machinery/gateway{
-	dir = 10
-	},
-/turf/open/floor/carpet/purple,
-/area/space)
-"nd" = (
+/area/awaymission/challenge)
+"me" = (
 /obj/machinery/gateway/centeraway,
 /turf/open/floor/carpet/purple,
-/area/space)
-"nV" = (
-/obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/snacks/pizza/margherita,
-/obj/item/trash/plate,
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"pQ" = (
+/area/awaymission/challenge/end)
+"ni" = (
 /obj/machinery/gateway{
 	dir = 6
 	},
 /turf/open/floor/carpet/purple,
-/area/space)
-"qn" = (
-/obj/structure/statue/silver/md,
+/area/awaymission/challenge/end)
+"nj" = (
+/mob/living/simple_animal/hostile/bear,
 /turf/open/floor/plating/dirt,
-/area/space)
-"so" = (
-/obj/effect/decal/cleanable/blood/tracks,
-/turf/open/floor/plating/dirt,
-/area/space)
-"uu" = (
-/obj/item/claymore,
-/turf/open/floor/plating/dirt,
-/area/space)
-"uw" = (
-/mob/living/simple_animal/hostile/russian,
-/turf/open/floor/plating/dirt,
-/area/space)
-"uR" = (
-/mob/living/simple_animal/hostile/bear/russian,
-/turf/open/floor/plating/dirt,
-/area/space)
-"xh" = (
-/obj/item/statuebust,
-/turf/open/floor/plating/dirt,
-/area/space)
-"yO" = (
-/obj/item/claymore/bone,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Am" = (
-/obj/machinery/gateway,
+/area/awaymission/challenge)
+"nE" = (
+/obj/machinery/gateway{
+	dir = 9
+	},
 /turf/open/floor/carpet/purple,
+/area/awaymission/challenge/end)
+"nF" = (
+/obj/item/twohanded/bonespear,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"nS" = (
+/obj/structure/fluff/drake_statue,
+/turf/open/floor/plating/dirt,
 /area/space)
-"Az" = (
+"nZ" = (
+/obj/effect/decal/cleanable/blood,
+/obj/item/kitchen/knife/combat,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"om" = (
+/obj/machinery/gateway{
+	dir = 1
+	},
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/end)
+"ot" = (
+/obj/item/clothing/head/hooded/cloakhood/bone,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"pk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 1
 	},
 /turf/open/floor/plating/dirt,
-/area/space)
-"AC" = (
-/obj/item/storage/firstaid/advanced,
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"Be" = (
-/obj/structure/disposalpipe/segment{
-	dir = 9
-	},
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"Bl" = (
-/obj/item/a_gift/anything,
-/turf/open/floor/carpet/purple,
-/area/space)
-"BF" = (
-/obj/structure/trap/stun,
-/turf/open/floor/plating/dirt,
-/area/space)
-"BJ" = (
+/area/awaymission/challenge)
+"qd" = (
 /obj/structure/chair/sofa/corner{
 	dir = 8
 	},
 /turf/open/floor/plasteel/sepia,
-/area/space)
-"BV" = (
+/area/awaymission/challenge)
+"qV" = (
+/mob/living/simple_animal/hostile/russian/ranged/mosin,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"rn" = (
+/turf/closed/indestructible{
+	icon_state = "iron0"
+	},
+/area/awaymission/challenge/end)
+"sm" = (
+/obj/structure/statue/silver/janitor,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"so" = (
+/obj/machinery/gateway{
+	dir = 5
+	},
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/end)
+"sW" = (
+/obj/item/clothing/head/helmet/knight/red,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"tB" = (
+/mob/living/simple_animal/hostile/bear/russian,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"tW" = (
+/mob/living/simple_animal/hostile/russian/ranged/officer,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"wi" = (
+/obj/structure/headpike/bone,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"wz" = (
+/obj/structure/table/wood/fancy,
+/obj/item/reagent_containers/food/snacks/pizza/margherita,
+/obj/item/trash/plate,
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"yB" = (
+/obj/effect/decal/cleanable/blood/tracks,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"zc" = (
+/obj/machinery/gateway,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/end)
+"zN" = (
+/obj/item/gun/ballistic/automatic/surplus,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"Am" = (
+/obj/machinery/door/airlock/external,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"Ap" = (
+/obj/item/clothing/suit/hooded/cloak/bone,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"AK" = (
+/obj/effect/decal/cleanable/blood/gibs/up,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"Bs" = (
+/obj/structure/chair/sofa{
+	dir = 8
+	},
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"Ce" = (
+/obj/item/storage/firstaid/brute,
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"Co" = (
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"CY" = (
+/obj/structure/chair/sofa/corner,
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"Dq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"Dv" = (
+/obj/item/storage/firstaid/fire,
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"Fb" = (
+/obj/structure/fluff/drake_statue,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"Hg" = (
+/obj/structure/trap/stun,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"HA" = (
+/obj/item/clothing/gloves/combat,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"IL" = (
+/obj/item/clothing/shoes/combat,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"KL" = (
+/obj/item/storage/firstaid/advanced,
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"LH" = (
+/obj/structure/chair/sofa/corner{
+	dir = 4
+	},
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"Mt" = (
+/obj/structure/table/wood/fancy,
+/obj/item/pizzabox/infinite,
+/obj/item/trash/plate,
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"Mv" = (
+/obj/structure/table/wood/fancy,
+/obj/item/reagent_containers/food/snacks/pizza/dank,
+/obj/item/trash/plate,
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"Nh" = (
+/obj/item/twohanded/fireaxe/boneaxe,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"No" = (
+/obj/structure/statue/silver/medborg,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"NG" = (
+/mob/living/simple_animal/hostile/bear/snow,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"Oj" = (
 /obj/structure/statue/silver/sec,
 /turf/open/floor/plating/dirt,
-/area/space)
-"ED" = (
+/area/awaymission/challenge)
+"Os" = (
+/obj/machinery/gateway{
+	dir = 4
+	},
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/end)
+"Ow" = (
+/obj/structure/table/wood/fancy,
+/obj/item/reagent_containers/food/snacks/pizza/pineapple,
+/obj/item/trash/plate,
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"PB" = (
+/obj/machinery/gateway{
+	dir = 10
+	},
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/end)
+"Qy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1
 	},
 /turf/closed/indestructible{
 	icon_state = "iron0"
 	},
-/area/space)
-"EQ" = (
-/obj/item/storage/firstaid/fire,
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"ES" = (
-/mob/living/simple_animal/hostile/russian/ranged/trooper,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Fk" = (
-/mob/living/simple_animal/hostile/russian/ranged/mosin,
-/turf/open/floor/plating/dirt,
-/area/space)
-"FJ" = (
-/obj/structure/chair/sofa{
-	dir = 4
-	},
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"FM" = (
-/obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/snacks/pizza/pineapple,
-/obj/item/trash/plate,
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"Ga" = (
-/obj/item/clothing/head/hooded/cloakhood/bone,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Gk" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
-/turf/open/floor/plating/dirt,
-/area/space)
-"Gp" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/plating/dirt,
-/area/space)
-"GR" = (
-/obj/item/gun/ballistic/automatic/surplus,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Hk" = (
-/obj/structure/statue/bananium/clown,
-/turf/open/floor/plating/dirt,
-/area/space)
-"HD" = (
-/obj/item/statuebust/hippocratic,
-/turf/open/floor/plating/dirt,
-/area/space)
-"In" = (
-/mob/living/simple_animal/hostile/russian/ranged,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Jl" = (
-/obj/structure/chair/sofa/corner{
-	dir = 4
-	},
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"KT" = (
+/area/awaymission/challenge/main)
+"RD" = (
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/end)
+"RG" = (
 /obj/machinery/door/airlock/alarmlock,
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"Lq" = (
-/obj/item/twohanded/fireaxe/boneaxe,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Mj" = (
-/mob/living/simple_animal/hostile/bear/snow,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Mm" = (
-/obj/structure/chair/sofa/corner{
-	dir = 1
-	},
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"MC" = (
-/obj/item/clothing/head/helmet/knight/red,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Ng" = (
-/obj/machinery/door/airlock/external,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Ns" = (
-/obj/machinery/gateway{
-	dir = 1
-	},
 /turf/open/floor/carpet/purple,
-/area/space)
-"Nw" = (
-/obj/machinery/gateway{
-	dir = 9
-	},
-/turf/open/floor/carpet/purple,
-/area/space)
-"NK" = (
-/obj/structure/chair/sofa{
-	dir = 8
-	},
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"NU" = (
-/obj/item/clothing/suit/armor/bone,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Oj" = (
-/turf/open/floor/plating/dirt,
-/area/space)
-"OW" = (
-/obj/structure/chair/sofa/corner,
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"PL" = (
-/mob/living/simple_animal/hostile/bear,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Qv" = (
-/obj/machinery/gateway{
-	dir = 5
-	},
-/turf/open/floor/carpet/purple,
-/area/space)
-"QE" = (
-/obj/structure/table/wood/fancy,
-/obj/item/pizzabox/infinite,
-/obj/item/trash/plate,
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"QP" = (
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"Tq" = (
-/obj/effect/decal/cleanable/blood,
-/obj/item/kitchen/knife/combat,
-/turf/open/floor/plating/dirt,
-/area/space)
-"UY" = (
-/obj/item/clothing/shoes/combat,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Wq" = (
-/obj/structure/statue/silver/medborg,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Wt" = (
-/obj/machinery/gateway{
-	dir = 4
-	},
-/turf/open/floor/carpet/purple,
-/area/space)
-"WG" = (
-/obj/structure/table/wood/fancy,
-/obj/item/trash/plate,
-/turf/open/floor/plasteel/sepia,
-/area/space)
-"WU" = (
-/obj/structure/statue/diamond/captain,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Xn" = (
+/area/awaymission/challenge)
+"Sg" = (
 /obj/structure/trap/fire,
 /turf/open/floor/plating/dirt,
-/area/space)
-"Yv" = (
+/area/awaymission/challenge)
+"TT" = (
 /obj/structure/statue/silver/janitor,
 /turf/open/floor/plating/dirt,
 /area/space)
+"Ui" = (
+/obj/structure/statue/silver/medborg,
+/turf/open/floor/plating/dirt,
+/area/space)
+"UB" = (
+/obj/structure/chair/sofa{
+	dir = 4
+	},
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge)
+"UL" = (
+/obj/item/claymore,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"Va" = (
+/obj/item/a_gift/anything,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge)
+"Vs" = (
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"Yd" = (
+/obj/item/clothing/suit/armor/bone,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"Yz" = (
+/obj/structure/statue/silver/md,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
+"Zn" = (
+/obj/structure/statue/diamond/captain,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge)
 
 (1,1,1) = {"
 aa
@@ -28194,16 +28228,16 @@ aa
 aa
 aa
 aa
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
+rn
+rn
+rn
+rn
+rn
+rn
+rn
+rn
+rn
+rn
 aa
 aa
 aa
@@ -28451,16 +28485,16 @@ aa
 aa
 aa
 aa
-bP
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-bP
+rn
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+rn
 aa
 aa
 aa
@@ -28659,21 +28693,21 @@ bP
 bP
 bP
 bP
-Oj
-uw
-Oj
-Oj
-Oj
-Oj
-Oj
-Oj
-Mj
-Oj
+Vs
+tW
+Vs
+Vs
+Vs
+Vs
+Vs
+Vs
+NG
+Vs
+jq
+tW
+Vs
+jn
 bP
-Oj
-Oj
-In
-bP
 aa
 aa
 aa
@@ -28708,16 +28742,16 @@ aa
 aa
 aa
 aa
-bP
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-bP
+rn
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+rn
 aa
 aa
 aa
@@ -28907,74 +28941,74 @@ dr
 dr
 dr
 bP
-eW
-xh
-qn
-BV
-Wq
-Yv
-Hk
+nS
+fp
+dO
+lR
+Ui
+TT
+gd
 bP
 bP
-Oj
-Xn
-Oj
-Oj
-Oj
-Oj
-Oj
-Oj
-Xn
-Oj
-bP
-Oj
-BF
-Oj
-bP
-bP
-bP
+Vs
+Sg
+Vs
+Vs
+Vs
+Vs
+Vs
+Vs
+Sg
+Vs
+jq
+Vs
+Hg
+Vs
 bP
 bP
 bP
 bP
 bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
 aa
 aa
 aa
-bP
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-bP
+rn
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+rn
 aa
 aa
 aa
@@ -29163,75 +29197,75 @@ dr
 dr
 dr
 dr
-bP
-kp
-iw
-Tq
-UY
-Oj
-yO
-Ga
-bP
-bP
-Oj
-Oj
-Oj
-Oj
-Oj
-Xn
-Oj
-Oj
-Oj
-Oj
-bP
-BF
-BF
-Oj
-bP
-Oj
-Oj
-ES
-bP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-bP
-dX
-Bl
-Bl
-Bl
-dX
-bP
+aA
+wi
+HA
+nZ
+IL
+Vs
+gF
+ot
+jq
+jq
+Vs
+Vs
+Vs
+Vs
+Vs
+Sg
+Vs
+Vs
+Vs
+Vs
+jq
+Hg
+Hg
+Vs
+jq
+lx
+lx
+lx
+jq
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+jq
+Va
+Va
+Va
+Va
+Va
+jq
 aa
 aa
 aa
-bP
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-bP
+rn
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+rn
 aa
 aa
 aa
@@ -29420,75 +29454,75 @@ dr
 dr
 dr
 dr
-bP
-Oj
-Oj
-Oj
-Oj
-Oj
-Oj
-NU
-bP
-bP
-Oj
-Oj
-Oj
-Oj
-Xn
-Oj
-Xn
-Oj
-Oj
-Oj
-bP
-Oj
-Oj
-Oj
-bP
-Oj
-Oj
-Oj
-bP
-fo
-Mm
-FJ
-FJ
-FJ
-FJ
-FJ
-FJ
-FJ
-FJ
-FJ
-FJ
-FJ
-FJ
-FJ
-FJ
-FJ
-Jl
-QP
-QP
-bP
-dX
-Bl
-Bl
-Bl
-dX
-bP
-bP
-bP
-bP
-bP
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-bP
+aA
+Vs
+Vs
+Vs
+Vs
+Vs
+Vs
+Yd
+jq
+jq
+Vs
+Vs
+Vs
+Vs
+Sg
+Vs
+Sg
+Vs
+Vs
+Vs
+jq
+Vs
+Vs
+Vs
+jq
+Vs
+Vs
+Vs
+jq
+Ce
+ju
+UB
+UB
+UB
+UB
+UB
+UB
+UB
+UB
+UB
+UB
+UB
+UB
+UB
+UB
+UB
+LH
+Co
+Co
+jq
+Va
+Va
+Va
+Va
+Va
+jq
+rn
+rn
+rn
+rn
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+rn
 aa
 aa
 aa
@@ -29676,76 +29710,76 @@ ds
 ds
 ds
 ds
-eN
-ED
-Gk
-Az
-Oj
-Oj
-fQ
-so
-so
-Ng
-Ng
-Oj
-Oj
-Oj
-Xn
-Oj
-gf
-Oj
-Xn
-uR
-GR
-Ng
-Oj
-BF
-fn
-Ng
-Oj
-Oj
-Oj
-Ng
-QP
-QE
-WG
-WG
-WG
-WG
-WG
-FM
-WG
-WG
-WG
-WG
-FM
-WG
-WG
-WG
-dP
-WG
-QP
-QP
-KT
-dX
-Bl
-Bl
-Bl
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-Nw
-eo
-mh
-dX
-dX
-bP
+lC
+Qy
+pk
+Dq
+Vs
+Vs
+AK
+yB
+yB
+Am
+Am
+Vs
+Vs
+Vs
+Sg
+Vs
+tW
+Vs
+Sg
+tB
+zN
+Am
+Vs
+Hg
+iF
+Am
+Vs
+Vs
+Vs
+Am
+Co
+Mt
+gm
+gm
+gm
+gm
+gm
+Ow
+gm
+gm
+gm
+gm
+Ow
+gm
+gm
+gm
+Mv
+gm
+Co
+Co
+dy
+Va
+Va
+Va
+Va
+Va
+RG
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+nE
+hL
+PB
+RD
+RD
+rn
 aa
 aa
 aa
@@ -29927,82 +29961,82 @@ aF
 aF
 cS
 cO
-Be
+jY
 dr
 dr
 dr
 dr
 dr
 dr
-bP
-Oj
-Oj
-Oj
-Oj
-Oj
-Oj
-iK
-bP
-bP
-Oj
-Oj
-Oj
-Oj
-Xn
-Oj
-Xn
-Oj
-Oj
-Oj
-bP
-Oj
-Oj
-Oj
-bP
-Oj
-Oj
-Oj
-bP
-AC
-jV
-FM
-FM
-WG
-WG
-WG
-WG
-WG
-WG
-FM
-WG
-WG
-WG
-nV
-WG
-WG
-WG
-QP
-QP
-KT
-dX
-Bl
-Bl
-Bl
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-Ns
-nd
-Am
-dX
-dX
-bP
+aA
+Vs
+Vs
+Vs
+Vs
+Vs
+Vs
+Ap
+jq
+jq
+Vs
+Vs
+Vs
+Vs
+Sg
+Vs
+Sg
+Vs
+Vs
+Vs
+jq
+Vs
+Vs
+Vs
+jq
+Vs
+Vs
+Vs
+jq
+KL
+eB
+Ow
+Ow
+gm
+gm
+gm
+gm
+gm
+gm
+Ow
+gm
+gm
+gm
+wz
+gm
+gm
+gm
+Co
+Co
+dy
+Va
+Va
+Va
+Va
+Va
+RG
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+om
+me
+zc
+iO
+RD
+rn
 aa
 aa
 aa
@@ -30191,75 +30225,75 @@ dr
 dr
 dr
 dr
-bP
-kp
-MC
-fP
-uu
-Gp
+aA
+wi
+sW
+jP
+UL
+gB
+nF
+Nh
 jq
-Lq
-bP
-bP
-Oj
-Oj
-Oj
-Oj
-Oj
-Xn
-Oj
-Oj
-Oj
-Oj
-bP
-BF
-BF
-Oj
-bP
-Oj
-Oj
-ES
-bP
-EQ
-OW
-NK
-NK
-NK
-NK
-NK
-NK
-NK
-NK
-NK
-NK
-NK
-NK
-NK
-NK
-NK
-BJ
-QP
-QP
-bP
-dX
-Bl
-Bl
-Bl
-dX
-bP
-bP
-bP
-bP
-bP
-dX
-dX
-dX
-Qv
-Wt
-pQ
-dX
-dX
-bP
+jq
+Vs
+Vs
+Vs
+Vs
+Vs
+Sg
+Vs
+Vs
+Vs
+Vs
+jq
+Hg
+Hg
+Vs
+jq
+lx
+lx
+lx
+jq
+Dv
+CY
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+qd
+Co
+Co
+jq
+Va
+Va
+Va
+Va
+Va
+jq
+rn
+rn
+rn
+rn
+RD
+RD
+RD
+so
+Os
+ni
+RD
+RD
+rn
 aa
 aa
 aa
@@ -30448,75 +30482,75 @@ dr
 dr
 dr
 dr
-bP
-eW
-HD
-qn
-BV
-Wq
-Yv
-WU
-bP
-bP
+aA
+Fb
+mb
+Yz
 Oj
-Xn
-Oj
-Oj
-Oj
-Oj
-Oj
-Oj
-Xn
-Oj
-bP
-Oj
-BF
-Oj
-bP
-bP
-bP
-bP
-bP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-bP
-dX
-Bl
-Bl
-Bl
-dX
-bP
+No
+sm
+Zn
+jq
+jq
+Vs
+Sg
+Vs
+Vs
+Vs
+Vs
+Vs
+Vs
+Sg
+Vs
+jq
+Vs
+Hg
+Vs
+jq
+jq
+jq
+jq
+jq
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+Co
+jq
+Va
+Va
+Va
+Va
+Va
+jq
 aa
 aa
 aa
-bP
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-bP
+rn
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+rn
 aa
 aa
 aa
@@ -30715,65 +30749,65 @@ bP
 bP
 bP
 bP
-Oj
-uw
-Oj
-Oj
-Oj
-Oj
-Oj
-Oj
-PL
-Oj
-bP
-Oj
-Oj
-Fk
-bP
-aa
-aa
-aa
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
+Vs
+tW
+Vs
+Vs
+Vs
+Vs
+Vs
+Vs
+nj
+Vs
+jq
+tW
+Vs
+qV
 bP
 aa
 aa
 aa
 bP
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-bP
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+jq
+aa
+aa
+aa
+rn
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+rn
 aa
 aa
 aa
@@ -31021,16 +31055,16 @@ aa
 aa
 aa
 aa
-bP
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-bP
+rn
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+rn
 aa
 aa
 aa
@@ -31278,16 +31312,16 @@ aa
 aa
 aa
 aa
-bP
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-dX
-bP
+rn
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+RD
+rn
 aa
 aa
 aa
@@ -31535,16 +31569,16 @@ aa
 aa
 aa
 aa
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
+rn
+rn
+rn
+rn
+rn
+rn
+rn
+rn
+rn
+rn
 aa
 aa
 aa
