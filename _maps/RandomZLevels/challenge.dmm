@@ -740,6 +740,12 @@
 /mob/living/simple_animal/parrot,
 /turf/open/floor/carpet/purple,
 /area/awaymission/challenge/main)
+"fC" = (
+/obj/structure/table/wood/fancy,
+/obj/item/trash/plate,
+/obj/item/paper/fluff/awaymissions/challenge/colourfulnote,
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge/main)
 "fK" = (
 /obj/machinery/door/airlock/bananium,
 /turf/open/floor/mineral/bananium,
@@ -1026,6 +1032,10 @@
 	icon_state = "iron0"
 	},
 /area/awaymission/challenge/main)
+"pW" = (
+/obj/item/paper/fluff/awaymissions/challenge/clownnote,
+/turf/open/floor/mineral/bananium,
+/area/awaymission/challenge/main)
 "qd" = (
 /obj/structure/chair/sofa/corner{
 	dir = 8
@@ -1274,6 +1284,10 @@
 /obj/item/storage/firstaid/fire,
 /turf/open/floor/plasteel/sepia,
 /area/awaymission/challenge/main)
+"DM" = (
+/obj/item/paper/fluff/awaymissions/challenge/bloodynote,
+/turf/open/floor/plasteel/cult,
+/area/awaymission/challenge/main)
 "Es" = (
 /obj/machinery/porta_turret{
 	dir = 8;
@@ -1413,6 +1427,7 @@
 /area/awaymission/challenge/main)
 "KU" = (
 /obj/structure/table/wood/bar,
+/obj/item/paper/fluff/awaymissions/challenge/stainednote,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
 "La" = (
@@ -1431,6 +1446,10 @@
 /obj/machinery/light,
 /turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/challenge/main)
+"Mj" = (
+/obj/item/paper/fluff/awaymissions/challenge/syndicatenote,
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/space)
 "Mt" = (
 /obj/structure/table/wood/fancy,
 /obj/item/pizzabox/infinite,
@@ -24517,7 +24536,7 @@ tz
 tz
 fK
 mz
-mz
+pW
 jo
 mz
 fK
@@ -24529,7 +24548,7 @@ Pu
 ez
 ez
 ez
-ez
+Mj
 AI
 aa
 aa
@@ -30732,7 +30751,7 @@ gm
 gm
 gm
 JV
-gm
+fC
 gm
 Ow
 JV
@@ -31228,7 +31247,7 @@ iF
 XL
 iF
 Sg
-iF
+DM
 aA
 Xl
 UO
