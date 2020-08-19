@@ -228,15 +228,11 @@
 /obj/machinery/light{
 	dir = 1
 	},
-<<<<<<< Updated upstream
-/obj/machinery/porta_turret,
-=======
 /obj/machinery/porta_turret{
 	dir = 8;
 	installation = /obj/item/gun/energy/lasercannon;
 	set_obj_flags = "EMAGGED"
 	},
->>>>>>> Stashed changes
 /turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/main)
 "aV" = (
@@ -512,17 +508,12 @@
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bO" = (
-<<<<<<< Updated upstream
-/obj/machinery/porta_turret,
-/turf/open/floor/plating,
-=======
 /obj/machinery/porta_turret{
 	dir = 8;
 	installation = /obj/item/gun/energy/lasercannon;
 	set_obj_flags = "EMAGGED"
 	},
 /turf/open/floor/plasteel/airless,
->>>>>>> Stashed changes
 /area/awaymission/challenge/main)
 "bP" = (
 /turf/closed/indestructible{
@@ -553,10 +544,7 @@
 	dir = 2
 	},
 /obj/machinery/door/airlock/survival_pod,
-<<<<<<< Updated upstream
-=======
 /obj/structure/fans/tiny/invisible,
->>>>>>> Stashed changes
 /turf/open/floor/plasteel/white,
 /area/awaymission/challenge/main)
 "bV" = (
@@ -587,37 +575,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
-<<<<<<< Updated upstream
-"ck" = (
-/obj/machinery/disposal/deliveryChute{
-	dir = 1
-	},
-/obj/structure/disposalpipe/trunk,
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"cl" = (
-/turf/open/space/basic,
-/area/space)
-"ct" = (
-/obj/machinery/porta_turret,
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"cu" = (
-/obj/structure/disposalpipe/junction,
-/turf/open/chasm/lavaland,
-/area/awaymission/challenge/main)
-"cw" = (
-/obj/structure/disposalpipe/sorting/mail/flip,
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"cC" = (
-/obj/structure/disposalpipe/junction,
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"cG" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1
-=======
 "cj" = (
 /obj/machinery/porta_turret,
 /turf/open/floor/plating/dirt,
@@ -725,11 +682,30 @@
 /obj/machinery/door/airlock/alarmlock,
 /turf/open/floor/plasteel/sepia,
 /area/awaymission/challenge/main)
+"eg" = (
+/obj/item/stack/sheet/runed_metal,
+/turf/open/floor/mineral/plastitanium/red,
+/area/awaymission/challenge/main)
+"eu" = (
+/obj/item/stack/spacecash/c500,
+/obj/item/stack/spacecash/c500,
+/obj/structure/closet,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
+"ez" = (
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/space)
 "eB" = (
 /obj/structure/table/wood/fancy,
 /obj/item/reagent_containers/food/snacks/pizza/arnold,
 /obj/item/trash/plate,
 /turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge/main)
+"eC" = (
+/mob/living/simple_animal/pet/cat,
+/obj/structure/displaycase/labcage,
+/obj/structure/displaycase/labcage,
+/turf/open/floor/carpet/purple,
 /area/awaymission/challenge/main)
 "eD" = (
 /obj/machinery/gateway{
@@ -737,9 +713,40 @@
 	},
 /turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/start)
+"eS" = (
+/obj/item/stack/ore/bananium,
+/obj/item/stack/ore/bananium,
+/obj/item/stack/ore/bananium,
+/obj/structure/closet,
+/turf/open/floor/mineral/bananium,
+/area/space)
+"fm" = (
+/obj/structure/closet/crate,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/space)
 "fp" = (
 /obj/item/statuebust,
 /turf/open/floor/plating/dirt,
+/area/awaymission/challenge/main)
+"fx" = (
+/mob/living/simple_animal/parrot,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
+"fK" = (
+/obj/machinery/door/airlock/bananium,
+/turf/open/floor/mineral/bananium,
+/area/awaymission/challenge/main)
+"fL" = (
+/mob/living/simple_animal/hostile/retaliate/clown/mutant,
+/turf/open/floor/mineral/bananium/airless,
 /area/awaymission/challenge/main)
 "gd" = (
 /obj/structure/statue/bananium/clown,
@@ -749,6 +756,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
+/obj/item/wrench,
 /turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "gi" = (
@@ -757,10 +765,22 @@
 	},
 /turf/open/chasm/lavaland,
 /area/awaymission/challenge/main)
+"gj" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/airless,
+/area/awaymission/challenge/main)
 "gm" = (
 /obj/structure/table/wood/fancy,
 /obj/item/trash/plate,
 /turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge/main)
+"gr" = (
+/obj/structure/table/wood/bar,
+/obj/item/gun/ballistic/revolver/nagant,
+/turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
 "gt" = (
 /obj/machinery/gateway/centeraway,
@@ -774,9 +794,29 @@
 /obj/item/claymore/bone,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
+"gJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/turf/closed/indestructible/fakeglass,
+/area/awaymission/challenge/main)
+"gM" = (
+/mob/living/simple_animal/hostile/retaliate/clown/clownhulk/chlown,
+/turf/open/floor/mineral/bananium/airless,
+/area/awaymission/challenge/main)
+"hQ" = (
+/obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/hunter{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/space)
+"iy" = (
+/obj/item/a_gift/anything,
+/obj/structure/flora/tree/pine,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
 "iF" = (
-/obj/item/gun/ballistic/revolver/nagant,
-/turf/open/floor/plating/dirt,
+/turf/open/floor/plasteel/cult,
 /area/awaymission/challenge/main)
 "iO" = (
 /obj/item/toy/figure/ian,
@@ -787,7 +827,12 @@
 /area/awaymission/challenge/main)
 "jn" = (
 /mob/living/simple_animal/hostile/russian/ranged,
-/turf/open/floor/plating/dirt,
+/turf/open/floor/mineral/plastitanium/red,
+/area/awaymission/challenge/main)
+"jo" = (
+/obj/effect/mob_spawn/human/clown/corpse,
+/obj/structure/closet,
+/turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "jq" = (
 /obj/structure/disposalpipe/segment{
@@ -802,64 +847,27 @@
 	dir = 8;
 	installation = /obj/item/gun/energy/lasercannon;
 	set_obj_flags = "EMAGGED"
->>>>>>> Stashed changes
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
-<<<<<<< Updated upstream
-"cI" = (
-/obj/structure/disposalconstruct,
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"cL" = (
-/obj/structure/disposalpipe/junction/flip,
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"cO" = (
-/obj/structure/disposalpipe/segment{
-	dir = 10
-	},
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"cR" = (
-/obj/structure/disposalpipe/segment{
-	dir = 5
-	},
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"cS" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"cT" = (
-/obj/structure/disposalpipe/junction{
-	dir = 8
-	},
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"dc" = (
-/obj/structure/disposalpipe/segment{
-	dir = 6
-	},
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"dr" = (
-/turf/open/chasm/lavaland,
-/area/awaymission/challenge/main)
-"ds" = (
-/obj/structure/disposalpipe/segment{
-=======
 "ju" = (
 /obj/structure/chair/sofa/corner{
 	dir = 1
 	},
 /turf/open/floor/plasteel/sepia,
 /area/awaymission/challenge/main)
+"jK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
+"jN" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
 "jP" = (
 /obj/item/clothing/suit/armor/riot/knight/red,
 /turf/open/floor/plating/dirt,
@@ -870,6 +878,24 @@
 	},
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
+"ka" = (
+/obj/item/stack/sheet/mineral/bananium,
+/obj/item/stack/sheet/mineral/bananium,
+/obj/item/stack/sheet/mineral/bananium,
+/obj/item/stack/sheet/mineral/bananium,
+/obj/item/stack/sheet/mineral/bananium,
+/obj/structure/closet,
+/turf/open/floor/mineral/bananium,
+/area/space)
+"kK" = (
+/obj/item/pet_carrier,
+/mob/living/simple_animal/parrot,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
+"kM" = (
+/obj/machinery/door/airlock/survival_pod/glass,
+/turf/open/floor/mineral/plastitanium,
+/area/space)
 "lh" = (
 /obj/machinery/light{
 	dir = 4
@@ -877,7 +903,7 @@
 /turf/open/floor/plasteel/sepia,
 /area/awaymission/challenge/main)
 "li" = (
-/obj/structure/statue/bananium/clown,
+/obj/item/stack/sheet/mineral/uranium,
 /turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "lv" = (
@@ -888,7 +914,7 @@
 /area/awaymission/challenge/main)
 "lx" = (
 /mob/living/simple_animal/hostile/russian/ranged/trooper,
-/turf/open/floor/plating/dirt,
+/turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/challenge/main)
 "lC" = (
 /obj/structure/disposalpipe/segment{
@@ -897,20 +923,42 @@
 /obj/item/gun/ballistic/revolver/russian,
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
+"lN" = (
+/mob/living/simple_animal/pet/cat/Runtime,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
 "mb" = (
 /obj/item/statuebust/hippocratic,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
+"me" = (
+/turf/open/floor/mineral/plastitanium/red/airless,
+/area/awaymission/challenge/main)
+"mo" = (
+/mob/living/simple_animal/pet/dog/corgi,
+/obj/structure/table/wood,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
 "mz" = (
 /turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
-"mB" = (
-/obj/structure/disposalpipe/sorting,
-/turf/open/floor/plating/airless,
+"nc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/item/stack/sheet/mineral/uranium,
+/turf/open/floor/mineral/bananium,
+/area/awaymission/challenge/main)
+"nf" = (
+/obj/structure/table/wood/fancy,
+/obj/item/reagent_containers/food/snacks/pizza/pineapple,
+/obj/item/trash/plate,
+/obj/item/reagent_containers/food/snacks/cakeslice/birthday,
+/turf/open/floor/plasteel/sepia,
 /area/awaymission/challenge/main)
 "nj" = (
-/mob/living/simple_animal/hostile/bear,
-/turf/open/floor/plating/dirt,
+/mob/living/simple_animal/hostile/construct/builder/hostile,
+/turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/challenge/main)
 "nC" = (
 /obj/structure/disposalpipe/junction{
@@ -918,398 +966,27 @@
 	},
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
+"nD" = (
+/mob/living/simple_animal/hostile/retaliate/clown/lube,
+/turf/open/floor/mineral/bananium/airless,
+/area/awaymission/challenge/main)
 "nF" = (
 /obj/item/twohanded/bonespear,
 /turf/open/floor/plating/dirt,
+/area/awaymission/challenge/main)
+"nW" = (
+/obj/item/stack/sheet/mineral/plastitanium,
+/turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/main)
 "nZ" = (
 /obj/effect/decal/cleanable/blood,
 /obj/item/kitchen/knife/combat,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
-"oe" = (
-/obj/structure/disposalpipe/segment{
-	dir = 9
-	},
-/obj/structure/disposalpipe/sorting{
->>>>>>> Stashed changes
-	dir = 1
-	},
-/turf/open/floor/plating/airless,
+"og" = (
+/obj/item/screwdriver/nuke,
+/turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/main)
-<<<<<<< Updated upstream
-"dy" = (
-/obj/machinery/door/airlock/alarmlock,
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"dO" = (
-/obj/structure/statue/silver/md,
-/turf/open/floor/plating/dirt,
-/area/space)
-"eB" = (
-/obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/snacks/pizza/arnold,
-/obj/item/trash/plate,
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"fp" = (
-/obj/item/statuebust,
-/turf/open/floor/plating/dirt,
-/area/space)
-"gd" = (
-/obj/structure/statue/bananium/clown,
-/turf/open/floor/plating/dirt,
-/area/space)
-"gm" = (
-/obj/structure/table/wood/fancy,
-/obj/item/trash/plate,
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"gB" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"gF" = (
-/obj/item/claymore/bone,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"hL" = (
-/obj/machinery/gateway{
-	dir = 8
-	},
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge/end)
-"iF" = (
-/obj/item/gun/ballistic/revolver/nagant,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"iO" = (
-/obj/item/toy/figure/ian,
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge/end)
-"jn" = (
-/mob/living/simple_animal/hostile/russian/ranged,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"jq" = (
-/turf/closed/indestructible{
-	icon_state = "iron0"
-	},
-/area/awaymission/challenge)
-"ju" = (
-/obj/structure/chair/sofa/corner{
-	dir = 1
-	},
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"jP" = (
-/obj/item/clothing/suit/armor/riot/knight/red,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"jY" = (
-/obj/structure/disposalpipe/segment{
-	dir = 9
-	},
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"lx" = (
-/mob/living/simple_animal/hostile/russian/ranged/trooper,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"lC" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
-/obj/item/gun/ballistic/revolver/russian,
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"lR" = (
-/obj/structure/statue/silver/sec,
-/turf/open/floor/plating/dirt,
-/area/space)
-"mb" = (
-/obj/item/statuebust/hippocratic,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"me" = (
-/obj/machinery/gateway/centeraway,
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge/end)
-"ni" = (
-/obj/machinery/gateway{
-	dir = 6
-	},
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge/end)
-"nj" = (
-/mob/living/simple_animal/hostile/bear,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"nE" = (
-/obj/machinery/gateway{
-	dir = 9
-	},
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge/end)
-"nF" = (
-/obj/item/twohanded/bonespear,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"nS" = (
-/obj/structure/fluff/drake_statue,
-/turf/open/floor/plating/dirt,
-/area/space)
-"nZ" = (
-/obj/effect/decal/cleanable/blood,
-/obj/item/kitchen/knife/combat,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"om" = (
-/obj/machinery/gateway{
-	dir = 1
-	},
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge/end)
-"ot" = (
-/obj/item/clothing/head/hooded/cloakhood/bone,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"pk" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"qd" = (
-/obj/structure/chair/sofa/corner{
-	dir = 8
-	},
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"qV" = (
-/mob/living/simple_animal/hostile/russian/ranged/mosin,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"rn" = (
-/turf/closed/indestructible{
-	icon_state = "iron0"
-	},
-/area/awaymission/challenge/end)
-"sm" = (
-/obj/structure/statue/silver/janitor,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"so" = (
-/obj/machinery/gateway{
-	dir = 5
-	},
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge/end)
-"sW" = (
-/obj/item/clothing/head/helmet/knight/red,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"tB" = (
-/mob/living/simple_animal/hostile/bear/russian,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"tW" = (
-/mob/living/simple_animal/hostile/russian/ranged/officer,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"wi" = (
-/obj/structure/headpike/bone,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"wz" = (
-/obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/snacks/pizza/margherita,
-/obj/item/trash/plate,
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"yB" = (
-/obj/effect/decal/cleanable/blood/tracks,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"zc" = (
-/obj/machinery/gateway,
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge/end)
-"zN" = (
-/obj/item/gun/ballistic/automatic/surplus,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"Am" = (
-/obj/machinery/door/airlock/external,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"Ap" = (
-/obj/item/clothing/suit/hooded/cloak/bone,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"AK" = (
-/obj/effect/decal/cleanable/blood/gibs/up,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"Bs" = (
-/obj/structure/chair/sofa{
-	dir = 8
-	},
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"Ce" = (
-/obj/item/storage/firstaid/brute,
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"Co" = (
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"CY" = (
-/obj/structure/chair/sofa/corner,
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"Dq" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"Dv" = (
-/obj/item/storage/firstaid/fire,
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"Fb" = (
-/obj/structure/fluff/drake_statue,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"Hg" = (
-/obj/structure/trap/stun,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"HA" = (
-/obj/item/clothing/gloves/combat,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"IL" = (
-/obj/item/clothing/shoes/combat,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"KL" = (
-/obj/item/storage/firstaid/advanced,
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"LH" = (
-/obj/structure/chair/sofa/corner{
-	dir = 4
-	},
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"Mt" = (
-/obj/structure/table/wood/fancy,
-/obj/item/pizzabox/infinite,
-/obj/item/trash/plate,
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"Mv" = (
-/obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/snacks/pizza/dank,
-/obj/item/trash/plate,
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"Nh" = (
-/obj/item/twohanded/fireaxe/boneaxe,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"No" = (
-/obj/structure/statue/silver/medborg,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"NG" = (
-/mob/living/simple_animal/hostile/bear/snow,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"Oj" = (
-/obj/structure/statue/silver/sec,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"Os" = (
-/obj/machinery/gateway{
-	dir = 4
-	},
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge/end)
-"Ow" = (
-/obj/structure/table/wood/fancy,
-/obj/item/reagent_containers/food/snacks/pizza/pineapple,
-/obj/item/trash/plate,
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"PB" = (
-/obj/machinery/gateway{
-	dir = 10
-	},
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge/end)
-"Qy" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
-/turf/closed/indestructible{
-	icon_state = "iron0"
-	},
-/area/awaymission/challenge/main)
-"RD" = (
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge/end)
-"RG" = (
-/obj/machinery/door/airlock/alarmlock,
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge)
-"Sg" = (
-/obj/structure/trap/fire,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"TT" = (
-/obj/structure/statue/silver/janitor,
-/turf/open/floor/plating/dirt,
-/area/space)
-"Ui" = (
-/obj/structure/statue/silver/medborg,
-/turf/open/floor/plating/dirt,
-/area/space)
-"UB" = (
-/obj/structure/chair/sofa{
-	dir = 4
-	},
-/turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge)
-"UL" = (
-/obj/item/claymore,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"Va" = (
-/obj/item/a_gift/anything,
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge)
-"Vs" = (
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"Yd" = (
-/obj/item/clothing/suit/armor/bone,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"Yz" = (
-/obj/structure/statue/silver/md,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-"Zn" = (
-/obj/structure/statue/diamond/captain,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge)
-=======
 "om" = (
 /mob/living/simple_animal/pet/dog/corgi,
 /turf/open/floor/carpet/purple,
@@ -1349,20 +1026,26 @@
 	icon_state = "iron0"
 	},
 /area/awaymission/challenge/main)
-"pW" = (
-/obj/structure/fans/tiny/invisible,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge/main)
 "qd" = (
 /obj/structure/chair/sofa/corner{
 	dir = 8
 	},
 /turf/open/floor/plasteel/sepia,
 /area/awaymission/challenge/main)
+"qe" = (
+/obj/structure/sign/poster/contraband/syndicate_pistol,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
 "qV" = (
 /mob/living/simple_animal/hostile/russian/ranged/mosin,
-/turf/open/floor/plating/dirt,
+/turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/challenge/main)
+"qZ" = (
+/obj/machinery/computer/camera_advanced/syndie{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/space)
 "rn" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -1371,16 +1054,61 @@
 	icon_state = "iron0"
 	},
 /area/awaymission/challenge/start)
+"ro" = (
+/turf/open/floor/mineral/plastitanium,
+/area/space)
+"rE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/obj/structure/disposalpipe/sorting{
+	dir = 1
+	},
+/turf/open/floor/plating/airless,
+/area/awaymission/challenge/main)
+"rT" = (
+/obj/structure/disposalpipe/junction,
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
+/turf/open/floor/plating/airless,
+/area/awaymission/challenge/main)
+"sF" = (
+/obj/machinery/power/port_gen/pacman/super,
+/turf/open/floor/mineral/bananium,
+/area/awaymission/challenge/main)
 "sW" = (
 /obj/item/clothing/head/helmet/knight/red,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
+"tn" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/space)
+"tz" = (
+/turf/open/floor/mineral/bananium,
+/area/space)
 "tB" = (
 /mob/living/simple_animal/hostile/bear/russian,
-/turf/open/floor/plating/dirt,
+/turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/challenge/main)
+"tV" = (
+/mob/living/simple_animal/hostile/syndicate/ranged/space/stormtrooper,
+/turf/open/floor/mineral/plastitanium,
+/area/space)
 "tW" = (
 /turf/open/floor/plating/dirt,
+/area/awaymission/challenge/main)
+"ub" = (
+/mob/living/simple_animal/pet/dog/corgi,
+/obj/item/pet_carrier,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
+"ue" = (
+/obj/structure/fans/tiny/invisible,
+/turf/open/chasm,
 /area/awaymission/challenge/main)
 "up" = (
 /obj/structure/disposalpipe/junction/flip{
@@ -1392,19 +1120,21 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/space,
 /area/space)
+"uQ" = (
+/obj/structure/table/wood,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
 "wi" = (
 /obj/structure/headpike/bone,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
-"ws" = (
+"wl" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 9
-	},
-/turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
+/mob/living/simple_animal/hostile/syndicate/ranged/shotgun/space,
+/turf/open/space,
+/area/space)
 "wx" = (
 /obj/machinery/light{
 	dir = 8
@@ -1426,6 +1156,10 @@
 	},
 /turf/open/space,
 /area/space)
+"xf" = (
+/obj/structure/window/plastitanium,
+/turf/open/floor/mineral/plastitanium,
+/area/space)
 "xr" = (
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 8
@@ -1440,9 +1174,20 @@
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
+"zo" = (
+/mob/living/simple_animal/hostile/syndicate/melee/space,
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/space)
 "zN" = (
 /obj/item/gun/ballistic/automatic/surplus,
-/turf/open/floor/plating/dirt,
+/turf/open/floor/plasteel/cult,
+/area/awaymission/challenge/main)
+"zX" = (
+/obj/structure/disposalpipe/sorting,
+/turf/open/floor/plating/airless,
+/area/awaymission/challenge/main)
+"zZ" = (
+/turf/closed/indestructible/fakeglass,
 /area/awaymission/challenge/main)
 "Am" = (
 /obj/machinery/door/airlock/external,
@@ -1461,6 +1206,10 @@
 	icon_state = "damaged2"
 	},
 /area/awaymission/challenge/start)
+"AI" = (
+/obj/structure/window/plastitanium,
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/space)
 "AK" = (
 /obj/effect/decal/cleanable/blood/gibs/up,
 /turf/open/floor/plating/dirt,
@@ -1470,6 +1219,10 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge/main)
+"BW" = (
+/obj/machinery/vending/sovietsoda,
+/turf/open/floor/plasteel/cult,
 /area/awaymission/challenge/main)
 "Ce" = (
 /obj/item/storage/firstaid/brute,
@@ -1487,37 +1240,70 @@
 /area/awaymission/challenge/main)
 "CR" = (
 /mob/living/simple_animal/hostile/russian/ranged/officer,
-/turf/open/floor/plating/dirt,
+/turf/open/floor/mineral/plastitanium/red,
+/area/awaymission/challenge/main)
+"CS" = (
+/mob/living/simple_animal/parrot,
+/obj/structure/displaycase/labcage,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
+"CT" = (
+/mob/living/simple_animal/pet/dog/corgi,
+/mob/living/simple_animal/parrot,
+/turf/open/floor/carpet/purple,
 /area/awaymission/challenge/main)
 "CY" = (
 /obj/structure/chair/sofa/corner,
 /turf/open/floor/plasteel/sepia,
 /area/awaymission/challenge/main)
-"Dq" = (
-/obj/structure/disposalpipe/junction,
-/obj/structure/disposalpipe/segment{
-	dir = 6
+"Da" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/mineral/plastitanium/red/airless,
 /area/awaymission/challenge/main)
-"Dr" = (
-/obj/structure/disposalpipe/junction{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/plating/airless,
+"Dd" = (
+/obj/structure/bonfire,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge/main)
+"Dq" = (
+/obj/structure/fluff/broken_flooring,
+/turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/main)
 "Dv" = (
 /obj/item/storage/firstaid/fire,
 /turf/open/floor/plasteel/sepia,
 /area/awaymission/challenge/main)
+"Es" = (
+/obj/machinery/porta_turret{
+	dir = 8;
+	installation = /obj/item/gun/energy/lasercannon;
+	set_obj_flags = "EMAGGED"
+	},
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/space)
 "Fb" = (
 /obj/structure/fluff/drake_statue,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
-"Fi" = (
-/obj/structure/fans/tiny/invisible,
-/turf/open/chasm,
+"Fx" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/space)
+"FG" = (
+/obj/structure/shuttle/engine/huge{
+	dir = 4
+	},
+/turf/open/space,
+/area/space)
+"FK" = (
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/mineral/plastitanium/red/airless,
 /area/awaymission/challenge/main)
 "FQ" = (
 /obj/machinery/disposal/deliveryChute{
@@ -1528,17 +1314,50 @@
 	},
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
+"Gm" = (
+/mob/living/simple_animal/pet/cat/space,
+/obj/structure/table/wood,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
+"Go" = (
+/mob/living/simple_animal/pet/dog/corgi,
+/obj/structure/displaycase/labcage,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
+"GE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/turf/open/floor/plating/airless,
+/area/awaymission/challenge/main)
+"GU" = (
+/obj/machinery/door/airlock/survival_pod/glass,
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/space)
 "Hg" = (
 /obj/structure/trap/stun,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
+"Ho" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/mob/living/simple_animal/hostile/carp/megacarp,
+/turf/open/space,
+/area/space)
+"Hu" = (
+/turf/closed/wall/mineral/bananium,
+/area/space)
 "HA" = (
 /obj/item/clothing/gloves/combat,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
 "HW" = (
-/mob/living/simple_animal/hostile/retaliate/clown/mutant,
-/turf/open/floor/mineral/bananium/airless,
+/obj/item/stack/tile/plasteel/cyborg,
+/turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/main)
 "Is" = (
 /obj/structure/disposalpipe/segment{
@@ -1548,7 +1367,7 @@
 /area/space)
 "Ix" = (
 /obj/machinery/light,
-/turf/open/floor/plating/dirt,
+/turf/open/floor/plasteel/cult,
 /area/awaymission/challenge/main)
 "IL" = (
 /obj/item/clothing/shoes/combat,
@@ -1561,6 +1380,29 @@
 	},
 /turf/open/floor/carpet/purple,
 /area/awaymission/challenge/main)
+"JC" = (
+/obj/item/clothing/head/wizard/red,
+/turf/open/floor/plasteel/airless,
+/area/awaymission/challenge/main)
+"JV" = (
+/obj/structure/table/wood/fancy,
+/obj/item/trash/plate,
+/obj/item/reagent_containers/food/snacks/cakeslice/birthday,
+/turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge/main)
+"JW" = (
+/obj/item/stack/tile/mineral/plastitanium,
+/obj/item/stack/tile/mineral/plastitanium,
+/turf/open/floor/plasteel/airless,
+/area/awaymission/challenge/main)
+"Kd" = (
+/obj/item/pet_carrier,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
+"Kk" = (
+/obj/item/stack/sheet/animalhide/goliath_hide,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge/main)
 "KL" = (
 /obj/item/storage/firstaid/advanced,
 /turf/open/floor/plasteel/sepia,
@@ -1568,6 +1410,10 @@
 "KM" = (
 /obj/machinery/door/airlock/bananium,
 /turf/open/floor/mineral/bananium/airless,
+/area/awaymission/challenge/main)
+"KU" = (
+/obj/structure/table/wood/bar,
+/turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
 "La" = (
 /obj/structure/disposalpipe/segment{
@@ -1580,6 +1426,10 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge/main)
+"LW" = (
+/obj/machinery/light,
+/turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/challenge/main)
 "Mt" = (
 /obj/structure/table/wood/fancy,
@@ -1603,16 +1453,35 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/displaycase/labcage,
 /turf/open/floor/carpet/purple,
 /area/awaymission/challenge/main)
 "Nh" = (
 /obj/item/twohanded/fireaxe/boneaxe,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
+"Nm" = (
+/mob/living/simple_animal/hostile/retaliate/clown/fleshclown,
+/turf/open/floor/mineral/bananium/airless,
+/area/awaymission/challenge/main)
 "NG" = (
 /mob/living/simple_animal/hostile/bear/snow,
-/turf/open/floor/plating/dirt,
+/turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/challenge/main)
+"NS" = (
+/obj/item/stack/sheet/runed_metal,
+/turf/open/floor/plasteel/cult,
+/area/awaymission/challenge/main)
+"Oc" = (
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/structure/closet,
+/mob/living/simple_animal/hostile/retaliate/clown,
+/turf/open/floor/mineral/bananium,
+/area/space)
 "Oj" = (
 /obj/structure/statue/silver/sec,
 /turf/open/floor/plating/dirt,
@@ -1631,17 +1500,56 @@
 /obj/item/trash/plate,
 /turf/open/floor/plasteel/sepia,
 /area/awaymission/challenge/main)
+"OC" = (
+/obj/structure/closet/syndicate,
+/turf/open/floor/mineral/plastitanium,
+/area/space)
+"OL" = (
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge/main)
 "OR" = (
-/obj/item/storage/firstaid,
+/mob/living/simple_animal/hostile/retaliate/clown/mutant/blob,
 /turf/open/floor/mineral/bananium/airless,
+/area/awaymission/challenge/main)
+"OS" = (
+/mob/living/simple_animal/pet/dog/corgi,
+/mob/living/simple_animal/parrot,
+/obj/structure/table/wood,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
+"OY" = (
+/obj/item/reagent_containers/food/drinks/bottle/vodka,
+/obj/structure/table/wood/bar,
+/turf/open/floor/plasteel/cult,
+/area/awaymission/challenge/main)
+"OZ" = (
+/obj/structure/displaycase/labcage,
+/turf/open/floor/carpet/purple,
 /area/awaymission/challenge/main)
 "Pb" = (
 /obj/item/gun/energy/laser/retro,
 /obj/machinery/gateway,
 /turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/start)
-"Ps" = (
-/mob/living/simple_animal/hostile/retaliate/clown/clownhulk/chlown,
+"Pq" = (
+/obj/machinery/computer/shuttle/syndicate{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/space)
+"Pu" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/space)
+"PR" = (
+/obj/structure/trap/fire,
+/turf/open/floor/plasteel/cult,
+/area/awaymission/challenge/main)
+"Qk" = (
+/obj/item/reagent_containers/food/drinks/bottle/vodka/badminka,
 /turf/open/floor/mineral/bananium/airless,
 /area/awaymission/challenge/main)
 "Qy" = (
@@ -1659,6 +1567,15 @@
 /obj/machinery/door/airlock/alarmlock,
 /turf/open/floor/carpet/purple,
 /area/awaymission/challenge/main)
+"RY" = (
+/obj/structure/closet/syndicate,
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/space)
+"Sb" = (
+/obj/machinery/computer/libraryconsole/bookmanagement,
+/obj/structure/table/wood,
+/turf/open/floor/mineral/bananium/airless,
+/area/awaymission/challenge/main)
 "Sg" = (
 /obj/structure/trap/fire,
 /turf/open/floor/plating/dirt,
@@ -1672,9 +1589,13 @@
 	},
 /turf/open/floor/mineral/bananium/airless,
 /area/awaymission/challenge/main)
+"SF" = (
+/obj/structure/trap/fire,
+/turf/open/floor/mineral/plastitanium/red,
+/area/awaymission/challenge/main)
 "Ty" = (
-/mob/living/simple_animal/hostile/retaliate/clown,
-/turf/open/floor/mineral/bananium/airless,
+/obj/structure/AIcore/deactivated,
+/turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/main)
 "TQ" = (
 /obj/item/a_gift/anything,
@@ -1695,6 +1616,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/door/window/northleft,
 /turf/open/floor/carpet/purple,
 /area/awaymission/challenge/main)
 "UB" = (
@@ -1707,15 +1629,31 @@
 /obj/item/claymore,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
+"UN" = (
+/obj/machinery/door/airlock/bananium,
+/turf/open/floor/mineral/bananium,
+/area/space)
+"UO" = (
+/obj/structure/trap/stun,
+/turf/open/floor/plasteel/cult,
+/area/awaymission/challenge/main)
 "Va" = (
 /obj/item/a_gift/anything,
 /turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
+"Vr" = (
+/obj/item/broken_bottle,
+/turf/open/floor/mineral/bananium/airless,
 /area/awaymission/challenge/main)
 "Vs" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/plating/dirt,
+/area/awaymission/challenge/main)
+"Wh" = (
+/mob/living/simple_animal/bot/secbot/beepsky,
+/turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/main)
 "WG" = (
 /obj/machinery/disposal/deliveryChute,
@@ -1730,6 +1668,18 @@
 	icon_state = "iron0"
 	},
 /area/awaymission/challenge/main)
+"WP" = (
+/obj/item/pet_carrier,
+/obj/structure/displaycase/labcage,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
+"WY" = (
+/obj/item/kitchen/knife/ritual,
+/turf/open/floor/mineral/plastitanium/red,
+/area/awaymission/challenge/main)
+"Xl" = (
+/turf/open/floor/mineral/plastitanium/red,
+/area/awaymission/challenge/main)
 "XF" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -1737,6 +1687,19 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/chasm,
 /area/awaymission/challenge/main)
+"XL" = (
+/obj/structure/destructible/cult/pylon,
+/turf/open/floor/plasteel/cult,
+/area/awaymission/challenge/main)
+"XQ" = (
+/mob/living/simple_animal/pet/cat/Runtime,
+/obj/structure/displaycase/labcage,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
+"Ya" = (
+/obj/machinery/power/port_gen/pacman,
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/space)
 "Yd" = (
 /obj/item/clothing/suit/armor/bone,
 /obj/machinery/light,
@@ -1746,22 +1709,35 @@
 /obj/item/greentext,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
-"Yq" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
-/mob/living/simple_animal/hostile/carp/megacarp,
-/turf/open/space,
-/area/space)
+"Yp" = (
+/mob/living/simple_animal/pet/cat,
+/turf/open/floor/carpet/purple,
+/area/awaymission/challenge/main)
 "Yz" = (
 /obj/structure/statue/silver/md,
 /turf/open/floor/plating/dirt,
+/area/awaymission/challenge/main)
+"YO" = (
+/obj/item/reagent_containers/food/drinks/bottle/absinthe/premium,
+/turf/open/floor/mineral/bananium/airless,
+/area/awaymission/challenge/main)
+"YV" = (
+/obj/item/reagent_containers/food/drinks/bottle/absinthe,
+/turf/open/floor/mineral/bananium/airless,
+/area/awaymission/challenge/main)
+"Zg" = (
+/obj/item/reagent_containers/food/drinks/bottle/vodka/badminka,
+/obj/structure/table/wood/bar,
+/turf/open/floor/plasteel/cult,
 /area/awaymission/challenge/main)
 "Zn" = (
 /obj/structure/statue/diamond/captain,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
->>>>>>> Stashed changes
+"ZR" = (
+/obj/item/stack/sheet/sinew,
+/turf/open/floor/plating/dirt,
+/area/awaymission/challenge/main)
 
 (1,1,1) = {"
 aa
@@ -20685,10 +20661,10 @@ aa
 aa
 aa
 wI
-wI
-lv
-wI
-wI
+zZ
+gJ
+zZ
+zZ
 wI
 aa
 aa
@@ -21199,9 +21175,9 @@ aa
 aa
 aa
 wI
-os
-Ps
-os
+Sb
+gM
+YO
 os
 wI
 aa
@@ -21457,7 +21433,7 @@ aa
 aa
 wI
 os
-os
+YV
 os
 os
 wI
@@ -21714,8 +21690,8 @@ aa
 aa
 wI
 os
-os
-os
+Vr
+fL
 os
 wI
 aa
@@ -21970,7 +21946,7 @@ aa
 aa
 aa
 wI
-os
+Qk
 os
 os
 os
@@ -22484,7 +22460,7 @@ aa
 aa
 aa
 wI
-os
+fL
 os
 os
 os
@@ -22493,7 +22469,7 @@ aa
 aa
 aa
 aa
-Is
+wl
 aa
 aa
 aa
@@ -22750,11 +22726,11 @@ aa
 aa
 aa
 aa
-Is
-aa
-aa
-aa
-aa
+jK
+xf
+xf
+xf
+jN
 aa
 aa
 aa
@@ -22998,20 +22974,20 @@ aa
 aa
 aa
 wI
+nD
 os
 os
-os
-os
+fL
 wI
 aa
 aa
 aa
 aa
-Is
-aa
-aa
-aa
-aa
+jK
+hQ
+Pq
+qZ
+jN
 aa
 aa
 aa
@@ -23250,10 +23226,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+Hu
+Hu
+Hu
+Hu
 wI
 os
 os
@@ -23264,11 +23240,11 @@ aa
 aa
 aa
 aa
-Is
-aa
-aa
-aa
-aa
+jK
+ro
+tV
+ro
+jN
 aa
 aa
 aa
@@ -23507,25 +23483,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+Hu
+ka
+tz
+tz
+fK
+os
+os
+os
+os
 wI
-Ty
-HW
-HW
-Ty
-wI
 aa
 aa
 aa
 aa
-Is
-aa
-aa
-aa
-aa
+jK
+qe
+kM
+jN
+jN
 aa
 aa
 aa
@@ -23764,12 +23740,12 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+Hu
+eS
+tz
+tz
 wI
-os
+Nm
 os
 OR
 os
@@ -23777,13 +23753,13 @@ wI
 aa
 aa
 aa
-aa
-Is
-aa
-aa
-aa
-aa
-aa
+Es
+jK
+OC
+ro
+OC
+jN
+Es
 aa
 aa
 aa
@@ -24021,10 +23997,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+Hu
+Oc
+tz
+tz
 wI
 mz
 mz
@@ -24034,13 +24010,13 @@ wI
 aa
 aa
 aa
-aa
-Is
-aa
-aa
-aa
-aa
-aa
+jN
+jK
+RY
+zo
+RY
+jN
+jN
 aa
 aa
 aa
@@ -24278,26 +24254,26 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+Hu
+tz
+tz
+tz
 wI
-mz
-mz
-mz
-mz
 wI
-aa
-aa
-aa
-aa
-Is
-aa
-aa
-aa
-aa
-aa
+wI
+wI
+wI
+wI
+Hu
+Hu
+Hu
+jN
+Pu
+ez
+ez
+ez
+ez
+jN
 aa
 aa
 aa
@@ -24535,26 +24511,26 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-wI
-li
+Hu
+tz
+tz
+tz
+fK
 mz
-li
 mz
-wI
-aa
-aa
-aa
-aa
-Is
-aa
-aa
-aa
-aa
-aa
+jo
+mz
+fK
+tz
+tz
+UN
+GU
+Pu
+ez
+ez
+ez
+ez
+AI
 aa
 aa
 aa
@@ -24792,26 +24768,26 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+Hu
+Hu
+Hu
+Hu
 wI
 li
 gf
-li
 mz
+li
 wI
-aa
-aa
-aa
-aa
-Is
-aa
-aa
-aa
-aa
-aa
+Hu
+Hu
+Hu
+jN
+Pu
+ez
+zo
+ez
+ez
+jN
 aa
 aa
 aa
@@ -25054,21 +25030,21 @@ aa
 aa
 aa
 wI
-li
-gf
-li
+sF
+nc
+mz
 mz
 wI
 aa
 aa
 aa
-aa
-Is
-aa
-aa
-aa
-aa
-aa
+jN
+jK
+Ya
+fm
+Ya
+jN
+jN
 aa
 aa
 aa
@@ -25319,13 +25295,13 @@ wI
 aa
 aa
 aa
-aa
-Is
-aa
-aa
-aa
-aa
-aa
+Es
+jK
+jN
+jN
+jN
+jN
+Es
 aa
 aa
 aa
@@ -25569,19 +25545,19 @@ aa
 aa
 aa
 aa
-Is
+FG
+aa
+aa
+FG
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-Is
-aa
-aa
-aa
-aa
+Fx
+tn
+jN
+tn
+tn
 aa
 aa
 aa
@@ -25828,7 +25804,7 @@ aa
 aa
 Is
 aa
-aa
+cl
 aa
 aa
 aa
@@ -26672,62 +26648,6 @@ aa
 aa
 aa
 aa
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
 aa
 aa
 aa
@@ -26813,8 +26733,6 @@ aa
 aa
 aa
 aa
-"}
-(98,1,1) = {"
 aa
 aa
 aa
@@ -26927,159 +26845,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-=======
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
->>>>>>> Stashed changes
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-"}
-(99,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -27161,6 +26926,98 @@ aa
 aa
 "}
 (99,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -27336,62 +27193,6 @@ aa
 aa
 aa
 aa
-bP
-bP
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-bP
-bP
-bP
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
 aa
 aa
 aa
@@ -27475,15 +27276,9 @@ aa
 aa
 aa
 aa
-"}
-(100,1,1) = {"
 aa
 aa
 aa
-<<<<<<< Updated upstream
-aa
-aa
-=======
 aa
 aa
 aa
@@ -27560,7 +27355,6 @@ aF
 jr
 aF
 bP
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -27644,177 +27438,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-aa
-aa
-aa
-aa
-aa
-=======
-"}
-(101,1,1) = {"
->>>>>>> Stashed changes
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-bP
-bP
-bP
-bP
-bP
-aA
-aF
-aF
-aF
-aF
-aX
-aF
-aW
-aF
-aF
-aF
-aF
-aF
-aF
-aW
-aF
-ct
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-bP
-bP
-bP
-aA
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-bP
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 "}
 (101,1,1) = {"
 aa
@@ -27828,8 +27451,108 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-=======
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 bP
 bP
 bP
@@ -27901,7 +27624,6 @@ aa
 aa
 aa
 aa
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -28032,100 +27754,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-bP
-bP
-bP
-bP
-bP
-aA
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-bS
-aT
-aT
-aF
-bP
-bP
-bP
-aA
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-bP
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-=======
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -28243,8 +27871,6 @@ dr
 bP
 aa
 aa
-"}
-(102,1,1) = {"
 aa
 aa
 aa
@@ -28273,25 +27899,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-=======
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -28366,65 +27973,6 @@ aa
 aa
 aa
 aa
-bP
-bP
-aA
-aA
-aA
-aA
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-bs
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aT
-aF
-aF
-aF
-bP
-aA
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-bP
 aa
 aa
 aa
@@ -28508,8 +28056,6 @@ aa
 aa
 aa
 aa
-"}
-(103,1,1) = {"
 aa
 aa
 aa
@@ -28529,13 +28075,13 @@ aP
 aO
 aH
 aH
-aH
+Dq
 bO
 aJ
-aH
-aH
-aH
-aH
+me
+og
+me
+Dq
 bh
 bR
 aH
@@ -28663,120 +28209,8 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-aA
-aF
-aP
-aO
-aH
-aH
-aH
-aH
-aJ
-aH
-aH
-aH
-aH
-bh
-bR
-aH
-aH
-aH
-aH
-aJ
-aH
-aH
-aH
-by
-aY
-ba
-aH
-aH
-aH
-aJ
-aH
-aH
-bI
-aF
-aF
-bP
-aA
-dr
-dr
-bW
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-bP
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-=======
 "}
 (104,1,1) = {"
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -28837,8 +28271,6 @@ aa
 aa
 aa
 aa
-"}
-(104,1,1) = {"
 aa
 aa
 aa
@@ -28884,8 +28316,6 @@ aa
 aa
 xu
 aa
-<<<<<<< Updated upstream
-=======
 bP
 bP
 bP
@@ -28902,11 +28332,11 @@ aP
 aO
 aH
 aH
+HW
 aH
+nW
 aH
-aH
-aH
-aH
+JW
 aH
 aH
 aR
@@ -28953,7 +28383,6 @@ dr
 cS
 dr
 bP
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -29014,73 +28443,6 @@ aa
 aa
 aa
 aa
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-aA
-aF
-aP
-aO
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aR
-aY
-ba
-bt
-aH
-aH
-aH
-aH
-aH
-aH
-aR
-bA
-ba
-aH
-aH
-aH
-aH
-bE
-aH
-bI
-aF
-aF
-bP
-aA
-dr
-dr
-cu
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-bP
 aa
 aa
 aa
@@ -29104,21 +28466,8 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-=======
 "}
 (105,1,1) = {"
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -29169,10 +28518,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-"}
-(105,1,1) = {"
-=======
 aa
 aa
 aa
@@ -29247,15 +28592,15 @@ aH
 bD
 aH
 aH
-aH
-aH
+nW
+me
 aH
 aH
 aR
 aZ
 ba
 aH
-aH
+JC
 aH
 aH
 aH
@@ -29380,7 +28725,6 @@ aa
 aa
 "}
 (106,1,1) = {"
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -29498,27 +28842,16 @@ an
 ax
 aA
 aF
-<<<<<<< Updated upstream
-aI
-aQ
-aH
-aH
-bD
-aH
-aH
-aH
-=======
 aP
 aP
->>>>>>> Stashed changes
 aH
 aH
 aH
-aR
+FK
 aY
-ba
+Da
 aH
-aH
+HW
 aH
 bh
 bm
@@ -29542,10 +28875,6 @@ aH
 bI
 ct
 aF
-<<<<<<< Updated upstream
-aF
-=======
->>>>>>> Stashed changes
 bP
 aA
 dr
@@ -29557,10 +28886,7 @@ dr
 dr
 dr
 dr
-<<<<<<< Updated upstream
-=======
 gi
->>>>>>> Stashed changes
 dr
 dr
 dr
@@ -29568,12 +28894,7 @@ dr
 dr
 dr
 dr
-<<<<<<< Updated upstream
-dr
-dr
-=======
 cS
->>>>>>> Stashed changes
 dr
 bP
 aa
@@ -29634,18 +28955,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-=======
 aA
 aA
 aA
@@ -29656,7 +28965,6 @@ aA
 aA
 aA
 aA
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -29673,13 +28981,7 @@ aa
 aa
 aa
 "}
-<<<<<<< Updated upstream
-(106,1,1) = {"
-aa
-aa
-=======
 (107,1,1) = {"
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -29783,11 +29085,8 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-=======
 aa
 aa
->>>>>>> Stashed changes
 bP
 bP
 ab
@@ -29799,24 +29098,17 @@ af
 an
 av
 aA
-<<<<<<< Updated upstream
-aF
-aP
-aP
-aH
-=======
 aA
 aA
 aA
 aU
->>>>>>> Stashed changes
 aH
 aH
 aR
 aZ
 ba
 aH
-aH
+me
 bd
 bo
 bn
@@ -29838,14 +29130,9 @@ aZ
 ba
 aH
 bI
-ct
-aF
-<<<<<<< Updated upstream
-bP
-=======
 aF
 aF
->>>>>>> Stashed changes
+aF
 aA
 dr
 dr
@@ -29856,10 +29143,7 @@ dr
 dr
 dr
 dr
-<<<<<<< Updated upstream
-=======
 gi
->>>>>>> Stashed changes
 dr
 dr
 dr
@@ -29867,12 +29151,6 @@ dr
 dr
 dr
 dr
-<<<<<<< Updated upstream
-dr
-dr
-dr
-bP
-=======
 cS
 dr
 bP
@@ -29903,7 +29181,6 @@ bP
 aa
 aa
 aa
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -29935,56 +29212,16 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-rn
-rn
-rn
-rn
-rn
-rn
-rn
-rn
-rn
-rn
-=======
 aA
 RD
 RD
 RD
-RD
+fx
 Ux
-om
-om
-RD
+CT
+ub
+OZ
 aA
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -30104,12 +29341,9 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-=======
 aa
 xu
 aa
->>>>>>> Stashed changes
 bP
 bP
 ab
@@ -30127,14 +29361,6 @@ aR
 bx
 aH
 aH
-<<<<<<< Updated upstream
-bd
-bo
-bn
-bo
-bu
-=======
->>>>>>> Stashed changes
 aH
 aH
 bb
@@ -30155,15 +29381,6 @@ aR
 aY
 ba
 aH
-<<<<<<< Updated upstream
-bI
-aF
-aF
-aF
-aA
-dr
-dr
-=======
 aH
 aH
 bm
@@ -30174,7 +29391,6 @@ aT
 aT
 aT
 bV
->>>>>>> Stashed changes
 dr
 dr
 dr
@@ -30184,10 +29400,7 @@ dr
 dr
 dr
 dr
-<<<<<<< Updated upstream
-=======
 gi
->>>>>>> Stashed changes
 dr
 dr
 dr
@@ -30195,9 +29408,6 @@ dr
 dr
 dr
 dr
-<<<<<<< Updated upstream
-dr
-=======
 cS
 dr
 bP
@@ -30210,21 +29420,20 @@ bP
 bP
 bP
 bP
-tW
-tW
-tW
-tW
-tW
-tW
-tW
-tW
+Xl
+Xl
+Xl
+Xl
+eg
+Xl
+Xl
+Xl
 NG
 tW
 aA
 CR
-tW
+Xl
 jn
->>>>>>> Stashed changes
 bP
 aa
 aa
@@ -30234,22 +29443,6 @@ aa
 aa
 aa
 aa
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
 aa
 aa
 aa
@@ -30277,14 +29470,14 @@ aa
 aa
 aa
 aA
-RD
+Kd
+om
+Kd
+om
+uQ
 om
 RD
-om
-RD
-om
-RD
-om
+Go
 aA
 aa
 aa
@@ -30294,27 +29487,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-rn
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-rn
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-=======
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -30323,13 +29495,7 @@ aa
 aa
 aa
 "}
-<<<<<<< Updated upstream
-(108,1,1) = {"
-aa
-aa
-=======
 (109,1,1) = {"
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -30433,11 +29599,8 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-=======
 aa
 aa
->>>>>>> Stashed changes
 bP
 bP
 ab
@@ -30452,17 +29615,12 @@ aC
 aG
 aK
 aR
-bx
 aH
 aH
 aH
 aH
-<<<<<<< Updated upstream
-bb
-bL
-=======
+me
 aH
->>>>>>> Stashed changes
 aH
 bO
 be
@@ -30481,17 +29639,6 @@ bA
 ba
 aH
 aH
-<<<<<<< Updated upstream
-aH
-bm
-aH
-bF
-bJ
-aT
-aT
-aT
-bV
-=======
 aR
 aY
 ba
@@ -30501,77 +29648,23 @@ bG
 bG
 bQ
 bU
->>>>>>> Stashed changes
 dr
 dr
 dr
 dr
 dr
-<<<<<<< Updated upstream
-=======
 bX
 ca
 ca
 cw
 cO
 cR
->>>>>>> Stashed changes
 dr
 dr
 dr
 dr
 dr
 dr
-<<<<<<< Updated upstream
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-Vs
-tW
-Vs
-Vs
-Vs
-Vs
-Vs
-Vs
-NG
-Vs
-jq
-tW
-Vs
-jn
-bP
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-=======
 cS
 dr
 aA
@@ -30584,20 +29677,20 @@ TT
 gd
 aA
 aA
-tW
+Xl
+SF
+Xl
+Xl
+eg
+Xl
+Xl
+Xl
 Sg
 tW
-tW
-tW
-tW
-tW
-tW
-Sg
-tW
 aA
-tW
-Hg
-tW
+Xl
+UO
+OY
 aA
 aA
 aA
@@ -30630,19 +29723,18 @@ aA
 aA
 aA
 aA
->>>>>>> Stashed changes
 aa
 aa
 aa
 aA
-RD
+eu
 om
-RD
+Yp
 om
-om
-RD
-RD
-RD
+mo
+Kd
+fx
+OZ
 aA
 aa
 aa
@@ -30662,16 +29754,41 @@ aa
 "}
 (110,1,1) = {"
 aa
-rn
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-rn
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -30797,7 +29914,7 @@ aF
 ck
 ca
 cT
-mB
+zX
 cS
 dc
 cR
@@ -30812,25 +29929,25 @@ wi
 HA
 nZ
 IL
-tW
+Kk
 gF
 ot
 aA
 aA
-tW
-tW
-tW
-tW
-tW
-Sg
-tW
-tW
-tW
-tW
+Xl
+Xl
+Xl
+Xl
+Xl
+SF
+Xl
+Xl
+iF
+iF
 aA
 Hg
-Hg
-tW
+UO
+Zg
 aA
 lx
 lx
@@ -30867,14 +29984,14 @@ aa
 aa
 aa
 aA
-RD
-RD
-om
-RD
-om
-om
-om
-RD
+Gm
+uQ
+OS
+uQ
+mo
+ub
+CT
+OZ
 aA
 aa
 aa
@@ -30927,143 +30044,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-bP
-bP
-ab
-af
-al
-ah
-af
-at
-af
-an
-aC
-aG
-aK
-aR
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-be
-bO
-bn
-bq
-bv
-aH
-aH
-aH
-aH
-aH
-aH
-aR
-bA
-ba
-aH
-aH
-aR
-aY
-ba
-bG
-bG
-bG
-bG
-bQ
-bU
-dr
-dr
-dr
-dr
-dr
-bX
-ca
-ca
-cw
-cI
-cR
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-bP
-nS
-fp
-dO
-lR
-Ui
-TT
-gd
-bP
-bP
-Vs
-Sg
-Vs
-Vs
-Vs
-Vs
-Vs
-Vs
-Sg
-Vs
-jq
-Vs
-Hg
-Vs
-bP
-bP
-bP
-bP
-bP
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-aa
-aa
-aa
-rn
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-rn
-=======
 aa
 aa
 aa
@@ -31190,7 +30170,7 @@ dr
 bZ
 ca
 ca
-Dq
+rT
 cL
 cT
 nC
@@ -31206,29 +30186,29 @@ Vs
 tW
 tW
 tW
-tW
+Dd
 tW
 Yd
 aA
 aA
-tW
-tW
-tW
-tW
-Sg
-tW
-Sg
-tW
-tW
+Xl
+Xl
+Xl
+Xl
+SF
+Xl
+SF
+iF
+iF
 Ix
 aA
-tW
-tW
+iF
+iF
 Ix
 aA
-tW
-tW
-Ix
+Xl
+Xl
+LW
 aA
 Ce
 ju
@@ -31262,15 +30242,14 @@ aA
 aA
 aA
 RD
-RD
+fx
+CT
+fx
+om
 om
 RD
-om
-om
-RD
-om
+Go
 aA
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -31390,12 +30369,9 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-=======
 aa
 xu
 aa
->>>>>>> Stashed changes
 bP
 bP
 ab
@@ -31418,13 +30394,8 @@ aY
 ba
 aH
 aH
-<<<<<<< Updated upstream
-be
-bO
-=======
 bg
 bl
->>>>>>> Stashed changes
 bn
 br
 bw
@@ -31442,99 +30413,24 @@ aH
 aR
 aY
 ba
-<<<<<<< Updated upstream
-bG
-bG
-bG
-bG
-bG
-bU
-aF
-aF
-aF
-aF
-aF
-aF
-ck
-ca
-cT
-aF
-cS
-dr
-dr
-dr
-=======
 aH
 bI
 aN
 aF
 aF
 aA
->>>>>>> Stashed changes
 dr
 dr
 dr
 dr
 dr
-<<<<<<< Updated upstream
-aA
-wi
-HA
-nZ
-IL
-Vs
-gF
-ot
-jq
-jq
-Vs
-Vs
-Vs
-Vs
-Vs
-Sg
-Vs
-Vs
-Vs
-Vs
-jq
-Hg
-Hg
-Vs
-jq
-lx
-lx
-lx
-jq
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-jq
-=======
 dc
 ca
 ca
-oe
+rE
 cO
 cG
-Dr
+gj
 dc
 ds
 ds
@@ -31545,31 +30441,31 @@ lC
 Qy
 pk
 Qy
-pW
+OL
 tW
 AK
 yB
 yB
 Am
 Am
-tW
-tW
-tW
-Sg
-tW
+Xl
+Xl
+Xl
+SF
+Xl
 CR
-tW
-Sg
+iF
+PR
 tB
 zN
 Am
-tW
-Hg
+Xl
+UO
 iF
 Am
-tW
-tW
-tW
+Xl
+Xl
+Xl
 Am
 Co
 Mt
@@ -31585,30 +30481,18 @@ gm
 gm
 Ow
 gm
-gm
+JV
 gm
 Mv
 gm
 Co
 Co
 dy
->>>>>>> Stashed changes
 Va
 Va
+iy
 Va
 Va
-Va
-<<<<<<< Updated upstream
-jq
-aa
-aa
-aa
-rn
-RD
-RD
-RD
-RD
-=======
 RG
 RD
 RD
@@ -31617,15 +30501,11 @@ RD
 om
 RD
 om
->>>>>>> Stashed changes
 RD
+lN
+Yp
 RD
-RD
-RD
-<<<<<<< Updated upstream
-rn
-=======
-RD
+OZ
 aA
 aa
 aa
@@ -31653,26 +30533,6 @@ aa
 aa
 aa
 aa
->>>>>>> Stashed changes
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-<<<<<<< Updated upstream
-"}
-(111,1,1) = {"
-=======
 aa
 aa
 aa
@@ -31720,7 +30580,21 @@ aa
 aa
 aa
 aa
->>>>>>> Stashed changes
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -31771,7 +30645,7 @@ bk
 aP
 aH
 aH
-aH
+Ty
 aR
 aZ
 ba
@@ -31812,7 +30686,7 @@ aF
 xr
 cO
 ca
-ws
+GE
 cO
 jY
 dr
@@ -31825,48 +30699,48 @@ aA
 Vs
 tW
 tW
-tW
-tW
+Kk
+ZR
 tW
 Ap
 aA
 aA
-tW
-tW
-tW
-tW
-Sg
-tW
-Sg
-tW
-tW
+Xl
+Xl
+Xl
+WY
+PR
+iF
+PR
+iF
+iF
 Ix
 aA
-tW
-tW
-Ix
+Xl
+iF
+LW
 aA
-tW
-tW
-Ix
+Xl
+Xl
+LW
 aA
 KL
 eB
 Ow
+nf
+gm
+gm
+gm
+JV
+gm
+gm
 Ow
-gm
-gm
-gm
-gm
-gm
-gm
-Ow
-gm
+JV
 gm
 gm
 wz
 gm
-gm
+JV
 gm
 Co
 Co
@@ -31884,11 +30758,11 @@ RD
 om
 RD
 om
-om
-RD
+ub
+Kd
 om
 iO
-RD
+WP
 aA
 aa
 aa
@@ -31963,35 +30837,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-bP
-bP
-ab
-ah
-al
-ap
-aq
-at
-bf
-az
-aE
-aH
-aM
-aR
-bC
-aH
-aH
-aH
-bL
-aH
-aH
-aH
-be
-aC
-bn
-bp
-bv
-=======
 aa
 aa
 aa
@@ -32058,7 +30903,7 @@ aP
 aH
 aH
 aH
-aH
+Wh
 aH
 aH
 bc
@@ -32068,7 +30913,6 @@ aR
 aY
 ba
 aH
->>>>>>> Stashed changes
 aH
 aH
 aH
@@ -32076,25 +30920,11 @@ aH
 aH
 aH
 aR
-<<<<<<< Updated upstream
-aZ
-=======
 bA
->>>>>>> Stashed changes
 ba
 aH
 aH
 aH
-<<<<<<< Updated upstream
-bm
-aH
-bH
-bK
-aV
-aV
-aV
-bV
-=======
 aH
 aH
 aH
@@ -32103,25 +30933,16 @@ aF
 aF
 bP
 aA
->>>>>>> Stashed changes
 dr
 dr
 dr
 dr
 dr
-<<<<<<< Updated upstream
-bZ
-ca
-ca
-cC
-cL
-=======
 cO
 ca
 ca
 ca
 ca
->>>>>>> Stashed changes
 cT
 dr
 dr
@@ -32132,57 +30953,6 @@ dr
 dr
 dr
 aA
-<<<<<<< Updated upstream
-Vs
-Vs
-Vs
-Vs
-Vs
-Vs
-Yd
-jq
-jq
-Vs
-Vs
-Vs
-Vs
-Sg
-Vs
-Sg
-Vs
-Vs
-Vs
-jq
-Vs
-Vs
-Vs
-jq
-Vs
-Vs
-Vs
-jq
-Ce
-ju
-UB
-UB
-UB
-UB
-UB
-UB
-UB
-UB
-UB
-UB
-UB
-UB
-UB
-UB
-UB
-LH
-Co
-Co
-jq
-=======
 wi
 sW
 jP
@@ -32192,20 +30962,20 @@ nF
 Nh
 aA
 aA
-tW
-tW
-tW
-tW
-tW
-Sg
-tW
-tW
-tW
-tW
+Xl
+Xl
+Xl
+Xl
+NS
+PR
+iF
+NS
+iF
+iF
 aA
+UO
 Hg
-Hg
-tW
+gr
 aA
 lx
 lx
@@ -32232,43 +31002,25 @@ qd
 Co
 Co
 aA
->>>>>>> Stashed changes
 Va
 Va
 Va
 Va
 Va
-<<<<<<< Updated upstream
-jq
-rn
-rn
-rn
-rn
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-rn
-=======
 aA
 aA
 aA
 aA
 aA
+Go
 om
 om
-om
-RD
+fx
 RD
 om
 RD
-om
+Go
 aA
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -32389,21 +31141,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-bP
-bP
-ab
-ai
-ah
-al
-ar
-aS
-av
-ad
-aA
-aA
-aA
-=======
 aa
 aa
 bP
@@ -32416,7 +31153,6 @@ bP
 bP
 bP
 bP
->>>>>>> Stashed changes
 aA
 aF
 aP
@@ -32452,169 +31188,13 @@ aH
 bI
 aF
 aF
-<<<<<<< Updated upstream
-=======
 bP
->>>>>>> Stashed changes
 aA
 dr
 dr
 dr
 dr
 dr
-<<<<<<< Updated upstream
-aF
-aF
-aF
-aF
-cO
-cG
-cT
-dc
-ds
-ds
-ds
-ds
-ds
-lC
-Qy
-pk
-Dq
-Vs
-Vs
-AK
-yB
-yB
-Am
-Am
-Vs
-Vs
-Vs
-Sg
-Vs
-tW
-Vs
-Sg
-tB
-zN
-Am
-Vs
-Hg
-iF
-Am
-Vs
-Vs
-Vs
-Am
-Co
-Mt
-gm
-gm
-gm
-gm
-gm
-Ow
-gm
-gm
-gm
-gm
-Ow
-gm
-gm
-gm
-Mv
-gm
-Co
-Co
-dy
-Va
-Va
-Va
-Va
-Va
-RG
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-nE
-hL
-PB
-RD
-RD
-rn
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-"}
-(113,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-=======
 dr
 dr
 dr
@@ -32639,20 +31219,20 @@ TT
 Zn
 aA
 aA
-tW
+Xl
+SF
+Xl
+iF
+iF
+iF
+XL
+iF
 Sg
-tW
-tW
-tW
-tW
-tW
-tW
-Sg
-tW
+iF
 aA
-tW
-Hg
-tW
+Xl
+UO
+KU
 aA
 aA
 aA
@@ -32685,211 +31265,19 @@ IQ
 Va
 Va
 aA
->>>>>>> Stashed changes
 aa
 aa
 aa
 aA
+eC
 RD
-RD
-RD
+fx
 om
 om
-om
-RD
-RD
+CT
+Yp
+OZ
 aA
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-<<<<<<< Updated upstream
-aa
-aa
-=======
-"}
-(116,1,1) = {"
->>>>>>> Stashed changes
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-bP
-bP
-ab
-ah
-am
-ad
-as
-av
-ae
-av
-aA
-aF
-bk
-aP
-aH
-aH
-aH
-aR
-aZ
-ba
-aH
-aH
-aH
-bh
-bm
-aH
-aH
-aH
-aH
-aH
-aR
-aZ
-ba
-aR
-aY
-ba
-aH
-aH
-aR
-aZ
-ba
-aH
-bI
-ct
-aF
-bP
-aA
-dr
-dr
-dr
-dr
-dr
-aF
-aF
-aF
-aF
-aF
-cS
-cO
-jY
-dr
-dr
-dr
-dr
-dr
-dr
-aA
-Vs
-Vs
-Vs
-Vs
-Vs
-Vs
-Ap
-jq
-jq
-Vs
-Vs
-Vs
-Vs
-Sg
-Vs
-Sg
-Vs
-Vs
-Vs
-jq
-Vs
-Vs
-Vs
-jq
-Vs
-Vs
-Vs
-jq
-KL
-eB
-Ow
-Ow
-gm
-gm
-gm
-gm
-gm
-gm
-Ow
-gm
-gm
-gm
-wz
-gm
-gm
-gm
-Co
-Co
-dy
-Va
-Va
-Va
-Va
-Va
-RG
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-om
-me
-zc
-iO
-RD
-rn
 aa
 aa
 aa
@@ -32906,7 +31294,7 @@ aa
 aa
 aa
 "}
-(114,1,1) = {"
+(116,1,1) = {"
 aa
 aa
 aa
@@ -32973,7 +31361,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
 aa
 aa
 aa
@@ -33013,20 +31400,6 @@ aa
 aa
 aa
 aa
-bP
-bP
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-aA
-aF
-aI
-=======
 bP
 bP
 bP
@@ -33040,22 +31413,10 @@ bP
 aA
 aF
 aP
->>>>>>> Stashed changes
 aP
 aH
 aH
 aH
-<<<<<<< Updated upstream
-aH
-aH
-aH
-bc
-aH
-aH
-aR
-aY
-ba
-=======
 bO
 bM
 aH
@@ -33064,34 +31425,21 @@ aH
 aH
 bh
 bM
->>>>>>> Stashed changes
 aH
 aH
 aH
 aH
-<<<<<<< Updated upstream
-aH
-aH
-aH
-aR
-bA
-=======
 aM
 aH
 aH
 aH
 bz
 aZ
->>>>>>> Stashed changes
 ba
 aH
 aH
 aH
-<<<<<<< Updated upstream
-aH
-=======
 aM
->>>>>>> Stashed changes
 aH
 aH
 bI
@@ -33119,76 +31467,6 @@ dr
 dr
 dr
 aA
-<<<<<<< Updated upstream
-wi
-sW
-jP
-UL
-gB
-nF
-Nh
-jq
-jq
-Vs
-Vs
-Vs
-Vs
-Vs
-Sg
-Vs
-Vs
-Vs
-Vs
-jq
-Hg
-Hg
-Vs
-jq
-lx
-lx
-lx
-jq
-Dv
-CY
-Bs
-Bs
-Bs
-Bs
-Bs
-Bs
-Bs
-Bs
-Bs
-Bs
-Bs
-Bs
-Bs
-Bs
-Bs
-qd
-Co
-Co
-jq
-Va
-Va
-Va
-Va
-Va
-jq
-rn
-rn
-rn
-rn
-RD
-RD
-RD
-so
-Os
-ni
-RD
-RD
-rn
-=======
 aA
 aA
 aA
@@ -33198,16 +31476,16 @@ aA
 aA
 aA
 aA
-tW
-tW
-tW
-tW
-tW
-tW
-tW
-tW
+Xl
+Xl
+BW
+iF
+iF
+iF
+iF
+iF
 nj
-tW
+iF
 aA
 CR
 tW
@@ -33248,16 +31526,15 @@ aa
 aa
 aa
 aA
-RD
+OZ
 om
 om
 RD
+fx
 RD
-RD
-RD
-RD
+kK
+CS
 aA
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -33274,523 +31551,6 @@ aa
 aa
 aa
 "}
-<<<<<<< Updated upstream
-(115,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-aA
-aF
-aP
-aP
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aR
-aZ
-ba
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aR
-bA
-bB
-aH
-aH
-aH
-aH
-aH
-aH
-bI
-aF
-aF
-bP
-aA
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-aA
-Fb
-mb
-Yz
-Oj
-No
-sm
-Zn
-jq
-jq
-Vs
-Sg
-Vs
-Vs
-Vs
-Vs
-Vs
-Vs
-Sg
-Vs
-jq
-Vs
-Hg
-Vs
-jq
-jq
-jq
-jq
-jq
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-Co
-jq
-Va
-Va
-Va
-Va
-Va
-jq
-aa
-aa
-aa
-rn
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-rn
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-"}
-(116,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-aA
-aF
-aP
-aP
-aH
-aH
-aH
-aH
-bM
-aH
-aH
-aH
-aH
-bh
-bM
-aH
-aH
-aH
-aH
-aM
-aH
-aH
-aH
-bz
-aZ
-ba
-aH
-aH
-aH
-aM
-aH
-aH
-bI
-aF
-aF
-bP
-aA
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-dr
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-Vs
-tW
-Vs
-Vs
-Vs
-Vs
-Vs
-Vs
-nj
-Vs
-jq
-tW
-Vs
-qV
-bP
-aa
-aa
-aa
-bP
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-jq
-aa
-aa
-aa
-rn
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-rn
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-"}
-=======
->>>>>>> Stashed changes
 (117,1,1) = {"
 aa
 aa
@@ -33895,22 +31655,14 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-=======
 xu
->>>>>>> Stashed changes
 aa
 aa
 aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-aa
-aa
-=======
 Is
->>>>>>> Stashed changes
 aa
 aa
 bP
@@ -34000,10 +31752,7 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-=======
 Is
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -34033,30 +31782,16 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-aa
-rn
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-rn
-=======
 aA
+Go
+ub
 om
 om
-om
-om
+lN
 RD
-RD
 om
-RD
+OZ
 aA
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -34090,7 +31825,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
 aa
 aa
 aa
@@ -34116,224 +31850,6 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-bP
-bP
-bP
-bP
-bP
-aA
-aV
-aV
-aV
-aV
-bN
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aF
-bP
-bP
-bP
-aA
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-bP
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-=======
->>>>>>> Stashed changes
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-rn
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-rn
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-"}
-(119,1,1) = {"
 aa
 aa
 aa
@@ -34508,65 +32024,6 @@ aa
 aa
 aa
 aa
-bP
-bP
-bP
-bP
-bP
-aA
-aF
-aF
-aF
-aF
-aX
-aF
-aW
-aF
-aF
-aF
-aF
-aF
-aF
-aW
-aF
-ct
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-aF
-bP
-bP
-bP
-aA
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-ct
-aF
-bP
 aa
 aa
 aa
@@ -34583,14 +32040,14 @@ aa
 aa
 aa
 aA
-RD
-RD
-RD
-om
+OZ
+XQ
+OZ
+Go
 MX
-om
-RD
-RD
+Go
+OZ
+OZ
 aA
 aa
 aa
@@ -34638,33 +32095,6 @@ aa
 aa
 aa
 aa
-rn
-rn
-rn
-rn
-rn
-rn
-rn
-rn
-rn
-rn
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-"}
-(120,1,1) = {"
 aa
 aa
 aa
@@ -34692,14 +32122,21 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
 aa
 aa
 aa
 aa
 aa
-=======
->>>>>>> Stashed changes
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -34829,7 +32266,7 @@ aa
 aa
 aa
 aa
-Yq
+Ho
 aa
 aa
 aa
@@ -34845,62 +32282,6 @@ aa
 aa
 aa
 aa
-bP
-bP
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-bP
-bP
-bP
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
-aA
 aa
 aa
 aa
@@ -34983,21 +32364,6 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-"}
-(121,1,1) = {"
 aa
 aa
 aa
@@ -35152,15 +32518,12 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-=======
 aa
 aa
 aa
 aa
 aa
 Is
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -35171,72 +32534,6 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
 aa
 aa
 aa
@@ -35322,8 +32619,6 @@ aa
 aa
 aa
 aa
-"}
-(122,1,1) = {"
 aa
 aa
 aa
@@ -35499,62 +32794,6 @@ xu
 aa
 aa
 aa
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
-bP
 aa
 aa
 aa
@@ -35591,60 +32830,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-<<<<<<< Updated upstream
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-=======
-"}
-(122,1,1) = {"
->>>>>>> Stashed changes
 aa
 aa
 aa
 aa
 aa
 "}
-(123,1,1) = {"
+(122,1,1) = {"
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -35962,8 +33159,6 @@ aa
 aa
 aa
 aa
-"}
-(124,1,1) = {"
 aa
 aa
 aa
@@ -36233,8 +33428,6 @@ aa
 aa
 aa
 aa
-"}
-(125,1,1) = {"
 aa
 aa
 aa
@@ -36357,9 +33550,9 @@ aa
 aA
 tW
 tW
-Fi
+ue
 XF
-Fi
+ue
 tW
 tW
 tW
@@ -36462,14 +33655,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-aa
-aa
-aa
-aa
-aa
-=======
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -36507,8 +33692,6 @@ aa
 aa
 aa
 aa
-"}
-(126,1,1) = {"
 aa
 aa
 aa
@@ -36747,10 +33930,6 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-aa
-=======
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -36792,8 +33971,6 @@ aa
 aa
 aa
 aa
-"}
-(127,1,1) = {"
 aa
 aa
 aa
@@ -37070,8 +34247,6 @@ aa
 aa
 aa
 aa
-"}
-(128,1,1) = {"
 aa
 aa
 aa
@@ -37342,8 +34517,6 @@ aa
 aa
 aa
 aa
-"}
-(129,1,1) = {"
 aa
 aa
 aa
@@ -37613,8 +34786,6 @@ aa
 aa
 aa
 aa
-"}
-(130,1,1) = {"
 aa
 aa
 aa
@@ -37884,8 +35055,6 @@ aa
 aa
 aa
 aa
-"}
-(131,1,1) = {"
 aa
 aa
 aa
@@ -38155,8 +35324,6 @@ aa
 aa
 aa
 aa
-"}
-(132,1,1) = {"
 aa
 aa
 aa
@@ -38427,8 +35594,6 @@ aa
 aa
 aa
 aa
-"}
-(133,1,1) = {"
 aa
 aa
 aa
@@ -38710,8 +35875,6 @@ aa
 aa
 aa
 aa
-"}
-(134,1,1) = {"
 aa
 aa
 aa
@@ -38981,8 +36144,6 @@ aa
 aa
 aa
 aa
-"}
-(135,1,1) = {"
 aa
 aa
 aa
@@ -39252,8 +36413,6 @@ aa
 aa
 aa
 aa
-"}
-(136,1,1) = {"
 aa
 aa
 aa
@@ -39416,20 +36575,6 @@ aa
 aa
 aa
 aa
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
 aa
 aa
 aa
@@ -39528,8 +36673,6 @@ aa
 aa
 aa
 aa
-"}
-(137,1,1) = {"
 aa
 aa
 aa
@@ -39692,20 +36835,6 @@ aa
 aa
 aa
 aa
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
 aa
 aa
 aa
@@ -39755,7 +36884,7 @@ aa
 aa
 aa
 aa
-uy
+aa
 aa
 aa
 aa
@@ -39807,8 +36936,6 @@ aa
 aa
 aa
 aa
-"}
-(138,1,1) = {"
 aa
 aa
 aa
@@ -39971,20 +37098,6 @@ aa
 aa
 aa
 aa
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
 aa
 aa
 aa
@@ -40082,14 +37195,9 @@ aa
 aa
 aa
 aa
-<<<<<<< Updated upstream
-"}
-(139,1,1) = {"
-=======
 aa
 aa
 aa
->>>>>>> Stashed changes
 aa
 aa
 aa
@@ -40252,20 +37360,6 @@ aa
 aa
 aa
 aa
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
 aa
 aa
 aa
@@ -40363,8 +37457,6 @@ aa
 aa
 aa
 aa
-"}
-(140,1,1) = {"
 aa
 aa
 aa
@@ -40527,20 +37619,6 @@ aa
 aa
 aa
 aa
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
 aa
 aa
 cl
@@ -40639,8 +37717,6 @@ aa
 aa
 aa
 aa
-"}
-(141,1,1) = {"
 aa
 "}
 (141,1,1) = {"
@@ -40801,20 +37877,6 @@ aa
 aa
 aa
 aa
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
 aa
 cl
 cl
@@ -40912,8 +37974,6 @@ aa
 aa
 aa
 aa
-"}
-(142,1,1) = {"
 aa
 "}
 (142,1,1) = {"
@@ -41074,20 +38134,6 @@ aa
 aa
 aa
 aa
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
 aa
 cl
 cl
