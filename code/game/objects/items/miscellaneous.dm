@@ -147,8 +147,8 @@
 /obj/item/choice_beacon/exploring
 	name = "Exploring equipment delivery beacon"
 	desc = "A device to order exploring equipment"
-	icon = 'icons/obj/mining.dmi'
-	icon_state = "exploring_voucher"
+	icon = 'icons/obj/exploring_voucher.dmi'
+	icon_state = "no name"
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/choice_beacon/exploring/generate_display_names()
