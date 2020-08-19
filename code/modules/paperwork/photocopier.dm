@@ -12,6 +12,7 @@
 	desc = "Used to copy important documents and anatomy studies."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "photocopier"
+	var/insert_anim = "photocopier1"
 	density = TRUE
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 30
@@ -38,7 +39,6 @@
 			dat += "<a href='byond://?src=[REF(src)];copy=1'>Copy</a><BR>"
 			dat += "Printing: [copies] copies."
 			dat += "<a href='byond://?src=[REF(src)];min=1'>-</a> "
-			dat += "<a href='byond://?src=[REF(src)];add=1'>+</a><BR><BR>"
 			if(photocopy)
 				dat += "Printing in <a href='byond://?src=[REF(src)];colortoggle=1'>[greytoggle]</a><BR><BR>"
 	else if(toner)
@@ -51,55 +51,67 @@
 	user << browse(dat.Join(""), "window=copier")
 	onclose(user, "copier")
 
+/obj/machinery/photocopier/proc/copy(var/obj/item/paper/copy)
+	var/obj/item/paper/c
+	for(var/i = 0, i < copies, i++)
+		if(toner > 0 && !busy && copy)
+			var/copy_as_paper = 1
+			if(istype(copy, /obj/item/paper/contract/employment))
+				var/obj/item/paper/contract/employment/E = copy
+				var/obj/item/paper/contract/employment/C = new /obj/item/paper/contract/employment (loc, E.target.current)
+				if(C)
+					copy_as_paper = 0
+			if(copy_as_paper)
+				c = new /obj/item/paper (loc)
+				if(length(copy.info) > 0)	//Only print and add content if the copied doc has words on it
+					if(toner > 10)	//lots of toner, make it dark
+						c.info = "<font color = #101010>"
+					else			//no toner? shitty copies for you!
+						c.info = "<font color = #808080>"
+					var/copied = copy.info
+					copied = replacetext(copied, "<font face=\"[PEN_FONT]\" color=", "<font face=\"[PEN_FONT]\" nocolor=")	//state of the art techniques in action
+					copied = replacetext(copied, "<font face=\"[CRAYON_FONT]\" color=", "<font face=\"[CRAYON_FONT]\" nocolor=")	//This basically just breaks the existing color tag, which we need to do because the innermost tag takes priority.
+					c.info += copied
+					c.info += "</font>"
+					c.name = copy.name
+					c.fields = copy.fields
+					c.update_icon()
+					c.updateinfolinks()
+					c.stamps = copy.stamps
+					if(copy.stamped)
+						c.stamped = copy.stamped.Copy()
+					c.copy_overlays(copy, TRUE)
+					toner--
+			busy = TRUE
+			addtimer(CALLBACK(src, .proc/disable_busy,), 15)
+		else
+			break
+	updateUsrDialog()
+	return c
+
+/obj/machinery/photocopier/proc/disable_busy()
+	busy = FALSE
+
+/obj/machinery/photocopier/proc/photocopy(var/obj/item/photo/photocopy)
+	for(var/i = 0, i < copies, i++)
+		if(toner >= 5 && !busy && photocopy)  //Was set to = 0, but if there was say 3 toner left and this ran, you would get -2 which would be weird for ink
+			new /obj/item/photo (loc, photocopy.picture.Copy(greytoggle == "Greyscale"? TRUE : FALSE))
+			busy = TRUE
+			sleep(15)
+			busy = FALSE
+		else
+			break
+
 /obj/machinery/photocopier/Topic(href, href_list)
+
 	if(..())
 		return
+
 	if(href_list["copy"])
 		if(copy)
-			for(var/i = 0, i < copies, i++)
-				if(toner > 0 && !busy && copy)
-					var/copy_as_paper = 1
-					if(istype(copy, /obj/item/paper/contract/employment))
-						var/obj/item/paper/contract/employment/E = copy
-						var/obj/item/paper/contract/employment/C = new /obj/item/paper/contract/employment (loc, E.target.current)
-						if(C)
-							copy_as_paper = 0
-					if(copy_as_paper)
-						var/obj/item/paper/c = new /obj/item/paper (loc)
-						if(length(copy.info) > 0)	//Only print and add content if the copied doc has words on it
-							if(toner > 10)	//lots of toner, make it dark
-								c.info = "<font color = #101010>"
-							else			//no toner? shitty copies for you!
-								c.info = "<font color = #808080>"
-							var/copied = copy.info
-							copied = replacetext(copied, "<font face=\"[PEN_FONT]\" color=", "<font face=\"[PEN_FONT]\" nocolor=")	//state of the art techniques in action
-							copied = replacetext(copied, "<font face=\"[CRAYON_FONT]\" color=", "<font face=\"[CRAYON_FONT]\" nocolor=")	//This basically just breaks the existing color tag, which we need to do because the innermost tag takes priority.
-							c.info += copied
-							c.info += "</font>"
-							c.name = copy.name
-							c.fields = copy.fields
-							c.update_icon()
-							c.updateinfolinks()
-							c.stamps = copy.stamps
-							if(copy.stamped)
-								c.stamped = copy.stamped.Copy()
-							c.copy_overlays(copy, TRUE)
-							toner--
-					busy = TRUE
-					sleep(15)
-					busy = FALSE
-				else
-					break
-			updateUsrDialog()
+			copy(copy)
 		else if(photocopy)
-			for(var/i = 0, i < copies, i++)
-				if(toner >= 5 && !busy && photocopy)  //Was set to = 0, but if there was say 3 toner left and this ran, you would get -2 which would be weird for ink
-					new /obj/item/photo (loc, photocopy.picture.Copy(greytoggle == "Greyscale"? TRUE : FALSE))
-					busy = TRUE
-					sleep(15)
-					busy = FALSE
-				else
-					break
+			photocopy(photocopy)
 		else if(doccopy)
 			for(var/i = 0, i < copies, i++)
 				if(toner > 5 && !busy && doccopy)
@@ -188,7 +200,7 @@
 /obj/machinery/photocopier/proc/do_insertion(obj/item/O, mob/user)
 	O.forceMove(src)
 	to_chat(user, "<span class ='notice'>You insert [O] into [src].</span>")
-	flick("photocopier1", src)
+	flick(insert_anim, src)
 	updateUsrDialog()
 
 /obj/machinery/photocopier/proc/remove_photocopy(obj/item/O, mob/user)
@@ -245,6 +257,18 @@
 			updateUsrDialog()
 		else
 			to_chat(user, "<span class='warning'>This cartridge is not yet ready for replacement! Use up the rest of the toner.</span>")
+
+	else if(istype(O, /obj/item/wrench))
+		if(isinspace())
+			to_chat(user, "<span class='warning'>There's nothing to fasten [src] to!</span>")
+			return
+		playsound(loc, O.usesound, 50, 1)
+		to_chat(user, "<span class='notice'>You start [anchored ? "unwrenching" : "wrenching"] [src]...</span>")
+		if(do_after(user, 20*O.toolspeed, target = src))
+			if(QDELETED(src))
+				return
+			to_chat(user, "<span class='notice'>You [anchored ? "unwrench" : "wrench"] [src].</span>")
+			anchored = !anchored
 
 	else if(istype(O, /obj/item/areaeditor/blueprints))
 		to_chat(user, "<span class='warning'>The Blueprint is too large to put into the copier. You need to find something else to record the document</span>")

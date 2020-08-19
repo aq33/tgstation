@@ -2373,6 +2373,7 @@
 	},
 /obj/structure/chair,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "agO" = (
@@ -5412,6 +5413,10 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "Head of Security"
+	},
+/obj/structure/table/wood,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hos)
 "anU" = (
@@ -6817,20 +6822,19 @@
 /obj/machinery/status_display/evac{
 	pixel_y = 32
 	},
-/obj/item/folder/yellow{
-	pixel_y = 4
-	},
 /obj/structure/table/glass,
 /obj/machinery/light{
 	dir = 1;
 	light_color = "#e8eaff"
 	},
-/obj/item/pen,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
+	},
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "Bridge"
 	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
@@ -11820,15 +11824,12 @@
 /area/bridge)
 "aCP" = (
 /obj/structure/table/wood,
-/obj/item/pen{
-	layer = 4
-	},
 /obj/machinery/keycard_auth{
 	pixel_x = -26;
 	pixel_y = 6
 	},
-/obj/item/paper_bin{
-	layer = 2.9
+/obj/machinery/photocopier/faxmachine{
+	department = "Head of Personnel"
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
@@ -12559,11 +12560,14 @@
 "aEy" = (
 /obj/structure/table/wood,
 /obj/item/hand_tele,
+/obj/item/phone/real,
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/captain)
 "aEz" = (
 /obj/structure/table/wood,
-/obj/item/storage/photo_album,
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "Captain"
+	},
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/captain)
 "aEA" = (
@@ -12781,6 +12785,9 @@
 	},
 /obj/item/paper_bin{
 	layer = 2.9
+	},
+/obj/item/pen{
+	layer = 4
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/hop)
@@ -23752,16 +23759,15 @@
 	departmentType = 2;
 	pixel_x = -30
 	},
-/obj/item/paper_bin{
-	layer = 2.9
-	},
-/obj/item/pen,
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Quartermaster"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
@@ -23790,6 +23796,10 @@
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
+	},
+/obj/item/pen,
+/obj/item/paper_bin{
+	layer = 2.9
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
@@ -33636,6 +33646,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/stamp/cmo,
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/cmo)
 "bCu" = (
@@ -34773,8 +34784,6 @@
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/cmo)
 "bEG" = (
-/obj/item/folder/blue,
-/obj/item/stamp/cmo,
 /obj/structure/table,
 /obj/machinery/firealarm{
 	dir = 1;
@@ -34785,6 +34794,9 @@
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Chief Medical Officer"
 	},
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/cmo)
@@ -34928,13 +34940,7 @@
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hor)
 "bET" = (
-/obj/item/paper_bin{
-	layer = 2.9;
-	pixel_x = -2;
-	pixel_y = 5
-	},
 /obj/item/folder/white,
-/obj/item/pen,
 /obj/item/stamp/rd,
 /obj/machinery/status_display/evac{
 	pixel_y = -30
@@ -34948,6 +34954,9 @@
 /obj/effect/turf_decal/tile/purple,
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Research Director"
 	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hor)
@@ -34970,6 +34979,12 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
+/obj/item/paper_bin{
+	layer = 2.9;
+	pixel_x = -2;
+	pixel_y = 5
+	},
+/obj/item/pen,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hor)
 "bEV" = (
@@ -41919,7 +41934,6 @@
 	req_access_txt = "24"
 	},
 /obj/structure/table/reinforced,
-/obj/item/folder/yellow,
 /obj/item/paper/monitorkey,
 /obj/item/pen,
 /obj/effect/turf_decal/tile/yellow{
@@ -41929,6 +41943,9 @@
 	dir = 8
 	},
 /mob/living/simple_animal/parrot/Poly,
+/obj/machinery/photocopier/faxmachine{
+	department = "Chief Engineer"
+	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/chief)
 "bVE" = (
@@ -50048,8 +50065,9 @@
 /area/library)
 "czp" = (
 /obj/structure/table/wood,
-/obj/item/disk/nuclear/fake,
-/obj/item/barcodescanner,
+/obj/machinery/photocopier/faxmachine{
+	department = "Library"
+	},
 /turf/open/floor/plasteel/dark,
 /area/library)
 "czq" = (
@@ -50141,12 +50159,14 @@
 "czO" = (
 /obj/structure/table/wood,
 /obj/item/instrument/saxophone,
+/obj/item/barcodescanner,
 /turf/open/floor/plasteel/dark,
 /area/library)
 "czP" = (
 /obj/structure/table/wood,
 /obj/item/stack/packageWrap,
 /obj/item/coin/gold,
+/obj/item/disk/nuclear/fake,
 /turf/open/floor/plasteel/dark,
 /area/library)
 "czQ" = (
@@ -55812,8 +55832,8 @@
 "mMz" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
-/obj/machinery/door/poddoor/preopen{
-	id = "misclab";
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
 	name = "test chamber blast door"
 	},
 /turf/open/floor/plating,
@@ -56196,8 +56216,8 @@
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 4
 	},
-/obj/machinery/door/poddoor/preopen{
-	id = "misclab";
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
 	name = "test chamber blast door"
 	},
 /turf/open/floor/plating,
@@ -57576,6 +57596,10 @@
 	id = "misclab";
 	name = "test chamber blast door"
 	},
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
+	name = "test chamber blast door"
+	},
 /turf/open/floor/plating,
 /area/science/xenobiology)
 "pWv" = (
@@ -57964,6 +57988,10 @@
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
 /area/space)
+"qwg" = (
+/obj/structure/closet/crate/large/shuttlekit,
+/turf/open/floor/plating,
+/area/engine/engineering)
 "qxq" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	name = "Air Out"
@@ -58408,6 +58436,10 @@
 	luminosity = 2
 	},
 /area/maintenance/department/science)
+"rqG" = (
+/obj/structure/cable,
+/turf/open/floor/plasteel/dark,
+/area/security/prison)
 "rrb" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -58534,6 +58566,10 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/science)
+"rEb" = (
+/obj/structure/cable,
+/turf/closed/wall/r_wall,
+/area/security/prison)
 "rEh" = (
 /obj/effect/spawner/room/fivexfour,
 /turf/open/floor/plating,
@@ -59741,8 +59777,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/poddoor/preopen{
-	id = "misclab";
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
 	name = "test chamber blast door"
 	},
 /turf/open/floor/plating,
@@ -59944,6 +59980,14 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/engine)
+"uUV" = (
+/obj/structure/table,
+/obj/item/paper,
+/obj/item/pen,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "uVf" = (
 /obj/structure/table/wood,
 /obj/item/book/manual/wiki/security_space_law,
@@ -61605,6 +61649,14 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
+"ycQ" = (
+/obj/machinery/power/treadmill{
+	anchored = 1;
+	dir = 4
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel/dark,
+/area/security/prison)
 "ydb" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -83091,12 +83143,12 @@ aeI
 lGp
 aeU
 afI
-aeU
-aeU
-aem
+ycQ
+rqG
+rEb
 agN
-agY
-aem
+uUV
+rEb
 ahI
 aif
 aiB
@@ -88599,7 +88651,7 @@ nWP
 nZw
 cri
 eVW
-cbX
+qwg
 ceq
 ceq
 ceq

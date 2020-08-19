@@ -111,6 +111,21 @@
 	pin = null
 	ammo_x_offset = 3
 
+/obj/item/gun/energy/laser/makeshiftlasrifle
+	name = "makeshift laser rifle"
+	desc = "A makeshift rifle that shoots lasers. Lacks factory precision, so the damage may be inconsistent."
+	icon = 'icons/obj/guns/energy.dmi'
+	icon_state = "makeshiftlas"
+	item_state = "makeshiftlas"
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	w_class = WEIGHT_CLASS_NORMAL
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/makeshiftlasrifle)
+	can_charge = TRUE
+	charge_sections = 1
+	ammo_x_offset = 2
+	shaded_charge = FALSE
+
 ////////Laser Tag////////////////////
 
 /obj/item/gun/energy/laser/bluetag

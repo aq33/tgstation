@@ -188,7 +188,7 @@
 	display_name = "Advanced Power Manipulation"
 	description = "How to get more zap."
 	prereq_ids = list("engineering")
-	design_ids = list("smes", "super_cell", "hyper_cell", "super_capacitor", "superpacman", "mrspacman", "power_turbine", "power_turbine_console", "power_compressor", "circulator", "teg")
+	design_ids = list("smes", "super_cell", "hyper_cell", "super_capacitor", "superpacman", "mrspacman", "power_turbine", "power_turbine_console", "power_compressor", "circulator", "teg", "export_battery")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -374,7 +374,8 @@
 	prereq_ids = list("robotics", "posibrain")
 	design_ids = list("aifixer", "aicore", "safeguard_module", "onehuman_module", "protectstation_module", "quarantine_module", "oxygen_module", "freeform_module",
 	"reset_module", "purge_module", "remove_module", "freeformcore_module", "asimov_module", "paladin_module", "tyrant_module", "overlord_module", "corporate_module",
-	"default_module", "borg_ai_control", "mecha_tracking_ai_control", "aiupload", "intellicard")
+	"dungeonmaster_module", "boomer_module", "zoomer_module", "science_module", "service_module", "weeb_module", "gamer_module", "lizardimov_module",
+	"corgi_module", "cowboy_module", "default_module", "borg_ai_control", "mecha_tracking_ai_control", "aiupload", "intellicard", "droneDispenser")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -684,7 +685,7 @@
 	display_name = "Weapon Development Technology"
 	description = "Our researchers have found new ways to weaponize just about everything now."
 	prereq_ids = list("engineering")
-	design_ids = list("pin_testing", "tele_shield", "sleepy")
+	design_ids = list("pin_testing", "tele_shield", "sleepy", "gun_cell")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 
@@ -702,7 +703,7 @@
 	display_name = "Advanced Weapon Development Technology"
 	description = "Our weapons are breaking the rules of reality by now."
 	prereq_ids = list("adv_engi", "weaponry")
-	design_ids = list("pin_loyalty", "taser")
+	design_ids = list("pin_loyalty", "taser", "gun_cell_upgraded")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 
@@ -933,6 +934,15 @@
 	description = "An advanced piece of mech weaponry"
 	prereq_ids = list("adv_beam_weapons")
 	design_ids = list("mech_laser_heavy")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	export_price = 5000
+
+/datum/techweb_node/mech_xray
+	id = "mech_xray"
+	display_name = "Exosuit Weapon (CH-XC \"Transitum\" X-Ray Laser)"
+	description = "An advanced piece of mech weaponry"
+	prereq_ids = list("adv_beam_weapons")
+	design_ids = list("mech_xray")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
