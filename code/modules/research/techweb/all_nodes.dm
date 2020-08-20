@@ -367,6 +367,15 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 	export_price = 5000
 
+/datum/techweb_node/cyborg_upg_borgi
+	id = "cyborg_upg_borgi"
+	display_name = "Cyborg Upgrades: Borgi"
+	description = "Woof woof bark!"
+	prereq_ids = list("adv_robotics")
+	design_ids = list("borg_transform_borgi")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000)
+	export_price = 1500
+
 /datum/techweb_node/ai
 	id = "ai"
 	display_name = "Artificial Intelligence"
