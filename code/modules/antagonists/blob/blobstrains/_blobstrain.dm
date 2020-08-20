@@ -30,8 +30,8 @@ GLOBAL_LIST_INIT(valid_blobstrains, subtypesof(/datum/blobstrain) - list(/datum/
 	for(var/BLO in overmind.blob_mobs)
 		var/mob/living/simple_animal/hostile/blob/BM = BLO
 		BM.update_icons() //If it's getting a new strain, tell it what it does!
-		to_chat(BM, "Your overmind's blob strain is now: <b><font color=\"[color]\">[name]</b></font>!")
-		to_chat(BM, "The <b><font color=\"[color]\">[name]</b></font> strain [shortdesc ? "[shortdesc]" : "[description]"]")
+		to_chat(BM, "Twoja odmiana to teraz: <b><font color=\"[color]\">[name]</b></font>!")
+		to_chat(BM, "Jako <b><font color=\"[color]\">[name]</b></font> [shortdesc ? "[shortdesc]" : "[description]"]")
 
 /datum/blobstrain/proc/on_lose()
 

@@ -1,12 +1,12 @@
 /datum/blobstrain/reagent/replicating_foam
-	name = "Replicating Foam"
-	description = "will do medium brute damage and occasionally expand again when expanding."
-	shortdesc = "will do medium brute damage."
-	effectdesc = "will also expand when attacked with burn damage, but takes more brute damage."
+	name = "Grzybnia Replikująca"
+	description = "zadajesz średnie obrażenia fizyczne oraz okazjonalnie rozrośniesz się podwójnie."
+	shortdesc = "zadajesz średnie obrażenia fizyczne."
+	effectdesc = "rozrastasz się, kiedy zostaniesz poparzony, ale kosztem podatności na obrażenia fizyczne."
 	color = "#7B5A57"
 	complementary_color = "#57787B"
-	analyzerdescdamage = "Does medium brute damage."
-	analyzerdesceffect = "Expands when attacked with burn damage, will occasionally expand again when expanding, and is fragile to brute damage."
+	analyzerdescdamage = "Zadaje on średnie obrażenia fizyczne."
+	analyzerdesceffect = "Rozrasta się, kiedy zostanie poparzony. Okazyjnie rozrośnie się podwójnie oraz jest podatny na ataki fizyczne."
 	reagent = /datum/reagent/blob/replicating_foam
 
 
