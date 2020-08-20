@@ -2580,6 +2580,8 @@
 #include "code\modules\power\singularity\particle_accelerator\particle_accelerator.dm"
 #include "code\modules\power\singularity\particle_accelerator\particle_control.dm"
 #include "code\modules\power\singularity\particle_accelerator\particle_emitter.dm"
+#include "code\modules\power\stormdrive\control_rods.dm"
+#include "code\modules\power\stormdrive\stormdrive.dm"
 #include "code\modules\power\supermatter\supermatter.dm"
 #include "code\modules\power\tesla\coil.dm"
 #include "code\modules\power\tesla\energy_ball.dm"
