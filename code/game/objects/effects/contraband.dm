@@ -334,8 +334,8 @@
 	icon_state = "poster29"
 
 /obj/structure/sign/poster/contraband/red_rum
-	name = "Red Rum"
-	desc = "Od samego patrzenia na ten plakat masz ochotę zabijać."
+	name = "PRAWuH"
+	desc = "Plakat piętnujący problem alkoholizmu wśród sił ochrony."
 	icon_state = "poster30"
 
 /obj/structure/sign/poster/contraband/cc64k_ad
