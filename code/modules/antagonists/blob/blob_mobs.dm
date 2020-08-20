@@ -85,8 +85,8 @@
 ////////////////
 
 /mob/living/simple_animal/hostile/blob/blobspore
-	name = "blob spore"
-	desc = "A floating, fragile spore."
+	name = "zarodnik"
+	desc = "Delikanty, latający zarodnik."
 	icon_state = "blobpod"
 	icon_living = "blobpod"
 	health = 30
@@ -98,11 +98,11 @@
 	melee_damage = 4
 	obj_damage = 20
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
-	attacktext = "hits"
+	attacktext = "uderza"
 	attack_sound = 'sound/weapons/genhit1.ogg'
 	movement_type = FLYING
 	del_on_death = TRUE
-	deathmessage = "explodes into a cloud of gas!"
+	deathmessage = "eksploduje, zostawiając za sobą chmurę gazu!"
 	gold_core_spawnable = HOSTILE_SPAWN
 	var/death_cloud_size = 1 //size of cloud produced from a dying spore
 	var/mob/living/carbon/human/oldguy
@@ -220,8 +220,8 @@
 /////////////////
 
 /mob/living/simple_animal/hostile/blob/blobbernaut
-	name = "blobbernaut"
-	desc = "A hulking, mobile chunk of blobmass."
+	name = "grzybonauta"
+	desc = "Potężny, mobilny kawałek grzybowej masy."
 	icon_state = "blobbernaut"
 	icon_living = "blobbernaut"
 	icon_dead = "blobbernaut_dead"
@@ -230,7 +230,7 @@
 	damage_coeff = list(BRUTE = 0.5, BURN = 1, TOX = 1, CLONE = 1, STAMINA = 0, OXY = 1)
 	melee_damage = 20
 	obj_damage = 60
-	attacktext = "slams"
+	attacktext = "miażdży"
 	attack_sound = 'sound/effects/blobattack.ogg'
 	verb_say = "gurgles"
 	verb_ask = "demands"

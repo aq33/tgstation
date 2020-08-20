@@ -1,8 +1,8 @@
 /obj/structure/blob/core
-	name = "blob core"
+	name = "rdzeń grzyba"
 	icon = 'icons/mob/blob.dmi'
 	icon_state = "blank_blob"
-	desc = "A huge, pulsating yellow mass."
+	desc = "Ogromny, pulsujący grzyb."
 	max_integrity = 400
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 75, "acid" = 90, "stamina" = 0)
 	explosion_block = 6
@@ -22,7 +22,7 @@
 	. = ..()
 
 /obj/structure/blob/core/scannerreport()
-	return "Directs the blob's expansion, gradually expands, and sustains nearby blob spores and blobbernauts."
+	return "Kieruje ekspansją całego grzyba oraz podtrzymuje zarodniki i grzybonautów."
 
 /obj/structure/blob/core/update_icon()
 	cut_overlays()
