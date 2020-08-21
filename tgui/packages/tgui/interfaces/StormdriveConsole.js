@@ -7,7 +7,6 @@ import { toFixed } from 'common/math';
 export const StormdriveConsole = (props, context) => {
   const { act, data } = useBackend(context);
   const { gas_records } = data;
-  const constricted_plasmaData = gas_records.constricted_plasma.map((value, i) => [i, value]);
   const plasmaData = gas_records.plasma.map((value, i) => [i, value]);
   const tritiumData = gas_records.tritium.map((value, i) => [i, value]);
   const o2Data = gas_records.o2.map((value, i) => [i, value]);
@@ -20,7 +19,6 @@ export const StormdriveConsole = (props, context) => {
   const bzData = gas_records.bz.map((value, i) => [i, value]);
   const stimData = gas_records.stim.map((value, i) => [i, value]);
   const pluoxiumData = gas_records.pluoxium.map((value, i) => [i, value]);
-  const nucleiumData = gas_records.nucleium.map((value, i) => [i, value]);
   return (
     <Window resizable theme="ntos">
       <Window.Content scrollable>
@@ -138,15 +136,6 @@ export const StormdriveConsole = (props, context) => {
               <Flex.Item width="200px">
                 <Section>
                   <LabeledList>
-                    <LabeledList.Item label="Constricted Plasma">
-                      <ProgressBar
-                        value={(data.constricted_plasma/data.total_moles) * 100}
-                        minValue={0}
-                        maxValue={100}
-                        color="violet">
-                        {toFixed((data.constricted_plasma/data.total_moles) * 100) + ' %'}
-                      </ProgressBar>
-                    </LabeledList.Item>
                     <LabeledList.Item label="Plasma">
                       <ProgressBar
                         value={(data.plasma/data.total_moles) * 100}
@@ -255,27 +244,11 @@ export const StormdriveConsole = (props, context) => {
                         {toFixed((data.pluoxium/data.total_moles) * 100) + ' %'}
                       </ProgressBar>
                     </LabeledList.Item>
-                    <LabeledList.Item label="Nucleum">
-                      <ProgressBar
-                        value={(data.nucleium/data.total_moles) * 100}
-                        minValue={0}
-                        maxValue={100}
-                        color="brown">
-                        {toFixed((data.nucleium/data.total_moles) * 100) + ' %'}
-                      </ProgressBar>
-                    </LabeledList.Item>
                   </LabeledList>
                 </Section>
               </Flex.Item>
               <Flex.Item grow={1}>
                 <Section position="relative" height="100%">
-                  <Chart.Line
-                    fillPositionedParent
-                    data={constricted_plasmaData}
-                    rangeX={[0, constricted_plasmaData.length - 1]}
-                    rangeY={[0, 100]}
-                    strokeColor="rgba(100, 53, 201, 1)"
-                    fillColor="rgba(100, 53, 201, 0.1)" />
                   <Chart.Line
                     fillPositionedParent
                     data={plasmaData}
@@ -353,13 +326,6 @@ export const StormdriveConsole = (props, context) => {
                     rangeY={[0, 100]}
                     strokeColor="rgba(181, 204, 24, 1)"
                     fillColor="rgba(181, 204, 24, 0.)" />
-                  <Chart.Line
-                    fillPositionedParent
-                    data={nucleiumData}
-                    rangeX={[0, nucleiumData.length - 1]}
-                    rangeY={[0, 100]}
-                    strokeColor="rgba(165, 103, 63, 1)"
-                    fillColor="rgba(165, 103, 63, 0)" />
                   <Chart.Line
                     fillPositionedParent
                     data={n2Data}
