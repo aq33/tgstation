@@ -39,19 +39,19 @@
 
 /obj/item/paper/fluff/awaymissions/wildwest/journal/page1
 	name = "Planer Saul's Journal: Page 1"
-	info = "We've discovered something floating in space. We can't really tell how old it is, but it is scraped and bent to hell. There object is the size of about a room with double doors that we have yet to break into.   It is a lot sturdier than we could have imagined.  We have decided to call it 'The Vault' "
+	info = "Some ships have flown over to our peacful mining village, some red-and-black dressed men have come here, they do not look peacful. They are heavily armed and they are making us work our asses of for no money at all. They LET US cook in exchange, considering we cook for them too. I hear someone at my door, I will hide this note for now."
 
 /obj/item/paper/fluff/awaymissions/wildwest/journal/page4
 	name = "Planer Saul's Journal: Page 4"
-	info = " The miners in the town have become sick and almost all production has stopped. They, in a fit of delusion, tossed all of their mining equipment into the furnaces.  They all claimed the same thing. A voice beckoning them to lay down their arms. Stupid miners."
+	info = " The miners in the town have become sick and almost all production has stopped. They, in a fit of delusion, tossed all of their mining equipment into the furnaces. The syndies are getting angry, some miners decided to get back to work, all I know is that they have bruises spontaniously appearing over their faces."
 
 /obj/item/paper/fluff/awaymissions/wildwest/journal/page7
 	name = "Planer Sauls' Journal: Page 7"
-	info = "The Vault...it just keeps growing and growing.  I went on my daily walk through the garden and now it's just right outside the mansion... a few days ago it was only barely visible. But whatever is inside...it's calling to me."
+	info = "I have seen the Syndicate guards talk about some sort of plan. It looks like they are packing up, but on the other side I heard gunshots at night. We have nowhere to hide, we can only pray."
 
 /obj/item/paper/fluff/awaymissions/wildwest/journal/page8
 	name = "Planer Saul's Journal: Page 8"
-	info = "The syndicate have invaded.  Their ships appeared out of nowhere and now they likely intend to kill us all and take everything.  On the off-chance that the Vault may grant us sanctuary, many of us have decided to force our way inside and bolt the door, taking as many provisions with us as we can carry.  In case you find this, send for help immediately and open the Vault. Find us inside."
+	info = "The syndicate have invaded.  Their ships appeared out of nowhere and now they likely intend to kill us all and take everything. Some of them are in those hardsuits, but they seem more... elite. You cannot save us, but you can save our town from perishing, avenge us."
 
 
 /*

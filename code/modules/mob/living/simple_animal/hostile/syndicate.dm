@@ -302,3 +302,23 @@
 /mob/living/simple_animal/hostile/viscerator/Initialize()
 	. = ..()
 	AddComponent(/datum/component/swarming)
+
+//the new syndicate supersoldier
+/mob/living/simple_animal/hostile/syndicate/space/supersoldier
+	icon_state = "supersoldier"
+	icon_living = "supersoldier"
+	name = "Syndicate Supersoldier"
+	maxHealth = 3000
+	health = 3000
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	minbodytemp = 0
+	speed = 3
+	spacewalk = TRUE
+	hardattacks = TRUE
+	obj_damage = 200
+	melee_damage = 40
+	deathmessage = "looks at you, behind his blood-stained helmet you can make out a gaze, a gaze of pride. His armor buzzez loudly, electricity crackles, he says: You are worthy..., as he passes out to sleep eternally. An evil warrior, but a strong and worthy enemy indeed."
+	attacktext = "Blasts away"
+	attack_sound = 'sound/weapons/bladeslice.ogg'
+	faction = list(ROLE_SYNDICATE)
+	loot = list(/obj/item/card/emag, /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite)

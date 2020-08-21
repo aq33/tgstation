@@ -752,7 +752,7 @@
 /area/awaymission/challenge/main)
 "fL" = (
 /mob/living/simple_animal/hostile/retaliate/clown/mutant,
-/turf/open/floor/mineral/bananium/airless,
+/turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "gd" = (
 /obj/structure/statue/bananium/clown,
@@ -808,7 +808,7 @@
 /area/awaymission/challenge/main)
 "gM" = (
 /mob/living/simple_animal/hostile/retaliate/clown/clownhulk/chlown,
-/turf/open/floor/mineral/bananium/airless,
+/turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "hQ" = (
 /obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/hunter{
@@ -974,7 +974,7 @@
 /area/awaymission/challenge/main)
 "nD" = (
 /mob/living/simple_animal/hostile/retaliate/clown/lube,
-/turf/open/floor/mineral/bananium/airless,
+/turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "nF" = (
 /obj/item/twohanded/bonespear,
@@ -998,8 +998,9 @@
 /turf/open/floor/carpet/purple,
 /area/awaymission/challenge/main)
 "os" = (
-/turf/open/floor/mineral/bananium/airless,
-/area/awaymission/challenge/main)
+/obj/structure/shuttle/engine/huge,
+/turf/open/space,
+/area/space)
 "ot" = (
 /obj/item/clothing/head/hooded/cloakhood/bone,
 /turf/open/floor/plating/dirt,
@@ -1421,10 +1422,6 @@
 /obj/item/storage/firstaid/advanced,
 /turf/open/floor/plasteel/sepia,
 /area/awaymission/challenge/main)
-"KM" = (
-/obj/machinery/door/airlock/bananium,
-/turf/open/floor/mineral/bananium/airless,
-/area/awaymission/challenge/main)
 "KU" = (
 /obj/structure/table/wood/bar,
 /obj/item/paper/fluff/awaymissions/challenge/stainednote,
@@ -1481,7 +1478,7 @@
 /area/awaymission/challenge/main)
 "Nm" = (
 /mob/living/simple_animal/hostile/retaliate/clown/fleshclown,
-/turf/open/floor/mineral/bananium/airless,
+/turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "NG" = (
 /mob/living/simple_animal/hostile/bear/snow,
@@ -1529,7 +1526,7 @@
 /area/awaymission/challenge/main)
 "OR" = (
 /mob/living/simple_animal/hostile/retaliate/clown/mutant/blob,
-/turf/open/floor/mineral/bananium/airless,
+/turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "OS" = (
 /mob/living/simple_animal/pet/dog/corgi,
@@ -1569,7 +1566,7 @@
 /area/awaymission/challenge/main)
 "Qk" = (
 /obj/item/reagent_containers/food/drinks/bottle/vodka/badminka,
-/turf/open/floor/mineral/bananium/airless,
+/turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "Qy" = (
 /obj/structure/disposalpipe/segment{
@@ -1593,7 +1590,7 @@
 "Sb" = (
 /obj/machinery/computer/libraryconsole/bookmanagement,
 /obj/structure/table/wood,
-/turf/open/floor/mineral/bananium/airless,
+/turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "Sg" = (
 /obj/structure/trap/fire,
@@ -1606,7 +1603,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/open/floor/mineral/bananium/airless,
+/turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "SF" = (
 /obj/structure/trap/fire,
@@ -1662,7 +1659,7 @@
 /area/awaymission/challenge/main)
 "Vr" = (
 /obj/item/broken_bottle,
-/turf/open/floor/mineral/bananium/airless,
+/turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "Vs" = (
 /obj/machinery/light{
@@ -1738,11 +1735,11 @@
 /area/awaymission/challenge/main)
 "YO" = (
 /obj/item/reagent_containers/food/drinks/bottle/absinthe/premium,
-/turf/open/floor/mineral/bananium/airless,
+/turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "YV" = (
 /obj/item/reagent_containers/food/drinks/bottle/absinthe,
-/turf/open/floor/mineral/bananium/airless,
+/turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
 "Zg" = (
 /obj/item/reagent_containers/food/drinks/bottle/vodka/badminka,
@@ -20937,10 +20934,10 @@ aa
 aa
 aa
 wI
-os
+mz
 Su
-os
-os
+mz
+mz
 wI
 aa
 aa
@@ -21197,7 +21194,7 @@ wI
 Sb
 gM
 YO
-os
+mz
 wI
 aa
 aa
@@ -21451,10 +21448,10 @@ aa
 aa
 aa
 wI
-os
+mz
 YV
-os
-os
+mz
+mz
 wI
 aa
 aa
@@ -21708,10 +21705,10 @@ aa
 aa
 aa
 wI
-os
+mz
 Vr
 fL
-os
+mz
 wI
 aa
 aa
@@ -21966,9 +21963,9 @@ aa
 aa
 wI
 Qk
-os
-os
-os
+mz
+mz
+mz
 wI
 aa
 aa
@@ -22222,10 +22219,10 @@ aa
 aa
 aa
 wI
-os
-os
-os
-os
+mz
+mz
+mz
+mz
 wI
 aa
 aa
@@ -22480,9 +22477,9 @@ aa
 aa
 wI
 fL
-os
-os
-os
+mz
+mz
+mz
 wI
 aa
 aa
@@ -22737,8 +22734,8 @@ aa
 aa
 wI
 wI
-KM
-KM
+fK
+fK
 wI
 wI
 aa
@@ -22994,8 +22991,8 @@ aa
 aa
 wI
 nD
-os
-os
+mz
+mz
 fL
 wI
 aa
@@ -23250,10 +23247,10 @@ Hu
 Hu
 Hu
 wI
-os
-os
-os
-os
+mz
+mz
+mz
+mz
 wI
 aa
 aa
@@ -23507,10 +23504,10 @@ ka
 tz
 tz
 fK
-os
-os
-os
-os
+mz
+mz
+mz
+mz
 wI
 aa
 aa
@@ -23765,9 +23762,9 @@ tz
 tz
 wI
 Nm
-os
+mz
 OR
-os
+mz
 wI
 aa
 aa
@@ -24015,7 +24012,7 @@ aa
 aa
 aa
 aa
-aa
+os
 Hu
 Oc
 tz
@@ -25564,7 +25561,7 @@ aa
 aa
 aa
 aa
-FG
+Is
 aa
 aa
 FG
