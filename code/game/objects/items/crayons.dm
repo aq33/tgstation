@@ -425,10 +425,13 @@
 		var/eaten = use_charges(user, 5, FALSE)
 		if(check_empty(user)) //Prevents divsion by zero
 			return
-		var/fraction = min(eaten / reagents.total_volume, 1)
-		reagents.reaction(M, INGEST, fraction * volume_multiplier)
-		reagents.trans_to(M, eaten, volume_multiplier, transfered_by = user)
-		// check_empty() is called during afterattack
+		if(!istype(M, /mob/living/simple_animal/drone))
+			var/fraction = min(eaten / reagents.total_volume, 1)
+			reagents.reaction(M, INGEST, fraction * volume_multiplier)
+			reagents.trans_to(M, eaten, volume_multiplier, transfered_by = user)
+		else
+			var/mob/living/simple_animal/drone/d = user
+			d.adjustHealth(-3)
 	else
 		..()
 
