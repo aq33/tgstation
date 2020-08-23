@@ -199,27 +199,27 @@ Jako Blob trzymaj swój rdzeń z daleka od kosmosu, ponieważ powiększanie się
 Jako Blob możesz losowo zmienić skład chemiczny, jeśli załoga przystosowała się do twojego obecnego.
 Jako Blob walcz w wojnie na wyniszczenie: zniszcz szpital i walcz w wąskich punktach, żeby uniemożliwić ciągłe natarcie i skoordynowane szturmy!
 Jako Blob możesz atakować wszystko co znajduje się obok obok płytki bloba, ale możesz rozwijać się tylko w czterech kardynalnych kierunkach, a ataki po skosie są odrobinę słabsze.
-As the Blob, don't neglect the creation of factories. These create spores that carry your reagent and can chase crewmembers far further than you. Spores can also be rallied to swarm the crew and cause panic, and can even take over corpses to create much more dangerous blob zombies!
-As the Blob, you can produce a Blobbernaut from a factory for 40 resources. Blobbernauts are player-controlled, gradually regenerate near nodes, and apply your chemical when attacking, but die when too far from the blob or if their factory is killed. However, the factory used becomes fragile and stops spawning spores.
-As the Blob, you can expand by clicking, create strong blobs with ctrl-click, rally spores with middle-click, and remove blobs with alt-click. You do not need to have your camera over the tile to do this.
-As the Blob, removing strong blobs, resource nodes, factories, and nodes will give you 4, 15, 25, and 25 resources back, respectively.
-As the Blob, talking will send a message to all other overminds and all Blobbernauts, allowing you to direct attacks and coordinate.
-As a Blobbernaut, you can communicate with overminds and other Blobbernauts via :b.
-As a Blobbernaut, your HUD shows your health and the core health of the overmind that created you.
-As a Revolutionary, you cannot convert a head of staff or someone who has a mindshield implant, such as a security officer or those they implant. Implants can however be surgically removed, and do not carry over with cloning. Take control of medbay to keep control of conversions!
-As a Revolutionary, cargo can be your best friend or your worst nightmare. In the best case scenario you will be able to order a limitless amount of guns and armor, in the worst case scenario security will take control and order a limitless number of mindshield implants to turn your fellow revolutionaries against you.
-As a Revolutionary, your main power comes from who you convert, choose your converts wisely to ensure you win the round.
-As a Changeling, the Extract DNA sting counts for your genome absorb objective, but does not let you respec your powers.
-As a Changeling, you can absorb someone by strangling them and using the Absorb verb; this gives you the ability to rechoose your powers, the DNA of whoever you absorbed, the memory of the absorbed, and some samples of things the absorbed said.
-As a Cultist, do not cause too much chaos before your objective is completed. If the shuttle gets called too soon, you may not have enough time to win.
-As a Cultist, your team starts off very weak, but if necessary can quickly convert everything they have into raw power. Make sure you have the numbers and equipment to support going loud, or the cult will fall flat on its face.
-As a Cultist, the Blood Boil rune will deal massive amounts of brute damage to non-cultists, and some damage to fellow cultists of Nar'Sie nearby, but will create a fire where the rune stands on use.
-As a Cultist, you can create an army of manifested goons using a combination of the Manifest rune, which creates homunculi from ghosts, and the Blood Drain rune, which drains life from anyone standing on any blood drain rune.
-As a Cultist, check the alert in the upper-right of your screen for all the details about your cult's current status and objective.
-You can deconvert Cultists of Nar'Sie by feeding them large amounts of holy water. Unlike revolutionaries, implanting them with mindshield implants won't do it!
-The Chaplain can bless any container with water by hitting it with their bible. Holy water has a myriad of uses against both cults and large amounts of it are a great contributor to success against them.
-As a Wizard, you can turn people to stone, then animate the resulting statue with a staff of animation to create an extremely powerful minion, for all of 5 minutes at least.
-As a Wizard, the fireball spell performs very poorly at close range, as it can easily catch you in the blast. It is best used as a form of artillery down long hallways.
+Jako Blob nie zaniedbuj tworzenia fabryk. Wytwarzają one zarodniki niosące twoje chemikalia, które podążają za załogantami dalej niż jesteś w stanie sięgnąć. Zarodniki mogą zebrać się w grupę, żeby następnie rzucić się na załogę, wywołując panikę, a nawet potrafią przejąć kontrolę nad ciałami, tworzą jeszcze groźniejsze blobozombie!
+Jako Blob możesz stworzyć Blobbernauta w fabryce z 40 zasobami. Blobbernauci są kontrolowani przez graczy, leczą się z czasem w pobliżu węzłów i atakując nakładają na przeciwnika twoje chemikalia, jednak giną kiedy są zbyt daleko od bloba lub ich fabryka uległa zniszczeniu. Kolejną wadą jest też to, że fabryka, w której został wyprodukowany Blobbernauta jest osłabiona i przestaje produkować zarodniki.
+Jako Blob możesz się rozwijać klikając na kratkę, tworzyć silnego bloba używając ctrl+klik, zwoływać zarodniki środkowym przyciskiem myszy i usuwać bloba alt+klik. Nie musisz mieć kamery nad kratką, żeby to zrobić.
+Jako Blob możesz usuwać silne bloby, węzły zasobów, fabryki i węzły, odzyskując przy tym odpowiednio 4, 15, 25 i 25 zasobów.
+Jako Blob możesz mówiąc wysyłać wiadomość do wszystkich nadumysłów i Blobbernautów, kierując w ten sposób atakami i koordynujac się.
+Jako Blobbernaut możesz komunikować się z nadumysłami i innymi Blobbernautami za pomovą  :b.
+Jako Blobbernaut widzisz na swoim HUDzie swoje życie oraz życie nadumysłu, który cię stworzył.
+Jako Rewolucjonista nie możesz przekonwertować głów departamentów, czy osób z implantem mindshield, takich jak oficerowie ochrony lub tych, których zaimplantowali. Implanty mogą zostać jednak usunięte chirurgicznie i nie zachowują się przy klonowaniu. Zdobądź kontrolę nad szpitalem, żeby mieć kontrolę nad konwersjami!
+Jako Rewolucjonista pamiętaj, że wydział dostaw może być twoim najlepszym przyjacielem lub najgorszym koszmarem. W najlepszym przypadku będziesz mieć do dyspozycji nieograniczone ilości broni i pancerzy, w najgorszym ochrona będzie miała nieskończoną ilość implantów, żeby obrócić towarzyszy rewolucji przeciwko tobie.
+Jako Rewolucjonista pamiętaj, że źródło twojej siły płynie z tego kogo przekonwertujesz na swoją stronę, wybieraj mądrze, żeby zapewnić sobie zwycięstwo.
+Jako Zmiennokształtny możesz użyć żądła do ekstraktowania DNA, żeby zbliżyć się do spełnienia swojego celu, jednak nie pozwala ci to na zmianę swoich mocy.
+Jako Zmiennokształnty możesz absorbować kogoś dusząc go i użwyając wyrażenia Absorb, daje ci to możliwość ponownego wybrania mocy, DNA tego kogo zaabsorbowałeś, pamięć zaabsorbowanego oraz przykłady rzeczy, które zaabsorbowany powiedział.
+Jako Kultysta nie wywołuj zbyt dużego chaosu, zanim nie spełnisz swoich celów. Jeśli prom zostanie zbyt wcześnie wezwany, nie będziesz mieć wystarczająco czasu, żeby wygrać.
+Jako Kultysta pamiętaj, że twoja drużyna ma bardzo trudny początek, jednak jeśli zajdzie taka potrzeba, może szybko zamienić wszystko co mają w czystą siłę. Upewnij się, że masz przewagę liczebną i ekwipunek, jeśli zamierzasz się ujawnić, inaczej cały kult spadnie z rowerka.
+Jako Kultysta pamiętaj, że runa Wrząca Krew zada spore ilości obrażeń mechanicznych niekultystom i odrobinę obrażeń kultystom Nar'Sie w pobliżu, jednak utworzy ogień w miejscu runy przy użyciu.
+Jako Kultysta możesz stworzyć armię sługusów, łącząc runę Manifestującą, która tworzy humunkulusy z duchów oraz runę Drenażu Krwii, która wysysa życie z każdego, kto na niej stanie.
+Jako Kultysta sprawdzaj aleet w prawym górnym rogu ekranu, żeby uzyskać szczegóły na temat aktualnego statusu kultu i jego celów.
+Możesz nawracać kultystów Nar'Sie, pojąc ich dużą ilością wody święconej. W odróżnieniu do rewolucjonistów, wszczepienie im implantu mindshield nie załatwi sprawy!
+Kapelan może pobłogosławić pojemnik z wodą uderzając w niego biblią. Woda święcona jest niezwykle skuteczna w walce z kultami, a jej duże ilości zapewnią nad nimi zwycięstwo.
+Jako Czarodziej możesz zamieniać ludzi w kamień, a następnie ożywić rzeźbę zaklęciem, żeby zyskać niezwykle silnego podwładnego, przynajmniej na całe 5 minut.
+Jako Czarodziej pamiętaj, że zaklęcie kuli ognia słabo sprawuje się na bliskim dystansie, ponieważ możesz przypadkowo samemu dostać ogniem. Najlepiej używać go jak artylerii na korytarzu.
 As a Wizard, summoning guns will turn a large portion of the crew against themselves, but will also give everyone anything from a floral somatoray to a pulse rifle. Use at your own risk!
 As a Wizard, the staff of chaos can fire any type of bolts from the magical wands. This can range from bolts of instant death to healing or reviving someone.
 As a Wizard, most spells become unusable if you are not wearing your robe, hat, and sandals.
