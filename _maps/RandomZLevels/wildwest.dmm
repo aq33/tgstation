@@ -2129,9 +2129,6 @@
 /area/shuttle/caravan/syndicate3)
 "Bu" = (
 /obj/structure/cable,
-/mob/living/simple_animal/hostile/syndicate/space/supersoldier{
-	name = "Sebiks, CEO wpierdolu"
-	},
 /turf/open/floor/plasteel/dark,
 /area/shuttle/caravan/syndicate3)
 "BJ" = (
