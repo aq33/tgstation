@@ -220,35 +220,35 @@ Możesz nawracać kultystów Nar'Sie, pojąc ich dużą ilością wody święcon
 Kapelan może pobłogosławić pojemnik z wodą uderzając w niego biblią. Woda święcona jest niezwykle skuteczna w walce z kultami, a jej duże ilości zapewnią nad nimi zwycięstwo.
 Jako Czarodziej możesz zamieniać ludzi w kamień, a następnie ożywić rzeźbę zaklęciem, żeby zyskać niezwykle silnego podwładnego, przynajmniej na całe 5 minut.
 Jako Czarodziej pamiętaj, że zaklęcie kuli ognia słabo sprawuje się na bliskim dystansie, ponieważ możesz przypadkowo samemu dostać ogniem. Najlepiej używać go jak artylerii na korytarzu.
-As a Wizard, summoning guns will turn a large portion of the crew against themselves, but will also give everyone anything from a floral somatoray to a pulse rifle. Use at your own risk!
-As a Wizard, the staff of chaos can fire any type of bolts from the magical wands. This can range from bolts of instant death to healing or reviving someone.
-As a Wizard, most spells become unusable if you are not wearing your robe, hat, and sandals.
-As an Abductor, you can select where your victims will be sent on the ship control console.
-As an Abductor Agent, the combat mode vest has much higher resistance to every kind of weapon, and your helmet prevents the AI from tracking you.
-As an Abductor, the baton can cycle between four modes: stun, sleep, cuff and probe.
-As a Revenant, the Chaplain is your worst enemy, as they can damage you massively with the null rod and make large swaths of the station impassable with holy water.
-As a Revenant, your essence is also your health, so revealing yourself in front of humans to harvest the essence of the living is much safer if you've already stocked up on essences from poorly guarded corpses.
-As a Revenant, your Defile ability removes holy water from tiles in a small radius, along with salt, allowing you to reclaim the station from the chaplain if they've been covering the station in holy water. It can also be used to open morgue trays!
-As a Revenant, your Overload Lights ability will only shock humans with lights if the lights are still on after a brief delay.
-As a Revenant, your Malfunction ability in general damages machinery and mechanical objects, possibly even emagging some objects. Experiment!
-As a Revenant, the illness inflicted on humans by Blight can be easily cured by lying down or with holy water, making it best used on targets that have no time to lie down, such as humans in combat.
-As a Swarmer, you can deconstruct more things than you think. Try deconstructing light switches, buttons, air alarms and more. Experiment!
-As a Swarmer, you can teleport fellow swarmers away if you think they are in danger.
-As a Morph, you can talk while disguised, but your words have a chance of being slurred, giving you away!
-As a Drone, you can ping other drones to alert them of areas in the station in need of repair.
-As a Ghost, you can see the inside of a container on the ground by clicking on it.
-As a Ghost, you can double click on just about anything to follow it. Or just warp around!
-As a Devil, you gain power for every three souls you control, however you also become more obvious.
-As a Devil, as long as you control at least one other soul, you will automatically resurrect, as long as a banishment ritual is not performed.
-At which time a Devil's nameth is spake on the tongue of man, the Devil may appeareth.
-As a Security Officer, remember that correlation does not equal causation. Someone may have just been at the wrong place at the wrong time!
-As a Security Officer, remember that you can attach a sec-lite to your disabler or your helmet!
-You can swap floor tiles by holding a crowbar in one hand and a stack of tiles in the other.
-When hacking doors, cutting and mending a "test light wire" will restore power to the door.
-When crafting most items, you can either manually combine parts or use the crafting menu.
-Suit storage units not only remove blood and dirt from clothing, but also radiation!
-Remote devices will work when used through cameras. For example: Bluespace RPEDs and door remotes.
-You can light a cigar on a supermatter crystal.
-Using sticky tape on items can make them stick to people and walls! Be careful, grenades might stick to your hand during the moment of truth!
-In a pinch, stripping yourself naked will give you a sizeable resistance to being tackled. What do you value more, your freedom or your dignity?
-Wearing riot armor makes you significantly more effective at performing tackle takedowns, but will use extra stamina with each leap! It will also significantly protect you from other tackles!
+Jako Czarodziej możesz przywołać broń, dzięki czemu duża częśc załogi obróci się przeciwko sobie, jednak także da każdemu coś pomiędzy floral somatoray, a karabinem pulsacyjnym. Używaj na własną odpowiedzialność!
+Jako Czarodziej możesz użyć różdżki chaosu, żeby wystrzelić dowolny typ strzału z różdżek. Może to być zarówno promień natychmiastowej śmierci, jak i uzdrowienia lub wskrzeszenia.
+Jako Czarodziej pamiętaj że większość zaklęć przestaje działać, jeśli nie masz na sobie swojej szaty, czapki i sandałów.
+Jako Porywacz możesz wybrać gdzie twoje ofiary zostaną wysłane w konsoli sterowania statkiem.
+Jako Agent Porywacz pamiętaj, że twoja kamizelka w trybie bojowym ma wysoką odporność na wszystkie rodzaje obrażeń, a twój hełm uniemożliwia AI zlokalizowanie cię za pomocą kamer.
+Jako Porywacz pamiętaj, że twoja pałka ma cztery tryby: ogłuszenie, sen, zakucie oraz sondowanie.
+Jako Upiór pamiętaj, że Kapelan to twój najgorszy wróg, ponieważ może zdać ci spore obrażenia za pomocą null roda oraz utrudnić ci poruszanie się po sacji za pomocą wody święconej.
+Jako Upiór pamiętaj, że twoja esencja to także twoje życie, więc ukazywanie się przed ludźmi, żeby zebrać ich esencję, jest o wiele bezpieczniejsze, jeśli zebrałeś już jej trochę ze słabo chronionych ciał.
+Jako Upiór możesz użyć ze swojej zdolności Zbezczeszczenia, żeby usunąć wodę święconą i sól z pobliskich płytek, żeby odzyskać stację z rąk Kapelana, jeśli pokrył całą stację wodą święconą. Można też nią otwierać schowki w Kostnicy!
+Jako Upiór możesz użyć swojej zdolności Przeładowania Świateł, żeby porazić ludzi w pobliżu źródeł światła, jeśli są włączone, po krótkim opóźnieniu.
+Jako Upiór możesz użyź swojej zdolności Awarii, żeby uszkodzić maszyny w pobliżu, czasami nawet emagując je. Eksperymentuj!
+Jako Upiór możesz użyć swojej zdolności Uroku, żeby wywołać u ludzi chorobę, którą można wyleczyć kładąc się lub spożywając wodę święconą, najlepiej użyć jej na ludziach, którzy nie mają czasu, żeby się położyć, na przykład podczas walki.
+Jako Swarmer możesz rozłożyć więcej urządzeń, niż ci się wydaje. Spróbuj zdekonstruktować włączniki świateł, przyciski, alarmy atmosferyczne i inne. Eksperymentuj!
+Jako Swarmer możesz teleportować inne swarmery, jeśli wydaje ci się że są w niebezpieczeństwie.
+Jako Morf możesz mówić, kiedy jesteś w przebraniu, ale niektóre słowa mogą być zniekształcone, wydając cię!
+Jako Dron możesz pingować inne drony, żeby poinformować je, które części stacji wymagają naprawy.
+Jako Duch możesz sprawdzić zawartość pojemnika klikając na niego.
+Jako Duch możesz kliknąć na cokolwiek, żeby zacząc za tym podążać. Lub teleportować się!
+Jako Diabeł zdobywasz moc za każde trzy dusze pod swoją kontrolą, jednak stajesz się także bardziej oczywisty.
+Jako Diabeł, jeśli masz pod swoją kontrolą co najmniej jedna duszę, automatycznie się wskrzesisz, chyba że zostanie odprawiony rytułał wygnania.
+Kiedy imię Diabła zostanie wypowiedziane z ust człowieka, może się on zjawić.
+Jako Oficer Ochrony pamiętaj, że korelacja nie jest przyczyną. Ktoś mógł być po prostu w złym miejscu, w złym czasie!
+Jako Oficer Ochrony pamiętaj, że możesz przyczepić seclite do swojego disablera lub hełmu!
+Możesz wymieniać płytki trzymając w jednej ręce łom, a w drugiej stos płytek.
+Hakując drzwi, przecinając przewód "test light" i łącząc go z powrotem, przywracasz prąd do drzwi.
+Wytwarzając większość przedmiotów możesz manualnie połączyć elementy lub użyć menu wytwarzania.
+Jednostki przechowywania kombinezonów nie tylko usuwają krew i brud z ubrania, ale także radiację!
+Zdalnie sterowane urządzenia działają, kiedy używasz ich za pomocą kamer.
+Możesz odpalić cygaro od kryształu Supermaterii.
+Używając taśmy klejącej na przedmiotach możesz je przyczepić do ścian lub ludzi! Uważaj, granaty mogą przyczepić ci się do rąk, jeśli nie będziesz ostrożny!
+Jeśli jesteś w potrzasku, rozbierając się będziesz bardziej odporny na popchnięcia. Co cenisz sobie bardziej: wolność, czy dumę?
+Nosząć pancerz przeciwko zamieszkom, jesteś bardziej efektywny w powalaniau, ale pochłania więcej energii z każdym pchnięciem! Dodakowo w drobnym stopniu ochroni cię przed byciem popchniętym!
