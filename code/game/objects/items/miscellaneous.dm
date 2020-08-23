@@ -169,13 +169,7 @@
 	new /obj/item/clothing/suit/space(src)
 	new /obj/item/clothing/head/helmet/space(src)
 	new /obj/item/gun/energy/kinetic_accelerator(src)
-	new /obj/item/storage/belt/utility(src)
-	new /obj/item/screwdriver(src)
-	new /obj/item/wrench(src)
-	new /obj/item/weldingtool(src)
-	new /obj/item/crowbar(src)
-	new /obj/item/wirecutters(src)
-	new /obj/item/multitool(src)
+	new /obj/item/storage/belt/utility/full(src)
 	new /obj/item/reagent_containers/medspray/synthflesh(src)
 
 /obj/item/storage/box/exploring/medic
@@ -202,13 +196,7 @@
 	new /obj/item/gun/energy/kinetic_accelerator(src)
 	new /obj/item/clothing/glasses/welding(src)
 	new /obj/item/clothing/gloves/color/yellow(src)
-	new /obj/item/storage/belt/utility(src)
-	new /obj/item/screwdriver(src)
-	new /obj/item/wrench(src)
-	new /obj/item/weldingtool/largetank
-	new /obj/item/crowbar(src)
-	new /obj/item/wirecutters(src)
-	new /obj/item/multitool(src)
+	new /obj/item/storage/belt/utility/full(src)
 
 
 /obj/item/choice_beacon/magic
