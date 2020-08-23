@@ -312,14 +312,19 @@
 	health = 3000
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
-	speed = 3
+	speed = 2
 	spacewalk = TRUE
 	hardattacks = TRUE
 	obj_damage = 200
-	melee_damage = 40
+	melee_damage = 20
 	deathmessage = "looks at you, behind his blood-stained helmet you can make out a gaze, a gaze of pride. His armor buzzez loudly, electricity crackles, he says: You are worthy..., as he passes out to sleep eternally. An evil warrior, but a strong and worthy enemy indeed."
 	attacktext = "Blasts away"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	faction = list(ROLE_SYNDICATE)
 	loot = list(/obj/item/card/emag, /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite)
-	/mob/living/simple_animal/hostile/proc/AttackingTarget(target.throw_at(throw_target, rand(6,7), 7, user))
+/mob/living/simple_animal/hostile/syndicate/space/supersoldier/AttackingTarget()
+    var/atom/throw_target = get_edge_target_turf(target, src.dir)
+    if(!istype(target, /mob/living))
+        return
+    var/mob/living/our_target = target
+    our_target.throw_at(throw_target, rand(6, 7), 7, src)
