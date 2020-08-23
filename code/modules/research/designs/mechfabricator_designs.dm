@@ -601,6 +601,69 @@
 	construction_time = 400
 	category = list("Exosuit Equipment")
 
+//Alpha
+/datum/design/alpha_chassis
+	name = "Exosuit Chassis (\"Alpha\")"
+	id = "alpha_chassis"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/chassis/alpha
+	materials = list(/datum/material/iron=15000,/datum/material/titanium=5000)
+	construction_time = 100
+	category = list("Alpha")
+
+/datum/design/alpha_torso
+	name = "Exosuit Maglev Turbine (\"Alpha\")"
+	id = "alpha_torso"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/alpha_torso
+	materials = list(/datum/material/iron=5000,/datum/material/titanium = 12500,/datum/material/gold=4000, /datum/material/silver=4000)
+	construction_time = 300
+	category = list("Alpha")
+
+/datum/design/alpha_head
+	name = "Exosuit Cockpit (\"Alpha\")"
+	id = "alpha_head"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/alpha_head
+	materials = list(/datum/material/iron=5000,/datum/material/glass = 5000,/datum/material/titanium = 2500, /datum/material/gold=2000, /datum/material/silver=2000)
+	category = list("Alpha")
+
+/datum/design/alpha_left_arm
+	name = "Exosuit Left Equipment Mount (\"Alpha\")"
+	id = "alpha_left_arm"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/alpha_left_arm
+	materials = list(/datum/material/iron=7500, /datum/material/gold=1000, /datum/material/silver=1000)
+	construction_time = 200
+	category = list("Alpha")
+
+/datum/design/alpha_right_arm
+	name = "Exosuit Right Equipment Mount (\"Alpha\")"
+	id = "alpha_right_arm"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/alpha_right_arm
+	materials = list(/datum/material/iron=7500, /datum/material/gold=1000, /datum/material/silver=1000)
+	construction_time = 200
+	category = list("Alpha")
+
+/datum/design/alpha_left_leg
+	name = "Exosuit Left Leg (\"Alpha\")"
+	id = "alpha_left_leg"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/alpha_left_leg
+	materials = list(/datum/material/iron=7500,/datum/material/titanium = 2500, /datum/material/gold=2000, /datum/material/silver=2000)
+	construction_time = 200
+	category = list("Alpha")
+
+/datum/design/alpha_right_leg
+	name = "Exosuit Right Leg (\"Alpha\")"
+	id = "alpha_right_leg"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/part/alpha_right_leg
+	materials = list(/datum/material/iron=7500,/datum/material/titanium = 2500, /datum/material/gold=2000, /datum/material/silver=2000)
+	construction_time = 200
+	category = list("Alpha")
+
 /////////////////////////////////////////
 //////////////Borg Upgrades//////////////
 /////////////////////////////////////////

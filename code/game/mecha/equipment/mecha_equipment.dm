@@ -86,6 +86,8 @@
 		return 0
 	if(chassis.is_currently_ejecting)
 		return 0
+	if(chassis.is_currently_transforming)
+		return 0
 	if(chassis.equipment_disabled)
 		to_chat(chassis.occupant, "<span=warn>Error -- Equipment control unit is unresponsive.</span>")
 		return 0

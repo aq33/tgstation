@@ -253,3 +253,37 @@
 	button_icon_state = "mech_phasing_[chassis.phasing ? "on" : "off"]"
 	chassis.occupant_message("<font color=\"[chassis.phasing?"#00f\">En":"#f00\">Dis"]abled phasing.</font>")
 	UpdateButtonIcon()
+
+/datum/action/innate/mecha/mech_transform
+	name = "Transform"
+	button_icon_state = "mech_chase_off"
+
+/datum/action/innate/mecha/mech_transform/Activate()
+	if(!owner || !chassis || chassis.occupant != owner)
+		return
+	
+	chassis.is_currently_transforming = TRUE
+	to_chat(chassis.occupant, "<span class='notice'>You begin the transformation procedure. Equipment is disabled during this process. Hold still.<span>")
+	chassis.can_move = world.time + 14
+	flick("alpha-[chassis.chase_mode ? "transform-reverse" : "transform"]", chassis)
+	for(var/i in 1 to 2)
+		playsound(chassis, pick('sound/items/drill_use.ogg', 'sound/items/jaws_cut.ogg', 'sound/items/jaws_pry.ogg', 'sound/items/welder.ogg', 'sound/items/ratchet.ogg'), 80, 1, -1)
+		sleep(7)
+	chassis.is_currently_transforming = FALSE
+	
+	chassis.chase_mode = !chassis.chase_mode
+	if(chassis.chase_mode)
+		chassis.step_in = chassis.step_in_chase
+		chassis.icon_state = chassis.icon_chase
+		chassis.armor = chassis.armor.modifyRating(melee = -30, bullet = -20, laser = -25, energy = -20)
+		chassis.stepsound = 'sound/vehicles/jetpack.ogg'
+		chassis.turnsound = 'sound/vehicles/jetpack.ogg'
+	else
+		chassis.step_in = initial(chassis.step_in)
+		chassis.icon_state = initial(chassis.icon_state)
+		chassis.armor = chassis.armor.modifyRating(melee = 30, bullet = 20, laser = 25, energy = 20)
+		chassis.stepsound = initial(chassis.stepsound)
+		chassis.turnsound = initial(chassis.turnsound)
+	button_icon_state = "mech_chase_[chassis.chase_mode ? "on" : "off"]"
+	chassis.occupant_message("Transformed into [chassis.chase_mode ? "chase" : "standard"] mode.")
+	UpdateButtonIcon()

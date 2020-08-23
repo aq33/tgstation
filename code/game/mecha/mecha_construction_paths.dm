@@ -537,6 +537,148 @@
 				user.visible_message("[user] unfastens Gygax Armor Plates.", "<span class='notice'>You unfasten Gygax Armor Plates.</span>")
 	return TRUE
 
+/datum/component/construction/unordered/mecha_chassis/alpha
+	result = /datum/component/construction/mecha/alpha
+	steps = list(
+		/obj/item/mecha_parts/part/alpha_torso,
+		/obj/item/mecha_parts/part/alpha_left_arm,
+		/obj/item/mecha_parts/part/alpha_right_arm,
+		/obj/item/mecha_parts/part/alpha_left_leg,
+		/obj/item/mecha_parts/part/alpha_right_leg,
+		/obj/item/mecha_parts/part/alpha_head
+	)
+
+/datum/component/construction/mecha/alpha
+	result = /obj/mecha/combat/alpha
+	base_icon = "alpha"
+
+	circuit_control = /obj/item/circuitboard/mecha/alpha/main
+	circuit_periph = /obj/item/circuitboard/mecha/alpha/peripherals
+	circuit_weapon = /obj/item/circuitboard/mecha/alpha/targeting
+
+	inner_plating = /obj/item/stack/sheet/mineral/titanium
+	inner_plating_amount = 5
+
+	outer_plating = /obj/item/stack/sheet/rglass
+	outer_plating_amount = 10
+
+/datum/component/construction/mecha/alpha/action(datum/source, atom/used_atom, mob/user)
+	return check_step(used_atom,user)
+
+/datum/component/construction/mecha/alpha/custom_action(obj/item/I, mob/living/user, diff)
+	if(!..())
+		return FALSE
+
+	switch(index)
+		if(1)
+			user.visible_message("[user] connects [parent] hydraulic systems", "<span class='notice'>You connect [parent] hydraulic systems.</span>")
+		if(2)
+			if(diff==FORWARD)
+				user.visible_message("[user] activates [parent] hydraulic systems.", "<span class='notice'>You activate [parent] hydraulic systems.</span>")
+			else
+				user.visible_message("[user] disconnects [parent] hydraulic systems", "<span class='notice'>You disconnect [parent] hydraulic systems.</span>")
+		if(3)
+			if(diff==FORWARD)
+				user.visible_message("[user] adds the wiring to [parent].", "<span class='notice'>You add the wiring to [parent].</span>")
+			else
+				user.visible_message("[user] deactivates [parent] hydraulic systems.", "<span class='notice'>You deactivate [parent] hydraulic systems.</span>")
+		if(4)
+			if(diff==FORWARD)
+				user.visible_message("[user] adjusts the wiring of [parent].", "<span class='notice'>You adjust the wiring of [parent].</span>")
+			else
+				user.visible_message("[user] removes the wiring from [parent].", "<span class='notice'>You remove the wiring from [parent].</span>")
+		if(5)
+			if(diff==FORWARD)
+				user.visible_message("[user] installs [I] into [parent].", "<span class='notice'>You install [I] into [parent].</span>")
+			else
+				user.visible_message("[user] disconnects the wiring of [parent].", "<span class='notice'>You disconnect the wiring of [parent].</span>")
+		if(6)
+			if(diff==FORWARD)
+				user.visible_message("[user] secures the mainboard.", "<span class='notice'>You secure the mainboard.</span>")
+			else
+				user.visible_message("[user] removes the central control module from [parent].", "<span class='notice'>You remove the central computer mainboard from [parent].</span>")
+		if(7)
+			if(diff==FORWARD)
+				user.visible_message("[user] installs [I] into [parent].", "<span class='notice'>You install [I] into [parent].</span>")
+			else
+				user.visible_message("[user] unfastens the mainboard.", "<span class='notice'>You unfasten the mainboard.</span>")
+		if(8)
+			if(diff==FORWARD)
+				user.visible_message("[user] secures the peripherals control module.", "<span class='notice'>You secure the peripherals control module.</span>")
+			else
+				user.visible_message("[user] removes the peripherals control module from [parent].", "<span class='notice'>You remove the peripherals control module from [parent].</span>")
+		if(9)
+			if(diff==FORWARD)
+				user.visible_message("[user] installs [I] into [parent].", "<span class='notice'>You install [I] into [parent].</span>")
+			else
+				user.visible_message("[user] unfastens the peripherals control module.", "<span class='notice'>You unfasten the peripherals control module.</span>")
+		if(10)
+			if(diff==FORWARD)
+				user.visible_message("[user] secures the weapon control module.", "<span class='notice'>You secure the weapon control module.</span>")
+			else
+				user.visible_message("[user] removes the weapon control module from [parent].", "<span class='notice'>You remove the weapon control module from [parent].</span>")
+		if(11)
+			if(diff==FORWARD)
+				user.visible_message("[user] installs [I] to [parent].", "<span class='notice'>You install [I] to [parent].</span>")
+			else
+				user.visible_message("[user] unfastens the weapon control module.", "<span class='notice'>You unfasten the weapon control module.</span>")
+		if(12)
+			if(diff==FORWARD)
+				user.visible_message("[user] secures the scanner module.", "<span class='notice'>You secure the scanner module.</span>")
+			else
+				user.visible_message("[user] removes the scanner module from [parent].", "<span class='notice'>You remove the scanner module from [parent].</span>")
+		if(13)
+			if(diff==FORWARD)
+				user.visible_message("[user] installs [I] to [parent].", "<span class='notice'>You install [I] to [parent].</span>")
+			else
+				user.visible_message("[user] unfastens the scanner module.", "<span class='notice'>You unfasten the scanner module.</span>")
+		if(14)
+			if(diff==FORWARD)
+				user.visible_message("[user] secures the capacitor.", "<span class='notice'>You secure the capacitor.</span>")
+			else
+				user.visible_message("[user] removes the capacitor from [parent].", "<span class='notice'>You remove the capacitor from [parent].</span>")
+		if(15)
+			if(diff==FORWARD)
+				user.visible_message("[user] installs [I] into [parent].", "<span class='notice'>You install [I] into [parent].</span>")
+			else
+				user.visible_message("[user] unfastens the capacitor.", "<span class='notice'>You unfasten the capacitor.</span>")
+		if(16)
+			if(diff==FORWARD)
+				user.visible_message("[user] secures the power cell.", "<span class='notice'>You secure the power cell.</span>")
+			else
+				user.visible_message("[user] pries the power cell from [parent].", "<span class='notice'>You pry the power cell from [parent].</span>")
+		if(17)
+			if(diff==FORWARD)
+				user.visible_message("[user] installs the internal armor layer to [parent].", "<span class='notice'>You install the internal armor layer to [parent].</span>")
+			else
+				user.visible_message("[user] unfastens the power cell.", "<span class='notice'>You unfasten the power cell.</span>")
+		if(18)
+			if(diff==FORWARD)
+				user.visible_message("[user] secures the internal armor layer.", "<span class='notice'>You secure the internal armor layer.</span>")
+			else
+				user.visible_message("[user] pries internal armor layer from [parent].", "<span class='notice'>You pry internal armor layer from [parent].</span>")
+		if(19)
+			if(diff==FORWARD)
+				user.visible_message("[user] welds the internal armor layer to [parent].", "<span class='notice'>You weld the internal armor layer to [parent].</span>")
+			else
+				user.visible_message("[user] unfastens the internal armor layer.", "<span class='notice'>You unfasten the internal armor layer.</span>")
+		if(20)
+			if(diff==FORWARD)
+				user.visible_message("[user] installs [I] to [parent].", "<span class='notice'>You install [I] to [parent].</span>")
+			else
+				user.visible_message("[user] cuts the internal armor layer from [parent].", "<span class='notice'>You cut the internal armor layer from [parent].</span>")
+		if(21)
+			if(diff==FORWARD)
+				user.visible_message("[user] secures [I].", "<span class='notice'>You secure [I] to the cockpit.</span>")
+			else
+				user.visible_message("[user] pries cockpit shielding from [parent].", "<span class='notice'>You pry cockpit shielding from [parent].</span>")
+		if(22)
+			if(diff==FORWARD)
+				user.visible_message("[user] welds cockpit shielding to [parent].", "<span class='notice'>You weld cockpit shielding to [parent].</span>")
+			else
+				user.visible_message("[user] unfastens cockpit shielding.", "<span class='notice'>You unfasten cockpit shielding.</span>")
+	return TRUE
+
 /datum/component/construction/unordered/mecha_chassis/clarke
 	result = /datum/component/construction/mecha/clarke
 	steps = list(

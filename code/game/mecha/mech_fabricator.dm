@@ -28,6 +28,7 @@
 								"Odysseus",
 								"Gygax",
 								"Durand",
+								"Alpha",
 								"H.O.N.K",
 								"Phazon",
 								"Exosuit Equipment",

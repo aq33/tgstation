@@ -856,6 +856,16 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
+/datum/techweb_node/alpha
+	id = "mech_alpha"
+	display_name = "EXOSUIT: Alpha"
+	description = "Alpha exosuit designs"
+	prereq_ids = list("adv_mecha", "weaponry")
+	design_ids = list("alpha_chassis", "alpha_torso", "alpha_head", "alpha_left_arm", "alpha_right_arm", "alpha_left_leg", "alpha_right_leg", "alpha_main",
+	"alpha_peri", "alpha_targ")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	export_price = 5000
+
 /datum/techweb_node/adv_mecha_tools
 	id = "adv_mecha_tools"
 	display_name = "Advanced Exosuit Equipment"
