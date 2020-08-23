@@ -322,3 +322,4 @@
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	faction = list(ROLE_SYNDICATE)
 	loot = list(/obj/item/card/emag, /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite)
+	/mob/living/simple_animal/hostile/proc/AttackingTarget(target.throw_at(throw_target, rand(6,7), 7, user))

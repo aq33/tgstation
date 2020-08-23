@@ -719,7 +719,7 @@
 /obj/item/stack/ore/bananium,
 /obj/structure/closet,
 /turf/open/floor/mineral/bananium,
-/area/space)
+/area/awaymission/challenge/main)
 "fm" = (
 /obj/structure/closet/crate,
 /obj/item/stack/sheet/mineral/plasma,
@@ -892,7 +892,7 @@
 /obj/item/stack/sheet/mineral/bananium,
 /obj/structure/closet,
 /turf/open/floor/mineral/bananium,
-/area/space)
+/area/awaymission/challenge/main)
 "kK" = (
 /obj/item/pet_carrier,
 /mob/living/simple_animal/parrot,
@@ -1097,9 +1097,6 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium/red/brig,
-/area/space)
-"tz" = (
-/turf/open/floor/mineral/bananium,
 /area/space)
 "tB" = (
 /mob/living/simple_animal/hostile/bear/russian,
@@ -1363,9 +1360,6 @@
 /mob/living/simple_animal/hostile/carp/megacarp,
 /turf/open/space,
 /area/space)
-"Hu" = (
-/turf/closed/wall/mineral/bananium,
-/area/space)
 "HA" = (
 /obj/item/clothing/gloves/combat,
 /turf/open/floor/plating/dirt,
@@ -1497,7 +1491,7 @@
 /obj/structure/closet,
 /mob/living/simple_animal/hostile/retaliate/clown,
 /turf/open/floor/mineral/bananium,
-/area/space)
+/area/awaymission/challenge/main)
 "Oj" = (
 /obj/structure/statue/silver/sec,
 /turf/open/floor/plating/dirt,
@@ -1645,10 +1639,6 @@
 /obj/item/claymore,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
-"UN" = (
-/obj/machinery/door/airlock/bananium,
-/turf/open/floor/mineral/bananium,
-/area/space)
 "UO" = (
 /obj/structure/trap/stun,
 /turf/open/floor/plasteel/cult,
@@ -23242,10 +23232,10 @@ aa
 aa
 aa
 aa
-Hu
-Hu
-Hu
-Hu
+wI
+wI
+wI
+wI
 wI
 mz
 mz
@@ -23499,10 +23489,10 @@ aa
 aa
 aa
 aa
-Hu
+wI
 ka
-tz
-tz
+mz
+mz
 fK
 mz
 mz
@@ -23756,10 +23746,10 @@ aa
 aa
 aa
 aa
-Hu
+wI
 eS
-tz
-tz
+mz
+mz
 wI
 Nm
 mz
@@ -24013,10 +24003,10 @@ aa
 aa
 aa
 os
-Hu
+wI
 Oc
-tz
-tz
+mz
+mz
 wI
 mz
 mz
@@ -24270,19 +24260,19 @@ aa
 aa
 aa
 aa
-Hu
-tz
-tz
-tz
+wI
+mz
+mz
+mz
 wI
 wI
 wI
 wI
 wI
 wI
-Hu
-Hu
-Hu
+wI
+wI
+wI
 jN
 Pu
 ez
@@ -24527,19 +24517,19 @@ aa
 aa
 aa
 aa
-Hu
-tz
-tz
-tz
+wI
+mz
+mz
+mz
 fK
 mz
 pW
 jo
 mz
 fK
-tz
-tz
-UN
+mz
+mz
+fK
 GU
 Pu
 ez
@@ -24784,19 +24774,19 @@ aa
 aa
 aa
 aa
-Hu
-Hu
-Hu
-Hu
+wI
+wI
+wI
+wI
 wI
 li
 gf
 mz
 li
 wI
-Hu
-Hu
-Hu
+wI
+wI
+wI
 jN
 Pu
 ez
