@@ -15,6 +15,12 @@
 	turns_per_move = 10
 	mobsay_color = "#ECDA88"
 
+/mob/living/simple_animal/pet/dog/Initialize()
+	. = ..()
+	add_cell_sample()
+
+
+
 	do_footstep = TRUE
 
 //Corgis and pugs are now under one dog subtype
@@ -36,6 +42,9 @@
 	var/obj/item/inventory_back
 	var/shaved = FALSE
 	var/nofur = FALSE 		//Corgis that have risen past the material plane of existence.
+
+/mob/living/simple_animal/pet/dog/corgi/add_cell_sample()
+	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CORGI, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
 /mob/living/simple_animal/pet/dog/corgi/Destroy()
 	QDEL_NULL(inventory_head)
@@ -65,6 +74,9 @@
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/pug = 3)
 	gold_core_spawnable = FRIENDLY_SPAWN
 	collar_type = "pug"
+
+/mob/living/simple_animal/pet/dog/pug/add_cell_sample()
+	AddElement(/datum/element/swabable, CELL_LINE_TABLE_PUG, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
 /mob/living/simple_animal/pet/dog/corgi/exoticcorgi
 	name = "Exotic Corgi"

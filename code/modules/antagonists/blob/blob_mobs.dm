@@ -99,6 +99,7 @@
 	if(istype(linked_node))
 		factory = linked_node
 		factory.spores += src
+		add_cell_sample()
 	. = ..()
 	/*var/datum/disease/advance/random/blob/R = new //either viro is cooperating with xenobio, or a blob has spawned and the round is probably over sooner than they can make a virus for this
 	disease += R*/
@@ -191,6 +192,13 @@
 		color = initial(color)//looks better.
 		add_overlay(blob_head_overlay)
 
+/mob/living/simple_animal/hostile/blob/blobspore/add_cell_sample()
+	AddElement(/datum/element/swabable, CELL_LINE_TABLE_BLOBSPORE, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
+
+/mob/living/simple_animal/hostile/blob/blobspore/independent
+	gold_core_spawnable = FALSE
+	independent = TRUE
+
 /mob/living/simple_animal/hostile/blob/blobspore/weak
 	name = "fragile blob spore"
 	health = 15
@@ -233,6 +241,13 @@
 		verbs -= /mob/living/verb/pulled
 	else
 		pass_flags &= ~PASSBLOB
+
+/mob/living/simple_animal/hostile/blob/blobbernaut/Initialize()
+	. = ..()
+	add_cell_sample()
+
+/mob/living/simple_animal/hostile/blob/blobbernaut/add_cell_sample()
+	AddElement(/datum/element/swabable, CELL_LINE_TABLE_BLOBBERNAUT, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
 /mob/living/simple_animal/hostile/blob/blobbernaut/Life()
 	if(..())

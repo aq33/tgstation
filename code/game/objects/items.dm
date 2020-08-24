@@ -745,7 +745,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 					playsound(hit_atom, 'sound/weapons/genhit.ogg',volume, TRUE, -1)
 			else
 				playsound(hit_atom, 'sound/weapons/throwtap.ogg', 1, volume, -1)
-			
+
 		else
 			playsound(src, drop_sound, YEET_SOUND_VOLUME, ignore_walls = FALSE)
 		return hit_atom.hitby(src, 0, itempush, throwingdatum=throwingdatum)
