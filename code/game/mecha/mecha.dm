@@ -109,6 +109,7 @@
 	var/phasing_energy_drain = 200
 	var/phase_state = "" //icon_state when phasing
 	var/strafe = FALSE //If we are strafing
+	var/canstrafe = TRUE //if we can turn on strafing
 
 	var/nextsmash = 0
 	var/smashcooldown = 3	//deciseconds
@@ -696,7 +697,7 @@
 /obj/mecha/proc/setInternalDamage(int_dam_flag)
 	internal_damage |= int_dam_flag
 	log_message("Internal damage of type [int_dam_flag].", LOG_MECHA)
-	SEND_SOUND(occupant, sound('sound/machines/warning-buzzer.ogg',wait=0))
+	SEND_SOUND(occupant, sound('sound/machines/winerror.ogg',wait=0))
 	diag_hud_set_mechstat()
 	return
 
@@ -1084,7 +1085,7 @@
 
 	if(L?.client)
 		L.update_mouse_pointer()
-		L.client.view_size.resetToDefault() 
+		L.client.view_size.resetToDefault()
 		zoom_mode = 0
 
 /////////////////////////

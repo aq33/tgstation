@@ -151,6 +151,7 @@
 	id_tag = "syndie_listeningpost_external";
 	req_access_txt = "150"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/listeningstation)
 "aq" = (
@@ -723,11 +724,11 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -30
 	},
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	pixel_x = -4;
 	pixel_y = 14
 	},
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	pixel_x = 3;
 	pixel_y = 11
 	},

@@ -253,10 +253,6 @@
 /obj/machinery/light,
 /turf/open/floor/carpet/royalblack,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
-"aP" = (
-/obj/structure/cable,
-/turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "aQ" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Syndicate Ship Airlock";
@@ -948,16 +944,6 @@
 /obj/structure/cable,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
-"cH" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supplymain/hidden{
-	dir = 4
-	},
-/obj/structure/cable,
-/turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "cI" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/supplymain/hidden{
@@ -1276,10 +1262,6 @@
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "dt" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav/syndicate_forgotten_ship)
-"nr" = (
-/obj/structure/cable,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "EP" = (
@@ -2259,7 +2241,7 @@ am
 ct
 bZ
 al
-cH
+EP
 al
 bZ
 bG
@@ -2444,13 +2426,13 @@ bO
 bS
 bZ
 bv
-aP
+So
 aK
-aP
+So
 EP
-aP
+So
 aK
-nr
+So
 al
 bZ
 al
@@ -2545,10 +2527,10 @@ cO
 ah
 ah
 bQ
-aP
+So
 be
-aP
-aP
+So
+So
 bM
 bN
 bN

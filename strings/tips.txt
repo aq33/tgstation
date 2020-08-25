@@ -1,4 +1,4 @@
-﻿Miejsca złączeń map w kosmosie są losowane z każdą rundą, ale poza tym są spójne pomiędzy rundami. Pamiętaj że nie zawsze są dwukierunkowe!
+Miejsca złączeń map w kosmosie są losowane z każdą rundą, ale poza tym są spójne pomiędzy rundami. Pamiętaj że nie zawsze są dwukierunkowe!
 Możesz złapać rzucone przedmity jeśli włączysz tryb rzucania z pustą, aktywną ręką.
 Żeby otworzyć sejf w skarbcu użyj na nim stetoskopu lub trzech plastikowych ładunków wybuchowych.
 Możesz wspiąć się na stół przeciągając siebie na niego. Zajmuje to chwilę i sprawia, że rzeczy, które trzymasz w ręce, kładziesz na stole. Kliknięcie na stół, na który ktoś się wspina, sprawia że go zrzucisz.
@@ -251,4 +251,4 @@ Zdalnie sterowane urządzenia działają, kiedy używasz ich za pomocą kamer.
 Możesz odpalić cygaro od kryształu Supermaterii.
 Używając taśmy klejącej na przedmiotach możesz je przyczepić do ścian lub ludzi! Uważaj, granaty mogą przyczepić ci się do rąk, jeśli nie będziesz ostrożny!
 Jeśli jesteś w potrzasku, rozbierając się będziesz bardziej odporny na popchnięcia. Co cenisz sobie bardziej: wolność, czy dumę?
-Nosząć pancerz przeciwko zamieszkom, jesteś bardziej efektywny w powalaniau, ale pochłania więcej energii z każdym pchnięciem! Dodakowo w drobnym stopniu ochroni cię przed byciem popchniętym!
+Nosząc pancerz przeciwko zamieszkom, jesteś bardziej efektywny w powalaniau. Dodatkowo w drobnym stopniu ochroni cię przed byciem popchniętym!

@@ -1,11 +1,10 @@
 //kills sleeping targets and turns them into blob zombies, produces fragile spores when killed or on expanding
 /datum/blobstrain/reagent/zombifying_pods
-	name = "Zombifying Pods"
-	description = "will do very low toxin damage and harvest sleeping targets for additional resources and a blob zombie."
-	effectdesc = "will also produce fragile spores when killed and on expanding."
-	shortdesc = "will do very low toxin damage and harvest sleeping targets for additional resources(for your overmind) and a blob zombie."
-	analyzerdescdamage = "Does very low toxin damage and kills unconscious humans, turning them into blob zombies."
-	analyzerdesceffect = "Produces spores when expanding and when killed."
+	name = "Kordyceps Zaraźliwy"
+	description = "twoje ataki wstrzykują niewielką ilość toksyn oraz przerabiają nieprzytomne ofiary na dodatkowe zasoby, zamieniając ją w blobowe zombie."
+	effectdesc = "produkujesz słabe zarodniki podczas śmierci i rozrastania."
+	analyzerdescdamage = "Wstrzykuje niewielkie ilości toksyn oraz zabija nieprzytomne ofiary, zamienaijąc je w blobowe zombie."
+	analyzerdesceffect = "Wytwarza zarodniki podczas śmierci i rozrastania."
 	color = "#E88D5D"
 	complementary_color = "#823ABB"
 	message_living = ", and you feel tired"

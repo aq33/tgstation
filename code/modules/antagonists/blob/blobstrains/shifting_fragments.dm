@@ -1,10 +1,10 @@
 //does brute damage, shifts away when damaged
 /datum/blobstrain/reagent/shifting_fragments
-	name = "Shifting Fragments"
-	description = "will do medium brute damage."
-	effectdesc = "will also cause blob parts to shift away when attacked."
-	analyzerdescdamage = "Does medium brute damage."
-	analyzerdesceffect = "When attacked, may shift away from the attacker."
+	name = "Kurka Ruchliwa"
+	description = "zadajesz średnie obrażenia fizyczne."
+	effectdesc = "zamieniasz się miejscami z sąsiednimi blobami, gdy jesteś atakowany."
+	analyzerdescdamage = "Zadaje on średnie obrażenia fizyczne."
+	analyzerdesceffect = "Gdy zostanie zaatakowany, może zamienić się miejscami z sąsiednim blobem."
 	color = "#C8963C"
 	complementary_color = "#3C6EC8"
 	reagent = /datum/reagent/blob/shifting_fragments

@@ -1,7 +1,7 @@
 /datum/round_event_control/pirates
 	name = "Space Pirates"
 	typepath = /datum/round_event/pirates
-	weight = 8
+	weight = 15
 	max_occurrences = 1
 	min_players = 10
 	earliest_start = 30 MINUTES

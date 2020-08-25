@@ -234,6 +234,22 @@
 	build_path = /obj/item/circuitboard/machine/clonescanner
 	category = list("Medical Machinery")
 
+/datum/design/board/clonepod_experimental
+	name = "Machine Design (Experimental Clone Pod)"
+	desc = "Allows for the construction of circuit boards used to build an Experimental Cloning Pod."
+	id = "clonepod_experimental"
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+	build_path = /obj/item/circuitboard/machine/clonepod/experimental
+	category = list("Medical Machinery")
+
+/datum/design/board/clonecontrol_prototype
+	name = "Computer Design (Cloning Machine Console)"
+	desc = "Allows for the construction of circuit boards used to build a new Prototype Cloning Machine console."
+	id = "clonecontrol_prototype"
+	build_path = /obj/item/circuitboard/computer/prototype_cloning
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+	category = list("Medical Machinery")
+
 /datum/design/board/biogenerator
 	name = "Machine Design (Biogenerator Board)"
 	desc = "The circuit board for a biogenerator."
@@ -351,6 +367,14 @@
 	desc = "The circuit board for a Nanite Program Hub."
 	id = "nanite_program_hub"
 	build_path = /obj/item/circuitboard/machine/nanite_program_hub
+	category = list("Research Machinery")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
+
+/datum/design/board/droneDispenser
+	name = "Machine Design (Drone Dispenser)"
+	desc = "The circuit board for a Drone Dispenser."
+	id = "droneDispenser"
+	build_path = /obj/item/circuitboard/machine/droneDispenser
 	category = list("Research Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 

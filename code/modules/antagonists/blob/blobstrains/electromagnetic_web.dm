@@ -1,12 +1,12 @@
 //does burn damage and EMPs, slightly fragile
 /datum/blobstrain/reagent/electromagnetic_web
-	name = "Electromagnetic Web"
+	name = "Galaretnica Elektromagnetyczna"
 	color = "#83ECEC"
 	complementary_color = "#EC8383"
-	description = "will do high burn damage and EMP targets."
-	effectdesc = "will also take massively increased damage and release an EMP when killed."
-	analyzerdescdamage = "Does low burn damage and EMPs targets."
-	analyzerdesceffect = "Is fragile to all types of damage, but takes massive damage from brute. In addition, releases a small EMP when killed."
+	description = "zadajesz ciężkie poparzenia oraz wytwarzasz impulsy EMP przy atakowaniu."
+	effectdesc = "otrzymujesz masywne obrażenia od wszystkich typów obrażeń, jak również wytwarzasz impulsy EMP przy śmierci."
+	analyzerdescdamage = "Wywołuje lekkie poparzenia oraz wytwarza impulsy EMP."
+	analyzerdesceffect = "Jest podatny na wszystkie typy obrażeń, jak również otrzymuje ogromne obrażenia od źródeł fizycznych. Dodatkowo wytwarza mały impuls EMP przy śmierci."
 	reagent = /datum/reagent/blob/electromagnetic_web
 
 /datum/blobstrain/reagent/electromagnetic_web/damage_reaction(obj/structure/blob/B, damage, damage_type, damage_flag)

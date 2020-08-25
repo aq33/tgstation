@@ -3,8 +3,8 @@
 ////////////////////////////////
 
 /datum/special_role/undercover
-	probability = 65			//The probability of any spawning at all
-	proportion = 0.05			//The prbability per person of rolling it (5% is (5 in 100) (1 in 20))
+	probability = 100			//The probability of any spawning at all
+	proportion = 0.15			//The prbability per person of rolling it (5% is (5 in 100) (1 in 20))
 	max_amount = 4				//The maximum amount
 	role_name = "Undercover Agent"
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Head of Personnel", "Chief Medical Officer", "Chief Engineer", "Research Director", "Captain", "Brig Physician", "Clown")
@@ -22,7 +22,7 @@
 /datum/antagonist/special/undercover/greet()
 	to_chat(owner, "<span class='userdanger'>You are an ex-security agent.</span>")
 	to_chat(owner, "<b>Due to your loyality to nanotrasen in the past, you have been granted with a weapon permit.</b>")
-	to_chat(owner, "<b>Additionally nanotrasen has authorised you to have a disabler for personal defense.</b>")
+	to_chat(owner, "<b>Additionally nanotrasen has authorised you to have a miniature energy gun for personal defense.</b>")
 	to_chat(owner, "<b>You are not a member of security, and shouldn't hunt criminals, but may use your weapon for self defense.</b>")
 	to_chat(owner, "<span class='boldannounce'>Do NOT commit traitorous acts in persuit of your objectives.</span>")
 
@@ -58,7 +58,7 @@
 	if(!ishuman(H) && !ismonkey(H))
 		return
 
-	var/obj/item/gun/energy/disabler/T = new(H)
+	var/obj/item/gun/energy/e_gun/mini/T = new(H)
 	var/obj/item/restraints/handcuffs/cable/zipties/T2 = new(H)
 	var/list/slots = list (
 		"backpack" = SLOT_IN_BACKPACK,
@@ -75,6 +75,11 @@
 	var/obj/item/card/id/ID = H.get_idcard()
 	if(ID)
 		ID.access += ACCESS_WEAPONS
+
+	//Mindshield
+	var/obj/item/implant/mindshield/P = new
+	if(!P.implant(H))
+		to_chat(owner, "<span class='warning'Through countless generations your mindshield has finally started to break, you are free!</span>")
 
 ////////////////////////////////
 //////     Objectives    ///////

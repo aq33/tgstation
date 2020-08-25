@@ -40,3 +40,11 @@
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
 		H.adjustStaminaLoss(8)
+
+/mob/living/simple_animal/hostile/retaliate/dolphin/Initialize()
+	. = ..()
+	find_candidates()
+
+/mob/living/simple_animal/hostile/retaliate/dolphin/attack_ghost(mob/dead/observer/user)
+	. = ..()
+	give_to_ghost(user)

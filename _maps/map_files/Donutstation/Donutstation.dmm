@@ -28181,7 +28181,7 @@
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "bnU" = (
-/obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner,
+/obj/effect/spawner/lootdrop/xenobiology_fun_spawner,
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "bnV" = (
@@ -44061,8 +44061,8 @@
 /area/maintenance/port)
 "bWj" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	pixel_x = 6;
 	pixel_y = 4
 	},

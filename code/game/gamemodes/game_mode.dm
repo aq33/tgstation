@@ -34,7 +34,7 @@
 	var/reroll_friendly 	//During mode conversion only these are in the running
 	var/continuous_sanity_checked	//Catches some cases where config options could be used to suggest that modes without antagonists should end when all antagonists die
 	var/enemy_minimum_age = 7 //How many days must players have been playing before they can play this antagonist
-	var/list/allowed_special = list()	//Special roles that can spawn (Add things like /datum/antagonist/special/undercover for them to be able to spawn during this gamemode)
+	var/list/allowed_special = list()	//Special roles that can spawn (Add things like /datum/special_role/undercover for them to be able to spawn during this gamemode)
 	var/list/active_specials = list()	//Special roles that have spawned, and can now spawn late
 
 	var/announce_span = "warning" //The gamemode's name will be in this span during announcement.
@@ -686,17 +686,11 @@
 		rev.remove_revolutionary(TRUE)
 
 /datum/game_mode/proc/generate_station_goals()
-	var/list/possible = list()
 	for(var/T in subtypesof(/datum/station_goal))
 		var/datum/station_goal/G = T
 		if(config_tag in initial(G.gamemode_blacklist))
 			continue
-		possible += T
-	var/goal_weights = 0
-	while(possible.len && goal_weights < STATION_GOAL_BUDGET)
-		var/datum/station_goal/picked = pick_n_take(possible)
-		goal_weights += initial(picked.weight)
-		station_goals += new picked
+		station_goals += new T
 
 
 /datum/game_mode/proc/generate_report() //Generates a small text blurb for the gamemode in centcom report

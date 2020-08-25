@@ -100,8 +100,9 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	if(ic_blocked)
 		//The filter warning message shows the sanitized message though.
-		to_chat(src, "<span class='warning'>That message contained a word prohibited in IC chat! Consider reviewing the server rules.\n<span replaceRegex='show_filtered_ic_chat'>\"[message]\"</span></span>")
-		return
+		if(src.getorgan(/obj/item/organ/brain))
+			to_chat(src, "<span class='warning'>You feel your brain cells slowly fading.</span>")
+			src.adjustOrganLoss(ORGAN_SLOT_BRAIN, 15)
 
 	var/datum/saymode/saymode = SSradio.saymodes[talk_key]
 	var/message_mode = get_message_mode(message)

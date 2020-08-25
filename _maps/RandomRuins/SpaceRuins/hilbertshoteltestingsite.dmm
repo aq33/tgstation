@@ -191,6 +191,7 @@
 	req_access = 207
 	},
 /obj/effect/mapping_helpers/airlock/locked,
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel/grimy,
 /area/ruin/space/has_grav/hilbertresearchfacility)
 "J" = (
