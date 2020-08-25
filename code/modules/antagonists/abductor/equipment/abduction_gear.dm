@@ -728,7 +728,7 @@ Gratulacje! Jesteś teraz wyszkolony do inwazyjnych badań ksenobiologicznych!"}
 	icon_state = "bed"
 
 /obj/structure/table_frame/abductor
-	name = "rama stołu obcych
+	name = "rama stołu obcych"
 	desc = "Wytrzymała rama stołu zrobiona ze stopu obcych."
 	icon_state = "alien_frame"
 	framestack = /obj/item/stack/sheet/mineral/abductor
