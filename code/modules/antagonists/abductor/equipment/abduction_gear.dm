@@ -375,7 +375,7 @@
 /obj/item/firing_pin/abductor
 	name = "dziwna iglica"
 	icon_state = "firing_pin_ayy"
-	desc = "Ta iglica jes śliska i ciepła; This firing pin is slimy and warm; możesz przysiąc, że czujesz, że ciągle próbuje cię badać psychicznie."
+	desc = "Ta iglica jes śliska i ciepła; możesz przysiąc, że czujesz, że ciągle próbuje cię badać psychicznie."
 	fail_message = "<span class='abductor'>Błąd wystrzału, proszę skontaktować się z producentem.</span>"
 
 /obj/item/firing_pin/abductor/pin_auth(mob/living/user)
