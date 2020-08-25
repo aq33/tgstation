@@ -180,7 +180,7 @@
 
 /datum/antagonist/abductee/greet()
 	to_chat(owner, "<span class='warning'><b>Twój umysł pęka w szwach!</b></span>")
-	to_chat(owner, "<big><span class='warning'><b>YNie pamiętasz, jak się tu dostałeś. . .</b></span></big>")
+	to_chat(owner, "<big><span class='warning'><b>Nie pamiętasz, jak się tu dostałeś. . .</b></span></big>")
 	owner.announce_objectives()
 
 /datum/antagonist/abductee/proc/give_objective()
@@ -213,7 +213,7 @@
 	target_amount = 6
 
 /datum/objective/experiment/New()
-	explanation_text = "Przeprowadźcie eksperymenty na [target_amount] ludziach."
+	explanation_text = "Przeprowadź eksperymenty na [target_amount] osobach."
 
 /datum/objective/experiment/check_completion()
 	for(var/obj/machinery/abductor/experiment/E in GLOB.machines)
