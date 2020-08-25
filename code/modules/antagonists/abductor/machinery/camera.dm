@@ -86,7 +86,7 @@
 	console.TeleporterRetrieve()
 
 /datum/action/innate/teleport_self
-	name = "Wyślij Siebię"
+	name = "Wyślij Siebie"
 	icon_icon = 'icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "beam_down"
 
