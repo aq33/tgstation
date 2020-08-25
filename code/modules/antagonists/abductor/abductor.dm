@@ -15,23 +15,23 @@
 
 
 /datum/antagonist/abductor/agent
-	name = "Abductor Agent"
+	name = "Agent Porywaczy"
 	sub_role = "Agent"
 	outfit = /datum/outfit/abductor/agent
 	landmark_type = /obj/effect/landmark/abductor/agent
-	greet_text = "Use your stealth technology and equipment to incapacitate humans for your scientist to retrieve."
+	greet_text = "Używaj swojej technologii maskowania oraz sprzętu, by obezwładniać ludzi dla swojego naukowca, który sprowadzi ich na pokład w celu eksperymentów."
 	show_in_antagpanel = TRUE
 
 /datum/antagonist/abductor/scientist
-	name = "Abductor Scientist"
+	name = "Naukowiec Porywaczy"
 	sub_role = "Scientist"
 	outfit = /datum/outfit/abductor/scientist
 	landmark_type = /obj/effect/landmark/abductor/scientist
-	greet_text = "Use your experimental console and surgical equipment to monitor your agent and experiment upon abducted humans."
+	greet_text = "Używaj swojej konsoli eksperymentacyjnej by monitorować swojego agenta, oraz sprzętu chirurgicznego do eksperymentów na porwanych ludziach."
 	show_in_antagpanel = TRUE
 
 /datum/antagonist/abductor/scientist/onemanteam
-	name = "Abductor Solo"
+	name = "Samotny Porywacz"
 	outfit = /datum/outfit/abductor/scientist/onemanteam
 
 /datum/antagonist/abductor/create_team(datum/team/abductor_team/new_team)
@@ -56,16 +56,16 @@
 
 /datum/antagonist/abductor/on_removal()
 	if(owner.current)
-		to_chat(owner.current,"<span class='userdanger'>You are no longer the [owner.special_role]!</span>")
+		to_chat(owner.current,"<span class='userdanger'>Nie jesteś już! [owner.special_role]!</span>")
 	owner.special_role = null
 	REMOVE_TRAIT(owner, TRAIT_ABDUCTOR_TRAINING, ABDUCTOR_ANTAGONIST)
 	return ..()
 
 /datum/antagonist/abductor/greet()
-	to_chat(owner.current, "<span class='notice'>You are the [owner.special_role]!</span>")
-	to_chat(owner.current, "<span class='notice'>With the help of your teammate, kidnap and experiment on station crew members!</span>")
-	to_chat(owner.current, "<span class='notice'>There are two of you! One can monitor cameras while the other infiltrates the station.</span>")
-	to_chat(owner.current, "<span class='notice'>Choose a worthy disguise and plan your targets carefully! Humans will kill you on sight.</span>")
+	to_chat(owner.current, "<span class='notice'>Zostałeś wybrany jako [owner.special_role]!</span>")
+	to_chat(owner.current, "<span class='notice'>Z pomocą twojego kolegi, porywaj i eksperymentuj na członkach załogi!</span>")
+	to_chat(owner.current, "<span class='notice'>Jest was dwóch! Jeden z was może minotrować kamery, gdy drugi infiltruje stację.</span>")
+	to_chat(owner.current, "<span class='notice'>Wybierzcie dorbe przebranie oraz swoje cele z głową! Załoga spróbuje was zabić przy każdej okazji.</span>")
 	to_chat(owner.current, "<span class='notice'>[greet_text]</span>")
 	owner.announce_objectives()
 
@@ -129,7 +129,7 @@
 			H.equipOutfit(/datum/outfit/abductor/scientist)
 
 /datum/team/abductor_team
-	member_name = "abductor"
+	member_name = "porywacz"
 	var/team_number
 	var/list/datum/mind/abductees = list()
 	var/static/team_count = 1
@@ -137,7 +137,7 @@
 /datum/team/abductor_team/New()
 	..()
 	team_number = team_count++
-	name = "Mothership [pick(GLOB.possible_changeling_IDs)]" //TODO Ensure unique and actual alieny names
+	name = "Statek-Matka [pick(GLOB.possible_changeling_IDs)]" //TODO Ensure unique and actual alieny names
 	add_objective(new/datum/objective/experiment)
 
 /datum/team/abductor_team/is_solo()
@@ -158,11 +158,11 @@
 		if(!O.check_completion())
 			won = FALSE
 	if(won)
-		result += "<span class='greentext big'>[name] team fulfilled its mission!</span>"
+		result += "<span class='greentext big'>Drużyna [name] wypełniła swoją misję!</span>"
 	else
-		result += "<span class='redtext big'>[name] team failed its mission.</span>"
+		result += "<span class='redtext big'>Drużyna [name] spaliła swoją misję!</span>"
 
-	result += "<span class='header'>The abductors of [name] were:</span>"
+	result += "<span class='header'>Porywaczami drużyny [name] byli:</span>"
 	for(var/datum/mind/abductor_mind in members)
 		result += printplayer(abductor_mind)
 	result += printobjectives(objectives)
@@ -171,7 +171,7 @@
 
 /datum/antagonist/abductee
 	name = "Abductee"
-	roundend_category = "abductees"
+	roundend_category = "porwani"
 	antagpanel_category = "Abductee"
 
 /datum/antagonist/abductee/on_gain()
@@ -179,8 +179,8 @@
 	. = ..()
 
 /datum/antagonist/abductee/greet()
-	to_chat(owner, "<span class='warning'><b>Your mind snaps!</b></span>")
-	to_chat(owner, "<big><span class='warning'><b>You can't remember how you got here...</b></span></big>")
+	to_chat(owner, "<span class='warning'><b>Twój umysł pęka w szwach!</b></span>")
+	to_chat(owner, "<big><span class='warning'><b>YNie pamiętasz, jak się tu dostałeś. . .</b></span></big>")
 	owner.announce_objectives()
 
 /datum/antagonist/abductee/proc/give_objective()
@@ -213,7 +213,7 @@
 	target_amount = 6
 
 /datum/objective/experiment/New()
-	explanation_text = "Experiment on [target_amount] humans."
+	explanation_text = "Przeprowadźcie eksperymenty na [target_amount] ludziach."
 
 /datum/objective/experiment/check_completion()
 	for(var/obj/machinery/abductor/experiment/E in GLOB.machines)
