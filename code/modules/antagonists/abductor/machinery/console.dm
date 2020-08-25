@@ -49,7 +49,7 @@
 		dat += "<a href='?src=[REF(src)];dispense=helmet'>Hełm Agentaqt</A><br>"
 		dat += "<a href='?src=[REF(src)];dispense=vest'>Kamizelka Agenta</A><br>"
 		dat += "<a href='?src=[REF(src)];dispense=silencer'>Uciszacz Radiowy</A><br>"
-		dat += "<a href='?src=[REF(src)];dispense=tool'>Narzędzie Naukowe/A><br>"
+		dat += "<a href='?src=[REF(src)];dispense=tool'>Narzędzie Naukowe</A><br>"
 		dat += "<a href='?src=[REF(src)];dispense=tongue'>Superlingual Matrix</a><br>"
 	else
 		dat += "<span class='bad'>NIE WYKRYTO MASZYNY EKSPERYMENTACYJNEJ</span> <br>"
