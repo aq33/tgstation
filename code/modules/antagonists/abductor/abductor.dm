@@ -27,7 +27,7 @@
 	sub_role = "Scientist"
 	outfit = /datum/outfit/abductor/scientist
 	landmark_type = /obj/effect/landmark/abductor/scientist
-	greet_text = "Używaj swojej konsoli eksperymentacyjnej by monitorować swojego agenta, oraz sprzętu chirurgicznego do eksperymentów na porwanych ludziach."
+	greet_text = "Używaj swojej konsoli eksperymentacyjnej, by monitorować swojego agenta oraz sprzętu chirurgicznego do eksperymentów na porwanych ludziach."
 	show_in_antagpanel = TRUE
 
 /datum/antagonist/abductor/scientist/onemanteam
@@ -64,8 +64,8 @@
 /datum/antagonist/abductor/greet()
 	to_chat(owner.current, "<span class='notice'>Zostałeś wybrany jako [owner.special_role]!</span>")
 	to_chat(owner.current, "<span class='notice'>Z pomocą twojego kolegi, porywaj i eksperymentuj na członkach załogi!</span>")
-	to_chat(owner.current, "<span class='notice'>Jest was dwóch! Jeden z was może minotrować kamery, gdy drugi infiltruje stację.</span>")
-	to_chat(owner.current, "<span class='notice'>Wybierzcie dorbe przebranie oraz swoje cele z głową! Załoga spróbuje was zabić przy każdej okazji.</span>")
+	to_chat(owner.current, "<span class='notice'>Jest was dwóch! Jeden z was może monitorować kamery, gdy drugi infiltruje stację.</span>")
+	to_chat(owner.current, "<span class='notice'>Wybierzcie dobre przebranie oraz swoje cele z głową! Załoga spróbuje was zabić przy każdej okazji.</span>")
 	to_chat(owner.current, "<span class='notice'>[greet_text]</span>")
 	owner.announce_objectives()
 
