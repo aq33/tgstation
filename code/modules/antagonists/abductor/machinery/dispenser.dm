@@ -1,6 +1,6 @@
 /obj/machinery/abductor/gland_dispenser
 	name = "magazyn organów zastępczych"
-	desc = "Zbiornik wypełniony organami zastępczymis."
+	desc = "Zbiornik wypełniony organami zastępczymi."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "dispenser"
 	density = TRUE
