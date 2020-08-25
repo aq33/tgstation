@@ -8,7 +8,7 @@
 //AGENT VEST
 /obj/item/clothing/suit/armor/abductor/vest
 	name = "kamizelka agenta"
-	desc = "Kamizelka z wbudowaną zaawansowaną technologią maskowania. Posiada dwa tryby - maskowanie oraz walka."
+	desc = "Kamizelka ze wbudowaną zaawansowaną technologią maskowania. Posiada dwa tryby: maskowanie oraz walka."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "vest_stealth"
 	item_state = "armor"
@@ -252,7 +252,7 @@
 
 /obj/item/abductor/silencer
 	name = "uciszacz porywaczy"
-	desc = "Kompaktowe urządzenie pozwalające wyłączyć sprzęt komunikacyjny."
+	desc = "Kompaktowe urządzenie pozwalające wyłączać sprzęt komunikacyjny."
 	icon_state = "silencer"
 	item_state = "gizmo"
 
@@ -367,7 +367,7 @@
 		if(QDELETED(L) || L.stat == DEAD)
 			return
 
-		to_chat(L, "<span class='italics'>Słyszysz głos w swojej głosie mówiący: </span><span class='abductor'>[message]</span>")
+		to_chat(L, "<span class='italics'>Słyszysz głos w swojej głowie, mówiący: </span><span class='abductor'>[message]</span>")
 		to_chat(user, "<span class='notice'>Wysyłasz wiadmość do swojego celu.</span>")
 		log_directed_talk(user, L, message, LOG_SAY, "abductor whisper")
 
@@ -589,7 +589,7 @@ Gratulacje! Jesteś teraz wyszkolony do inwazyjnych badań ksenobiologicznych!"}
 
 /obj/item/restraints/handcuffs/energy
 	name = "twarde pole energetyczne"
-	desc = "twarde pole energetyczne służące jak kajdanki."
+	desc = "twarde pole energetyczne działające jak kajdanki."
 	icon_state = "cuff" // Needs sprite
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
@@ -796,7 +796,7 @@ Gratulacje! Jesteś teraz wyszkolony do inwazyjnych badań ksenobiologicznych!"}
 	. = ..()
 	if(iscarbon(AM))
 		START_PROCESSING(SSobj, src)
-		to_chat(AM, "<span class='danger'>You feel a series of tiny pricks!</span>")
+		to_chat(AM, "<span class='danger'>Czujesz serię małych ukłuć!/span>")
 
 /obj/structure/table/optable/abductor/process()
 	. = PROCESS_KILL
@@ -812,7 +812,7 @@ Gratulacje! Jesteś teraz wyszkolony do inwazyjnych badań ksenobiologicznych!"}
 
 /obj/structure/closet/abductor
 	name = "szafka obcych"
-	desc = "Posiada sekrety wszechświata."
+	desc = "Zawiera sekrety wszechświata."
 	icon_state = "abductor"
 	icon_door = "abductor"
 	can_weld_shut = FALSE
