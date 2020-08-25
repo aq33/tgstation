@@ -448,7 +448,7 @@ Gratulacje! Jesteś teraz wyszkolony do inwazyjnych badań ksenobiologicznych!"}
 		if(BATON_PROBE)
 			txt = "sondowania"
 
-	to_chat(usr, "<span class='notice'>Zmieniasz pałkę na tryb [txt] mode.</span>")
+	to_chat(usr, "<span class='notice'>Zmieniasz pałkę na tryb [txt].</span>")
 	update_icon()
 
 /obj/item/abductor/baton/update_icon()
