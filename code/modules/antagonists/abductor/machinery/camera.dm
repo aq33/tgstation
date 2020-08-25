@@ -1,5 +1,5 @@
 /obj/machinery/computer/camera_advanced/abductor
-	name = "Human Observation Console"
+	name = "Konsola Obserwacji Ludzi"
 	var/team_number = 0
 	networks = list("ss13", "abductor")
 	var/datum/action/innate/teleport_in/tele_in_action = new
@@ -59,7 +59,7 @@
 	return HAS_TRAIT(H, TRAIT_ABDUCTOR_SCIENTIST_TRAINING)
 
 /datum/action/innate/teleport_in
-	name = "Send To"
+	name = "Wyślij Do"
 	icon_icon = 'icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "beam_down"
 
@@ -74,7 +74,7 @@
 		P.PadToLoc(remote_eye.loc)
 
 /datum/action/innate/teleport_out
-	name = "Retrieve"
+	name = "Odbierz"
 	icon_icon = 'icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "beam_up"
 
@@ -86,7 +86,7 @@
 	console.TeleporterRetrieve()
 
 /datum/action/innate/teleport_self
-	name = "Send Self"
+	name = "Wyślij Siebię"
 	icon_icon = 'icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "beam_down"
 
@@ -101,7 +101,7 @@
 		P.MobToLoc(remote_eye.loc,C)
 
 /datum/action/innate/vest_mode_swap
-	name = "Switch Vest Mode"
+	name = "Zmień Tryb Kamizelki"
 	icon_icon = 'icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "vest_mode"
 
@@ -113,7 +113,7 @@
 
 
 /datum/action/innate/vest_disguise_swap
-	name = "Switch Vest Disguise"
+	name = "Zmień Przebranie"
 	icon_icon = 'icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "vest_disguise"
 
@@ -124,7 +124,7 @@
 	console.SelectDisguise(remote=1)
 
 /datum/action/innate/set_droppoint
-	name = "Set Experiment Release Point"
+	name = "Umieść Punkt Wypuszczania Eksperymentów"
 	icon_icon = 'icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "set_drop"
 
