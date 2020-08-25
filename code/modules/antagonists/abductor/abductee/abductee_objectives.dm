@@ -45,7 +45,7 @@
 /datum/objective/abductee/calling/New()
 	var/mob/dead/D = pick(GLOB.dead_mob_list)
 	if(D)
-		explanation_text = "Wiesz, że [D] zginął. Przygotuj seans, by przywołać [D.p_them()] z zaświatów."
+		explanation_text = "Wiesz, że [D] zginął. Przygotuj seans, by przywołać duszę [D.p_them()] z zaświatów."
 
 /datum/objective/abductee/forbiddennumber
 
