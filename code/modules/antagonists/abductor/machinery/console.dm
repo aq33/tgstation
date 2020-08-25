@@ -12,8 +12,8 @@
 //Console
 
 /obj/machinery/abductor/console
-	name = "abductor console"
-	desc = "Ship command center."
+	name = "konsola porywaczy"
+	desc = "Centrum Dowodzenia Statkiem."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "console"
 	density = TRUE
@@ -29,7 +29,7 @@
 	if(.)
 		return
 	if(!HAS_TRAIT(user, TRAIT_ABDUCTOR_TRAINING) && !HAS_TRAIT(user.mind, TRAIT_ABDUCTOR_TRAINING))
-		to_chat(user, "<span class='warning'>You start mashing alien buttons at random!</span>")
+		to_chat(user, "<span class='warning'>Zaczynasz wciskać obce przyciski na chybił trafił!</span>")
 		if(do_after(user,100, target = src))
 			TeleporterSend()
 		return
@@ -40,46 +40,46 @@
 	if(experiment)
 		var/points = experiment.points
 		var/credits = experiment.credits
-		dat += "Collected Samples : [points] <br>"
-		dat += "Gear Credits: [credits] <br>"
-		dat += "<b>Transfer data in exchange for supplies:</b><br>"
-		dat += "<a href='?src=[REF(src)];dispense=baton'>Advanced Baton (2 Credits)</A><br>"
-		dat += "<a href='?src=[REF(src)];dispense=mind_device'>Mental Interface Device (2 Credits)</A><br>"
-		dat += "<a href='?src=[REF(src)];dispense=chem_dispenser'>Reagent Synthesizer (2 Credits)</A><br>"
-		dat += "<a href='?src=[REF(src)];dispense=helmet'>Agent Helmet</A><br>"
-		dat += "<a href='?src=[REF(src)];dispense=vest'>Agent Vest</A><br>"
-		dat += "<a href='?src=[REF(src)];dispense=silencer'>Radio Silencer</A><br>"
-		dat += "<a href='?src=[REF(src)];dispense=tool'>Science Tool</A><br>"
+		dat += "Zebrane Próbki : [points] <br>"
+		dat += "Kredyty Wyposażenia: [credits] <br>"
+		dat += "<b>Prześlij dane w zamian za zasoby:</b><br>"
+		dat += "<a href='?src=[REF(src)];dispense=baton'>Zaawansowana Pałka (2 Kredyty)</A><br>"
+		dat += "<a href='?src=[REF(src)];dispense=mind_device'>Interfejs Mentalny (2 Kredyty)</A><br>"
+		dat += "<a href='?src=[REF(src)];dispense=chem_dispenser'>Reagent Synthesizer (2 Kredyty)</A><br>"
+		dat += "<a href='?src=[REF(src)];dispense=helmet'>Hełm Agentaqt</A><br>"
+		dat += "<a href='?src=[REF(src)];dispense=vest'>Kamizelka Agenta</A><br>"
+		dat += "<a href='?src=[REF(src)];dispense=silencer'>Uciszacz Radiowy</A><br>"
+		dat += "<a href='?src=[REF(src)];dispense=tool'>Narzędzie Naukowe/A><br>"
 		dat += "<a href='?src=[REF(src)];dispense=tongue'>Superlingual Matrix</a><br>"
 	else
-		dat += "<span class='bad'>NO EXPERIMENT MACHINE DETECTED</span> <br>"
+		dat += "<span class='bad'>NIE WYKRYTO MASZYNY EKSPERYMENTACYJNEJ</span> <br>"
 
 	if(pad)
-		dat += "<span class='bad'>Emergency Teleporter System.</span>"
-		dat += "<span class='bad'>Consider using primary observation console first.</span>"
-		dat += "<a href='?src=[REF(src)];teleporter_send=1'>Activate Teleporter</A><br>"
+		dat += "<span class='bad'>Awaryjny System Teleportacyjny.</span>"
+		dat += "<span class='bad'>Najpierw rozważ użycie głównej konsoli obserwacyjnej.</span>"
+		dat += "<a href='?src=[REF(src)];teleporter_send=1'>Aktywuj Teleporter</A><br>"
 		if(gizmo?.marked)
-			dat += "<a href='?src=[REF(src)];teleporter_retrieve=1'>Retrieve Mark</A><br>"
+			dat += "<a href='?src=[REF(src)];teleporter_retrieve=1'>Odzyskaj Oznaczony Cel</A><br>"
 		else
-			dat += "<span class='linkOff'>Retrieve Mark</span><br>"
+			dat += "<span class='linkOff'>Odzyskaj Oznaczony Cel</span><br>"
 	else
-		dat += "<span class='bad'>NO TELEPAD DETECTED</span></br>"
+		dat += "<span class='bad'>NIE WYKRYTO TELEPADA</span></br>"
 
 	if(vest)
-		dat += "<h4> Agent Vest Mode </h4><br>"
+		dat += "<h4> Tryb Kamizelki Agenta </h4><br>"
 		var/mode = vest.mode
 		if(mode == VEST_STEALTH)
 			dat += "<a href='?src=[REF(src)];flip_vest=1'>Combat</A>"
-			dat += "<span class='linkOff'>Stealth</span>"
+			dat += "<span class='linkOff'>Maskowanie</span>"
 		else
-			dat += "<span class='linkOff'>Combat</span>"
+			dat += "<span class='linkOff'>Walka</span>"
 			dat += "<a href='?src=[REF(src)];flip_vest=1'>Stealth</A>"
 
 		dat+="<br>"
-		dat += "<a href='?src=[REF(src)];select_disguise=1'>Select Agent Vest Disguise</a><br>"
-		dat += "<a href='?src=[REF(src)];toggle_vest=1'>[HAS_TRAIT_FROM(vest, TRAIT_NODROP, ABDUCTOR_VEST_TRAIT) ? "Unlock" : "Lock"] Vest</a><br>"
+		dat += "<a href='?src=[REF(src)];select_disguise=1'>Wybierz Przebranie Kamizelki Agenta</a><br>"
+		dat += "<a href='?src=[REF(src)];toggle_vest=1'>[HAS_TRAIT_FROM(vest, TRAIT_NODROP, ABDUCTOR_VEST_TRAIT) ? "Odblokuj" : "Zablokuj"] Kamizelkę</a><br>"
 	else
-		dat += "<span class='bad'>NO AGENT VEST DETECTED</span>"
+		dat += "<span class='bad'>NIE WYKRYTO KAMIZELKI AGENTA</span>"
 	var/datum/browser/popup = new(user, "computer", "Abductor Console", 400, 500)
 	popup.set_content(dat)
 	popup.open()
@@ -152,12 +152,12 @@
 
 /obj/machinery/abductor/console/proc/SetDroppoint(turf/open/location,user)
 	if(!istype(location))
-		to_chat(user, "<span class='warning'>That place is not safe for the specimen.</span>")
+		to_chat(user, "<span class='warning'>Te miejsce nie jest bezpieczne dla obiektu testowego.</span>")
 		return
 
 	if(pad)
 		pad.teleport_target = location
-		to_chat(user, "<span class='notice'>Location marked as test subject release point.</span>")
+		to_chat(user, "<span class='notice'>Lokacja oznaczona jako miejsce wypuszczania obiektów testowych.</span>")
 
 
 /obj/machinery/abductor/console/Initialize(mapload)
@@ -185,7 +185,7 @@
 
 /obj/machinery/abductor/console/proc/AddSnapshot(mob/living/carbon/human/target)
 	if(istype(target.get_item_by_slot(SLOT_HEAD), /obj/item/clothing/head/foilhat))
-		say("Subject wearing specialized protective headgear, unable to get a proper scan!")
+		say("Obiekt nosi specjalne ochronne nakrycie głowy, skanowanie nie jest możliwe!")
 		return
 	var/datum/icon_snapshot/entry = new
 	entry.name = target.name
@@ -223,9 +223,9 @@
 
 /obj/machinery/abductor/console/attackby(obj/O, mob/user, params)
 	if(istype(O, /obj/item/abductor/gizmo) && AddGizmo(O))
-		to_chat(user, "<span class='notice'>You link the tool to the console.</span>")
+		to_chat(user, "<span class='notice'>Łączysz narzędzie z konsolą.</span>")
 	else if(istype(O, /obj/item/clothing/suit/armor/abductor/vest) && AddVest(O))
-		to_chat(user, "<span class='notice'>You link the vest to the console.</span>")
+		to_chat(user, "<span class='notice'>Łączysz kamizelkę z konsolą.</span>")
 	else
 		return ..()
 
@@ -234,7 +234,7 @@
 /obj/machinery/abductor/console/proc/Dispense(item,cost=1)
 	if(experiment && experiment.credits >= cost)
 		experiment.credits -=cost
-		say("Incoming supply!")
+		say("Nadlatuje Dostawa!")
 		var/drop_location = loc
 		if(pad)
 			flick("alien-pad", pad)
@@ -242,4 +242,4 @@
 		new item(drop_location)
 
 	else
-		say("Insufficent data!")
+		say("Niewystarczająca ilość danych!")
