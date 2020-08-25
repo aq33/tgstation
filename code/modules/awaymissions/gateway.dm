@@ -121,10 +121,10 @@ GLOBAL_DATUM(the_gateway, /obj/machinery/gateway/centerstation)
 	if(!powered())
 		return
 	if(!awaygate)
-		to_chat(user, "<span class='notice'>Error: No destination found.</span>")
+		to_chat(user, "<span class='notice'>Błąd: Nie znaleziono destynacji.</span>")
 		return
 	if(world.time < wait)
-		to_chat(user, "<span class='notice'>Error: Warpspace triangulation in progress. Estimated time to completion: [DisplayTimeText(wait - world.time)].</span>")
+		to_chat(user, "<span class='notice'>Błąd: Triangulacja przestrzeni zagiętej wciąż trwa. Szacowany czas do zakończenia: [DisplayTimeText(wait - world.time)].</span>")
 		return
 
 	for(var/obj/machinery/gateway/G in linked)
@@ -160,9 +160,9 @@ GLOBAL_DATUM(the_gateway, /obj/machinery/gateway/centerstation)
 
 /obj/machinery/gateway/centeraway/multitool_act(mob/living/user, obj/item/I)
 	if(calibrated)
-		to_chat(user, "\black The gate is already calibrated, there is no work for you to do here.")
+		to_chat(user, "\black Brama już jest skalibrowana, nie masz co tu robić.")
 	else
-		to_chat(user, "<span class='boldnotice'>Recalibration successful!</span>: \black This gate's systems have been fine tuned.  Travel to this gate will now be on target.")
+		to_chat(user, "<span class='boldnotice'>Rekalibracja zakończona powodzeniem!</span>: \black Systemy tej Bramy zostały dobrze nastawione.  Podróż do tej bramy będzie teraz celem.")
 		calibrated = TRUE
 	return TRUE
 
@@ -193,7 +193,7 @@ GLOBAL_DATUM(the_gateway, /obj/machinery/gateway/centerstation)
 	if(!detect())
 		return
 	if(!stationgate)
-		to_chat(user, "<span class='notice'>Error: No destination found.</span>")
+		to_chat(user, "<span class='notice'>Błąd: Nie znaleziono destynacji podróży.</span>")
 		return
 
 	for(var/obj/machinery/gateway/G in linked)
@@ -204,7 +204,7 @@ GLOBAL_DATUM(the_gateway, /obj/machinery/gateway/centerstation)
 
 /obj/machinery/gateway/centeraway/proc/check_exile_implant(mob/living/L)
 	for(var/obj/item/implant/exile/E in L.implants)//Checking that there is an exile implant
-		to_chat(L, "\black The station gate has detected your exile implant and is blocking your entry.")
+		to_chat(L, "\black Brama na stacji wykryła twój implant wygnania, nie pozwala ci przejść.")
 		return TRUE
 	return FALSE
 
@@ -221,12 +221,12 @@ GLOBAL_DATUM(the_gateway, /obj/machinery/gateway/centerstation)
 	else
 		for(var/mob/living/L in AM.contents)
 			if(check_exile_implant(L))
-				say("Rejecting [AM]: Exile implant detected in contained lifeform.")
+				say("Rejecting [AM]: Implant wygnania wykryty w zabezpieczonej formie życia.")
 				return
 	if(AM.has_buckled_mobs())
 		for(var/mob/living/L in AM.buckled_mobs)
 			if(check_exile_implant(L))
-				say("Rejecting [AM]: Exile implant detected in close proximity lifeform.")
+				say("Rejecting [AM]: Implant wygnania wykryty w pobliskiej formie życia.")
 				return
 	AM.forceMove(get_step(stationgate.loc, SOUTH))
 	AM.setDir(SOUTH)
@@ -237,7 +237,7 @@ GLOBAL_DATUM(the_gateway, /obj/machinery/gateway/centerstation)
 
 
 /obj/machinery/gateway/centeraway/admin
-	desc = "A mysterious gateway built by unknown hands, this one seems more compact."
+	desc = "Tajemnicze wrota zbudowane przed wiekami, przez nieznane ręce, te wydają się być bardziej kompaktowe."
 
 /obj/machinery/gateway/centeraway/admin/Initialize()
 	. = ..()
