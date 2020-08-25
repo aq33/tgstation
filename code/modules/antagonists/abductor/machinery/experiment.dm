@@ -163,7 +163,7 @@
 
 	var/datum/antagonist/abductor/user_abductor = user.mind.has_antag_datum(/datum/antagonist/abductor)
 	if(!user_abductor)
-		return "<span class='bad'>Błąd Autoryzacji. Skontaktuj się z Statkiem Matką.</span>"
+		return "<span class='bad'>Błąd Autoryzacji. Skontaktuj się ze Statkiem Matką.</span>"
 
 	var/point_reward = 0
 	if(H in history)
