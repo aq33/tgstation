@@ -1,6 +1,6 @@
 /obj/machinery/abductor/experiment
 	name = "maszyna eksperymentacyjna"
-	desc = Duża, wielkości człowieka rurka ze skomplikowanym układem maszyn chirurgicznych."
+	desc = "Duża, wielkości człowieka rurka ze skomplikowanym układem maszyn chirurgicznych."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "experiment-open"
 	density = FALSE
