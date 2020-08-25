@@ -1,6 +1,6 @@
 /obj/machinery/abductor/experiment
-	name = "experimentation machine"
-	desc = "A large man-sized tube sporting a complex array of surgical machinery."
+	name = "maszyna eksperymentacyjna"
+	desc = Duża, wielkości człowieka rurka ze skomplikowanym układem maszyn chirurgicznych."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "experiment-open"
 	density = FALSE
@@ -45,7 +45,7 @@
 		return
 	if(message_cooldown <= world.time)
 		message_cooldown = world.time + 50
-		to_chat(user, "<span class='warning'>[src]'s door won't budge!</span>")
+		to_chat(user, "<span class='warning'>Drzwi maszyny nie chcą się ruszyć!</span>")
 
 /obj/machinery/abductor/experiment/container_resist(mob/living/user)
 	user.changeNext_move(CLICK_CD_BREAKOUT)
@@ -106,31 +106,31 @@
 		dat += "<table><tr><td>"
 		dat += "<img src=dissection_img height=80 width=80>" //Avert your eyes
 		dat += "</td><td>"
-		dat += "<a href='?src=[REF(src)];experiment=1'>Probe</a><br>"
-		dat += "<a href='?src=[REF(src)];experiment=2'>Dissect</a><br>"
-		dat += "<a href='?src=[REF(src)];experiment=3'>Analyze</a><br>"
+		dat += "<a href='?src=[REF(src)];experiment=1'>Sonduj</a><br>"
+		dat += "<a href='?src=[REF(src)];experiment=2'>Przeprowadź Sekcję</a><br>"
+		dat += "<a href='?src=[REF(src)];experiment=3'>Analizuj</a><br>"
 		dat += "</td></tr></table>"
 	else
-		dat += "<span class='linkOff'>Experiment </span>"
+		dat += "<span class='linkOff'>Eksperymentuj </span>"
 
 	if(!occupant)
-		dat += "<h3>Machine Unoccupied</h3>"
+		dat += "<h3>Maszyna Jest Wolna</h3>"
 	else
-		dat += "<h3>Subject Status : </h3>"
+		dat += "<h3>Status Obiektu : </h3>"
 		dat += "[occupant.name] => "
 		var/mob/living/mob_occupant = occupant
 		switch(mob_occupant.stat)
 			if(CONSCIOUS)
-				dat += "<span class='good'>Conscious</span>"
+				dat += "<span class='good'>Przytomny</span>"
 			if(UNCONSCIOUS)
-				dat += "<span class='average'>Unconscious</span>"
+				dat += "<span class='average'>Nieprzytomnys</span>"
 			else // DEAD
-				dat += "<span class='bad'>Deceased</span>"
+				dat += "<span class='bad'>Martwy</span>"
 	dat += "<br>"
 	dat += "[flash]"
 	dat += "<br>"
-	dat += "<a href='?src=[REF(src)];refresh=1'>Scan</a>"
-	dat += "<a href='?src=[REF(src)];[state_open ? "close=1'>Close</a>" : "open=1'>Open</a>"]"
+	dat += "<a href='?src=[REF(src)];refresh=1'>Skanuj</a>"
+	dat += "<a href='?src=[REF(src)];[state_open ? "close=1'>Zamknij</a>" : "open=1'>Otwórz</a>"]"
 	var/datum/browser/popup = new(user, "experiment", "Probing Console", 300, 300)
 	popup.set_title_image(user.browse_rsc_icon(icon, icon_state))
 	popup.set_content(dat)
@@ -163,31 +163,31 @@
 
 	var/datum/antagonist/abductor/user_abductor = user.mind.has_antag_datum(/datum/antagonist/abductor)
 	if(!user_abductor)
-		return "<span class='bad'>Authorization failure. Contact mothership immidiately.</span>"
+		return "<span class='bad'>Błąd Autoryzacji. Skontaktuj się z Statkiem Matką.</span>"
 
 	var/point_reward = 0
 	if(H in history)
-		return "<span class='bad'>Specimen already in database.</span>"
+		return "<span class='bad'>Obiekt jest już w bazie danych.</span>"
 	if(H.stat == DEAD)
-		say("Specimen deceased - please provide fresh sample.")
+		say("Obiekt zmarł - prosimy o dostarczenie świeżej próbki.")
 		return "<span class='bad'>Specimen deceased.</span>"
 	var/obj/item/organ/heart/gland/GlandTest = locate() in H.internal_organs
 	if(!GlandTest)
-		say("Experimental dissection not detected!")
-		return "<span class='bad'>No glands detected!</span>"
+		say("Dysekcja eksperymentalna nie została wykryta!")
+		return "<span class='bad'>Nie wykryto glandu!</span>"
 	if(H.mind != null && H.ckey != null)
 		LAZYINITLIST(abductee_minds)
 		LAZYADD(history, H)
 		LAZYADD(abductee_minds, H.mind)
-		say("Processing specimen...")
+		say("Przetwarzanie obiektu...")
 		sleep(5)
 		switch(text2num(type))
 			if(1)
-				to_chat(H, "<span class='warning'>You feel violated.</span>")
+				to_chat(H, "<span class='warning'>Czujesz się naruszony.</span>")
 			if(2)
-				to_chat(H, "<span class='warning'>You feel yourself being sliced apart and put back together.</span>")
+				to_chat(H, "<span class='warning'>Czujesz się pokrojony na kawałki i poskładany z powrotem.</span>")
 			if(3)
-				to_chat(H, "<span class='warning'>You feel intensely watched.</span>")
+				to_chat(H, "<span class='warning'>Czujesz się intensywnie obserwowany.</span>")
 		sleep(5)
 		user_abductor.team.abductees += H.mind
 		H.mind.add_antag_datum(/datum/antagonist/abductee)
@@ -201,15 +201,15 @@
 			playsound(src.loc, 'sound/machines/ding.ogg', 50, 1)
 			points += point_reward
 			credits += point_reward
-			return "<span class='good'>Experiment successful! [point_reward] new data-points collected.</span>"
+			return "<span class='good'>Eksperyment zakończony sukcesem! Liczba dodanych punktów danych wynosi: [point_reward].</span>"
 		else
 			playsound(src.loc, 'sound/machines/buzz-sigh.ogg', 50, 1)
-			return "<span class='bad'>Experiment failed! No replacement organ detected.</span>"
+			return "<span class='bad'>Eksperyment się nie powiódł! Nie wykryto żadnego organu zastępczego.</span>"
 	else
-		say("Brain activity nonexistent - disposing sample...")
+		say("Brak aktywności mózgowej - pozbywanie się próbki w toku...")
 		open_machine()
 		SendBack(H)
-		return "<span class='bad'>Specimen braindead - disposed.</span>"
+		return "<span class='bad'>Obiekt bez aktywności mózgowej został wydalony pomyślnie.</span>"
 
 
 /obj/machinery/abductor/experiment/proc/SendBack(mob/living/carbon/human/H)
