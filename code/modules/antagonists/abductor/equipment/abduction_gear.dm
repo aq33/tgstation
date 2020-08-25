@@ -712,7 +712,7 @@ Gratulacje! Jesteś teraz wyszkolony do inwazyjnych badań ksenobiologicznych!"}
 
 /obj/item/clothing/head/helmet/abductor
 	name = "hełm agenta"
-	desc = "Porywaj ze stylem - spiczastym stylem. Zapobiega śledzenia przez kamery."
+	desc = "Porywaj ze stylem - spiczastym stylem. Zapobiega śledzeniu przez kamery."
 	icon_state = "alienhelmet"
 	item_state = "alienhelmet"
 	blockTracking = TRUE
