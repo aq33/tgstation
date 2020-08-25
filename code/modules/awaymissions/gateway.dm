@@ -2,7 +2,7 @@ GLOBAL_DATUM(the_gateway, /obj/machinery/gateway/centerstation)
 
 /obj/machinery/gateway
 	name = "gateway"
-	desc = "A mysterious gateway built by unknown hands, it allows for faster than light travel to far-flung locations."
+	desc = "Tajemnicza brama łącząca światy, zbudowana przed wiekami przez nieznane ręce. Wydaje ci się że po drugiej stronie czeka cię coś złowrogiego."
 	icon = 'icons/obj/machines/gateway.dmi'
 	icon_state = "off"
 	density = TRUE
@@ -249,17 +249,17 @@ GLOBAL_DATUM(the_gateway, /obj/machinery/gateway/centerstation)
 
 
 /obj/item/paper/fluff/gateway
-	info = "Congratulations,<br><br>Your station has been selected to carry out the Gateway Project.<br><br>The equipment will be shipped to you at the start of the next quarter.<br> You are to prepare a secure location to house the equipment as outlined in the attached documents.<br><br>--Nanotrasen Bluespace Research"
+	info = "Congratulations,<br><br>Twoja stacja została wybrana aby uczestniczyć w projekcie 'gateway'!.<br><br>Materiały zostaną dostarczone do ciebie na początku następnego kwadransu.<br> Musisz przygotować zabezpieczone miejsce aby przechowywać materiały jak pokazano w załączonych dokumentach.<br><br>--Nanotrasen Bluespace Research"
 	name = "Confidential Correspondence, Pg 1"
 
 /obj/item/paper/fluff/itemnotice
-	info = "Notice: Over the last few weeks there have been increased reports of surplus, trash items such as wrappers being found in Bluespace Capsule Products. In the event this encampment has any such item, please dispose of them within a wastebin or the provided bonfire, especially if such items include frivolous, frankly embarassing things. We apologise for the inconvienence. Thank you. -- Nanotrasen BS Productions"
+	info = "Ogłoszenie: Przez następne parę tygodni będzie zwiększona ilość zgłoszeń nadmiaru śmieciowych przedmiotów, takich jak opakowania będą znajdywane w Produktach Bluespace'owych Kapsułek. Jeżeli znajdziemy się w posiadaniu takiego przedmiotu, prosimy o pozbycie się ich za pomocą koszów na śmieci lub zaopatrzonym ogniskiem, zwłaszcza jeżeli przedmioty upokorzające. Przepraszamy za nieporozumienie. Dziękujemy. -- Nanotrasen BS Productions"
 	name = "Surplus Item Removal Notice"
 
 /obj/item/paper/fluff/encampmentwelcome
-	info = "Welcome! If you are reading this, then you have bought and deployed the new line of bluespace capsule shelters, the mining encampment! This capsule provides standard shelter equipment and more, such as an expanded food vendor, floor safe, restroom, suit storage, spare equipment, and a personal requisitions vendor! The outside has even been lined with basalt tiles, just so no rocks get in the way of the cozy courtyard! We hope you stay safe, and enjoy the amenities! - Nanotrasen BS Productions"
-	name = "Welcome!"
+	info = "Witaj! Jeżeli to czytasz, to kupiłeś i użyłeś nowej linii bluespace'owych kapsułek schronienia, górniczego obozu! Ta kapsułka zapewnia wszystko co zwykły model, i nawet więcej, jak rozszerzony wendomat z jedzeniem, sejf w podłodze, łazienki, przechowywanie ubrania, zapasowe wyposarzenie, oraz wendomat osobistych rekwizycji! Zewnętrze zostało udekorowane bazaltowym podłożem, aby żadne kamienie nie wlazły do przytulnego obozowiska! Mamy nadzieje że będziesz bezpieczny, i twój pobyt wśrodku będzie jak małe wakacje! - Nanotrasen BS Productions"
+	name = "Witaj!"
 
 /obj/item/paper/fluff/shuttlenotice
-	info = "To the acting captain of Nanotrasen Research Station SS13, Due to the nature of your emergency, we sadly had to expedite the process of constructing this shuttle, and as such it does not follow standard sanitary regulations. We appreciate your purchase, and apologise for the inconvienence. Thank you, and have a safe flight! -- Nanotrasen BS Productions Engineering Team"
+	info = "Do teraźniejszego kapitana stacji Nanotrens SS13, Poprzez naturę waszego problemu, niestety musimy odmówić konstrukcji promu ratunkowego, ponieważ nie spełnia on wymogów sanitarnych. Dziękujemy za zakup, i przepraszamy za nieporozumienie. Dziękujemy, i życzymy bezpiecznego lotu! -- Nanotrasen BS Productions Engineering Team"
 	name = "Shuttle Notice"
