@@ -557,7 +557,7 @@
 	circuit_weapon = /obj/item/circuitboard/mecha/alpha/targeting
 
 	inner_plating = /obj/item/stack/sheet/mineral/titanium
-	inner_plating_amount = 5
+	inner_plating_amount = 10
 
 	outer_plating = /obj/item/stack/sheet/rglass
 	outer_plating_amount = 10
