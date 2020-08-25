@@ -59,7 +59,7 @@
 	return HAS_TRAIT(H, TRAIT_ABDUCTOR_SCIENTIST_TRAINING)
 
 /datum/action/innate/teleport_in
-	name = "Wyślij Do"
+	name = "Wyślij"
 	icon_icon = 'icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "beam_down"
 
