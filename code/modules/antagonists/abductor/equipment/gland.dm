@@ -161,7 +161,7 @@
 			continue
 		switch(pick(1,3))
 			if(1)
-				to_chat(H, "<span class='userdanger'>Słyszysz głośny brzęk w głowie, wyciszając twoje myśli!</span>")
+				to_chat(H, "<span class='userdanger'>Słyszysz głośny brzęk w głowie, który wycisza twoje myśli!</span>")
 				H.Stun(50)
 			if(2)
 				to_chat(H, "<span class='warning'>Słyszysz denerwujący brzęk w swojej głowie.</span>")
