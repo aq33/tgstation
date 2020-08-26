@@ -25006,6 +25006,7 @@
 	icon_state = "pipe11-1"
 	},
 /obj/structure/cable,
+/obj/effect/landmark/start/deputy,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "aVS" = (
@@ -25549,6 +25550,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer1,
 /obj/structure/cable,
+/obj/effect/landmark/start/deputy,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "aWL" = (
@@ -72034,6 +72036,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
+"dcw" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8;
+	icon_state = "pipe11-1"
+	},
+/obj/structure/cable,
+/obj/effect/landmark/start/deputy,
+/turf/open/floor/plasteel,
+/area/security/brig)
 "dde" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 1
@@ -93714,7 +93728,7 @@ cgR
 cin
 vBP
 cae
-aWF
+dcw
 avM
 cnM
 coP

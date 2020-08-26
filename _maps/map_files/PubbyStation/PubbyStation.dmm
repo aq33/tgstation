@@ -6625,6 +6625,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/effect/landmark/start/deputy,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "arn" = (
@@ -50761,6 +50762,14 @@
 	},
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
+"cVe" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/landmark/start/deputy,
+/turf/open/floor/plasteel,
+/area/security/brig)
 "cXW" = (
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -54504,6 +54513,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
+"kjx" = (
+/obj/effect/landmark/start/deputy,
+/turf/open/floor/plasteel,
+/area/security/brig)
 "kjK" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "MiniSat Maintenance";
@@ -59748,6 +59761,11 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/floor/grass,
 /area/hydroponics)
+"utB" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/effect/landmark/start/deputy,
+/turf/open/floor/plasteel,
+/area/security/brig)
 "uun" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 4
@@ -83420,7 +83438,7 @@ aop
 aoR
 amh
 aqp
-aon
+kjx
 asy
 atv
 aux
@@ -83934,7 +83952,7 @@ amX
 aoT
 apK
 aqr
-arl
+utB
 asw
 atx
 auz
@@ -84962,7 +84980,7 @@ aor
 aoX
 amh
 aqt
-aro
+cVe
 asw
 atx
 auz
