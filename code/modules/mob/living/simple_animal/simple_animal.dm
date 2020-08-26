@@ -629,7 +629,7 @@
 	if(!mind && level == 2)
 		notify_ghosts("\a [src] can be controlled", null, enter_link="<a href=?src=[REF(src)];activate=1>(Click to play)</a>", source=src, action=NOTIFY_ATTACK, ignore_key = POLL_IGNORE_SPIDER)
 
-/mob/living/simple_animal/proc/give_to_ghost(mob/dead/observer/user, bypass_level = FALSE)
+/mob/living/simple_animal/proc/give_to_ghost(mob/dead/observer/user, bypass_level = FALSE, should_talk = FALSE)
 	if(QDELETED(src) || QDELETED(user) || !src.playable || level != 2)
 		if(!bypass_level)
 			return
@@ -640,7 +640,7 @@
 	if(be_mob == "No" || QDELETED(src) || !isobserver(user) || src.mind)
 		return
 
-	src.should_talk = FALSE
+	src.should_talk = should_talk
 	src.playable = FALSE
 	src.key = user.key
 
