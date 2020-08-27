@@ -101,7 +101,7 @@
 		wires.interact(user)
 		return TRUE
 
-	if(user.a_intent == INTENT_HARM || user.a_intent == INTENT_HELP) //so we can hit the machine
+	if(user.a_intent == INTENT_HARM) //so we can hit the machine
 		return ..()
 
 	if(stat)
@@ -165,7 +165,7 @@
 
 			var/coeff = (is_stack ? 1 : prod_coeff) //stacks are unaffected by production coefficient
 			var/total_amount = 0
-
+			
 			for(var/MAT in being_built.materials)
 				total_amount += being_built.materials[MAT]
 
