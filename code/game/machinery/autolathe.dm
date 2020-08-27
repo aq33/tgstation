@@ -90,7 +90,7 @@
 		to_chat(user, "<span class=\"alert\">The autolathe is busy. Please wait for completion of previous operation.</span>")
 		return TRUE
 
-	if(default_deconstruction_screwdriver(user, "autolathe_t", "autolathe", O))
+	if(user.a_intent != INTENT_HELP && default_deconstruction_screwdriver(user, "autolathe_t", "autolathe", O))
 		updateUsrDialog()
 		return TRUE
 
@@ -165,7 +165,7 @@
 
 			var/coeff = (is_stack ? 1 : prod_coeff) //stacks are unaffected by production coefficient
 			var/total_amount = 0
-			
+
 			for(var/MAT in being_built.materials)
 				total_amount += being_built.materials[MAT]
 
