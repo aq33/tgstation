@@ -58,6 +58,7 @@
 
 //--WYJSCIE Z MECHA W TRYBIE CHASE--
 //przy opuszczeniu moba, mech zmienia sie w tryb standard. zapisanie trybu wymagaloby fundamentalnego przerobienia wielu funkcji, wiec to jest bezpieczniejsze rozwiazanie
+
 /obj/mecha/combat/alpha/go_out()
 	. = ..()
 	if(chase_mode)
