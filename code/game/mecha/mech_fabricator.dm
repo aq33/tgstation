@@ -31,6 +31,7 @@
 								"H.O.N.K",
 								"Phazon",
 								"Exosuit Equipment",
+								"Exosuit Ammunition",
 								"Cyborg Upgrade Modules",
 								"IPC Components",
 								"Misc"
@@ -404,11 +405,11 @@
 	updateUsrDialog()
 	return
 
-/obj/machinery/mecha_part_fabricator/proc/do_process_queue()		
-	if(processing_queue || being_built)		
-		return FALSE		
+/obj/machinery/mecha_part_fabricator/proc/do_process_queue()
+	if(processing_queue || being_built)
+		return FALSE
 	processing_queue = 1
-	process_queue()		
+	process_queue()
 	processing_queue = 0
 
 /obj/machinery/mecha_part_fabricator/proc/eject_sheets(eject_sheet, eject_amt)
