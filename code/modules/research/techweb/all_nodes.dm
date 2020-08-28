@@ -928,6 +928,15 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
+/datum/techweb_node/mech_railgun
+	id = "mech_railgun"
+	display_name = "Exosuit Weapon (GER-X1 Railgun)"
+	description = "An advanced piece of mech weaponry"
+	prereq_ids = list("ballistic_weapons", "electronic_weapons", "adv_power")
+	design_ids = list("mech_railgun", "mech_railgun_ammo")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	export_price = 5000
+
 /datum/techweb_node/mech_laser
 	id = "mech_laser"
 	display_name = "Exosuit Weapon (CH-PS \"Immolator\" Laser)"

@@ -339,6 +339,28 @@
 	category = list("Exosuit Ammunition", "Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/mech_railgun
+	name = "GER-X1 Railgun"
+	desc = "Electromagnetic weapon capable of accelerating metal rods to high velocities."
+	id = "mech_railgun"
+	build_type = PROTOLATHE | MECHFAB
+	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/railgun
+	materials = list(/datum/material/iron=20000, /datum/material/titanium=5000,  /datum/material/gold=10000, /datum/material/silver=10000)
+	construction_time = 100
+	category = list("Exosuit Equipment")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/mech_railgun_ammo
+	name = "Railgun Rods"
+	desc = "A box of dense metal rods suited for GER-X1 railgun"
+	id = "mech_railgun_ammo"
+	build_type = PROTOLATHE | MECHFAB
+	build_path = /obj/item/mecha_ammo/railgun
+	materials = list(/datum/material/iron=10000, /datum/material/uranium=1500)
+	construction_time = 80
+	category = list("Exosuit Ammunition", "Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /datum/design/mech_wormhole_gen
 	name = "Exosuit Module (Localized Wormhole Generator)"
 	desc = "An exosuit module that allows generating of small quasi-stable wormholes."

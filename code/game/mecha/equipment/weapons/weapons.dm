@@ -408,6 +408,19 @@
 	equip_cooldown = 90
 	ammo_type = "clusterbang"
 
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/railgun
+	name = "\improper GER-X1 Railgun"
+	desc = "A weapon for combat exosuits. Launches hypervelocity projectiles that penetrate everything in their path including your mom."
+	icon_state = "mecha_railgun"
+	fire_sound = 'sound/weapons/railgun.ogg'
+	projectiles = 1
+	projectile = /obj/item/projectile/bullet/p50/penetrator/railgun
+	projectiles_cache = 0
+	projectiles_cache_max = 10
+	//projectile_energy_cost = 250
+	equip_cooldown = 120
+	ammo_type = "railgun"
+
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/banana_mortar
 	name = "banana mortar"
 	desc = "Equipment for clown exosuits. Launches banana peels."

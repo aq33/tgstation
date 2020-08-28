@@ -65,6 +65,13 @@
 	load_audio = "sound/weapons/bulletinsert.ogg"
 	ammo_type = "missiles_he"
 
+/obj/item/mecha_ammo/railgun
+	name = "Railgun Rods"
+	desc = "A box of dense metal rods suited for GER-X1 railgun"
+	icon_state = "railgun"
+	rounds = 10
+	round_term = "rod"
+	ammo_type = "railgun"
 
 /obj/item/mecha_ammo/flashbang
 	name = "launchable flashbangs"
