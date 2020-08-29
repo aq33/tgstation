@@ -2308,6 +2308,12 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/engine,
 /area/awaymission/moonoutpost19/research)
+"eR" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/toxin,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
 "eS" = (
 /obj/machinery/power/port_gen/pacman{
 	desc = "A portable generator for emergency backup power.";
@@ -6767,6 +6773,42 @@
 	heat_capacity = 1e+006
 	},
 /area/awaymission/moonoutpost19/research)
+"qw" = (
+/obj/structure/table,
+/obj/item/paper_bin,
+/obj/item/pen,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"qC" = (
+/obj/structure/rack,
+/obj/item/grenade/plastic/c4,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"rZ" = (
+/obj/structure/rack,
+/obj/item/clothing/shoes/combat/swat,
+/obj/item/clothing/shoes/combat/swat,
+/obj/item/clothing/shoes/combat/swat,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"ti" = (
+/obj/structure/rack,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"tI" = (
+/obj/item/ammo_casing/a50,
+/turf/open/floor/plating/asteroid{
+	heat_capacity = 1e+006;
+	initial_gas_mix = "co2=48.7;n2=13.2;o2=32.4;TEMP=251"
+	},
+/area/awaymission/moonoutpost19/main)
+"uT" = (
+/mob/living/simple_animal/hostile/syndicate/melee/spacebattle,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
 "vV" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -6776,6 +6818,16 @@
 	heat_capacity = 1e+006
 	},
 /area/awaymission/moonoutpost19/arrivals)
+"xa" = (
+/mob/living/simple_animal/hostile/syndicate/melee/sword/space,
+/turf/open/floor/plating/asteroid{
+	heat_capacity = 1e+006;
+	initial_gas_mix = "co2=48.7;n2=13.2;o2=32.4;TEMP=251"
+	},
+/area/awaymission/moonoutpost19/syndicate)
+"xS" = (
+/turf/closed/mineral,
+/area/awaymission/moonoutpost19/syndicate)
 "zZ" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -6783,6 +6835,62 @@
 	heat_capacity = 1e+006
 	},
 /area/awaymission/moonoutpost19/arrivals)
+"AF" = (
+/obj/machinery/door/airlock/highsecurity,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"CP" = (
+/obj/structure/filingcabinet,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"Dl" = (
+/obj/structure/rack,
+/obj/item/kitchen/knife/combat,
+/obj/item/kitchen/knife/combat,
+/obj/item/kitchen/knife/combat,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"Fq" = (
+/obj/item/stack/rods/fifty,
+/obj/structure/closet/cardboard,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"He" = (
+/obj/item/ammo_casing/a50,
+/obj/item/ammo_casing/a50,
+/turf/open/floor/plating/asteroid{
+	heat_capacity = 1e+006;
+	initial_gas_mix = "co2=48.7;n2=13.2;o2=32.4;TEMP=251"
+	},
+/area/awaymission/moonoutpost19/main)
+"HA" = (
+/obj/structure/chair/office{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"Jj" = (
+/obj/machinery/computer/camera_advanced/syndie{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"Kx" = (
+/obj/structure/rack,
+/obj/item/ammo_box/c10mm,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"KA" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/firstaid/brute,
+/obj/item/storage/firstaid/fire,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"KO" = (
+/obj/item/radio/intercom,
+/turf/closed/wall/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
 "Mm" = (
 /obj/machinery/door/airlock/medical{
 	name = "Research Division";
@@ -6795,6 +6903,30 @@
 	heat_capacity = 1e+006
 	},
 /area/awaymission/moonoutpost19/research)
+"NW" = (
+/mob/living/simple_animal/hostile/syndicate/melee/sword/space,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"QE" = (
+/obj/machinery/sleeper,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"Sp" = (
+/obj/item/stack/sheet/iron/five,
+/obj/structure/closet/cardboard,
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"Uk" = (
+/turf/open/floor/plating/asteroid{
+	heat_capacity = 1e+006;
+	initial_gas_mix = "co2=48.7;n2=13.2;o2=32.4;TEMP=251"
+	},
+/area/awaymission/moonoutpost19/syndicate)
+"Ut" = (
+/obj/machinery/door/airlock/highsecurity,
+/obj/structure/fans/tiny/invisible,
+/turf/open/space/basic,
+/area/awaymission/moonoutpost19/syndicate)
 "Wf" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -6804,6 +6936,21 @@
 	heat_capacity = 1e+006
 	},
 /area/awaymission/moonoutpost19/arrivals)
+"XE" = (
+/turf/open/floor/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
+"Yp" = (
+/obj/item/ammo_casing/a50,
+/obj/item/ammo_casing/a50,
+/obj/item/ammo_casing/a50,
+/turf/open/floor/plating/asteroid{
+	heat_capacity = 1e+006;
+	initial_gas_mix = "co2=48.7;n2=13.2;o2=32.4;TEMP=251"
+	},
+/area/awaymission/moonoutpost19/main)
+"Zj" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/awaymission/moonoutpost19/syndicate)
 
 (1,1,1) = {"
 aa
@@ -45774,7 +45921,7 @@ ba
 ba
 ba
 ba
-ba
+tI
 ba
 ba
 ba
@@ -46029,7 +46176,7 @@ ba
 ba
 ba
 ba
-ba
+tI
 ba
 ba
 ba
@@ -46286,10 +46433,10 @@ ba
 ba
 ba
 ba
+tI
 ba
 ba
-ba
-ba
+tI
 ba
 ba
 ba
@@ -46542,9 +46689,9 @@ ba
 ba
 ba
 ba
-ba
-ba
-ba
+tI
+He
+Yp
 ba
 ba
 ba
@@ -46797,11 +46944,11 @@ ba
 ba
 ba
 ba
+tI
 ba
 ba
 ba
-ba
-ba
+tI
 ba
 ba
 dA
@@ -47057,9 +47204,9 @@ ba
 ba
 ba
 ba
-ba
-ba
-dA
+Uk
+Uk
+Uk
 dA
 dA
 dA
@@ -47313,10 +47460,10 @@ ba
 ba
 ba
 ba
-ba
-dA
-dA
-dA
+tI
+xS
+xS
+xS
 dA
 dA
 ac
@@ -47572,7 +47719,7 @@ ba
 dA
 dA
 dA
-dA
+Uk
 dA
 ac
 ac
@@ -47829,7 +47976,7 @@ dA
 dA
 dA
 dA
-dA
+Uk
 ac
 ac
 ac
@@ -48085,8 +48232,8 @@ dA
 dA
 dA
 dA
-ac
-ac
+Uk
+Uk
 ac
 ac
 ac
@@ -48342,7 +48489,7 @@ dA
 ac
 ac
 ac
-ac
+Uk
 ac
 ac
 ac
@@ -48582,14 +48729,14 @@ dA
 dA
 dA
 dA
-dA
-dA
-dA
-dA
-dA
-dA
-dA
-dA
+Zj
+Zj
+Zj
+Zj
+Zj
+Zj
+Zj
+Zj
 dA
 ac
 ac
@@ -48598,8 +48745,8 @@ ac
 ac
 ac
 ac
-ac
-ac
+Uk
+Uk
 ac
 ac
 ac
@@ -48839,23 +48986,23 @@ ac
 ac
 ac
 ac
+Zj
+Sp
+qw
+Jj
+CP
+Zj
+uT
+Zj
 ac
 ac
 ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+Uk
+Uk
+Uk
 ac
 ac
 ac
@@ -49096,21 +49243,21 @@ ac
 ac
 ac
 ac
+Zj
+Fq
+XE
+HA
+XE
+AF
+XE
+Zj
+Zj
+Zj
+Zj
+Zj
+Zj
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+Uk
 ac
 ac
 ac
@@ -49352,22 +49499,22 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+Zj
+Zj
+Zj
+Zj
+KO
+Zj
+Zj
+XE
+Zj
+XE
+uT
+XE
+XE
+Zj
+Uk
+xa
 ac
 ac
 ac
@@ -49609,21 +49756,21 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+Zj
+ti
+NW
+XE
+NW
+AF
+XE
+XE
+AF
+XE
+XE
+XE
+XE
+Ut
+Uk
 ac
 ac
 ac
@@ -49866,20 +50013,20 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+Zj
+rZ
+XE
+Kx
+XE
+Zj
+XE
+uT
+Zj
+XE
+XE
+uT
+XE
+Zj
 ac
 ac
 ac
@@ -50123,20 +50270,20 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+Zj
+Dl
+XE
+Kx
+XE
+Zj
+XE
+XE
+Zj
+Zj
+Zj
+Zj
+Zj
+Zj
 ac
 ac
 ac
@@ -50380,16 +50527,16 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+Zj
+qC
+XE
+Kx
+XE
+Zj
+KA
+uT
+QE
+Zj
 ac
 ac
 ac
@@ -50637,16 +50784,16 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+Zj
+qC
+XE
+Kx
+XE
+Zj
+eR
+XE
+QE
+Zj
 ac
 ac
 ac
@@ -50894,16 +51041,16 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+Zj
+qC
+NW
+XE
+NW
+Zj
+Zj
+Zj
+Zj
+Zj
 ac
 ac
 ac
@@ -51151,12 +51298,12 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
+Zj
+Zj
+Zj
+Zj
+Zj
+Zj
 ac
 ac
 ac

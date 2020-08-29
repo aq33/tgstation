@@ -36,6 +36,14 @@
 	poweralm = FALSE
 	icon_state = "awaycontent6"
 
+/area/awaymission/moonoutpost19/syndi
+	name = "Syndicate outpost"
+	always_unpowered = FALSE
+	power_environ = TRUE
+	power_equip = TRUE
+	power_light = TRUE
+	poweralm = TRUE
+	icon_state = "awaycontent7"
 //Papers
 
 /obj/item/paper/crumpled/awaymissions/moonoutpost19/hastey_note
