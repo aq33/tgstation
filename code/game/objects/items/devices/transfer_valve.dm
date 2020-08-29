@@ -290,3 +290,6 @@
 				. = TRUE
 
 	update_icon()
+
+/obj/item/transfer_valve/proc/ready()
+	return tank_one && tank_two

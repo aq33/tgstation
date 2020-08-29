@@ -1,4 +1,4 @@
-// Circuit boards, spare parts, etc.
+// Circuit boards, spare parts, anomaly cores, etc.
 
 /datum/export/solar/assembly
 	cost = 50
@@ -19,3 +19,8 @@
 	cost = 2000
 	unit_name = "deactivated alien deconstruction drone"
 	export_types = list(/obj/item/deactivated_swarmer)
+
+/datum/export/anomaly_core
+	cost = 7500
+	unit_name = "disarmed anomaly core"
+	export_types = list(/obj/item/assembly/signaler/anomaly)
