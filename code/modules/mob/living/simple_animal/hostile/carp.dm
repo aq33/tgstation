@@ -62,14 +62,6 @@
 
 	var/regen_cooldown = 0
 
-/mob/living/simple_animal/hostile/carp/Initialize()
-	. = ..()
-	find_candidates()
-
-/mob/living/simple_animal/hostile/carp/attack_ghost(mob/dead/observer/user)
-	. = ..()
-	give_to_ghost(user)
-
 /mob/living/simple_animal/hostile/carp/megacarp/Initialize()
 	. = ..()
 	name = "[pick(GLOB.megacarp_first_names)] [pick(GLOB.megacarp_last_names)]"
