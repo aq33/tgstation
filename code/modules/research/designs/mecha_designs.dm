@@ -216,6 +216,27 @@
 	category = list("Exosuit Ammunition", "Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/mech_chaingun
+	name = "Exosuit Weapon (LCG-4-NL \"Jaruz\" Riot Chaingun)"
+	desc = "A weapon for combat exosuits. Shoots a rapid, three shot burst."
+	id = "mech_chaingun"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/chaingun
+	materials = list(/datum/material/iron=10000)
+	construction_time = 100
+	category = list("Exosuit Equipment")
+
+/datum/design/mech_nl_ammo
+	name = "Non-lethal ammo"
+	desc = "Non-lethal rubber bullets for all your pacifying purposes."
+	id = "mech_nl_ammo"
+	build_type = PROTOLATHE | MECHFAB
+	build_path = /obj/item/mecha_ammo/nl
+	materials = list(/datum/material/iron=5000)
+	construction_time = 80
+	category = list("Exosuit Ammunition", "Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /datum/design/mech_ion
 	name = "Exosuit Weapon (MKIV Ion Heavy Cannon)"
 	desc = "Allows for the construction of MKIV Ion Heavy Cannon."

@@ -340,6 +340,22 @@
 	harmful = TRUE
 	ammo_type = "lmg"
 
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/chaingun
+	name = "\improper LCG-4-NL \"Jaruz\" Riot Chaingun"
+	desc = "A weapon for combat exosuits. Shoots a barrage of non-lethal rubber pellets."
+	icon_state = "mecha_chaingun"
+	equip_cooldown = 5
+	projectile = /obj/item/projectile/bullet/pellet/shotgun_rubbershot
+	fire_sound = "sound/weapons/chaingun.ogg"
+	projectiles = 100
+	projectiles_cache = 0
+	projectiles_cache_max = 300
+	variance = 5
+	randomspread = 1
+	projectile_delay = 1
+	harmful = TRUE
+	ammo_type = "nl"
+
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack
 	name = "\improper HEML-3 missile rack"
 	desc = "A weapon for combat exosuits. Launches light explosive missiles."
@@ -350,7 +366,7 @@
 	projectiles_cache = 0
 	projectiles_cache_max = 0
 	disabledreload = TRUE
-	equip_cooldown = 60
+	equip_cooldown = 120
 	harmful = TRUE
 	ammo_type = "missiles_he"
 
@@ -418,7 +434,7 @@
 	projectiles_cache = 0
 	projectiles_cache_max = 10
 	//projectile_energy_cost = 250
-	equip_cooldown = 120
+	equip_cooldown = 180
 	ammo_type = "railgun"
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/banana_mortar

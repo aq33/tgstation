@@ -910,6 +910,15 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
+/datum/techweb_node/mech_chaingun
+	id = "mech_chaingun"
+	display_name = "Exosuit Weapon (LCG-4-NL \"Jaruz\" Riot Chaingun)"
+	description = "An advanced piece of mech weaponry"
+	prereq_ids = list("ballistic_weapons")
+	design_ids = list("mech_chaingun", "mech_nl_ammo")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	export_price = 5000
+
 /datum/techweb_node/mech_ion
 	id = "mmech_ion"
 	display_name = "Exosuit Weapon (MKIV Ion Heavy Cannon)"

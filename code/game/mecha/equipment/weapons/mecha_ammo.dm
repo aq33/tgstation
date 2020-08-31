@@ -55,6 +55,13 @@
 	rounds = 50
 	ammo_type = "lmg"
 
+/obj/item/mecha_ammo/nl
+	name = "non-lethal ammo"
+	desc = "A box of non-lethal rubber bullets."
+	icon_state = "nl"
+	rounds = 100
+	ammo_type = "nl"
+
 /obj/item/mecha_ammo/missiles_he
 	name = "anti-armor missiles"
 	desc = "A box of large missiles, ready for loading into an HEML-3 exosuit missile rack."
