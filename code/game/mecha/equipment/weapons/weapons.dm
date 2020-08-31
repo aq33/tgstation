@@ -299,10 +299,10 @@
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/silenced
 	name = "\improper S.H.H. \"Quietus\" Carbine"
 	desc = "A weapon for combat exosuits. A mime invention, field tests have shown that targets cannot even scream before going down."
-	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
 	icon_state = "mecha_mime"
 	equip_cooldown = 30
 	projectile = /obj/item/projectile/bullet/mime
+	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
 	projectiles = 16
 	projectiles_cache = 0
 	projectiles_cache_max = 52
@@ -315,6 +315,7 @@
 	icon_state = "mecha_scatter"
 	equip_cooldown = 20
 	projectile = /obj/item/projectile/bullet/scattershot
+	fire_sound = 'sound/weapons/scattershot.ogg'
 	projectiles = 25
 	projectiles_cache = 0
 	projectiles_cache_max = 75
@@ -350,6 +351,7 @@
 	projectiles = 100
 	projectiles_cache = 0
 	projectiles_cache_max = 300
+	projectiles_per_shot = 5
 	variance = 5
 	randomspread = 1
 	projectile_delay = 1
