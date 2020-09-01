@@ -2,7 +2,7 @@
 	name = "\improper Donksoft Toy Vendor"
 	desc = "Ages 8 and up approved vendor that dispenses toys."
 	icon_state = "nt-donk"
-	product_slogans = "Zdobądź swoje super zabawki dziś!;Striggeruj swojego validhuntera już dziś!;Zabawkowe bronie najlepszej jakości w niskiej cenie!;Daj je HoPowi za AA!;Daj je Szefowi Ochrony za bilet do permy!"
+	product_slogans = "Zdobądź swoje super zabawki dziś!;Rozpocznij validhunt już dzisiaj!;Zabawkowe bronie najlepszej jakości w niskiej cenie!;Daj je HoPowi za AA!;Daj je Szefowi Ochrony za bilet do permy!"
 	product_ads = "Poczuj się robustny ze swoimi zabawkami!;Wyraź swoje wewnętrzne dziecko już dziś!;Zabawkowe bronie nie zabijają ludzi. Ale validhunterzy już tak!;Kto potrzebuje odpowiedzialności jeśli masz zabawkowe bronie?;Uczyń swoje następne morderstwo ZABAWNE!"
 	vend_reply = "Wróć po więcej!"
 	light_color = LIGHT_COLOR_RED
