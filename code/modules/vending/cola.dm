@@ -4,7 +4,7 @@
 	desc = "A softdrink vendor provided by Robust Industries, LLC."
 	icon_state = "Cola_Machine"
 	product_slogans = "Robustne napoje bezalkoholowe: Bardziej robustne niż skrzynka narzędziowa w ryj!"
-	product_ads = "Odświeżające!;Mam nadzieję, że jesteś spragniony!;Ponad milion sprzedanych napojów!;Spragniony? A może colki?;Proszę, napij się!;Do dna!;Najlepsze napoje w kosmosie."
+	product_ads = "Odświeżające!;Mam nadzieję, że jesteś spragniony!;Ponad milion sprzedanych napojów!;Spragniony? A może coli?;Proszę, napij się!;Do dna!;Najlepsze napoje w kosmosie."
 	light_color = LIGHT_COLOR_BLUE
 	products = list(/obj/item/reagent_containers/food/drinks/soda_cans/cola = 10,
 		            /obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind = 10,
