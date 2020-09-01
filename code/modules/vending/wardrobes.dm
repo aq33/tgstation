@@ -180,7 +180,7 @@
 	name = "Hydrobe"
 	desc = "A machine with a catchy name. It dispenses botany related clothing and gear."
 	icon_state = "hydrobe"
-	product_ads = "Kochasz glebę? W takim razie kup nasze ubrania!;Dobierz tutaj swoje ubrania, by pasowały do twoich ploników!"
+	product_ads = "Kochasz glebę? W takim razie kup nasze ubrania!;Dobierz tutaj swoje ubrania, by pasowały do twoich plonów!"
 	vend_reply = "Dziękujemy za użycie Hydrobe!"
 	light_color = LIGHT_COLOR_GREEN
 	products = list(/obj/item/storage/backpack/botany = 2,
