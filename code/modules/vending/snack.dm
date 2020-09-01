@@ -2,7 +2,7 @@
 	name = "\improper Getmore Chocolate Corp"
 	desc = "A snack machine courtesy of the Getmore Chocolate Corporation, based out of Mars."
 	product_slogans = "Spróbuj naszego nowego batonika nugatowego!;Dwa razy więcej kalorii za pół ceny!"
-	product_ads = "Najzdrowsze!;Wygrywające nagrody batoniki czekoladowe!;Mmm! Jakie dobre!;O mój boże, jakie soczyste!;Weź przekąsk.;Przekąski są dla ciebie dobre!;Weź trochę więcej JeszczeTrochę!;Najlepszej jakości przysmaki prosto z Marsa.;Kochamy czekoladę!;Spróbuj naszego nowego suszonego mięsa!"
+	product_ads = "Najzdrowsze!;Wygrywające nagrody batoniki czekoladowe!;Mmm! Jakie dobre!;O mój boże, jakie soczyste!;Weź przekąsk.;Przekąski są dla ciebie dobre!;Weź trochę więcej Getmore!;Najlepszej jakości przysmaki prosto z Marsa.;Kochamy czekoladę!;Spróbuj naszego nowego suszonego mięsa!"
 	icon_state = "snack"
 	products = list(/obj/item/reagent_containers/food/snacks/spacetwinkie = 6,
 					/obj/item/reagent_containers/food/snacks/cheesiehonkers = 6,
