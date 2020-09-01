@@ -329,3 +329,4 @@
     var/mob/living/our_target = target
     our_target.throw_at(throw_target, rand(6, 7), 7, src)
     return..()
+
