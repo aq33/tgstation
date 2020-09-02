@@ -48,6 +48,7 @@ SUBSYSTEM_DEF(vote)
 	//get the highest number of votes
 	var/greatest_votes = 0
 	var/total_votes = 0
+	sound_to_playing_players('sound/misc/Vote_success.ogg')
 	for(var/option in choices)
 		var/votes = choices[option]
 		total_votes += votes
@@ -179,6 +180,7 @@ SUBSYSTEM_DEF(vote)
 			if(vote && 1<=vote && vote<=choices.len)
 				voted += usr.ckey
 				choices[choices[vote]]++	//check this
+				sound_to_playing_players('sound/misc/Vote.ogg')
 				return vote
 	return 0
 
@@ -238,6 +240,7 @@ SUBSYSTEM_DEF(vote)
 		log_vote(text)
 		var/vp = CONFIG_GET(number/vote_period)
 		to_chat(world, "\n<font color='purple'><b>[text]</b>\nType <b>vote</b> or click <a href='?src=[REF(src)]'>here</a> to place your votes.\nYou have [DisplayTimeText(vp)] to vote.</font>")
+		sound_to_playing_players('sound/misc/Vote_started.ogg')
 		time_remaining = round(vp/10)
 		for(var/c in GLOB.clients)
 			var/client/C = c
