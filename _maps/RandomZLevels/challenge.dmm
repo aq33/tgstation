@@ -523,6 +523,7 @@
 /area/space)
 "bQ" = (
 /obj/item/gun/ballistic/revolver/russian,
+/obj/structure/mineral_door/iron,
 /turf/open/floor/plasteel/white/side{
 	dir = 2
 	},
@@ -586,8 +587,13 @@
 /turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/start)
 "cO" = (
-/obj/item/deployablemine/honk,
-/turf/open/floor/plating/dirt,
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "dm" = (
 /obj/structure/sign/warning,
@@ -620,10 +626,6 @@
 /obj/structure/closet/secure_closet/bar,
 /turf/open/space/basic,
 /area/awaymission/challenge/main)
-"eC" = (
-/obj/item/deployablemine/plasma,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge/main)
 "eD" = (
 /obj/machinery/gateway{
 	dir = 8
@@ -639,19 +641,16 @@
 /obj/effect/clockwork/overlay/floor,
 /turf/open/space/basic,
 /area/awaymission/challenge/main)
-"fp" = (
-/obj/item/statuebust,
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge/main)
-"fx" = (
+"fo" = (
 /obj/item/deployablemine/plasma,
 /obj/machinery/light{
-	dir = 4
+	dir = 8
 	},
-/turf/open/floor/plating/dirt,
+/obj/effect/mine/gas/plasma,
+/turf/open/space/basic,
 /area/awaymission/challenge/main)
-"fC" = (
-/obj/item/deployablemine/explosive,
+"fp" = (
+/obj/item/statuebust,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
 "fD" = (
@@ -660,7 +659,7 @@
 /area/awaymission/challenge/main)
 "fK" = (
 /obj/effect/clockwork/overlay/floor,
-/obj/structure/table/wood/fancy,
+/obj/structure/table/reinforced/brass,
 /turf/open/space/basic,
 /area/awaymission/challenge/main)
 "fL" = (
@@ -676,13 +675,6 @@
 /obj/structure/shuttle/engine/huge,
 /turf/open/space,
 /area/space)
-"gi" = (
-/obj/item/deployablemine/plasma,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/plating/dirt,
-/area/awaymission/challenge/main)
 "gm" = (
 /obj/structure/table/wood/fancy,
 /obj/item/trash/plate,
@@ -714,6 +706,15 @@
 /obj/item/paper/fluff/awaymissions/challenge/colourfulnote,
 /turf/open/floor/plasteel/sepia,
 /area/awaymission/challenge/main)
+"hP" = (
+/obj/effect/mine/sound/bwoink,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/mine/kickmine,
+/obj/effect/mine/kickmine,
+/turf/open/space/basic,
+/area/awaymission/challenge/main)
 "hQ" = (
 /obj/item/stack/sheet/mineral/bananium,
 /obj/item/stack/sheet/mineral/bananium,
@@ -722,13 +723,6 @@
 /obj/item/stack/sheet/mineral/bananium,
 /obj/structure/closet,
 /turf/open/floor/mineral/bananium,
-/area/awaymission/challenge/main)
-"iy" = (
-/obj/effect/mine/sound/bwoink,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
 "jn" = (
 /obj/structure/disposalpipe/segment{
@@ -786,6 +780,14 @@
 "ka" = (
 /turf/closed/indestructible/fakeglass,
 /area/awaymission/challenge/main)
+"kv" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/closed/indestructible{
+	icon_state = "iron0"
+	},
+/area/awaymission/challenge/main)
 "kK" = (
 /turf/closed/indestructible/rock/snow/ice,
 /area/awaymission/challenge/main)
@@ -821,6 +823,7 @@
 /area/awaymission/challenge/main)
 "lN" = (
 /obj/structure/mineral_door/transparent/plasma,
+/obj/effect/clockwork/overlay/floor,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
 "mb" = (
@@ -830,12 +833,6 @@
 "me" = (
 /turf/open/floor/mineral/plastitanium/red/airless,
 /area/awaymission/challenge/main)
-"mq" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
-/turf/open/lava/smooth/airless,
-/area/space)
 "mz" = (
 /mob/living/simple_animal/hostile/retaliate/clown/lube,
 /turf/open/floor/mineral/bananium,
@@ -847,6 +844,10 @@
 "nc" = (
 /mob/living/simple_animal/hostile/retaliate/clown/fleshclown,
 /turf/open/floor/mineral/bananium,
+/area/awaymission/challenge/main)
+"ne" = (
+/obj/effect/mine/sound/bwoink,
+/turf/open/space/basic,
 /area/awaymission/challenge/main)
 "nf" = (
 /obj/structure/disposalpipe/junction/flip,
@@ -881,11 +882,6 @@
 /obj/item/clothing/head/hooded/cloakhood/bone,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
-"oI" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/effect/clockwork/overlay/wall,
-/turf/open/space,
-/area/awaymission/challenge/main)
 "oT" = (
 /mob/living/simple_animal/parrot,
 /turf/open/floor/carpet/purple,
@@ -899,14 +895,13 @@
 /obj/structure/table/wood,
 /turf/open/floor/carpet/purple,
 /area/awaymission/challenge/main)
-"pk" = (
-/obj/machinery/light,
-/turf/closed/indestructible/rock/snow/ice,
-/area/awaymission/challenge/main)
-"pN" = (
-/mob/living/simple_animal/pet/cat/Runtime,
-/obj/structure/displaycase/labcage,
-/turf/open/floor/carpet/purple,
+"pz" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/closed/indestructible{
+	icon_state = "iron0"
+	},
 /area/awaymission/challenge/main)
 "pO" = (
 /obj/structure/chair/sofa/corner{
@@ -924,6 +919,7 @@
 	},
 /obj/machinery/door/airlock/survival_pod,
 /obj/structure/fans/tiny/invisible,
+/obj/effect/clockwork/overlay/floor,
 /turf/open/floor/plasteel/white,
 /area/awaymission/challenge/main)
 "qe" = (
@@ -944,9 +940,12 @@
 /obj/item/paper/fluff/awaymissions/challenge/clownnote,
 /turf/open/floor/mineral/bananium,
 /area/awaymission/challenge/main)
-"rT" = (
-/obj/effect/mine/sound/bwoink,
-/turf/open/floor/plating/dirt,
+"sg" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal/deliveryChute,
+/turf/open/floor/plasteel/sepia,
 /area/awaymission/challenge/main)
 "sh" = (
 /obj/structure/table/wood,
@@ -1016,6 +1015,14 @@
 	},
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/plating/airless,
+/area/awaymission/challenge/main)
+"uV" = (
+/obj/item/deployablemine/plasma,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/mine/kickmine,
+/turf/open/space/basic,
 /area/awaymission/challenge/main)
 "vf" = (
 /mob/living/simple_animal/pet/dog/corgi,
@@ -1124,6 +1131,11 @@
 	icon_state = "damaged2"
 	},
 /area/awaymission/challenge/start)
+"AA" = (
+/obj/effect/mine/sound/bwoink,
+/obj/effect/mine/sound/bwoink,
+/turf/open/floor/plating/airless,
+/area/space)
 "AD" = (
 /mob/living/simple_animal/pet/dog/corgi,
 /turf/open/floor/carpet/purple,
@@ -1148,6 +1160,14 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/sepia,
+/area/awaymission/challenge/main)
+"Cf" = (
+/obj/item/deployablemine/plasma,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/mine/gas/plasma,
+/turf/open/space/basic,
 /area/awaymission/challenge/main)
 "Cl" = (
 /obj/item/pet_carrier,
@@ -1174,6 +1194,10 @@
 	dir = 10
 	},
 /turf/open/floor/plating/airless,
+/area/awaymission/challenge/main)
+"CY" = (
+/obj/effect/mine/kickmine,
+/turf/open/space/basic,
 /area/awaymission/challenge/main)
 "Da" = (
 /obj/effect/turf_decal/stripes/line{
@@ -1204,6 +1228,13 @@
 /obj/structure/fluff/drake_statue,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
+"Ff" = (
+/obj/item/deployablemine/plasma,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/space/basic,
+/area/awaymission/challenge/main)
 "Fx" = (
 /turf/open/floor/plating/asteroid/airless,
 /area/space)
@@ -1221,6 +1252,12 @@
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
+"FU" = (
+/obj/structure/mineral_door/iron,
+/turf/open/floor/plasteel/white/side{
+	dir = 2
+	},
+/area/awaymission/challenge/main)
 "Gm" = (
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 8
@@ -1232,10 +1269,6 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/sepia,
-/area/awaymission/challenge/main)
-"GE" = (
-/obj/item/deployablemine/sleepy,
-/turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
 "GU" = (
 /obj/machinery/door/airlock/external,
@@ -1311,6 +1344,11 @@
 /obj/item/stack/sheet/animalhide/goliath_hide,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
+"Kq" = (
+/obj/effect/mine/kickmine,
+/obj/effect/mine/kickmine,
+/turf/open/space/basic,
+/area/awaymission/challenge/main)
 "KU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -1370,11 +1408,14 @@
 /obj/item/twohanded/fireaxe/boneaxe,
 /turf/open/floor/plating/dirt,
 /area/awaymission/challenge/main)
-"Nm" = (
-/obj/item/a_gift/anything,
-/obj/item/gun/magic/wand/door,
-/turf/open/floor/carpet/purple,
-/area/awaymission/challenge/main)
+"NJ" = (
+/obj/effect/mine/kickmine,
+/turf/open/floor/plating/airless,
+/area/space)
+"NO" = (
+/obj/effect/mine/sound/bwoink,
+/turf/open/floor/plating/airless,
+/area/space)
 "Oj" = (
 /obj/structure/statue/silver/sec,
 /turf/open/floor/plating/dirt,
@@ -1420,12 +1461,24 @@
 /obj/machinery/gateway,
 /turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/start)
+"Px" = (
+/obj/effect/mine/explosive,
+/turf/open/floor/plating/airless,
+/area/space)
 "PS" = (
 /turf/open/floor/carpet/purple,
 /area/awaymission/challenge/main)
 "Qy" = (
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/dirt,
+/area/awaymission/challenge/main)
+"QY" = (
+/obj/effect/mine/sound/bwoink,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/mine/kickmine,
+/turf/open/space/basic,
 /area/awaymission/challenge/main)
 "Rr" = (
 /obj/structure/disposalpipe/segment{
@@ -1453,6 +1506,13 @@
 "TT" = (
 /obj/structure/statue/silver/janitor,
 /turf/open/floor/plating/dirt,
+/area/awaymission/challenge/main)
+"TY" = (
+/obj/item/deployablemine/plasma,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/space/basic,
 /area/awaymission/challenge/main)
 "Ui" = (
 /obj/structure/statue/silver/medborg,
@@ -1500,9 +1560,7 @@
 /turf/open/floor/carpet/purple,
 /area/awaymission/challenge/main)
 "Xl" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/effect/clockwork/overlay/wall,
-/turf/open/space/basic,
+/turf/closed/wall/mineral/bronze,
 /area/awaymission/challenge/main)
 "Xo" = (
 /obj/item/pet_carrier,
@@ -1517,11 +1575,6 @@
 	dir = 8
 	},
 /turf/open/floor/plating/airless,
-/area/awaymission/challenge/main)
-"XL" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/structure/mineral_door/transparent/plasma,
-/turf/open/space/basic,
 /area/awaymission/challenge/main)
 "XQ" = (
 /obj/structure/disposalpipe/segment{
@@ -1563,7 +1616,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/turf/open/lava/smooth/airless,
+/turf/open/space/basic,
 /area/awaymission/challenge/main)
 "Zn" = (
 /obj/structure/statue/diamond/captain,
@@ -26141,23 +26194,23 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 cl
-aa
-aa
-aa
-aa
-aa
-aa
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
 cl
 cl
 cl
@@ -29224,26 +29277,26 @@ bF
 bJ
 aT
 aT
-aT
-gi
-gi
-gi
-gi
-gi
-gi
-gi
-gi
-gi
-gi
-gi
-gi
-gi
-gi
-gi
-gi
-iy
-iy
-iy
+kv
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NJ
+NO
+NO
+NO
+NO
+NO
 bP
 bP
 bP
@@ -29482,25 +29535,25 @@ bG
 bG
 bG
 bQ
-rT
-rT
-rT
-rT
-eC
-GE
-GE
-GE
-GE
-rT
-rT
-rT
-GE
-GE
-rT
-rT
-rT
-eC
-rT
+NO
+NO
+NO
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+NO
+NO
+NO
+Px
+NO
+Px
+Px
+Px
+NO
 bP
 bP
 Fb
@@ -29738,26 +29791,26 @@ bG
 bG
 bG
 bG
-bG
-rT
-eC
-eC
-cO
-eC
-GE
-GE
-GE
-GE
-rT
-GE
-rT
-rT
-GE
-cO
-eC
-eC
-rT
-rT
+FU
+Px
+Px
+NO
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+NO
+Px
+NO
+Px
+NO
+NO
+NO
+Px
+NO
 bP
 bP
 wi
@@ -29781,7 +29834,7 @@ fm
 fm
 fm
 Xl
-pk
+kK
 Zg
 aA
 lx
@@ -29995,26 +30048,26 @@ bH
 bK
 aV
 aV
-aV
-eC
-eC
-eC
-rT
-eC
-GE
-GE
-GE
-GE
-rT
-GE
-GE
-rT
-GE
-rT
-rT
-eC
-rT
-eC
+pz
+Px
+Px
+NO
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+AA
+Px
+NO
+Px
+Px
+Px
+NO
+Px
+NO
 bP
 bP
 Vs
@@ -30025,7 +30078,7 @@ Dd
 tW
 Yd
 aA
-kK
+Xl
 Xl
 fm
 fm
@@ -30039,7 +30092,7 @@ fm
 fm
 Xl
 kK
-KU
+Zg
 aA
 aA
 aA
@@ -30252,26 +30305,26 @@ aH
 bI
 aN
 aF
-aF
-eC
-eC
-eC
-rT
-eC
-GE
-GE
-GE
-GE
-rT
-GE
-GE
-rT
-GE
-GE
-rT
-eC
-rT
-rT
+aA
+Px
+Px
+NO
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+NO
+Px
+NO
+NO
+NO
+Px
+NO
+Px
+NO
 lC
 Qy
 tW
@@ -30283,7 +30336,7 @@ yB
 yB
 Am
 lN
-XL
+fm
 fm
 fm
 fm
@@ -30309,14 +30362,14 @@ MU
 JV
 CA
 MX
-aA
-lx
-lx
-lx
-JV
-lx
-aA
-Co
+yJ
+jR
+jR
+jR
+cO
+jR
+yJ
+sg
 jM
 gm
 gm
@@ -30510,25 +30563,25 @@ bI
 ct
 aF
 bP
-eC
-eC
-eC
-rT
-eC
-GE
-GE
-GE
-GE
-rT
-GE
-GE
-rT
-GE
-GE
-rT
-eC
-eC
-eC
+Px
+Px
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+Px
+Px
+Px
+NO
+Px
+NO
+Px
+Px
 bP
 bP
 Vs
@@ -30539,20 +30592,20 @@ ZR
 tW
 Ap
 aA
+Xl
+Xl
+fm
+fm
+fm
+fm
+fm
+fm
+fm
+fm
+fm
+fm
+Xl
 kK
-Xl
-fm
-fm
-fm
-fm
-fm
-fm
-fm
-fm
-fm
-fm
-Xl
-pk
 Zg
 aA
 aA
@@ -30598,7 +30651,7 @@ WP
 WP
 WP
 WP
-Nm
+WP
 uG
 PS
 PS
@@ -30767,25 +30820,25 @@ bI
 aF
 aF
 bP
-eC
-eC
-eC
-rT
-eC
-rT
-cO
-rT
-GE
-rT
-GE
-GE
-rT
-GE
-GE
-rT
-eC
-eC
-eC
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+NO
+NO
+NO
+NO
+Px
+NO
+Px
+Px
 bP
 bP
 wi
@@ -30810,7 +30863,7 @@ fm
 fm
 Xl
 kK
-KU
+Zg
 lx
 lx
 lx
@@ -31024,25 +31077,25 @@ bI
 aF
 aF
 bP
-eC
-eC
-eC
-rT
-rT
-rT
-fC
-rT
-rT
-rT
-GE
-GE
-rT
-rT
-rT
-rT
-eC
-eC
-eC
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+NO
+Px
+Px
+Px
+Px
+NO
+Px
+Px
 bP
 bP
 Fb
@@ -31067,7 +31120,7 @@ fm
 fm
 Xl
 kK
-KU
+Zg
 lx
 lx
 lx
@@ -31281,25 +31334,25 @@ bI
 aF
 aF
 bP
-fx
-fx
-fx
-fx
-fx
-fx
-fx
-fx
-fx
-fx
-fx
-fx
-fx
-fx
-fx
-fx
-fx
-fx
-fx
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+NO
+NO
+NO
+NO
+NO
+NO
+Px
+Px
 bP
 bP
 aA
@@ -31324,7 +31377,7 @@ fm
 fm
 Xl
 kK
-KU
+rn
 lx
 lx
 lx
@@ -31581,7 +31634,7 @@ fm
 fm
 Xl
 kK
-KU
+rn
 lx
 lx
 lx
@@ -31838,7 +31891,7 @@ fm
 fm
 Xl
 kK
-mq
+rn
 bP
 bP
 bP
@@ -31890,7 +31943,7 @@ aa
 aa
 aA
 ex
-pN
+ex
 ex
 wa
 jX
@@ -32596,7 +32649,7 @@ aa
 aa
 aa
 kK
-oI
+Xl
 pa
 pa
 pa
@@ -32607,7 +32660,7 @@ pa
 pa
 pa
 pa
-oI
+Xl
 kK
 rn
 rn
@@ -32853,7 +32906,7 @@ aa
 aa
 aa
 kK
-oI
+Xl
 pa
 pa
 pa
@@ -32864,7 +32917,7 @@ pa
 pa
 pa
 pa
-oI
+Xl
 kK
 rn
 rn
@@ -33110,18 +33163,18 @@ aa
 aa
 aa
 kK
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+Xl
+Xl
+Xl
+Xl
+Xl
+Xl
+Xl
+Xl
+Xl
+Xl
+Xl
+Xl
 kK
 rn
 rn
@@ -57316,25 +57369,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fo
+fo
+fo
+fo
+fo
+fo
+TY
+uV
+uV
+uV
+uV
+uV
+uV
+uV
+uV
+uV
+QY
+QY
+hP
 aa
 aa
 aa
@@ -57573,25 +57626,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ne
+ne
+ne
+ne
+ne
+ne
+ne
+CY
+CY
+CY
+CY
+CY
+CY
+CY
+CY
+CY
+CY
+CY
+Kq
 aa
 aa
 aa
@@ -57830,25 +57883,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+CY
+CY
+CY
+CY
+CY
+CY
+ne
+CY
+CY
+CY
+ne
+ne
+ne
+CY
+ne
+ne
+ne
+ne
+CY
 aa
 aa
 aa
@@ -58087,25 +58140,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+CY
+CY
+CY
+CY
+CY
+CY
+ne
+CY
+CY
+CY
+ne
+CY
+ne
+CY
+ne
+CY
+CY
+ne
+CY
 aa
 aa
 aa
@@ -58344,25 +58397,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+CY
+CY
+CY
+CY
+CY
+CY
+ne
+CY
+CY
+CY
+ne
+CY
+ne
+CY
+ne
+CY
+CY
+ne
+ne
 aa
 aa
 aa
@@ -58601,25 +58654,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+CY
+CY
+CY
+CY
+CY
+CY
+ne
+CY
+CY
+CY
+ne
+CY
+ne
+CY
+ne
+CY
+CY
+CY
+CY
 aa
 aa
 aa
@@ -58858,25 +58911,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+CY
+CY
+CY
+CY
+CY
+CY
+ne
+ne
+ne
+ne
+ne
+CY
+ne
+CY
+ne
+CY
+CY
+CY
+CY
 aa
 aa
 aa
@@ -59115,25 +59168,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+CY
+CY
+CY
+CY
+CY
+CY
+CY
+CY
+CY
+CY
+CY
+Kq
+ne
+ne
+ne
+CY
+CY
+CY
+CY
 aa
 aa
 aa
@@ -59372,25 +59425,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cf
+Cf
+Cf
+Cf
+Cf
+Cf
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
 aa
 aa
 aa

@@ -14,6 +14,11 @@
 	icon_state = "away2"
 	requires_power = FALSE
 
+/area/awaymission/challenge/hall
+	name = "The Hall of Meneliusz"
+	icon_state = "away3"
+	requires_power = FALSE
+	requires_power = FALSE
 
 /obj/machinery/power/emitter/energycannon
 	name = "Energy Cannon"
