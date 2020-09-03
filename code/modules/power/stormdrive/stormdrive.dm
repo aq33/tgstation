@@ -156,6 +156,27 @@ Control Rods
 	icon = 'icons/obj/stormdrive/reactor_solgov.dmi'
 	theoretical_maximum_power = 20000000
 
+/obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken
+	name = "broken class IV nuclear storm drive"
+	icon_state = "broken"
+	var/radtime
+
+/obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken/Initialize()
+	START_PROCESSING(SSmachines, src)
+	radiation_pulse(src, rand(3000, 10000) * radiation_modifier, 0.1)
+	radtime = world.time
+
+/obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken/process()
+	if(radtime < world.time - 100)
+		radiation_pulse(src, rand(1000, 2000) * radiation_modifier, 0.05)
+		radtime = world.time
+
+/obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken/attackby(obj/item/W, mob/user, params)
+	return
+
+/obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken/attack_hand(mob/living/user)
+	STOP_PROCESSING(SSmachines, src)
+
 /obj/machinery/atmospherics/components/binary/stormdrive_reactor/attackby(obj/item/I, mob/living/carbon/user, params)
 	if(istype(I, /obj/item/control_rod))
 		if(control_rod_installation) //check for if someone is already moving rods
@@ -447,29 +468,25 @@ Control Rods
 
 /obj/machinery/atmospherics/components/binary/stormdrive_reactor/proc/meltdown()
 	if(heat >= reactor_temperature_meltdown)
-		state = REACTOR_STATE_MELTDOWN
-		var/sound = 'sound/effects/stormdrive/explode.ogg'
-		playsound(src, sound, 500)
 		cut_overlays()
 		flick("meltdown", src)
 		do_meltdown_effects()
 		sleep(10)
-		icon_state = "broken"
+		new /obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken(get_turf(src))
+		qdel(src)
 	else
 		warning_state = WARNING_STATE_NONE
 
 /obj/machinery/atmospherics/components/binary/stormdrive_reactor/proc/do_meltdown_effects()
-	explosion(get_turf(src), 15, 20, 39, 20, TRUE, TRUE)
-	radiation_pulse(src, 5000 * radiation_modifier, 20, TRUE)
+	explosion(get_turf(src), 10, 15, 30, 15, TRUE, TRUE)
+	var/sound = 'sound/effects/stormdrive/explode.ogg'
+	playsound(src, sound, 1000)
 	for(var/a in GLOB.apcs_list)
 		var/obj/machinery/power/apc/A = a
 		if(/*shares_overmap(src, a) &&*/ prob(70)) //Are they on our ship?
 			A.overload_lighting()
 
 /obj/machinery/atmospherics/components/binary/stormdrive_reactor/update_icon() //include overlays for radiation output levels and power output levels (ALSO 1k+ levels)
-	if(state == REACTOR_STATE_MELTDOWN)
-		icon_state = "broken"
-		return
 	cut_overlays()
 	if(can_cool()) //If control rods aren't destroyed.
 		switch(round(control_rod_percent)) //move the control rods up and down
@@ -1128,123 +1145,6 @@ Control Rods
 	description = "Seegson's latest and greatest (within your budget range) reactor control design!"
 	prereq_ids = list("adv_engi", "adv_power")
 	design_ids = list("sd_r_c_c")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-	export_price = 5000
-
-//////Magnetic Constrictors//////
-
-/obj/machinery/atmospherics/components/binary/magnetic_constrictor //This heats the plasma up to acceptable levels for use in the reactor.
-	name = "magnetic constrictor"
-	desc = "A large magnet which is capable of pressurizing plasma into a more energetic state. It is able to self-regulate its plasma input valve, as long as plasma is supplied to it."
-	icon = 'icons/obj/stormdrive/reactor_parts.dmi'
-	icon_state = "constrictor"
-	density = TRUE
-	circuit = /obj/item/circuitboard/machine/magnetic_constrictor
-	layer = OBJ_LAYER
-	pipe_flags = PIPING_ONE_PER_TURF
-	active_power_usage = 200
-	var/constriction_rate = 0 //SSAtmos is 4x faster than SSMachines aka the reactor
-	var/max_output_pressure = 0
-
-/obj/machinery/atmospherics/components/binary/magnetic_constrictor/on_construction()
-	var/obj/item/circuitboard/machine/thermomachine/board = circuit
-	if(board)
-		piping_layer = board.pipe_layer
-	..(dir, piping_layer)
-
-/obj/machinery/atmospherics/components/binary/magnetic_constrictor/RefreshParts()
-	var/A
-	for(var/obj/item/stock_parts/capacitor/C in component_parts)
-		A += C.rating
-	constriction_rate = 0.9 + (0.1 * A)
-	var/B
-	for(var/obj/item/stock_parts/manipulator/M in component_parts)
-		B += M.rating
-	max_output_pressure = 100 + (100 * B)
-
-/obj/machinery/atmospherics/components/binary/magnetic_constrictor/attack_hand(mob/user)
-	. = ..()
-	if(panel_open)
-		to_chat(user, "<span class='notice'>You must turn close the panel on [src] before turning it on.</span>")
-		return
-	to_chat(user, "<span class='notice'>You press [src]'s power button.</span>")
-	on = !on
-	update_icon()
-
-/obj/machinery/atmospherics/components/binary/magnetic_constrictor/ComponentInitialize()
-	. = ..()
-	AddComponent(/datum/component/simple_rotation,ROTATION_ALTCLICK | ROTATION_CLOCKWISE | ROTATION_COUNTERCLOCKWISE | ROTATION_VERBS )
-
-/obj/machinery/atmospherics/components/binary/magnetic_constrictor/process_atmos()
-	..()
-	if(!on)
-		return
-	var/datum/gas_mixture/air1 = airs[1]
-	var/datum/gas_mixture/air2 = airs[2]
-	var/output_starting_pressure = air2.return_pressure()
-	if(output_starting_pressure >= max_output_pressure)
-		return
-	var/plasma_moles = air1.get_moles(/datum/gas/plasma)
-	var/plasma_transfer_moles = min(constriction_rate, plasma_moles)
-	air2.adjust_moles(/datum/gas/plasma, plasma_transfer_moles)
-	air2.set_temperature(air1.return_temperature())
-	air1.adjust_moles(/datum/gas/tritium, -plasma_transfer_moles)
-	update_parents()
-
-/obj/machinery/atmospherics/components/binary/magnetic_constrictor/crowbar_act(mob/user, obj/item/I)
-	default_deconstruction_crowbar(I)
-	return TRUE
-
-/obj/machinery/atmospherics/components/binary/magnetic_constrictor/screwdriver_act(mob/user, obj/item/I)
-	if(..())
-		return TRUE
-	if(on)
-		to_chat(user, "<span class='notice'>You must turn off [src] before opening the panel.</span>")
-		return FALSE
-	panel_open = !panel_open
-	I.play_tool_sound(src)
-	to_chat(user, "<span class='notice'>You [panel_open?"open":"close"] the panel on [src].</span>")
-	update_icon()
-	return TRUE
-
-/obj/machinery/atmospherics/components/binary/magnetic_constrictor/update_icon()
-	cut_overlays()
-	if(panel_open)
-		icon_state = "constrictor_screw"
-	else if(on)
-		icon_state = "constrictor_active"
-	else
-		icon_state = "constrictor"
-
-/obj/item/circuitboard/machine/magnetic_constrictor
-	name = "Magnetic Constrictor (Machine Board)"
-	build_path = /obj/machinery/atmospherics/components/binary/magnetic_constrictor
-	var/pipe_layer = PIPING_LAYER_DEFAULT
-	req_components = list(
-		/obj/item/stock_parts/capacitor = 1,
-		/obj/item/stock_parts/manipulator = 1)
-
-/obj/item/circuitboard/machine/magnetic_constrictor/attackby(obj/item/I, mob/user, params)
-	if(I.tool_behaviour == TOOL_MULTITOOL)
-		pipe_layer = (pipe_layer >= PIPING_LAYER_MAX) ? PIPING_LAYER_MIN : (pipe_layer + 1)
-		to_chat(user, "<span class='notice'>You change the circuitboard to layer [pipe_layer].</span>")
-		return
-	. = ..()
-
-/datum/design/board/magnetic_constrictor
-	name = "Machine Design (Magnetic Constrictor Board)"
-	desc = "The circuit board for a Magnetic Constrictor."
-	id = "mag_cons"
-	build_path = /obj/item/circuitboard/machine/magnetic_constrictor
-	category = list("Engineering Machinery")
-	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
-
-/datum/techweb_node/magnetic_constrictor
-	id = "mag_cons"
-	display_name = "Magnetic Constriction of Plasma"
-	description = "Beating plasma into submission - a guide."
-	prereq_ids = list("adv_engi", "adv_power")
-	design_ids = list("mag_cons")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
