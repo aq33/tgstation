@@ -48681,10 +48681,6 @@
 /obj/machinery/shieldwallgen,
 /turf/open/floor/plasteel/dark,
 /area/teleporter)
-"bPw" = (
-/obj/structure/falsewall/reinforced,
-/turf/open/floor/plasteel/dark,
-/area/crew_quarters/heads/captain)
 "bPx" = (
 /obj/machinery/computer/card{
 	dir = 1
@@ -105274,7 +105270,7 @@ bKu
 bLT
 bNc
 bNf
-bPw
+asx
 bQS
 byu
 bTc
