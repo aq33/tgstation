@@ -219,9 +219,7 @@
         return
 
     if(M.can_inject(user, 1) && reagents.total_volume && M.reagents)
-        to_chat(user, "<span class='warning'>You stab [M] with the ubersaw.</span>")
         to_chat(M, "<span class='danger'>You feel a sharp sting!</span>")
-
         reagents.reaction(M, INJECT, reagents.total_volume)
         reagents.trans_to(M, amount_per_transfer_from_this, transfered_by = user)
 
@@ -230,7 +228,7 @@
 
 /obj/item/circular_saw/ubersaw/Initialize()
 	. = ..()
-	create_reagents(20, OPENCONTAINER)
+	create_reagents(50, OPENCONTAINER)
 
 /obj/item/circular_saw/ubersaw/verb/empty()
 	set name = "Empty Ubersaw"
