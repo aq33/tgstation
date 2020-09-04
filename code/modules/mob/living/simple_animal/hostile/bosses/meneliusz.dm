@@ -31,7 +31,7 @@
 	if(!istype(human_target))
 		return
 
-	if(prob(20))
+	if(prob(8))
 		human_target.reagents.add_reagent(/datum/reagent/consumable/ethanol/bacchus_blessing, 690)
 	else  //LINE 30
 		human_target.reagents.add_reagent(/datum/reagent/consumable/ethanol/hooch, 10)
