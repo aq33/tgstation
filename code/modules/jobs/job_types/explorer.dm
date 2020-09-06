@@ -39,7 +39,7 @@
 		/obj/item/fulton_core = 1,
         /obj/item/extraction_pack = 1,
 		/obj/item/choice_beacon/exploring = 1,
-        /obj/item/kitchen/knife/combat/survival=1,)
+        /obj/item/kitchen/knife/combat/survival=1)
 
 	backpack = /obj/item/storage/backpack/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
