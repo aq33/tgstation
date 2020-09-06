@@ -94,12 +94,12 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 
 	var/damage = 0
 	var/damage_archived = 0
-	var/safe_alert = "Crystalline hyperstructure returning to safe operating parameters."
+	var/safe_alert = "Krystaliczna hiperstruktura powraca do bezpiecznych parametrów pracy."
 	var/warning_point = 50
-	var/warning_alert = "Danger! Crystal hyperstructure integrity faltering!"
+	var/warning_alert = "Zagrożenie! Integralność krystalicznej hiperstruktury słabnie!"
 	var/damage_penalty_point = 550
 	var/emergency_point = 700
-	var/emergency_alert = "CRYSTAL DELAMINATION IMMINENT."
+	var/emergency_alert = "DELAMINACJA KRYSZTAŁU NIEUNIKNIONA."
 	var/explosion_point = 900
 
 	var/emergency_issued = FALSE
@@ -259,7 +259,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	var/image/causality_field = image(icon, null, "causality_field")
 	add_overlay(causality_field, TRUE)
 
-	var/speaking = "[emergency_alert] The supermatter has reached critical integrity failure. Emergency causality destabilization field has been activated."
+	var/speaking = "[emergency_alert] Supermateria osiągnęła krytyczne uszkodzenie integralności. Awaryjne pole destabilizacji włączone."
 	radio.talk_into(src, speaking, common_channel, language = get_selected_language())
 	for(var/i in SUPERMATTER_COUNTDOWN_TIME to 0 step -10)
 		if(damage < explosion_point) // Cutting it a bit close there engineers
@@ -271,7 +271,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 			sleep(10)
 			continue
 		else if(i > 50)
-			speaking = "[DisplayTimeText(i, TRUE)] remain before causality stabilization."
+			speaking = "[DisplayTimeText(i, TRUE)] pozostało do przyczynowej stabilizacji."
 		else
 			speaking = "[i*0.1]..."
 		radio.talk_into(src, speaking, common_channel)
@@ -497,27 +497,27 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 			alarm()
 
 			if(damage > emergency_point)
-				radio.talk_into(src, "[emergency_alert] Integrity: [get_integrity()]%", common_channel)
+				radio.talk_into(src, "[emergency_alert] Integralność: [get_integrity()]%", common_channel)
 				lastwarning = REALTIMEOFDAY
 				if(!has_reached_emergency)
-					investigate_log("has reached the emergency point for the first time.", INVESTIGATE_SUPERMATTER)
+					investigate_log("osiągnał krytyczny punkt po raz pierwszy.", INVESTIGATE_SUPERMATTER)
 					message_admins("[src] has reached the emergency point [ADMIN_JMP(src)].")
 					has_reached_emergency = TRUE
 			else if(damage >= damage_archived) // The damage is still going up
-				radio.talk_into(src, "[warning_alert] Integrity: [get_integrity()]%", engineering_channel)
+				radio.talk_into(src, "[warning_alert] Integralność: [get_integrity()]%", engineering_channel)
 				lastwarning = REALTIMEOFDAY - (WARNING_DELAY * 5)
 
 			else                                                 // Phew, we're safe
-				radio.talk_into(src, "[safe_alert] Integrity: [get_integrity()]%", engineering_channel)
+				radio.talk_into(src, "[safe_alert] Integralność: [get_integrity()]%", engineering_channel)
 				lastwarning = REALTIMEOFDAY
 
 			if(power > POWER_PENALTY_THRESHOLD)
-				radio.talk_into(src, "Warning: Hyperstructure has reached dangerous power level.", engineering_channel)
+				radio.talk_into(src, "Uwaga: Hiperstruktura osiągnęła niebezpieczny poziom mocy.", engineering_channel)
 				if(powerloss_inhibitor < 0.5)
-					radio.talk_into(src, "DANGER: CHARGE INERTIA CHAIN REACTION IN PROGRESS.", engineering_channel)
+					radio.talk_into(src, "UWAGA: ŁAŃCUCHOWA REAKCJA BEZWŁADNOŚCI W TOKU.", engineering_channel)
 
 			if(combined_gas > MOLE_PENALTY_THRESHOLD)
-				radio.talk_into(src, "Warning: Critical coolant mass reached.", engineering_channel)
+				radio.talk_into(src, "Uwaga: Krytyczna masa chłodziwa osiągnięta.", engineering_channel)
 
 		if(damage > explosion_point)
 			countdown()
