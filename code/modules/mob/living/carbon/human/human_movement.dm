@@ -20,6 +20,8 @@
 			return 0
 		if(shoes && istype(shoes, /obj/item/clothing))
 			var/obj/item/clothing/CS = shoes
+			if (lube&NO_SLIP_WHEN_WALKING && CS.clothing_flags & NOSLIP_SMALL)
+				return 0
 			if (CS.clothing_flags & NOSLIP)
 				return 0
 	return ..()
