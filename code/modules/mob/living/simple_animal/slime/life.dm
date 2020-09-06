@@ -46,6 +46,9 @@
 			else if(!Atkcool)
 				Atkcool = 1
 				spawn(45)
+					if(!Target)
+						Atkcool = 0
+						return
 					Atkcool = 0
 					Target.attack_slime(src)
 		else if(Target in view(7, src))

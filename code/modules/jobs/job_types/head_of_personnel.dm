@@ -13,9 +13,9 @@
 	chat_color = "#7979d3"
 	req_admin_notify = 1
 	minimal_player_age = 10
-	exp_requirements = 300
+	exp_requirements = 1200
 	exp_type = EXP_TYPE_CREW
-	exp_type_department = EXP_TYPE_COMMAND
+	exp_type_department = EXP_TYPE_SUPPLY
 
 	outfit = /datum/outfit/job/hop
 
