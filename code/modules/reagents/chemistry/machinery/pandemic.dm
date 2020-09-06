@@ -2,16 +2,16 @@
 #define SYMPTOM_DETAILS 2
 
 /obj/machinery/computer/pandemic
-	name = "PanD.E.M.I.C 2200"
+	name = "PanD.E.M.I.C 2220"
 	desc = "Used to work with viruses."
 	density = TRUE
 	icon = 'icons/obj/chemical.dmi'
-	icon_state = "mixer0"
+	icon_state = "panda0"
 	use_power = TRUE
 	idle_power_usage = 20
 	resistance_flags = ACID_PROOF
 	circuit = /obj/item/circuitboard/computer/pandemic
-	ui_x = 520
+	ui_x = 520//520
 	ui_y = 550
 
 	var/wait
@@ -130,12 +130,12 @@
 
 /obj/machinery/computer/pandemic/update_icon()
 	if(stat & BROKEN)
-		icon_state = (beaker ? "mixer1_b" : "mixer0_b")
+		icon_state = (beaker ? "panda0_broken" : "panda1_broken")
 		return
 
-	icon_state = "mixer[(beaker) ? "1" : "0"][powered() ? "" : "_nopower"]"
+	icon_state = "panda[(beaker) ? "1" : "0"][powered() ? "" : "_nopower"]"
 	if(wait)
-		add_overlay("waitlight")
+		add_overlay("panda1_wait")
 	else
 		cut_overlays()
 
