@@ -1,4 +1,4 @@
-#define DRONE_MINIMUM_AGE 14
+#define DRONE_MINIMUM_AGE 7
 
 ///////////////////
 //DRONES AS ITEMS//
@@ -21,7 +21,7 @@
 	. = ..()
 	var/area/A = get_area(src)
 	if(A)
-		notify_ghosts("A drone shell has been created in \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE, ignore_key = POLL_IGNORE_DRONE, notify_suiciders = FALSE)
+		notify_ghosts("Dron został stworzony w [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE, ignore_key = POLL_IGNORE_DRONE, notify_suiciders = FALSE)
 	GLOB.poi_list |= src
 	if(isnull(possible_seasonal_hats))
 		build_seasonal_hats()
@@ -46,22 +46,22 @@
 	if(CONFIG_GET(flag/use_age_restriction_for_jobs))
 		if(!isnum(user.client.player_age)) //apparently what happens when there's no DB connected. just don't let anybody be a drone without admin intervention
 			return
-		if(user.client.player_age < DRONE_MINIMUM_AGE)
-			to_chat(user, "<span class='danger'>You're too new to play as a drone! Please try again in [DRONE_MINIMUM_AGE - user.client.player_age] days.</span>")
-			return
 	if(!SSticker.mode)
-		to_chat(user, "Can't become a drone before the game has started.")
+		to_chat(user, "Nie możesz być dronem przed początkiem rundy.")
 		return
-	var/be_drone = alert("Become a drone? (Warning, You can no longer be cloned!)",,"Yes","No")
-	if(be_drone == "No" || QDELETED(src) || !isobserver(user))
-		return
-	var/mob/living/simple_animal/drone/D = new drone_type(get_turf(loc))
-	if(!D.default_hatmask && seasonal_hats && possible_seasonal_hats.len)
-		var/hat_type = pick(possible_seasonal_hats)
-		var/obj/item/new_hat = new hat_type(D)
-		D.equip_to_slot_or_del(new_hat, SLOT_HEAD)
-	D.flags_1 |= (flags_1 & ADMIN_SPAWNED_1)
-	D.key = user.key
-	message_admins("[ADMIN_LOOKUPFLW(user)] has taken possession of \a [src] in [AREACOORD(src)].")
-	log_game("[key_name(user)] has taken possession of \a [src] in [AREACOORD(src)].")
-	qdel(src)
+	if(!(user.client.player_age < DRONE_MINIMUM_AGE))
+		var/be_drone = alert("Czy chcesz zostać dronem? (UWAGA, nie możesz po tym zostać sklonowany!)",,"Tak","Nie")
+		if(be_drone == "Nie" || QDELETED(src) || !isobserver(user))
+			return
+		var/mob/living/simple_animal/drone/D = new drone_type(get_turf(loc))
+		if(!D.default_hatmask && seasonal_hats && possible_seasonal_hats.len)
+			var/hat_type = pick(possible_seasonal_hats)
+			var/obj/item/new_hat = new hat_type(D)
+			D.equip_to_slot_or_del(new_hat, SLOT_HEAD)
+			D.flags_1 |= (flags_1 & ADMIN_SPAWNED_1)
+		D.key = user.key
+		message_admins("[key_name(D)] has taken possession of \a [src] in [AREACOORD(src)].")
+		log_game("[key_name(user)] has taken possession of \a [src] in [AREACOORD(src)].")
+		qdel(src)
+	else
+		to_chat(user, "<span class='danger'>Jesteś zbyt nowy żeby grać dronem! Spróbuj ponownie za [DRONE_MINIMUM_AGE - user.client.player_age] dni.</span>")
