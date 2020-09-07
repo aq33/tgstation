@@ -1,4 +1,3 @@
-#define DRONE_MINIMUM_AGE 7
 ////////////////////
 //MORE DRONE TYPES//
 ////////////////////
