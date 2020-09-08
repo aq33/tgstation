@@ -2045,6 +2045,15 @@ datum/uplink_item/role_restricted/superior_honkrender
 	cost = 12
 	restricted_roles = list("Chemist", "Chief Medical Officer")
 
+/datum/uplink_item/role_restricted/ubersaw
+	name = "Ubersaw"
+	desc = "Old, rusty but still sharp abomination of a medical tool. It injects stored chemicals into stabbed victims."
+	item = /obj/item/circular_saw/ubersaw
+	cost = 7
+	limited_stock = 1
+	surplus = 20
+	restricted_roles = list("Chief Medical Officer", "Medical Doctor", "Paramedic")
+
 /datum/uplink_item/role_restricted/reverse_bear_trap
 	name = "Reverse Bear Trap"
 	desc = "An ingenious execution device worn on (or forced onto) the head. Arming it starts a 1-minute kitchen timer mounted on the bear trap. When it goes off, the trap's jaws will \
