@@ -287,6 +287,43 @@
 	desc="Phazon armor plates. They are layered with plasma to protect the pilot from the stress of phasing and have unusual properties."
 	icon_state = "phazon_armor"
 
+////////// Alpha
+
+/obj/item/mecha_parts/chassis/alpha
+	name = "\improper Alpha chassis"
+	construct_type = /datum/component/construction/unordered/mecha_chassis/alpha
+	icon_state = "alpha_backbone"
+
+/obj/item/mecha_parts/part/alpha_torso
+	name = "\improper Alpha Maglev turbine"
+	desc = "A Maglev Turbine. Contains unique ion thrusters, powered by a power cell."
+	icon_state = "alpha_harness"
+
+/obj/item/mecha_parts/part/alpha_head
+	name = "\improper Alpha cockpit"
+	desc = "An Alpha cockpit. Appears to have slots for additional shielding."
+	icon_state = "alpha_head"
+
+/obj/item/mecha_parts/part/alpha_left_arm
+	name = "\improper Alpha left equipment mount"
+	desc = "An Alpha left equipment mount. Data and power sockets are compatible with most exosuit tools and weapons."
+	icon_state = "alpha_l_arm"
+
+/obj/item/mecha_parts/part/alpha_right_arm
+	name = "\improper Alpha right equipment mount"
+	desc = "An Alpha right equipment mount. Data and power sockets are compatible with most exosuit tools and weapons."
+	icon_state = "alpha_r_arm"
+
+/obj/item/mecha_parts/part/alpha_left_leg
+	name = "\improper Alpha left leg"
+	desc = "An Alpha left leg. The foot appears to be foldable."
+	icon_state = "alpha_l_leg"
+
+/obj/item/mecha_parts/part/alpha_right_leg
+	name = "\improper Alpha right leg"
+	desc = "An Alpha right leg. The foot appears to be foldable."
+	icon_state = "alpha_r_leg"
+
 
 ///////// Circuitboards
 
@@ -375,3 +412,14 @@
 /obj/item/circuitboard/mecha/clarke/main
 	name = "Clarke Central Control module (Exosuit Board)"
 	icon_state = "mainboard"
+
+/obj/item/circuitboard/mecha/alpha/peripherals
+	name = "Alpha Peripherals Control module (Exosuit Board)"
+	icon_state = "mcontroller"
+
+/obj/item/circuitboard/mecha/alpha/targeting
+	name = "Alpha Weapon Control and Targeting module (Exosuit Board)"
+	icon_state = "mcontroller"
+
+/obj/item/circuitboard/mecha/alpha/main
+	name = "Alpha Central Control module (Exosuit Board)"

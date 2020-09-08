@@ -80,6 +80,7 @@
 	var/enclosed = TRUE //Set to false for open-cockpit mechs
 	var/silicon_icon_state = null //if the mech has a different icon when piloted by an AI or MMI
 	var/is_currently_ejecting = FALSE //Mech cannot use equiptment when true, set to true if pilot is trying to exit mech
+	var/is_currently_transforming = FALSE //Mech nie moze uzywac broni gdy sie transformuje
 
 	//Action datums
 	var/datum/action/innate/mecha/mech_eject/eject_action = new
@@ -94,6 +95,7 @@
 	var/datum/action/innate/mecha/mech_zoom/zoom_action = new
 	var/datum/action/innate/mecha/mech_switch_damtype/switch_damtype_action = new
 	var/datum/action/innate/mecha/mech_toggle_phasing/phasing_action = new
+	var/datum/action/innate/mecha/mech_transform/transform_action = new
 	var/datum/action/innate/mecha/strafe/strafing_action = new
 
 	//Action vars
@@ -110,6 +112,10 @@
 	var/phase_state = "" //icon_state when phasing
 	var/strafe = FALSE //If we are strafing
 	var/canstrafe = TRUE //if we can turn on strafing
+	
+	var/icon_chase = "alphachase"
+	var/step_in_chase = 0.75
+	var/chase_mode = FALSE
 
 	var/nextsmash = 0
 	var/smashcooldown = 3	//deciseconds
@@ -477,6 +483,8 @@
 	if(completely_disabled)
 		return
 	if(is_currently_ejecting)
+		return
+	if(is_currently_transforming)
 		return
 	if(phasing)
 		occupant_message("Unable to interact with objects while phasing")

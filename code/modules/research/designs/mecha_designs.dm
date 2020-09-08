@@ -149,6 +149,30 @@
 	category = list("Exosuit Modules")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
+/datum/design/board/alpha_main
+	name = "\"Alpha\" Central Control module"
+	desc = "Allows for the construction of a \"Alpha\" Central Control module."
+	id = "alpha_main"
+	build_path = /obj/item/circuitboard/mecha/alpha/main
+	category = list("Exosuit Modules")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
+
+/datum/design/board/alpha_peri
+	name = "\"Alpha\" Peripherals Control module"
+	desc = "Allows for the construction of a \"Alpha\" Peripheral Control module."
+	id = "alpha_peri"
+	build_path = /obj/item/circuitboard/mecha/alpha/peripherals
+	category = list("Exosuit Modules")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
+
+/datum/design/board/alpha_targ
+	name = "\"Alpha\" Weapons & Targeting Control module"
+	desc = "Allows for the construction of a \"Alpha\" Weapons & Targeting Control module."
+	id = "alpha_targ"
+	build_path = /obj/item/circuitboard/mecha/alpha/targeting
+	category = list("Exosuit Modules")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
+
 ////////////////////////////////////////
 /////////// Mecha Equpment /////////////
 ////////////////////////////////////////
