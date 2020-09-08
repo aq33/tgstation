@@ -157,25 +157,86 @@ Control Rods
 	theoretical_maximum_power = 20000000
 
 /obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken
-	name = "broken class IV nuclear storm drive"
+	name = "damaged class IV nuclear storm drive"
+	icon = 'icons/obj/stormdrive/reactor.dmi'
+	desc = "A damaged reactor."
 	icon_state = "broken"
+	anchored = TRUE
 	var/radtime
+	var/constructionstep = 0
 
 /obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken/Initialize()
+	.=..()
 	START_PROCESSING(SSmachines, src)
-	radiation_pulse(src, rand(3000, 10000) * radiation_modifier, 0.1)
+	radiation_pulse(src, rand(3000, 10000), 0.1)
 	radtime = world.time
 
 /obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken/process()
 	if(radtime < world.time - 100)
-		radiation_pulse(src, rand(1000, 2000) * radiation_modifier, 0.05)
+		radiation_pulse(src, rand(1000, 2000), 0.05)
 		radtime = world.time
 
-/obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken/attackby(obj/item/W, mob/user, params)
-	return
+/obj/effect/overlay/stormdrive
+	icon = 'icons/obj/stormdrive/reactor.dmi'
+	pixel_x = -16
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
-/obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken/attack_hand(mob/living/user)
-	STOP_PROCESSING(SSmachines, src)
+/obj/effect/overlay/stormdrive/sarc0
+	icon_state = "sarc0"
+
+/obj/effect/overlay/stormdrive/sarc1
+	icon_state = "sarc1"
+
+/obj/effect/overlay/stormdrive/sarc2
+	icon_state = "sarc2"
+
+/obj/effect/overlay/stormdrive/sarc3
+	icon_state = "sarc3"
+
+/obj/effect/overlay/stormdrive/sarc4
+	icon_state = "sarc4"
+
+/obj/effect/overlay/stormdrive/sarc5
+	icon_state = "sarc5"
+
+/obj/effect/overlay/stormdrive/sarc6
+	icon_state = "sarc6"
+
+/obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/stack/rods) && constructionstep == 0)
+		if(I.use(5))
+			new /obj/effect/overlay/stormdrive/sarc0(get_turf(src))
+			constructionstep = 1
+	if(istype(I, /obj/item/stack/sheet/plasteel) && constructionstep == 1)
+		if(I.use(2))
+			new /obj/effect/overlay/stormdrive/sarc1(get_turf(src))
+			constructionstep = 2
+	if(I.tool_behaviour == TOOL_WELDER && constructionstep == 2)
+		new /obj/effect/overlay/stormdrive/sarc2(get_turf(src))
+		I.play_tool_sound(src, 75)
+		constructionstep = 3
+	if(istype(I, /obj/item/stack/sheet/plasteel) && constructionstep == 3)
+		if(I.use(2))
+			new /obj/effect/overlay/stormdrive/sarc3(get_turf(src))
+			constructionstep = 4
+	if(I.tool_behaviour == TOOL_WELDER && constructionstep == 4)
+		new /obj/effect/overlay/stormdrive/sarc4(get_turf(src))
+		I.play_tool_sound(src, 75)
+		constructionstep = 5
+	if(istype(I, /obj/item/stack/sheet/iron) && constructionstep == 5)
+		if(I.use(10))
+			new /obj/effect/overlay/stormdrive/sarc5(get_turf(src))
+			constructionstep = 6
+	if(I.tool_behaviour == TOOL_WELDER && constructionstep == 6)
+		new /obj/effect/overlay/stormdrive/sarc6(get_turf(src))
+		I.play_tool_sound(src, 75)
+		constructionstep = 7
+		name = "class IV nuclear storm drive sarcophagus"
+		desc = "A damaged reactor's sarcophagus"
+		STOP_PROCESSING(SSmachines, src)
+
+/obj/machinery/atmospherics/components/binary/stormdrive_reactor/broken/attack_hand(mob/living/carbon/user)
+	return
 
 /obj/machinery/atmospherics/components/binary/stormdrive_reactor/attackby(obj/item/I, mob/living/carbon/user, params)
 	if(istype(I, /obj/item/control_rod))
@@ -368,8 +429,6 @@ Control Rods
 	if(state != REACTOR_STATE_MAINTENANCE)
 		state = REACTOR_STATE_IDLE //Force reactor restart.
 	set_light(0)
-	//var/area/AR = get_area(src)
-	//AR.looping_ambience = 'nsv13/sound/ambience/shipambience.ogg'
 
 /obj/machinery/atmospherics/components/binary/stormdrive_reactor/Initialize()
 	. = ..()
@@ -481,10 +540,7 @@ Control Rods
 	explosion(get_turf(src), 10, 15, 30, 15, TRUE, TRUE)
 	var/sound = 'sound/effects/stormdrive/explode.ogg'
 	playsound(src, sound, 1000)
-	for(var/a in GLOB.apcs_list)
-		var/obj/machinery/power/apc/A = a
-		if(/*shares_overmap(src, a) &&*/ prob(70)) //Are they on our ship?
-			A.overload_lighting()
+	SSweather.run_weather(/datum/weather/rad_storm)
 
 /obj/machinery/atmospherics/components/binary/stormdrive_reactor/update_icon() //include overlays for radiation output levels and power output levels (ALSO 1k+ levels)
 	cut_overlays()
