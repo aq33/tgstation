@@ -44,3 +44,9 @@
 	damage = 25
 	speed = 0.3
 	range = 16
+
+/obj/item/projectile/bullet/p50/penetrator/railgun
+	icon_state = "gaussstrong"
+	damage = 50
+	speed = 0.2
+	range = 16
