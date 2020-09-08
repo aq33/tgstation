@@ -74,7 +74,7 @@
 	desc = "Nieaktywny dron naprawczy z wbudowanym holoprojektorem czapek."
 	drone_type = /mob/living/simple_animal/drone/snowflake
 
-/obj/item/drone_shell/attack_ghost(mob/user)
+/obj/item/drone_shell/snowflake/attack_ghost(mob/user)
 	if(is_banned_from(user.ckey, ROLE_DRONE) || QDELETED(src) || QDELETED(user))
 		return
 	if(CONFIG_GET(flag/use_age_restriction_for_jobs))
