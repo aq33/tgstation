@@ -14343,6 +14343,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/effect/landmark/start/explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "aBW" = (
@@ -76703,6 +76704,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/effect/landmark/start/explorer,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "kMV" = (
@@ -77261,6 +77263,10 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/solars/port/fore)
+"nFG" = (
+/obj/effect/landmark/start/explorer,
+/turf/open/floor/plasteel,
+/area/quartermaster/miningoffice)
 "nIb" = (
 /obj/machinery/door/airlock/mining{
 	name = "Cargo Bay";
@@ -96452,7 +96458,7 @@ ayj
 azm
 aAF
 kKW
-aAC
+nFG
 aEw
 aFG
 ayj

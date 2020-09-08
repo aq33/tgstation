@@ -1267,6 +1267,11 @@
 	icon_state = "miner"
 	toysay = "COLOSSUS RIGHT OUTSIDE THE BASE!"
 
+/obj/item/toy/figure/explorer
+	name = "Explorer action figure"
+	icon_state = "explorer"
+	toysay = "NIE, RCD JEST MOJE, SCREEEE!!!"
+
 /obj/item/toy/figure/ninja
 	name = "Ninja action figure"
 	icon_state = "ninja"
