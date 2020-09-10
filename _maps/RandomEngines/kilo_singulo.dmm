@@ -1,0 +1,521 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/r_wall,
+/area/engine/engineering)
+"b" = (
+/obj/machinery/power/rad_collector/anchored,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"c" = (
+/obj/machinery/power/emitter/anchored{
+	dir = 8;
+	state = 2
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"d" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 10;
+	icon_state = "pipe11-1"
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"e" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 10;
+	icon_state = "pipe11-1"
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"g" = (
+/obj/structure/particle_accelerator/particle_emitter/center,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"i" = (
+/obj/machinery/the_singularitygen,
+/turf/open/floor/plating,
+/area/space/nearstation)
+"j" = (
+/obj/machinery/camera{
+	c_tag = "Engineering Singularity";
+	dir = 10;
+	network = list("ss13","engine");
+	upgrades = 2
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"k" = (
+/obj/structure/particle_accelerator/particle_emitter/left,
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"m" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"n" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable,
+/turf/open/space/basic,
+/area/space/nearstation)
+"o" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "13"
+	},
+/obj/structure/fans/tiny,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "engsing";
+	name = "Singularity Access"
+	},
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"p" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"q" = (
+/obj/structure/particle_accelerator/fuel_chamber,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"s" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"t" = (
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"u" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable/multilayer{
+	cable_layer = 3
+	},
+/turf/open/space/basic,
+/area/space/nearstation)
+"v" = (
+/obj/machinery/particle_accelerator/control_box,
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"w" = (
+/obj/machinery/camera{
+	c_tag = "Engineering Singularity";
+	dir = 6;
+	network = list("ss13","engine");
+	upgrades = 2
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"x" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"y" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/obj/machinery/light,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"z" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/turf/open/space/basic,
+/area/space/nearstation)
+"B" = (
+/obj/structure/particle_accelerator/end_cap,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"C" = (
+/obj/machinery/power/emitter/anchored{
+	dir = 4;
+	state = 2
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"D" = (
+/turf/open/floor/plating,
+/area/engine/engineering)
+"F" = (
+/turf/open/space/basic,
+/area/space)
+"G" = (
+/obj/effect/turf_decal/stripes/box,
+/obj/machinery/field/generator,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"H" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"I" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"J" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space/nearstation)
+"M" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "engsing";
+	name = "Singularity Access"
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"N" = (
+/obj/structure/cable/multilayer{
+	cable_layer = 1
+	},
+/obj/machinery/power/terminal{
+	dir = 4;
+	icon_state = "term"
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"O" = (
+/obj/structure/particle_accelerator/particle_emitter/right,
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"P" = (
+/obj/effect/turf_decal/stripes/box,
+/obj/machinery/field/generator,
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"Q" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"R" = (
+/obj/structure/particle_accelerator/power_box,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"S" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"T" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 5;
+	icon_state = "pipe11-1"
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"U" = (
+/obj/machinery/button/door{
+	id = "engsing";
+	name = "Singularity Access";
+	pixel_y = -24;
+	req_access_txt = "10"
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"V" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 5;
+	icon_state = "pipe11-1"
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"W" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1{
+	dir = 4;
+	icon_state = "scrub_map_on-1"
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"X" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"Y" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"Z" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/engine/engineering)
+
+(1,1,1) = {"
+D
+D
+D
+D
+D
+D
+D
+D
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+D
+D
+D
+D
+D
+D
+D
+a
+a
+C
+D
+b
+b
+b
+Q
+C
+"}
+(3,1,1) = {"
+Z
+Z
+Z
+p
+D
+U
+a
+a
+D
+t
+F
+F
+u
+F
+F
+t
+"}
+(4,1,1) = {"
+D
+D
+t
+D
+D
+X
+o
+X
+X
+P
+z
+z
+z
+n
+n
+G
+"}
+(5,1,1) = {"
+D
+D
+t
+D
+D
+y
+a
+D
+D
+D
+F
+F
+J
+F
+F
+D
+"}
+(6,1,1) = {"
+D
+I
+v
+Y
+k
+X
+M
+D
+F
+F
+F
+F
+J
+F
+F
+D
+"}
+(7,1,1) = {"
+s
+B
+q
+R
+g
+X
+M
+D
+J
+J
+J
+J
+i
+J
+J
+j
+"}
+(8,1,1) = {"
+w
+S
+x
+x
+O
+X
+M
+D
+F
+F
+F
+F
+J
+F
+F
+D
+"}
+(9,1,1) = {"
+D
+D
+D
+D
+D
+y
+a
+D
+D
+D
+F
+F
+J
+F
+F
+D
+"}
+(10,1,1) = {"
+D
+D
+D
+D
+D
+X
+o
+X
+X
+P
+z
+z
+z
+n
+n
+G
+"}
+(11,1,1) = {"
+D
+D
+D
+W
+D
+X
+a
+a
+D
+t
+F
+F
+u
+F
+F
+t
+"}
+(12,1,1) = {"
+X
+X
+X
+d
+m
+m
+V
+a
+a
+c
+D
+b
+b
+b
+H
+c
+"}
+(13,1,1) = {"
+N
+N
+t
+N
+t
+D
+e
+T
+a
+a
+a
+a
+a
+a
+a
+a
+"}
