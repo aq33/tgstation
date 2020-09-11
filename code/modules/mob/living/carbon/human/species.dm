@@ -25,8 +25,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/toxic_food = TOXIC
 	var/list/no_equip = list()	// slots the race can't equip stuff to
 	var/nojumpsuit = 0	// this is sorta... weird. it basically lets you equip stuff that usually needs jumpsuits without one, like belts and pockets and ids
-	var/say_mod = "says"	// affects the speech message
 	var/species_language_holder = /datum/language_holder
+	var/say_mod = "mówi"	// affects the speech message
 	var/list/default_features = list() // Default mutant bodyparts for this species. Don't forget to set one for every mutant bodypart you allow this species to have.
 	var/list/mutant_bodyparts = list() 	// Visible CURRENT bodyparts that are unique to a species. DO NOT USE THIS AS A LIST OF ALL POSSIBLE BODYPARTS AS IT WILL FUCK SHIT UP! Changes to this list for non-species specific bodyparts (ie cat ears and tails) should be assigned at organ level if possible. Layer hiding is handled by handle_mutant_bodyparts() below.
 	var/list/mutant_organs = list()		//Internal organs that are unique to this race.
@@ -39,6 +39,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/stunmod = 1
 	var/oxymod = 1
 	var/clonemod = 1
+	var/hygiene_mod = 1 //hygiene change rate
 	var/toxmod = 1
 	var/staminamod = 1		// multiplier for stun duration
 	var/attack_type = BRUTE //Type of damage attack does
@@ -128,7 +129,10 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	if(lastname)
 		randname += " [lastname]"
 	else
-		randname += " [pick(GLOB.last_names)]"
+		if(gender == MALE)
+			randname += " [pick(GLOB.last_names_male)]"
+		else
+			randname += " [pick(GLOB.last_names_female)]"
 
 	return randname
 
@@ -1331,7 +1335,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		var/damage = user.dna.species.punchdamage
 
 		var/obj/item/bodypart/affecting = target.get_bodypart(ran_zone(user.zone_selected))
-	
+
 		if(!damage || !affecting)//future-proofing for species that have 0 damage/weird cases where no zone is targeted
 			playsound(target.loc, user.dna.species.miss_sound, 25, 1, -1)
 			target.visible_message("<span class='danger'>[user]'s [atk_verb] misses [target]!</span>",\
@@ -1560,8 +1564,18 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			if(prob(I.force * 2))	//blood spatter!
 				bloody = 1
 				var/turf/location = H.loc
-				if(istype(location))
-					H.add_splatter_floor(location)
+				if(prob(50))	//hippie start -- add blood splattering to walls and stuff
+					var/obj/effect/decal/cleanable/blood/hitsplatter/B = new(H.loc)
+					B.add_blood_DNA(H.return_blood_DNA())
+					B.blood_source = H
+					playsound(location, pick('sound/effects/splash.ogg'), 40, TRUE, -1)
+					var/dist = rand(1,5)
+					var/turf/targ = get_ranged_target_turf(H, get_dir(user, H), dist)
+					B.GoTo(targ, dist)
+					message_admins("[B] spawned on [H] with a blood source of [B.blood_source].")
+				else
+					if(istype(location))
+						H.add_splatter_floor(location) //hippie end -- blood splattering
 				if(get_dist(user, H) <= 1)	//people with TK won't get smeared with blood
 					user.add_mob_blood(H)
 					if(ishuman(user))

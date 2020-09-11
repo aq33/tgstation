@@ -39,6 +39,7 @@
 	if(prob(40))
 		var/datum/disease/advance/R = new /datum/disease/advance/random(rand(2, 4))
 		ratdisease += R
+	find_candidates()
 
 /mob/living/simple_animal/mouse/extrapolator_act(mob/user, var/obj/item/extrapolator/E, scan = TRUE)
 	if(!ratdisease.len)
@@ -92,6 +93,14 @@
 				else
 					C.deconstruct()
 					visible_message("<span class='warning'>[src] chews through the [C].</span>")
+
+/mob/living/simple_animal/mouse/attack_ghost(mob/dead/observer/user)
+	. = ..()
+	give_to_ghost(user)
+
+/mob/living/simple_animal/mouse/say(message, bubble_type, list/spans, sanitize, datum/language/language, ignore_spam, forced)
+	. = ..()
+
 
 /*
  * Mouse types

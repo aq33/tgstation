@@ -43,6 +43,7 @@
 	var/list/explosionSize = list(0,0,2,3)
 	var/stay_after_drop = FALSE
 	var/specialised = TRUE // It's not a general use pod for cargo/admin use
+	var/list/queued_announces	//people coming in that we have to announce
 
 /obj/structure/closet/supplypod/bluespacepod
 	style = STYLE_BLUESPACE
@@ -66,6 +67,26 @@
 	landingDelay = 20 //Very speedy!
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
+/obj/structure/closet/supplypod/securitypod
+	style = STYLE_CENTCOM
+	bluespace = TRUE
+	explosionSize = list(0,0,0,1)
+	var/obj/item/radio/Radio
+
+/obj/structure/closet/supplypod/securitypod/Initialize()
+	. = ..()
+	Radio = new /obj/item/radio(src)
+	Radio.listening = 0
+
+/obj/structure/closet/supplypod/securitypod/Destroy()
+	QDEL_NULL(Radio)
+	return ..()
+
+/obj/structure/closet/supplypod/securitypod/preOpen()
+		Radio.set_frequency(FREQ_SECURITY)
+		Radio.talk_into(src, "SECURITY ALERT: New prisoner dropping into [get_area(src)].", FREQ_SECURITY)
+		QDEL_NULL(Radio)
+		..()
 
 /obj/structure/closet/supplypod/proc/specialisedPod()
 	return 1
@@ -74,8 +95,14 @@
 	holder.forceMove(pick(GLOB.holdingfacility)) // land in ninja jail
 	open(holder, forced = TRUE)
 
-/obj/structure/closet/supplypod/Initialize()
+/obj/structure/closet/supplypod/proc/QueueAnnounce(mob, rank)
+	LAZYADD(queued_announces, CALLBACK(GLOBAL_PROC, .proc/AnnounceArrival, mob, rank))
+
+/obj/structure/closet/supplypod/Initialize(mapload)
 	. = ..()
+	if (!mapload)
+		var/shippingLane = GLOB.areas_by_type[/area/centcom/supplypod/loading/four]
+		forceMove(shippingLane)
 	setStyle(style, TRUE) //Upon initialization, give the supplypod an iconstate, name, and description based on the "style" variable. This system is important for the centcom_podlauncher to function correctly
 
 /obj/structure/closet/supplypod/update_icon()
@@ -222,7 +249,11 @@
 		depart(src)
 	else
 		if(!stay_after_drop) // Departing should be handled manually
-			addtimer(CALLBACK(src, .proc/depart, holder), departureDelay) //Finish up the pod's duties after a certain amount of time
+			addtimer(CALLBACK(src, .proc/depart, holder), departureDelay) //Finish up the pod's duties after a certain amount of time\
+
+	for(var/datum/callback/C in queued_announces)
+		C.Invoke()
+	LAZYCLEARLIST(queued_announces)
 
 /obj/structure/closet/supplypod/proc/depart(atom/movable/holder)
 	if (leavingSound)
@@ -312,7 +343,7 @@
 			var/atom/movable/O = single_order
 			O.forceMove(pod)
 	for (var/mob/living/M in pod) //If there are any mobs in the supplypod, we want to forceMove them into the target. This is so that they can see where they are about to land, AND so that they don't get sent to the nullspace error room (as the pod is currently in nullspace)
-		M.forceMove(src)
+		M.reset_perspective(src)
 	if(pod.effectStun) //If effectStun is true, stun any mobs caught on this target until the pod gets a chance to hit them
 		for (var/mob/living/M in get_turf(src))
 			M.Stun(pod.landingDelay+10, ignore_canstun = TRUE)//you aint goin nowhere, kid.
@@ -334,6 +365,8 @@
 /obj/effect/DPtarget/proc/beginLaunch(effectCircle) //Begin the animation for the pod falling. The effectCircle param determines whether the pod gets to come in from any descent angle
 	fallingPod = new /obj/effect/DPfall(drop_location(), pod)
 	var/matrix/M = matrix(fallingPod.transform) //Create a new matrix that we can rotate
+	for (var/mob/living/N in pod)
+		N.reset_perspective(null)
 	var/angle = effectCircle ? rand(0,360) : rand(70,110) //The angle that we can come in from
 	fallingPod.pixel_x = cos(angle)*400 //Use some ADVANCED MATHEMATICS to set the animated pod's position to somewhere on the edge of a circle with the center being the target
 	fallingPod.pixel_z = sin(angle)*400
@@ -350,8 +383,6 @@
 	pod.update_icon()
 	pod.forceMove(drop_location()) //The fallingPod animation is over, now's a good time to forceMove the actual pod into position
 	QDEL_NULL(fallingPod) //Delete the falling pod effect, because at this point its animation is over. We dont use temp_visual because we want to manually delete it as soon as the pod appears
-	for (var/mob/living/M in src) //Remember earlier (initialization) when we moved mobs into the DPTarget so they wouldnt get lost in nullspace? Time to get them out
-		M.forceMove(pod)
 	pod.preOpen() //Begin supplypod open procedures. Here effects like explosions, damage, and other dangerous (and potentially admin-caused, if the centcom_podlauncher datum was used) memes will take place
 	qdel(src) //The target's purpose is complete. It can rest easy now
 

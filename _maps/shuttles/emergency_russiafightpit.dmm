@@ -332,11 +332,11 @@
 /area/shuttle/escape)
 "bi" = (
 /obj/structure/table,
-/obj/item/stack/medical/bruise_pack{
+/obj/item/stack/medical/suture{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/suture,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/escape)
 "bj" = (
@@ -459,12 +459,12 @@
 /area/shuttle/escape)
 "bH" = (
 /obj/structure/closet,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "bI" = (

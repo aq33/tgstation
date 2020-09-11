@@ -54,6 +54,9 @@
 /area/ruin/unpowered)
 "o" = (
 /obj/structure/table,
+/obj/item/gps{
+	gpstag = "X-10"
+	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "p" = (

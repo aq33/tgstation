@@ -347,7 +347,10 @@
 	can_suppress = FALSE
 	actions_types = list()
 	fire_sound = 'sound/weapons/laser.ogg'
+	empty_alarm_sound = 'sound/weapons/smg_empty_alarm.ogg'
+	empty_alarm = TRUE
 	casing_ejector = FALSE
 	fire_rate = 2
 	block_upgrade_walk = 1
+	bolt_type = BOLT_TYPE_OPEN
 

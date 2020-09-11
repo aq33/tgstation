@@ -2,6 +2,7 @@
 /turf/open/chasm
 	name = "chasm"
 	desc = "Watch your step."
+	is_no_slip = TRUE
 	baseturfs = /turf/open/chasm
 	smooth = SMOOTH_TRUE | SMOOTH_BORDER | SMOOTH_MORE
 	icon = 'icons/turf/floors/chasms.dmi'
@@ -21,12 +22,6 @@
 /turf/open/chasm/proc/drop(atom/movable/AM)
 	var/datum/component/chasm/chasm_component = GetComponent(/datum/component/chasm)
 	chasm_component.drop(AM)
-
-/turf/open/chasm/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
-	return
-
-/turf/open/chasm/MakeDry()
-	return
 
 /turf/open/chasm/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
 	switch(the_rcd.mode)

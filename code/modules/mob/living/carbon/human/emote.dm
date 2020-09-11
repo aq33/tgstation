@@ -7,6 +7,11 @@
 	message = "cries."
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/carbon/human/cry/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	return 'sound/misc/cry.ogg'
+
 /datum/emote/living/carbon/human/dap
 	key = "dap"
 	key_third_person = "daps"
@@ -65,6 +70,8 @@
 			return pick('sound/voice/human/malescream_1.ogg', 'sound/voice/human/malescream_2.ogg', 'sound/voice/human/malescream_3.ogg', 'sound/voice/human/malescream_4.ogg', 'sound/voice/human/malescream_5.ogg')
 	else if(ismoth(H))
 		return 'sound/voice/moth/scream_moth.ogg'
+	else if(istype(H.dna.species, /datum/species/egg))
+		return 'sound/voice/eggperson/egg_scream.ogg'
 
 
 /datum/emote/living/carbon/human/pale

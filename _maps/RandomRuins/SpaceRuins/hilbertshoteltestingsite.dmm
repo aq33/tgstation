@@ -77,7 +77,7 @@
 /area/ruin/space/has_grav/hilbertresearchfacility)
 "p" = (
 /obj/structure/table/glass,
-/obj/item/stack/cable_coil/blue,
+/obj/item/stack/cable_coil,
 /turf/open/floor/plasteel/grimy{
 	icon_state = "engine"
 	},
@@ -191,6 +191,7 @@
 	req_access = 207
 	},
 /obj/effect/mapping_helpers/airlock/locked,
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel/grimy,
 /area/ruin/space/has_grav/hilbertresearchfacility)
 "J" = (
@@ -201,6 +202,13 @@
 	initial_gas_mix = "TEMP=2.7"
 	},
 /area/ruin/unpowered/no_grav)
+"Q" = (
+/obj/structure/table/reinforced,
+/obj/item/gps{
+	gpstag = "X-16"
+	},
+/turf/open/floor/plasteel/grimy,
+/area/ruin/space/has_grav/hilbertresearchfacility)
 "U" = (
 /turf/open/floor/plasteel/stairs/medium{
 	initial_gas_mix = "TEMP=2.7"
@@ -650,7 +658,7 @@ f
 c
 B
 B
-C
+Q
 B
 B
 c

@@ -2,10 +2,8 @@
 	name = "electrode"
 	icon_state = "spark"
 	color = "#FFFF00"
-	damage = 40
-	damage_type = STAMINA
-	nodamage = FALSE
-	knockdown = 30
+	nodamage = TRUE
+	paralyze = 100
 	stutter = 5
 	jitter = 20
 	hitsound = 'sound/weapons/taserhit.ogg'

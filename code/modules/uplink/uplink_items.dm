@@ -998,6 +998,20 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	cost = 1
 	include_modes = list(/datum/game_mode/nuclear)
 
+/datum/uplink_item/ammo/dark_gygax/bag
+	name = "Dark Gygax Ammo Bag"
+	desc = "A duffel bag containing ammo for three full reloads of the incendiary carbine and flash bang launcher that are equipped on a standard Dark Gygax exosuit."
+	item = /obj/item/storage/backpack/duffelbag/syndie/ammo/dark_gygax
+	cost = 4
+	include_modes = list(/datum/game_mode/nuclear)
+
+/datum/uplink_item/ammo/mauler/bag
+	name = "Mauler Ammo Bag"
+	desc = "A duffel bag containing ammo for three full reloads of the LMG, scattershot carbine, and SRM-8 missile laucher that are equipped on a standard Mauler exosuit."
+	item = /obj/item/storage/backpack/duffelbag/syndie/ammo/mauler
+	cost = 6
+	include_modes = list(/datum/game_mode/nuclear)
+
 //Grenades and Explosives
 /datum/uplink_item/explosives
 	category = "Explosives"
@@ -1387,6 +1401,22 @@ datum/uplink_item/stealthy_tools/taeclowndo_shoes
 	item = /obj/item/clothing/suit/space/hardsuit/syndi
 	cost = 7
 	exclude_modes = list(/datum/game_mode/nuclear) //you can't buy it in nuke, because the elite hardsuit costs the same while being better
+
+/datum/uplink_item/suits/hardsuit/cybersun
+	name = "Cybersun Hardsuit"
+	desc = "A long forgotten hardsuit made by Cybersun industries. \
+			Offers ROBUST protection against laser-based weapons, while still giving somewhat good chances \
+			to survive assault from a toolbox or shotgun. \
+			Not to mention, it doesn't slow you down and contains an integrated jetpack that runs on standard tanks. \
+			Systems in this hardsuit make it really hard to take it off from you."
+	item = /obj/item/clothing/suit/space/hardsuit/cybersun
+	cost = 14
+	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops) //nuke and clown ops get it for lower value
+
+/datum/uplink_item/suits/hardsuit/cybersun/nuke
+	cost = 8
+	include_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops)
+	exclude_modes = list()
 
 /datum/uplink_item/suits/hardsuit/elite
 	name = "Elite Syndicate Hardsuit"
@@ -1950,6 +1980,13 @@ datum/uplink_item/role_restricted/superior_honkrender
 	cost = 3
 	restricted_roles = list("Roboticist", "Research Director")
 
+/datum/uplink_item/role_restricted/ipc_upload
+	name = "IPC Law Upload"
+	desc = "A modified ai upload board that allows the user to upload laws to IPCs. Make sure to silence them first."
+	item = /obj/item/circuitboard/computer/ipcupload
+	cost = 10
+	restricted_roles = list("Roboticist", "Research Director")
+
 /datum/uplink_item/role_restricted/haunted_magic_eightball
 	name = "Haunted Magic Eightball"
 	desc = "Most magic eightballs are toys with dice inside. Although identical in appearance to the harmless toys, this occult device reaches into the spirit world to find its answers. \
@@ -2094,6 +2131,15 @@ datum/uplink_item/role_restricted/superior_honkrender
 	cost = 12
 	restricted_roles = list("Chemist", "Chief Medical Officer")
 
+/datum/uplink_item/role_restricted/ubersaw
+	name = "Ubersaw"
+	desc = "Old, rusty but still sharp abomination of a medical tool. It injects stored chemicals into stabbed victims."
+	item = /obj/item/circular_saw/ubersaw
+	cost = 7
+	limited_stock = 1
+	surplus = 20
+	restricted_roles = list("Chief Medical Officer", "Medical Doctor", "Paramedic")
+
 /datum/uplink_item/role_restricted/reverse_bear_trap
 	name = "Reverse Bear Trap"
 	desc = "An ingenious execution device worn on (or forced onto) the head. Arming it starts a 1-minute kitchen timer mounted on the bear trap. When it goes off, the trap's jaws will \
@@ -2187,3 +2233,14 @@ datum/uplink_item/role_restricted/superior_honkrender
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
 	cost = 2
 	illegal_tech = FALSE
+
+/datum/uplink_item/role_restricted/sharpshadowofthemistkit
+	name = "Ostry Cien Mgly"
+	desc = "The Silent Brotherhood of mimes has teamed up with the Spider Clan to create this peace of art. \
+	The bundle contains night vision goggles, a spellbook containing Sharpstar and ostry cien mgly - a martial art. \
+	Ostry Cien Mgly provides you with a subduation technique and upgraded grabbing and resisting. It heavily encourages a stealthy plan of action."
+	item = /obj/item/storage/box/syndicate/sharpshadowofthemistkit
+	cost = 20
+	restricted_roles = list("Mime")
+	surplus = 20 // Nikt nie gra mimem, a każdy chce spróbować. Noone plays mime, and everyone wants to try this.
+

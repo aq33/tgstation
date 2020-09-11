@@ -40,7 +40,7 @@ map donutstation
 endmap
 
 map runtimestation
-	disabled
+	default
 endmap
 
 map multiz_debug
@@ -48,8 +48,6 @@ map multiz_debug
 endmap
 
 map kilostation
-    minplayers 30
-    maxplayers 80
+    maxplayers 60
 	votable
-	disabled
 endmap

@@ -125,24 +125,24 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plating,
 /area/template_noop)
-"E" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating,
-/area/template_noop)
 "J" = (
 /obj/effect/decal/cleanable/vomit/old,
 /turf/open/floor/plating,
 /area/template_noop)
-"Q" = (
-/obj/structure/chair/comfy/shuttle,
-/obj/effect/decal/cleanable/vomit/old,
-/turf/open/floor/mineral/titanium/blue,
-/area/template_noop)
-"R" = (
+"N" = (
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating,
+/area/template_noop)
+"Q" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating,
+/area/template_noop)
+"R" = (
+/obj/structure/chair/comfy/shuttle,
+/obj/effect/decal/cleanable/vomit/old,
+/turf/open/floor/mineral/titanium/blue,
 /area/template_noop)
 
 (1,1,1) = {"
@@ -170,7 +170,7 @@ A
 a
 "}
 (3,1,1) = {"
-E
+Q
 a
 j
 o
@@ -208,7 +208,7 @@ b
 (6,1,1) = {"
 a
 b
-R
+N
 b
 b
 b
@@ -236,7 +236,7 @@ l
 a
 j
 o
-Q
+R
 t
 g
 a

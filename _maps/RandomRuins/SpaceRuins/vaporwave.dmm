@@ -113,6 +113,7 @@
 "z" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/hatch,
+/obj/structure/fans/tiny,
 /turf/open/floor/pod/dark,
 /area/ruin/space/has_grav/powered/aesthetic)
 "A" = (
@@ -215,6 +216,15 @@
 /obj/effect/turf_decal/sand/plating,
 /turf/open/floor/plating{
 	initial_gas_mix = "TEMP=2.7"
+	},
+/area/ruin/unpowered/no_grav)
+"V" = (
+/obj/effect/turf_decal/sand,
+/obj/item/gps{
+	gpstag = "X-26"
+	},
+/turf/open/floor/plasteel/airless{
+	icon_state = "recharge_floor_asteroid"
 	},
 /area/ruin/unpowered/no_grav)
 
@@ -400,7 +410,7 @@ k
 k
 k
 f
-D
+V
 L
 E
 I

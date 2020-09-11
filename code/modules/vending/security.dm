@@ -1,7 +1,7 @@
 /obj/machinery/vending/security
 	name = "\improper SecTech"
 	desc = "A security equipment vendor."
-	product_ads = "Crack capitalist skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here.;Handcuffs!;Freeze, scumbag!;Don't tase me bro!;Tase them, bro.;Why not have a donut?"
+	product_ads = "Rozstrzaskaj czaszki kapitalistów!;Natłucz trochę głów!;Nie zapomnij - krzywda jest dobra!;Twoje bronie są dokładnie tutaj.;Kajdanki!;Ani drgnij, śmieciu!;Nie tazuj mnie, stary!;Tazuj ich, stary.;A może tak pączka?"
 	icon_state = "sec"
 	icon_deny = "sec-deny"
 	light_color = LIGHT_COLOR_BLUE
@@ -13,7 +13,8 @@
 					/obj/item/reagent_containers/food/snacks/donut = 12,
 					/obj/item/storage/box/evidence = 6,
 					/obj/item/flashlight/seclite = 4,
-					/obj/item/restraints/legcuffs/bola/energy = 7)
+					/obj/item/restraints/legcuffs/bola/energy = 7,
+					/obj/item/stack/taperoll/police = 4)
 	contraband = list(/obj/item/clothing/glasses/sunglasses/advanced = 2,
 					  /obj/item/storage/fancy/donut_box = 2)
 	premium = list(/obj/item/storage/belt/security/webbing = 5,

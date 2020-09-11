@@ -179,18 +179,18 @@
 			parts -= part
 
 
-/obj/structure/mecha_wreckage/ripley/firefighter
-	name = "\improper Firefighter wreckage"
-	icon_state = "firefighter-broken"
+/obj/structure/mecha_wreckage/clarke
+	name = "\improper Clarke wreckage"
+	icon_state = "clarke-broken"
 
-/obj/structure/mecha_wreckage/ripley/firefighter/Initialize()
+/obj/structure/mecha_wreckage/clarke/Initialize()
 	. = ..()
-	var/list/parts = list(/obj/item/mecha_parts/part/ripley_torso,
-								/obj/item/mecha_parts/part/ripley_left_arm,
-								/obj/item/mecha_parts/part/ripley_right_arm,
-								/obj/item/mecha_parts/part/ripley_left_leg,
-								/obj/item/mecha_parts/part/ripley_right_leg,
-								/obj/item/clothing/suit/fire)
+	var/list/parts = list(
+				/obj/item/mecha_parts/part/clarke_torso,
+				/obj/item/mecha_parts/part/clarke_head,
+				/obj/item/mecha_parts/part/clarke_left_arm,
+				/obj/item/mecha_parts/part/clarke_right_arm,
+				/obj/item/stack/conveyor)
 	for(var/i = 0; i < 2; i++)
 		if(parts.len && prob(40))
 			var/part = pick(parts)
@@ -263,6 +263,25 @@
 								/obj/item/mecha_parts/part/odysseus_right_arm,
 								/obj/item/mecha_parts/part/odysseus_left_leg,
 								/obj/item/mecha_parts/part/odysseus_right_leg)
+	for(var/i = 0; i < 2; i++)
+		if(parts.len && prob(40))
+			var/part = pick(parts)
+			welder_salvage += part
+			parts -= part
+
+
+/obj/structure/mecha_wreckage/alpha
+	name = "\improper Alpha wreckage"
+	icon_state = "alpha-broken"
+
+/obj/structure/mecha_wreckage/alpha/Initialize()
+	. = ..()
+	var/list/parts = list(/obj/item/mecha_parts/part/alpha_torso,
+								/obj/item/mecha_parts/part/alpha_head,
+								/obj/item/mecha_parts/part/alpha_left_arm,
+								/obj/item/mecha_parts/part/alpha_right_arm,
+								/obj/item/mecha_parts/part/alpha_left_leg,
+								/obj/item/mecha_parts/part/alpha_right_leg)
 	for(var/i = 0; i < 2; i++)
 		if(parts.len && prob(40))
 			var/part = pick(parts)

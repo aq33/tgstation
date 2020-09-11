@@ -54,6 +54,9 @@
 	charge = 100;
 	maxcharge = 15000
 	},
+/obj/item/gps{
+	gpstag = "X-20"
+	},
 /turf/open/floor/plasteel/airless,
 /area/ruin/space/oldteleporter)
 "m" = (

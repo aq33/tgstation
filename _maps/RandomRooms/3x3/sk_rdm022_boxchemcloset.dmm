@@ -28,7 +28,7 @@
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
 /area/template_noop)
-"N" = (
+"U" = (
 /obj/effect/decal/cleanable/vomit/old,
 /turf/open/floor/plating,
 /area/template_noop)
@@ -40,7 +40,7 @@ e
 "}
 (2,1,1) = {"
 b
-N
+U
 f
 "}
 (3,1,1) = {"

@@ -123,10 +123,16 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 //Bloody shoes/footprints
 #define MAX_SHOE_BLOODINESS			100
 #define BLOODY_FOOTPRINT_BASE_ALPHA	150
-#define BLOOD_GAIN_PER_STEP			100
-#define BLOOD_LOSS_PER_STEP			5
+#define BLOOD_GAIN_PER_STEP			40
+#define BLOOD_LOSS_PER_STEP			4
 #define BLOOD_LOSS_IN_SPREAD		20
 #define BLOOD_AMOUNT_PER_DECAL		20
+
+#define BLOOD_DRY_TIME_MINIMUM        60 SECONDS
+#define BLOOD_DRY_TIME_PER_BLOODINESS 20 SECONDS
+#define BLOOD_SLIPPERY_KNOCKDOWN      3 SECONDS
+#define BLOOD_SLIPPERY_TRESHOLD       (MAX_SHOE_BLOODINESS / 2)
+#define BLOOD_DRY_COLOR               rgb(160, 160, 160, 255)
 
 //Bloody shoe blood states
 #define BLOOD_STATE_HUMAN			"blood"
@@ -367,7 +373,8 @@ GLOBAL_LIST_INIT(pda_styles, sortList(list(MONO, VT, ORBITRON, SHARE)))
 #define PIRATE_NAMES_FILE "pirates.json"
 #define REDPILL_FILE "redpill.json"
 #define WANTED_FILE "wanted_message.json"
-
+#define ARCADE_FILE "arcade.json"
+#define BOOMER_FILE "boomer.json"
 
 //Fullscreen overlay resolution in tiles.
 #define FULLSCREEN_OVERLAY_RESOLUTION_X 15

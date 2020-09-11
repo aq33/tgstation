@@ -13,6 +13,8 @@
 	block_upgrade_walk = 1
 	w_class = WEIGHT_CLASS_SMALL
 	materials = list(/datum/material/iron=50)
+	drop_sound = 'sound/items/handling/crowbar_drop.ogg'
+	pickup_sound =  'sound/items/handling/crowbar_pickup.ogg'
 
 	attack_verb = list("attacked", "bashed", "battered", "bludgeoned", "whacked")
 	tool_behaviour = TOOL_CROWBAR

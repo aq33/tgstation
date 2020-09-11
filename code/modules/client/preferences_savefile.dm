@@ -5,7 +5,7 @@
 //	You do not need to raise this if you are adding new values that have sane defaults.
 //	Only raise this value when changing the meaning/format/name/layout of an existing value
 //	where you would want the updater procs below to run
-#define SAVEFILE_VERSION_MAX	30
+#define SAVEFILE_VERSION_MAX	38
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -42,9 +42,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 //if your savefile is 3 months out of date, then 'tough shit'.
 
 /datum/preferences/proc/update_preferences(current_version, savefile/S)
-	if(current_version < 29)
+	if(current_version < 35)
 		overhead_chat = TRUE
-	if(current_version < 30)
+	if(current_version < 36)
+		clientfps = 60
+	if(current_version < 37)
 		outline_enabled = TRUE
 		outline_color = COLOR_BLUE_GRAY
 	return
@@ -113,7 +115,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 			if(new_value)
 				job_preferences[initial(J.title)] = new_value
 
-	if(current_version < 25)
+	if(current_version < 38)
 		key_bindings = deepCopyList(GLOB.keybinding_list_by_key)
 		WRITE_FILE(S["key_bindings"], key_bindings)
 	if(current_version < 27)

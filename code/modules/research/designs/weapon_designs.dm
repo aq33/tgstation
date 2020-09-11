@@ -113,6 +113,26 @@
 	category = list("Firing Pins")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/taser
+	name = "Taser gun"
+	desc = "A low-capacity, energy-based stun gun used by security teams to subdue targets at range."
+	id = "taser"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 10000, /datum/material/glass = 10000, /datum/material/silver = 10000)
+	build_path = /obj/item/gun/energy/taser
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/advtaser
+	name = "Hybrid taser"
+	desc = "A dual-mode taser designed to fire both short-range high-power electrodes and long-range disabler beams."
+	id = "advtaser"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 15000, /datum/material/glass = 15000, /datum/material/silver = 15000)
+	build_path = /obj/item/gun/energy/e_gun/advtaser
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /datum/design/stunmine/sec/
 	name = "Stun Mine"
 	desc = "A basic nonlethal stunning mine. Does very heavy stamina damage to anyone who walks over it."
@@ -245,6 +265,16 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
 
+/datum/design/grenade_launcher
+	name = "Grenade Launcher"
+	desc = "A device designed to rapidly deliver beeping presents around."
+	id = "grenade_launcher"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 10000, /datum/material/glass = 5000, /datum/material/gold = 2500, /datum/material/silver = 2500,)
+	build_path = /obj/item/gun/grenadelauncher
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /datum/design/large_grenade
 	name = "Large Grenade"
 	desc = "A grenade that affects a larger area and use larger containers."
@@ -306,8 +336,8 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/wormhole_projector
-	name = "Bluespace Wormhole Projector"
-	desc = "A projector that emits high density quantum-coupled bluespace beams."
+	name = "Handheld Portal Device"
+	desc = "Experimental tool designed to place two portals that objects can pass through."
 	id = "wormholeprojector"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/silver = 2000, /datum/material/iron = 5000, /datum/material/diamond = 2000, /datum/material/bluespace = 3000)

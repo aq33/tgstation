@@ -231,11 +231,16 @@
 		/obj/item/reagent_containers/food/snacks/pie/cream = 3)
 
 
-/obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner
-	name = "2% chance xeno egg spawner"
+/obj/effect/spawner/lootdrop/xenobiology_fun_spawner
+	name = "xenobiology fun spawner"
 	loot = list(
-		/obj/effect/decal/remains/xeno = 49,
-		/obj/effect/spawner/xeno_egg_delivery = 1)
+		/obj/effect/spawner/xeno_egg_delivery = 1,
+		/obj/effect/spawner/infectious_zombie_delivery = 1,
+		/obj/effect/spawner/swarmer_fabricator_delivery = 1,
+		/obj/effect/spawner/spider_egg_delivery = 1,
+		/obj/effect/spawner/infected_monkey_delivery = 1,
+		/obj/effect/spawner/hivebot_delivery = 1,
+		/obj/effect/spawner/morph_delivery = 1)
 
 /obj/effect/spawner/lootdrop/sanitarium
 	name = "patient spawner"
@@ -253,7 +258,7 @@
 		/mob/living/simple_animal/hostile/retaliate/spaceman = 2,
 		/obj/effect/mob_spawn/human/corpse/assistant/brainrot_infection = 1,
 		/mob/living/simple_animal/hostile/retaliate/frog = 2)
-	
+
 /obj/effect/spawner/lootdrop/costume
 	name = "random costume spawner"
 
@@ -302,7 +307,9 @@
 				/obj/item/aiModule/core/full/asimovpp,
 				/obj/item/aiModule/core/full/hippocratic,
 				/obj/item/aiModule/core/full/paladin_devotion,
-				/obj/item/aiModule/core/full/paladin
+				/obj/item/aiModule/core/full/paladin,
+				/obj/item/aiModule/core/full/dungeonmaster,
+				/obj/item/aiModule/core/full/corgi
 				)
 
 /obj/effect/spawner/lootdrop/aimodule_neutral // These shouldn't allow the AI to start butchering people without reason
@@ -315,7 +322,12 @@
 				/obj/item/aiModule/core/full/reporter,
 				/obj/item/aiModule/core/full/robocop,
 				/obj/item/aiModule/core/full/liveandletlive,
-				/obj/item/aiModule/core/full/hulkamania
+				/obj/item/aiModule/core/full/boomer,
+				/obj/item/aiModule/core/full/zoomer,
+				/obj/item/aiModule/core/full/service,
+				/obj/item/aiModule/core/full/science,
+				/obj/item/aiModule/core/full/gamer,
+				/obj/item/aiModule/core/full/cowboy
 				)
 
 /obj/effect/spawner/lootdrop/aimodule_harmful // These will get the shuttle called
@@ -325,7 +337,8 @@
 				/obj/item/aiModule/core/full/balance,
 				/obj/item/aiModule/core/full/tyrant,
 				/obj/item/aiModule/core/full/thermurderdynamic,
-				/obj/item/aiModule/core/full/damaged
+				/obj/item/aiModule/core/full/damaged,
+				/obj/item/aiModule/core/full/weeb //anime jest grozniejsze od kazdej broni
 				)
 
 // Tech storage circuit board spawners

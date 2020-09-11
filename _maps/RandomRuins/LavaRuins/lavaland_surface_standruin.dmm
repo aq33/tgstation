@@ -20,8 +20,8 @@
 	dir = 4
 	},
 /obj/structure/glowshroom/single{
-	icon_state = "glowshroom3";
-	dir = 4
+	dir = 4;
+	icon_state = "glowshroom3"
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/standruin)
@@ -108,8 +108,8 @@
 "ap" = (
 /obj/structure/stone_tile/slab/cracked,
 /obj/structure/glowshroom/single{
-	icon_state = "glowshroom1";
-	dir = 4
+	dir = 4;
+	icon_state = "glowshroom1"
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/standruin)

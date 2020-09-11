@@ -98,7 +98,7 @@
 		wash_atom(AM)
 
 /obj/machinery/shower/proc/wash_atom(atom/A)
-	SEND_SIGNAL(A, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
+	A.washed(src)
 	reagents.reaction(A, TOUCH, reaction_volume)
 
 	if(isobj(A))
@@ -122,7 +122,6 @@
 	for(var/obj/effect/E in tile)
 		if(is_cleanable(E))
 			qdel(E)
-
 
 /obj/machinery/shower/proc/wash_mob(mob/living/L)
 	SEND_SIGNAL(L, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)

@@ -29,6 +29,10 @@
 	ui_x = 400
 	ui_y = 300
 
+	var/pass = FALSE
+	var/fail = FALSE
+	var/triggered = FALSE
+	var/ignore_signals = FALSE
 	var/scanline_timer
 	var/next_beep = 0 //avoids spam
 	var/locked = FALSE
@@ -41,6 +45,7 @@
 
 /obj/machinery/scanner_gate/Initialize()
 	. = ..()
+	wires = new /datum/wires/scan_gate(src)
 	set_scanline("passive")
 
 /obj/machinery/scanner_gate/examine(mob/user)
@@ -55,7 +60,7 @@
 	auto_scan(AM)
 
 /obj/machinery/scanner_gate/proc/auto_scan(atom/movable/AM)
-	if(!(stat & (BROKEN|NOPOWER)) && isliving(AM))
+	if(!(stat & (BROKEN|NOPOWER)) && isliving(AM) & (!panel_open))
 		perform_scan(AM)
 
 /obj/machinery/scanner_gate/proc/set_scanline(type, duration)
@@ -81,7 +86,12 @@
 		else
 			to_chat(user, "<span class='warning'>You try to lock [src] with [W], but nothing happens.</span>")
 	else
-		return ..()
+		if(!locked)
+			if(default_deconstruction_screwdriver(user, "scangate", "scangate", W))
+				return
+		if(panel_open && is_wire_tool(W))
+			wires.interact(user)
+	return ..()
 
 /obj/machinery/scanner_gate/emag_act(mob/user)
 	if(obj_flags & EMAGGED)
@@ -93,6 +103,7 @@
 
 /obj/machinery/scanner_gate/proc/perform_scan(mob/living/M)
 	var/beep = FALSE
+	var/color = FALSE
 	switch(scangate_mode)
 		if(SCANGATE_NONE)
 			return
@@ -159,12 +170,25 @@
 					beep = TRUE
 				if(H.nutrition >= detect_nutrition && detect_nutrition == NUTRITION_LEVEL_FAT)
 					beep = TRUE
-
 	if(reverse)
 		beep = !beep
 	if(beep)
 		alarm_beep()
-	else
+	if(!ignore_signals)
+		color = wires.get_color_of_wire(WIRE_PROCEED)
+		var/obj/item/assembly/P = wires.get_attached(color)
+		if(istype(P))
+			P.activate()
+		if(beep)
+			color = wires.get_color_of_wire(WIRE_FAIL)
+			var/obj/item/assembly/F = wires.get_attached(color)
+			if(istype(F))
+				F.activate()
+		else
+			color = wires.get_color_of_wire(WIRE_PASS)
+			var/obj/item/assembly/S = wires.get_attached(color)
+			if(istype(S))
+				S.activate()
 		set_scanline("scanning", 10)
 
 /obj/machinery/scanner_gate/proc/alarm_beep()
@@ -240,6 +264,7 @@
 						detect_nutrition = NUTRITION_LEVEL_FAT
 			. = TRUE
 
+
 #undef SCANGATE_NONE
 #undef SCANGATE_MINDSHIELD
 #undef SCANGATE_NANITES
@@ -248,7 +273,6 @@
 #undef SCANGATE_WANTED
 #undef SCANGATE_SPECIES
 #undef SCANGATE_NUTRITION
-
 #undef SCANGATE_HUMAN
 #undef SCANGATE_LIZARD
 #undef SCANGATE_FELINID

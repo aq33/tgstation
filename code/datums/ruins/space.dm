@@ -312,3 +312,9 @@
 	name = "Power Puzzle"
 	description = "an abandoned secure storage location. there is no power left in the batteries and the former ocupants locked it pretty tight before leaving.\
 	You will have to power areas to raise the bolts on the doors. look out for secrets."
+
+/datum/map_template/ruin/space/forgottenship
+	id = "forgottenship"
+	suffix = "forgottenship.dmm"
+	name = "Syndicate Forgotten Ship"
+	description = "Seemingly abandoned ship went of course right into NT controlled space. It seems that malfunction caused most systems to turn off, except for sleepers."

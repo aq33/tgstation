@@ -1,7 +1,7 @@
 /datum/round_event_control/alien_infestation
 	name = "Alien Infestation"
 	typepath = /datum/round_event/ghost_role/alien_infestation
-	weight = 5
+	weight = 10
 
 	min_players = 10
 
@@ -37,7 +37,7 @@
 			living_aliens = TRUE
 
 	if(living_aliens || fake)
-		priority_announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", 'sound/ai/aliens.ogg')
+		priority_announce("Wykryto niezidentyfikowane formy życia wkraczające na pokład [station_name()]. Zabezpieczyć wszelkie drogi zewnętrznego dostępu, jak również system wentylacji.", "Alarm biologiczny", 'sound/ai/aliens.ogg')
 
 
 /datum/round_event/ghost_role/alien_infestation/spawn_role()

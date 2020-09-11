@@ -24,13 +24,15 @@
 	var/list/part_sets = list(
 								"Cyborg",
 								"Ripley",
-								"Firefighter",
+								"Clarke",
 								"Odysseus",
 								"Gygax",
 								"Durand",
+								"Alpha",
 								"H.O.N.K",
 								"Phazon",
 								"Exosuit Equipment",
+								"Exosuit Ammunition",
 								"Cyborg Upgrade Modules",
 								"IPC Components",
 								"Misc"

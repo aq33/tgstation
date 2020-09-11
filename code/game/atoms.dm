@@ -574,6 +574,9 @@
 /mob/living/silicon/get_blood_dna_list()
 	return list("MOTOR OIL" = "SAE 5W-30") //just a little flavor text.
 
+/mob/living/simple_animal/get_blood_dna_list()
+	return list("UNKNOWN DNA" = "X*")
+
 ///to add a mob's dna info into an object's blood_dna list.
 /atom/proc/transfer_mob_blood_dna(mob/living/L)
 	// Returns 0 if we have that blood already
@@ -842,6 +845,20 @@
 		else if(C)
 			color = C
 			return
+
+///Proc for being washed by a shower
+/atom/proc/washed(var/atom/washer)
+	. = SEND_SIGNAL(src, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
+	remove_atom_colour(WASHABLE_COLOUR_PRIORITY)
+
+	var/datum/component/radioactive/healthy_green_glow = GetComponent(/datum/component/radioactive)
+	if(!healthy_green_glow || QDELETED(healthy_green_glow))
+		return
+	var/strength = healthy_green_glow.strength
+	if(strength <= RAD_BACKGROUND_RADIATION)
+		qdel(healthy_green_glow)
+		return
+	healthy_green_glow.strength -= max(0, (healthy_green_glow.strength - (RAD_BACKGROUND_RADIATION * 2)) * 0.2)
 
 /**
   * call back when a var is edited on this atom

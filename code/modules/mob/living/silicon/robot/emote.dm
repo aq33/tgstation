@@ -53,7 +53,7 @@
 /datum/emote/silicon/warn
 	key = "warn"
 	message = "blares an alarm!"
-	sound = 'sound/machines/warning-buzzer.ogg'
+	sound = 'sound/machines/winerror.ogg'
 
 /mob/living/silicon/robot/verb/powerwarn()
 	set category = "Robot Commands"

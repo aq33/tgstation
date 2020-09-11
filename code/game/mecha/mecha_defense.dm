@@ -175,6 +175,10 @@
 			to_chat(user, "[src]-[W] interface initialization failed.")
 		return
 
+	if(istype(W, /obj/item/mecha_ammo))
+		ammo_resupply(W, user)
+		return
+
 	if(W.GetID())
 		if(add_req_access || maint_access)
 			if(internals_access_allowed(user))
@@ -194,7 +198,7 @@
 	if(istype(W, /obj/item/stock_parts/cell))
 		if(construction_state == MECHA_OPEN_HATCH)
 			if(!cell)
-				if(!user.transferItemToLoc(W, src))
+				if(!user.transferItemToLoc(W, src, silent = FALSE))
 					return
 				var/obj/item/stock_parts/cell/C = W
 				to_chat(user, "<span class='notice'>You install the power cell.</span>")

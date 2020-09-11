@@ -100,8 +100,9 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	if(ic_blocked)
 		//The filter warning message shows the sanitized message though.
-		to_chat(src, "<span class='warning'>That message contained a word prohibited in IC chat! Consider reviewing the server rules.\n<span replaceRegex='show_filtered_ic_chat'>\"[message]\"</span></span>")
-		return
+		if(src.getorgan(/obj/item/organ/brain))
+			to_chat(src, "<span class='warning'>You feel your brain cells slowly fading.</span>")
+			src.adjustOrganLoss(ORGAN_SLOT_BRAIN, 15)
 
 	var/datum/saymode/saymode = SSradio.saymodes[talk_key]
 	var/message_mode = get_message_mode(message)
@@ -295,9 +296,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	for(var/mob/M in listening)
 		if(M.client)
 			speech_bubble_recipients.Add(M.client)
-	var/image/I = image('icons/mob/talk.dmi', src, "[bubble_type][say_test(message)]", FLY_LAYER)
-	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
-	INVOKE_ASYNC(GLOBAL_PROC, /.proc/animate_speechbubble, I, speech_bubble_recipients, 30)
+
 	INVOKE_ASYNC(GLOBAL_PROC, /.proc/animate_chat, src, message, message_language, message_mode, speech_bubble_recipients, 50) // see chatheader.dm
 
 /proc/animate_speechbubble(image/I, list/show_to, duration)
@@ -349,7 +348,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		return lowertext(message[1 + length(key)])
 
 /mob/living/proc/get_message_language(message)
-	if(message[1] == ",")
+	if(length(message) >= 1 && message[1] == ",")
 		var/key = message[1 + length(message[1])]
 		for(var/ld in GLOB.all_languages)
 			var/datum/language/LD = ld

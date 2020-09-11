@@ -402,11 +402,11 @@ update_label("John Doe", "Clowny")
 			if(!input_name)
 				// Invalid/blank names give a randomly generated one.
 				if(user.gender == MALE)
-					input_name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
+					input_name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names_male)]"
 				else if(user.gender == FEMALE)
-					input_name = "[pick(GLOB.first_names_female)] [pick(GLOB.last_names)]"
+					input_name = "[pick(GLOB.first_names_female)] [pick(GLOB.last_names_female)]"
 				else
-					input_name = "[pick(GLOB.first_names)] [pick(GLOB.last_names)]"
+					input_name = "[human_first_name_random()] [human_last_name_random()]"
 
 			var/target_occupation = stripped_input(user, "What occupation would you like to put on this card?\nNote: This will not grant any access levels other than Maintenance.", "Agent card job assignment", assignment ? assignment : "Assistant", MAX_MESSAGE_LEN)
 			if(!target_occupation)
@@ -456,6 +456,22 @@ update_label("John Doe", "Clowny")
 	icon_state = "syndicate"
 	assignment = "Syndicate Officer"
 	access = list(ACCESS_SYNDICATE)
+
+/obj/item/card/id/syndicate_command/crew_id
+	name = "syndicate ID card"
+	desc = "An ID straight from the Syndicate."
+	registered_name = "Syndicate"
+	assignment = "Syndicate Operative"
+	icon_state = "syndie"
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
+
+/obj/item/card/id/syndicate_command/captain_id
+	name = "syndicate captain ID card"
+	desc = "An ID straight from the Syndicate."
+	registered_name = "Syndicate"
+	assignment = "Syndicate Ship Captain"
+	icon_state = "syndie"
+	access = list(ACCESS_SYNDICATE, ACCESS_ROBOTICS)
 
 /obj/item/card/id/captains_spare
 	name = "captain's spare ID"

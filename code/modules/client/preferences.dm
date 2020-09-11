@@ -96,7 +96,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	var/list/ignoring = list()
 
-	var/clientfps = 40
+	var/clientfps = 60
 	var/updated_fps = 0
 
 	var/parallax
@@ -1848,7 +1848,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						new_key = "Numpad[new_key]"
 
 					var/full_key = "[AltMod][CtrlMod][ShiftMod][new_key]"
-					if(old_key)
+					if(old_key && old_key != "Unbound")
 						key_bindings[old_key] -= kb_name
 					key_bindings[full_key] += list(kb_name)
 					key_bindings[full_key] = sortList(key_bindings[full_key])
@@ -1882,9 +1882,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			var/firstspace = findtext(real_name, " ")
 			var/name_length = length(real_name)
 			if(!firstspace)	//we need a surname
-				real_name += " [pick(GLOB.last_names)]"
+				real_name += " [human_last_name_random()]"
 			else if(firstspace == name_length)
-				real_name += "[pick(GLOB.last_names)]"
+				real_name += "[human_last_name_random()]"
 
 	character.real_name = real_name
 	character.name = character.real_name

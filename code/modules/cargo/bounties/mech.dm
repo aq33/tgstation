@@ -18,14 +18,14 @@
 	reward = 13000
 	wanted_types = list(/obj/mecha/working/ripley/mkii)
 
-/datum/bounty/item/mech/firefighter
-	name = "APLU \"Firefighter\""
-	reward = 18000
-	wanted_types = list(/obj/mecha/working/ripley/firefighter)
+/datum/bounty/item/mech/clarke
+	name = "Clarke"
+	reward = 20000
+	wanted_types = list(/obj/mecha/working/clarke)
 
 /datum/bounty/item/mech/odysseus
 	name = "Odysseus"
-	reward = 11000
+	reward = 13000
 	wanted_types = list(/obj/mecha/medical/odysseus)
 
 /datum/bounty/item/mech/gygax
@@ -33,9 +33,14 @@
 	reward = 28000
 	wanted_types = list(/obj/mecha/combat/gygax)
 
+/datum/bounty/item/mech/alpha
+	name = "Alpha"
+	reward = 30000
+	wanted_types = list(/obj/mecha/combat/alpha)
+
 /datum/bounty/item/mech/durand
 	name = "Durand"
-	reward = 20000
+	reward = 25000
 	wanted_types = list(/obj/mecha/combat/durand)
 
 /datum/bounty/item/mech/phazon

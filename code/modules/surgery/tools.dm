@@ -102,7 +102,7 @@
 	user.SpinAnimation(3, 10)
 	playsound(user, 'sound/machines/juicer.ogg', 20, TRUE)
 	return (MANUAL_SUICIDE)
-	
+
 /obj/item/surgicaldrill/augment
 	name = "surgical drill"
 	desc = "Effectively a small power drill contained within your arm, edges dulled to prevent tissue damage. May or may not pierce the heavens."
@@ -165,16 +165,16 @@
 
 
 /obj/item/circular_saw
-	name = "circular saw"
+	name = "bone saw"
 	desc = "For heavy duty cutting."
 	icon = 'icons/obj/surgery.dmi'
-	icon_state = "saw"
+	icon_state = "bonesaw"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	hitsound = 'sound/weapons/circsawhit.ogg'
-	throwhitsound =  'sound/weapons/pierce.ogg'
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	mob_throw_hit_sound =  'sound/weapons/pierce.ogg'
 	flags_1 = CONDUCT_1
-	force = 15
+	force = 10
 	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 9
 	throw_speed = 2
@@ -187,7 +187,7 @@
 
 /obj/item/circular_saw/Initialize()
 	. = ..()
-	AddComponent(/datum/component/butchering, 40 * toolspeed, 100, 5, 'sound/weapons/circsawhit.ogg') //saws are very accurate and fast at butchering
+	AddComponent(/datum/component/butchering, 40 * toolspeed, 100, 5, 'sound/effects/circularsaw.ogg') //saws are very accurate and fast at butchering
 
 /obj/item/circular_saw/augment
 	name = "circular saw"
@@ -195,17 +195,53 @@
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "saw"
 	hitsound = 'sound/weapons/circsawhit.ogg'
-	throwhitsound =  'sound/weapons/pierce.ogg'
 	flags_1 = CONDUCT_1
-	force = 10
+	force = 15
 	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 9
 	throw_speed = 2
 	throw_range = 5
-	materials = list(/datum/material/iron=10000, /datum/material/glass=6000)
+	materials = list(/datum/material/iron=10000, /datum/material/glass=10000)
 	toolspeed = 0.5
 	attack_verb = list("attacked", "slashed", "sawed", "cut")
 	sharpness = IS_SHARP
+
+/obj/item/circular_saw/ubersaw
+	name = "Ubersaw"
+	desc = "Old, rusty abomination of a medical tool. Someone should lose their medical licence."
+	icon_state = "ubersaw"
+	force = 15
+	var/amount_per_transfer_from_this = 10
+	attack_verb = list("attacked", "slashed", "sawed", "cut", "stabbed")
+
+/obj/item/circular_saw/ubersaw/attack(mob/living/M, mob/user)
+    if(!istype(M))
+        return
+
+    if(M.can_inject(user, 1) && reagents.total_volume && M.reagents)
+        to_chat(M, "<span class='danger'>You feel a sharp sting!</span>")
+        reagents.reaction(M, INJECT, reagents.total_volume)
+        reagents.trans_to(M, amount_per_transfer_from_this, transfered_by = user)
+
+        log_combat(user, M, "stabbed", src)
+    . = ..()
+
+/obj/item/circular_saw/ubersaw/Initialize()
+	. = ..()
+	create_reagents(50, OPENCONTAINER)
+
+/obj/item/circular_saw/ubersaw/verb/empty()
+	set name = "Empty Ubersaw"
+	set category = "Object"
+	set src in usr
+	if(usr.incapacitated())
+		return
+	if (alert(usr, "Are you sure you want to empty that?", "Empty Ubersaw:", "Yes", "No") != "Yes")
+		return
+	if(isturf(usr.loc) && src.loc == usr)
+		to_chat(usr, "<span class='notice'>You empty \the [src] onto the floor.</span>")
+		reagents.reaction(usr.loc)
+		src.reagents.clear_reagents()
 
 /obj/item/surgical_drapes
 	name = "surgical drapes"

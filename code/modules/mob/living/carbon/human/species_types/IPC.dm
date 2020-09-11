@@ -27,6 +27,7 @@
 	brutemod = 1
 	toxmod = 0
 	clonemod = 0
+	hygiene_mod = 0
 	staminamod = 0.8
 	siemens_coeff = 1.5
 	reagent_tag = PROCESS_SYNTHETIC
@@ -77,9 +78,6 @@ datum/species/ipc/on_species_loss(mob/living/carbon/C)
 /datum/species/ipc/spec_death(gibbed, mob/living/carbon/C)
 	saved_screen = C.dna.features["ipc_screen"]
 	C.dna.features["ipc_screen"] = "BSOD"
-	C.update_body()
-	sleep(3 SECONDS)
-	C.dna.features["ipc_screen"] = null // Turns off their monitor on death.
 	C.update_body()
 
 /datum/action/innate/change_screen

@@ -25,7 +25,7 @@
 
 /datum/round_event/ion_storm/announce(fake)
 	if(prob(announceChance) || fake)
-		priority_announce("Ion storm detected near the station. Please check all AI-controlled equipment for errors.", "Anomaly Alert", 'sound/ai/ionstorm.ogg')
+		priority_announce("Burza jonowa wykryta w pobliżu stacji. Proszę poddać inspekcji wszelkie urządzenia kontrolowane przez sztuczną inteligencję.", "Ostrzeżenie: Burza jonowa", 'sound/ai/ionstorm.ogg')
 
 
 /datum/round_event/ion_storm/start()

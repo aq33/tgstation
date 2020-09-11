@@ -846,6 +846,24 @@
 		/obj/item/stock_parts/micro_laser = 2,
 		/obj/item/stock_parts/scanning_module = 1)
 
+/obj/item/circuitboard/machine/droneDispenser
+	name = "Drone Dispenser (Machine Board)"
+	build_path = /obj/machinery/droneDispenser
+	req_components = list(
+		/obj/item/stock_parts/matter_bin = 2,
+		/obj/item/stock_parts/manipulator = 3,
+		/obj/item/mmi/posibrain = 1,
+		/obj/item/stack/sheet/glass = 1)
+
+/obj/item/circuitboard/machine/droneDispenser/syndrone
+	name = "Syndrone Dispenser (Syndicate Machine Board)"
+	build_path = /obj/machinery/droneDispenser/syndrone
+	req_components = list(
+		/obj/item/stock_parts/matter_bin = 2,
+		/obj/item/stock_parts/manipulator = 3,
+		/obj/item/mmi/posibrain = 1,
+		/obj/item/stack/sheet/glass = 1)
+
 /obj/item/circuitboard/machine/protolathe
 	name = "Protolathe (Machine Board)"
 	build_path = /obj/machinery/rnd/production/protolathe
@@ -1100,3 +1118,17 @@
 	build_path = /obj/machinery/atmospherics/components/unary/shuttle/heater
 	req_components = list(/obj/item/stock_parts/micro_laser = 2,
 		/obj/item/stock_parts/matter_bin = 1)
+
+/obj/item/circuitboard/machine/cubedispenser
+	name = "foodcube dispenser (Machine Board)"
+	build_path = /obj/machinery/cubeDispenser
+	req_components = list(
+		/obj/item/stock_parts/manipulator = 2,
+		/obj/item/stock_parts/matter_bin = 2)
+
+/obj/item/circuitboard/machine/battery
+	name = "battery (Machine Board)"
+	build_path = /obj/machinery/power/battery
+	req_components = list(
+		/obj/item/stock_parts/capacitor = 5)
+

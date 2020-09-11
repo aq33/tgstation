@@ -10,10 +10,12 @@ Research Director=1,1
 Chief Medical Officer=1,1
 
 Assistant=-1,-1
+Prisoner=4,3
 
 Quartermaster=1,1
 Cargo Technician=4,2
 Shaft Miner=3,3
+Explorer=3,3
 
 Bartender=2,1
 Cook=2,1

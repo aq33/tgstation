@@ -45,6 +45,7 @@
 	melee_damage = 15
 	var/plant_cooldown = 30
 	var/plants_off = 0
+	gold_core_spawnable = HOSTILE_SPAWN
 
 /mob/living/simple_animal/hostile/alien/drone/handle_automated_action()
 	if(!..()) //AIStatus is off

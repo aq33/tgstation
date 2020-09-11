@@ -193,7 +193,7 @@
 	for(var/client/C in GLOB.clients)
 		if(C)
 
-			C.playtitlemusic(40)
+			C.playtitlemusic(MUSIC_VOLUME / 2)
 			C.process_endround_metacoin()
 
 			if(CONFIG_GET(flag/allow_crew_objectives))
@@ -207,7 +207,7 @@
 	to_chat(world, "<BR><BR><BR><span class='big bold'>The round has ended.</span>")
 	log_game("The round has ended.")
 	if(LAZYLEN(GLOB.round_end_notifiees))
-		send2irc("Notice", "[GLOB.round_end_notifiees.Join(", ")] the round has ended.")
+		send2chat("[GLOB.round_end_notifiees.Join(", ")] the round has ended.", "")
 
 	RollCredits()
 
@@ -227,7 +227,7 @@
 	//Set news report and mode result
 	mode.set_round_result()
 
-	send2irc("Server", "Round just ended.")
+	send2chat("Runda właśnie się skończyła.", CONFIG_GET(string/chat_announce_new_game))
 
 	if(length(CONFIG_GET(keyed_list/cross_server)))
 		send_news_report()

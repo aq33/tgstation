@@ -11,6 +11,7 @@
 	temperature = TCMB
 	thermal_conductivity = OPEN_HEAT_TRANSFER_COEFFICIENT
 	heat_capacity = 700000
+	is_no_slip = TRUE
 
 	var/destination_z
 	var/destination_x
@@ -174,9 +175,6 @@
 		stoplag()//Let a diagonal move finish, if necessary
 		A.newtonian_move(A.inertia_dir)
 
-
-/turf/open/space/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
-	return
 
 /turf/open/space/singularity_act()
 	return

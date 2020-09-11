@@ -34,6 +34,11 @@
 /mob/living/simple_animal/hostile/hivebot/Initialize()
 	. = ..()
 	deathmessage = "[src] blows apart!"
+	find_candidates()
+
+/mob/living/simple_animal/hostile/hivebot/attack_ghost(mob/dead/observer/user)
+	. = ..()
+	give_to_ghost(user)
 
 /mob/living/simple_animal/hostile/hivebot/range
 	name = "hivebot"

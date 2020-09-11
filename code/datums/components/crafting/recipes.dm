@@ -25,16 +25,6 @@
 /datum/crafting_recipe/proc/check_requirements(mob/user, list/collected_requirements)
 	return TRUE
 
-/datum/crafting_recipe/pin_removal
-	name = "Pin Removal"
-	result = /obj/item/gun
-	reqs = list(/obj/item/gun = 1)
-	parts = list(/obj/item/gun = 1)
-	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
-	time = 50
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-
 /datum/crafting_recipe/IED
 	name = "IED"
 	result = /obj/item/grenade/iedcasing
@@ -394,6 +384,21 @@
 				/obj/item/stack/packageWrap = 5)
 	tools = list(TOOL_SCREWDRIVER)
 	time = 100
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/makeshiftlasrifle
+	name = "Improvised Laser Rifle"
+	result = /obj/item/gun/energy/laser/makeshiftlasrifle
+	reqs = list(/obj/item/stack/cable_coil = 15,
+				/obj/item/weaponcrafting/stock = 1,
+				/obj/item/pipe = 1,
+				/obj/item/stock_parts/micro_laser = 1,
+				/obj/item/stock_parts/cell = 1)
+	tools = list(TOOL_SCREWDRIVER)
+	//parts = list(/obj/item/stock_parts/cell = 1, /obj/item/stock_parts/micro_laser = 1)
+	//TODO: zroznicowane statystyki w zaleznosci od uzytych czesci
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
@@ -802,7 +807,7 @@
 
 
 /datum/crafting_recipe/rcl
-	name = "Makeshift Rapid Cable Layer"
+	name = "Makeshift Rapid Pipe Cleaner Layer"
 	result = /obj/item/twohanded/rcl/ghetto
 	time = 40
 	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER, TOOL_WRENCH)
@@ -865,7 +870,7 @@
 	name = "Improvised Jetpack"
 	result = /obj/item/tank/jetpack/improvised
 	time = 30
-	reqs = list(/obj/item/tank/internals/oxygen/red = 2, /obj/item/extinguisher = 1, /obj/item/pipe = 3, /obj/item/stack/cable_coil = 30)//red oxygen tank so it looks right
+	reqs = list(/obj/item/tank/internals/oxygen = 2, /obj/item/extinguisher = 1, /obj/item/pipe = 3, /obj/item/stack/cable_coil = MAXCOIL)
 	category = CAT_MISC
 	tools = list(TOOL_WRENCH, TOOL_WELDER, TOOL_WIRECUTTER)
 
@@ -883,22 +888,6 @@
 	time = 1
 	reqs = list(/obj/item/stack/medical/gauze = 1,
 				/datum/reagent/space_cleaner/sterilizine = 10)
-	category = CAT_MISC
-
-/datum/crafting_recipe/bruise_pack
-	name = "Bruise Pack"
-	result = /obj/item/stack/medical/bruise_pack/one
-	time = 1
-	reqs = list(/obj/item/stack/medical/gauze = 1,
-				/datum/reagent/medicine/styptic_powder = 10)
-	category = CAT_MISC
-
-/datum/crafting_recipe/burn_pack
-	name = "Burn Ointment"
-	result = /obj/item/stack/medical/ointment/one
-	time = 1
-	reqs = list(/obj/item/stack/medical/gauze = 1,
-				/datum/reagent/medicine/silver_sulfadiazine = 10)
 	category = CAT_MISC
 
 // Shank - Makeshift weapon that can embed on throw

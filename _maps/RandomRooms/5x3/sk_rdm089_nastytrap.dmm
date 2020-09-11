@@ -75,31 +75,31 @@
 	icon_state = "panelscorched"
 	},
 /area/template_noop)
-"r" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating,
-/area/template_noop)
-"P" = (
+"I" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
 /area/template_noop)
+"T" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating,
+/area/template_noop)
 
 (1,1,1) = {"
 a
-r
+T
 g
 "}
 (2,1,1) = {"
 b
-P
+I
 h
 "}
 (3,1,1) = {"
-r
+T
 c
-r
+T
 "}
 (4,1,1) = {"
 d

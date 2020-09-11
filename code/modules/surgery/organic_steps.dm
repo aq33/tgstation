@@ -10,6 +10,7 @@
 	display_results(user, target, "<span class='notice'>You begin to make an incision in [target]'s [parse_zone(target_zone)]...</span>",
 		"[user] begins to make an incision in [target]'s [parse_zone(target_zone)].",
 		"[user] begins to make an incision in [target]'s [parse_zone(target_zone)].")
+	playsound(target.loc, 'sound/effects/scalpel_cut.ogg', 50, 1)
 
 /datum/surgery_step/incise/tool_check(mob/user, obj/item/tool)
 	if(implement_type == /obj/item && !tool.is_sharp())
@@ -64,6 +65,7 @@
 	display_results(user, target, "<span class='notice'>You begin to retract the skin in [target]'s [parse_zone(target_zone)]...</span>",
 		"[user] begins to retract the skin in [target]'s [parse_zone(target_zone)].",
 		"[user] begins to retract the skin in [target]'s [parse_zone(target_zone)].")
+	playsound(target.loc, 'sound/effects/retractor_retract.ogg', 50, 1)
 
 
 
@@ -103,6 +105,7 @@
 	display_results(user, target, "<span class='notice'>You begin to saw through the bone in [target]'s [parse_zone(target_zone)]...</span>",
 		"[user] begins to saw through the bone in [target]'s [parse_zone(target_zone)].",
 		"[user] begins to saw through the bone in [target]'s [parse_zone(target_zone)].")
+	playsound(target.loc, 'sound/effects/circularsaw.ogg', 50, 1)
 
 /datum/surgery_step/saw/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	target.apply_damage(50, BRUTE, "[target_zone]")

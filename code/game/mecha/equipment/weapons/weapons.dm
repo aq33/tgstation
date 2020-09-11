@@ -76,7 +76,7 @@
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
 	equip_cooldown = 8
-	name = "\improper CH-PS \"Immolator\" laser"
+	name = "\improper CH-PS \"Immolator\" laser cannon"
 	desc = "A weapon for combat exosuits. Shoots basic lasers."
 	icon_state = "mecha_laser"
 	energy_drain = 30
@@ -95,12 +95,21 @@
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy
 	equip_cooldown = 15
-	name = "\improper CH-LC \"Solaris\" laser cannon"
+	name = "\improper CH-LC \"Solaris\" heavy laser cannon"
 	desc = "A weapon for combat exosuits. Shoots heavy lasers."
-	icon_state = "mecha_laser"
+	icon_state = "mecha_laser2"
 	energy_drain = 60
 	projectile = /obj/item/projectile/beam/laser/heavylaser
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
+
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/xray
+	equip_cooldown = 10
+	name = "\improper CH-XC \"Transitum\" x-ray laser"
+	desc = "A weapon for combat exosuits. Shoots concentrated X-ray blasts."
+	icon_state = "mecha_xray"
+	energy_drain = 60
+	projectile = /obj/item/projectile/beam/xray
+	fire_sound = 'sound/weapons/laser3.ogg'
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/ion
 	equip_cooldown = 20
@@ -212,7 +221,11 @@
 	name = "general ballistic weapon"
 	fire_sound = 'sound/weapons/gunshot.ogg'
 	var/projectiles
+	var/projectiles_cache //ammo to be loaded in, if possible.
+	var/projectiles_cache_max
 	var/projectile_energy_cost
+	var/disabledreload //For weapons with no cache (like the rockets) which are reloaded by hand
+	var/ammo_type
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/get_shot_amount()
 	return min(projectiles, projectiles_per_shot)
@@ -225,19 +238,31 @@
 	return 1
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/get_equip_info()
-	return "[..()] \[[src.projectiles]\][(src.projectiles < initial(src.projectiles))?" - <a href='?src=[REF(src)];rearm=1'>Rearm</a>":null]"
+	return "[..()] \[[src.projectiles][projectiles_cache_max &&!projectile_energy_cost?"/[projectiles_cache]":""]\][!disabledreload &&(src.projectiles < initial(src.projectiles))?" - <a href='?src=[REF(src)];rearm=1'>Rearm</a>":null]"
 
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/rearm()
 	if(projectiles < initial(projectiles))
 		var/projectiles_to_add = initial(projectiles) - projectiles
-		while(chassis.get_charge() >= projectile_energy_cost && projectiles_to_add)
-			projectiles++
-			projectiles_to_add--
-			chassis.use_power(projectile_energy_cost)
-	send_byjax(chassis.occupant,"exosuit.browser","[REF(src)]",src.get_equip_info())
-	log_message("Rearmed [src.name].", LOG_MECHA)
-	return 1
+		if(projectile_energy_cost)
+			while(chassis.get_charge() >= projectile_energy_cost && projectiles_to_add)
+				projectiles++
+				projectiles_to_add--
+				chassis.use_power(projectile_energy_cost)
+
+		else
+			if(!projectiles_cache)
+				return FALSE
+			if(projectiles_to_add <= projectiles_cache)
+				projectiles = projectiles + projectiles_to_add
+				projectiles_cache = projectiles_cache - projectiles_to_add
+			else
+				projectiles = projectiles + projectiles_cache
+				projectiles_cache = 0
+
+		send_byjax(chassis.occupant,"exosuit.browser","[REF(src)]",src.get_equip_info())
+		log_message("Rearmed [src.name].", LOG_MECHA)
+		return TRUE
 
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/needs_rearm()
@@ -259,25 +284,30 @@
 
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/carbine
-	name = "\improper FNX-99 \"Hades\" Carbine"
-	desc = "A weapon for combat exosuits. Shoots incendiary bullets."
+	name = "\improper FD-11 \"Bush Boss\" Thermal Defoliant"
+	desc = "A weapon for combat exosuits. Fires incendiary canisters."
 	icon_state = "mecha_carbine"
 	equip_cooldown = 10
 	projectile = /obj/item/projectile/bullet/incendiary/fnx99
-	projectiles = 24
-	projectile_energy_cost = 15
+	fire_sound = 'sound/weapons/flamethrower.ogg'
+	projectiles = 20
+	projectiles_cache = 0
+	projectiles_cache_max = 60
 	harmful = TRUE
+	ammo_type = "incendiary"
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/silenced
 	name = "\improper S.H.H. \"Quietus\" Carbine"
 	desc = "A weapon for combat exosuits. A mime invention, field tests have shown that targets cannot even scream before going down."
-	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
 	icon_state = "mecha_mime"
 	equip_cooldown = 30
 	projectile = /obj/item/projectile/bullet/mime
-	projectiles = 6
-	projectile_energy_cost = 50
+	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
+	projectiles = 16
+	projectiles_cache = 0
+	projectiles_cache_max = 52
 	harmful = TRUE
+	ammo_type = "lmg"
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot
 	name = "\improper LBX AC 10 \"Scattershot\""
@@ -285,36 +315,62 @@
 	icon_state = "mecha_scatter"
 	equip_cooldown = 20
 	projectile = /obj/item/projectile/bullet/scattershot
-	projectiles = 40
-	projectile_energy_cost = 25
-	projectiles_per_shot = 4
+	fire_sound = 'sound/weapons/scattershot.ogg'
+	projectiles = 25
+	projectiles_cache = 0
+	projectiles_cache_max = 75
+	projectiles_per_shot = 5
 	variance = 25
 	harmful = TRUE
+	ammo_type = "scattershot"
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg
 	name = "\improper Ultra AC 2"
-	desc = "A weapon for combat exosuits. Shoots a rapid, three shot burst."
+	desc = "A weapon for combat exosuits. Shoots a rapid, five shot burst."
 	icon_state = "mecha_uac2"
 	equip_cooldown = 10
 	projectile = /obj/item/projectile/bullet/lmg
-	projectiles = 300
-	projectile_energy_cost = 20
-	projectiles_per_shot = 3
-	variance = 6
+	fire_sound = 'sound/weapons/rifleshot.ogg'
+	projectiles = 50
+	projectiles_cache = 0
+	projectiles_cache_max = 150
+	projectiles_per_shot = 5
+	variance = 10
 	randomspread = 1
 	projectile_delay = 2
 	harmful = TRUE
+	ammo_type = "lmg"
+
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/chaingun
+	name = "\improper LCG-4-NL \"Jaruz\" Riot Chaingun"
+	desc = "A weapon for combat exosuits. Shoots a barrage of non-lethal rubber pellets."
+	icon_state = "mecha_chaingun"
+	equip_cooldown = 5
+	projectile = /obj/item/projectile/bullet/pellet/shotgun_rubbershot
+	fire_sound = "sound/weapons/chaingun.ogg"
+	projectiles = 100
+	projectiles_cache = 0
+	projectiles_cache_max = 300
+	projectiles_per_shot = 5
+	variance = 5
+	randomspread = 1
+	projectile_delay = 1
+	harmful = TRUE
+	ammo_type = "nl"
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack
-	name = "\improper SRM-8 missile rack"
-	desc = "A weapon for combat exosuits. Shoots light explosive missiles."
+	name = "\improper HEML-3 missile rack"
+	desc = "A weapon for combat exosuits. Launches light explosive missiles."
 	icon_state = "mecha_missilerack"
 	projectile = /obj/item/projectile/bullet/a84mm_he
-	fire_sound = 'sound/weapons/grenadelaunch.ogg'
-	projectiles = 8
-	projectile_energy_cost = 1000
-	equip_cooldown = 60
+	fire_sound = 'sound/weapons/rocketlaunch.ogg'
+	projectiles = 3
+	projectiles_cache = 0
+	projectiles_cache_max = 0
+	disabledreload = TRUE
+	equip_cooldown = 120
 	harmful = TRUE
+	ammo_type = "missiles_he"
 
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher
@@ -346,9 +402,11 @@
 	fire_sound = 'sound/weapons/grenadelaunch.ogg'
 	projectiles = 6
 	missile_speed = 1.5
-	projectile_energy_cost = 800
+	projectiles_cache = 0
+	projectiles_cache_max = 18
 	equip_cooldown = 60
 	var/det_time = 20
+	ammo_type = "flashbang"
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/flashbang/proj_init(var/obj/item/grenade/flashbang/F)
 	var/turf/T = get_turf(src)
@@ -359,10 +417,27 @@
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/flashbang/clusterbang //Because I am a heartless bastard -Sieve //Heartless? for making the poor man's honkblast? - Kaze
 	name = "\improper SOB-3 grenade launcher"
 	desc = "A weapon for combat exosuits. Launches primed clusterbangs. You monster."
+	icon_state = "mecha_cluster"
 	projectiles = 3
 	projectile = /obj/item/grenade/clusterbuster
-	projectile_energy_cost = 1600 //getting off cheap seeing as this is 3 times the flashbangs held in the grenade launcher.
+	projectiles_cache = 0
+	projectiles_cache_max = 0
+	disabledreload = TRUE
 	equip_cooldown = 90
+	ammo_type = "clusterbang"
+
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/railgun
+	name = "\improper GER-X1 Railgun"
+	desc = "A weapon for combat exosuits. Launches hypervelocity projectiles that penetrate everything in their path including your mom."
+	icon_state = "mecha_railgun"
+	fire_sound = 'sound/weapons/railgun.ogg'
+	projectiles = 1
+	projectile = /obj/item/projectile/bullet/p50/penetrator/railgun
+	projectiles_cache = 0
+	projectiles_cache_max = 10
+	//projectile_energy_cost = 250
+	equip_cooldown = 180
+	ammo_type = "railgun"
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/banana_mortar
 	name = "banana mortar"

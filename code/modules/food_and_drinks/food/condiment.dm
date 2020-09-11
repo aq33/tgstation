@@ -227,7 +227,7 @@
 	desc = "An oily condiment made from egg yolks."
 	icon_state = "mayonnaise"
 	list_reagents = list(/datum/reagent/consumable/mayonnaise = 50)
-
+	foodtype = EGG
 
 
 //Food packs. To easily apply deadly toxi... delicious sauces to your food!

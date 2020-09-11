@@ -13,6 +13,7 @@
 /area/ruin/unpowered)
 "e" = (
 /obj/machinery/door/airlock/bananium,
+/obj/structure/fans/tiny,
 /turf/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "f" = (
@@ -155,6 +156,12 @@
 /area/ruin/unpowered)
 "z" = (
 /obj/item/shovel,
+/turf/open/floor/mineral/bananium/airless,
+/area/ruin/unpowered)
+"O" = (
+/obj/item/gps{
+	gpstag = "X-07"
+	},
 /turf/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 
@@ -509,7 +516,7 @@ d
 f
 o
 r
-h
+O
 w
 d
 b

@@ -8,6 +8,10 @@
 	},
 /turf/open/floor/plating,
 /area/template_noop)
+"d" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plasteel,
+/area/template_noop)
 "h" = (
 /obj/item/caution{
 	desc = "CAUTION! BIOHAZARD QUARANTINE!";
@@ -26,10 +30,6 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/template_noop)
-"n" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel,
 /area/template_noop)
 "o" = (
 /obj/machinery/door/airlock/maintenance_hatch,
@@ -105,7 +105,7 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating,
 /area/template_noop)
-"L" = (
+"M" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating,
@@ -154,7 +154,7 @@ h
 a
 "}
 (2,1,1) = {"
-L
+M
 t
 r
 t
@@ -165,7 +165,7 @@ a
 t
 u
 t
-n
+d
 "}
 (4,1,1) = {"
 y

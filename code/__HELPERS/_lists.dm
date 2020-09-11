@@ -628,3 +628,7 @@
 			return FALSE
 
 	return TRUE
+
+/// Pick random value from assoc list
+/proc/pick_value(list/L)
+	return L[pick(L)]

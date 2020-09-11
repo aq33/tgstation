@@ -13,8 +13,8 @@
 /area/shuttle/hunter)
 "d" = (
 /obj/structure/shuttle/engine/heater{
-	icon_state = "heater";
-	dir = 8
+	dir = 8;
+	icon_state = "heater"
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -83,8 +83,8 @@
 /area/shuttle/hunter)
 "r" = (
 /obj/effect/turf_decal/arrows{
-	icon_state = "arrows";
-	dir = 4
+	dir = 4;
+	icon_state = "arrows"
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/hunter)
@@ -124,8 +124,8 @@
 /area/shuttle/hunter)
 "z" = (
 /obj/structure/chair{
-	icon_state = "chair";
-	dir = 4
+	dir = 4;
+	icon_state = "chair"
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/hunter)

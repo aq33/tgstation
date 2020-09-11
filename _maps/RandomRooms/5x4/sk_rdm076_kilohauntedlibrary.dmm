@@ -183,7 +183,7 @@
 /obj/item/pen,
 /turf/open/floor/wood,
 /area/template_noop)
-"w" = (
+"K" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -201,7 +201,7 @@ o
 "}
 (2,1,1) = {"
 b
-w
+K
 g
 p
 "}

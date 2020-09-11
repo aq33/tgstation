@@ -33,6 +33,7 @@
 /area/ruin/unpowered)
 "j" = (
 /obj/machinery/door/airlock,
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "k" = (
@@ -50,6 +51,12 @@
 /obj/effect/spawner/lootdrop/maintenance{
 	lootcount = 4;
 	name = "4maintenance loot spawner"
+	},
+/turf/open/floor/plating,
+/area/ruin/unpowered)
+"t" = (
+/obj/item/gps{
+	gpstag = "X-13"
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
@@ -203,7 +210,7 @@ d
 d
 d
 d
-d
+t
 d
 d
 d

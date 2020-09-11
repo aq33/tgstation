@@ -310,6 +310,24 @@
 	new real_type(loc)
 	return INITIALIZE_HINT_QDEL
 
+/obj/item/book/granter/spell/sharpstar
+	spell = /obj/effect/proc_holder/spell/targeted/conjure_item/summon_sharpstar
+	spellname = "Sharpstar"
+	icon_state = "bookblind"
+	desc = "non quaeritur de nomine tuo"
+	remarks = list("They do not ask about your name.", "Take your revenge", "The silent brotherhood watches you, make us proud, little one.")
+
+/obj/item/book/granter/spell/charge/recoil(mob/user)
+	..()
+	to_chat(user,"<span class='warning'>This knowledge was written in an ancient tongue, it was filled with nothingness, so much, that it dried up your eyes. Only one of many tears should be allowed to read this. </span>")
+	user.blind_eyes(200)
+
+
+/obj/item/book/granter/spell/charge/recoil(mob/user)
+	..()
+	to_chat(user,"<span class='warning'>This knowledge was written in an ancient tongue, it was filled with nothingness, so much, that it dried up your eyes. Only one of many tears should be allowed to read this. </span>")
+	user.blind_eyes(200)
+
 ///MARTIAL ARTS///
 
 /obj/item/book/granter/martial
@@ -442,3 +460,26 @@
 	icon_state = "cooking_learing_sweets"
 	oneuse = FALSE
 	remarks = list("So that is how icing is made!", "Placing fruit on top? How simple...", "Huh layering cake seems harder then this...", "This book smells like candy", "A clown must have made this page, or they forgot to spell check it before printing...", "Wait, a way to cook slime to be safe?")
+
+/obj/item/book/granter/martial/sharpshadowofthemist
+	martial = /datum/martial_art/sharpshadowofthemist
+	name = "Striped Scroll"
+	martialname = "sharp shadow of the mist"
+	desc = "A striped scroll with seemingly nothing written on it."
+	greet = "<span class='boldannounce'>The Silent Brotherhood has given you a way to silence all who oppose you!</span>"
+	icon_state = "mimescroll"
+	icon = 'icons/obj/mimescroll.dmi'
+	remarks = list("Adjust your bones, become one with mimery...", "Noone asked you about your name...", "Fight the sharp shadow of the mist...", "Break them like if they were the Polish Constitution...")
+
+/obj/item/book/granter/martial/sharpshadowofthemist/onlearned(mob/living/carbon/user)
+	..()
+	if(oneuse == TRUE)
+		to_chat(user, "<span class='warning'>[src] The Silent Brotherhood did not mean for you to see this...</span>")
+
+/obj/item/book/granter/martial/sharpshadowofthemist/recoil(mob/living/carbon/user)
+	to_chat(user, "<span class='warning'>[src] explodes!</span>")
+	playsound(src,'sound/effects/explosion1.ogg',40,1)
+	user.flash_act(1, 1)
+	user.adjustBruteLoss(200)
+	user.adjustFireLoss(200)
+	qdel(src)
