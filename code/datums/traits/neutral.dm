@@ -10,26 +10,6 @@
 	lose_text = "<span class='notice'>Znowu czujesz smak!</span>"
 	medical_record_text = "Pacjent choruje na aguezję i nie czuje smaku potraw."
 
-/datum/quirk/foreigner
-	name = "Foreigner"
-	desc = "You're not from around here. You don't know Galactic Common!"
-	value = 0
-	gain_text = "<span class='notice'>The words being spoken around you don't make any sense."
-	lose_text = "<span class='notice'>You've developed fluency in Galactic Common."
-	medical_record_text = "Patient does not speak Galactic Common and may require an interpreter."
-
-/datum/quirk/foreigner/add()
-	var/mob/living/carbon/human/H = quirk_holder
-	if(ishuman(H) && !isipc(H) && H.job != "Curator")
-		H.add_blocked_language(/datum/language/common)
-		H.grant_language(/datum/language/uncommon)
-
-/datum/quirk/foreigner/remove()
-	var/mob/living/carbon/human/H = quirk_holder
-	if(ishuman(H) && !isipc(H) && H.job != "Curator")
-		H.remove_blocked_language(/datum/language/common)
-		H.remove_language(/datum/language/uncommon)
-
 /datum/quirk/vegetarian
 	name = "Wegetarianin"
 	desc = "Uważasz, że jedzenie mięsa jest niemoralne."

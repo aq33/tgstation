@@ -50,6 +50,7 @@
 #define HOBO            (1<<17)
 #define SHRINK          (1<<18)
 #define PRISONER		(1<<19)
+#define CELEBRITY       (1<<20)
 
 #define JOB_AVAILABLE 0
 #define JOB_UNAVAILABLE_GENERIC 1
