@@ -33,6 +33,11 @@
 	reward = 28000
 	wanted_types = list(/obj/mecha/combat/gygax)
 
+/datum/bounty/item/mech/alpha
+	name = "Alpha"
+	reward = 30000
+	wanted_types = list(/obj/mecha/combat/alpha)
+
 /datum/bounty/item/mech/durand
 	name = "Durand"
 	reward = 25000

@@ -9,6 +9,9 @@
 	supervisors = "the head of personnel"
 	selection_color = "#dddddd"
 	chat_color = "#8AB48C"
+	exp_requirements = 600
+	exp_type = EXP_TYPE_CREW
+	exp_type_department = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/chaplain
 

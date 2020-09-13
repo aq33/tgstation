@@ -467,7 +467,7 @@ GLOBAL_VAR(medibot_unique_id_gen)
 	if(declare_cooldown > world.time)
 		return
 	var/area/location = get_area(src)
-	speak("Medical emergency! [crit_patient || "A patient"] is in critical condition at [location]!",radio_channel)
+	speak("Pogotowie medyczne! [crit_patient || "A patient"] jest w krytycznym stanie w [location]!",radio_channel)
 	declare_cooldown = world.time + 200
 
 /obj/machinery/bot_core/medbot

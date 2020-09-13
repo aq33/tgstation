@@ -22,7 +22,6 @@
 	//initialise organs
 	create_internal_organs() //most of it is done in set_species now, this is only for parent call
 	physiology = new()
-
 	. = ..()
 
 	AddComponent(/datum/component/personal_crafting)
@@ -679,7 +678,7 @@
 
 /mob/living/carbon/human/cuff_resist(obj/item/I)
 	if(dna && dna.check_mutation(HULK))
-		say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ), forced = "hulk")
+		say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "ZIOBRO, TY KURWO!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ), forced = "hulk")
 		if(..(I, cuff_break = FAST_CUFFBREAK))
 			dropItemToGround(I)
 	else
