@@ -35993,6 +35993,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cfM" = (
@@ -38018,6 +38019,7 @@
 /obj/structure/sign/warning/nosmoking{
 	pixel_y = 32
 	},
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cnZ" = (
@@ -44576,6 +44578,11 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
+"fDx" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/power/battery,
+/turf/open/floor/plasteel,
+/area/quartermaster/storage)
 "fEe" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 4
@@ -75667,7 +75674,7 @@ izv
 uxM
 boK
 bpz
-boK
+fDx
 bjr
 bjr
 bvV
@@ -75924,7 +75931,7 @@ hfz
 uxM
 boK
 mBc
-boK
+fDx
 bjr
 bjr
 bvV

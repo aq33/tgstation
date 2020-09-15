@@ -20755,6 +20755,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/bot,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aYA" = (
@@ -56852,6 +56853,8 @@
 	dir = 4;
 	pixel_x = 11
 	},
+/obj/machinery/power/battery,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "oAW" = (
@@ -60375,6 +60378,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "vKD" = (

@@ -32763,6 +32763,7 @@
 /area/maintenance/starboard)
 "bke" = (
 /obj/effect/turf_decal/bot,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "bkf" = (
@@ -66858,6 +66859,8 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
+/obj/machinery/power/battery,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "cxs" = (
@@ -71637,6 +71640,12 @@
 	},
 /turf/open/floor/plating,
 /area/quartermaster/miningoffice)
+"trw" = (
+/obj/effect/turf_decal/bot,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/battery,
+/turf/open/floor/plasteel,
+/area/quartermaster/storage)
 "tux" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8;
@@ -111062,7 +111071,7 @@ bEY
 bnq
 bHi
 bIo
-bHi
+trw
 bKN
 bMi
 bNw

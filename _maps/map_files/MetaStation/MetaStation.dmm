@@ -19613,6 +19613,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aNI" = (
@@ -19629,6 +19630,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/bot,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aNK" = (
@@ -77901,6 +77903,8 @@
 	},
 /obj/effect/turf_decal/tile/yellow,
 /obj/structure/table/reinforced,
+/obj/machinery/power/battery,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel/dark/corner{
 	dir = 8
 	},
