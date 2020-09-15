@@ -22117,6 +22117,7 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/science/research)
 "box" = (
@@ -43496,6 +43497,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/storage/tools)
+"dMM" = (
+/obj/machinery/scanner_gate,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
 "dMZ" = (
 /obj/item/transfer_valve{
 	pixel_x = -5
@@ -46833,6 +46838,16 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
+"jEz" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 8
+	},
+/obj/machinery/scanner_gate,
+/turf/open/floor/plasteel,
+/area/quartermaster/office)
 "jEA" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume,
@@ -51939,6 +51954,17 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/brig)
+"rNy" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/machinery/scanner_gate,
+/turf/open/floor/plasteel,
+/area/engine/break_room)
 "rOJ" = (
 /obj/machinery/door/airlock/atmos{
 	name = "Atmospherics";
@@ -53838,6 +53864,14 @@
 	dir = 8
 	},
 /area/science/research)
+"vhc" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 1
+	},
+/obj/machinery/scanner_gate,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
 "vhl" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -54649,6 +54683,19 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
+"wjT" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/machinery/scanner_gate,
+/turf/open/floor/plasteel,
+/area/security/brig)
 "wkN" = (
 /obj/effect/spawner/structure/window,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -54802,6 +54849,17 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
+"wuB" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/machinery/scanner_gate,
+/turf/open/floor/plasteel,
+/area/security/brig)
 "wvV" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Dormitory"
@@ -78950,7 +79008,7 @@ cNI
 bnG
 bnz
 bpA
-wDF
+jEz
 bbR
 bbR
 bud
@@ -86178,7 +86236,7 @@ bZy
 bZy
 cbu
 bTg
-bXH
+rNy
 bYO
 cgS
 cgO
@@ -86354,7 +86412,7 @@ aje
 dJn
 alC
 akX
-alC
+wjT
 alC
 qpo
 anw
@@ -86868,7 +86926,7 @@ aiQ
 dJn
 akt
 akW
-aiG
+wuB
 amo
 xnQ
 anA
@@ -91798,7 +91856,7 @@ bjS
 bli
 oGY
 mRa
-oGY
+vhc
 bpN
 bqX
 uFk
@@ -92055,7 +92113,7 @@ bjU
 blk
 blk
 osb
-bhh
+dMM
 bpO
 bsx
 bss

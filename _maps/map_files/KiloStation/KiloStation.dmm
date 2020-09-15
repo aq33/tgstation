@@ -4817,6 +4817,7 @@
 	name = "Emergency Research Blast Door"
 	},
 /obj/effect/turf_decal/caution/stand_clear,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/dark,
 /area/science/research)
 "ajM" = (
@@ -42448,6 +42449,7 @@
 	icon_state = "pipe11-1"
 	},
 /obj/structure/cable,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "bEV" = (
@@ -42938,6 +42940,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "bFY" = (
@@ -60026,6 +60029,7 @@
 	pixel_y = 28
 	},
 /obj/effect/turf_decal/caution/stand_clear,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "ckH" = (
@@ -60960,6 +60964,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/caution/stand_clear,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "cmF" = (
@@ -63558,6 +63563,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/engine/break_room)
 "crE" = (
@@ -70965,6 +70971,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/storage)
+"egi" = (
+/obj/machinery/scanner_gate,
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/medbay/central)
 "ehY" = (
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
@@ -71038,6 +71048,17 @@
 	},
 /turf/open/floor/plating,
 /area/quartermaster/storage)
+"eRW" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8;
+	icon_state = "pipe11-1"
+	},
+/obj/machinery/scanner_gate,
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/medbay/central)
 "eYG" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -94572,8 +94593,8 @@ bsU
 bsU
 aSy
 aCK
-aOV
-aQq
+egi
+eRW
 aMP
 aSN
 aNn

@@ -13158,6 +13158,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "azJ" = (
@@ -13184,6 +13185,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "azL" = (
@@ -28910,6 +28912,7 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "bgT" = (
@@ -31076,6 +31079,7 @@
 	dir = 9
 	},
 /obj/structure/cable,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/engine/break_room)
 "bln" = (
@@ -52032,6 +52036,7 @@
 	name = "biohazard containment door"
 	},
 /obj/effect/turf_decal/delivery,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/science/research)
 "cgi" = (
@@ -52042,6 +52047,7 @@
 	name = "biohazard containment door"
 	},
 /obj/effect/turf_decal/delivery,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/science/research)
 "cgj" = (
@@ -53044,6 +53050,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "cip" = (
@@ -54184,6 +54191,7 @@
 /area/medical/medbay/central)
 "cln" = (
 /obj/effect/turf_decal/tile/blue,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "clo" = (
@@ -78242,6 +78250,14 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+"wXn" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/scanner_gate,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
 "wYz" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -102082,7 +102098,7 @@ cez
 cfP
 bXK
 cio
-cjO
+wXn
 cln
 cmu
 cnC

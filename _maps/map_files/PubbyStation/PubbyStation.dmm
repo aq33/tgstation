@@ -8096,6 +8096,7 @@
 	icon_state = "arrows_red";
 	pixel_x = -5
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "auC" = (
@@ -8109,6 +8110,7 @@
 	icon_state = "arrows_red";
 	pixel_x = -5
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "auD" = (
@@ -18768,6 +18770,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "aUq" = (
@@ -25853,6 +25856,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "blp" = (
@@ -29787,6 +29791,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/tile/blue,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "buj" = (
@@ -31057,6 +31062,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/white,
 /area/science/lab)
 "bxh" = (
@@ -31226,6 +31232,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/dark,
 /area/science/explab)
 "bxv" = (
@@ -43056,6 +43063,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "bYo" = (
