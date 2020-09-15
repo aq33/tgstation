@@ -12913,6 +12913,8 @@
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/pen,
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel,
 /area/security/main)
 "aAb" = (
@@ -20789,6 +20791,8 @@
 	pixel_x = 8;
 	pixel_y = 6
 	},
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel/dark,
 /area/engine/break_room)
 "aPt" = (
@@ -22793,6 +22797,8 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/storage)
 "aSF" = (
@@ -26798,6 +26804,7 @@
 	},
 /obj/item/storage/toolbox/mechanical,
 /obj/item/hand_labeler,
+/obj/item/destTagger,
 /turf/open/floor/plasteel/dark,
 /area/science/lab)
 "aZq" = (

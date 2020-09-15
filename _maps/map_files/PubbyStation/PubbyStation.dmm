@@ -5123,6 +5123,8 @@
 "anc" = (
 /obj/structure/table/wood,
 /obj/machinery/recharger,
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel,
 /area/security/main)
 "and" = (
@@ -29679,6 +29681,8 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
 "btY" = (
@@ -44160,6 +44164,8 @@
 /obj/structure/table,
 /obj/item/storage/belt/utility,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cbo" = (
@@ -55581,6 +55587,8 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel/white,
 /area/science/lab)
 "meF" = (

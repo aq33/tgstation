@@ -2850,6 +2850,8 @@
 	pixel_x = -3;
 	pixel_y = 7
 	},
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel,
 /area/security/main)
 "ahj" = (
@@ -20584,6 +20586,8 @@
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel/white,
 /area/science/lab)
 "bkj" = (
@@ -27112,6 +27116,8 @@
 	pixel_y = 3
 	},
 /obj/item/storage/box/rxglasses,
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
 "bCQ" = (
@@ -34441,6 +34447,8 @@
 /obj/structure/table,
 /obj/machinery/cell_charger,
 /obj/item/clothing/glasses/meson,
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel,
 /area/engine/break_room)
 "caw" = (

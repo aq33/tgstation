@@ -7195,6 +7195,8 @@
 	pixel_x = -3;
 	pixel_y = 7
 	},
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel,
 /area/security/main)
 "anC" = (
@@ -35839,6 +35841,8 @@
 /obj/item/stack/sheet/mineral/copper{
 	amount = 5
 	},
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel/dark/corner,
 /area/engine/storage_shared)
 "bvi" = (
@@ -51728,6 +51732,8 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel/dark,
 /area/medical/sleeper)
 "cfL" = (
@@ -54765,6 +54771,8 @@
 	pixel_y = 6
 	},
 /obj/structure/table,
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel/white,
 /area/science/lab)
 "cmH" = (
