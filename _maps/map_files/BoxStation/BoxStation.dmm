@@ -23117,6 +23117,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 8
 	},
+/obj/machinery/research/explosive_compressor,
 /turf/open/floor/plasteel/white,
 /area/science/explab)
 "bry" = (

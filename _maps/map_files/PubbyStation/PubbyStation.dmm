@@ -35723,6 +35723,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
+/obj/machinery/research/explosive_compressor,
 /turf/open/floor/plasteel/white,
 /area/science/mixing/chamber)
 "bGt" = (

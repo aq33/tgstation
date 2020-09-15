@@ -27481,6 +27481,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/purple,
+/obj/machinery/research/explosive_compressor,
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/mixing)
 "baB" = (
