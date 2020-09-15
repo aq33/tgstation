@@ -22838,11 +22838,11 @@
 "bdp" = (
 /obj/structure/table,
 /obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/food/snacks/grown/tomato,
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "bdq" = (
-/obj/structure/table,
-/obj/item/reagent_containers/food/snacks/grown/tomato,
+/obj/machinery/grill,
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "bdr" = (

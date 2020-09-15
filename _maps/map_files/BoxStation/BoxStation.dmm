@@ -14526,6 +14526,7 @@
 	pixel_x = -5;
 	pixel_y = 30
 	},
+/obj/machinery/grill,
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "aRz" = (

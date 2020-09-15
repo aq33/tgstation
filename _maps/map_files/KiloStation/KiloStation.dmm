@@ -39020,6 +39020,13 @@
 "byz" = (
 /obj/structure/table,
 /obj/item/storage/bag/tray,
+/obj/item/book/manual/chef_recipes{
+	pixel_y = 2
+	},
+/obj/item/book/manual/chef_recipes{
+	pixel_x = -4;
+	pixel_y = 6
+	},
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "byA" = (
@@ -39272,14 +39279,7 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/central)
 "bzd" = (
-/obj/structure/table,
-/obj/item/book/manual/chef_recipes{
-	pixel_x = -4;
-	pixel_y = 6
-	},
-/obj/item/book/manual/chef_recipes{
-	pixel_y = 2
-	},
+/obj/machinery/grill,
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "bze" = (

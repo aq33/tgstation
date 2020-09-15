@@ -44528,6 +44528,13 @@
 /area/crew_quarters/kitchen)
 "bOS" = (
 /obj/structure/table,
+/obj/item/kitchen/rollingpin,
+/obj/item/reagent_containers/food/condiment/peppermill{
+	pixel_x = 3
+	},
+/obj/item/reagent_containers/food/condiment/saltshaker{
+	pixel_x = -3
+	},
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
@@ -45691,18 +45698,11 @@
 	},
 /area/crew_quarters/kitchen)
 "bRS" = (
-/obj/structure/table,
-/obj/item/reagent_containers/food/condiment/saltshaker{
-	pixel_x = -3
-	},
-/obj/item/reagent_containers/food/condiment/peppermill{
-	pixel_x = 3
-	},
-/obj/item/kitchen/rollingpin,
 /obj/machinery/camera{
 	c_tag = "Kitchen";
 	dir = 1
 	},
+/obj/machinery/grill,
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "bRT" = (
