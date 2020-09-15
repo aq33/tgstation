@@ -45288,6 +45288,10 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
 /area/bridge)
+"gJB" = (
+/obj/machinery/chem_dispenser,
+/turf/open/floor/plasteel/white,
+/area/science/mixing)
 "gJN" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -105764,7 +105768,7 @@ bEC
 bEC
 dMZ
 bGk
-bFU
+gJB
 ptw
 bGz
 bQZ

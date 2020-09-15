@@ -62364,6 +62364,7 @@
 	dir = 5
 	},
 /obj/structure/cable,
+/obj/structure/chair/stool,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "cCA" = (
@@ -62706,6 +62707,7 @@
 	dir = 4;
 	pixel_x = -24
 	},
+/obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel/white,
 /area/science/mixing/chamber)
 "cDn" = (

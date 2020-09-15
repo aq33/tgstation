@@ -51173,6 +51173,11 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/science)
+"dWb" = (
+/obj/structure/cable,
+/obj/machinery/chem_dispenser,
+/turf/open/floor/plasteel/white,
+/area/science/mixing)
 "dWk" = (
 /obj/machinery/door/airlock{
 	id_tag = "PottySci";
@@ -102788,7 +102793,7 @@ bzd
 wnJ
 bBM
 ylb
-bDX
+dWb
 bFi
 bGo
 bHy

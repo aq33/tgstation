@@ -20739,6 +20739,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
 	},
+/obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/mixing)
 "aPp" = (
