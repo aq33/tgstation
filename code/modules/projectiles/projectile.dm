@@ -239,6 +239,17 @@
 				store_hitscan_collision(pcache)
 			return TRUE
 
+	if(firer && !ignore_source_check)
+		if(isspacepod(A))
+			trajectory_ignore_forcemove = TRUE
+			if(!istype(T))
+				qdel(src)
+				return
+			if(T != loc)
+				forceMove(get_step_towards(src, T))
+			trajectory_ignore_forcemove = FALSE
+			return FALSE
+
 	var/distance = get_dist(T, starting) // Get the distance between the turf shot from and the mob we hit and use that for the calculations.
 	def_zone = ran_zone(def_zone, max(100-(7*distance), 5)) //Lower accurancy/longer range tradeoff. 7 is a balanced number to use.
 
