@@ -126,18 +126,6 @@
 	ammo_x_offset = 2
 	shaded_charge = FALSE
 
-/obj/item/ammo_casing/energy/laser/makeshiftlasrifle
-	e_cost = 250 //The amount of energy a cell needs to expend to create this shot.
-	projectile_type = /obj/item/projectile/beam/laser/makeshiftlasrifle
-
-/obj/item/projectile/beam/laser/makeshiftlasrifle
-	damage = 15 //w Initialize() losowo dodajemy 10 dmg, wiec bron srednio zadaje 20 dmg
-
-/obj/item/projectile/beam/laser/makeshiftlasrifle/Initialize()
-	. = ..()
-	if(rand(1,2)==1)
-		damage += 10
-
 ////////Laser Tag////////////////////
 
 /obj/item/gun/energy/laser/bluetag

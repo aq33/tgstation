@@ -40,6 +40,10 @@
 	select_name = "DESTROY"
 	fire_sound = 'sound/weapons/pulse.ogg'
 
+/obj/item/ammo_casing/energy/laser/makeshiftlasrifle
+	projectile_type = /obj/item/projectile/beam/laser/makeshiftlasrifle
+	e_cost = 2500
+
 /obj/item/ammo_casing/energy/laser/bluetag
 	projectile_type = /obj/item/projectile/beam/lasertag/bluetag
 	select_name = "bluetag"

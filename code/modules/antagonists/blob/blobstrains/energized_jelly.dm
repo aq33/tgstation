@@ -1,10 +1,10 @@
 //does tons of oxygen damage and a little stamina, immune to tesla bolts, weak to EMP
 /datum/blobstrain/reagent/energized_jelly
-	name = "Energized Jelly"
-	description = "will cause low stamina and high oxygen damage, and cause targets to be unable to breathe."
-	effectdesc = "will also conduct electricity, but takes damage from EMPs."
-	analyzerdescdamage = "Does low stamina damage, high oxygen damage, and prevents targets from breathing."
-	analyzerdesceffect = "Is immune to electricity and will easily conduct it, but is weak to EMPs."
+	name = "Czubajka Elektryczna"
+	description = "twoje ataki powodują wyczerpanie oraz wysokie obrażenia od niedotlenienia. Dodatkowo powodują, że osoby zaatakowane na krótką chwilę tracą możliwość oddychania."
+	effectdesc = "przewodzisz prąd elektryczny oraz otrzymujsz obrażenia od impulsów EMP."
+	analyzerdescdamage = "Jego ataki powodują wyczerpanie oraz wysokie obrażenia od niedotlenienia. Dodatkowo powoduje, że osoby zaatakowane na krótką chwilę tracą możliwość oddychania."
+	analyzerdesceffect = "Jest odporny na prąd elektryczny i z łatwością go przewodzi, ale jest podatny na obrażenia ze strony EMP."
 	color = "#EFD65A"
 	complementary_color = "#00E5B1"
 	reagent = /datum/reagent/blob/energized_jelly

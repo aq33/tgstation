@@ -1,11 +1,11 @@
 //does massive brute and burn damage, but can only expand manually
 /datum/blobstrain/reagent/networked_fibers
-	name = "Networked Fibers"
-	description = "will do high brute and burn damage and will generate resources quicker, but can only expand manually."
-	shortdesc = "will do high brute and burn damage."
-	effectdesc = "will move your core when manually expanding near it."
-	analyzerdescdamage = "Does high brute and burn damage."
-	analyzerdesceffect = "Is highly mobile and generates resources rapidly."
+	name = "Sowa Włóknista"
+	description = "zadajesz bardzo poważne obrażenia fizyczne oraz ciężkie poparzenia, oraz generujesz zasoby szybciej, ale możesz tylko rozprzestrzeniać się manualnie."
+	shortdesc = "zadajesz wysokie obrażenia fizyczne oraz poważne poparzenia."
+	effectdesc = "twój rdzeń zostanie przesunięty jeżeli rozprzestrzenisz się w jego pobliżu."
+	analyzerdescdamage = "zadaje wysokie obrażenia fizyczne oraz poważne poparzenia."
+	analyzerdesceffect = "jest wysoce mobilny oraz szybciej generuje zasoby."
 	color = "#CDC0B0"
 	complementary_color = "#FFF68F"
 	reagent = /datum/reagent/blob/networked_fibers
