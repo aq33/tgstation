@@ -149,9 +149,10 @@
 						var/list/messagevoice = list("Wracaj, hultaju." = 'sound/effects/hygienebot_angry.ogg',
 						"Kiedy się myłeś ostatnio, szczerze?" = 'sound/effects/hygienebot_angry.ogg',
 						"Inspekcja wacka, proszę stać." = 'sound/effects/hygienebot_angry.ogg',
-						"Myj dupe." = 'sound/effects/hygienebot_angry.ogg',
 						"Czy ty kiedykolwiek słyszałeś słowo \"prysznic\"?." = 'sound/effects/hygienebot_angry.ogg',
 						"Przestań biegać, troglodyto jebany." = 'sound/effects/hygienebot_angry.ogg',
+						"Albo przestaniesz uciekać albo dowiesz się gdzie zniknął klaun." = 'sound/effects/hygienebot_angry.ogg',
+						"Ja cię tylko chcę kurwa umyć." = 'sound/effects/hygienebot_angry.ogg',
 						"Czy ty się myjesz w ogóle?" =	'sound/effects/hygienebot_angry.ogg')
 						var/message = pick(messagevoice) 
 						speak(message)
