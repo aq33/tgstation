@@ -2368,12 +2368,6 @@
 /obj/machinery/vending/cigarette,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/fore)
-"aeZ" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 5
-	},
-/turf/open/floor/plating/airless,
-/area/space/nearstation)
 "afa" = (
 /obj/machinery/shieldwallgen/xenobiologyaccess,
 /obj/machinery/light{
@@ -14849,12 +14843,6 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
-"aDU" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/turf/open/floor/plating/airless,
-/area/space/nearstation)
 "aDV" = (
 /obj/structure/janitorialcart,
 /obj/effect/turf_decal/tile/neutral{
@@ -16632,12 +16620,12 @@
 	},
 /area/maintenance/starboard/fore)
 "aHz" = (
-/obj/machinery/door/airlock/external{
-	name = "Cargo Escape Pod";
-	req_access_txt = "0"
+/obj/machinery/door/airlock/research/glass{
+	name = "Research Lab";
+	req_one_access_txt = "7;29"
 	},
-/turf/open/floor/plasteel/dark,
-/area/maintenance/starboard)
+/turf/open/floor/plasteel,
+/area/escapepodbay)
 "aHA" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
@@ -32865,10 +32853,17 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/area/maintenance/starboard)
+/obj/structure/table,
+/obj/machinery/button{
+	id = "poddoor";
+	name = "Hangar door control";
+	req_access_txt = "55"
+	},
+/turf/open/floor/plasteel,
+/area/escapepodbay)
 "bkr" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -33274,10 +33269,14 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
+/obj/machinery/door/window/westleft{
+	base_state = "right";
+	dir = 4;
+	icon_state = "right";
+	name = "Testing Range"
 	},
-/area/maintenance/starboard)
+/turf/open/floor/plasteel,
+/area/escapepodbay)
 "bla" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
@@ -37462,25 +37461,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/tcommsat/computer)
-"bva" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 1;
-	height = 4;
-	roundstart_template = /datum/map_template/shuttle/escape_pod/default;
-	width = 3
-	},
-/obj/structure/fans/tiny/invisible,
-/turf/open/space/basic,
-/area/space)
-"bvb" = (
-/obj/docking_port/stationary/random{
-	dir = 4;
-	id = "pod_lavaland4";
-	name = "lavaland"
-	},
-/turf/open/space,
-/area/space/nearstation)
 "bvc" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plating,
@@ -71144,6 +71124,9 @@
 /obj/item/clothing/mask/gas,
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
+"haJ" = (
+/turf/closed/wall/rust,
+/area/escapepodbay)
 "hmR" = (
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
@@ -71168,6 +71151,10 @@
 /obj/effect/spawner/engine,
 /turf/open/floor/plating/airless,
 /area/space)
+"hQT" = (
+/obj/structure/sign/warning/docking,
+/turf/closed/wall/rust,
+/area/escapepodbay)
 "hUH" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/structure/bed,
@@ -71331,6 +71318,10 @@
 	},
 /turf/open/floor/plating,
 /area/hallway/secondary/exit/departure_lounge)
+"lOt" = (
+/obj/machinery/light,
+/turf/open/floor/plating,
+/area/escapepodbay)
 "lQu" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -71410,6 +71401,13 @@
 	},
 /turf/open/floor/plating,
 /area/quartermaster/warehouse)
+"nQi" = (
+/obj/structure/fans/tiny,
+/obj/machinery/door/poddoor{
+	id = "poddoor"
+	},
+/turf/open/floor/plating,
+/area/escapepodbay)
 "nUj" = (
 /obj/machinery/atmospherics/pipe/layer_manifold{
 	dir = 4
@@ -71446,6 +71444,9 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/virology)
+"ouA" = (
+/turf/closed/wall,
+/area/escapepodbay)
 "ouM" = (
 /obj/structure/cable,
 /obj/structure/table,
@@ -71465,6 +71466,12 @@
 	},
 /turf/closed/wall/rust,
 /area/maintenance/starboard/fore)
+"oPI" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/turf/open/floor/plating,
+/area/escapepodbay)
 "pga" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -71509,6 +71516,12 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+"pCn" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/plating,
+/area/escapepodbay)
 "pTM" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -71542,6 +71555,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/exit/departure_lounge)
+"qSM" = (
+/obj/spacepod/prebuilt,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/escapepodbay)
 "rcJ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8;
@@ -71549,6 +71569,16 @@
 	},
 /turf/closed/wall,
 /area/maintenance/solars/starboard/fore)
+"riM" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/escapepodbay)
+"rGT" = (
+/obj/structure/sign/warning/docking,
+/turf/closed/wall,
+/area/escapepodbay)
 "rIw" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
@@ -71567,6 +71597,15 @@
 	},
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
+"sbo" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/escapepodbay)
 "sno" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -71582,6 +71621,12 @@
 	},
 /turf/closed/wall/rust,
 /area/maintenance/solars/port/aft)
+"srG" = (
+/turf/open/floor/plating,
+/area/escapepodbay)
+"syW" = (
+/turf/open/space/basic,
+/area/space/nearstation)
 "sBC" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8;
@@ -71601,6 +71646,12 @@
 /obj/effect/spawner/room/tenxten,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
+"sXP" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/escapepodbay)
 "sYt" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer1{
 	dir = 1;
@@ -115384,11 +115435,11 @@ bkd
 aCa
 bip
 amE
-ava
-avA
+haJ
+ouA
 aHz
-avA
-bkd
+ouA
+ouA
 aeu
 aeu
 aeu
@@ -115641,11 +115692,11 @@ bkd
 aCa
 bir
 aCa
-bkd
+ouA
 bkq
-bkq
+sbo
 bkZ
-ava
+haJ
 aeu
 alm
 acm
@@ -115898,11 +115949,11 @@ bkd
 aCa
 aCa
 aCa
-ava
-agy
-bva
-agy
-bkd
+haJ
+srG
+srG
+srG
+ouA
 aeu
 aeU
 aaa
@@ -116155,11 +116206,11 @@ bkd
 bkd
 bkd
 ava
-beK
-aaa
-aaa
-aaa
-bhq
+hQT
+oPI
+qSM
+srG
+rGT
 aeu
 aUz
 aaa
@@ -116412,11 +116463,11 @@ aeu
 aeu
 aeu
 aeu
-akA
-aaa
-aaa
-aaa
-akA
+ouA
+sXP
+pCn
+srG
+ouA
 aeu
 aeU
 aaa
@@ -116669,11 +116720,11 @@ bnW
 bnW
 aeu
 aeu
-aDU
-aaa
-aaa
-aaa
-aod
+ouA
+riM
+srG
+lOt
+ouA
 aeu
 aeu
 aeU
@@ -116926,11 +116977,11 @@ akr
 bnW
 aeU
 aeu
-aeZ
-aob
-bvb
-aob
-aoe
+ouA
+nQi
+nQi
+nQi
+ouA
 aeu
 aeu
 aeu
@@ -117185,7 +117236,7 @@ aeU
 aof
 ain
 acK
-acm
+acK
 acK
 ain
 aeu
@@ -117698,9 +117749,9 @@ bnW
 bnW
 aUz
 alm
-aeo
-aeo
-aaQ
+acm
+acm
+acm
 alm
 aeu
 aeu
@@ -118984,8 +119035,8 @@ aeU
 aeU
 alm
 acm
-aaQ
-aeo
+acm
+acm
 acm
 alm
 aeu
@@ -119240,12 +119291,12 @@ bnW
 boe
 aof
 aeu
-aeu
+syW
 aaa
 aaa
 aaa
-aeu
-aeu
+syW
+syW
 aeU
 aaa
 aaa
@@ -119497,11 +119548,11 @@ bnW
 aUz
 aeu
 aeu
-aeu
-aeU
+syW
+syW
 aaa
 aaa
-aeu
+syW
 aaa
 aaa
 aaa
@@ -119754,9 +119805,9 @@ bnW
 aeu
 aeu
 aeu
-aeu
-aUz
-aeU
+syW
+syW
+syW
 aaa
 aaa
 aaa
@@ -120011,12 +120062,12 @@ aeu
 aeu
 aeu
 aeu
-aeu
-aeu
-aUz
+syW
+syW
+syW
 aaa
 aaa
-aaB
+aaa
 aaa
 aaa
 aaa
@@ -120268,9 +120319,9 @@ aeu
 aeu
 aeu
 aeu
-aeu
-aeu
-aeU
+syW
+syW
+syW
 aaa
 aaa
 aaa
@@ -120525,8 +120576,8 @@ aeU
 aap
 aeu
 aeu
-aeu
-aeu
+syW
+syW
 aaa
 aaa
 aaa
@@ -120784,12 +120835,12 @@ aeu
 aeu
 alm
 acm
-aaQ
-aeo
-aeo
-aeo
-aaQ
-aeo
+acm
+ain
+acm
+acm
+ain
+acm
 acm
 acK
 acm
@@ -121307,7 +121358,7 @@ aaa
 aaa
 acm
 aaa
-aeo
+acm
 aaa
 aaa
 aaa
@@ -121562,9 +121613,9 @@ aaa
 aaa
 aaa
 aaa
-aeo
+ain
 aaa
-aeo
+ain
 aaa
 aaa
 aaa
@@ -121821,7 +121872,7 @@ aaa
 aaa
 acm
 aaa
-aaQ
+acm
 aaa
 aaa
 aaa
@@ -122076,9 +122127,9 @@ aaa
 aaa
 aaa
 aaa
-aeo
+ain
 aaa
-aeo
+ain
 aaa
 aaa
 aaa
@@ -122333,7 +122384,7 @@ aaa
 aaa
 aaa
 aaa
-aeo
+acm
 aaa
 acm
 aaa
