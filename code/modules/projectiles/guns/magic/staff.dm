@@ -145,3 +145,14 @@
 	ammo_type = /obj/item/ammo_casing/magic/wipe
 	icon_state = "staffofwipe"
 	item_state = "staffofwipe"
+
+/obj/item/gun/magic/staff/tree
+	name = "Ramię strażnika"
+	desc = "Strażnik chętnie podzieli się nasionami z intruzami, ale nadal się l e k k o gniewa."
+	fire_sound = 'sound/magic/staff_door.ogg'
+	ammo_type = /obj/item/ammo_casing/magic/tree
+	icon_state = "staffofdoor"
+	item_state = "staffofdoor"
+	max_charges = 10
+	recharge_rate = 2
+	no_den_usage = 1

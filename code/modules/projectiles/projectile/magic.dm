@@ -641,6 +641,28 @@
 	qdel(chain)
 	. = ..()
 
+/obj/item/projectile/magic/tree
+	name = "Seed projectile"
+	icon_state = "energy"
+	damage = 0
+	nodamage = TRUE
+
+	//explosion values
+	var/tree_time = 600
+
+/obj/item/projectile/magic/tree/on_hit(target)
+	. = ..()
+	if(ismob(target))
+		var/mob/living/M = target
+		if(M.anti_magic_check())
+			visible_message("<span class='warning'>[src] vanishes into smoke on contact with [target]!</span>")
+			return BULLET_ACT_BLOCK
+		var/turf/T = get_turf(target)
+		new /mob/living/simple_animal/hostile/treant(T)
+		new /mob/living/simple_animal/hostile/treant(T)
+		new /mob/living/simple_animal/hostile/treant(T)
+		new /mob/living/simple_animal/hostile/treant(T)
+
 /obj/item/projectile/magic/aoe/fireball
 	name = "bolt of fireball"
 	icon_state = "fireball"

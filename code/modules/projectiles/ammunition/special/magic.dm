@@ -65,3 +65,6 @@
 
 /obj/item/ammo_casing/magic/wipe
 	projectile_type = /obj/item/projectile/magic/wipe
+
+/obj/item/ammo_casing/magic/tree
+	projectile_type = /obj/item/projectile/magic/tree
