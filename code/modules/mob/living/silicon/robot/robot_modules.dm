@@ -599,7 +599,7 @@
 			cyborg_base_icon = "sleekjanitor"
 		if("Servbot")
 			cyborg_base_icon = "servbot-jani"
-		if("flynn")
+		if("Flynn")
 			cyborg_base_icon = "flynn"
 		if("NobleH")
 			cyborg_base_icon = "noble-janh"
@@ -694,7 +694,7 @@
 
 /obj/item/robot_module/butler/be_transformed_to(obj/item/robot_module/old_module)
 	var/mob/living/silicon/robot/R = loc
-	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Roomba", "Noble", "Lloyd", "Kodiak", "Servbot", "Sleek", "Marina", "Booty", "Toiletbot", "Hydrobot", "Waitress", "Butler", "Tophat", "Kent", "Bro"))
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Roomba", "Noble", "Lloyd", "Kodiak", "Servbot", "Sleek", "Marina", "Booty", "Hydrobot", "Waitress", "Butler", "Tophat", "Kent", "Bro"))
 	if(!borg_icon)
 		return FALSE
 	switch(borg_icon)
@@ -714,8 +714,6 @@
 			hat_offset = INFINITY //He is already wearing a hat
 		if("Hydrobot")
 			cyborg_base_icon = "hydrobot"
-		if("Toiletbot")
-			cyborg_base_icon = "toiletbot"
 		if("Booty")
 			cyborg_base_icon = "booty-blue"
 		if("Marina")
