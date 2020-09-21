@@ -210,6 +210,9 @@
 	R.notransform = TRUE
 	R.SetLockdown(1)
 	R.anchored = TRUE
+	var/datum/effect_system/smoke_spread/smoke = new
+	smoke.set_up(1, R.loc)
+	smoke.start()
 	sleep(1)
 	for(var/i in 1 to 4)
 		playsound(R, pick('sound/items/drill_use.ogg', 'sound/items/jaws_cut.ogg', 'sound/items/jaws_pry.ogg', 'sound/items/welder.ogg', 'sound/items/ratchet.ogg'), 80, 1, -1)
@@ -248,6 +251,36 @@
 	moduleselect_icon = "standard"
 	hat_offset = -3
 
+/obj/item/robot_module/standard/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Roomba", "Booty", "Noble", "NobleH", "Durin", "Kodiak", "Spider", "Sleek", "Marina", "Normal", "Ancient",))
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Normal")
+			cyborg_base_icon = "robot"
+		if("Ancient")
+			cyborg_base_icon = "defbot"
+		if("Marina")
+			cyborg_base_icon = "marinaSD"
+		if("Sleek")
+			cyborg_base_icon = "sleekstandard"
+		if("Spider")
+			cyborg_base_icon = "spider-standard"
+		if("Kodiak")
+			cyborg_base_icon = "kodiak-standard"
+		if("Durin")
+			cyborg_base_icon = "durin"
+		if("NobleH")
+			cyborg_base_icon = "noble-stdh"
+		if("Noble")
+			cyborg_base_icon = "noble-std"
+		if("Booty")
+			cyborg_base_icon = "booty-flower"
+		if("Roomba")
+			cyborg_base_icon = "zoomba_standard"
+	return ..()
+
 /obj/item/robot_module/medical
 	name = "Medical"
 	basic_modules = list(
@@ -276,6 +309,44 @@
 	moduleselect_icon = "medical"
 	can_be_pushed = FALSE
 	hat_offset = 3
+
+/obj/item/robot_module/medical/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Roomba", "Roomba ERT", "Eve", "NobleH", "Noble", "Servbot", "Marina", "Booty", "Sleek", "Normal", "Gibbs", "Needles", "Arachne", "Ancient Medical", "Droid Medical"))
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Gibbs")
+			cyborg_base_icon = "gibbs"
+		if("Needles")
+			cyborg_base_icon = "needles"
+		if("Arachne")
+			cyborg_base_icon = "arachne"
+		if("Ancient Medical")
+			cyborg_base_icon = "medbot"
+		if("Droid Medical")
+			cyborg_base_icon = "droid-medical"
+		if("Normal")
+			cyborg_base_icon = "medical"
+		if("Booty")
+			cyborg_base_icon = "booty-white"
+		if("Sleek")
+			cyborg_base_icon = "sleekmedic"
+		if("Marina")
+			cyborg_base_icon = "marina"
+		if("Servbot")
+			cyborg_base_icon = "servbot-medi"
+		if("NobleH")
+			cyborg_base_icon = "noble-medh"
+		if("Noble")
+			cyborg_base_icon = "noble-med"
+		if("Eve")
+			cyborg_base_icon = "eve"
+		if("Roomba")
+			cyborg_base_icon = "zoomba_med"
+		if("Roomba ERT")
+			cyborg_base_icon = "zoomba_crisis"
+	return ..()
 
 /obj/item/robot_module/engineering
 	name = "Engineering"
@@ -309,6 +380,44 @@
 	moduleselect_icon = "engineer"
 	magpulsing = TRUE
 	hat_offset = -4
+
+/obj/item/robot_module/engineering/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Roomba", "Wall-e", "Noble", "NobleH", "Conagher", "Kodiak", "Servbot", "Sleek", "Marina", "Booty", "Droid", "Ancient", "Normal", "Engiseer", "Normal but with treads",  ))
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Engiseer")
+			cyborg_base_icon = "engiseer"
+		if("Normal but with treads")
+			cyborg_base_icon = "engi-tread"
+		if("Normal")
+			cyborg_base_icon = "engineer"
+		if("Ancient")
+			cyborg_base_icon = "engibot"
+		if("Droid")
+			cyborg_base_icon = "droid-engineer"
+		if("Booty")
+			cyborg_base_icon = "booty-yellow"
+		if("Marina")
+			cyborg_base_icon = "marinaEN"
+		if("Sleek")
+			cyborg_base_icon = "sleekengineer"
+		if("Servbot")
+			cyborg_base_icon = "servbot-engi"
+		if("Kodiak")
+			cyborg_base_icon = "kodiak-eng"
+		if("Conagher")
+			cyborg_base_icon = "conagher"
+		if("NobleH")
+			cyborg_base_icon = "noble-engh"
+		if("Noble")
+			cyborg_base_icon = "noble-eng"
+		if("Wall-e")
+			cyborg_base_icon = "wall-e"
+		if("Roomba")
+			cyborg_base_icon = "zoomba_engi"
+	return ..()
 
 /obj/item/robot_module/deathsquad
 	name = "Centcom"
@@ -345,6 +454,42 @@
 	can_be_pushed = FALSE
 	hat_offset = 3
 
+/obj/item/robot_module/security/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Roomba", "Marina", "Kodiak", "Woody", "NobleH", "Droid Security", "Normal but with treads", "Sleek Security", "Normal", "Noble Security", "Ancient Security", "Servbot", "Securitron"))
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Sleek Security")
+			cyborg_base_icon = "sleekecurity"
+		if("Noble Security")
+			cyborg_base_icon = "oble-sec"
+		if("Ancient Security")
+			cyborg_base_icon = "secbot"
+		if("Servbot")
+			cyborg_base_icon = "servbot-sec"
+		if("Securitron")
+			cyborg_base_icon = "securitron"
+		if("Normal")
+			cyborg_base_icon = "sec"
+		if("Droid Security")
+			cyborg_base_icon = "droid-security"
+		if("Booty")
+			cyborg_base_icon = "booty-red"
+		if("NobleH")
+			cyborg_base_icon = "noble-sech"
+		if("Woody")
+			cyborg_base_icon = "woody"
+		if("Kodiak-sec")
+			cyborg_base_icon = "kodiak-sec"
+		if("Marina")
+			cyborg_base_icon = "marinaSC"
+		if("Normal but with treads")
+			cyborg_base_icon = "sec-tread"
+		if("Roomba")
+			cyborg_base_icon = "zoomba_sec"
+	return ..()
+
 /obj/item/robot_module/security/do_transform_animation()
 	..()
 	to_chat(loc, "<span class='userdanger'>While you have picked the security module, you still have to follow your laws, NOT Space Law. \
@@ -379,6 +524,28 @@
 	can_be_pushed = FALSE
 	hat_offset = -2
 
+/obj/item/robot_module/peacekeeper/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Roomba", "Normal", "Omoikane", "Hos", "Warden", "Noir", "NoirBW" ))
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Normal")
+			cyborg_base_icon = "peace"
+		if("Omoikane")
+			cyborg_base_icon = "omoikane"
+		if("Hos")
+			cyborg_base_icon = "peaceborg-hos"
+		if("Warden")
+			cyborg_base_icon = "peaceborg-warden"
+		if("Noir")
+			cyborg_base_icon = "peaceborg-noir"
+		if("NoirBW")
+			cyborg_base_icon = "peaceborg-noirbw"
+		if("Roomba")
+			cyborg_base_icon = "zoomba_sci"
+	return ..()
+
 /obj/item/robot_module/peacekeeper/do_transform_animation()
 	..()
 	to_chat(loc, "<span class='userdanger'>Under ASIMOV, you are an enforcer of the PEACE and preventer of HUMAN HARM. \
@@ -407,6 +574,40 @@
 	moduleselect_icon = "janitor"
 	hat_offset = -5
 	clean_on_move = TRUE
+
+/obj/item/robot_module/janitor/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Roomba", "Normal", "Janbot", "Droid", "Booty", "Han-d", "Mechaduster", "Marina", "Sleek", "Servbot", "Flynn", "NobleH", "Noble", ))
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Normal")
+			cyborg_base_icon = "janitor"
+		if("Janbot")
+			cyborg_base_icon = "janbot"
+		if("Droid")
+			cyborg_base_icon = "droid-janitor"
+		if("Booty")
+			cyborg_base_icon = "booty-green"
+		if("Han-d")
+			cyborg_base_icon = "han-d"
+		if("Mechaduster")
+			cyborg_base_icon = "mechaduster"
+		if("Marina")
+			cyborg_base_icon = "marinaJN"
+		if("Sleek")
+			cyborg_base_icon = "sleekjanitor"
+		if("Servbot")
+			cyborg_base_icon = "servbot-jani"
+		if("flynn")
+			cyborg_base_icon = "flynn"
+		if("NobleH")
+			cyborg_base_icon = "noble-janh"
+		if("Noble")
+			cyborg_base_icon = "noble-jan"
+		if("Roomba")
+			cyborg_base_icon = "zoomba_jani"
+	return ..()
 
 /obj/item/reagent_containers/spray/cyborg_drying
 	name = "drying agent spray"
@@ -493,7 +694,7 @@
 
 /obj/item/robot_module/butler/be_transformed_to(obj/item/robot_module/old_module)
 	var/mob/living/silicon/robot/R = loc
-	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Waitress", "Butler", "Tophat", "Kent", "Bro"))
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Roomba", "Noble", "Lloyd", "Kodiak", "Servbot", "Sleek", "Marina", "Booty", "Toiletbot", "Hydrobot", "Waitress", "Butler", "Tophat", "Kent", "Bro"))
 	if(!borg_icon)
 		return FALSE
 	switch(borg_icon)
@@ -511,6 +712,26 @@
 			cyborg_base_icon = "tophat"
 			special_light_key = null
 			hat_offset = INFINITY //He is already wearing a hat
+		if("Hydrobot")
+			cyborg_base_icon = "hydrobot"
+		if("Toiletbot")
+			cyborg_base_icon = "toiletbot"
+		if("Booty")
+			cyborg_base_icon = "booty-blue"
+		if("Marina")
+			cyborg_base_icon = "marinaSV"
+		if("Sleek")
+			cyborg_base_icon = "sleekservice"
+		if("Servbot")
+			cyborg_base_icon = "servbot"
+		if("Kodiak")
+			cyborg_base_icon = "kodiak-service"
+		if("Lloyd")
+			cyborg_base_icon = "lloyd"
+		if("Noble")
+			cyborg_base_icon = "noble-srv"
+		if("Roomba")
+			cyborg_base_icon = "zoomba_service"
 	return ..()
 
 /obj/item/robot_module/borgi
@@ -546,7 +767,7 @@
 
 /obj/item/robot_module/miner/be_transformed_to(obj/item/robot_module/old_module)
 	var/mob/living/silicon/robot/R = loc
-	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Lavaland Miner", "Asteroid Miner", "Spider Miner"))
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Roomba", "Ancient Miner", "Lavaland Miner", "Asteroid Miner", "Spider Miner", "Droid Miner", "MarinaMN","Sleekminer", "Servbot", "Kodiak", "Ishimura", "NobleH", "Noble", "Wall-e"))
 	if(!borg_icon)
 		return FALSE
 	switch(borg_icon)
@@ -557,6 +778,28 @@
 			special_light_key = "miner"
 		if("Spider Miner")
 			cyborg_base_icon = "spidermin"
+		if("Ancient Miner")
+			cyborg_base_icon = "minerbot"
+		if("Droid Miner")
+			cyborg_base_icon = "droid-miner"
+		if("MarinaMN")
+			cyborg_base_icon = "marinaMN"
+		if("Sleekminer")
+			cyborg_base_icon = "sleekminer"
+		if("Servbot")
+			cyborg_base_icon = "servbot-miner"
+		if("Kodiak")
+			cyborg_base_icon = "kodiak-miner"
+		if("Ishimura")
+			cyborg_base_icon = "ishimura"
+		if("NobleH")
+			cyborg_base_icon = "noble-suph"
+		if("Noble")
+			cyborg_base_icon = "noble-sup"
+		if("Wall-e")
+			cyborg_base_icon = "wall-a"
+		if("Roomba")
+			cyborg_base_icon = "zoomba_miner"
 	return ..()
 
 /obj/item/robot_module/miner/rebuild_modules()
@@ -584,6 +827,22 @@
 	moduleselect_icon = "malf"
 	can_be_pushed = FALSE
 	hat_offset = 3
+
+/obj/item/robot_module/miner/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Chesty", "Roomba", "Normal", "Walking gun" ))
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Roomba")
+			cyborg_base_icon = "zoomba_combat"
+		if("Normal")
+			cyborg_base_icon = "synd_sec"
+		if("Walking gun")
+			cyborg_base_icon = "motile-syndie"
+		if("Chesty")
+			cyborg_base_icon = "chesty"
+	return ..()
 
 /obj/item/robot_module/syndicate/rebuild_modules()
 	..()
@@ -623,6 +882,19 @@
 	can_be_pushed = FALSE
 	hat_offset = 3
 
+/obj/item/robot_module/miner/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Normal", "Droid" ))
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Droid")
+			cyborg_base_icon = "droid-crisis"
+	switch(borg_icon)
+		if("Normal")
+			cyborg_base_icon = "synd_medical"
+	return ..()
+
 /obj/item/robot_module/saboteur
 	name = "Syndicate Saboteur"
 	basic_modules = list(
@@ -656,6 +928,18 @@
 	magpulsing = TRUE
 	hat_offset = -4
 	canDispose = TRUE
+
+/obj/item/robot_module/miner/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Kodiak", "Normal" ))
+	if(!borg_icon)
+		return FALSE
+	switch(borg_icon)
+		if("Normal")
+			cyborg_base_icon = "syndie_engi"
+		if("Kodiak")
+			cyborg_base_icon = "kodiak-combat"
+	return ..()
 
 /datum/robot_energy_storage
 	var/name = "Generic energy storage"
