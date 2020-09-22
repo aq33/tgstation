@@ -32857,9 +32857,10 @@
 	dir = 4
 	},
 /obj/structure/table,
-/obj/machinery/button{
-	id = "poddoor";
-	name = "Hangar door control";
+/obj/machinery/button/door{
+	id = "Podshutters";
+	name = "Pod Hangar Door Control";
+	pixel_y = 4;
 	req_access_txt = "55"
 	},
 /turf/open/floor/plasteel,
@@ -71403,9 +71404,6 @@
 /area/quartermaster/warehouse)
 "nQi" = (
 /obj/structure/fans/tiny,
-/obj/machinery/door/poddoor{
-	id = "poddoor"
-	},
 /turf/open/floor/plating,
 /area/escapepodbay)
 "nUj" = (
@@ -71708,6 +71706,13 @@
 	},
 /turf/closed/wall,
 /area/maintenance/starboard)
+"url" = (
+/obj/structure/fans/tiny,
+/obj/machinery/door/poddoor/multi_tile/three_tile_ver{
+	id = "Podshutters"
+	},
+/turf/open/floor/plating,
+/area/escapepodbay)
 "uvA" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -116980,7 +116985,7 @@ aeu
 ouA
 nQi
 nQi
-nQi
+url
 ouA
 aeu
 aeu

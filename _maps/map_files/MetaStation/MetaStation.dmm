@@ -75496,9 +75496,6 @@
 /area/hallway/primary/aft)
 "jdr" = (
 /obj/structure/fans/tiny,
-/obj/machinery/door/poddoor{
-	id = "poddoor"
-	},
 /turf/open/floor/plating,
 /area/escapepodbay)
 "jdU" = (
@@ -75964,9 +75961,10 @@
 /area/medical/storage)
 "kNP" = (
 /obj/structure/table,
-/obj/machinery/button{
-	id = "poddoor";
-	name = "Hangar door control";
+/obj/machinery/button/door{
+	id = "Podshutters";
+	name = "Pod Hangar Door Control";
+	pixel_y = 4;
 	req_access_txt = "55"
 	},
 /turf/open/floor/plasteel,
@@ -76881,6 +76879,13 @@
 	},
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
+"pqe" = (
+/obj/structure/fans/tiny,
+/obj/machinery/door/poddoor/multi_tile/two_tile_ver{
+	id = "Podshutters"
+	},
+/turf/open/floor/plating,
+/area/escapepodbay)
 "pqy" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/vending/cigarette,
@@ -118451,10 +118456,10 @@ mpB
 aaa
 hmt
 jdr
-jdr
+pqe
 hmt
 jdr
-jdr
+pqe
 hmt
 fwb
 nYJ
