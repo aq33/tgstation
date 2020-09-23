@@ -253,9 +253,9 @@
 	desc = "A red mech pilot's suit. Might make your butt look big."
 	icon_state = "red_mech_suit"
 	item_state = "red_mech_suit"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	fitted = NO_FEMALE_UNIFORM
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS|FEET|HANDS
+	cold_protection = CHEST|GROIN|ARMS|LEGS|FEET|HANDS
+	fitted = FEMALE_UNIFORM_TOP
 	alternate_worn_layer = GLOVES_LAYER //covers hands but gloves can go over it. This is how these things work in my head.
 	can_adjust = FALSE
 
@@ -264,12 +264,20 @@
 	desc = "A white mech pilot's suit. Very fetching."
 	icon_state = "white_mech_suit"
 	item_state = "white_mech_suit"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS|FEET|HANDS
+	cold_protection = CHEST|GROIN|ARMS|LEGS|FEET|HANDS
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
 
 /obj/item/clothing/under/costume/mech_suit/blue
 	name = "blue mech pilot's suit"
 	desc = "A blue mech pilot's suit. For the more reluctant mech pilots."
 	icon_state = "blue_mech_suit"
 	item_state = "blue_mech_suit"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS|FEET|HANDS
+	cold_protection = CHEST|GROIN|ARMS|LEGS|FEET|HANDS
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
 
 /obj/item/clothing/under/costume/russian_officer
 	name = "\improper Russian officer's uniform"

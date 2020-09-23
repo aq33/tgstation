@@ -826,7 +826,7 @@
 	can_be_pushed = FALSE
 	hat_offset = 3
 
-/obj/item/robot_module/miner/be_transformed_to(obj/item/robot_module/old_module)
+/obj/item/robot_module/syndicate/be_transformed_to(obj/item/robot_module/old_module)
 	var/mob/living/silicon/robot/R = loc
 	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Chesty", "Roomba", "Normal", "Walking gun" ))
 	if(!borg_icon)
@@ -880,7 +880,7 @@
 	can_be_pushed = FALSE
 	hat_offset = 3
 
-/obj/item/robot_module/miner/be_transformed_to(obj/item/robot_module/old_module)
+/obj/item/robot_module/syndicate_medical/be_transformed_to(obj/item/robot_module/old_module)
 	var/mob/living/silicon/robot/R = loc
 	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Normal", "Droid" ))
 	if(!borg_icon)
@@ -927,7 +927,7 @@
 	hat_offset = -4
 	canDispose = TRUE
 
-/obj/item/robot_module/miner/be_transformed_to(obj/item/robot_module/old_module)
+/obj/item/robot_module/saboteur/be_transformed_to(obj/item/robot_module/old_module)
 	var/mob/living/silicon/robot/R = loc
 	var/borg_icon = input(R, "Select an icon!", "Robot Icon", null) as null|anything in sortList(list("Kodiak", "Normal" ))
 	if(!borg_icon)
