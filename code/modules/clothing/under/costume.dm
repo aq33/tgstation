@@ -256,7 +256,6 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|FEET|HANDS
 	cold_protection = CHEST|GROIN|ARMS|LEGS|FEET|HANDS
 	fitted = FEMALE_UNIFORM_TOP
-	alternate_worn_layer = GLOVES_LAYER //covers hands but gloves can go over it. This is how these things work in my head.
 	can_adjust = FALSE
 
 /obj/item/clothing/under/costume/mech_suit/white
