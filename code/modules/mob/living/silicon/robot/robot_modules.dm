@@ -463,7 +463,7 @@
 		if("Sleek Security")
 			cyborg_base_icon = "sleekecurity"
 		if("Noble Security")
-			cyborg_base_icon = "oble-sec"
+			cyborg_base_icon = "noble-sec"
 		if("Ancient Security")
 			cyborg_base_icon = "secbot"
 		if("Servbot")
