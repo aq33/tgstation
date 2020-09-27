@@ -11,6 +11,10 @@
 "d" = (
 /turf/closed/mineral/random/high_chance,
 /area/ruin/unpowered/no_grav)
+"I" = (
+/obj/machinery/bluespace_beacon,
+/turf/closed/mineral/random/high_chance,
+/area/ruin/unpowered/no_grav)
 
 (1,1,1) = {"
 a
@@ -222,7 +226,7 @@ c
 c
 d
 d
-d
+I
 d
 d
 c

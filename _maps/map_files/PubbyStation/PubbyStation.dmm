@@ -5123,6 +5123,8 @@
 "anc" = (
 /obj/structure/table/wood,
 /obj/machinery/recharger,
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel,
 /area/security/main)
 "and" = (
@@ -8096,6 +8098,7 @@
 	icon_state = "arrows_red";
 	pixel_x = -5
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "auC" = (
@@ -8109,6 +8112,7 @@
 	icon_state = "arrows_red";
 	pixel_x = -5
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "auD" = (
@@ -18768,6 +18772,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "aUq" = (
@@ -20752,6 +20757,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/bot,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aYA" = (
@@ -22838,11 +22844,11 @@
 "bdp" = (
 /obj/structure/table,
 /obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/food/snacks/grown/tomato,
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "bdq" = (
-/obj/structure/table,
-/obj/item/reagent_containers/food/snacks/grown/tomato,
+/obj/machinery/grill,
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "bdr" = (
@@ -25853,6 +25859,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "blp" = (
@@ -29674,6 +29681,8 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
 "btY" = (
@@ -29787,6 +29796,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/tile/blue,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "buj" = (
@@ -31057,6 +31067,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/white,
 /area/science/lab)
 "bxh" = (
@@ -31226,6 +31237,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/dark,
 /area/science/explab)
 "bxv" = (
@@ -35723,6 +35735,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
+/obj/machinery/research/explosive_compressor,
 /turf/open/floor/plasteel/white,
 /area/science/mixing/chamber)
 "bGt" = (
@@ -39417,7 +39430,7 @@
 /turf/open/floor/engine/n2o,
 /area/engine/atmos)
 "bQa" = (
-/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
+/obj/machinery/atmospherics/miner/n2o,
 /turf/open/floor/engine/n2o,
 /area/engine/atmos)
 "bQb" = (
@@ -40753,7 +40766,7 @@
 /turf/open/floor/engine/plasma,
 /area/engine/atmos)
 "bSX" = (
-/obj/machinery/portable_atmospherics/canister/toxins,
+/obj/machinery/atmospherics/miner/toxins,
 /turf/open/floor/engine/plasma,
 /area/engine/atmos)
 "bSY" = (
@@ -42196,7 +42209,7 @@
 /turf/open/floor/engine/co2,
 /area/engine/atmos)
 "bWf" = (
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/machinery/atmospherics/miner/carbon_dioxide,
 /turf/open/floor/engine/co2,
 /area/engine/atmos)
 "bWg" = (
@@ -43055,6 +43068,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "bYo" = (
@@ -44150,6 +44164,8 @@
 /obj/structure/table,
 /obj/item/storage/belt/utility,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cbo" = (
@@ -44178,14 +44194,14 @@
 /turf/open/floor/engine/n2,
 /area/engine/atmos)
 "cbt" = (
-/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/machinery/atmospherics/miner/nitrogen,
 /turf/open/floor/engine/n2,
 /area/engine/atmos)
 "cbu" = (
 /turf/open/floor/engine/o2,
 /area/engine/atmos)
 "cbv" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/atmospherics/miner/oxygen,
 /turf/open/floor/engine/o2,
 /area/engine/atmos)
 "cbw" = (
@@ -51163,6 +51179,11 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/science)
+"dWb" = (
+/obj/structure/cable,
+/obj/machinery/chem_dispenser,
+/turf/open/floor/plasteel/white,
+/area/science/mixing)
 "dWk" = (
 /obj/machinery/door/airlock{
 	id_tag = "PottySci";
@@ -55566,6 +55587,8 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel/white,
 /area/science/lab)
 "meF" = (
@@ -56843,6 +56866,8 @@
 	dir = 4;
 	pixel_x = 11
 	},
+/obj/machinery/power/battery,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "oAW" = (
@@ -60366,6 +60391,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "vKD" = (
@@ -102775,7 +102801,7 @@ bzd
 wnJ
 bBM
 ylb
-bDX
+dWb
 bFi
 bGo
 bHy

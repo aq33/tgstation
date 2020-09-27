@@ -4820,6 +4820,7 @@
 	name = "Emergency Research Blast Door"
 	},
 /obj/effect/turf_decal/caution/stand_clear,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/dark,
 /area/science/research)
 "ajM" = (
@@ -12916,6 +12917,8 @@
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/pen,
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel,
 /area/security/main)
 "aAb" = (
@@ -20745,6 +20748,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
 	},
+/obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/mixing)
 "aPp" = (
@@ -20794,6 +20798,8 @@
 	pixel_x = 8;
 	pixel_y = 6
 	},
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel/dark,
 /area/engine/break_room)
 "aPt" = (
@@ -22801,6 +22807,8 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/storage)
 "aSF" = (
@@ -26806,6 +26814,7 @@
 	},
 /obj/item/storage/toolbox/mechanical,
 /obj/item/hand_labeler,
+/obj/item/destTagger,
 /turf/open/floor/plasteel/dark,
 /area/science/lab)
 "aZq" = (
@@ -27491,6 +27500,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/purple,
+/obj/machinery/research/explosive_compressor,
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/mixing)
 "baB" = (
@@ -32774,6 +32784,7 @@
 /area/maintenance/starboard)
 "bke" = (
 /obj/effect/turf_decal/bot,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "bkf" = (
@@ -39033,6 +39044,13 @@
 "byz" = (
 /obj/structure/table,
 /obj/item/storage/bag/tray,
+/obj/item/book/manual/chef_recipes{
+	pixel_y = 2
+	},
+/obj/item/book/manual/chef_recipes{
+	pixel_x = -4;
+	pixel_y = 6
+	},
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "byA" = (
@@ -39285,14 +39303,7 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/central)
 "bzd" = (
-/obj/structure/table,
-/obj/item/book/manual/chef_recipes{
-	pixel_x = -4;
-	pixel_y = 6
-	},
-/obj/item/book/manual/chef_recipes{
-	pixel_y = 2
-	},
+/obj/machinery/grill,
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "bze" = (
@@ -42466,6 +42477,7 @@
 	icon_state = "pipe11-1"
 	},
 /obj/structure/cable,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "bEV" = (
@@ -42956,6 +42968,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "bFY" = (
@@ -60050,6 +60063,7 @@
 	pixel_y = 28
 	},
 /obj/effect/turf_decal/caution/stand_clear,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "ckH" = (
@@ -60984,6 +60998,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/caution/stand_clear,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "cmF" = (
@@ -63582,6 +63597,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/engine/break_room)
 "crE" = (
@@ -66879,6 +66895,8 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
+/obj/machinery/power/battery,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "cxs" = (
@@ -70993,6 +71011,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/storage)
+"egi" = (
+/obj/machinery/scanner_gate,
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/medbay/central)
 "ehY" = (
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
@@ -71066,6 +71088,17 @@
 	},
 /turf/open/floor/plating,
 /area/quartermaster/storage)
+"eRW" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8;
+	icon_state = "pipe11-1"
+	},
+/obj/machinery/scanner_gate,
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/medbay/central)
 "eYG" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -71644,6 +71677,12 @@
 	},
 /turf/open/floor/plating,
 /area/quartermaster/miningoffice)
+"trw" = (
+/obj/effect/turf_decal/bot,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/battery,
+/turf/open/floor/plasteel,
+/area/quartermaster/storage)
 "tux" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8;
@@ -94600,8 +94639,8 @@ bsU
 bsU
 aSy
 aCK
-aOV
-aQq
+egi
+eRW
 aMP
 aSN
 aNn
@@ -111069,7 +111108,7 @@ bEY
 bnq
 bHi
 bIo
-bHi
+trw
 bKN
 bMi
 bNw
