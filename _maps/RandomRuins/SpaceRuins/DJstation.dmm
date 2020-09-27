@@ -250,6 +250,7 @@
 "aR" = (
 /obj/structure/table,
 /obj/item/paper/fluff/ruins/djstation,
+/obj/machinery/bluespace_beacon,
 /turf/open/floor/plasteel/cafeteria,
 /area/ruin/space/djstation)
 "aS" = (
