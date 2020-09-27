@@ -503,6 +503,9 @@
 /obj/item/folder/white,
 /obj/item/wrench/medical,
 /obj/item/toy/figure/cmo,
+/obj/machinery/photocopier/faxmachine{
+	department = "Chief Medical Officer"
+	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/cmo)
 "abp" = (
@@ -8907,10 +8910,6 @@
 /turf/open/floor/plating,
 /area/maintenance/fore)
 "ary" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "Xenolab";
-	name = "Containment Chamber Blast Door"
-	},
 /obj/structure/sign/warning/electricshock{
 	pixel_x = -32
 	},
@@ -8919,6 +8918,10 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
+	name = "test chamber blast door"
+	},
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "arz" = (
@@ -11683,16 +11686,16 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/break_room)
 "axR" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "Xenolab";
-	name = "Containment Chamber Blast Door"
-	},
 /obj/machinery/atmospherics/pipe/simple/general/hidden,
 /obj/effect/turf_decal/caution/stand_clear,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
+	name = "test chamber blast door"
+	},
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "axS" = (
@@ -12133,10 +12136,6 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "ayL" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "Xenolab";
-	name = "Containment Chamber Blast Door"
-	},
 /obj/structure/sign/warning/biohazard{
 	pixel_x = 32
 	},
@@ -12145,6 +12144,10 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/poddoor{
+	id = "Xenolab";
+	name = "test chamber blast door"
+	},
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "ayM" = (
@@ -12616,6 +12619,7 @@
 "azC" = (
 /obj/item/storage/fancy/donut_box,
 /obj/structure/table/wood,
+/obj/item/phone/real,
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/captain)
 "azD" = (
@@ -19439,6 +19443,9 @@
 	pixel_x = 8
 	},
 /obj/item/pen,
+/obj/machinery/photocopier/faxmachine{
+	department = "Research Director"
+	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hor)
 "aMO" = (
@@ -21479,6 +21486,9 @@
 	},
 /obj/item/folder,
 /obj/item/stamp/ce,
+/obj/machinery/photocopier/faxmachine{
+	department = "Chief Engineer"
+	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/chief)
 "aQy" = (
@@ -31955,6 +31965,9 @@
 /obj/item/cartridge/quartermaster,
 /obj/item/cartridge/quartermaster,
 /obj/item/cartridge/quartermaster,
+/obj/machinery/photocopier/faxmachine{
+	department = "Quartermaster"
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
 "biJ" = (
@@ -39792,6 +39805,9 @@
 	dir = 8;
 	name = "bar camera"
 	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Library"
+	},
 /turf/open/floor/carpet/green,
 /area/library)
 "bzZ" = (
@@ -42283,6 +42299,9 @@
 	},
 /obj/item/healthanalyzer,
 /obj/item/hand_labeler,
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "Bridge"
+	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "bEI" = (
@@ -47067,6 +47086,9 @@
 /obj/item/melee/chainofcommand,
 /obj/item/toy/figure/captain,
 /obj/structure/table/wood,
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "Captain"
+	},
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/captain)
 "bNf" = (
@@ -47620,6 +47642,9 @@
 /obj/item/hand_labeler,
 /obj/machinery/keycard_auth{
 	pixel_y = 24
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Head of Personnel"
 	},
 /turf/open/floor/carpet/blue,
 /area/crew_quarters/heads/hop)
@@ -58487,9 +58512,6 @@
 	dir = 1
 	},
 /obj/machinery/light,
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-21"
-	},
 /obj/structure/sign/warning/electricshock{
 	pixel_y = -32
 	},
@@ -58497,6 +58519,9 @@
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+	},
+/obj/machinery/power/treadmill{
+	anchored = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
@@ -65959,6 +65984,9 @@
 	pixel_y = 4
 	},
 /obj/item/stamp/hos,
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "Head of Security"
+	},
 /turf/open/floor/carpet/red,
 /area/crew_quarters/heads/hos)
 "cvP" = (
@@ -67768,6 +67796,7 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "czF" = (
+/obj/structure/closet/crate/large/shuttlekit,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
