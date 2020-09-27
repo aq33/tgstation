@@ -383,8 +383,8 @@
 
 /obj/item/gun/energy/alien
 	name = "pistolet obcych"
-	desc = "Skomplikowany pistolet strzelający seriami promieniowania o dużej intensywności."
-	ammo_type = list(/obj/item/ammo_casing/energy/declone)
+	desc = "Skomplikowany pistolet strzelający seriami promieniowania, zaburzenia elektromagnetycznego lub zamrażającymi strzałami."
+	ammo_type = list(/obj/item/ammo_casing/energy/declone, /obj/item/ammo_casing/energy/ion, /obj/item/ammo_casing/energy/temp)
 	pin = /obj/item/firing_pin/abductor
 	icon_state = "alienpistol"
 	item_state = "alienpistol"
@@ -393,6 +393,7 @@
 /obj/item/paper/guides/antag/abductor
 	name = "Dysekcja - Poradnik"
 	icon_state = "alienpaper_words"
+	show_written_words = FALSE
 	info = {"<b>Dysekcja dla Początkujących</b><br>
 
 <br>
@@ -504,7 +505,11 @@ Gratulacje! Jesteś teraz wyszkolony do inwazyjnych badań ksenobiologicznych!"}
 
 	L.lastattacker = user.real_name
 	L.lastattackerckey = user.ckey
-
+	if(istype(L.get_item_by_slot(SLOT_HEAD), /obj/item/clothing/head/foilhat))
+		to_chat(user, "<span class='warning'>The specimen's protective headgear is interfering with the baton's stun function!</span>")
+		L.visible_message("<span class='danger'>[user] tried to stun [L] with [src], but [L.p_their()] headgear protected [L.p_them()]!</span>", \
+								"<span class='userdanger'>You feel a slight tickle where [src] touches you!</span>")
+		return
 	L.Paralyze(140)
 	L.apply_effect(EFFECT_STUTTER, 7)
 	SEND_SIGNAL(L, COMSIG_LIVING_MINOR_SHOCK)
@@ -715,6 +720,7 @@ Gratulacje! Jesteś teraz wyszkolony do inwazyjnych badań ksenobiologicznych!"}
 	desc = "Porywaj ze stylem - spiczastym stylem. Zapobiega śledzeniu przez kamery."
 	icon_state = "alienhelmet"
 	item_state = "alienhelmet"
+	flash_protect = 1
 	blockTracking = TRUE
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 

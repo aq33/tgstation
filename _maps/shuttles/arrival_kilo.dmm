@@ -16,6 +16,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/arrival)
 "e" = (
