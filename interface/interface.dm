@@ -259,11 +259,8 @@ Any-Mode: (hotkey doesn't need to be on)
 	var/map_in_url
 	switch(SSmapping.config?.map_name)
 		if("Box Station")			map_in_url = "box"
-		if("Delta Station")			map_in_url = "delta"
-		if("Donutstation")			map_in_url = "donut"
 		if("MetaStation")			map_in_url = "meta"
 		if("Kilo Station")          map_in_url = "kilo"
-		if("PubbyStation")          map_in_url = "pubby"
 	if(map_in_url)
 		if(alert("This will open the current map in your browser. Are you sure?",,"Yes","No")!="Yes")
 			return
