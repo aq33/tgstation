@@ -207,7 +207,7 @@
 	//Too little toxins!
 	if(safe_toxins_min)
 		if(Toxins_pp < safe_toxins_min)
-			gas_breathed = handle_too_little_breath(H, Toxins_pp, safe_toxins_min, breath.get_moles(/datum/gas/plasma))
+			gas_breathed = handle_too_little_breath(H, Toxins_pp, safe_toxins_min, (breath.get_moles(/datum/gas/plasma)))
 			H.throw_alert("not_enough_tox", /obj/screen/alert/not_enough_tox)
 		else
 			H.failed_last_breath = FALSE
@@ -335,8 +335,8 @@
 			SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "smell")
 
 		handle_breath_temperature(breath, H)
-	return TRUE
 
+	return TRUE
 
 /obj/item/organ/lungs/proc/handle_too_little_breath(mob/living/carbon/human/H = null, breath_pp = 0, safe_breath_min = 0, true_pp = 0)
 	. = 0
