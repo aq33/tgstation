@@ -2024,7 +2024,7 @@
 						dat += sanitize(jobs.Join(", "))
 						dat += "<br>"
 					dat += "<hr>"
-					
+
 		var/datum/browser/popup = new(usr, "centcomlookup-[ckey]", "<div align='center'>Central Command Galactic Ban Database</div>", 700, 600)
 		popup.set_content(dat.Join())
 		popup.open(FALSE)
@@ -2282,7 +2282,7 @@
 
 		var/obj/item/pen/admin_writer = new /obj/item/pen(null)
 
-		input_text = P.parsepencode(input_text, admin_writer, usr) // Encode everything from pencode to html
+		//input_text = P.parsepencode(input_text, admin_writer, usr) // Encode everything from pencode to html
 		qdel(admin_writer)
 
 		var/customname = input(src.owner, "Pick a title for the fax.", "Fax Title") as text|null
