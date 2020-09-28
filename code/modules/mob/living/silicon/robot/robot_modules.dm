@@ -232,6 +232,7 @@
 	name = "Standard"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
+		/obj/item/melee/baton/loaded,
 		/obj/item/reagent_containers/borghypo/epi,
 		/obj/item/healthanalyzer,
 		/obj/item/borg/charger,
@@ -351,6 +352,7 @@
 /obj/item/robot_module/engineering
 	name = "Engineering"
 	basic_modules = list(
+		/obj/item/borg/cyborghug,
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/borg/sight/meson,
 		/obj/item/borg/charger,
@@ -447,7 +449,8 @@
 		/obj/item/borg/charger,
 		/obj/item/gun/energy/disabler/cyborg,
 		/obj/item/clothing/mask/gas/sechailer/cyborg,
-		/obj/item/extinguisher/mini)
+		/obj/item/extinguisher/mini,
+		/obj/item/borg/cyborghug)
 	emag_modules = list(/obj/item/gun/energy/laser/cyborg)
 	cyborg_base_icon = "sec"
 	moduleselect_icon = "security"
@@ -568,6 +571,7 @@
 		/obj/item/paint/paint_remover,
 		/obj/item/lightreplacer/cyborg,
 		/obj/item/holosign_creator/janibarrier,
+		/obj/item/borg/cyborghug,
 		/obj/item/reagent_containers/spray/cyborg_drying)
 	emag_modules = list(/obj/item/reagent_containers/spray/cyborg_lube)
 	cyborg_base_icon = "janitor"
@@ -668,6 +672,7 @@
 		/obj/item/reagent_containers/food/drinks/drinkingglass,
 		/obj/item/reagent_containers/food/condiment/enzyme,
 		/obj/item/pen,
+		/obj/item/borg/cyborghug,
 		/obj/item/toy/crayon/spraycan/borg,
 		/obj/item/extinguisher/mini,
 		/obj/item/hand_labeler/borg,
@@ -745,6 +750,7 @@
 	name = "Miner"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
+		/obj/item/borg/cyborghug,
 		/obj/item/borg/sight/meson,
 		/obj/item/storage/bag/ore/cyborg,
 		/obj/item/pickaxe/drill/cyborg,

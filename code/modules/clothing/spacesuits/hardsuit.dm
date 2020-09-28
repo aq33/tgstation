@@ -597,11 +597,33 @@
 	name = "captain's hardsuit helmet"
 	icon_state = "capspace"
 	item_state = "capspacehelmet"
-	desc = "A tactical MK.II SWAT helmet boasting better protection and a horrible fashion sense."
+	desc = "An custom tactical helmet boasting better protection and a horrible fashion sense."
+	var/obj/machinery/doppler_array/integrated/bomb_radar
+	visor_flags_inv = HIDEMASK|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
+
+/obj/item/clothing/head/helmet/space/hardsuit/swat/captain/Initialize()
+	. = ..()
+	bomb_radar = new /obj/machinery/doppler_array/integrated(src)
+
+/obj/item/clothing/head/helmet/space/hardsuit/swat/captain/equipped(mob/living/carbon/human/user, slot)
+	..()
+	if (slot == SLOT_HEAD)
+		var/datum/atom_hud/DHUD = GLOB.huds[DATA_HUD_SECURITY_ADVANCED]
+		DHUD.add_hud_to(user)
+
+/obj/item/clothing/head/helmet/space/hardsuit/swat/captain/dropped(mob/living/carbon/human/user)
+	..()
+	if (user.head == src)
+		var/datum/atom_hud/DHUD = GLOB.huds[DATA_HUD_SECURITY_ADVANCED]
+		DHUD.remove_hud_from(user)
+
+/obj/item/clothing/head/helmet/space/hardsuit/swat/captain/emp_act(severity)
+	. = ..()
+	display_visor_message("[severity > 1 ? "Light" : "Strong"] electromagnetic pulse detected!")
 
 /obj/item/clothing/suit/space/hardsuit/swat/captain
 	name = "captain's SWAT suit"
-	desc = "A MK.II SWAT suit with streamlined joints and armor made out of superior materials, insulated against intense heat. The most advanced tactical armor available. Usually reserved for heavy hitter corporate security, this one has a regal finish in Nanotrasen company colors. Better not let the assistants get a hold of it."
+	desc = "Spaceproofed plate armor suit with streamlined joints, made out of superior materials, insulated against intense heat. The most advanced tactical armor available. Usually reserved for heavy hitter corporate security, this one has a regal finish in Nanotrasen company colors. Better not let the assistants get a hold of it."
 	icon_state = "caparmor"
 	item_state = "capspacesuit"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/swat/captain
@@ -894,7 +916,7 @@
 	icon_state = "hardsuit0-clown"
 	item_state = "hardsuit0-clown"
 	item_color = "clown"
-	
+
 
 // Doomguy ERT version
 /obj/item/clothing/suit/space/hardsuit/shielded/doomguy
