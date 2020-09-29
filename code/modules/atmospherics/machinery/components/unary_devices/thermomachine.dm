@@ -218,7 +218,6 @@
 	if(!can_interact(user))
 		return
 	target_temperature = min_temperature
-	to_chat(user, "<span class='notice'>You minimize the target temperature on [src].</span>")
 
 /obj/machinery/atmospherics/components/unary/thermomachine/heater
 	name = "heater"
@@ -245,4 +244,3 @@
 	if(!can_interact(user))
 		return
 	target_temperature = max_temperature
-	to_chat(user, "<span class='notice'>You maximize the target temperature on [src].</span>")

@@ -124,9 +124,7 @@
 					/obj/item/clothing/shoes/sneakers/black = 3,
 					/obj/item/clothing/gloves/fingerless = 3,
 					/obj/item/clothing/head/soft = 3,
-					/obj/item/radio/headset/headset_cargo = 3,
-					/obj/item/clothing/head/mailman = 2,
-					/obj/item/clothing/under/misc/mailman = 2)
+					/obj/item/radio/headset/headset_cargo = 3)
 	premium = list(/obj/item/clothing/under/rank/cargo/miner = 3)
 	refill_canister = /obj/item/vending_refill/wardrobe/cargo_wardrobe
 	payment_department = ACCOUNT_CAR
