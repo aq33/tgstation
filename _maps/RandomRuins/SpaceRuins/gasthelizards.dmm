@@ -293,6 +293,7 @@
 "K" = (
 /obj/structure/table,
 /obj/item/pen/red,
+/obj/machinery/bluespace_beacon,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/gasthelizard)
 "L" = (

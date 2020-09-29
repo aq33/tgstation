@@ -7,7 +7,6 @@ GLOBAL_LIST_EMPTY(alldepartments)
 	name = "fax machine"
 	icon = 'icons/obj/library.dmi'
 	icon_state = "fax"
-	insert_anim = "faxsend"
 	density = FALSE
 	pixel_y = 4
 	var/print_anim = "faxreceive"
@@ -42,7 +41,6 @@ GLOBAL_LIST_EMPTY(alldepartments)
 	fax_network = "Central Command Quantum Entanglement Network"
 	long_range_enabled = TRUE
 	icon_state = "longfax"
-	insert_anim = "longfaxsend"
 	print_anim = "longfaxreceive"
 
 /obj/machinery/photocopier/faxmachine/attack_hand(mob/user)

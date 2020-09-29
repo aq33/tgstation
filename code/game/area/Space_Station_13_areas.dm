@@ -80,7 +80,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	valid_territory = FALSE
 	mood_bonus = -1
 	mood_message = "<span class='nicegreen'>It's kind of cramped in here!\n</span>"
-
+	lighting_colour_tube = "#ffe5cb"
+	lighting_colour_bulb = "#ffdbb4"
 
 //Departments
 
@@ -247,6 +248,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 //Hallway
 
+/area/hallway
+	lighting_colour_tube = "#fdf3ea"
+	lighting_colour_bulb = "#ffebd6"
+
 /area/hallway/primary/aft
 	name = "Dolny Główny Korytarz"
 	icon_state = "hallA"
@@ -345,6 +350,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/comms
 	name = "Radiowęzeł"
 	icon_state = "tcomsatcham"
+	lighting_colour_tube = "#e2feff"
+	lighting_colour_bulb = "#d5fcff"
 
 /area/server
 	name = "Serwerownia Systemu Wiadmości"
@@ -358,11 +365,15 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	safe = TRUE
 	mood_bonus = 3
 	mood_message = "<span class='nicegreen'>There's no place like the dorms!\n</span>"
+	lighting_colour_tube = "#fff4d6"
+	lighting_colour_bulb = "#ffebc1"
 
 /area/crew_quarters/cryopods
 	name = "Cryopod Room"
 	safe = TRUE
 	icon_state = "cryopod"
+	lighting_colour_tube = "#e3ffff"
+	lighting_colour_bulb = "#d5ffff"
 
 /area/crew_quarters/dorms/barracks
 	name = "Sypialnie"
@@ -378,6 +389,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/crew_quarters/toilet
 	name = "Sala Sypialna Toaleta"
 	icon_state = "toilet"
+	lighting_colour_tube = "#e3ffff"
+	lighting_colour_bulb = "#d5ffff"
 
 /area/crew_quarters/toilet/auxiliary
 	name = "Dodatkowa Toaleta"
@@ -431,6 +444,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/crew_quarters/kitchen
 	name = "Kuchnia"
 	icon_state = "kitchen"
+	lighting_colour_tube = "#e3ffff"
+	lighting_colour_bulb = "#d5ffff"
 
 /area/crew_quarters/kitchen/coldroom
 	name = "Kuchnia Chłodnia"
@@ -440,6 +455,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Bar"
 	icon_state = "bar"
 	mood_bonus = 5
+	lighting_colour_tube = "#fff4d6"
+	lighting_colour_bulb = "#ffebc1"
 	mood_message = "<span class='nicegreen'>Kocham przesiadywać w barze!\n</span>"
 
 /area/crew_quarters/bar/atrium
@@ -469,6 +486,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Biblioteka"
 	icon_state = "library"
 	flags_1 = NONE
+	lighting_colour_tube = "#fff1cc"
+	lighting_colour_bulb = "#ffe9b9"
 
 /area/library/lounge
 	name = "Biblioteka Hol"
@@ -536,6 +555,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/engine
 	ambientsounds = ENGINEERING
+	lighting_colour_tube = "#ffce93"
+	lighting_colour_bulb = "#ffbc6f"
 
 /area/engine/engine_smes
 	name = "Inżynieria SMES"
@@ -701,8 +722,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "medbay1"
 	ambientsounds = MEDICAL
 	mood_bonus = 2
+	mood_message = "<span class='nicegreen'>I feel safe in here!\n</span>"
+	lighting_colour_tube = "#e7f8ff"
+	lighting_colour_bulb = "#d5f2ff"
 	mood_message = "<span class='nicegreen'>Czuję się tutaj bezpiecznie!\n</span>"
-
 
 /area/medical/abandoned
 	name = "Opuszczony Szpital"
@@ -831,6 +854,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Ochrona"
 	icon_state = "security"
 	ambientsounds = HIGHSEC
+	lighting_colour_tube = "#ffeee2"
+	lighting_colour_bulb = "#ffdfca"
 
 /area/security/main
 	name = "Biuro Ochrony"
@@ -984,6 +1009,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/quartermaster
 	name = "Kwatermistrza"
 	icon_state = "quart"
+	lighting_colour_tube = "#ffe3cc"
+	lighting_colour_bulb = "#ffdbb8"
 
 /area/quartermaster/sorting
 	name = "Biuro Pocztowe"
@@ -1054,7 +1081,9 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/science
 	name = "Wydział Badawczy"
-	icon_state = "science"
+	icon_state = "toxlab"
+	lighting_colour_tube = "#f0fbff"
+	lighting_colour_bulb = "#e4f7ff"
 
 /area/science/lab
 	name = "Badania i Rozwój"

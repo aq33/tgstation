@@ -93,6 +93,7 @@
 
 	var/do_footstep = FALSE
 
+	var/special_process = FALSE
 	var/should_talk = TRUE //Should it be able to talk?
 	var/playable = TRUE //Should we allow ghosts to control this mob?
 

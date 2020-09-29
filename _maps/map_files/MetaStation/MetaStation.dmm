@@ -7195,6 +7195,8 @@
 	pixel_x = -3;
 	pixel_y = 7
 	},
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel,
 /area/security/main)
 "anC" = (
@@ -13158,6 +13160,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "azJ" = (
@@ -13184,6 +13187,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "azL" = (
@@ -19611,6 +19615,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aNI" = (
@@ -19627,6 +19632,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/bot,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aNK" = (
@@ -28913,6 +28919,7 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "bgT" = (
@@ -31079,6 +31086,7 @@
 	dir = 9
 	},
 /obj/structure/cable,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/engine/break_room)
 "bln" = (
@@ -35836,6 +35844,8 @@
 /obj/item/stack/sheet/mineral/copper{
 	amount = 5
 	},
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel/dark/corner,
 /area/engine/storage_shared)
 "bvi" = (
@@ -42670,9 +42680,7 @@
 /turf/open/floor/engine/n2o,
 /area/engine/atmos)
 "bKI" = (
-/obj/machinery/portable_atmospherics/canister/nitrous_oxide{
-	valve_open = 1
-	},
+/obj/machinery/atmospherics/miner/n2o,
 /turf/open/floor/engine/n2o,
 /area/engine/atmos)
 "bKJ" = (
@@ -44531,6 +44539,13 @@
 /area/crew_quarters/kitchen)
 "bOS" = (
 /obj/structure/table,
+/obj/item/kitchen/rollingpin,
+/obj/item/reagent_containers/food/condiment/peppermill{
+	pixel_x = 3
+	},
+/obj/item/reagent_containers/food/condiment/saltshaker{
+	pixel_x = -3
+	},
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
@@ -45340,7 +45355,7 @@
 /turf/open/floor/engine/plasma,
 /area/engine/atmos)
 "bQY" = (
-/obj/machinery/portable_atmospherics/canister/toxins,
+/obj/machinery/atmospherics/miner/toxins,
 /turf/open/floor/engine/plasma,
 /area/engine/atmos)
 "bQZ" = (
@@ -45694,18 +45709,11 @@
 	},
 /area/crew_quarters/kitchen)
 "bRS" = (
-/obj/structure/table,
-/obj/item/reagent_containers/food/condiment/saltshaker{
-	pixel_x = -3
-	},
-/obj/item/reagent_containers/food/condiment/peppermill{
-	pixel_x = 3
-	},
-/obj/item/kitchen/rollingpin,
 /obj/machinery/camera{
 	c_tag = "Kitchen";
 	dir = 1
 	},
+/obj/machinery/grill,
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "bRT" = (
@@ -47432,7 +47440,7 @@
 /turf/open/floor/engine/co2,
 /area/engine/atmos)
 "bVO" = (
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/machinery/atmospherics/miner/carbon_dioxide,
 /turf/open/floor/engine/co2,
 /area/engine/atmos)
 "bVP" = (
@@ -51727,6 +51735,8 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/stack/packageWrap,
+/obj/item/destTagger,
 /turf/open/floor/plasteel/dark,
 /area/medical/sleeper)
 "cfL" = (
@@ -52035,6 +52045,7 @@
 	name = "biohazard containment door"
 	},
 /obj/effect/turf_decal/delivery,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/science/research)
 "cgi" = (
@@ -52045,6 +52056,7 @@
 	name = "biohazard containment door"
 	},
 /obj/effect/turf_decal/delivery,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel,
 /area/science/research)
 "cgj" = (
@@ -53047,6 +53059,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "cip" = (
@@ -53425,7 +53438,7 @@
 /turf/open/floor/engine/n2,
 /area/engine/atmos)
 "cjd" = (
-/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/machinery/atmospherics/miner/nitrogen,
 /turf/open/floor/engine/n2,
 /area/engine/atmos)
 "cje" = (
@@ -53439,7 +53452,7 @@
 /turf/open/floor/engine/o2,
 /area/engine/atmos)
 "cjg" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/atmospherics/miner/oxygen,
 /turf/open/floor/engine/o2,
 /area/engine/atmos)
 "cjh" = (
@@ -54187,6 +54200,7 @@
 /area/medical/medbay/central)
 "cln" = (
 /obj/effect/turf_decal/tile/blue,
+/obj/machinery/scanner_gate,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "clo" = (
@@ -54760,6 +54774,8 @@
 	pixel_y = 6
 	},
 /obj/structure/table,
+/obj/item/destTagger,
+/obj/item/stack/packageWrap,
 /turf/open/floor/plasteel/white,
 /area/science/lab)
 "cmH" = (
@@ -56855,6 +56871,7 @@
 	network = list("ss13","rd")
 	},
 /obj/machinery/light,
+/obj/machinery/research/explosive_compressor,
 /turf/open/floor/plasteel/white,
 /area/science/explab)
 "cqT" = (
@@ -62358,6 +62375,7 @@
 	dir = 5
 	},
 /obj/structure/cable,
+/obj/structure/chair/stool,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "cCA" = (
@@ -62700,6 +62718,7 @@
 	dir = 4;
 	pixel_x = -24
 	},
+/obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel/white,
 /area/science/mixing/chamber)
 "cDn" = (
@@ -78026,6 +78045,8 @@
 	},
 /obj/effect/turf_decal/tile/yellow,
 /obj/structure/table/reinforced,
+/obj/machinery/power/battery,
+/obj/machinery/power/battery,
 /turf/open/floor/plasteel/dark/corner{
 	dir = 8
 	},
@@ -78399,6 +78420,14 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+"wXn" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/scanner_gate,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
 "wYz" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -102254,7 +102283,7 @@ cez
 cfP
 bXK
 cio
-cjO
+wXn
 cln
 cmu
 cnC

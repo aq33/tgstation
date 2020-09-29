@@ -167,6 +167,7 @@
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/glass/bottle/random_virus,
 /obj/item/reagent_containers/dropper,
+/obj/machinery/bluespace_beacon,
 /turf/open/floor/plasteel/dark/side,
 /area/ruin/space/has_grav/abandonedzoo)
 "aQ" = (
