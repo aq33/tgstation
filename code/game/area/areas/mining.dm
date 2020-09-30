@@ -67,10 +67,6 @@
 /area/mine/sleeper
 	name = "Mining Station Emergency Sleeper"
 
-/area/mine/mechbay
-	name = "Mining Station Mech Bay"
-	icon_state = "mechbay"
-
 /area/mine/laborcamp
 	name = "Labor Camp"
 

@@ -15,10 +15,6 @@
 	armor = list("melee" = 30, "bullet" = 50, "laser" = 50, "energy" = 100, "bomb" = 100, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 80)
 	anchored = TRUE //So it cant slide around after landing
 	anchorable = FALSE
-
-	///List of bitflags for supply pods, see: code\__DEFINES\obj_flags.dm
-	var/pod_flags = NONE
-
 	//*****NOTE*****: Many of these comments are similarly described in centcom_podlauncher.dm. If you change them here, please consider doing so in the centcom podlauncher code as well!
 	var/adminNamed = FALSE //Determines whether or not the pod has been named by an admin. If true, the pod's name will not get overridden when the style of the pod changes (changing the style of the pod normally also changes the name+desc)
 	var/bluespace = FALSE //If true, the pod deletes (in a shower of sparks) after landing
@@ -169,9 +165,7 @@
 		bluespace = TRUE //Make it so that the pod doesn't stay in centcom forever
 
 		QDEL_IN(risingPod, 10)
-		pod_flags |= FIRST_SOUNDS //Make it so we play sounds now
-		if (!effectQuiet && style != STYLE_SEETHROUGH)
-			audible_message("<span class='notice'>The pod hisses, closing and launching itself away from the station.</span>", "<span class='notice'>The ground vibrates, and you hear the sound of engines firing.</span>")
+		audible_message("<span class='notice'>The pod hisses, closing quickly and launching itself away from the station.</span>", "<span class='notice'>The ground vibrates, the nearby pod launching away from the station.</span>")
 
 		stay_after_drop = FALSE
 		specialisedPod(holder) // Do special actions for specialised pods - this is likely if we were already doing manual launches
@@ -212,7 +206,7 @@
 	var/explosion_sum = B[1] + B[2] + B[3] + B[4]
 	if (explosion_sum != 0) //If the explosion list isn't all zeroes, call an explosion
 		explosion(get_turf(src), B[1], B[2], B[3], flame_range = B[4], silent = effectQuiet, ignorecap = istype(src, /obj/structure/closet/supplypod/centcompod)) //less advanced equipment than bluespace pod, so larger explosion when landing
-	else if (!effectQuiet && (pod_flags & FIRST_SOUNDS)) //If our explosion list IS all zeroes, we still make a nice explosion sound (unless the effectQuiet var is true)
+	else if (!effectQuiet) //If our explosion list IS all zeroes, we still make a nice explosion sound (unless the effectQuiet var is true)
 		playsound(src, "explosion", landingSound ? 15 : 80, 1)
 	if (effectMissile) //If we are acting like a missile, then right after we land and finish fucking shit up w explosions, we should delete
 		opened = TRUE //We set opened to TRUE to avoid spending time trying to open (due to being deleted) during the Destroy() proc
@@ -361,7 +355,7 @@
 	var/soundStartTime = pod.landingDelay - pod.fallingSoundLength + pod.fallDuration
 	if (soundStartTime < 0)
 		soundStartTime = 1
-	if (!pod.effectQuiet && (pod.pod_flags & FIRST_SOUNDS))
+	if (!pod.effectQuiet)
 		addtimer(CALLBACK(src, .proc/playFallingSound), soundStartTime)
 	addtimer(CALLBACK(src, .proc/beginLaunch, pod.effectCircle), pod.landingDelay)
 

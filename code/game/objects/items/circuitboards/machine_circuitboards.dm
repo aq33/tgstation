@@ -892,12 +892,6 @@
 	name = "Departmental Protolathe (Machine Board) - Science"
 	build_path = /obj/machinery/rnd/production/protolathe/department/science
 
-/obj/item/circuitboard/machine/mechpad
-	name = "Mecha Orbital Pad (Machine Board)"
-	icon_state = "science"
-	build_path = /obj/machinery/mechpad
-	req_components = list()
-
 /obj/item/circuitboard/machine/protolathe/department/security
 	name = "Departmental Protolathe (Machine Board) - Security"
 	build_path = /obj/machinery/rnd/production/protolathe/department/security
