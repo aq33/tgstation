@@ -35,6 +35,7 @@
 	var/cooldowntime = 50 //deciseconds
 	var/teleporting = 0
 	var/phase_timer_id
+	blocks_shove_knockdown = TRUE
 
 /obj/item/clothing/suit/space/chronos/Initialize()
 	teleport_now.chronosuit = src
