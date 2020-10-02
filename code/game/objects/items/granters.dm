@@ -324,14 +324,15 @@
 
 /obj/item/book/granter/spell/sexonbutton
 	name = "poorly-written fanfiction"
+	desc = "A book, seemingly describing an encounter between a notorious changeling and an infamous lizard, deep in the maintance tunnels of the station's robotics bay."
+	icon_state = "book8"
 	spell = /obj/effect/proc_holder/spell/targeted/touch/sex
 	spellname = "Sex on button"
-	desc = "A book, seemingly describing an encounter between a notorious changeling and an infamous lizard, deep in the maintance tunnels of the station's robotics bay."
 	remarks = list("Why did he put that proboscis there?", "Oh.", "Why is he holding a bottle of space lube?")
 	oneuse = FALSE
 
 /obj/item/book/granter/spell/sexonbutton/on_reading_start(mob/user)
-	to_chat(user, "<span class='notice'>You start reading the [src]...</span>")
+	to_chat(user, "<span class='notice'>You start reading \the [src]...</span>")
 
 /obj/item/book/granter/spell/sexonbutton/on_reading_finished(mob/user)
 	to_chat(user, "<span class='notice'>You feel like you want to try this whole \"sex\" thing.</span>")

@@ -197,8 +197,8 @@
 	desc = "Oh god, why."
 	catchphrase = null
 	on_use_sound = null
-	icon_state = "latexballoon"
-	item_state = "latexballoon"
+	icon_state = "disintegrate"
+	item_state = "disintegrate"
 	var/list/top_speech = list(
 		"UwU a to co?",
 		"Spokojnie, nie jestem lingiem",
@@ -220,10 +220,13 @@
 	)
 
 /obj/item/melee/touch_attack/sex/afterattack(atom/target, mob/living/carbon/user, proximity)
-	if(!proximity || !iscarbon(target) || !iscarbon(user) || user.handcuffed)
+	if(!proximity || !iscarbon(target) || !iscarbon(user) || user.handcuffed ||)
 		return
 
 	var/mob/living/carbon/M = target
+	if (!M.key)
+		to_chat(user, "<span class='notice'>Your partner needs to have a soul in order to procreate.</span>")
+		return
 
 	to_chat(user,"<span class='notice'>You ask [M] to have sex with you.</span>")
 	if(alert(M, "[user] wants to have sex with you. Do you accept?", "Sex on button","Yes", "No") == "No")
