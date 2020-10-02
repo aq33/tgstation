@@ -192,10 +192,8 @@
 	if(charges <= 0)
 		qdel(src)
 
-
-
 /obj/item/melee/touch_attack/sex
-	name = "\improper lewd touch"
+	name = "questionable touch"
 	desc = "Oh god, why."
 	catchphrase = null
 	on_use_sound = null
