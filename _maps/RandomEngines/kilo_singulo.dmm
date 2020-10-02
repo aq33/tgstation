@@ -6,7 +6,7 @@
 /obj/machinery/power/rad_collector/anchored,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "c" = (
 /obj/machinery/power/emitter/anchored{
 	dir = 8;
@@ -14,7 +14,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "d" = (
 /obj/structure/cable/layer1,
 /obj/structure/cable,
@@ -36,6 +36,10 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating,
 /area/engine/engineering)
+"h" = (
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/space/nearstation)
 "i" = (
 /obj/machinery/the_singularitygen,
 /turf/open/floor/plating,
@@ -48,7 +52,7 @@
 	upgrades = 2
 	},
 /turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "k" = (
 /obj/structure/particle_accelerator/particle_emitter/left,
 /obj/structure/cable,
@@ -91,6 +95,11 @@
 /obj/structure/particle_accelerator/fuel_chamber,
 /turf/open/floor/plating,
 /area/engine/engineering)
+"r" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/space/nearstation)
 "s" = (
 /obj/machinery/light{
 	dir = 1
@@ -143,6 +152,9 @@
 /obj/structure/cable,
 /turf/open/space/basic,
 /area/space/nearstation)
+"A" = (
+/turf/open/floor/plating,
+/area/space/nearstation)
 "B" = (
 /obj/structure/particle_accelerator/end_cap,
 /obj/effect/turf_decal/stripes/line{
@@ -157,7 +169,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "D" = (
 /turf/open/floor/plating,
 /area/engine/engineering)
@@ -169,13 +181,13 @@
 /obj/machinery/field/generator,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "H" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "I" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -217,13 +229,13 @@
 /obj/structure/cable/layer1,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "Q" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "R" = (
 /obj/structure/particle_accelerator/power_box,
 /turf/open/floor/plating,
@@ -314,7 +326,7 @@ D
 a
 a
 C
-D
+A
 b
 b
 b
@@ -330,14 +342,14 @@ D
 U
 a
 a
-D
-t
+A
+h
 F
 F
 u
 F
 F
-t
+h
 "}
 (4,1,1) = {"
 D
@@ -347,8 +359,8 @@ D
 D
 X
 o
-X
-X
+r
+r
 P
 z
 z
@@ -365,15 +377,15 @@ D
 D
 y
 a
-D
-D
-D
+A
+A
+A
 F
 F
 J
 F
 F
-D
+A
 "}
 (6,1,1) = {"
 D
@@ -383,7 +395,7 @@ Y
 k
 X
 M
-D
+A
 F
 F
 F
@@ -391,7 +403,7 @@ F
 J
 F
 F
-D
+A
 "}
 (7,1,1) = {"
 s
@@ -401,7 +413,7 @@ R
 g
 X
 M
-D
+A
 J
 J
 J
@@ -419,7 +431,7 @@ x
 O
 X
 M
-D
+A
 F
 F
 F
@@ -427,7 +439,7 @@ F
 J
 F
 F
-D
+A
 "}
 (9,1,1) = {"
 D
@@ -437,15 +449,15 @@ D
 D
 y
 a
-D
-D
-D
+A
+A
+A
 F
 F
 J
 F
 F
-D
+A
 "}
 (10,1,1) = {"
 D
@@ -455,8 +467,8 @@ D
 D
 X
 o
-X
-X
+r
+r
 P
 z
 z
@@ -474,14 +486,14 @@ D
 X
 a
 a
-D
-t
+A
+h
 F
 F
 u
 F
 F
-t
+h
 "}
 (12,1,1) = {"
 X
@@ -494,7 +506,7 @@ V
 a
 a
 c
-D
+A
 b
 b
 b
