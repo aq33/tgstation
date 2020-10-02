@@ -352,4 +352,5 @@
 	casing_ejector = FALSE
 	fire_rate = 2
 	block_upgrade_walk = 1
+	bolt_type = BOLT_TYPE_OPEN
 

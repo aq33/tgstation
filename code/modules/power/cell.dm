@@ -65,6 +65,17 @@
 	else
 		add_overlay("cell-o1")
 
+/obj/item/stock_parts/cell/gun/update_icon()
+	cut_overlays()
+	if(grown_battery)
+		add_overlay(image('icons/obj/power.dmi',"grown_wires"))
+	if(charge < 0.01)
+		return
+	else if(charge/maxcharge >=0.995)
+		add_overlay("g-cell-o2")
+	else
+		add_overlay("g-cell-o1")
+
 /obj/item/stock_parts/cell/proc/percent()		// return % charge of cell
 	return 100*charge/maxcharge
 
@@ -149,28 +160,32 @@
 					corrupt()
 
 /obj/item/stock_parts/cell/attack_self(mob/user)
-	var/mob/living/carbon/human/H = user
-	var/datum/species/ethereal/eth_species = H.dna?.species
-	
-	if(istype(H) && istype(eth_species))			
+	if(isethereal(user))
+		var/mob/living/carbon/human/H = user
+		var/datum/species/ethereal/E = H.dna.species
+		if(E.drain_time > world.time)
+			return
 		if(charge < 100)
 			to_chat(H, "<span class='warning'>The [src] doesn't have enough power!</span>")
 			return
-		if(eth_species.ethereal_charge >= ETHEREAL_CHARGE_FULL - 5)
+		var/obj/item/organ/stomach/ethereal/stomach = H.getorganslot(ORGAN_SLOT_STOMACH)
+		if(!istype(stomach))
+			to_chat(H, "<span class='warning'>You can't receive charge!</span>")
+			return
+		if(stomach.crystal_charge >= ETHEREAL_CHARGE_FULL)
 			to_chat(H, "<span class='warning'>Your charge is full!</span>")
 			return
 		to_chat(H, "<span class='notice'>You clumsily channel power through the [src] and into your body, wasting some in the process.</span>")
-		if(do_after(user, 50, target = src))
-			if((charge >= 100) && (eth_species.ethereal_charge < ETHEREAL_CHARGE_FULL - 5))
-				to_chat(H, "<span class='notice'>You receive some charge from the [src].</span>")
-				eth_species.adjust_charge(5)
-				charge -= 100 //you waste way more than you receive, so that ethereals can't just steal one cell and forget about hunger
-			else
-				to_chat(H, "<span class='warning'>You can't receive charge from the [src]!</span>")
+		E.drain_time = world.time + 20
+		if((charge < 100) || (stomach.crystal_charge >= ETHEREAL_CHARGE_FULL))
 			return
-
-		
-	..()
+		if(do_after(user, 20, target = src))
+			to_chat(H, "<span class='notice'>You receive some charge from the [src].</span>")
+			stomach.adjust_charge(3)
+			charge -= 100 //you waste way more than you receive, so that ethereals cant just steal one cell and forget about hunger
+		else
+			to_chat(H, "<span class='warning'>You fail to receive charge from the [src]!</span>")
+	return
 
 
 /obj/item/stock_parts/cell/blob_act(obj/structure/blob/B)
@@ -215,26 +230,81 @@
 
 /obj/item/stock_parts/cell/secborg
 	name = "security borg rechargeable D battery"
-	maxcharge = 600	//600 max charge / 100 charge per shot = six shots
-	materials = list(/datum/material/glass=40)
+	maxcharge = 6000	//6000 max charge / 1000 charge per shot = six shots
+	custom_materials = list(/datum/material/glass=40)
 
 /obj/item/stock_parts/cell/secborg/empty/Initialize()
 	. = ..()
 	charge = 0
 	update_icon()
 
-/obj/item/stock_parts/cell/pulse //200 pulse shots
-	name = "pulse rifle power cell"
-	maxcharge = 40000
+
+/obj/item/stock_parts/cell/gun
+	name = "weapon power cell"
+	icon = 'icons/obj/power.dmi'
+	icon_state = "g-cell"
+	maxcharge = 10000
+	custom_materials = list(/datum/material/glass=60)
 	chargerate = 1500
+
+/obj/item/stock_parts/cell/gun/empty/Initialize()
+	. = ..()
+	charge = 0
+	update_icon()
+
+/obj/item/stock_parts/cell/gun/update_icon()
+	cut_overlays()
+	if(grown_battery)
+		. += mutable_appearance('icons/obj/power.dmi', "grown_wires")
+	if(charge < 0.01)
+		return
+	else if(charge/maxcharge >=0.995)
+		add_overlay("g-cell-o2")
+	else
+		add_overlay("g-cell-o1")
+
+/obj/item/stock_parts/cell/gun/upgraded
+	name = "upgraded weapon power cell"
+	icon_state = "ug-cell"
+	maxcharge = 20000
+	custom_materials = list(/datum/material/glass=300)
+	chargerate = 2000
+
+/obj/item/stock_parts/cell/gun/upgraded/empty/Initialize()
+	. = ..()
+	charge = 0
+	update_icon()
+
+/obj/item/stock_parts/cell/gun/mini
+	name = "miniature weapon power cell"
+	icon_state = "mg-cell"
+	maxcharge = 50000
+	custom_materials = list(/datum/material/glass=300)
+	chargerate = 1000
+
+/obj/item/stock_parts/cell/gun/mini/empty/Initialize()
+	. = ..()
+	charge = 0
+	update_icon()
+
+/obj/item/stock_parts/cell/gun/mini/update_icon()
+	cut_overlays()
+	if(grown_battery)
+		. += mutable_appearance('icons/obj/power.dmi', "grown_wires")
+	if(charge < 0.01)
+		return
+	else if(charge/maxcharge >=0.995)
+		add_overlay("mg-cell-o2")
+	else
+		add_overlay("mg-cell-o1")
 
 /obj/item/stock_parts/cell/pulse/carbine //25 pulse shots
 	name = "pulse carbine power cell"
-	maxcharge = 5000
+	maxcharge = 50000
 
 /obj/item/stock_parts/cell/pulse/pistol //10 pulse shots
 	name = "pulse pistol power cell"
-	maxcharge = 2000
+	maxcharge = 20000
 
 /obj/item/stock_parts/cell/high
 	name = "high-capacity power cell"

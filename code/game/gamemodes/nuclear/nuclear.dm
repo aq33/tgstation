@@ -5,16 +5,16 @@
 	config_tag = "nuclear"
 	report_type = "nuclear"
 	false_report_weight = 10
-	required_players = 30 // 30 players - 3 players to be the nuke ops = 27 players remaining
-	required_enemies = 2
-	recommended_enemies = 5
+	required_players = 20 // 30 players - 3 players to be the nuke ops = 27 players remaining
+	required_enemies = 1
+	recommended_enemies = 3
 	antag_flag = ROLE_OPERATIVE
-	enemy_minimum_age = 14
+	enemy_minimum_age = 0
 
 	announce_span = "danger"
-	announce_text = "Syndicate forces are approaching the station in an attempt to destroy it!\n\
-	<span class='danger'>Operatives</span>: Secure the nuclear authentication disk and use your nuke to destroy the station.\n\
-	<span class='notice'>Crew</span>: Defend the nuclear authentication disk and ensure that it leaves with you on the emergency shuttle."
+	announce_text = "Siły Syndykatu zbliżają się do stacji w celu jej zniszczenia!\n\
+	<span class='danger'>Operatives</span>: Zabezpieczcie dysk nuklearnej autoryzacji i uzyjcie swojej atomówki do zniszczenia stacji.\n\
+	<span class='notice'>Crew</span>: Chrońcie dysk nuklearnej autoryzacji i upewnijcie się, że zawsze będzie z wami na promie ratunkowym."
 
 	title_icon = "nukeops"
 

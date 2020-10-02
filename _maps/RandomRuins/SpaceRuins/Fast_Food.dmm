@@ -81,6 +81,7 @@
 	pixel_y = 5
 	},
 /obj/structure/table,
+/obj/machinery/bluespace_beacon,
 /turf/open/floor/plasteel/cafeteria,
 /area/ruin/space/has_grav/powered/macspace)
 "au" = (

@@ -46,8 +46,7 @@
 	P.info = "<center><font size='6'><B>Scanner Report</B></font></center><HR><BR>"
 	P.info += jointext(log, "<BR>")
 	P.info += "<HR><B>Notes:</B><BR>"
-	P.info_links = P.info
-	P.updateinfolinks()
+	P.update_icon()
 
 	if(ismob(loc))
 		var/mob/M = loc
@@ -94,7 +93,7 @@
 
 			var/mob/living/carbon/human/H = A
 			if(!H.gloves)
-				fingerprints += md5(H.dna.uni_identity)
+				fingerprints += rustg_hash_string(RUSTG_HASH_MD5, H.dna.uni_identity)
 
 		else if(!ismob(A))
 

@@ -261,6 +261,16 @@ Turf and target are separate in case you want to teleport some distance from a t
 		. += A
 	return .
 
+/// Returns a list of IPCs
+/proc/active_ipcs()
+	. = list()
+	for(var/mob/living/carbon/human/H in GLOB.alive_mob_list)
+		if(isipc(H))
+			if(H.stat == DEAD)
+				continue
+			. += H
+	return .
+
 /// Find an active ai with the least borgs. VERBOSE PROCNAME HUH!
 /proc/select_active_ai_with_fewest_borgs()
 	var/mob/living/silicon/ai/selected
@@ -289,6 +299,16 @@ Turf and target are separate in case you want to teleport some distance from a t
 			. = input(user,"AI signals detected:", "AI Selection", ais[1]) in sortList(ais)
 		else
 			. = pick(ais)
+	return .
+
+/// Select a random and active IPC
+/proc/select_active_ipc(mob/user)
+	var/list/ipcs = active_ipcs()
+	if(ipcs.len)
+		if(user)
+			. = input(user,"IPC signals detected:", "IPC Selection", ipcs[1]) in ipcs
+		else
+			. = pick(ipcs)
 	return .
 
 /// Returns a list of all items of interest with their name
@@ -445,15 +465,6 @@ Turf and target are separate in case you want to teleport some distance from a t
 	var/x = min(world.maxx, max(1, A.x + dx))
 	var/y = min(world.maxy, max(1, A.y + dy))
 	return locate(x,y,A.z)
-
-#if DM_VERSION > 513
-#warn 513 is definitely stable now, remove this
-#endif
-#if DM_VERSION < 513
-/proc/arctan(x)
-	var/y=arcsin(x/sqrt(1+x*x))
-	return y
-#endif
 
 /// Gets all contents of contents and returns them all in a list.
 /atom/proc/GetAllContents(var/T)
@@ -1424,7 +1435,7 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 /proc/GUID()
 	var/const/GUID_VERSION = "b"
 	var/const/GUID_VARIANT = "d"
-	var/node_id = copytext_char(md5("[rand()*rand(1,9999999)][world.name][world.hub][world.hub_password][world.internet_address][world.address][world.contents.len][world.status][world.port][rand()*rand(1,9999999)]"), 1, 13)
+	var/node_id = copytext_char(rustg_hash_string(RUSTG_HASH_MD5, "[rand()*rand(1,9999999)][world.name][world.hub][world.hub_password][world.internet_address][world.address][world.contents.len][world.status][world.port][rand()*rand(1,9999999)]"), 1, 13)
 
 	var/time_high = "[num2hex(text2num(time2text(world.realtime,"YYYY")), 2)][num2hex(world.realtime, 6)]"
 
@@ -1448,7 +1459,7 @@ If it ever becomes necesary to get a more performant REF(), this lies here in wa
 /proc/REF(datum/input)
 	if(istype(input) && (input.datum_flags & DF_USE_TAG))
 		if(input.tag)
-			return "\[[url_encode(input.tag)]\]"
+			return "\[[rustg_url_encode(input.tag)]\]"
 		stack_trace("A ref was requested of an object with DF_USE_TAG set but no tag: [input]")
 		input.datum_flags &= ~DF_USE_TAG
 	return "\ref[input]"

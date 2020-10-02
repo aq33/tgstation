@@ -100,8 +100,9 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	if(ic_blocked)
 		//The filter warning message shows the sanitized message though.
-		to_chat(src, "<span class='warning'>That message contained a word prohibited in IC chat! Consider reviewing the server rules.\n<span replaceRegex='show_filtered_ic_chat'>\"[message]\"</span></span>")
-		return
+		if(src.getorgan(/obj/item/organ/brain))
+			to_chat(src, "<span class='warning'>You feel your brain cells slowly fading.</span>")
+			src.adjustOrganLoss(ORGAN_SLOT_BRAIN, 15)
 
 	var/datum/saymode/saymode = SSradio.saymodes[talk_key]
 	var/message_mode = get_message_mode(message)
@@ -142,7 +143,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	var/datum/language/message_language = get_message_language(message)
 	if(message_language)
 		// No, you cannot speak in xenocommon just because you know the key
-		if(can_speak_in_language(message_language))
+		if(can_speak_language(message_language))
 			language = message_language
 		message = copytext_char(message, 3)
 
@@ -150,7 +151,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		message = trim_left(message)
 
 	if(!language)
-		language = get_default_language()
+		language = get_selected_language()
 
 	// Detection of language needs to be before inherent channels, because
 	// AIs use inherent channels for the holopad. Most inherent channels
@@ -198,11 +199,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		spans |= L.spans
 
 	if(message_mode == MODE_SING)
-	#if DM_VERSION < 513
-		var/randomnote = "~"
-	#else
 		var/randomnote = pick("\u2669", "\u266A", "\u266B")
-	#endif
 		spans |= SPAN_SINGING
 		message = "[randomnote] [message] [randomnote]"
 
@@ -376,6 +373,9 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	if(cultslurring)
 		message = cultslur(message)
 
+	if(clockslurring)
+		message = clockslur(message)
+   
 	// check for and apply punctuation
 	var/end = copytext(message, length(message))
 	if(!(end in list("!", ".", "?", ":", "\"", "-")))
@@ -410,7 +410,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 				return ITALICS | REDUCE_RANGE
 
 		if(MODE_INTERCOM)
-			for (var/obj/item/radio/intercom/I in view(1, null))
+			for (var/obj/item/radio/intercom/I in view(MODE_RANGE_INTERCOM, null))
 				I.talk_into(src, message, , spans, language)
 			return ITALICS | REDUCE_RANGE
 

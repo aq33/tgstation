@@ -25,16 +25,6 @@
 /datum/crafting_recipe/proc/check_requirements(mob/user, list/collected_requirements)
 	return TRUE
 
-/datum/crafting_recipe/pin_removal
-	name = "Pin Removal"
-	result = /obj/item/gun
-	reqs = list(/obj/item/gun = 1)
-	parts = list(/obj/item/gun = 1)
-	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
-	time = 50
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-
 /datum/crafting_recipe/IED
 	name = "IED"
 	result = /obj/item/grenade/iedcasing
@@ -394,6 +384,21 @@
 				/obj/item/stack/packageWrap = 5)
 	tools = list(TOOL_SCREWDRIVER)
 	time = 100
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/makeshiftlasrifle
+	name = "Improvised Laser Rifle"
+	result = /obj/item/gun/energy/laser/makeshiftlasrifle
+	reqs = list(/obj/item/stack/cable_coil = 15,
+				/obj/item/weaponcrafting/stock = 1,
+				/obj/item/pipe = 1,
+				/obj/item/stock_parts/micro_laser = 1,
+				/obj/item/stock_parts/cell = 1)
+	tools = list(TOOL_SCREWDRIVER)
+	//parts = list(/obj/item/stock_parts/cell = 1, /obj/item/stock_parts/micro_laser = 1)
+	//TODO: zroznicowane statystyki w zaleznosci od uzytych czesci
+	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 

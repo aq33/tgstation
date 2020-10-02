@@ -71,3 +71,27 @@
 	var/mob/living/carbon/C = user.mob
 	C.a_intent_change(INTENT_HARM)
 	return TRUE
+
+/datum/keybinding/carbon/give
+	key = "G"
+	name = "Give_Item"
+	full_name = "Give item"
+	description = "Give the item you're currently holding"
+
+/datum/keybinding/carbon/give/down(client/user)
+	var/mob/living/carbon/C = user.mob
+	C.give()
+	return TRUE
+
+/datum/keybinding/carbon/mecha_change_eq
+	key = "F"
+	name = "mecha_change_eq"
+	full_name = "Change exosuit equipment"
+	description = "Change current exosuit equipment"
+
+/datum/keybinding/carbon/mecha_change_eq/down(client/user)
+	if(!ismecha(usr.loc)) return
+	var/obj/mecha/C = usr.loc
+	C.cycle_action.Activate()
+	return TRUE
+		

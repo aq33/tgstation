@@ -22,7 +22,6 @@
 	//initialise organs
 	create_internal_organs() //most of it is done in set_species now, this is only for parent call
 	physiology = new()
-
 	. = ..()
 
 	AddComponent(/datum/component/personal_crafting)
@@ -89,7 +88,7 @@
 				stat(null, "Energy Charge: [round(SN.cell.charge/100)]%")
 				stat(null, "Smoke Bombs: \Roman [SN.s_bombs]")
 				//Ninja status
-				stat(null, "Fingerprints: [md5(dna.uni_identity)]")
+				stat(null, "Fingerprints: [rustg_hash_string(RUSTG_HASH_MD5, dna.uni_identity)]")
 				stat(null, "Unique Identity: [dna.unique_enzymes]")
 				stat(null, "Overall Status: [stat > 1 ? "dead" : "[health]% healthy"]")
 				stat(null, "Nutrition Status: [nutrition]")
@@ -207,8 +206,11 @@
 // this could be made more general, but for now just handle mulebot
 /mob/living/carbon/human/Crossed(atom/movable/AM)
 	var/mob/living/simple_animal/bot/mulebot/MB = AM
+	var/obj/vehicle/sealed/car/C = AM
 	if(istype(MB))
 		MB.RunOver(src)
+	else if(istype(C))
+		C.RunOver(src)
 
 	. = ..()
 	spreadFire(AM)
@@ -612,7 +614,10 @@
 	//Agent cards lower threatlevel.
 	if(istype(idcard, /obj/item/card/id/syndicate))
 		threatcount -= 5
-
+	
+	//individuals wearing tinfoil hats are 30% more likely to be criminals
+	if(istype(get_item_by_slot(SLOT_HEAD), /obj/item/clothing/head/foilhat))
+		threatcount += 2
 	return threatcount
 
 
@@ -679,7 +684,7 @@
 
 /mob/living/carbon/human/cuff_resist(obj/item/I)
 	if(dna && dna.check_mutation(HULK))
-		say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ), forced = "hulk")
+		say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "ZIOBRO, TY KURWO!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ), forced = "hulk")
 		if(..(I, cuff_break = FAST_CUFFBREAK))
 			dropItemToGround(I)
 	else
@@ -1166,6 +1171,9 @@
 /mob/living/carbon/human/species/dullahan
 	race = /datum/species/dullahan
 
+/mob/living/carbon/human/species/egg
+	race = /datum/species/egg
+
 /mob/living/carbon/human/species/felinid
 	race = /datum/species/human/felinid
 
@@ -1261,6 +1269,9 @@
 
 /mob/living/carbon/human/species/golem/soviet
 	race = /datum/species/golem/soviet
+
+/mob/living/carbon/human/species/ipc
+	race = /datum/species/ipc
 
 /mob/living/carbon/human/species/jelly
 	race = /datum/species/jelly

@@ -22,23 +22,6 @@ map metastation
 	votable
 endmap
 
-map pubbystation
-	minplayers 50
-	maxplayers 100
-	votable
-endmap
-
-map deltastation
-	minplayers 50
-	votable
-endmap
-
-map donutstation
-	minplayers 80
-	maxplayers 120
-	disabled
-endmap
-
 map runtimestation
 	default
 endmap
@@ -48,8 +31,6 @@ map multiz_debug
 endmap
 
 map kilostation
-    minplayers 30
-    maxplayers 80
+    maxplayers 60
 	votable
-	disabled
 endmap

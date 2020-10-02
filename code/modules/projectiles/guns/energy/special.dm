@@ -144,6 +144,7 @@
 	usesound = list('sound/items/welder.ogg', 'sound/items/welder2.ogg')
 	tool_behaviour = TOOL_WELDER
 	toolspeed = 0.7 //plasmacutters can be used as welders, and are faster than standard welders
+	internal_cell = TRUE //so you don't cheese through the need for plasma
 	var/progress_flash_divisor = 10  //copypasta is best pasta
 	var/light_intensity = 1
 	var/charge_weld = 25 //amount of charge used up to start action (multiplied by amount) and per progress_flash_divisor ticks of welding
@@ -229,12 +230,12 @@
 	force = 15
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/adv)
 
-/obj/item/gun/energy/wormhole_projector
-	name = "bluespace wormhole projector"
-	desc = "A projector that emits high density quantum-coupled bluespace beams."
+/obj/item/gun/energy/wormhole_projector //valve pls don't sue
+	name = "handheld portal device"
+	desc = "Experimental tool designed to place two portals that objects can pass through."
 	ammo_type = list(/obj/item/ammo_casing/energy/wormhole, /obj/item/ammo_casing/energy/wormhole/orange)
 	item_state = null
-	icon_state = "wormhole_projector"
+	icon_state = "portalgun"
 	var/obj/effect/portal/p_blue
 	var/obj/effect/portal/p_orange
 	var/atmos_link = FALSE
@@ -265,11 +266,13 @@
 
 /obj/item/gun/energy/wormhole_projector/proc/has_blue_portal()
 	if(istype(p_blue) && !QDELETED(p_blue))
+		fire_sound = "sound/weapons/pgunblue.ogg"
 		return TRUE
 	return FALSE
 
 /obj/item/gun/energy/wormhole_projector/proc/has_orange_portal()
 	if(istype(p_orange) && !QDELETED(p_orange))
+		fire_sound = "sound/weapons/pgunorangemanbad.ogg"
 		return TRUE
 	return FALSE
 
@@ -321,7 +324,7 @@
 	icon_state = "freezegun"
 	desc = "A gun that changes temperatures."
 	ammo_type = list(/obj/item/ammo_casing/energy/temp, /obj/item/ammo_casing/energy/temp/hot)
-	cell_type = "/obj/item/stock_parts/cell/high"
+	cell_type = /obj/item/stock_parts/cell/gun/upgraded
 	automatic = 1
 	fire_rate = 4
 	pin = null

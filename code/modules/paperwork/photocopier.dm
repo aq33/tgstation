@@ -51,55 +51,59 @@
 	user << browse(dat.Join(""), "window=copier")
 	onclose(user, "copier")
 
+/obj/machinery/photocopier/proc/copy()
+	for(var/i = 0, i < copies, i++)
+		if(toner > 0 && !busy && copy)
+			var/copy_as_paper = 1
+			if(istype(copy, /obj/item/paper/contract/employment))
+				var/obj/item/paper/contract/employment/E = copy
+				var/obj/item/paper/contract/employment/C = new /obj/item/paper/contract/employment (loc, E.target.current)
+				if(C)
+					copy_as_paper = 0
+			if(copy_as_paper)
+				var/obj/item/paper/c = new /obj/item/paper (loc)
+				if(length(copy.info) > 0)	//Only print and add content if the copied doc has words on it
+					if(toner > 10)	//lots of toner, make it dark
+						c.info = "<font color = #101010>"
+					else			//no toner? shitty copies for you!
+						c.info = "<font color = #808080>"
+					var/copied = copy.info
+					copied = replacetext(copied, "<font face=\"[PEN_FONT]\" color=", "<font face=\"[PEN_FONT]\" nocolor=")	//state of the art techniques in action
+					copied = replacetext(copied, "<font face=\"[CRAYON_FONT]\" color=", "<font face=\"[CRAYON_FONT]\" nocolor=")	//This basically just breaks the existing color tag, which we need to do because the innermost tag takes priority.
+					c.info += copied
+					c.info += "</font>"
+					c.name = copy.name
+					c.update_icon()
+					c.stamps = copy.stamps
+					if(copy.stamped)
+						c.stamped = copy.stamped.Copy()
+					c.copy_overlays(copy, TRUE)
+					toner--
+			busy = TRUE
+			sleep(15)
+			busy = FALSE
+		else
+			break
+	updateUsrDialog()
+
+/obj/machinery/photocopier/proc/photocopy()
+	for(var/i = 0, i < copies, i++)
+		if(toner >= 5 && !busy && photocopy)  //Was set to = 0, but if there was say 3 toner left and this ran, you would get -2 which would be weird for ink
+			new /obj/item/photo (loc, photocopy.picture.Copy(greytoggle == "Greyscale"? TRUE : FALSE))
+			busy = TRUE
+			sleep(15)
+			busy = FALSE
+		else
+			break
+
 /obj/machinery/photocopier/Topic(href, href_list)
 	if(..())
 		return
 	if(href_list["copy"])
 		if(copy)
-			for(var/i = 0, i < copies, i++)
-				if(toner > 0 && !busy && copy)
-					var/copy_as_paper = 1
-					if(istype(copy, /obj/item/paper/contract/employment))
-						var/obj/item/paper/contract/employment/E = copy
-						var/obj/item/paper/contract/employment/C = new /obj/item/paper/contract/employment (loc, E.target.current)
-						if(C)
-							copy_as_paper = 0
-					if(copy_as_paper)
-						var/obj/item/paper/c = new /obj/item/paper (loc)
-						if(length(copy.info) > 0)	//Only print and add content if the copied doc has words on it
-							if(toner > 10)	//lots of toner, make it dark
-								c.info = "<font color = #101010>"
-							else			//no toner? shitty copies for you!
-								c.info = "<font color = #808080>"
-							var/copied = copy.info
-							copied = replacetext(copied, "<font face=\"[PEN_FONT]\" color=", "<font face=\"[PEN_FONT]\" nocolor=")	//state of the art techniques in action
-							copied = replacetext(copied, "<font face=\"[CRAYON_FONT]\" color=", "<font face=\"[CRAYON_FONT]\" nocolor=")	//This basically just breaks the existing color tag, which we need to do because the innermost tag takes priority.
-							c.info += copied
-							c.info += "</font>"
-							c.name = copy.name
-							c.fields = copy.fields
-							c.update_icon()
-							c.updateinfolinks()
-							c.stamps = copy.stamps
-							if(copy.stamped)
-								c.stamped = copy.stamped.Copy()
-							c.copy_overlays(copy, TRUE)
-							toner--
-					busy = TRUE
-					sleep(15)
-					busy = FALSE
-				else
-					break
-			updateUsrDialog()
+			copy()
 		else if(photocopy)
-			for(var/i = 0, i < copies, i++)
-				if(toner >= 5 && !busy && photocopy)  //Was set to = 0, but if there was say 3 toner left and this ran, you would get -2 which would be weird for ink
-					new /obj/item/photo (loc, photocopy.picture.Copy(greytoggle == "Greyscale"? TRUE : FALSE))
-					busy = TRUE
-					sleep(15)
-					busy = FALSE
-				else
-					break
+			photocopy()
 		else if(doccopy)
 			for(var/i = 0, i < copies, i++)
 				if(toner > 5 && !busy && doccopy)

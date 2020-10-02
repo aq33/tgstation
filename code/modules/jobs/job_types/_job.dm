@@ -117,6 +117,11 @@
 			var/item = G.spawn_item(null, metadata)
 			var/atom/placed_in = human.equip_or_collect(item)
 
+			if(istype(item, /obj/item/organ))
+				var/obj/item/organ/org = item
+				org.Insert(H)
+				to_chat(M, "<span class='notice'>Your [G.display_name] has been automatically implanted in you!</span>")
+				continue
 			if(istype(placed_in))
 				if(isturf(placed_in))
 					to_chat(M, "<span class='notice'>Placing [G.display_name] on [placed_in]!</span>")
@@ -220,10 +225,13 @@
 		return 0
 	if(!SSdbcore.Connect())
 		return 0 //Without a database connection we can't get a player's age so we'll assume they're old enough for all jobs
-	if(!isnum(minimal_player_age))
+	if(!isnum_safe(minimal_player_age))
 		return 0
 
 	return max(0, minimal_player_age - C.player_age)
+
+/datum/job/proc/get_title(mob/living/H)
+	return title
 
 /datum/job/proc/config_check()
 	return TRUE
@@ -283,7 +291,7 @@
 		C.access = J.get_access()
 		shuffle_inplace(C.access) // Shuffle access list to make NTNet passkeys less predictable
 		C.registered_name = H.real_name
-		C.assignment = J.title
+		C.assignment = J.get_title(H)
 		C.update_label()
 		for(var/A in SSeconomy.bank_accounts)
 			var/datum/bank_account/B = A

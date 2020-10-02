@@ -16,6 +16,7 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 	required_enemies = 1
 	recommended_enemies = 4
 	reroll_friendly = 1
+	allowed_special = list(/datum/special_role/undercover)
 
 	announce_span = "green"
 	announce_text = "Alien changelings have infiltrated the crew!\n\
@@ -34,6 +35,9 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		restricted_jobs += "Assistant"
+
+	if(CONFIG_GET(flag/protect_heads_from_antagonist))
+		restricted_jobs += GLOB.command_positions
 
 	var/num_changelings = 1
 

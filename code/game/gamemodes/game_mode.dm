@@ -34,7 +34,7 @@
 	var/reroll_friendly 	//During mode conversion only these are in the running
 	var/continuous_sanity_checked	//Catches some cases where config options could be used to suggest that modes without antagonists should end when all antagonists die
 	var/enemy_minimum_age = 7 //How many days must players have been playing before they can play this antagonist
-	var/list/allowed_special = list()	//Special roles that can spawn (Add things like /datum/antagonist/special/undercover for them to be able to spawn during this gamemode)
+	var/list/allowed_special = list()	//Special roles that can spawn (Add things like /datum/special_role/undercover for them to be able to spawn during this gamemode)
 	var/list/active_specials = list()	//Special roles that have spawned, and can now spawn late
 
 	var/announce_span = "warning" //The gamemode's name will be in this span during announcement.
@@ -249,8 +249,12 @@
 
 	if(CONFIG_GET(flag/protect_roles_from_antagonist))
 		replacementmode.restricted_jobs += replacementmode.protected_jobs
+
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		replacementmode.restricted_jobs += "Assistant"
+
+	if(CONFIG_GET(flag/protect_heads_from_antagonist))
+		replacementmode.restricted_jobs += GLOB.command_positions
 
 	message_admins("The roundtype will be converted. If you have other plans for the station or feel the station is too messed up to inhabit <A HREF='?_src_=holder;[HrefToken()];toggle_midround_antag=[REF(usr)]'>stop the creation of antags</A> or <A HREF='?_src_=holder;[HrefToken()];end_round=[REF(usr)]'>end the round now</A>.")
 	log_game("Roundtype converted to [replacementmode.name]")
@@ -510,6 +514,24 @@
 							//			Less if there are not enough valid players in the game entirely to make recommended_enemies.
 
 
+/datum/game_mode/proc/get_alive_non_antagonsist_players_for_role(role)
+	var/list/candidates = list()
+
+	for(var/mob/living/carbon/human/player in GLOB.player_list)
+		if(player.client && is_station_level(player.z))
+			if(role in player.client.prefs.be_special)
+				if(!is_banned_from(player.ckey, list(role, ROLE_SYNDICATE)) && !QDELETED(player))
+					if(age_check(player.client) && !player.mind.special_role) //Must be older than the minimum age
+						candidates += player.mind				// Get a list of all the people who want to be the antagonist for this round
+
+	if(restricted_jobs)
+		for(var/datum/mind/player in candidates)
+			for(var/job in restricted_jobs)					// Remove people who want to be antagonist but have a job already that precludes it
+				if(player.assigned_role == job)
+					candidates -= player
+
+	return candidates
+
 
 /datum/game_mode/proc/num_players()
 	. = 0
@@ -672,9 +694,9 @@
 		return 0
 	if(!CONFIG_GET(flag/use_age_restriction_for_jobs))
 		return 0
-	if(!isnum(C.player_age))
+	if(!isnum_safe(C.player_age))
 		return 0 //This is only a number if the db connection is established, otherwise it is text: "Requires database", meaning these restrictions cannot be enforced
-	if(!isnum(enemy_minimum_age))
+	if(!isnum_safe(enemy_minimum_age))
 		return 0
 
 	return max(0, enemy_minimum_age - C.player_age)
@@ -686,17 +708,11 @@
 		rev.remove_revolutionary(TRUE)
 
 /datum/game_mode/proc/generate_station_goals()
-	var/list/possible = list()
 	for(var/T in subtypesof(/datum/station_goal))
 		var/datum/station_goal/G = T
 		if(config_tag in initial(G.gamemode_blacklist))
 			continue
-		possible += T
-	var/goal_weights = 0
-	while(possible.len && goal_weights < STATION_GOAL_BUDGET)
-		var/datum/station_goal/picked = pick_n_take(possible)
-		goal_weights += initial(picked.weight)
-		station_goals += new picked
+		station_goals += new T
 
 
 /datum/game_mode/proc/generate_report() //Generates a small text blurb for the gamemode in centcom report

@@ -10,9 +10,7 @@ GLOBAL_VAR(restart_counter)
 		call(EXTOOLS, "maptick_initialize")()
 
 	//Early profile for auto-profiler - will be stopped on profiler init if necessary.
-#if DM_VERSION >= 513 && DM_BUILD >= 1506
 	world.Profile(PROFILE_START)
-#endif
 
 	log_world("World loaded at [time_stamp()]!")
 
@@ -53,7 +51,7 @@ GLOBAL_VAR(restart_counter)
 	GLOB.timezoneOffset = text2num(time2text(0,"hh")) * 36000
 
 	if(fexists(RESTART_COUNTER_PATH))
-		GLOB.restart_counter = text2num(trim(file2text(RESTART_COUNTER_PATH)))
+		GLOB.restart_counter = text2num(trim(rustg_file_read(RESTART_COUNTER_PATH)))
 		fdel(RESTART_COUNTER_PATH)
 
 	if(NO_INIT_PARAMETER in params)
@@ -220,7 +218,7 @@ GLOBAL_VAR(restart_counter)
 	else
 		fail_reasons = list("Missing GLOB!")
 	if(!fail_reasons)
-		text2file("Success!", "[GLOB.log_directory]/clean_run.lk")
+		rustg_file_append("Success!", "[GLOB.log_directory]/clean_run.lk")
 	else
 		log_world("Test run failed!\n[fail_reasons.Join("\n")]")
 	sleep(0)	//yes, 0, this'll let Reboot finish and prevent byond memes
@@ -255,7 +253,7 @@ GLOBAL_VAR(restart_counter)
 				if(GLOB.restart_counter >= ruhr)
 					do_hard_reboot = TRUE
 				else
-					text2file("[++GLOB.restart_counter]", RESTART_COUNTER_PATH)
+					rustg_file_append("[++GLOB.restart_counter]", RESTART_COUNTER_PATH)
 					do_hard_reboot = FALSE
 
 		if(do_hard_reboot)
@@ -294,7 +292,8 @@ GLOBAL_VAR(restart_counter)
 		hostedby = CONFIG_GET(string/hostedby)
 
 	s += "<b>Polska Aquila Station 13</b>"
-	s += "(<a href='https://discord.gg/wQFUt5R'>Discord</a>)"
+	s += " (<a href='https://discord.gg/wQFUt5R'>Discord</a>)"
+	s += "<br>-All Slavs welcome"
 	s += "<br>-MRP"
 	s += "<br>-Dla początkujących i nie tylko"
 	s += "<br>"

@@ -61,7 +61,7 @@
 ///Damages floor tiles and plating as the Clarke moves over them with its tracks. Damage is superficial, will not create hull breaches.
 /obj/mecha/working/clarke/proc/crush_floor()
 	var/turf/open/floor/tile = get_turf(src)
-	if(!istype(tile, /turf/open/floor))
+	if(!istype(tile, /turf/open/floor/plasteel))
 		return
 	tile.crush()
 

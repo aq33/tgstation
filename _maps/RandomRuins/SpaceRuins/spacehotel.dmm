@@ -1986,6 +1986,7 @@
 	dir = 1
 	},
 /obj/item/crowbar,
+/obj/machinery/bluespace_beacon,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/hotel/workroom)
 "gI" = (

@@ -82,6 +82,10 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space/has_grav)
+"E" = (
+/obj/machinery/bluespace_beacon,
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/space/has_grav)
 "T" = (
 /obj/machinery/door/airlock/survival_pod/glass{
 	dir = 4
@@ -861,7 +865,7 @@ c
 q
 c
 c
-c
+E
 c
 c
 d

@@ -53,6 +53,7 @@
 "m" = (
 /obj/structure/table/reinforced,
 /obj/item/taperecorder,
+/obj/machinery/bluespace_beacon,
 /turf/open/floor/plasteel/vaporwave,
 /area/ruin/space/has_grav/powered/aesthetic)
 "n" = (
