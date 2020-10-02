@@ -220,7 +220,7 @@
 	)
 
 /obj/item/melee/touch_attack/sex/afterattack(atom/target, mob/living/carbon/user, proximity)
-	if(!proximity || !iscarbon(target) || !iscarbon(user) || user.handcuffed ||)
+	if(!proximity || !iscarbon(target) || !iscarbon(user) || user.handcuffed)
 		return
 
 	var/mob/living/carbon/M = target
