@@ -253,7 +253,6 @@
 	base_state = "bulb"
 	fitting = "bulb"
 	brightness = 6
-	bulb_colour = "#FFDDBB"
 	desc = "A small lighting fixture."
 	bulb_colour = "#FFE6CC" //little less cozy, bit more industrial, but still cozy.. -qwerty
 	light_type = /obj/item/light/bulb
@@ -291,8 +290,17 @@
 /obj/machinery/light/Initialize(mapload)
 	. = ..()
 
+	//Setup area colours -pb
+	var/area/A = get_area(src)
+	if(bulb_colour == initial(bulb_colour))
+		if(istype(src, /obj/machinery/light/small))
+			bulb_colour = A.lighting_colour_bulb
+		else
+			bulb_colour = A.lighting_colour_tube
+	if(nightshift_light_color == initial(nightshift_light_color))
+		nightshift_light_color = A.lighting_colour_night
+
 	if(!mapload) //sync up nightshift lighting for player made lights
-		var/area/A = get_area(src)
 		var/obj/machinery/power/apc/temp_apc = A.get_apc()
 		nightshift_enabled = temp_apc?.nightshift_lights
 
@@ -642,14 +650,18 @@
 		if(istype(H))
 			var/datum/species/ethereal/eth_species = H.dna?.species
 			if(istype(eth_species))
+				var/datum/species/ethereal/E = H.dna.species
+				if(E.drain_time > world.time)
+					return
 				to_chat(H, "<span class='notice'>You start channeling some power through the [fitting] into your body.</span>")
-				while(do_after(user, 20, target = src))
-					if(eth_species.ethereal_charge >= ETHEREAL_CHARGE_FULL)
-						to_chat(H, "<span class='notice'>You are now fully charged.</span>")
-						break
-					else
+				E.drain_time = world.time + 30
+				if(do_after(user, 30, target = src))
+					var/obj/item/organ/stomach/ethereal/stomach = H.getorganslot(ORGAN_SLOT_STOMACH)
+					if(istype(stomach))
 						to_chat(H, "<span class='notice'>You receive some charge from the [fitting].</span>")
-						eth_species.adjust_charge(5)
+						stomach.adjust_charge(2)
+					else
+						to_chat(H, "<span class='warning'>You fail to receive charge from the [fitting]!</span>")
 				return
 
 			if(H.gloves)

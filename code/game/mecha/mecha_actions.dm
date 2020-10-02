@@ -253,3 +253,29 @@
 	button_icon_state = "mech_phasing_[chassis.phasing ? "on" : "off"]"
 	chassis.occupant_message("<font color=\"[chassis.phasing?"#00f\">En":"#f00\">Dis"]abled phasing.</font>")
 	UpdateButtonIcon()
+
+/datum/action/innate/mecha/mech_transform
+	name = "Transform"
+	button_icon_state = "mech_chase_off"
+
+/datum/action/innate/mecha/mech_transform/Activate()
+	if(!istype(chassis, /obj/mecha/combat/alpha))
+		to_chat(chassis.occupant, "<span class='notice'>Cos poszlo nie tak. Zglos to koderom na discordzie serwera Aquila!<span>")	//na wszelki wypadek gdyby cos sie zesralo
+		log_admin("[key_name(chassis.occupant)] probowal przetransformowac mecha innego niz alpha.")
+		return
+	var/obj/mecha/combat/alpha/chassisalpha = chassis
+	
+	if(!owner || !chassis || chassis.occupant != owner)
+		return
+	
+	chassis.is_currently_transforming = TRUE
+	to_chat(chassis.occupant, "<span class='notice'>You begin the transformation procedure. Equipment is disabled during this process. Hold still.<span>")
+	chassis.can_move = world.time + 14
+	flick("alpha-transform[chassis.chase_mode ? "-reverse" : ""]", chassis)
+	for(var/i in 1 to 2)
+		playsound(chassis, pick('sound/items/drill_use.ogg', 'sound/items/jaws_cut.ogg', 'sound/items/jaws_pry.ogg', 'sound/items/welder.ogg', 'sound/items/ratchet.ogg'), 80, 1, -1)
+		sleep(7)
+	chassis.is_currently_transforming = FALSE
+	
+	chassisalpha.stat_transform()
+	chassis.occupant_message("Transformed into [chassis.chase_mode ? "chase" : "standard"] mode.")

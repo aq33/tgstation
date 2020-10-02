@@ -7,8 +7,8 @@
 
 //DRONE SHELL
 /obj/item/drone_shell
-	name = "drone shell"
-	desc = "A shell of a maintenance drone, an expendable robot built to perform station repairs."
+	name = "Nieaktywny dron"
+	desc = "Nieaktywny dron naprawczy."
 	icon = 'icons/mob/drone.dmi'
 	icon_state = "drone_maint_hat"//yes reuse the _hat state.
 	layer = BELOW_MOB_LAYER
@@ -44,7 +44,7 @@
 	if(is_banned_from(user.ckey, ROLE_DRONE) || QDELETED(src) || QDELETED(user))
 		return
 	if(CONFIG_GET(flag/use_age_restriction_for_jobs))
-		if(!isnum(user.client.player_age)) //apparently what happens when there's no DB connected. just don't let anybody be a drone without admin intervention
+		if(!isnum_safe(user.client.player_age)) //apparently what happens when there's no DB connected. just don't let anybody be a drone without admin intervention
 			return
 		if(user.client.player_age < DRONE_MINIMUM_AGE)
 			to_chat(user, "<span class='danger'>You're too new to play as a drone! Please try again in [DRONE_MINIMUM_AGE - user.client.player_age] days.</span>")

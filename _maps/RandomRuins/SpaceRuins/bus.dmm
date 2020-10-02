@@ -340,6 +340,10 @@
 	},
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/unpowered/no_grav)
+"Jk" = (
+/obj/machinery/bluespace_beacon,
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/unpowered/no_grav)
 "XA" = (
 /obj/structure/fluff/bus/passable/seat{
 	icon_state = "backseat"
@@ -661,7 +665,7 @@ ab
 ab
 ad
 au
-ad
+Jk
 ad
 au
 ad

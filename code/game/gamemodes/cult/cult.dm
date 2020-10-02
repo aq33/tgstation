@@ -38,10 +38,10 @@
 	false_report_weight = 1
 	restricted_jobs = list("Chaplain","AI", "Cyborg", "Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Head of Personnel", "Brig Physician", "Prisoner")
 	protected_jobs = list()
-	required_players = 29
-	required_enemies = 4
-	recommended_enemies = 4
-	enemy_minimum_age = 14
+	required_players = 24
+	required_enemies = 2
+	recommended_enemies = 2
+	enemy_minimum_age = 0
 
 	announce_span = "cult"
 	announce_text = "Some crew members are trying to start a cult to Nar'Sie!\n\
@@ -66,6 +66,9 @@
 
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		restricted_jobs += "Assistant"
+
+	if(CONFIG_GET(flag/protect_heads_from_antagonist))
+		restricted_jobs += GLOB.command_positions
 
 	//cult scaling goes here
 	recommended_enemies = 1 + round(num_players()/CULT_SCALING_COEFFICIENT)
