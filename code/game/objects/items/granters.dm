@@ -317,16 +317,32 @@
 	desc = "non quaeritur de nomine tuo"
 	remarks = list("They do not ask about your name.", "Take your revenge", "The silent brotherhood watches you, make us proud, little one.")
 
-/obj/item/book/granter/spell/charge/recoil(mob/user)
+/obj/item/book/granter/spell/sharpstar/recoil(mob/user)
 	..()
 	to_chat(user,"<span class='warning'>This knowledge was written in an ancient tongue, it was filled with nothingness, so much, that it dried up your eyes. Only one of many tears should be allowed to read this. </span>")
 	user.blind_eyes(200)
 
+/obj/item/book/granter/spell/sexonbutton
+	name = "poorly-written fanfiction"
+	spell = /obj/effect/proc_holder/spell/targeted/touch/sex
+	spellname = "Sex on button"
+	desc = "A book, seemingly describing an encounter between a notorious changeling and an infamous lizard, deep in the maintance tunnels of the station's robotics bay."
+	remarks = list("Why did he put that proboscis there?", "Oh.", "Why is he holding a bottle of space lube?")
 
-/obj/item/book/granter/spell/charge/recoil(mob/user)
-	..()
-	to_chat(user,"<span class='warning'>This knowledge was written in an ancient tongue, it was filled with nothingness, so much, that it dried up your eyes. Only one of many tears should be allowed to read this. </span>")
-	user.blind_eyes(200)
+/obj/item/book/granter/spell/sexonbutton/on_reading_start(mob/user)
+	to_chat(user, "<span class='notice'>You start reading the [src]...</span>")
+
+/obj/item/book/granter/spell/sexonbutton/on_reading_finished(mob/user)
+	to_chat(user, "<span class='notice'>You feel like you want to try this whole \"sex\" thing.</span>")
+	var/obj/effect/proc_holder/spell/S = new spell
+	user.mind.AddSpell(S)
+	user.log_message("learned the spell [spellname] ([S])", LOG_ATTACK, color="orange")
+	onlearned(user)
+
+/obj/item/book/granter/spell/sexonbutton/recoil(mob/user)
+	user.visible_message("<span class='warning'>[src] explodes in a shower of gibs!</span>")
+	new /obj/effect/gibspawner/human/bodypartless(get_turf(src))
+	qdel(src)
 
 ///MARTIAL ARTS///
 
