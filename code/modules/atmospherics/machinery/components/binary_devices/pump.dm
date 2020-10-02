@@ -39,7 +39,6 @@
 /obj/machinery/atmospherics/components/binary/pump/AltClick(mob/user)
 	if(can_interact(user))
 		target_pressure = MAX_OUTPUT_PRESSURE
-		to_chat(user, "<span class='notice'>You maximize the pressure output on [src].</span>")
 		update_icon()
 	return ..()
 

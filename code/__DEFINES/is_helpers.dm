@@ -266,3 +266,5 @@ GLOBAL_LIST_INIT(glass_sheet_types, typecacheof(list(
 
 /// NaN isn't a number, damn it. Infinity is a problem too.
 #define isnum_safe(x) ( isnum((x)) && !isnan((x)) && !isinf((x)) )
+
+#define isspacepod(A) (istype(A, /obj/spacepod))
