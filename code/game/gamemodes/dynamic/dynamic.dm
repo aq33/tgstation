@@ -204,10 +204,10 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 			. += "Gratulacje i podziękowania za wzięcie udziału w programie kosmicznym NT 'Kresy'. Wasza stacja obecnie orbituje wokół wartościowego systemu z dala od stacji zaopatrzeniowych. Niewiele wiadomo o tym regionie kosmosu, a możliwość napotkania nieznanego otwiera drogę do chwały. Zalecane jest podniesienie poziomu ochrony według potrzeb by chronić aktywa Nanotrasen."
 		if(80 to 99)
 			. += "<b>Czarna Orbita</b></center><BR>"
-			. += "Jako część obowiązkowego protokołu bezpieczeństwa, jesteśmy zobowiązani zainformować, że jako wynik waszego ruchu orbitalnego dokładnie za ciałem niebieskim (z punktu naszego najbliżeszego obserwatorium) wasza stacja będzie pod zmniejszonym monitoringiem i wsparciem. Przewidywane jest, że ekstremalna lokacja i trudniejsza komunikacja mogą spowodować zagrożenia bezpieczeństwa. Nie podejmujcie niepotrzebnego ryzyka i próbujcie utrzymać stację w jednym kawałku."
+			. += "Jako część obowiązkowego protokołu bezpieczeństwa, jesteśmy zobowiązani poinformować, że w wyniku waszego ruchu orbitalnego, dokładnie za ciałem niebieskim (z punktu naszego najbliżeszego obserwatorium), wasza stacja będzie pod zmniejszonym nadzorem i wsparciem. Przewidywane jest, że ekstremalna lokacja i trudniejsza komunikacja mogą spowodować zagrożenia bezpieczeństwa. Nie podejmujcie niepotrzebnego ryzyka i próbujcie utrzymać stację w jednym kawałku."
 		if(100)
 			. += "<b>Nadchodzące Piekło</b></center><BR>"
-			. += "Wasza stacja jakimś cudem znalazła się w centrum wrogiego terytorium, na tacy dla wrogów korporacji. Wasze szanse na przeżycie są niskie, a zniszczenie stacji jest przewidywane i niemalże nieuniknione. Zabezpieczcie wszelkie delikatne sprawy i zneutralizujcie każdego wroga jakiego napotkacie. Ważne jest byście chociaż spróbowali utrzymać stację w porządku.<BR>"
+			. += "Wasza stacja jakimś cudem znalazła się w centrum wrogiego terytorium, na tacy dla wrogów korporacji. Wasze szanse na przeżycie są niskie, a zniszczenie stacji jest przewidywane i niemalże nieuniknione. Zabezpieczcie wszelkie wrażliwe materiały i zneutralizujcie każdego wroga jakiego napotkacie. Ważne jest byście chociaż spróbowali utrzymać stację w porządku.<BR>"
 			. += "Powodzenia."
 
 	if(station_goals.len)

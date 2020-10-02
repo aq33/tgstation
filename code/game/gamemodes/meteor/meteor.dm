@@ -41,11 +41,11 @@
 			++survivors
 
 			if(player.onCentCom())
-				survivor_list += "<span class='greentext'>[player.real_name] uciekł na bezpieczną stację Centrali.</span>"
+				survivor_list += "<span class='greentext'>[player.real_name] uciekł/a do bezpiecznej stacji Centrali.</span>"
 			else if(player.onSyndieBase())
-				survivor_list += "<span class='greentext'>[player.real_name] uciekł na (raczej) bezpieczną bazę Syndykatu.</span>"
+				survivor_list += "<span class='greentext'>[player.real_name] uciekł/a do (raczej) bezpiecznej bazy Syndykatu.</span>"
 			else
-				survivor_list += "<span class='neutraltext'>[player.real_name] przeżył ale pozostał na stacji, czekając na pomoc która nigdy nie nadejdzie.</span>"
+				survivor_list += "<span class='neutraltext'>[player.real_name] przeżył/a, ale pozostał na stacji, czekając na pomoc która nigdy nie nadejdzie.</span>"
 
 	if(survivors)
 		return "<div class='panel greenborder'><span class='header'>Poniższe osoby przeżyły deszcz meteorytów:</span><br>[survivor_list.Join("<br>")]</div>"

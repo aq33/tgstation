@@ -102,5 +102,5 @@
 	return ..()
 
 /datum/game_mode/hivemind/generate_report()
-	return "Otrzymaliśmy zgłoszenia aktywności psionicznej z okolic stacji, mamy podejrzenia, że ma to związek z utratą kontaktu na stacji badawczej \[REDACTED\] w zeszłym miesiącu. Placówka trzymała inteligenty umysł zbiorowy posiadający paranormalne umiejętności, który prawdopodobnie uciekł. Umysł Zbiorowy jest wysoce niebezpieczny, potrafi on wchłaniać żyjące istoty do swojego umysłu zbiorowego z łatwością, lecz nie ma to efektu na personel z implantami typu 'mindshield'. "
+	return "Otrzymaliśmy zgłoszenia aktywności psionicznej z okolic stacji, mamy podejrzenia, że ma to związek z przełamaniem zabezpieczeń na stacji badawczej \[ZMIENIONO\] w zeszłym miesiącu. Placówka trzymała inteligenty umysł zbiorowy posiadający paranormalne umiejętności, który prawdopodobnie uciekł. Umysł Zbiorowy jest wysoce niebezpieczny, potrafi on wchłaniać żyjące istoty do swojej struktury z łatwością, lecz zdaje się to nie mieć wpływu na personel z implantami typu 'mindshield'. "
 
