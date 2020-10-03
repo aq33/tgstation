@@ -1209,3 +1209,6 @@
 
 		custom_material.on_applied(src, materials[custom_material] * multiplier, material_flags)
 		custom_materials[custom_material] += materials[custom_material] * multiplier
+
+/atom/proc/container_resist(mob/living/user)
+	return

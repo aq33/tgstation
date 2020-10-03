@@ -70,7 +70,7 @@
 	return ..()
 
 ///Adds overlays to show the reagent contents
-/obj/machinery/plumbing/growing_vat/update_overlays()
+/obj/machinery/plumbing/growing_vat/update_icon()
 	. = ..()
 	if(!reagents.total_volume)
 		return

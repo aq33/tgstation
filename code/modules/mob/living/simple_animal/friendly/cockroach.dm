@@ -31,11 +31,15 @@
 /mob/living/simple_animal/cockroach/attack_ghost(mob/dead/observer/user)
 	. = ..()
 	give_to_ghost(user)
+	add_cell_sample()
 
 /mob/living/simple_animal/cockroach/death(gibbed)
 	if(SSticker.mode && SSticker.mode.station_was_nuked) //If the nuke is going off, then cockroaches are invincible. Keeps the nuke from killing them, cause cockroaches are immune to nukes.
 		return
 	..()
+
+/mob/living/simple_animal/hostile/cockroach/add_cell_sample()
+	AddElement(/datum/element/swabable, CELL_LINE_TABLE_COCKROACH, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 7)
 
 /mob/living/simple_animal/cockroach/Crossed(var/atom/movable/AM)
 	if(ismob(AM))

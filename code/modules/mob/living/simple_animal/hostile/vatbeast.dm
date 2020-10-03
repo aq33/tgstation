@@ -5,7 +5,7 @@
 	icon = 'icons/mob/vatgrowing.dmi'
 	icon_state = "vat_beast"
 	icon_dead = "vat_beast_dead"
-	mob_biotypes = MOB_ORGANIC|MOB_BEAST
+	mob_biotypes = MOB_ORGANIC
 	mob_size = MOB_SIZE_LARGE
 	gender = NEUTER
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
@@ -14,15 +14,12 @@
 	health = 250
 	maxHealth = 250
 	damage_coeff = list(BRUTE = 0.7, BURN = 0.7, TOX = 1, CLONE = 2, STAMINA = 0, OXY = 1)
-	melee_damage_lower = 25
-	melee_damage_upper = 25
+	melee_damage = 25
 	obj_damage = 40
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	attack_sound = 'sound/weapons/punch3.ogg'
-	attack_verb_continuous = "slaps"
-	attack_verb_simple = "slap"
-	food_type = list(/obj/item/reagent_containers/food/snacks/fries, /obj/item/reagent_containers/food/snacks/cheesyfries, /obj/item/reagent_containers/food/snacks/cornchips, /obj/item/reagent_containers/food/snacks/carrotfries)
-	tame_chance = 30
+	attacktext = "slaps"
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/fries, /obj/item/reagent_containers/food/snacks/cheesyfries, /obj/item/reagent_containers/food/snacks/cornchips, /obj/item/reagent_containers/food/snacks/carrotfries)
 
 	var/obj/effect/proc_holder/tentacle_slap/tentacle_slap
 
@@ -36,20 +33,6 @@
 	. = ..()
 	QDEL_NULL(tentacle_slap)
 
-/mob/living/simple_animal/hostile/vatbeast/tamed()
-	. = ..()
-	can_buckle = TRUE
-	buckle_lying = FALSE
-	var/datum/component/riding/riding = LoadComponent(/datum/component/riding)
-	riding.set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(0, 15), TEXT_SOUTH = list(0, 15), TEXT_EAST = list(-10, 15), TEXT_WEST = list(10, 15)))
-	riding.set_vehicle_dir_layer(SOUTH, ABOVE_MOB_LAYER)
-	riding.set_vehicle_dir_layer(NORTH, OBJ_LAYER)
-	riding.set_vehicle_dir_layer(EAST, OBJ_LAYER)
-	riding.set_vehicle_dir_layer(WEST, OBJ_LAYER)
-	riding.drive_verb = "ride"
-	riding.override_allow_spacemove = TRUE
-	faction = list("neutral")
-
 /mob/living/simple_animal/hostile/vatbeast/add_cell_sample()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_VATBEAST, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
@@ -61,7 +44,7 @@
 	action_icon = 'icons/mob/actions/actions_animal.dmi'
 	action_icon_state = "tentacle_slap"
 	action_background_icon_state = "bg_revenant"
-	ranged_mousepointer = 'icons/effects/mouse_pointers/supplypod_target.dmi'
+	ranged_mousepointer = 'icons/effects/supplypod_target.dmi'
 	var/cooldown = 12 SECONDS
 	var/current_cooldown = 0
 

@@ -226,7 +226,6 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "garbage"
 	layer = OBJ_LAYER //To display the decal over wires.
-	beauty = -150
 
 /obj/effect/decal/cleanable/garbage/Initialize()
 	. = ..()

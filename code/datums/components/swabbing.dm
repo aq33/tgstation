@@ -3,7 +3,7 @@
 This component is used in vat growing to swab for microbiological samples which can then be mixed with reagents in a petridish to create a culture plate.
 
 */
-/datum/component/swabbing
+/datum/component/storage/swabbing
 	///The current datums on the swab
 	var/list/swabbed_items
 	///Can we swab objs?
@@ -17,7 +17,7 @@ This component is used in vat growing to swab for microbiological samples which 
 	///Callback for update_overlays()
 	var/datum/callback/update_overlays
 
-/datum/component/swabbing/Initialize(can_swab_objs = TRUE, can_swab_turfs = TRUE, can_swab_mobs = FALSE, datum/callback/update_icons, datum/callback/update_overlays, swab_time = 1 SECONDS, max_items = 3)
+/datum/component/storage/swabbing/Initialize(can_swab_objs = TRUE, can_swab_turfs = TRUE, can_swab_mobs = FALSE, datum/callback/update_icons, datum/callback/update_overlays, swab_time = 1 SECONDS)
 	if(!isitem(parent))
 		return COMPONENT_INCOMPATIBLE
 
@@ -26,13 +26,14 @@ This component is used in vat growing to swab for microbiological samples which 
 	RegisterSignal(parent, COMSIG_ATOM_UPDATE_OVERLAYS, .proc/handle_overlays)
 	RegisterSignal(parent, COMSIG_ATOM_UPDATE_ICON, .proc/handle_icon)
 
+	src.max_items = 1
 	src.can_swab_objs = can_swab_objs
 	src.can_swab_turfs = can_swab_turfs
 	src.can_swab_mobs = can_swab_mobs
 	src.update_icons = update_icons
 	src.update_overlays = update_overlays
 
-/datum/component/swabbing/Destroy()
+/datum/component/storage/swabbing/Destroy()
 	. = ..()
 	for(var/swabbed in swabbed_items)
 		qdel(swabbed)
@@ -41,7 +42,7 @@ This component is used in vat growing to swab for microbiological samples which 
 
 
 ///Changes examine based on your sample
-/datum/component/swabbing/proc/examine(datum/source, mob/user, list/examine_list)
+/datum/component/storage/swabbing/proc/examine(datum/source, mob/user, list/examine_list)
 	if(LAZYLEN(swabbed_items))
 		examine_list += "<span class='nicegreen'>There is a microbiological sample on [parent]!</span>"
 		examine_list += "<span class='notice'>You can see the following micro-organisms:</span>\n"
@@ -52,7 +53,7 @@ This component is used in vat growing to swab for microbiological samples which 
 				examine_list += MO.get_details()
 
 ///Ran when you attack an object, tries to get a swab of the object. if a swabbable surface is found it will run behavior and hopefully
-/datum/component/swabbing/proc/try_to_swab(datum/source, atom/target, mob/user, params)
+/datum/component/storage/swabbing/proc/try_to_swab(datum/source, atom/target, mob/user, params)
 	set waitfor = FALSE //This prevents do_after() from making this proc not return it's value.
 
 	if(istype(target, /obj/structure/table))//help how do i do this less shitty
@@ -111,7 +112,7 @@ This component is used in vat growing to swab for microbiological samples which 
 	parent_item.update_icon()
 
 ///Checks if the swabbing component can swab the specific object or nots
-/datum/component/swabbing/proc/can_swab(atom/target)
+/datum/component/storage/swabbing/proc/can_swab(atom/target)
 	if(isobj(target))
 		return can_swab_objs
 	if(isturf(target))
@@ -120,9 +121,9 @@ This component is used in vat growing to swab for microbiological samples which 
 		return can_swab_mobs
 
 ///Handle any special overlay cases on the item itself
-/datum/component/swabbing/proc/handle_overlays(datum/source, list/overlays)
+/datum/component/storage/swabbing/proc/handle_overlays(datum/source, list/overlays)
 	update_overlays?.Invoke(overlays, swabbed_items)
 
 ///Handle any special icon cases on the item itself
-/datum/component/swabbing/proc/handle_icon(datum/source)
+/datum/component/storage/swabbing/proc/handle_icon(datum/source)
 	update_icons?.Invoke(swabbed_items)

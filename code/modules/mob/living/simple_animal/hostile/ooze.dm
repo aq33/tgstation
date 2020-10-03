@@ -15,12 +15,10 @@
 	minbodytemp = 250
 	maxbodytemp = INFINITY
 	faction = list("slime")
-	melee_damage_lower = 10
-	melee_damage_upper = 10
+	melee_damage = 10
 	health = 200
 	maxHealth = 200
-	attack_verb_continuous = "slimes"
-	attack_verb_simple = "slime"
+	attacktext = "slimes"
 	attack_sound = 'sound/effects/blobattack.ogg'
 	a_intent = INTENT_HARM
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
@@ -36,7 +34,7 @@
 	. = ..()
 	create_reagents(300)
 	add_cell_sample()
-	AddComponent(/datum/component/footstep, FOOTSTEP_MOB_SLIME, 7.5)
+	AddComponent(/datum/component/footstep, 6, 7.5)
 
 /mob/living/simple_animal/hostile/ooze/attacked_by(obj/item/I, mob/living/user)
 	if(!check_edible(I))
@@ -110,8 +108,7 @@
 	desc = "A cubic ooze native to Sholus VII.\nSince the advent of space travel this species has established itself in the waste treatment facilities of several space colonies.\nIt is often considered to be the third most infamous invasive species due to its highly agressive and predatory nature."
 	speed = 1
 	damage_coeff = list(BRUTE = 1, BURN = 0.6, TOX = 0.5, CLONE = 1.5, STAMINA = 0, OXY = 1)
-	melee_damage_lower = 20
-	melee_damage_upper = 20
+	melee_damage = 20
 	armour_penetration = 15
 	obj_damage = 20
 	deathmessage = "collapses into a pile of goo!"
@@ -134,7 +131,7 @@
 	QDEL_NULL(consume)
 
 ///If this mob gets resisted by something, its trying to escape consumption.
-/mob/living/simple_animal/hostile/ooze/gelatinous/container_resist_act(mob/living/user)
+/mob/living/simple_animal/hostile/ooze/gelatinous/container_resist(mob/living/user)
 	. = ..()
 	if(!do_after(user, 6 SECONDS)) //6 second struggle
 		return FALSE
@@ -170,7 +167,7 @@
 	if(!.)
 		return
 	var/mob/living/simple_animal/hostile/ooze/ooze = owner
-	ooze.add_movespeed_modifier(/datum/movespeed_modifier/metabolicboost)
+	ooze.add_movespeed_modifier(multiplicative_slowdown = -1.5)
 	var/timerid = addtimer(CALLBACK(src, .proc/HeatUp), 1 SECONDS, TIMER_STOPPABLE | TIMER_LOOP) //Heat up every second
 	addtimer(CALLBACK(src, .proc/FinishSpeedup, timerid), 6 SECONDS)
 	to_chat(ooze, "<span class='notice'>You start feel a lot quicker.</span>")
@@ -185,7 +182,7 @@
 ///Remove the speed modifier and delete the timer for heating up
 /datum/action/cooldown/metabolicboost/proc/FinishSpeedup(timerid)
 	var/mob/living/simple_animal/hostile/ooze/ooze = owner
-	ooze.remove_movespeed_modifier(/datum/movespeed_modifier/metabolicboost)
+	ooze.remove_movespeed_modifier(multiplicative_slowdown = -1.5)
 	to_chat(ooze, "<span class='notice'>You start slowing down again.</span>")
 	deltimer(timerid)
 	active = FALSE
@@ -265,7 +262,7 @@
 
 ///On owner death dump the current vored mob
 /datum/action/consume/proc/on_owner_death()
-	SIGNAL_HANDLER
+	SHOULD_NOT_SLEEP(TRUE)
 	stop_consuming()
 
 
@@ -281,8 +278,7 @@
 	health = 200
 	maxHealth = 200
 	damage_coeff = list(BRUTE = 1, BURN = 0.8, TOX = 0.5, CLONE = 1.5, STAMINA = 0, OXY = 1)
-	melee_damage_lower = 12
-	melee_damage_upper = 12
+	melee_damage = 12
 	obj_damage = 15
 	deathmessage = "deflates and spills its vital juices!"
 	///The ability lets you envelop a carbon in a healing cocoon. Useful for saving critical carbons.
@@ -360,10 +356,10 @@
 		return
 
 	ooze.visible_message("<span class='nicegreen>[ooze] launches a mending globule!</span>", "<span class='notice'>You launch a mending globule.</span>")
-	var/obj/projectile/globule/globule = new (ooze.loc)
-	globule.preparePixelProjectile(target, ooze, params)
-	globule.def_zone = ooze.zone_selected
-	globule.fire()
+	var/obj/item/projectile/globule/C = new (ooze.loc)
+	C.preparePixelProjectile(target, ooze, params)
+	C.def_zone = ooze.zone_selected
+	C.fire()
 	ooze.adjust_ooze_nutrition(-5)
 	remove_ranged_ability()
 	current_cooldown = world.time + cooldown
@@ -374,13 +370,9 @@
 	remove_ranged_ability()
 
 ///This projectile embeds into mobs and heals them over time.
-/obj/projectile/globule
+/obj/item/projectile/globule
 	name = "mending globule"
 	icon_state = "glob_projectile"
-	shrapnel_type = /obj/item/mending_globule
-	embedding = list("embed_chance" = 100, ignore_throwspeed_threshold = TRUE, "pain_mult" = 0, "jostle_pain_mult" = 0, "fall chance" = 0.5)
-	nodamage = TRUE
-	damage = 0
 
 ///This item is what is embedded into the mob, and actually handles healing of mending globules
 /obj/item/mending_globule
@@ -395,18 +387,6 @@
 /obj/item/mending_globule/Destroy()
 	. = ..()
 	bodypart = null
-
-/obj/item/mending_globule/embedded(mob/living/carbon/human/embedded_mob, obj/item/bodypart/part)
-	. = ..()
-	if(!istype(part))
-		return
-	bodypart = part
-	START_PROCESSING(SSobj, src)
-
-/obj/item/mending_globule/unembedded()
-	. = ..()
-	bodypart = null
-	STOP_PROCESSING(SSobj, src)
 
 ///Handles the healing of the mending globule
 /obj/item/mending_globule/process()
@@ -471,7 +451,7 @@
 		dump_inhabitant(FALSE)
 	return ..()
 
-/obj/structure/gel_cocoon/container_resist_act(mob/living/user)
+/obj/structure/gel_cocoon/container_resist(mob/living/user)
 	. = ..()
 	user.visible_message("<span class='notice'>You see [user] breaking out of [src]!</span>", \
 		"<span class='notice'>You start tearing the soft tissue of the gel cocoon</span>")

@@ -17,6 +17,14 @@
 	a_intent = INTENT_HARM
 	var/mob/camera/blob/overmind = null
 	var/obj/structure/blob/factory/factory = null
+	var/independent = FALSE
+
+/mob/living/simple_animal/hostile/blob/Initialize()
+	. = ..()
+	if(!independent) //no pulling people deep into the blob
+		remove_verb(src, /mob/living/verb/pulled)
+	else
+		pass_flags &= ~PASSBLOB
 
 /mob/living/simple_animal/hostile/blob/update_icons()
 	if(overmind)
@@ -233,7 +241,6 @@
 	see_in_dark = 8
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	hud_type = /datum/hud/blobbernaut
-	var/independent = FALSE
 
 /mob/living/simple_animal/hostile/blob/blobbernaut/Initialize()
 	. = ..()

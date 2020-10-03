@@ -28,7 +28,7 @@
 	to_chat(user, "<span class='notice'>You wash the sample out of [src].</span>")
 	sample = null
 
-/obj/item/petri_dish/update_overlays()
+/obj/item/petri_dish/update_icon()
 	. = ..()
 	if(!sample)
 		return

@@ -37,7 +37,7 @@
 							/datum/reagent/consumable/eggyolk = 1,
 							/datum/reagent/consumable/nutriment/vitamin = 2)
 
-	suppressive_reagents = list(/datum/reagent/fuel/oil = -4,
+	suppressive_reagents = list(/datum/reagent/oil = -4,
 								/datum/reagent/toxin = -2)
 
 	virus_suspectibility = 1
@@ -124,7 +124,7 @@
 	required_reagents = list(
 						/datum/reagent/consumable/nutriment/protein,
 						/datum/reagent/liquidgibs,
-						/datum/reagent/medicine/c2/synthflesh) //Nuke this if the dispenser becomes xenobio meta.
+						/datum/reagent/medicine/synthflesh) //Nuke this if the dispenser becomes xenobio meta.
 
 	supplementary_reagents = list(
 						/datum/reagent/consumable/honey = 8, //Hunny.
@@ -164,7 +164,7 @@
 	desc = "Cartilaginous cyprinid cells"
 	required_reagents = list(
 						/datum/reagent/consumable/nutriment/protein,
-						/datum/reagent/medicine/c2/synthflesh,
+						/datum/reagent/medicine/synthflesh,
 						/datum/reagent/consumable/nutriment)
 
 	supplementary_reagents = list(
@@ -241,7 +241,7 @@
 	desc = "Blobular myocytes"
 	required_reagents = list(
 	 					/datum/reagent/consumable/nutriment/protein,
-	 					/datum/reagent/medicine/c2/synthflesh,
+	 					/datum/reagent/medicine/synthflesh,
 	 					/datum/reagent/sulfur) //grind flares to get this
 
 	supplementary_reagents = list(
@@ -265,7 +265,6 @@
 						/datum/reagent/consumable/enzyme) //Powerful enzymes helps the cube digest prey.
 
 	supplementary_reagents = list(
-						/datum/reagent/water/hollowwater = 4,
 						/datum/reagent/consumable/corn_syrup = 3,
 						/datum/reagent/gold = 2, //This is why they eat so many adventurers.
 						/datum/reagent/consumable/nutriment/peptides = 2,
@@ -366,7 +365,7 @@
 
 	suppressive_reagents = list(
 						/datum/reagent/consumable/sodiumchloride = -3,
-						/datum/reagent/medicine/c2/syriniver = -2)
+						/datum/reagent/medicine/synaptizine = -2)
 	virus_suspectibility = 0.5
 	resulting_atoms = list(/mob/living/simple_animal/hostile/vatbeast = 1)
 
