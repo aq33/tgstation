@@ -4,6 +4,7 @@
 	var/centerspawner = TRUE
 	var/meta_engines = list("_maps/RandomEngines/meta_supermatter.dmm", "_maps/RandomEngines/meta_singulo.dmm", "_maps/RandomEngines/meta_tesla.dmm", "_maps/RandomEngines/meta_teg.dmm", "_maps/RandomEngines/meta_stormdrive.dmm")
 	var/kilo_engines = list("_maps/RandomEngines/kilo_supermatter.dmm", "_maps/RandomEngines/kilo_singulo.dmm",  "_maps/RandomEngines/kilo_tesla.dmm", "_maps/RandomEngines/kilo_teg.dmm", "_maps/RandomEngines/kilo_stormdrive.dmm")
+	var/pubby_engines = list("_maps/RandomEngines/pubby_supermatter.dmm", "_maps/RandomEngines/pubby_singulo.dmm",  "_maps/RandomEngines/pubby_tesla.dmm", "_maps/RandomEngines/pubby_teg.dmm")
 
 /datum/map_template/random_engine/engine/New()
 	switch(SSmapping.config?.map_name)
@@ -11,6 +12,8 @@
 			mappath = pick(meta_engines)
 		if("Kilo Station")
 			mappath = pick(kilo_engines)
+		if("PubbyStation")
+			mappath = pick(pubby_engines)
 
 /datum/map_template/random_engine/engine
 	name = "Supermatter engine"
