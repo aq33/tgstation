@@ -255,7 +255,7 @@
 /area/awaymission/spacebattle/syndicate2)
 "bk" = (
 /obj/machinery/door/poddoor{
-	icon_state = "pdoor1";
+	icon_state = "closed";
 	id = "spacebattlepod3";
 	name = "Front Hull Door";
 	opacity = 1

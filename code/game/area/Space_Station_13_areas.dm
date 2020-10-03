@@ -1004,7 +1004,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/checkpoint/customs/auxiliary
 	icon_state = "customs_point_aux"
 
-
 //Service
 
 /area/quartermaster
@@ -1339,3 +1338,13 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/maintenance/external/port/bow
 	name = "Górna Śluza Zewnętrznej Powłoki Bakburta"
+
+//Spacepods
+
+/area/escapepodbay
+	name = "Hol hangaru kapsuł ratunkowych"
+	icon_state = "escape"
+
+/area/security/podbay
+	name = "Hangar kapsuł kosmicznych ochrony"
+	icon_state = "security"
