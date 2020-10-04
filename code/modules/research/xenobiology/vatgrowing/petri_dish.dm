@@ -36,9 +36,9 @@
 	var/mutable_appearance/base_overlay = mutable_appearance(icon, "petri_dish_overlay")
 	base_overlay.appearance_flags = RESET_COLOR
 	base_overlay.color = reagentcolor
-	. += base_overlay
+	add_overlay(base_overlay)
 	var/mutable_appearance/overlay2 = mutable_appearance(icon, "petri_dish_overlay2")
-	. += overlay2
+	add_overlay(overlay2)
 
 /obj/item/petri_dish/proc/deposit_sample(user, var/datum/biological_sample/deposited_sample)
 	sample = deposited_sample
