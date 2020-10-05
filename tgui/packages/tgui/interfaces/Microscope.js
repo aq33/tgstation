@@ -87,7 +87,7 @@ const Organisms = (props, context) => {
     );
   });
 };
-/*
+
 const Viruses = (props, context) => {
   const { viruses } = props;
   const { act } = useBackend(context);
