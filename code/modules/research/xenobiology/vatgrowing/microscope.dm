@@ -5,7 +5,7 @@
 	icon_state = "microscope"
 	var/obj/item/petri_dish/current_dish
 
-/obj/structure/microscope/attacked_by(obj/item/I, mob/living/user)
+/obj/structure/microscope/attackby(obj/item/I, mob/user, params)
 	if(!istype(I, /obj/item/petri_dish))
 		return ..()
 	if(current_dish)
@@ -14,6 +14,7 @@
 	to_chat(user, "<span class='notice'>You put [I] into \the [src].</span>")
 	current_dish = I
 	current_dish.forceMove(src)
+	. = TRUE //no afterattack
 
 /obj/structure/microscope/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)

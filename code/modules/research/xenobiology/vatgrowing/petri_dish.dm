@@ -21,12 +21,13 @@
 		var/datum/micro_organism/MO = i
 		. += MO.get_details()
 
-/obj/item/petri_dish/pre_attack(atom/A, mob/living/user, params)
-	. = ..()
-	if(sample && istype(A, /obj/structure/sink))
+/obj/item/petri_dish/attack_obj(obj/O, mob/living/user)
+	if(sample && istype(O, /obj/structure/sink))
 		to_chat(user, "<span class='notice'>You wash the sample out of [src].</span>")
 		sample = null
 		cut_overlays()
+	else
+		return ..()
 
 /obj/item/petri_dish/update_icon()
 	. = ..()
