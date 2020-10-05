@@ -1,20 +1,22 @@
 /mob/living/simple_animal/hostile/treant
 	name = "Treant"
-	desc = "Ktoś w tym jest!"
-	icon_state = "venus_human_trap"
-	icon_living = "venus_human_trap"
-	icon_dead = "old_dead"
+	desc = "Lynch botanist!"
+	icon = 'icons/mob/treants.dmi'
+	icon_state = "treant1"
+	icon_living = "treant1"
+	icon_dead = "treant2"
+
 	gender = NEUTER
 	speak_chance = 0
 	turns_per_move = 5
-	maxHealth = 50
+	maxHealth = 20
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
-	health = 50
+	health = 20
 	see_in_dark = 3
 	response_help  = "prods"
 	response_disarm = "pushes aside"
 	response_harm   = "smacks"
-	melee_damage = 5
+	melee_damage = 15
 	attacktext = "slams"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	ventcrawler = VENTCRAWLER_ALWAYS
@@ -22,7 +24,7 @@
 
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 150
-	maxbodytemp = 500
+	maxbodytemp = 300
 	gold_core_spawnable = HOSTILE_SPAWN
 
 /mob/living/simple_animal/hostile/treant/Initialize()

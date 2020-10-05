@@ -661,7 +661,6 @@
 		new /mob/living/simple_animal/hostile/treant(T)
 		new /mob/living/simple_animal/hostile/treant(T)
 		new /mob/living/simple_animal/hostile/treant(T)
-		new /mob/living/simple_animal/hostile/treant(T)
 
 /obj/item/projectile/magic/aoe/fireball
 	name = "bolt of fireball"
