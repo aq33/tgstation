@@ -372,7 +372,7 @@ GLOBAL_LIST_INIT(fluid_duct_recipes, list(
 		if(istype(A, /obj/item/pipe))
 			var/obj/item/pipe/P = A
 			if(!P.disposable)
-				to_chat(usr, "<span class='warning'>[src] is too valuable to dispose of!</span>")
+				to_chat(usr, "<span class='warning'>\the [P] is too valuable to dispose of!</span>")
 				return
 		to_chat(user, "<span class='notice'>You start destroying a pipe...</span>")
 		playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
