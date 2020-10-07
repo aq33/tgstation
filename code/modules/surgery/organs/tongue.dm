@@ -234,6 +234,16 @@
 	. = ..()
 	languages_possible = languages_possible_base += typecacheof(/datum/language/machine) + typecacheof(/datum/language/voltaic)
 
+/obj/item/organ/tongue/robot/synth
+	name = "advanced robotic voicebox"
+	desc = "A voice synthesizer capable of realistic speech."
+	status = ORGAN_ROBOTIC
+	icon_state = "tonguerobot"
+	say_mod = null
+	attack_verb = list("beeped", "booped")
+	modifies_speech = FALSE
+	taste_sensitivity = 25 // not as good as an organic tongue
+
 /obj/item/organ/tongue/bee
 	name = "proboscis"
 	desc = "A freakish looking meat tube that apparently can take in liquids, this one smells slighlty like flowers."
