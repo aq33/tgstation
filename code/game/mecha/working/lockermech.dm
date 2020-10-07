@@ -9,7 +9,7 @@
 	lights_power = 5
 	armor = list("melee" = 20, "bullet" = 10, "laser" = 10, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 60)
 	max_equip = 2
-	wreckage = /obj/item/stack/sheet/iron/ten //Mech doslownie ledwo sie trzyma, po zniszczeniu rozpada sie na kawalki
+	wreckage = null //Mech doslownie ledwo sie trzyma, po zniszczeniu rozpada sie na kawalki
 	internals_req_access = null //Smieciowa elektronika nie posiada zabezpieczeń
 	enter_delay = 60 //Zrobiony ze zlomu, nie posiada wygodnego wejscia/wyjscia
 	exit_delay = 30 //Wchodzi/wychodzi sie z niego 50% dluzej 

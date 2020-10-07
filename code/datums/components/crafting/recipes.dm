@@ -245,7 +245,7 @@
 	tools = list(TOOL_WIRECUTTER)
 	reqs = list(/obj/item/stack/cable_coil = 5,
 				/obj/item/storage/toolbox = 1,
-				/obj/item/surgicaldrill = 1)
+				/obj/item/screwdriver = 1)
 	time = 50
 	category = CAT_ROBOT
 
