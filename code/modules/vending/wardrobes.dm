@@ -161,7 +161,11 @@
 					/obj/item/clothing/head/beret/sci = 2)
 
 	contraband = list(/obj/item/clothing/suit/hooded/techpriest = 2,
-					/obj/item/organ/tongue/robot = 2)
+					/obj/item/organ/tongue/robot = 2,
+					/obj/item/clothing/under/costume/mech_suit/white = 2,
+					/obj/item/clothing/under/costume/mech_suit/blue = 2,
+					/obj/item/clothing/under/costume/mech_suit = 2)
+
 	refill_canister = /obj/item/vending_refill/wardrobe/robo_wardrobe
 	extra_price = 300
 	payment_department = ACCOUNT_SCI
@@ -233,6 +237,7 @@
 					/obj/item/storage/bag/books = 1,
 					/obj/item/clothing/under/plasmaman/curator = 1,
 					/obj/item/clothing/head/helmet/space/plasmaman/replacement/curator = 1)
+	contraband = list(/obj/item/book/granter/spell/sexonbutton = 1)
 	refill_canister = /obj/item/vending_refill/wardrobe/curator_wardrobe
 	payment_department = ACCOUNT_CIV
 /obj/item/vending_refill/wardrobe/curator_wardrobe

@@ -43,6 +43,7 @@ Contains:
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/deathsquad
 	dog_fashion = /datum/dog_fashion/back/deathsquad
+	blocks_shove_knockdown = TRUE
 
 	//NEW SWAT suit
 /obj/item/clothing/suit/space/swat
