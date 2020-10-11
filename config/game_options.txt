@@ -474,8 +474,8 @@ ROUNDSTART_RACES apid
 #ROUNDSTART_RACES synth
 
 ## Races that are straight upgrades. If these are on expect powergamers to always pick them
-#ROUNDSTART_RACES skeleton
-#ROUNDSTART_RACES zombie
+ROUNDSTART_RACES skeleton
+ROUNDSTART_RACES zombie
 #ROUNDSTART_RACES slime
 #ROUNDSTART_RACES pod
 #ROUNDSTART_RACES military_synth
