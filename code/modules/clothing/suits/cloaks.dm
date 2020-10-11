@@ -81,6 +81,7 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	transparent_protection = HIDEGLOVES|HIDESUITSTORAGE|HIDEJUMPSUIT|HIDESHOES
+	blocks_shove_knockdown = TRUE
 
 /obj/item/clothing/head/hooded/cloakhood/drake
 	name = "drake helm"
