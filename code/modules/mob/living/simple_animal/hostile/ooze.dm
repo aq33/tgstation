@@ -167,7 +167,7 @@
 	if(!.)
 		return
 	var/mob/living/simple_animal/hostile/ooze/ooze = owner
-	ooze.add_movespeed_modifier(multiplicative_slowdown = -1.5)
+	ooze.add_movespeed_modifier(id = MOVESPEED_ID_OOZE, multiplicative_slowdown = -1.5)
 	var/timerid = addtimer(CALLBACK(src, .proc/HeatUp), 1 SECONDS, TIMER_STOPPABLE | TIMER_LOOP) //Heat up every second
 	addtimer(CALLBACK(src, .proc/FinishSpeedup, timerid), 6 SECONDS)
 	to_chat(ooze, "<span class='notice'>You start feel a lot quicker.</span>")
@@ -182,7 +182,7 @@
 ///Remove the speed modifier and delete the timer for heating up
 /datum/action/cooldown/metabolicboost/proc/FinishSpeedup(timerid)
 	var/mob/living/simple_animal/hostile/ooze/ooze = owner
-	ooze.remove_movespeed_modifier(multiplicative_slowdown = -1.5)
+	ooze.remove_movespeed_modifier(MOVESPEED_ID_OOZE)
 	to_chat(ooze, "<span class='notice'>You start slowing down again.</span>")
 	deltimer(timerid)
 	active = FALSE
@@ -262,7 +262,6 @@
 
 ///On owner death dump the current vored mob
 /datum/action/consume/proc/on_owner_death()
-	SHOULD_NOT_SLEEP(TRUE)
 	stop_consuming()
 
 
