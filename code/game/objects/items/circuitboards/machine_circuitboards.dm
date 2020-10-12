@@ -1131,3 +1131,4 @@
 	build_path = /obj/machinery/power/battery
 	req_components = list(
 		/obj/item/stock_parts/capacitor = 5)
+
