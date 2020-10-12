@@ -58,7 +58,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/dark,
+/obj/machinery/atmospherics/pipe/simple/dark/visible,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "eR" = (
@@ -72,7 +72,7 @@
 /turf/open/floor/engine,
 /area/engine/engineering)
 "gc" = (
-/obj/machinery/atmospherics/pipe/simple/dark{
+/obj/machinery/atmospherics/pipe/simple/dark/visible{
 	dir = 9
 	},
 /turf/open/floor/engine,
@@ -116,20 +116,20 @@
 /area/engine/engineering)
 "jl" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/dark{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/dark/visible{
+	dir = 8
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "jw" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/effect/turf_decal/delivery,
-/obj/machinery/atmospherics/pipe/simple/dark,
+/obj/machinery/atmospherics/pipe/simple/dark/visible,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "kj" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
-/obj/machinery/atmospherics/pipe/simple/dark,
+/obj/machinery/atmospherics/pipe/simple/dark/visible,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "kq" = (
@@ -153,7 +153,7 @@
 /turf/open/floor/engine,
 /area/engine/engineering)
 "mo" = (
-/obj/machinery/atmospherics/pipe/simple/dark,
+/obj/machinery/atmospherics/pipe/simple/dark/visible,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "mB" = (
@@ -166,8 +166,8 @@
 /obj/machinery/door/poddoor{
 	id = "burnrelease"
 	},
-/obj/machinery/atmospherics/pipe/simple/dark{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/dark/visible{
+	dir = 8
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
@@ -175,8 +175,8 @@
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/dark{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/dark/visible{
+	dir = 8
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
@@ -217,7 +217,7 @@
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/dark,
+/obj/machinery/atmospherics/pipe/simple/dark/visible,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "st" = (
@@ -242,8 +242,8 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "burnchamb"
 	},
-/obj/machinery/atmospherics/pipe/simple/dark{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/dark/visible{
+	dir = 8
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
@@ -335,7 +335,7 @@
 	dir = 1;
 	pixel_y = -11
 	},
-/obj/machinery/atmospherics/pipe/simple/dark,
+/obj/machinery/atmospherics/pipe/simple/dark/visible,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "zm" = (
@@ -345,7 +345,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/dark,
+/obj/machinery/atmospherics/pipe/simple/dark/visible,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "zG" = (
@@ -380,21 +380,21 @@
 /area/engine/engineering)
 "Ds" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/machinery/atmospherics/pipe/simple/dark{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/dark/visible{
+	dir = 8
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "Du" = (
-/obj/machinery/atmospherics/pipe/simple/dark{
+/obj/machinery/atmospherics/pipe/simple/dark/visible{
 	dir = 6
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "Dx" = (
 /obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/dark{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/dark/visible{
+	dir = 8
 	},
 /turf/open/space/basic,
 /area/engine/engineering)
@@ -492,8 +492,8 @@
 /area/engine/engineering)
 "Jx" = (
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple,
-/obj/machinery/atmospherics/pipe/simple/purple{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 4
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
@@ -515,8 +515,8 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "burnchamb"
 	},
-/obj/machinery/atmospherics/pipe/simple/purple{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 4
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
@@ -570,8 +570,8 @@
 /turf/open/floor/engine,
 /area/engine/engineering)
 "Qc" = (
-/obj/machinery/atmospherics/pipe/simple/dark{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/dark/visible{
+	dir = 8
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
