@@ -77,6 +77,9 @@
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		restricted_jobs += "Assistant"
 
+	if(CONFIG_GET(flag/protect_heads_from_antagonist))
+		restricted_jobs += GLOB.command_positions
+
 	var/num_hosts = max( 1 , rand(0,1) + min(8, round(num_players() / 8) ) ) //1 host for every 8 players up to 64, with a 50% chance of an extra
 
 	for(var/j = 0, j < num_hosts, j++)
@@ -102,6 +105,5 @@
 	return ..()
 
 /datum/game_mode/hivemind/generate_report()
-	return "Reports of psychic activity have been showing up in this sector, and we believe this may have to do with a containment breach on \[REDACTED\] last month \
-		when a sapient hive intelligence displaying paranormal powers escaped into the unknown. They present a very large risk as they can assimilate people into \
-		the hivemind with ease, although they appear unable to affect mindshielded personnel."
+	return "Otrzymaliśmy zgłoszenia aktywności psionicznej z okolic stacji, mamy podejrzenia, że ma to związek z przełamaniem zabezpieczeń na stacji badawczej \[ZMIENIONO\] w zeszłym miesiącu. Placówka trzymała inteligenty umysł zbiorowy posiadający paranormalne umiejętności, który prawdopodobnie uciekł. Umysł Zbiorowy jest wysoce niebezpieczny, potrafi on wchłaniać żyjące istoty do swojej struktury z łatwością, lecz zdaje się to nie mieć wpływu na personel z implantami typu 'mindshield'. "
+

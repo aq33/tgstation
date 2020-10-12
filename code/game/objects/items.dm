@@ -579,6 +579,8 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		qdel(src)
 	item_flags &= ~IN_INVENTORY
 	SEND_SIGNAL(src, COMSIG_ITEM_DROPPED,user)
+	if(item_flags & SLOWS_WHILE_IN_HAND)
+		user.update_equipment_speed_mods()
 	if(!silent)
 		playsound(src, drop_sound, DROP_SOUND_VOLUME, ignore_walls = FALSE)
 	remove_outline()
@@ -603,6 +605,8 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		var/datum/action/A = X
 		if(item_action_slot_check(slot, user)) //some items only give their actions buttons when in a specific slot.
 			A.Grant(user)
+	if(item_flags & SLOWS_WHILE_IN_HAND || slowdown)
+		user.update_equipment_speed_mods()
 	item_flags |= IN_INVENTORY
 	if(!initial)
 		if(equip_sound &&(slot_flags & slotdefine2slotbit(slot)))
@@ -922,7 +926,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	remove_outline()
 
 /obj/item/proc/apply_outline(colour = null)
-	if(!(item_flags & IN_INVENTORY || item_flags & IN_STORAGE) || QDELETED(src))
+	if(!(item_flags & IN_INVENTORY || item_flags & IN_STORAGE) || QDELETED(src) || isobserver(usr))
 		return
 	if(usr.client)
 		if(!usr.client.prefs.outline_enabled)

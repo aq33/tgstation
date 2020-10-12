@@ -76,7 +76,7 @@
 
 /datum/emote/living/carbon/sign/select_param(mob/user, params)
 	. = ..()
-	if(!isnum(text2num(params)))
+	if(!isnum_safe(text2num(params)))
 		return message
 
 /datum/emote/living/carbon/sign/signal
@@ -97,5 +97,5 @@
 	message = "winks."
 
 /datum/emote/living/carbon/wink/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		return 'sound/misc/wink.ogg'

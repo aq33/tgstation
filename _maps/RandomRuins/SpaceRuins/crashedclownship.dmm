@@ -164,6 +164,10 @@
 	},
 /turf/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
+"P" = (
+/obj/machinery/bluespace_beacon,
+/turf/open/floor/mineral/bananium/airless,
+/area/ruin/unpowered)
 
 (1,1,1) = {"
 a
@@ -478,7 +482,7 @@ a
 d
 n
 n
-h
+P
 d
 b
 b

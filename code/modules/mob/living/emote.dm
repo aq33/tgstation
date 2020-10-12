@@ -23,7 +23,7 @@
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/burp/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		return 'sound/misc/burp.ogg'
 
 /datum/emote/living/choke
@@ -33,7 +33,7 @@
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/choke/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		return 'sound/misc/choke.ogg'
 
 /datum/emote/living/cross
@@ -72,7 +72,7 @@
 		return FALSE
 
 /datum/emote/living/cough/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		return 'sound/misc/cough.ogg'
 
 /datum/emote/living/dance
@@ -137,14 +137,8 @@
 	. = ..()
 	if(. && ishuman(user))
 		var/mob/living/carbon/human/H = user
-		var/open = FALSE
-		if(H.dna.features["wings"] != "None")
-			if("wingsopen" in H.dna.species.mutant_bodyparts)
-				open = TRUE
-				H.CloseWings()
-			else
-				H.OpenWings()
-			addtimer(CALLBACK(H, open ? /mob/living/carbon/human.proc/OpenWings : /mob/living/carbon/human.proc/CloseWings), wing_time)
+		if(H.Togglewings())
+			addtimer(CALLBACK(H,/mob/living/carbon/human.proc/Togglewings), wing_time)
 
 /datum/emote/living/flap/aflap
 	key = "aflap"
@@ -172,7 +166,7 @@
 	stat_allowed = UNCONSCIOUS
 
 /datum/emote/living/gasp/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		return 'sound/misc/gasp.ogg'
 
 /datum/emote/living/giggle
@@ -201,7 +195,7 @@
 	message_mime = "appears to groan!"
 
 /datum/emote/living/groan/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		return 'sound/misc/groan.ogg'
 
 /datum/emote/living/grimace
@@ -223,7 +217,7 @@
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/kiss/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		return 'sound/misc/kiss.ogg'
 
 /datum/emote/living/laugh
@@ -241,7 +235,7 @@
 		return !C.silent
 
 /datum/emote/living/laugh/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		var/mob/living/carbon/human/H = user
 		if(H.dna.species.id == "human" && (!H.mind || !H.mind.miming))
 			if(user.gender == FEMALE)
@@ -270,7 +264,7 @@
 
 /datum/emote/living/point/run_emote(mob/user, params, type_override, intentional)
 	message_param = initial(message_param) // reset
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		var/mob/living/carbon/human/H = user
 		if(H.get_num_arms() == 0)
 			if(H.get_num_legs() != 0)
@@ -325,7 +319,7 @@
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/sigh/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		return 'sound/misc/sigh.ogg'
 
 /datum/emote/living/sit
@@ -345,7 +339,7 @@
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/sneeze/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		return 'sound/misc/sneeze.ogg'
 
 /datum/emote/living/smug
@@ -360,7 +354,7 @@
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/sniff/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		return 'sound/misc/sniff.ogg'
 
 /datum/emote/living/snore
@@ -372,7 +366,7 @@
 	stat_allowed = UNCONSCIOUS
 
 /datum/emote/living/snore/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		return 'sound/misc/snore.ogg'
 
 /datum/emote/living/stare
@@ -445,7 +439,7 @@
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/yawn/get_sound(mob/living/user)
-	if(ishuman(user) && !user.mind.miming)
+	if(user.mind && ishuman(user) && !user.mind.miming)
 		return 'sound/misc/yawn.ogg'
 
 /datum/emote/living/custom

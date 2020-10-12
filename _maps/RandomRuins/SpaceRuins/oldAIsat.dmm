@@ -612,6 +612,7 @@
 /obj/item/reagent_containers/syringe/lethal{
 	pixel_y = 4
 	},
+/obj/machinery/bluespace_beacon,
 /turf/open/floor/plasteel/airless/dark,
 /area/tcommsat/oldaisat)
 "cc" = (

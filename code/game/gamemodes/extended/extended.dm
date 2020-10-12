@@ -23,7 +23,7 @@
 	return 1
 
 /datum/game_mode/extended/generate_report()
-	return "The transmission mostly failed to mention your sector. It is possible that there is nothing in the Syndicate that could threaten your station during this shift."
+	return "W transmisji nie było wzmianek na temat waszego sektora. Istnieje możliwość że wasza stacja nie jest w zasięgu interesów Syndykatu i waszej stacji nic nie zagraża."
 
 /datum/game_mode/extended/generate_station_goals()
 	if(secret)
@@ -36,4 +36,4 @@
 /datum/game_mode/extended/send_intercept(report = 0)
 	if(secret)
 		return ..()
-	priority_announce("Thanks to the tireless efforts of our security and intelligence divisions, there are currently no credible threats to [station_name()]. All station construction projects have been authorized. Have a secure shift!", "Security Report", 'sound/ai/commandreport.ogg')
+	priority_announce("Z pomocą naszego wydziału kontrwywiadu stwierdzamy, że Stacja [station_name()] jest wolna od zagrożeń. Wszystkie projekty konstrukcyjne zostały autoryzowane. Miłej zmiany załogo!", "Raport Ochrony", 'sound/ai/commandreport.ogg')

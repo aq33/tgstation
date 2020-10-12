@@ -1,7 +1,7 @@
 /datum/round_event_control/obsessed
 	name = "Obsession Awakening"
 	typepath = /datum/round_event/obsessed
-	weight = 10
+	weight = 15
 	max_occurrences = 1
 	min_players = 10
 

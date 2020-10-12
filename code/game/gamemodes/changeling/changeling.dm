@@ -1,4 +1,4 @@
-GLOBAL_LIST_INIT(possible_changeling_IDs, list("Alpha","Beta","Gamma","Delta","Epsilon","Zeta","Eta","Theta","Iota","Kappa","Lambda","Mu","Nu","Xi","Omicron","Pi","Rho","Sigma","Tau","Upsilon","Phi","Chi","Psi","Omega"))
+GLOBAL_LIST_INIT(possible_changeling_IDs, list("Szymon","Alfa", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta", "Iota", "Kappa", "Lambda", "Mu", "Nu", "Xi", "Omicron", "Pi", "Rho", "Sigma", "Tau", "Upsilon", "Phi", "Chi", "Psi", "Omega"))
 GLOBAL_LIST_INIT(slots, list("head", "wear_mask", "back", "wear_suit", "w_uniform", "shoes", "belt", "gloves", "glasses", "ears", "wear_id", "s_store"))
 GLOBAL_LIST_INIT(slot2slot, list("head" = SLOT_HEAD, "wear_mask" = SLOT_WEAR_MASK, "neck" = SLOT_NECK, "back" = SLOT_BACK, "wear_suit" = SLOT_WEAR_SUIT, "w_uniform" = SLOT_W_UNIFORM, "shoes" = SLOT_SHOES, "belt" = SLOT_BELT, "gloves" = SLOT_GLOVES, "glasses" = SLOT_GLASSES, "ears" = SLOT_EARS, "wear_id" = SLOT_WEAR_ID, "s_store" = SLOT_S_STORE))
 GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "wear_mask" = /obj/item/clothing/mask/changeling, "back" = /obj/item/changeling, "wear_suit" = /obj/item/clothing/suit/changeling, "w_uniform" = /obj/item/clothing/under/changeling, "shoes" = /obj/item/clothing/shoes/changeling, "belt" = /obj/item/changeling, "gloves" = /obj/item/clothing/gloves/changeling, "glasses" = /obj/item/clothing/glasses/changeling, "ears" = /obj/item/changeling, "wear_id" = /obj/item/changeling, "s_store" = /obj/item/changeling))
@@ -35,6 +35,9 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		restricted_jobs += "Assistant"
+
+	if(CONFIG_GET(flag/protect_heads_from_antagonist))
+		restricted_jobs += GLOB.command_positions
 
 	var/num_changelings = 1
 
@@ -79,10 +82,7 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 						changelings += character.mind
 
 /datum/game_mode/changeling/generate_report()
-	return "The Gorlex Marauders have announced the successful raid and destruction of Central Command containment ship #S-[rand(1111, 9999)]. This ship housed only a single prisoner - \
-			codenamed \"Thing\", and it was highly adaptive and extremely dangerous. We have reason to believe that the Thing has allied with the Syndicate, and you should note that likelihood \
-			of the Thing being sent to a station in this sector is highly likely. It may be in the guise of any crew member. Trust nobody - suspect everybody. Do not announce this to the crew, \
-			as paranoia may spread and inhibit workplace efficiency."
+	return "Kosmiczni Piraci oficjalnie ogłosili zniszczenie statku naukowego Centrali #S-[rand(1111, 9999)]. Statek ten trzymał obiekt laboratoryjny o nazwie - \"Coś\", bardzo szybko adaptuje się ono do środowiska i jest wysoce niebezpieczne. Nasz agent wywiadu Szymon-CH potwierdził że obiekt sprzymierzył się z Syndykatem, niestety słuch po naszym agencie zaginął w tunelach technicznych niedaleko wydziału robotyki na stacji \[REDACTED\]. Bardzo prawdopobone jest to że zostało ono wysłane na waszą stację. Może wyglądać jak zwykły Kowalski, może być każdym. Nie ufajcie nikomu - każdy może być tym czymś. Nie ogłaszajcie tego załodze, paranoja i strach obniżają produktywność."
 
 //////////////////////////////////////////
 //Checks to see if someone is changeling//
@@ -136,14 +136,14 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 	var/list/round_credits = list()
 	var/len_before_addition
 
-	round_credits += "<center><h1>The Slippery Changelings:</h1>"
+	round_credits += "<center><h1>Śliscy Zmiennokształtni:</h1>"
 	len_before_addition = round_credits.len
 	for(var/datum/mind/M in changelings)
 		var/datum/antagonist/changeling/cling = M.has_antag_datum(/datum/antagonist/changeling)
 		if(cling)
-			round_credits += "<center><h2>[cling.changelingID] in the body of [M.name]</h2>"
+			round_credits += "<center><h2>[cling.changelingID] w ciele [M.name]</h2>"
 	if(len_before_addition == round_credits.len)
-		round_credits += list("<center><h2>Uh oh, we lost track of the shape shifters!</h2>", "<center><h2>Nobody move!</h2>")
+		round_credits += list("<center><h2>Uh oh, nie mogliśmy namierzyć zmiennokształtnych!</h2>", "<center><h2>Niech nikt się nie rusza!</h2>")
 	round_credits += "<br>"
 
 	round_credits += ..()

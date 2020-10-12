@@ -574,6 +574,9 @@
 /mob/living/silicon/get_blood_dna_list()
 	return list("MOTOR OIL" = "SAE 5W-30") //just a little flavor text.
 
+/mob/living/simple_animal/get_blood_dna_list()
+	return list("UNKNOWN DNA" = "X*")
+
 ///to add a mob's dna info into an object's blood_dna list.
 /atom/proc/transfer_mob_blood_dna(mob/living/L)
 	// Returns 0 if we have that blood already

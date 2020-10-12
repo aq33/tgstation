@@ -198,6 +198,7 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 6
+	STR.max_combined_w_class = 18
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.can_hold = typecacheof(list(
 		/obj/item/melee/baton,
@@ -217,7 +218,8 @@
 		/obj/item/clothing/gloves,
 		/obj/item/restraints/legcuffs/bola,
 		/obj/item/holosign_creator/security,
-		/obj/item/club
+		/obj/item/club,
+		/obj/item/shield/riot/tele
 		))
 
 /obj/item/storage/belt/security/full/PopulateContents()
@@ -251,7 +253,8 @@
 /obj/item/storage/belt/security/webbing/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 6
+	STR.max_items = 7
+	STR.max_combined_w_class = 21
 
 /obj/item/storage/belt/mining
 	name = "explorer's webbing"
