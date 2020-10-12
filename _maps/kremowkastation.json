@@ -1,0 +1,11 @@
+{
+    "map_name": "Kremówka Station",
+    "map_path": "map_files/KremowkaStation",
+    "map_file": "KremowkaStation.dmm",
+    "shuttles": {
+	    "emergency": "emergency_pubby",
+	    "whiteship": "whiteship_pubby",
+	    "ferry": "ferry_fancy",
+	    "cargo": "cargo_box"
+    }
+}

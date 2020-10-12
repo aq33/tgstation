@@ -1,0 +1,574 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"al" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"au" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"aB" = (
+/turf/closed/wall/r_wall,
+/area/engine/engineering)
+"bb" = (
+/obj/structure/cable/layer1,
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"cg" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"dr" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"gZ" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"ik" = (
+/obj/structure/particle_accelerator/particle_emitter/center,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"kh" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 1
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"kr" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"kY" = (
+/obj/structure/cable/layer1,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"mo" = (
+/obj/machinery/power/grounding_rod,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"pb" = (
+/obj/machinery/light,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"py" = (
+/obj/machinery/camera{
+	c_tag = "Engineering TEG";
+	dir = 4;
+	network = list("ss13","engine");
+	upgrades = 2
+	},
+/turf/open/space/basic,
+/area/engine/engineering)
+"pH" = (
+/obj/structure/cable,
+/obj/machinery/power/emitter/anchored{
+	dir = 4;
+	state = 2
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"qu" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/engine/engineering)
+"qK" = (
+/obj/structure/particle_accelerator/end_cap,
+/obj/structure/cable/layer1,
+/obj/structure/cable/layer1,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"qP" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "13"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"rx" = (
+/obj/machinery/camera{
+	c_tag = "Engineering Singularity";
+	dir = 8;
+	network = list("ss13","engine");
+	upgrades = 2
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"tU" = (
+/obj/structure/particle_accelerator/particle_emitter/right,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"vF" = (
+/obj/structure/cable/layer1,
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 1
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"wF" = (
+/turf/open/floor/engine,
+/area/engine/engineering)
+"wQ" = (
+/obj/structure/particle_accelerator/particle_emitter/left,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"CA" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Da" = (
+/obj/machinery/light,
+/obj/item/stack/cable_coil{
+	pixel_x = 7;
+	pixel_y = 5
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"DI" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Ej" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Ew" = (
+/obj/structure/cable/multilayer{
+	cable_layer = 3
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"EX" = (
+/obj/structure/cable/layer1,
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Gj" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Gr" = (
+/obj/structure/lattice,
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"GH" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"IV" = (
+/obj/structure/cable,
+/obj/machinery/power/tesla_coil,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"Ke" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"KU" = (
+/turf/open/space/basic,
+/area/engine/engineering)
+"Ma" = (
+/obj/machinery/camera{
+	c_tag = "Engineering Tesla";
+	dir = 8;
+	network = list("ss13","engine")
+	},
+/turf/open/space/basic,
+/area/engine/engineering)
+"Nc" = (
+/obj/structure/cable,
+/obj/machinery/power/emitter/anchored{
+	dir = 8;
+	state = 2
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"Nh" = (
+/turf/open/space/basic,
+/area/space)
+"Oy" = (
+/obj/machinery/field/generator,
+/turf/open/floor/plating,
+/area/space)
+"Qv" = (
+/obj/structure/cable/layer1,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Qw" = (
+/obj/structure/cable/layer1,
+/obj/item/wrench{
+	pixel_x = 5
+	},
+/obj/item/screwdriver{
+	pixel_x = -8;
+	pixel_y = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"QV" = (
+/obj/structure/cable/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Tv" = (
+/obj/item/weldingtool{
+	pixel_y = 6
+	},
+/obj/item/clothing/glasses/welding,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"UH" = (
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"WT" = (
+/obj/machinery/particle_accelerator/control_box,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Xn" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Xt" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 6
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Xz" = (
+/obj/machinery/the_singularitygen/tesla,
+/turf/open/floor/plating,
+/area/space)
+"XJ" = (
+/obj/structure/particle_accelerator/power_box,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Yb" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "13"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/structure/cable/layer1,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Yd" = (
+/obj/machinery/door/airlock/turbolift,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Zc" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Zg" = (
+/obj/machinery/door/airlock/turbolift,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Zz" = (
+/obj/structure/particle_accelerator/fuel_chamber,
+/turf/open/floor/engine,
+/area/engine/engineering)
+
+(1,1,1) = {"
+wF
+wF
+Ej
+wF
+aB
+aB
+aB
+Nh
+Nh
+KU
+py
+Nh
+Nh
+"}
+(2,1,1) = {"
+kr
+Zc
+CA
+wF
+aB
+Ej
+aB
+qu
+qu
+qu
+Nh
+Nh
+Nh
+"}
+(3,1,1) = {"
+wF
+kY
+Qv
+Qv
+Yb
+Ew
+qP
+UH
+UH
+UH
+qu
+Nh
+Nh
+"}
+(4,1,1) = {"
+wF
+kY
+wF
+Xn
+aB
+aB
+aB
+qu
+qu
+UH
+mo
+qu
+qu
+"}
+(5,1,1) = {"
+al
+bb
+Zg
+Gj
+aB
+aB
+aB
+qu
+pH
+IV
+IV
+IV
+pH
+"}
+(6,1,1) = {"
+wF
+kY
+wF
+au
+wF
+wF
+al
+Nh
+cg
+cg
+cg
+cg
+cg
+"}
+(7,1,1) = {"
+wF
+vF
+CA
+au
+wF
+Da
+aB
+Nh
+Oy
+cg
+Gr
+cg
+Oy
+"}
+(8,1,1) = {"
+wF
+kY
+WT
+au
+wQ
+wF
+al
+Nh
+cg
+Nh
+cg
+Nh
+cg
+"}
+(9,1,1) = {"
+Qv
+qK
+Zz
+XJ
+ik
+wF
+al
+cg
+Gr
+Gr
+Xz
+Gr
+Gr
+"}
+(10,1,1) = {"
+wF
+kY
+Xt
+GH
+tU
+wF
+al
+Nh
+cg
+Nh
+cg
+Nh
+cg
+"}
+(11,1,1) = {"
+wF
+kY
+kh
+gZ
+wF
+pb
+aB
+Nh
+Oy
+cg
+cg
+cg
+Oy
+"}
+(12,1,1) = {"
+wF
+Qw
+au
+rx
+wF
+Tv
+al
+Nh
+cg
+cg
+cg
+cg
+cg
+"}
+(13,1,1) = {"
+al
+bb
+Yd
+al
+aB
+aB
+aB
+qu
+Nc
+IV
+IV
+IV
+Nc
+"}
+(14,1,1) = {"
+wF
+kY
+au
+wF
+aB
+aB
+aB
+qu
+qu
+UH
+mo
+qu
+qu
+"}
+(15,1,1) = {"
+wF
+EX
+QV
+Qv
+Yb
+Ew
+qP
+UH
+UH
+UH
+qu
+Nh
+Nh
+"}
+(16,1,1) = {"
+Ke
+Ke
+DI
+gZ
+aB
+dr
+aB
+qu
+qu
+qu
+Nh
+Nh
+Nh
+"}
+(17,1,1) = {"
+wF
+wF
+dr
+wF
+aB
+aB
+aB
+Nh
+Nh
+KU
+Ma
+Nh
+Nh
+"}
