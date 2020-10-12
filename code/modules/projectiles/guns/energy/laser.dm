@@ -9,6 +9,33 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/lasergun)
 	ammo_x_offset = 1
 	shaded_charge = 1
+	pin = null
+
+/obj/item/gun/energy/laser/fo13
+	icon_state = "laser"
+	item_state = "laser"
+
+/obj/item/gun/energy/laser/pistol
+	name = "laser pistol"
+	desc = "Though sometimes mocked for the relatively weak firepower of their energy weapons, the logistic miracle of rechargeable ammunition has given Nanotrasen a decisive edge over many a foe."
+	icon_state = "laser-pistol2"
+	item_state = "laser-pistol2"
+	ammo_type = list (/obj/item/ammo_casing/energy/lasergun/pistol)
+
+/obj/item/gun/energy/laser/pistol/fo13
+	icon_state = "AEP7"
+	item_state = "laser-pistol"
+
+/obj/item/gun/energy/laser/tribeam
+	name = "tri-beam laser gun"
+	desc = "Modified laser gun that fires concentrated beams of light that split into three beams which can pass through glass and thin metal."
+	icon_state = "lasertri2"
+	item_state = "lasertri2"
+	ammo_type = list(/obj/item/ammo_casing/energy/lasergun/tri)
+
+/obj/item/gun/energy/laser/tribeam/fo13
+	icon_state = "lasertri"
+	item_state = "lasertri"
 
 /obj/item/gun/energy/laser/practice
 	name = "practice laser gun"
@@ -155,3 +182,46 @@
 
 /obj/item/gun/energy/laser/redtag/hitscan
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/redtag/hitscan)
+
+/////////////PLASMA GUNS///////////
+
+/obj/item/gun/energy/plasma
+	block_upgrade_walk = 1
+	w_class = WEIGHT_CLASS_NORMAL
+	materials = list(/datum/material/iron=2000)
+	ammo_x_offset = 1
+	shaded_charge = 1
+	pin = null
+
+/obj/item/gun/energy/plasma/pistol
+	name = "plasma pistol"
+	icon_state = "plasma-pistol2"
+	item_state = "plasma-pistol2"
+	desc = "Highly advanced energy weapon that fires hot plasma, in a form of a pistol."
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/gun/pistol)
+
+/obj/item/gun/energy/plasma/pistol/fo13
+	icon_state = "plasma-pistol"
+	item_state = "plasma-pistol"
+
+/obj/item/gun/energy/plasma/rifle
+	name = "plasma rifle"
+	icon_state = "plasma2"
+	item_state = "plasma2"
+	desc = "Highly advanced energy weapon that fires hot plasma."
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/gun)
+
+/obj/item/gun/energy/plasma/rifle/fo13
+	icon_state = "plasma"
+	item_state = "plasma"
+
+/obj/item/gun/energy/plasma/multiplas
+	name = "multiplas gun"
+	icon_state = "multiplas2"
+	item_state = "multiplas2"
+	desc = "Highly advanced energy weapon that fires very hot plasma, modified version of the rifle, splits plasma into 3 separate projectiles."
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/gun/scatter)
+
+/obj/item/gun/energy/plasma/multiplas/fo13
+	icon_state = "multiplas"
+	item_state = "multiplas"
