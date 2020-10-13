@@ -145,6 +145,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/cybersun
 	actions_types = list(/datum/action/item_action/toggle_helmet)
 	jetpack = /obj/item/tank/jetpack/suit
+	slowdown = 1
 
 //Special NT NPCs
 

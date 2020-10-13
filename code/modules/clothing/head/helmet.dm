@@ -476,3 +476,74 @@
 	for(var/X in actions)
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
+
+//Power armor helmets
+
+/obj/item/clothing/head/helmet/power_armor
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	strip_delay = 200
+	slowdown = 0.25
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDEJUMPSUIT
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	clothing_flags = THICKMATERIAL
+	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	item_flags = SLOWS_WHILE_IN_HAND
+	flash_protect = 2
+	tint = 0
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/power_armor/advanced
+	name = "advanced power helmet"
+	desc = "It's an advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
+	icon_state = "advancedhelmet"
+	item_state = "advancedpowerarmor"
+	armor = list("melee" = 90, "bullet" = 75, "laser" = 60, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+
+//obj/item/clothing/head/helmet/power_armor/advanced/mk2
+//	name = "advanced power helmet MK2"
+//	desc = "It's an improved model of advanced power armor, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
+//	icon_state = "advadvanced"
+//	item_state = "advpowerhelmet"
+//	armor = list("melee" = 95, "bullet" = 90, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+
+/obj/item/clothing/head/helmet/power_armor/tesla
+	name = "tesla power helmet"
+	desc = "A helmet typically used by Enclave special forces.<br>There are three orange energy capacitors on the side."
+	icon_state = "tesla"
+	item_state = "tesla"
+	armor = list("melee" = 90, "bullet" = 50, "laser" = 95, "energy" = 95, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+
+/obj/item/clothing/head/helmet/power_armor/t60
+	name = "T-60 power helmet"
+	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
+	icon_state = "t60helmet"
+	item_state = "t60helmet"
+	armor = list("melee" = 80, "bullet" = 70, "laser" = 50, "energy" = 70, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+
+
+/obj/item/clothing/head/helmet/power_armor/t51b
+	name = "T-51b power helmet"
+	desc = "It's a t51b power helmet. It looks somewhat charming."
+	icon_state = "t51bhelmet"
+	item_state = "t51bhelmet"
+	armor = list("melee" = 80, "bullet" = 70, "laser" = 50, "energy" = 70, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+
+/obj/item/clothing/head/helmet/power_armor/t45
+	name = "T-45 power helmet"
+	desc = "It's an old pre-War power armor helmet, heavy and big. It's pretty hot inside of it."
+	icon_state = "t45parmorhelmet"
+	item_state = "t45parmorhelmet"
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+
+/obj/item/clothing/head/helmet/power_armor/t45/t45d
+	name = "T-45d power helmet"
+	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
+	icon_state = "t45dhelmet"
+	item_state = "t45dhelmet"
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
+
+
