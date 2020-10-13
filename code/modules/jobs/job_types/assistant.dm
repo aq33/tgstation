@@ -31,7 +31,7 @@ Assistant
 	var/final = title
 	var/client/the_client = H.client
 	if(the_client)
-		var/minutes = the_client.get_exp_living(TRUE)
+		var/minutes = the_client.get_exp_living(FALSE)
 		if(minutes < (10 HOURS))
 			final = new_player_title
 	return final
