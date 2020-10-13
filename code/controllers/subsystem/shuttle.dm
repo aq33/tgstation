@@ -136,7 +136,7 @@ SUBSYSTEM_DEF(shuttle)
 	var/alive = 0
 	for(var/I in GLOB.player_list)
 		var/mob/M = I
-		if(M.stat != DEAD)
+		if(M?.stat != DEAD)
 			++alive
 
 	var/total = GLOB.joined_player_list.len
