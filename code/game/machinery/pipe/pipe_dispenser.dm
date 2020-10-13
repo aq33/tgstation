@@ -63,6 +63,11 @@
 /obj/machinery/pipedispenser/attackby(obj/item/W, mob/user, params)
 	add_fingerprint(user)
 	if (istype(W, /obj/item/pipe) || istype(W, /obj/item/pipe_meter))
+		if(istype(W, /obj/item/pipe))
+			var/obj/item/pipe/P = W
+			if(!P.disposable)
+				to_chat(usr, "<span class='warning'>\The [P] is too valuable to dispose of!</span>")
+				return
 		to_chat(usr, "<span class='notice'>You put [W] back into [src].</span>")
 		qdel(W)
 		return
