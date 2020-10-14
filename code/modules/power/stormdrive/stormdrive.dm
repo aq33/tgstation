@@ -303,10 +303,10 @@ Control Rods
 	.=..()
 	ui_interact(user)
 
-/obj/machinery/atmospherics/components/binary/stormdrive_reactor/ui_interact(mob/user, datum/tgui/ui) // Remember to use the appropriate state.
-	ui = SStgui.try_update_ui(user, src, ui)
+/obj/machinery/atmospherics/components/binary/stormdrive_reactor/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = 0, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state) // Remember to use the appropriate state.
+	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if(!ui)
-		ui = new(user, src, "StormdriveControlRods")
+		ui = new(user, src, ui_key, "StormdriveControlRods", name, 560, 600, master_ui, state)
 		ui.open()
 
 /obj/machinery/atmospherics/components/binary/stormdrive_reactor/ui_act(action, params, datum/tgui/ui)
@@ -391,6 +391,7 @@ Control Rods
 									affecting.dismember(damtype) //Goodbye arm - Investigate how to delete this severed limb
 								H.update_damage_overlays()
 								return
+
 
 /obj/machinery/atmospherics/components/binary/stormdrive_reactor/ui_data(mob/user)
 	var/list/data = list()
@@ -1132,10 +1133,10 @@ Control Rods
 		if("pipe") //change my words
 			reactor.dumping_fuel = !reactor.dumping_fuel
 
-/obj/machinery/computer/ship/reactor_control_computer/ui_interact(mob/user, datum/tgui/ui) // Remember to use the appropriate state.
-	ui = SStgui.try_update_ui(user, src, ui)
+/obj/machinery/computer/ship/reactor_control_computer/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = 0, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state) // Remember to use the appropriate state.
+	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if(!ui)
-		ui = new(user, src, "StormdriveConsole")
+		ui = new(user, src, ui_key, "StormdriveConsole", name, 560, 600, master_ui, state)
 		ui.open()
 
 /obj/machinery/computer/ship/reactor_control_computer/ui_data(mob/user)

@@ -132,6 +132,7 @@
 	dat += "<a href='?src=[REF(src)];refresh=1'>Skanuj</a>"
 	dat += "<a href='?src=[REF(src)];[state_open ? "close=1'>Zamknij</a>" : "open=1'>Otwórz</a>"]"
 	var/datum/browser/popup = new(user, "experiment", "Probing Console", 300, 300)
+	popup.set_title_image(user.browse_rsc_icon(icon, icon_state))
 	popup.set_content(dat)
 	popup.open()
 

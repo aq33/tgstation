@@ -64,7 +64,7 @@
 
 	user.log_message(msg, LOG_EMOTE)
 
-	msg = "<span class='emote'><b>[user]</b> " + msg + "</span>"
+	msg = "<b>[user]</b> " + msg
 
 	var/tmp_sound = get_sound(user)
 	if(tmp_sound && (!only_forced_audio || !intentional))
