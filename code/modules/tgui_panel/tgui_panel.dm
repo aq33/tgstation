@@ -54,8 +54,9 @@
  * Called when initialization has timed out.
  */
 /datum/tgui_panel/proc/on_initialize_timed_out()
-	// Currently does nothing but sending a message to old chat.
-	SEND_TEXT(client, "<span class=\"userdanger\">Failed to load fancy chat, reverting to old chat. Certain features won't work.</span>")
+		winset(src, "output", "on-show=&is-disabled=0&is-visible=1")
+		winset(src, "browseroutput", "is-disabled=1;is-visible=0")
+		initialize()
 
 /**
  * private
