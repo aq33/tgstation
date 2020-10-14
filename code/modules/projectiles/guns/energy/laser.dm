@@ -1,19 +1,22 @@
 /obj/item/gun/energy/laser
 	name = "laser gun"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
-	icon_state = "laser"
-	item_state = "laser"
+	icon_state = "laser2"
+	item_state = "laser2"
 	block_upgrade_walk = 1
 	w_class = WEIGHT_CLASS_NORMAL
 	materials = list(/datum/material/iron=2000)
 	ammo_type = list(/obj/item/ammo_casing/energy/lasergun)
 	ammo_x_offset = 1
 	shaded_charge = 1
+
+/obj/item/gun/energy/laser/lgun
 	pin = null
 
 /obj/item/gun/energy/laser/fo13
 	icon_state = "laser"
 	item_state = "laser"
+	pin = null
 
 /obj/item/gun/energy/laser/pistol
 	name = "laser pistol"
@@ -21,6 +24,7 @@
 	icon_state = "laser-pistol2"
 	item_state = "laser-pistol2"
 	ammo_type = list (/obj/item/ammo_casing/energy/lasergun/pistol)
+	pin = null
 
 /obj/item/gun/energy/laser/pistol/fo13
 	icon_state = "AEP7"
@@ -32,6 +36,7 @@
 	icon_state = "lasertri2"
 	item_state = "lasertri2"
 	ammo_type = list(/obj/item/ammo_casing/energy/lasergun/tri)
+	pin = null
 
 /obj/item/gun/energy/laser/tribeam/fo13
 	icon_state = "lasertri"

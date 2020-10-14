@@ -320,7 +320,7 @@
 	desc = "A laser pistol or more like glorified laser pointer."
 	id = "laserpistol"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/gold = 2500, /datum/material/uranium = 2000, /datum/material/iron = 2500, /datum/material/titanium = 1000)
+	materials = list(/datum/material/copper = 2500, /datum/material/glass = 2000, /datum/material/iron = 2500, /datum/material/plastic = 1000)
 	build_path = /obj/item/gun/energy/laser/pistol
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
@@ -331,7 +331,7 @@
 	id = "laserrifle"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/gold = 5000, /datum/material/uranium = 4000, /datum/material/iron = 5000, /datum/material/titanium = 2000)
-	build_path = /obj/item/gun/energy/laser
+	build_path = /obj/item/gun/energy/laser/lgun
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
