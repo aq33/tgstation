@@ -54,7 +54,9 @@
  * Called when initialization has timed out.
  */
 /datum/tgui_panel/proc/on_initialize_timed_out()
-	SEND_TEXT(client, "<span class=\"userdanger\">Wystapil problem z zaladowaniem tgui4. Uzyj opcji fix tgui4 w zakladce ooc, by naprawic ten problem.</span>")
+		winset(src, "output", "on-show=&is-disabled=0&is-visible=1")
+		winset(src, "browseroutput", "is-disabled=1;is-visible=0")
+		initialize()
 
 /**
  * private
