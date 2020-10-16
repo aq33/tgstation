@@ -18,6 +18,8 @@
 	exotic_blood = "oil"
 	damage_overlay_type = "synth"
 	limbs_id = "synth"
+	burnmod = 1.5
+	heatmod = 1.2
 	toxmod = 0
 	clonemod = 0
 	hygiene_mod = 0
@@ -25,6 +27,8 @@
 	siemens_coeff = 1.5
 	reagent_tag = PROCESS_SYNTHETIC
 	species_gibs = "robotic"
+	disliked_food = null
+	liked_food = null
 	deathsound = "sound/voice/borg_deathsound.ogg"
 	var/disguise_fail_health = 75 //When their health gets to this level their synthflesh partially falls off
 	var/datum/species/fake_species //a species to do most of our work for us, unless we're damaged
@@ -48,10 +52,12 @@
 
 /datum/species/synth/on_species_gain(mob/living/carbon/human/H, datum/species/old_species)
 	..()
-	var/obj/item/organ/appendix/appendix = H.getorganslot("appendix") // Easiest way to remove it.
+	var/obj/item/organ/appendix/appendix = H.getorganslot("appendix")
 	appendix.Remove(H)
 	QDEL_NULL(appendix)
-	ADD_TRAIT(H, TRAIT_XENO_IMMUNE, "xeno immune") //makes the synth immune to huggers
+	ADD_TRAIT(H, TRAIT_XENO_IMMUNE, "xeno immune") //jebać huggery
+	for(var/obj/item/bodypart/O in H.bodyparts)
+		O.synthetic = TRUE
 	assume_disguise(old_species, H)
 	RegisterSignal(H, COMSIG_MOB_SAY, .proc/handle_speech)
 
@@ -79,11 +85,10 @@
 		inherent_traits = initial_inherent_traits.Copy()
 		species_traits |= S.species_traits
 		inherent_traits |= S.inherent_traits
+		mutant_bodyparts = S.mutant_bodyparts.Copy()
 		attack_verb = S.attack_verb
 		attack_sound = S.attack_sound
 		miss_sound = S.miss_sound
-		meat = S.meat
-		mutant_bodyparts = S.mutant_bodyparts.Copy()
 		mutant_organs = S.mutant_organs.Copy()
 		default_features = S.default_features.Copy()
 		nojumpsuit = S.nojumpsuit
@@ -138,7 +143,7 @@
 
 /datum/species/synth/handle_mutant_bodyparts(mob/living/carbon/human/H, forced_colour)
 	if(fake_species)
-		fake_species.handle_body(H,forced_colour)
+		fake_species.handle_mutant_bodyparts(H,forced_colour)
 	else
 		return ..()
 
@@ -155,7 +160,7 @@
 
 /datum/species/synth/spec_life(mob/living/carbon/human/H)
 	. = ..()
-	if(H.health <= HEALTH_THRESHOLD_CRIT && H.stat != DEAD) // So they die eventually instead of being stuck in crit limbo.
+	if(H.health <= HEALTH_THRESHOLD_CRIT && H.stat != DEAD && !HAS_TRAIT(H, TRAIT_NOCRITDAMAGE)) // So they die eventually instead of being stuck in crit limbo.
 		H.adjustFireLoss(6) // After bodypart_robotic resistance this is ~2/second
 		if(prob(5))
 			to_chat(H, "<span class='warning'>Alert: Internal temperature regulation systems offline; thermal damage sustained. Shutdown imminent.</span>")

@@ -20,6 +20,7 @@
 	var/list/embedded_objects = list()
 	var/held_index = 0 //are we a hand? if so, which one!
 	var/render_like_organic = FALSE // TRUE is for when you want a BODYPART_ROBOTIC to pretend to be a BODYPART_ORGANIC.
+	var/synthetic = FALSE // TRUE if you want robotic bodyparts to render face features - used for synths
 	var/is_pseudopart = FALSE //For limbs that don't really exist, eg chainsaws
 
 	var/disabled = BODYPART_NOT_DISABLED //If disabled, limb is as good as missing
