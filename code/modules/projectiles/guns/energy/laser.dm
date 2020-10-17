@@ -1,8 +1,8 @@
 /obj/item/gun/energy/laser
 	name = "laser gun"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
-	icon_state = "laser2"
-	item_state = "laser2"
+	icon_state = "lasergun2"
+	item_state = "lasergun2"
 	block_upgrade_walk = 1
 	w_class = WEIGHT_CLASS_NORMAL
 	materials = list(/datum/material/iron=2000)
@@ -11,6 +11,8 @@
 	shaded_charge = 1
 
 /obj/item/gun/energy/laser/lgun
+	icon_state = "lasergun2"
+	item_state = "lasergun2"
 	pin = null
 
 /obj/item/gun/energy/laser/fo13
