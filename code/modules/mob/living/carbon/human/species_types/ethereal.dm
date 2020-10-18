@@ -4,6 +4,7 @@
 /datum/species/ethereal
 	name = "Ethereal"
 	id = "ethereal"
+	speech_sound = "chatter"
 	attack_verb = "burn"
 	attack_sound = 'sound/weapons/etherealhit.ogg'
 	miss_sound = 'sound/weapons/etherealmiss.ogg'

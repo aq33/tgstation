@@ -5,6 +5,7 @@
 	name = "High-Functioning Zombie"
 	id = "zombie"
 	say_mod = "moans"
+	speech_sound = "chatter"
 	sexes = 0
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/zombie
 	species_traits = list(NOBLOOD,NOZOMBIE,NOTRANSSTING)

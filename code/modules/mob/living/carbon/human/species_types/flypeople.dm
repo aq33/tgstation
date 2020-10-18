@@ -2,6 +2,7 @@
 	name = "Flyperson"
 	id = "fly"
 	say_mod = "buzzes"
+	speech_sound = "chatter"
 	species_traits = list(NOEYESPRITES, NO_UNDERWEAR, TRAIT_BEEFRIEND)
 	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID, MOB_BUG)
 	mutanttongue = /obj/item/organ/tongue/fly
