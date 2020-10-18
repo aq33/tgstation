@@ -35,7 +35,7 @@
 	to_chat(user, "<span class='notice'>You finish reading [name]!</span>")
 
 /obj/item/book/granter/proc/onlearned(mob/user)
-	if(!oneuse)
+	if(oneuse)
 		used = TRUE
 
 
