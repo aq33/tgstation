@@ -10,7 +10,6 @@
 	ammo_x_offset = 1
 	shaded_charge = 1
 
-
 /obj/item/gun/energy/laser/lgun
 	icon_state = "lasergun2"
 	item_state = "lasergun2"
