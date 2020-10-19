@@ -298,6 +298,10 @@
 	else
 		add_overlay("mg-cell-o1")
 
+/obj/item/stock_parts/cell/pulse //30 pulse shots, used for pulse rifle from which it cannot be removed
+	name = "pulse rifle power cell"
+	maxcharge = 60000
+
 /obj/item/stock_parts/cell/pulse/carbine //25 pulse shots
 	name = "pulse carbine power cell"
 	maxcharge = 50000
