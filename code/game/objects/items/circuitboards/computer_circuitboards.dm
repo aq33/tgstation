@@ -325,6 +325,10 @@
 	name = "Mining Shuttle (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/mining
 
+/obj/item/circuitboard/computer/mining_shuttle/promix
+	name = "Publiczny prom wydobywczy (Computer Board)"
+	build_path = /obj/machinery/computer/shuttle/mining/promix
+
 /obj/item/circuitboard/computer/white_ship
 	name = "White Ship (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/white_ship

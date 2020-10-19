@@ -126,6 +126,12 @@
 	port_id = "mining"
 	can_be_bought = FALSE
 
+/datum/map_template/shuttle/promix/kilo
+	suffix = "kilo"
+	name = "Prom wydobywczy (kilo)"
+	port_id = "promix"
+	can_be_bought = FALSE
+
 /datum/map_template/shuttle/arrival
 	port_id = "arrival"
 	can_be_bought = FALSE
