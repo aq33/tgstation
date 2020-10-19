@@ -1,5 +1,5 @@
 /// charge is worth 1 credit but how much real power do you need for 1 charge?
-#define ENERGY_TO_EXPORT_CHARGE_COEF 0.01
+#define ENERGY_TO_EXPORT_CHARGE_COEF 0.001
 
 /obj/machinery/power/battery
 	name = "export battery"
@@ -36,7 +36,7 @@
 	active_power_usage = 0
 	max_charge = 0
 	for(var/obj/item/stock_parts/capacitor/C in component_parts)
-		active_power_usage += 200 * C.rating
+		active_power_usage += 2000 * C.rating
 		max_charge += 2000 * C.rating
 	full = FALSE
 	update_icon()
