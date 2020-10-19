@@ -174,7 +174,6 @@
 
 	
 /datum/brain_trauma/mild/phobia/handle_hearing(datum/source, list/hearing_args)
-	
 	if(!owner.can_hear()) //words can't trigger you if you can't hear them *taps head*
 		return
 	if(HAS_TRAIT(owner, TRAIT_FEARLESS))
