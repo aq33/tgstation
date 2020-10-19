@@ -71419,7 +71419,7 @@
 	height = 4;
 	id = "publiczny_dok";
 	name = "Dok publicznego promu wydobywczego";
-	roundstart_template = /datum/map_template/shuttle/promix/kilo;
+	roundstart_template = /datum/map_template/shuttle/promix;
 	width = 8
 	},
 /turf/open/space/basic,
