@@ -68551,6 +68551,13 @@
 	},
 /obj/item/storage/book/bible,
 /obj/structure/table/wood,
+/obj/item/candle/infinite{
+	desc = "Poniewaz umarl";
+	lit = 1;
+	name = "Swieczka na czesc Michaela Jacksona";
+	pixel_x = 11;
+	pixel_y = 3
+	},
 /turf/open/floor/carpet/green,
 /area/chapel/main)
 "cPG" = (
