@@ -337,10 +337,12 @@
 	switch(status)		// set icon_states
 		if(LIGHT_OK)
 			var/area/A = get_area(src)
-			if(emergency_mode || (A?.fire) || red_alert_mode || delta_alert_mode)
+			if(emergency_mode || (A?.fire))
 				icon_state = "[base_state]_emergency"
 			else if (A?.vacuum)
 				icon_state = "[base_state]_vacuum"
+			else if (red_alert_mode || delta_alert_mode) // less important than vaccum or fire alerts
+				icon_state = "[base_state]_emergency"
 			else
 				icon_state = "[base_state]"
 				if(on)
