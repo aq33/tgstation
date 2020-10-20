@@ -219,4 +219,8 @@
 				soundin = pick('sound/voice/speech/squid1.ogg', 'sound/voice/speech/squid2.ogg', 'sound/voice/speech/squid3.ogg')
 			if("zombie")
 				soundin = pick('sound/voice/speech/zombie1.ogg', 'sound/voice/speech/zombie2.ogg', 'sound/voice/speech/zombie3.ogg')
+			if("egg")
+				soundin = pick('sound/voice/eggperson/egg_scream.ogg')
+			if("felinid")	// Why awe we stiww hewe?!! Just t-to suffew?!?1 *sees buldge*
+				soundin = pick('sound/voice/speech/felinid1.ogg', 'sound/voice/speech/felinid2.ogg', 'sound/voice/speech/felinid3.ogg', 'sound/voice/speech/felinid4.ogg')
 	return soundin

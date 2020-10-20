@@ -2,7 +2,7 @@
 /datum/species/human/felinid
 	name = "Felinid"
 	id = "felinid"
-	speech_sound = "human"
+	speech_sound = "felinid"
 	gendered_speech = TRUE
 	limbs_id = "human"
 
