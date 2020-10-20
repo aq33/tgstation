@@ -168,9 +168,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
-"pq" = (
-/turf/open/floor/plating/airless,
-/area/space/nearstation)
 "qG" = (
 /obj/machinery/camera{
 	c_tag = "Stormdrive engine";
@@ -438,9 +435,6 @@
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
-"Sg" = (
-/turf/closed/mineral/random/labormineral,
-/area/space/nearstation)
 "Sz" = (
 /obj/machinery/atmospherics/pipe/simple/purple/visible,
 /obj/effect/turf_decal/arrows/white{
@@ -490,12 +484,14 @@
 /obj/machinery/button{
 	id = "stormdrive";
 	name = "Reactor shutters control";
-	pixel_y = 6
+	pixel_y = 6;
+	req_access_txt = "10"
 	},
 /obj/machinery/button{
 	id = "controlroom";
 	name = "Control room shutters control";
-	pixel_y = -2
+	pixel_y = -2;
+	req_access_txt = "10"
 	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
@@ -568,6 +564,7 @@ qG
 Uw
 Uw
 Uw
+Uw
 za
 Uw
 Uw
@@ -579,24 +576,23 @@ JM
 JM
 Fi
 Fi
-pq
 "}
 (2,1,1) = {"
 bZ
 Xn
 tY
 RP
+Uw
 hs
-Bh
 xK
 Sz
 Sz
+Bh
 Zt
 He
 lD
 Ya
 LL
-Fi
 Fi
 "}
 (3,1,1) = {"
@@ -609,13 +605,13 @@ He
 Fi
 Fi
 Uw
+Uw
 nk
 Ft
 Uw
 za
 Uw
 Vl
-Fi
 "}
 (4,1,1) = {"
 Yi
@@ -627,13 +623,13 @@ RS
 VG
 Fi
 Fi
+Uw
 hs
 KK
 Bh
 BZ
 Zt
 Gm
-Fi
 "}
 (5,1,1) = {"
 Yi
@@ -646,11 +642,11 @@ Xs
 nA
 Fi
 Uw
+Uw
 zu
 Fi
 EN
 ED
-Fi
 Fi
 "}
 (6,1,1) = {"
@@ -664,12 +660,12 @@ Lx
 Xs
 He
 tt
+tt
 He
 vJ
 Nv
 en
 Uw
-Fi
 "}
 (7,1,1) = {"
 Yi
@@ -682,11 +678,11 @@ Il
 Xs
 He
 tt
+tt
 He
 rD
 rm
 dp
-Fi
 Fi
 "}
 (8,1,1) = {"
@@ -700,12 +696,12 @@ gS
 Xs
 He
 tt
+tt
 He
 yZ
 Te
 jh
 Uw
-Fi
 "}
 (9,1,1) = {"
 Yi
@@ -718,10 +714,10 @@ Xs
 nA
 Fi
 Uw
+Uw
 zu
 GZ
 fi
-Fi
 Fi
 Fi
 "}
@@ -736,12 +732,12 @@ oc
 Fi
 Fi
 Uw
+Uw
 He
 zO
 Yi
 ks
 YO
-Fi
 "}
 (11,1,1) = {"
 Yi
@@ -754,12 +750,12 @@ Fi
 Fi
 Uw
 Uw
+Uw
 Ft
 SP
 Yi
 Uw
 Vl
-Fi
 "}
 (12,1,1) = {"
 iI
@@ -772,11 +768,11 @@ Sf
 nb
 nb
 nb
+nb
 Tg
 eY
 Ru
 ks
-Fi
 Fi
 "}
 (13,1,1) = {"
@@ -790,10 +786,10 @@ ka
 LQ
 Uw
 Uw
+Uw
 Fi
 lk
 JM
 Fi
 Fi
-Sg
 "}
