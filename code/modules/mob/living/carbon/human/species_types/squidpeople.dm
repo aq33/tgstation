@@ -1,7 +1,7 @@
 /datum/species/squid
 	name = "Squidperson"
 	id = "squid"
-	speech_sound = "chatter"
+	speech_sound = "squid"
 	default_color = "b8dfda"
 	species_traits = list(MUTCOLORS,EYECOLOR,TRAIT_EASYDISMEMBER)
 	inherent_traits = list(TRAIT_NOSLIPALL)
