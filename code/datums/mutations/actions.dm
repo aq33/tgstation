@@ -371,7 +371,7 @@
 	desc = "A mutation that reshapes the bone structure of the wrist to include claws."
 	quality = POSITIVE
 	text_gain_indication = "<span class='warning'>You feel sharp pain in your wrists!</span>"
-	text_lose_indication = "<span class='notice'>Your wrists painfully reform back to normal.</span>"
+	text_lose_indication = "<span class='warning'>Your wrists painfully reform back to normal.</span>"
 	difficulty = 16
 	instability = 25
 	power = /obj/effect/proc_holder/spell/targeted/conjure_item/claw
@@ -445,20 +445,43 @@
 	action_icon_state = "armblade"
 	action_background_icon_state = "bg_spell"
 	charge_max = 50
-	cooldown_min = 50
-	item_type = /obj/item/melee/arm_blade/genetics
+	cooldown_min = 20
+	item_type = /obj/item/melee/arm_blade_mut
 
-/obj/item/melee/arm_blade/genetics
+/obj/item/melee/arm_blade_mut //nowy obiekt, bo bazowanie klasy o /obj/item/melee/arm_blade jest w chuj nieporęczne. wymagałoby nadpisania kilku funkcji w bardzo nieprzyjemny sposób
+	name = "arm blade"
 	desc = "A grotesque blade made out of bone and flesh that cleaves through people as a hot knife through butter. This one doesn't look sturdy enough to force an airlock."
+	icon = 'icons/obj/changeling_items.dmi'
+	icon_state = "arm_blade"
+	item_state = "arm_blade"
+	lefthand_file = 'icons/mob/inhands/antag/changeling_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/antag/changeling_righthand.dmi'
+	item_flags = NEEDS_PERMIT | ABSTRACT | DROPDEL
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	w_class = WEIGHT_CLASS_HUGE
+	force = 20 //this is an undroppable melee weapon. should not be better than the fireaxe
+	throwforce = 0 //Just to be on the safe side
+	throw_range = 0
+	throw_speed = 0
+	block_power = 20
+	block_level = 1
+	block_upgrade_walk = 1
+	block_flags = BLOCKING_ACTIVE | BLOCKING_NASTY
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "tore", "ripped", "diced", "cut")
+	sharpness = IS_SHARP
 
-/obj/item/melee/arm_blade/genetics/Initialize(mapload,silent,synthetic)
-	. = ...()
-	ADD_TRAIT(src, TRAIT_NODROP, CHANGELING_TRAIT)
-	if(ismob(loc) && !silent)
-		loc.visible_message("<span class='warning'>A grotesque blade forms around [loc.name]\'s arm!</span>", "<span class='warning'>Your arm twists and mutates, transforming it into a deadly blade.</span>", "<span class='italics'>You hear organic matter ripping and tearing!</span>")
-	if(synthetic)
-		can_drop = TRUE
+/obj/item/melee/arm_blade_mut/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, "genetics")
 	AddComponent(/datum/component/butchering, 60, 80)
 
-/obj/item/melee/arm_blade/genetics/afterattack(atom/target, mob/user, proximity)
-	. = ...() //powinno wykonać afterattack() obiektu /obj/item/melee ale nie /obj/item/melee/arm_blade. powinno.
+/obj/item/melee/arm_blade_mut/equipped(mob/user, slot)
+	. = ..()
+	user.visible_message("<span class='warning'>A grotesque blade forms around [user.name]\'s arm!</span>", "<span class='warning'>Your arm twists and mutates, transforming it into a deadly blade.</span>", "<span class='italics'>You hear organic matter ripping and tearing!</span>")
+	playsound(user, 'sound/effects/blobattack.ogg', 30, 1)
+
+/obj/item/melee/arm_blade_mut/dropped(mob/user, slot)
+	. = ..()
+	user.visible_message("<span class='warning'>With a sickening crunch, [user] reforms [user.p_their()] blade into an arm!</span>", "<span class='notice'>You assimilate the blade back into your body.</span>", "<span class='italics>You hear organic matter ripping and tearing!</span>")
+	playsound(user, 'sound/effects/blobattack.ogg', 30, 1)
