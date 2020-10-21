@@ -379,9 +379,7 @@
 /obj/effect/proc_holder/spell/targeted/conjure_item/claw
 	name = "Extend Claws"
 	desc = "Extend or retract your claws."
-	action_icon = 'icons/mob/actions/actions_genetic.dmi'
-	action_icon_state = "spikechemswap"
-	action_background_icon_state = "bg_spell"
+	action_icon_state = "claws"
 	charge_max = 20
 	cooldown_min = 20
 	item_type = /obj/item/claw
@@ -443,7 +441,6 @@
 	desc = "Reform one of your arms into a deadly blade."
 	action_icon = 'icons/mob/actions/actions_changeling.dmi'
 	action_icon_state = "armblade"
-	action_background_icon_state = "bg_spell"
 	charge_max = 50
 	cooldown_min = 20
 	item_type = /obj/item/melee/arm_blade_mut
