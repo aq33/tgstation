@@ -55,6 +55,7 @@ SUBSYSTEM_DEF(economy)
 	var/inflation_value = 1
 	/// Contains the message to send to newscasters about price inflation and earnings, updated on price_update()
 	var/earning_report
+	var/civ_bounty_tracker = 0
 
 /datum/controller/subsystem/economy/Initialize(timeofday)
 	var/budget_to_hand_out = round(budget_pool / department_accounts.len)
@@ -137,6 +138,7 @@ SUBSYSTEM_DEF(economy)
 		D.adjust_money(science_bounty)
 
 /datum/controller/subsystem/economy/proc/boring_civ_payout()
+	var/civ_cash = ((rand(1,5) + civ_bounty_tracker) * 500)
 	var/datum/bank_account/D = get_dep_account(ACCOUNT_CIV)
 	if(D)
 		D.adjust_money(min(civ_cash, MAX_GRANT_CIV))
