@@ -450,6 +450,30 @@
 	name = "\improper DNA injector (Anti-Antiglowy)"
 	remove_mutations = list(ANTIGLOWY)
 
+/obj/item/dnainjector/extendoarm
+	name = "\improper DNA injector (Extendo Arm)"
+	add_mutations = list(EXTENDOARM)
+
+/obj/item/dnainjector/antiextendoarm
+	name = "\improper DNA injector (Anti-Extendo Arm)"
+	remove_mutations = list(EXTENDOARM)
+
+/obj/item/dnainjector/jellybones
+	name = "\improper DNA injector (Jellybones)"
+	add_mutations = list(JELLYBONES)
+
+/obj/item/dnainjector/antijellybones
+	name = "\improper DNA injector (Anti-Jellybones)"
+	remove_mutations = list(JELLYBONES)
+
+/obj/item/dnainjector/claws
+	name = "\improper DNA injector (Claws)"
+	add_mutations = list(CLAWS)
+
+/obj/item/dnainjector/anticlaws
+	name = "\improper DNA injector (Anti-Claws)"
+	remove_mutations = list(CLAWS)
+
 /obj/item/dnainjector/timed
 	var/duration = 600
 

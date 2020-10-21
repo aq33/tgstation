@@ -375,3 +375,41 @@
 			owner.SetStun(owner.AmountStun()*2)
 			owner.visible_message("<span class='danger'>[owner] tries to stand up, but trips!</span>", "<span class='userdanger'>You trip over your own feet!</span>")
 			stun_cooldown = world.time + 300
+
+/datum/mutation/human/jellybones
+	name = "Jelly Bones"
+	desc = "All of that yoga seems to have paid off."
+	quality = POSITIVE
+	text_gain_indication = "<span class='notice'>Your bones feel like they're made of jelly, you could probably squeeze into a vent.</span>"
+	text_lose_indication = "<span class='notice'>Your bones feel solid again.</span>"
+	difficulty = 16
+	instability = 25
+
+/datum/mutation/human/jellybones/on_acquiring(mob/living/carbon/human/owner)
+	if(..())
+		return
+	owner.ventcrawler = VENTCRAWLER_NUDE
+
+/datum/mutation/human/jellybones/on_losing(mob/living/carbon/human/owner)
+	if(..())
+		return
+	owner.ventcrawler = VENTCRAWLER_NONE
+
+/datum/mutation/human/breathless
+	name = "Breathless"
+	desc = "Affected person does not need to breathe."
+	quality = POSITIVE
+	text_gain_indication = "<span class='notice'>Your lungs feel like they are filled with air.</span>"
+	text_lose_indication = "<span class='notice'>Your lungs feel empty again.</span>"
+	difficulty = 20
+	instability = 35
+
+/datum/mutation/human/breathless/on_acquiring(mob/living/carbon/human/owner)
+	if(..())
+		return
+	ADD_TRAIT(owner, TRAIT_NOBREATH, GENETIC_MUTATION)
+
+/datum/mutation/human/breathless/on_losing(mob/living/carbon/human/owner)
+	if(..())
+		return
+	REMOVE_TRAIT(owner, TRAIT_NOBREATH, GENETIC_MUTATION)
