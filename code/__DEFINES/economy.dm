@@ -10,7 +10,7 @@
 #define PAYCHECK_COMMAND 200
 
 #define PAYCHECK_WELFARE 20 //NEETbucks
-#define STATION_TARGET_INCREMENT 200
+#define STATION_TARGET_BUFFER 40
 
 #define MAX_GRANT_CIV 2500
 #define MAX_GRANT_ENG 3000
@@ -47,3 +47,6 @@
 #define CIV_JOB_MINE 10
 #define CIV_JOB_MED 11
 #define CIV_JOB_GROW 12
+
+//By how much should the station's inflation value be multiplied by when dividing the civilian bounty's reward?
+#define BOUNTY_MULTIPLIER 10

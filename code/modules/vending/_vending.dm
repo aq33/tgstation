@@ -289,8 +289,8 @@ GLOBAL_LIST_EMPTY(vending_products)
 		if(!start_empty)
 			R.amount = amount
 		R.max_amount = amount
-		R.custom_price = initial(temp.custom_price) * SSeconomy.inflation_value()
-		R.custom_premium_price = initial(temp.custom_premium_price) * SSeconomy.inflation_value()
+		R.custom_price = round(initial(temp.custom_price) * SSeconomy.inflation_value())
+		R.custom_premium_price = round(initial(temp.custom_premium_price) * SSeconomy.inflation_value())
 		recordlist += R
 
 /**
