@@ -55,6 +55,7 @@
 #define EXTENDOARM   /datum/mutation/human/extendoarm
 #define JELLYBONES   /datum/mutation/human/jellybones
 #define CLAWS   /datum/mutation/human/claws
+#define ARMBLADE   /datum/mutation/human/armblade
 
 #define UI_CHANGED "ui changed"
 #define UE_CHANGED "ue changed"

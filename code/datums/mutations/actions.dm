@@ -366,61 +366,25 @@
 	qdel(beam)
 	return ..()
 
-/datum/mutation/human/claws //not a spell, so doesn't use the "power" variable
+/datum/mutation/human/claws
 	name = "Claws"
 	desc = "A mutation that reshapes the bone structure of the wrist to include claws."
 	quality = POSITIVE
-	text_gain_indication = "<span class='warning'>There is a sharp pain in your wrists!</span>"
-	text_lose_indication = "<span class'notice'>Your wrists painfully reform back to normal.</span>"
+	text_gain_indication = "<span class='warning'>You feel sharp pain in your wrists!</span>"
+	text_lose_indication = "<span class='notice'>Your wrists painfully reform back to normal.</span>"
 	difficulty = 16
-	instability = 30
-	var/datum/action/innate/toggle_claws/clawpower
+	instability = 25
+	power = /obj/effect/proc_holder/spell/targeted/conjure_item/claw
 
-/datum/mutation/human/claws/on_acquiring()
-	. = ..()
-	if(.)
-		return
-	clawpower = new
-	clawpower.Grant(owner)
-
-/datum/mutation/human/claws/on_losing()
-	. = ..()
-	if(.)
-		return
-	if(clawpower.extended)
-		clawpower.Activate()
-	QDEL_NULL(clawpower)
-
-/datum/action/innate/toggle_claws
-	icon_icon = 'icons/mob/actions/actions_genetic.dmi'
-	background_icon_state = "bg_spell"
-	check_flags = AB_CHECK_CONSCIOUS
-	button_icon_state = "spikechemswap"
-	name = "Toggle Claws"
+/obj/effect/proc_holder/spell/targeted/conjure_item/claw
+	name = "Extend Claws"
 	desc = "Extend or retract your claws."
-	var/extended = FALSE
-
-/datum/action/innate/toggle_claws/Activate()
-	var/mob/living/carbon/human/clawt_girl = owner
-	if(extended)
-		to_chat(clawt_girl, "<span class='notice'>You retract your claws.</span>")
-		for(var/obj/item/claw/C in clawt_girl.held_items)
-			if(istype(C)) //nodrop doesn't get replaced by claws, lets not delete nodrop items that aren't this
-				qdel(C)
-	else
-		to_chat(clawt_girl, "<span class='notice'>You extend your claws!</span>")
-		// Drop items in hands
-		// If you're lucky enough to have a TRAIT_NODROP item, then it stays.
-		for(var/V in clawt_girl.held_items)
-			var/obj/item/I = V
-			if(istype(I))
-				if(clawt_girl.dropItemToGround(I))
-					clawt_girl.put_in_hands(new /obj/item/claw()) //now it's an empty hand
-			else	//Entries in the list should only ever be items or null, so if it's not an item, we can assume it's an empty hand
-				clawt_girl.put_in_hands(new /obj/item/claw())
-	extended = !extended
-
-
+	action_icon = 'icons/mob/actions/actions_genetic.dmi'
+	action_icon_state = "spikechemswap"
+	action_background_icon_state = "bg_spell"
+	charge_max = 20
+	cooldown_min = 20
+	item_type = /obj/item/claw
 
 /obj/item/claw
 	name = "claw"
@@ -435,7 +399,7 @@
 	pickup_sound = 'sound/items/unsheath.ogg'
 	drop_sound = 'sound/items/sheath.ogg'
 	attack_verb = list("attacked", "slashed", "sliced", "tore", "ripped")
-	force = 16
+	force = 15
 	throwforce = 0 //Just to be on the safe side
 	throw_range = 0
 	throw_speed = 0
@@ -464,3 +428,37 @@
 	else
 		user.visible_message("<span class='suicide'>[user] begins to dice themselves apart with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return (BRUTELOSS)
+
+/datum/mutation/human/armblade
+	name = "Arm Blade"
+	desc = "A horrific mutation that gives user the ability to turn their arm into a grotesque blade made of bone and flesh."
+	locked = TRUE
+	text_gain_indication = "<span class='warning'>You feel bones in your arm painfully reforming!</span>"
+	text_lose_indication = "<span class='warning'>Your arms painfully reform back to normal.</span>"
+	instability = 35
+	power = /obj/effect/proc_holder/spell/targeted/conjure_item/armblade
+
+/obj/effect/proc_holder/spell/targeted/conjure_item/armblade
+	name = "Arm Blade"
+	desc = "Reform one of your arms into a deadly blade."
+	action_icon = 'icons/mob/actions/actions_changeling.dmi'
+	action_icon_state = "armblade"
+	action_background_icon_state = "bg_spell"
+	charge_max = 50
+	cooldown_min = 50
+	item_type = /obj/item/melee/arm_blade/genetics
+
+/obj/item/melee/arm_blade/genetics
+	desc = "A grotesque blade made out of bone and flesh that cleaves through people as a hot knife through butter. This one doesn't look sturdy enough to force an airlock."
+
+/obj/item/melee/arm_blade/genetics/Initialize(mapload,silent,synthetic)
+	. = ...()
+	ADD_TRAIT(src, TRAIT_NODROP, CHANGELING_TRAIT)
+	if(ismob(loc) && !silent)
+		loc.visible_message("<span class='warning'>A grotesque blade forms around [loc.name]\'s arm!</span>", "<span class='warning'>Your arm twists and mutates, transforming it into a deadly blade.</span>", "<span class='italics'>You hear organic matter ripping and tearing!</span>")
+	if(synthetic)
+		can_drop = TRUE
+	AddComponent(/datum/component/butchering, 60, 80)
+
+/obj/item/melee/arm_blade/genetics/afterattack(atom/target, mob/user, proximity)
+	. = ...() //powinno wykonać afterattack() obiektu /obj/item/melee ale nie /obj/item/melee/arm_blade. powinno.
