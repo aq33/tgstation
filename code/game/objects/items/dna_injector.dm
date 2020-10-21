@@ -466,6 +466,14 @@
 	name = "\improper DNA injector (Anti-Jellybones)"
 	remove_mutations = list(JELLYBONES)
 
+/obj/item/dnainjector/breathless
+	name = "\improper DNA injector (Breathless)"
+	add_mutations = list(BREATHLESS)
+
+/obj/item/dnainjector/antibreathless
+	name = "\improper DNA injector (Anti-Breathless)"
+	remove_mutations = list(BREATHLESS)
+
 /obj/item/dnainjector/claws
 	name = "\improper DNA injector (Claws)"
 	add_mutations = list(CLAWS)

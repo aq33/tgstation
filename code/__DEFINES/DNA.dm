@@ -53,6 +53,7 @@
 #define CLUWNEMUT   /datum/mutation/human/cluwne
 #define EXTENDOARM   /datum/mutation/human/extendoarm
 #define JELLYBONES   /datum/mutation/human/jellybones
+#define BREATHLESS   /datum/mutation/human/breathless
 #define CLAWS   /datum/mutation/human/claws
 #define ARMBLADE   /datum/mutation/human/armblade
 
