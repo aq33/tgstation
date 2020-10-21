@@ -17,6 +17,10 @@
 	required = "/datum/mutation/human/strong; /datum/mutation/human/radioactive"
 	result = HULK
 
+/datum/generecipe/armblade
+	required = "/datum/mutation/human/strong; /datum/mutation/human/claws"
+	result = ARMBLADE
+
 /datum/generecipe/x_ray
 	required = "/datum/mutation/human/thermal; /datum/mutation/human/radioactive"
 	result = XRAY

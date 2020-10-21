@@ -474,6 +474,14 @@
 	name = "\improper DNA injector (Anti-Claws)"
 	remove_mutations = list(CLAWS)
 
+/obj/item/dnainjector/armblade
+	name = "\improper DNA injector (Arm Blade)"
+	add_mutations = list(ARMBLADE)
+
+/obj/item/dnainjector/antiarmblade
+	name = "\improper DNA injector (Anti-Arm Blade)"
+	remove_mutations = list(ARMBLADE)
+
 /obj/item/dnainjector/timed
 	var/duration = 600
 
