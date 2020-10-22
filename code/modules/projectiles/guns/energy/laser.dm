@@ -38,6 +38,8 @@
 	force = 10
 	ammo_x_offset = 3
 	selfcharge = 1
+	internal_cell = TRUE // uses a self-recharging cell which shouldn't be used in other places
+	cell_type = /obj/item/stock_parts/cell/gun/self_recharging
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	weapon_weight = WEAPON_LIGHT
 

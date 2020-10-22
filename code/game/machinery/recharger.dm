@@ -37,6 +37,8 @@
 		. += "<span class='notice'>- Recharging <b>[recharge_coeff*10]%</b> cell charge per cycle.<span>"
 		if(charging)
 			var/obj/item/stock_parts/cell/C = charging.get_cell()
+			if(!C)
+				return
 			. += "<span class='notice'>- \The [charging]'s cell is at <b>[C.percent()]%</b>.<span>"
 
 
