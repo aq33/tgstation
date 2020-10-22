@@ -77,6 +77,10 @@
 /obj/structure/chair/comfy/shuttle,
 /turf/open/floor/mineral/titanium/blue,
 /area/template_noop)
+"s" = (
+/obj/effect/decal/cleanable/garbage,
+/turf/open/floor/plating,
+/area/template_noop)
 "t" = (
 /obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
@@ -143,6 +147,11 @@
 /obj/structure/chair/comfy/shuttle,
 /obj/effect/decal/cleanable/vomit/old,
 /turf/open/floor/mineral/titanium/blue,
+/area/template_noop)
+"V" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/garbage,
+/turf/open/floor/plating,
 /area/template_noop)
 
 (1,1,1) = {"
@@ -213,7 +222,7 @@ b
 b
 b
 w
-a
+s
 b
 b
 "}
@@ -243,7 +252,7 @@ a
 "}
 (9,1,1) = {"
 e
-b
+V
 m
 h
 i

@@ -56856,6 +56856,7 @@
 	pixel_y = -24
 	},
 /obj/structure/cable,
+/obj/structure/closet/secure_closet/cytology,
 /turf/open/floor/plasteel/white,
 /area/science/explab)
 "cqS" = (
