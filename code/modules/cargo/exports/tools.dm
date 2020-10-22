@@ -142,11 +142,6 @@
 	unit_name = "artisanal soap"
 	export_types = list(/obj/item/soap/homemade)
 
-/datum/export/soap/omega
-	cost = 7000
-	unit_name = "omega soap"
-	export_types = list(/obj/item/soap/omega)
-
 /datum/export/candle
 	cost = 25
 	unit_name = "candle"
