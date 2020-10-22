@@ -51,3 +51,16 @@
 		winset(src, "output", "on-show=&is-disabled=0&is-visible=1")
 		winset(src, "browseroutput", "is-disabled=1;is-visible=0")
 	log_tgui(src, "tgui_panel: Failed to fix.")
+
+
+/client/verb/fix_tgui4()
+	set name = "Fix tgui4"
+	set category = "OOC"
+	var/action
+	log_tgui(src, "tgui_panel: Started fixing tgui4.")
+	winset(src, "output", "on-show=&is-disabled=0&is-visible=1")
+	winset(src, "browseroutput", "is-disabled=1;is-visible=0")
+	tgui_panel.initialize(force = TRUE)
+	action = alert(src, "Proba naprawy tgui4 zakonczona.", "", "OK")
+	if(action == "OK")
+		return
