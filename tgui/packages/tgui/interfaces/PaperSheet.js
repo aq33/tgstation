@@ -334,7 +334,11 @@ class PaperSheetStamper extends Component {
   handleMouseClick(e) {
     const pos = this.findStampPosition(e);
     const { act, data } = useBackend(this.context);
-    act("stamp", { x: pos[0], y: pos[1], r: this.state.rotate });
+    act("stamp", { x: pos[0], y: pos[1], r: this.state.rotate,
+      stamp_class: this.props.stamp_class,
+      stamp_icon_state: data.stamp_icon_state,
+      stamp_name: data.stamp_name,
+    });
     this.setState({ x: pos[0], y: pos[1] });
   }
 
