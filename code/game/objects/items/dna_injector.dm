@@ -506,6 +506,22 @@
 	name = "\improper DNA injector (Anti-Arm Blade)"
 	remove_mutations = list(ARMBLADE)
 
+/obj/item/dnainjector/vore
+	name = "\improper DNA injector (Matter Eater)"
+	add_mutations = list(VORE)
+
+/obj/item/dnainjector/antivore
+	name = "\improper DNA injector (Anti-Matter Eater)"
+	remove_mutations = list(VORE)
+
+/obj/item/dnainjector/firebreath
+	name = "\improper DNA injector (Fire Breath)"
+	add_mutations = list(FIREBREATH)
+
+/obj/item/dnainjector/antifirebreath
+	name = "\improper DNA injector (Anti-Fire Breath)"
+	remove_mutations = list(FIREBREATH)
+
 /obj/item/dnainjector/timed
 	var/duration = 600
 

@@ -482,3 +482,53 @@
 	. = ..()
 	user.visible_message("<span class='warning'>With a sickening crunch, [user] reforms [user.p_their()] blade into an arm!</span>", "<span class='notice'>You assimilate the blade back into your body.</span>", "<span class='italics>You hear organic matter ripping and tearing!</span>")
 	playsound(user, 'sound/effects/blobattack.ogg', 30, 1)
+
+/datum/mutation/human/vore //ta mutacja to nie byl moj pomysl, miejcie pretensje do jokura
+	name = "Matter Eater"
+	desc = "A mutation that gives a subject the ability to eat anything around them whole."
+	quality = POSITIVE
+	text_gain_indication = "<span class='warning'>You feel extremely hungry!</span>"
+	text_lose_indication = "<span class='notice'>You feel satied once again.</span>"
+	difficulty = 16
+	instability = 35
+	power = /obj/effect/proc_holder/spell/targeted/vore
+
+/obj/effect/proc_holder/spell/targeted/vore
+	name = "Eat Matter"
+	desc = "Eat the item you're currently holding or puke out the item you ate."
+	charge_max = 40
+	cooldown_min = 20
+	clothes_req = FALSE
+	range = -1
+	include_user = TRUE
+	action_icon_state = "stomach"
+	var/obj/item/eaten_item = null
+
+/obj/effect/proc_holder/spell/targeted/vore/cast(mob/living/user = usr)
+	var/obj/item/helditem = user.get_active_held_item()
+	if(eaten_item)
+		eaten_item.forceMove(user.loc)
+		user.visible_message("<span class='notice'>[user] spits [eaten_item] out!</span>", "<span class='notice'>You spit [eaten_item] out!</span>")
+		playsound(user, 'sound/effects/splat.ogg', 50, 1)
+		eaten_item = null
+		return
+	if(helditem && helditem.w_class > WEIGHT_CLASS_NORMAL)
+		user.visible_message("<span class='notice'>[user] tries to put [helditem] into their mouth, but fails miserably!</span>", "<span class='warning'>[helditem] is too big for you to eat!</span>")
+		return
+	if(helditem)
+		eaten_item = helditem
+		helditem.forceMove(src)
+		if(eaten_item) //w razie gdyby ktoś próbował zjeść drona
+			user.visible_message("<span class='notice'>[user] tries to eat [helditem], but fails miserably!</span>", "<span class='warning'>You fail to eat [helditem]!</span>")
+			return
+		user.visible_message("<span class='notice'>[user] swallows [eaten_item] whole!</span>", "<span class='notice'>You swallow [eaten_item] whole!</span>")
+		playsound(user, 'sound/effects/attackblob.ogg', 50, 1)
+		return
+	to_chat(user,"<span class='warning'>You're not holding anything.</span>")
+
+/obj/effect/proc_holder/spell/targeted/vore/Destroy()
+	if(eaten_item)
+		eaten_item.forceMove(usr.loc)
+		usr.visible_message("<span class='notice'>[usr] spits [eaten_item] out!</span>", "<span class='notice'>You spit [eaten_item] out!</span>")
+		playsound(usr, 'sound/effects/splat.ogg', 50, 1)
+	return ..()
