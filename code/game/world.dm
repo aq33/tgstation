@@ -116,6 +116,8 @@ GLOBAL_VAR(restart_counter)
 	GLOB.tgui_log = "[GLOB.log_directory]/tgui.log"
 	GLOB.world_econ_log = "[GLOB.log_directory]/econ.log"
 
+	GLOB.demo_log = "[GLOB.log_directory]/demo.txt"
+
 #ifdef UNIT_TESTS
 	GLOB.test_log = file("[GLOB.log_directory]/tests.log")
 	start_log(GLOB.test_log)

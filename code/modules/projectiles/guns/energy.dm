@@ -26,8 +26,8 @@
 	var/small_gun = FALSE ///if the gun is small and can only fit batteries that have less than a certain max charge
 	var/max_charge = 10000 ///if the gun is small, this is the highest amount of charge can be in a battery for it
 
-	var/load_sound = 'sound/weapons/gun_magazine_insert_full_3.ogg' //Sound when inserting magazine. 
-	var/eject_sound = 'sound/weapons/gun_magazine_remove_empty_2.ogg' //Sound of ejecting a cell. 
+	var/load_sound = 'sound/weapons/gun_magazine_insert_full_3.ogg' //Sound when inserting magazine.
+	var/eject_sound = 'sound/weapons/gun_magazine_remove_empty_2.ogg' //Sound of ejecting a cell.
 	var/sound_volume = 40 //Volume of loading/unloading sounds
 	var/load_sound_vary = TRUE //Should the load/unload sounds vary?
 	//Weapon Power Cells End
@@ -113,9 +113,9 @@
 		return FALSE
 	if(user.transferItemToLoc(C, src))
 		cell = C
-		to_chat(user, "<span class='notice'>You load the [C] into \the [src].</span>")
+		to_chat(user, "<span class='notice'>You load [C] into \the [src].</span>")
 		playsound(src, load_sound, sound_volume, load_sound_vary)
-		update_icon()
+		update_icon(TRUE)
 		return TRUE
 	else
 		to_chat(user, "<span class='warning'>You cannot seem to get \the [src] out of your hands!</span>")
@@ -133,7 +133,7 @@
 	user.put_in_hands(old_cell)
 	old_cell.update_icon()
 	to_chat(user, "<span class='notice'>You pull the cell out of \the [src].</span>")
-	update_icon()
+	cut_overlays()
 
 /obj/item/gun/energy/attack_hand(mob/user)
 	if(!internal_cell && loc == user && user.is_holding(src) && cell)
