@@ -45684,6 +45684,9 @@
 	dir = 8
 	},
 /obj/machinery/light,
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
 "bKH" = (
@@ -71812,6 +71815,14 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/virology)
+"tXX" = (
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/machinery/piratepad/civilian,
+/turf/open/floor/plasteel,
+/area/hallway/primary/starboard)
 "ubE" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8;
@@ -108639,7 +108650,7 @@ bCu
 bFR
 bHd
 bmL
-bly
+tXX
 bKG
 bnv
 bjX
