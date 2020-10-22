@@ -174,6 +174,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_NANOSEND			"nanosend" //aquila edit
 #define TRAIT_NANORECEIVE		"nanoreceive" //aquila edit
 #define TRAIT_WARDED       		"curse_immune"
+#define TRAIT_MEGAFART			"megafart"
+#define TRAIT_TOXICFART			"toxicfart"
 
 //non-mob traits
 #define TRAIT_PARALYSIS			"paralysis" //Used for limb-based paralysis, where replacing the limb will fix it

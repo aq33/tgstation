@@ -57,6 +57,8 @@
 #define BREATHLESS   /datum/mutation/human/breathless
 #define CLAWS   /datum/mutation/human/claws
 #define ARMBLADE   /datum/mutation/human/armblade
+#define MEGAFART   /datum/mutation/human/megafart
+#define TOXICFART   /datum/mutation/human/toxicfart
 
 #define UI_CHANGED "ui changed"
 #define UE_CHANGED "ue changed"
