@@ -474,6 +474,22 @@
 	name = "\improper DNA injector (Anti-Breathless)"
 	remove_mutations = list(BREATHLESS)
 
+/obj/item/dnainjector/toxicfart
+	name = "\improper DNA injector (Toxic Fart)"
+	add_mutations = list(TOXICFART)
+
+/obj/item/dnainjector/antitoxicfart
+	name = "\improper DNA injector (Anti-Toxic Fart)"
+	remove_mutations = list(TOXICFART)
+
+/obj/item/dnainjector/megafart
+	name = "\improper DNA injector (Mega Fart)"
+	add_mutations = list(MEGAFART)
+
+/obj/item/dnainjector/antimegafart
+	name = "\improper DNA injector (Anti-Mega Fart)"
+	remove_mutations = list(MEGAFART)
+
 /obj/item/dnainjector/claws
 	name = "\improper DNA injector (Claws)"
 	add_mutations = list(CLAWS)
