@@ -224,13 +224,12 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/decloner
-	name = "Decloner"
+	name = "Prototype Decloner"
 	desc = "Your opponent will bubble into a messy pile of goop."
 	id = "decloner"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/gold = 5000,/datum/material/uranium = 10000)
-	reagents_list = list(/datum/reagent/toxin/mutagen = 40)
-	build_path = /obj/item/gun/energy/decloner
+	materials = list(/datum/material/iron = 5000,/datum/material/gold = 3000,/datum/material/uranium = 10000)
+	build_path = /obj/item/gun/energy/decloner/weak
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 

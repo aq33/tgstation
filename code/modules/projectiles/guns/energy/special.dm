@@ -40,8 +40,9 @@
 	if(!QDELETED(cell) && (cell.charge > shot.e_cost))
 		add_overlay("decloner_spin")
 
-/obj/item/gun/energy/decloner/unrestricted
-	pin = /obj/item/firing_pin
+/obj/item/gun/energy/decloner/weak
+	name = "prototype biological demolecularisor"
+	desc = "A prototype gun that discharges high amounts of controlled radiation to slowly break a target into component elements."
 	ammo_type = list(/obj/item/ammo_casing/energy/declone/weak)
 
 /obj/item/gun/energy/floragun
@@ -112,10 +113,12 @@
 	name = "energy crossbow"
 	desc = "A reverse engineered weapon using syndicate technology."
 	icon_state = "crossbowlarge"
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_HUGE
+	slot_flags = ITEM_SLOT_BACK
 	materials = list(/datum/material/iron=4000)
 	suppressed = null
 	ammo_type = list(/obj/item/ammo_casing/energy/bolt/large)
+	overheat_time = 80
 
 /obj/item/gun/energy/kinetic_accelerator/crossbow/radbow
 	name = "gamma bow"
