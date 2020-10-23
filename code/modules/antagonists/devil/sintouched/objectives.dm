@@ -19,5 +19,5 @@
 /datum/objective/sintouched/pride
 	explanation_text = "You are the BEST thing on the station.  Make sure everyone knows it."
 
-/datum/objective/sintouched/acedia
-	explanation_text = "Angels, devils, good, evil... who cares?  Just ignore any hellish threats and do your job."
+/datum/objective/sintouched/lust
+	explanation_text = "You NEED pleasure. Do anything to sate that need, be it visiting Ram Ranch or kidnapping the clown."

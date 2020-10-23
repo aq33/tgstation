@@ -280,6 +280,7 @@
 		var/datum/asset/spritesheet/sheet = get_asset_datum(/datum/asset/spritesheet/simple/paper)
 		data["stamp_icon_state"] = O.icon_state
 		data["stamp_class"] = sheet.icon_class_name(O.icon_state)
+		data["stamp_name"] = O.name
 		data["edit_mode"] = MODE_STAMPING
 		data["pen_font"] = "FAKE"
 		data["pen_color"] = "FAKE"
@@ -306,6 +307,7 @@
 			var/stamp_r = text2num(params["r"])	// rotation in degrees
 			var/stamp_icon_state = params["stamp_icon_state"]
 			var/stamp_class = params["stamp_class"]
+			var/stamp_name = params["stamp_name"]
 			if (isnull(stamps))
 				stamps = list()
 			if(stamps.len < MAX_PAPER_STAMPS)
@@ -323,7 +325,7 @@
 					LAZYADD(stamped, stamp_icon_state)
 
 				update_static_data(usr,ui)
-				ui.user.visible_message("<span class='notice'>[ui.user] stamps [src] with [stamp_class]!</span>", "<span class='notice'>You stamp [src] with [stamp_class]!</span>")
+				ui.user.visible_message("<span class='notice'>[ui.user] stamps [src] with the [stamp_name]!</span>", "<span class='notice'>You stamp [src] with the [stamp_name]!</span>")
 			else
 				to_chat(usr, pick("You try to stamp but you miss!", "There is no where else you can stamp!"))
 			. = TRUE
