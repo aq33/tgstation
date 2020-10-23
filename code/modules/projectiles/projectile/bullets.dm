@@ -10,7 +10,7 @@
 
 /obj/item/projectile/bullet/process_hit(turf/T, atom/target, qdel_self, hit_something = FALSE)
 	. = ..()
-	if(ishuman(target) && damage && !nodamage)
+	if(ishuman(target) && damage && !nodamage && !isipc(target))
 		var/obj/effect/decal/cleanable/blood/hitsplatter/B = new(target.loc, target)
 		playsound(target.loc, 'sound/effects/bullet_hit.ogg', 100, 1)
 		B.add_blood_DNA(return_blood_DNA())

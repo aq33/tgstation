@@ -453,6 +453,7 @@
 		if(AIRLOCK_DENY, AIRLOCK_OPENING, AIRLOCK_CLOSING, AIRLOCK_EMAG)
 			icon_state = "nonexistenticonstate" //MADNESS
 	set_airlock_overlays(state)
+	SSdemo.mark_dirty(src)
 
 /obj/machinery/door/airlock/proc/set_airlock_overlays(state)
 	var/mutable_appearance/frame_overlay
@@ -1063,7 +1064,7 @@
 				return
 		INVOKE_ASYNC(src, (density ? .proc/open : .proc/close), 2)
 
-	if(istype(I, /obj/item/crowbar/power)||istype(I, /obj/item/mecha_parts/mecha_equipment/hydraulic_clamp))
+	if(istype(I, /obj/item/crowbar/power)||(istype(I, /obj/item/mecha_parts/mecha_equipment/hydraulic_clamp)&&(!istype(I, /obj/item/mecha_parts/mecha_equipment/hydraulic_clamp/makeshift))))
 		if(isElectrified())
 			shock(user,100)//it's like sticking a forck in a power socket
 			return
@@ -1448,11 +1449,14 @@
 	else if(istype(note, /obj/item/photo))
 		return "photo"
 
-/obj/machinery/door/airlock/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
-													datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+
+/obj/machinery/door/airlock/ui_state(mob/user)
+	return GLOB.default_state
+
+/obj/machinery/door/airlock/ui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, ui_key, "AiAirlock", name, 500, 390, master_ui, state)
+		ui = new(user, src, "AiAirlock")
 		ui.open()
 	return TRUE
 

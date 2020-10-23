@@ -134,12 +134,12 @@
 #define INIT_ORDER_MINOR_MAPPING	-40
 #define INIT_ORDER_PATH				-50
 #define INIT_ORDER_PERSISTENCE		-100
+#define INIT_ORDER_DEMO				-149 // To avoid a bunch of changes related to initialization being written, do this last
 #define INIT_ORDER_CHAT				-150 //Should be last to ensure chat remains smooth during init.
 
 // Subsystem fire priority, from lowest to highest priority
 // If the subsystem isn't listed here it's either DEFAULT or PROCESS (if it's a processing subsystem child)
 
-#define FIRE_PRIORITY_PING			10
 #define FIRE_PRIORITY_IDLE_NPC		10
 #define FIRE_PRIORITY_SERVER_MAINT	10
 #define FIRE_PRIORITY_RESEARCH		10
@@ -159,6 +159,7 @@
 #define FIRE_PRIORITY_DEFAULT		50
 #define FIRE_PRIORITY_ATMOS_ADJACENCY	60
 #define FIRE_PRIORITY_PARALLAX		65
+#define FIRE_PRIORITY_TIMER			66
 #define FIRE_PRIORITY_TGUI			70
 #define FIRE_PRIORITY_GARBAGE		80
 #define FIRE_PRIORITY_MOBS			100
@@ -205,4 +206,6 @@
 			}\
 		}\
 		A.flags_1 &= ~OVERLAY_QUEUED_1;\
+		if(isturf(A)){SSdemo.mark_turf(A);}\
+		if(isobj(A) || ismob(A)){SSdemo.mark_dirty(A);}\
 	}

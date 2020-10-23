@@ -10,7 +10,7 @@
 	var/chem_catalysts[] = list() //like tools but for reagents
 	var/category = CAT_NONE //where it shows up in the crafting UI
 	var/subcategory = CAT_NONE
-	var/always_availible = TRUE //Set to FALSE if it needs to be learned first.
+	var/always_available = TRUE //Set to FALSE if it needs to be learned first.
 
 /datum/crafting_recipe/New()
 	if(!(result in reqs))
@@ -223,6 +223,50 @@
 				/obj/item/assembly/prox_sensor = 1,
 				/obj/item/clothing/head/hardhat/red = 1)
 	time = 40
+	category = CAT_ROBOT
+
+/datum/crafting_recipe/lockermech //bruh
+	name = "GR-3YT1.DE Locker Mech"
+	result = /obj/mecha/working/lockermech
+	tools = list(TOOL_WELDER, TOOL_WRENCH, TOOL_WIRECUTTER)
+	reqs = list(/obj/item/stack/cable_coil = 15,
+				/obj/item/stack/sheet/iron = 10,
+				/obj/item/flashlight = 1,
+				/obj/item/extinguisher = 1,
+				/obj/item/storage/toolbox = 1,
+				/obj/item/electronics/airlock = 1,
+				/obj/item/stack/packageWrap = 10)
+	time = 200
+	category = CAT_ROBOT
+
+/datum/crafting_recipe/lockermechdrill
+	name = "Makeshift Exosuit Drill"
+	result = /obj/item/mecha_parts/mecha_equipment/drill/makeshift
+	tools = list(TOOL_WIRECUTTER)
+	reqs = list(/obj/item/stack/cable_coil = 5,
+				/obj/item/storage/toolbox = 1,
+				/obj/item/screwdriver = 1)
+	time = 50
+	category = CAT_ROBOT
+
+/datum/crafting_recipe/lockermechclamp
+	name = "Makeshift Exosuit Hydraulic Clamp"
+	result = /obj/item/mecha_parts/mecha_equipment/hydraulic_clamp/makeshift
+	tools = list(TOOL_WIRECUTTER)
+	reqs = list(/obj/item/stack/cable_coil = 5,
+				/obj/item/stack/sheet/iron = 2,
+				/obj/item/chair = 1)
+	time = 50
+	category = CAT_ROBOT
+
+/datum/crafting_recipe/lockermechlaserrifle
+	name = "Makeshift Exosuit Laser Rifle"
+	result = /obj/item/mecha_parts/mecha_equipment/weapon/energy/makeshift
+	tools = list(TOOL_WIRECUTTER)
+	reqs = list(/obj/item/stack/cable_coil = 5,
+				/obj/item/stack/packageWrap = 5,
+				/obj/item/gun/energy/laser/makeshiftlasrifle = 1)
+	time = 50
 	category = CAT_ROBOT
 
 /datum/crafting_recipe/improvised_pneumatic_cannon //Pretty easy to obtain but
@@ -900,7 +944,7 @@
 	time = 20
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-	always_availible = TRUE
+	always_available = TRUE
 
 /datum/crafting_recipe/sharpmop
 	name = "Sharpened Mop"

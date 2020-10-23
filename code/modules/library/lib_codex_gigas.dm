@@ -25,11 +25,6 @@
 		return FALSE
 	if(inUse)
 		to_chat(user, "<span class='notice'>Someone else is reading it.</span>")
-	if(ishuman(user))
-		var/mob/living/carbon/human/U = user
-		if(U.check_acedia())
-			to_chat(user, "<span class='notice'>None of this matters, why are you reading this? You put [title] down.</span>")
-			return
 	user.visible_message("[user] opens [title] and begins reading intently.")
 	ask_name(user)
 
@@ -91,11 +86,14 @@
 		currentSection = SUFFIX
 	return currentSection != oldSection
 
-/obj/item/book/codex_gigas/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
-									datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+
+/obj/item/book/codex_gigas/ui_state(mob/user)
+	return GLOB.default_state
+
+/obj/item/book/codex_gigas/ui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, ui_key, "CodexGigas", name, 450, 450, master_ui, state)
+		ui = new(user, src, "CodexGigas")
 		ui.open()
 
 /obj/item/book/codex_gigas/ui_data(mob/user)
