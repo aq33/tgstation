@@ -258,6 +258,8 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 
 		for(var/A in SSeconomy.bank_accounts)
 			var/datum/bank_account/B = A
+			if(!B.account_job)
+				continue	// in case there's no job assigned
 			if(!(B.account_job.paycheck_department in paycheck_departments))
 				continue
 			dat += "<tr>"
@@ -341,6 +343,9 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 				carddesc += "<b>registered name:</b> <input type='text' id='namefield' name='reg' value='[target_owner]' style='width:250px; background-color:white;' onchange='markRed()'>"
 				carddesc += "<input type='submit' value='Rename' onclick='markGreen()'>"
 				carddesc += "</form>"
+				if(!modify.registered_account)
+					carddesc += "<b>No bank account is assigned to this ID!</b><br>"
+					carddesc += "<a href='?src=[REF(src)];choice=newbankaccount'>Create new bank account and assign it</a><br>"
 				carddesc += "<b>Assignment:</b> "
 
 				jobs += "<span id='alljobsslot'><a href='#' onclick='showAll()'>[target_rank]</a></span>" //CHECK THIS
@@ -458,6 +463,15 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 						if(access_allowed == 1)
 							modify.access += access_type
 						playsound(src, "terminal_type", 50, 0)
+
+		if("newbankaccount")
+			if (authenticated == 2)
+				var/datum/bank_account/bank_account = new /datum/bank_account(modify.registered_name)
+				modify.registered_account = bank_account
+				playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
+				to_chat(usr, "New bank account has been registered and assigned to this ID.")
+				to_chat(usr, "<span class='warning'>Please keep in mind that only registered Nanotrasen employees are eligible for automated salary payouts.</span>")
+
 		if ("assign")
 			if (authenticated == 2)
 				var/t1 = href_list["assign_target"]

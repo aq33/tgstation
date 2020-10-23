@@ -21,7 +21,8 @@
 	account_holder = newname
 	account_job = job
 	account_id = rand(111111,999999)
-	paycheck_amount = account_job.paycheck
+	if(account_job) // job might not have been provided - account with no paycheck
+		paycheck_amount = account_job.paycheck
 
 /datum/bank_account/Destroy()
 	if(add_to_accounts)
