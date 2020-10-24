@@ -335,6 +335,22 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	blocks_shove_knockdown = TRUE
 
+/obj/item/clothing/suit/armor/power_armor/mob_can_equip(mob/user, mob/equipper, slot)
+	var/mob/living/carbon/human/H = user
+	if(src == H.wear_suit) //Suit is already equipped
+		return FALSE
+	if(slot == SLOT_WEAR_SUIT)
+		return TRUE
+
+/obj/item/clothing/suit/armor/power_armor/equipped(mob/user, slot)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		ADD_TRAIT(H, TRAIT_STUNIMMUNE, TRAIT_CONFUSEIMMUNE)
+
+/obj/item/clothing/suit/armor/power_armor/dropped(mob/user)
+	var/mob/living/carbon/human/H = user
+	REMOVE_TRAIT(H, TRAIT_STUNIMMUNE, TRAIT_CONFUSEIMMUNE)
+	return ..()
 
 /obj/item/clothing/suit/armor/power_armor/t45
 	name = "Power Armor T-45"

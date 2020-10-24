@@ -315,6 +315,66 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY | DEPARTMENTAL_FLAG_MEDICAL
 
+/datum/design/laserpistol
+	name = "Laser Pistol"
+	desc = "A laser pistol or more like glorified laser pointer."
+	id = "laserpistol"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/copper = 2500, /datum/material/glass = 2000, /datum/material/iron = 2500, /datum/material/plastic = 1000)
+	build_path = /obj/item/gun/energy/laser/pistol
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/laserrifle
+	name = "Laser Rifle"
+	desc = "An laser rifle that goes pew pew."
+	id = "laserrifle"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/gold = 5000, /datum/material/uranium = 4000, /datum/material/iron = 5000, /datum/material/titanium = 2000)
+	build_path = /obj/item/gun/energy/laser/lgun
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/laserrifletri
+	name = "Tri-beam Laser Rifle"
+	desc = "An laser shotgun but without the ompf."
+	id = "laserrifletri"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/gold = 4750, /datum/material/uranium = 4000, /datum/material/iron = 5000, /datum/material/titanium = 2250)
+	build_path = /obj/item/gun/energy/laser/tribeam
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/plasmapistol
+	name = "Experimental Plasma Pistol"
+	desc = "Plasma pistol."
+	id = "plasmapistol"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/gold = 4750, /datum/material/uranium = 6000, /datum/material/iron = 5000, /datum/material/titanium = 2250)
+	build_path = /obj/item/gun/energy/plasma/pistol
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/plasmagun
+	name = "Experimental Plasma Gun"
+	desc = "Plasma Gun."
+	id = "plasmagun"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/gold = 4750, /datum/material/uranium = 8000, /datum/material/iron = 5000, /datum/material/titanium = 2500)
+	build_path = /obj/item/gun/energy/plasma/rifle
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/multiplas
+	name = "Experimental Scatter Plasma Gun"
+	desc = "Multiplas Gun."
+	id = "multiplas"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/gold = 5000, /datum/material/uranium = 8000, /datum/material/iron = 5000, /datum/material/titanium = 2500)
+	build_path = /obj/item/gun/energy/plasma/multiplas
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /datum/design/xray
 	name = "X-ray Laser Gun"
 	desc = "Not quite as menacing as it sounds"

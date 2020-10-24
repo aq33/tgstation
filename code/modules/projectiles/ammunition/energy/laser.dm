@@ -7,6 +7,16 @@
 	e_cost = 830
 	select_name = "kill"
 
+/obj/item/ammo_casing/energy/lasergun/tri
+	projectile_type = /obj/item/projectile/beam/laser
+	pellets = 3
+	variance = 14
+	e_cost = 1000
+
+/obj/item/ammo_casing/energy/lasergun/pistol
+	projectile_type = /obj/item/projectile/beam/laser/pistol
+	e_cost = 830
+
 /obj/item/ammo_casing/energy/lasergun/old
 	projectile_type = /obj/item/projectile/beam/laser
 	e_cost = 2000

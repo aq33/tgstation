@@ -1,4 +1,4 @@
-#define SIN_ACEDIA "acedia"
+#define SIN_LUST "lust"
 #define SIN_GLUTTONY "gluttony"
 #define SIN_GREED "greed"
 #define SIN_SLOTH "sloth"
@@ -12,7 +12,7 @@
 	antagpanel_category = "Devil"
 	var/sin
 
-	var/static/list/sins = list(SIN_ACEDIA,SIN_GLUTTONY,SIN_GREED,SIN_SLOTH,SIN_WRATH,SIN_ENVY,SIN_PRIDE)
+	var/static/list/sins = list(SIN_LUST,SIN_GLUTTONY,SIN_GREED,SIN_SLOTH,SIN_WRATH,SIN_ENVY,SIN_PRIDE)
 
 /datum/antagonist/sintouched/New()
 	. = ..()
@@ -20,9 +20,9 @@
 
 /datum/antagonist/sintouched/proc/forge_objectives()
 	var/datum/objective/sintouched/O
-	switch(sin)//traditional seven deadly sins... except lust.
-		if(SIN_ACEDIA)
-			O = new /datum/objective/sintouched/acedia
+	switch(sin)//traditional seven deadly sins
+		if(SIN_LUST) // :flushed:
+			O = new /datum/objective/sintouched/lust
 		if(SIN_GLUTTONY)
 			O = new /datum/objective/sintouched/gluttony
 		if(SIN_GREED)
@@ -76,7 +76,7 @@
 	hud.leave_hud(owner.current)
 	set_antag_hud(owner.current, null)
 
-#undef SIN_ACEDIA
+#undef SIN_LUST
 #undef SIN_ENVY
 #undef SIN_GLUTTONY
 #undef SIN_GREED
