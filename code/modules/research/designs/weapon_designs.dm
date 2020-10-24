@@ -477,8 +477,18 @@
 	desc = "A reverse-engineered energy crossbow favored by syndicate infiltration teams and carp hunters."
 	id = "largecrossbow"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 5000, /datum/material/glass = 1500, /datum/material/uranium = 1500, /datum/material/silver = 1500)
+	materials = list(/datum/material/iron = 10000, /datum/material/titanium = 5000, /datum/material/uranium = 3000, /datum/material/silver = 1500)
 	build_path = /obj/item/gun/energy/kinetic_accelerator/crossbow/large
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
+
+/datum/design/memorizer
+	name = "Memorizer"
+	desc = "A single-use device capable of wiping out someone's short-term memory."
+	id = "memorizer"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 5000, /datum/material/glass = 1500, /datum/material/uranium = 1500, /datum/material/diamond = 1500)
+	build_path = /obj/item/assembly/flash/memorizer
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
