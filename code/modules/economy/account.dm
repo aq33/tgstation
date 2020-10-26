@@ -16,6 +16,8 @@
 	var/withdrawDelay = 0
 
 /datum/bank_account/New(newname, job)
+	if(job == null)
+		add_to_accounts = FALSE
 	if(add_to_accounts)
 		SSeconomy.bank_accounts += src
 	account_holder = newname

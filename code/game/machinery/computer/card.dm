@@ -344,8 +344,11 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 				carddesc += "<input type='submit' value='Rename' onclick='markGreen()'>"
 				carddesc += "</form>"
 				if(!modify.registered_account)
-					carddesc += "<b>No bank account is assigned to this ID!</b><br>"
-					carddesc += "<a href='?src=[REF(src)];choice=newbankaccount'>Create new bank account and assign it</a><br>"
+					if(target_owner == "--------")
+						carddesc += "<b>No bank account is assigned to this ID!</b> First, rename the ID to create a new account for it.<br>"
+					else
+						carddesc += "<b>No bank account is assigned to this ID!</b><br>"
+						carddesc += "<a href='?src=[REF(src)];choice=newbankaccount'>Create a new bank account and assign it</a><br>"
 				carddesc += "<b>Assignment:</b> "
 
 				jobs += "<span id='alljobsslot'><a href='#' onclick='showAll()'>[target_rank]</a></span>" //CHECK THIS
@@ -466,7 +469,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 
 		if("newbankaccount")
 			if (authenticated == 2)
-				var/datum/bank_account/bank_account = new /datum/bank_account(modify.registered_name)
+				var/datum/bank_account/bank_account = new /datum/bank_account(modify.registered_name, null) // job=null so it is not added to global acct list/no payday is made for it
 				modify.registered_account = bank_account
 				playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
 				to_chat(usr, "New bank account has been registered and assigned to this ID.")
