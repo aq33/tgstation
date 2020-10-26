@@ -258,8 +258,6 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 
 		for(var/A in SSeconomy.bank_accounts)
 			var/datum/bank_account/B = A
-			if(!B.account_job)
-				continue	// in case there's no job assigned
 			if(!(B.account_job.paycheck_department in paycheck_departments))
 				continue
 			dat += "<tr>"
