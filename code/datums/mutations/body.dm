@@ -382,7 +382,7 @@
 	quality = POSITIVE
 	text_gain_indication = "<span class='notice'>Your bones feel like they're made of jelly, you could probably squeeze into a vent.</span>"
 	text_lose_indication = "<span class='notice'>Your bones feel solid again.</span>"
-	difficulty = 16
+	difficulty = 14
 	instability = 25
 
 /datum/mutation/human/jellybones/on_acquiring(mob/living/carbon/human/owner)
@@ -401,7 +401,7 @@
 	quality = POSITIVE
 	text_gain_indication = "<span class='notice'>Your lungs feel like they are filled with air.</span>"
 	text_lose_indication = "<span class='notice'>Your lungs feel empty again.</span>"
-	difficulty = 20
+	difficulty = 14
 	instability = 35
 
 /datum/mutation/human/breathless/on_acquiring(mob/living/carbon/human/owner)
@@ -420,7 +420,7 @@
 	quality = POSITIVE
 	text_gain_indication = "<span class='notice'>Your stomach feels heavy.</span>"
 	text_lose_indication = "<span class='notice'>Your stomach feels light again.</span>"
-	difficulty = 20
+	difficulty = 16
 	instability = 20
 
 /datum/mutation/human/toxicfart/on_acquiring(mob/living/carbon/human/owner)

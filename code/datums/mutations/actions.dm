@@ -238,7 +238,7 @@
 	name = "Extendo Arm"
 	desc = "Allows the affected to stretch their arms to grab objects from a distance."
 	quality = POSITIVE
-	difficulty = 16
+	difficulty = 12
 	text_gain_indication = "<span class='notice'>Your arms feel stretchy.</span>"
 	text_lose_indication = "<span class='warning'>Your arms feel solid again.</span>"
 	instability = 30
@@ -372,7 +372,7 @@
 	quality = POSITIVE
 	text_gain_indication = "<span class='warning'>You feel sharp pain in your wrists!</span>"
 	text_lose_indication = "<span class='warning'>Your wrists painfully reform back to normal.</span>"
-	difficulty = 16
+	difficulty = 12
 	instability = 25
 	power = /obj/effect/proc_holder/spell/targeted/conjure_item/claw
 
@@ -489,7 +489,7 @@
 	quality = POSITIVE
 	text_gain_indication = "<span class='warning'>You feel extremely hungry!</span>"
 	text_lose_indication = "<span class='notice'>You feel satied once again.</span>"
-	difficulty = 16
+	difficulty = 14
 	instability = 35
 	power = /obj/effect/proc_holder/spell/targeted/vore
 
@@ -506,7 +506,7 @@
 
 /obj/effect/proc_holder/spell/targeted/vore/cast(mob/living/user = usr)
 	var/obj/item/helditem = user.get_active_held_item()
-	if(eaten_item)
+	if(eaten_item && eaten_item.loc == src)
 		eaten_item.forceMove(user.loc)
 		user.visible_message("<span class='notice'>[user] spits [eaten_item] out!</span>", "<span class='notice'>You spit [eaten_item] out!</span>")
 		playsound(user, 'sound/effects/splat.ogg', 50, 1)
@@ -518,9 +518,6 @@
 	if(helditem)
 		eaten_item = helditem
 		helditem.forceMove(src)
-		if(eaten_item) //w razie gdyby ktoś próbował zjeść drona
-			user.visible_message("<span class='notice'>[user] tries to eat [helditem], but fails miserably!</span>", "<span class='warning'>You fail to eat [helditem]!</span>")
-			return
 		user.visible_message("<span class='notice'>[user] swallows [eaten_item] whole!</span>", "<span class='notice'>You swallow [eaten_item] whole!</span>")
 		playsound(user, 'sound/effects/attackblob.ogg', 50, 1)
 		return
