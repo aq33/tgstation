@@ -159,12 +159,22 @@
 
 /obj/item/clothing/accessory/medal/conduct
 	name = "distinguished conduct medal"
-	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award given by Nanotrasen. It is often awarded by a captain to a member of his crew."
+	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award given by Nanotrasen. It is often awarded by a captain or department head to a member of his crew."
 
 /obj/item/clothing/accessory/medal/bronze_heart
 	name = "bronze heart medal"
 	desc = "A bronze heart-shaped medal awarded for sacrifice. It is often awarded posthumously or for severe injury in the line of duty."
 	icon_state = "bronze_heart"
+
+/obj/item/clothing/accessory/medal/engineering
+	name = "silver wrench award"
+	desc = "A silver medal with a pressing of a wrench, this award is given to commemorate efforts made towards keeping the station in good shape."
+	icon_state = "silver_wrench"
+
+///obj/item/clothing/accessory/medal/medical
+	//name = "Asclepius medal"
+	//desc = "A medal in the shape of a snake coiling around a rod, the symbol of healing and medicine since the ancient times. This award is given to doctors or other personnel of Medbay that have displayed excellence in the field of medicine."
+	//icon_state = "asclepius"
 
 /obj/item/clothing/accessory/medal/ribbon
 	name = "ribbon"
@@ -175,6 +185,22 @@
 /obj/item/clothing/accessory/medal/ribbon/cargo
 	name = "\"cargo tech of the shift\" award"
 	desc = "An award bestowed only upon those cargotechs who have exhibited devotion to their duty in keeping with the highest traditions of Cargonia."
+
+/obj/item/clothing/accessory/medal/ribbon/chemistry
+	name = "\"station alchemist\" award"
+	desc = "A ribbon given to chemistry personnel that have made a significant positive influence on the station's wellbeing."
+	icon_state = "chemistry"
+
+/obj/item/clothing/accessory/medal/ribbon/engineering
+	name = "\"fixer-upper\" award"
+	desc = "A ribbon awarded to station personnel that performed above-and-beyond maintenance and building tasks aboard the station."
+	icon_state = "engineering"
+
+/obj/item/clothing/accessory/medal/ribbon/paramedic
+	name = "\"lifesaver\" award"
+	desc = "An award given to individuals who went above and beyond in the pursuit of saving lives of the station's inhabitants. Often given to paramedics, but Nanotrasen rules specify that any crewmember that saved lives is eligible to recieve this ribbon."
+	icon_state = "paramedic"
+	item_color = "paramedic"
 
 /obj/item/clothing/accessory/medal/silver
 	name = "silver medal"
@@ -195,7 +221,7 @@
 /obj/item/clothing/accessory/medal/silver/excellence
 	name = "the head of personnel award for outstanding achievement in the field of excellence"
 	desc = "Nanotrasen's dictionary defines excellence as \"the quality or condition of being excellent\". This is awarded to those rare crewmembers who fit that definition."
-	
+
 /obj/item/clothing/accessory/medal/gold
 	name = "gold medal"
 	desc = "A prestigious golden medal."
