@@ -168,13 +168,13 @@
 
 /obj/item/clothing/accessory/medal/engineering
 	name = "silver wrench award"
-	desc = "A silver medal with a pressing of a wrench, this award is given to commemorate efforts made towards keeping the station in good shape."
+	desc = "A silver pressing of a wrench, this award is given to commemorate efforts made towards keeping the station in good shape. Typically given to Station Engineers and Atmospheric Technicians."
 	icon_state = "silver_wrench"
 
-///obj/item/clothing/accessory/medal/medical
-	//name = "Asclepius medal"
-	//desc = "A medal in the shape of a snake coiling around a rod, the symbol of healing and medicine since the ancient times. This award is given to doctors or other personnel of Medbay that have displayed excellence in the field of medicine."
-	//icon_state = "asclepius"
+/obj/item/clothing/accessory/medal/medical
+	name = "Asclepius medal"
+	desc = "A medal in the shape of a snake coiling around a rod, the symbol of healing and medicine since the ancient times. This award is given to doctors or other personnel of Medbay that have displayed excellence in the field of medicine."
+	icon_state = "asclepius"
 
 /obj/item/clothing/accessory/medal/ribbon
 	name = "ribbon"
@@ -186,19 +186,29 @@
 	name = "\"cargo tech of the shift\" award"
 	desc = "An award bestowed only upon those cargotechs who have exhibited devotion to their duty in keeping with the highest traditions of Cargonia."
 
-/obj/item/clothing/accessory/medal/ribbon/chemistry
-	name = "\"station alchemist\" award"
-	desc = "A ribbon given to chemistry personnel that have made a significant positive influence on the station's wellbeing."
-	icon_state = "chemistry"
-
-/obj/item/clothing/accessory/medal/ribbon/engineering
+/obj/item/clothing/accessory/medal/ribbon/engineer
 	name = "\"fixer-upper\" award"
-	desc = "A ribbon awarded to station personnel that performed above-and-beyond maintenance and building tasks aboard the station."
+	desc = "A ribbon awarded to station personnel that performed above-and-beyond maintenance and construction tasks aboard the station."
 	icon_state = "engineering"
+
+/obj/item/clothing/accessory/medal/ribbon/assistant
+	name = "\"helpful assistant\" award"
+	desc = "A simple gray ribbon, awarded to assitants that have provided vital assistance to those that required the assist."
+	icon_state = "assistant"
+
+/obj/item/clothing/accessory/medal/ribbon/service
+	name = "\"exemplary service\" ribbon"
+	desc = "A gold-plated ribbon awarded to service personnel for excellence in performing their vital duties. Typically awarded by the Head of Personnel to top workers."
+	icon_state = "botanist"
+
+/obj/item/clothing/accessory/medal/ribbon/chemist
+	name = "\"station alchemist\" award"
+	desc = "A ribbon given to chemistry personnel that have made a significant positive influence on the wellbeing of the station and it's inhabitants."
+	icon_state = "chemist"
 
 /obj/item/clothing/accessory/medal/ribbon/paramedic
 	name = "\"lifesaver\" award"
-	desc = "An award given to individuals who went above and beyond in the pursuit of saving lives of the station's inhabitants. Often given to paramedics, but Nanotrasen rules specify that any crewmember that saved lives is eligible to recieve this ribbon."
+	desc = "An award given to individuals who went above and beyond in the pursuit of saving lives of the station's inhabitants. Often given to paramedics, but Nanotrasen guidelines specify that any crewmember that saved lives is eligible to recieve this ribbon."
 	icon_state = "paramedic"
 	item_color = "paramedic"
 
