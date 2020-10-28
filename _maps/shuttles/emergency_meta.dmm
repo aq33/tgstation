@@ -879,6 +879,10 @@
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
+"He" = (
+/obj/structure/closet/secure_closet/award,
+/turf/open/floor/mineral/titanium,
+/area/shuttle/escape)
 "Li" = (
 /obj/effect/spawner/structure/window/shuttle,
 /obj/machinery/door/firedoor/window,
@@ -1031,7 +1035,7 @@ bf
 Li
 ao
 ay
-LY
+He
 LY
 LY
 bY

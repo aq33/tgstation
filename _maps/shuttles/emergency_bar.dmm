@@ -617,6 +617,10 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/shuttle/escape)
+"yk" = (
+/obj/structure/closet/secure_closet/award,
+/turf/open/floor/carpet,
+/area/shuttle/escape)
 "CM" = (
 /obj/effect/spawner/structure/window/shuttle,
 /obj/machinery/door/firedoor/window,
@@ -856,7 +860,7 @@ bE
 "}
 (7,1,1) = {"
 CM
-ag
+yk
 an
 an
 GY

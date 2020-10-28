@@ -1424,6 +1424,20 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/shuttle/escape)
+"Wk" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet/award,
+/turf/open/floor/plasteel/dark,
+/area/shuttle/escape)
 "Yt" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Escape Shuttle Infirmary"
@@ -1680,7 +1694,7 @@ bF
 bP
 bW
 aq
-cc
+Wk
 cc
 cl
 cs

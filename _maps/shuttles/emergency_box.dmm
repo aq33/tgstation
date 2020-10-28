@@ -93,6 +93,9 @@
 	pixel_y = -24
 	},
 /obj/machinery/light,
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
 "au" = (
@@ -323,6 +326,10 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/shuttle/escape)
+"xV" = (
+/obj/structure/closet/secure_closet/award,
+/turf/open/floor/mineral/titanium/blue,
+/area/shuttle/escape)
 "Dd" = (
 /obj/machinery/door/airlock/titanium{
 	name = "Emergency Shuttle Cargo"
@@ -493,7 +500,7 @@ bk
 "}
 (5,1,1) = {"
 JW
-ag
+xV
 aC
 as
 ad

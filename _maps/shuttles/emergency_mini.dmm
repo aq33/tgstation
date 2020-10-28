@@ -251,6 +251,13 @@
 /obj/machinery/door/firedoor/window,
 /turf/open/floor/plating,
 /area/shuttle/escape)
+"V" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/award,
+/turf/open/floor/mineral/titanium,
+/area/shuttle/escape)
 "W" = (
 /obj/structure/table,
 /obj/item/clothing/suit/apron/surgical,
@@ -370,7 +377,7 @@ K
 f
 r
 H
-t
+V
 f
 R
 U
