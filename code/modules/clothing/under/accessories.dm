@@ -170,11 +170,13 @@
 	name = "silver wrench award"
 	desc = "A silver pressing of a wrench, this award is given to commemorate efforts made towards keeping the station in good shape. Typically given to Station Engineers and Atmospheric Technicians."
 	icon_state = "silver_wrench"
+	materials = list(/datum/material/silver=1000)
 
 /obj/item/clothing/accessory/medal/medical
 	name = "Asclepius medal"
-	desc = "A medal in the shape of a snake coiling around a rod, the symbol of healing and medicine since the ancient times. This award is given to doctors or other personnel of Medbay that have displayed excellence in the field of medicine."
+	desc = "A silver snake coiling around a rod, the symbol of healing and medicine since the ancient times. This award is given to doctors or other personnel of Medbay that have displayed excellence in the field of medicine."
 	icon_state = "asclepius"
+	materials = list(/datum/material/silver=1000)
 
 /obj/item/clothing/accessory/medal/ribbon
 	name = "ribbon"
@@ -189,7 +191,7 @@
 /obj/item/clothing/accessory/medal/ribbon/engineer
 	name = "\"fixer-upper\" award"
 	desc = "A ribbon awarded to station personnel that performed above-and-beyond maintenance and construction tasks aboard the station."
-	icon_state = "engineering"
+	icon_state = "engineer"
 
 /obj/item/clothing/accessory/medal/ribbon/assistant
 	name = "\"helpful assistant\" award"
@@ -199,7 +201,7 @@
 /obj/item/clothing/accessory/medal/ribbon/service
 	name = "\"exemplary service\" ribbon"
 	desc = "A gold-plated ribbon awarded to service personnel for excellence in performing their vital duties. Typically awarded by the Head of Personnel to top workers."
-	icon_state = "botanist"
+	icon_state = "service"
 
 /obj/item/clothing/accessory/medal/ribbon/chemist
 	name = "\"station alchemist\" award"
@@ -210,7 +212,6 @@
 	name = "\"lifesaver\" award"
 	desc = "An award given to individuals who went above and beyond in the pursuit of saving lives of the station's inhabitants. Often given to paramedics, but Nanotrasen guidelines specify that any crewmember that saved lives is eligible to recieve this ribbon."
 	icon_state = "paramedic"
-	item_color = "paramedic"
 
 /obj/item/clothing/accessory/medal/silver
 	name = "silver medal"
