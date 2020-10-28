@@ -1,6 +1,6 @@
 /obj/structure/closet/secure_closet/award
 	name = "\proper award locker"
-	req_one_access = list(ACCESS_CAPTAIN, ACCESS_HOP, ACCESS_QM, ACCESS_HOS, ACCESS_CE, ACCESS_CMO)
+	req_one_access = list(ACCESS_CAPTAIN, ACCESS_HOP, ACCESS_QM, ACCESS_HOS, ACCESS_CE, ACCESS_RD, ACCESS_CMO)
 	icon_state = "award"
 
 /obj/structure/closet/secure_closet/award/PopulateContents()
