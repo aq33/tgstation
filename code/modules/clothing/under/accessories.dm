@@ -270,6 +270,15 @@
 	desc = "A plasma medal which represents significant contributions to the field of science or engineering."
 
 
+/obj/item/clothing/accessory/medal/clown
+	name = "HONKiest of the HONK! medal"
+	desc = "An award which has almost no mentions in official Nanotrasen guides, this medal is awarded to Clowns that have somehow managed to have a significant net positive impact on the station."
+	icon_state = "clown"
+	materials = list(/datum/material/silver=1000, /datum/material/gold=1000)
+
+/obj/item/clothing/accessory/medal/clown/Initialize() // well duh it has to HONK when stepped on
+	. = ..()
+	AddComponent(/datum/component/squeak, list('sound/items/bikehorn.ogg'=1), 50)
 
 ////////////
 //Armbands//

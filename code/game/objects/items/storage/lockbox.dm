@@ -132,6 +132,7 @@
 	new /obj/item/clothing/accessory/medal/ribbon/paramedic(src)
 	new /obj/item/clothing/accessory/medal/ribbon/service(src)
 	new /obj/item/clothing/accessory/medal/ribbon/assistant(src)
+	new /obj/item/clothing/accessory/medal/clown(src)
 
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/accessory/medal/conduct(src)
@@ -189,6 +190,7 @@
 		new /obj/item/clothing/accessory/medal/ribbon/service(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/accessory/medal/ribbon/assistant(src)
+	new /obj/item/clothing/accessory/medal/clown(src)
 
 /obj/item/storage/lockbox/medal/sci
 	name = "science medal box"
