@@ -14,8 +14,7 @@
 /turf/open/floor/plasteel/dark,
 /area/shuttle/escape)
 "ae" = (
-/obj/structure/table/reinforced,
-/obj/machinery/recharger,
+/obj/structure/closet/secure_closet/award,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/escape)
 "af" = (
@@ -30,7 +29,11 @@
 	id = "escape_cockpit_windows";
 	name = "Cockpit Window Blast Doors";
 	pixel_x = -7;
+	pixel_y = -3;
 	req_access_txt = "19"
+	},
+/obj/machinery/recharger{
+	pixel_y = 7
 	},
 /turf/open/floor/plasteel/dark,
 /area/shuttle/escape)
@@ -1600,17 +1603,6 @@
 /obj/structure/sign/departments/engineering,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/shuttle/escape)
-"dC" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/smes/engineering,
-/obj/structure/cable,
-/obj/effect/turf_decal/bot,
-/turf/open/floor/plating,
-/area/shuttle/escape)
-"dD" = (
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/shuttle/escape)
 "dF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -2780,7 +2772,7 @@ db
 dj
 bP
 ax
-dC
+dG
 lz
 dU
 ec
@@ -2814,7 +2806,7 @@ dc
 dk
 bP
 ax
-dD
+dU
 AX
 dJ
 ax
