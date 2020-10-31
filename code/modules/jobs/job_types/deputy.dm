@@ -35,6 +35,8 @@
 	head = /obj/item/clothing/head/soft/sec
 	l_pocket = /obj/item/pda/security
 
+	implants = list(/obj/item/implant/securitydown)
+
 	backpack = /obj/item/storage/backpack/security
 	satchel = /obj/item/storage/backpack/satchel/sec
 	duffelbag = /obj/item/storage/backpack/duffelbag/sec
