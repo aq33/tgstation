@@ -312,7 +312,11 @@
 /obj/item/circuitboard/computer/labor_shuttle/one_way
 	name = "Prisoner Shuttle Console (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/labor/one_way
-
+	
+/obj/item/circuitboard/computer/mining_shuttle/common
+	name = "Lavaland Shuttle (Computer Board)"
+	build_path = /obj/machinery/computer/shuttle/mining/common
+	
 /obj/item/circuitboard/computer/ferry
 	name = "Transport Ferry (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/ferry
