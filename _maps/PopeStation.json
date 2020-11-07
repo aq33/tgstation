@@ -6,7 +6,6 @@
 	    "emergency": "emergency_Kilo",
 	    "ferry": "ferry_fancy",
 	    "cargo": "cargo_pope",
-      "arrival": "arrival_pope",
-      "publicmining": "public_mining"
+        "publicmining": "mining_common_meta"
     }
 }
