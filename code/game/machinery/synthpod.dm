@@ -24,9 +24,9 @@
 
 	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src)
 
-	H.hardset_dna(ui, mutation_index, H.real_name, null, mrace, features)
+	H.hardset_dna(ui, mutation_index, H.real_name, null, new /datum/species/synth, features)
 
-	H.set_species(/datum/species/synth)
+	//H.set_species(/datum/species/synth)
 
 	H.silent = 20 //Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
 	occupant = H
@@ -88,7 +88,7 @@
 			log_cloning("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] after dying.")
 			connected_message("Synth Rejected: Critical component failure.")
 
-		else if(mob_occupant && mob_occupant.bruteloss > (100 - heal_level))
+		else if(mob_occupant && mob_occupant.getBruteLoss() > (100 - heal_level))
 			mob_occupant.Unconscious(80)
 			var/dmg_mult = CONFIG_GET(number/damage_multiplier)
 			 //Slowly get that clone healed and finished.
@@ -116,7 +116,7 @@
 
 			use_power(7500) //This might need tweaking.
 
-		else if(mob_occupant && (mob_occupant.bruteloss <= (100 - heal_level)))
+		else if(mob_occupant && (mob_occupant.getBruteLoss() <= (100 - heal_level)))
 			connected_message("Assembly Process Complete.")
 			// If the cloner is upgraded to debugging high levels, sometimes
 			// organs and limbs can be missing.
@@ -315,7 +315,6 @@
 
 	var/datum/browser/popup = new(user, "cloning", "Synth Assembly System Control")
 	popup.set_content(dat)
-	popup.set_title_image(user.browse_rsc_icon(src.icon, src.icon_state))
 	popup.open()
 
 /obj/machinery/computer/synth_pod/Topic(href, href_list)
