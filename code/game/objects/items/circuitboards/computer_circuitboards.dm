@@ -317,6 +317,10 @@
 	name = "Lavaland Shuttle (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/mining/common
 	
+/obj/item/circuitboard/computer/science_shuttle
+	name = "Science Shuttle (Computer Board)"
+	build_path = /obj/machinery/computer/shuttle/science
+	
 /obj/item/circuitboard/computer/ferry
 	name = "Transport Ferry (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/ferry
