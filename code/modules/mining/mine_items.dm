@@ -95,6 +95,15 @@
 	shuttleId = "mining_common"
 	possible_destinations = "lavaland_common_away;landing_zone_dock;mining_public"
 	
+	//It is on lavaland, soooo....
+/obj/machinery/computer/shuttle/science
+	name = "science outpost shuttle console"
+	desc = "Used to call and send the science shuttle."
+	circuit = /obj/item/circuitboard/computer/science_shuttle
+	shuttleId = "science"
+	possible_destinations = "science_station;science_outpost"
+	no_destination_swap = 1
+	
 /**********************Mining car (Crate like thing, not the rail car)**************************/
 
 /obj/structure/closet/crate/miningcar
