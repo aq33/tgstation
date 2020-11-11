@@ -64,6 +64,7 @@
 
 	var/tmp/list/gear_leftovers = list()
 	var/gimmick = FALSE //least hacky way i could think of for this
+	var/bounty_types = CIV_JOB_BASIC
 
 //Only override this proc, unless altering loadout code. Loadouts act on H but get info from M
 //H is usually a human unless an /equip override transformed it
