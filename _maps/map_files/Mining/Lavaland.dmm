@@ -746,9 +746,10 @@
 /area/mine/laborcamp)
 "dE" = (
 /obj/machinery/mineral/unloading_machine{
-	dir = 6;
-	input_dir = 4;
-	output_dir = 8
+	dir = 1;
+	icon_state = "unloader-corner";
+	input_dir = 1;
+	output_dir = 2
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
@@ -5140,10 +5141,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/abandoned)
-"PW" = (
-/obj/machinery/mineral/mint,
-/turf/open/floor/plasteel,
-/area/mine/production)
 "Qb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/computer/shuttle/science{
@@ -18157,7 +18154,7 @@ ok
 rK
 dE
 rK
-PW
+qE
 Ve
 zT
 Ci
