@@ -1,0 +1,23 @@
+"a" = (/turf/closed/wall/mineral/titanium,/area/shuttle)
+"f" = (/obj/structure/ore_box,/obj/effect/turf_decal/stripes/white/line{dir = 8; icon_state = "warningline_white"},/obj/structure/sign/warning/vacuum/external{pixel_y = -32},/obj/machinery/light/small,/turf/open/floor/plasteel/dark,/area/shuttle)
+"h" = (/obj/machinery/door/airlock/external{name = "Mining Shuttle External Airlock"},/obj/structure/fans/tiny,/obj/docking_port/mobile{dwidth = 4; height = 4; id = "mining_common"; name = "Publiczny Prom Wydobywczy"; port_direction = 2; width = 8},/turf/open/floor/plating,/area/shuttle)
+"i" = (/turf/open/floor/plasteel/dark,/area/shuttle)
+"m" = (/obj/structure/ore_box,/obj/effect/turf_decal/stripes/white/line{dir = 8; icon_state = "warningline_white"},/obj/machinery/light/small{dir = 1},/turf/open/floor/plasteel/dark,/area/shuttle)
+"p" = (/turf/closed/wall/mineral/titanium/nodiagonal,/area/shuttle)
+"s" = (/obj/structure/shuttle/engine/heater{dir = 4},/obj/structure/window/reinforced{dir = 8},/turf/open/space/basic,/area/shuttle)
+"z" = (/obj/effect/turf_decal/stripes/white/line,/turf/open/floor/plasteel/dark,/area/shuttle)
+"B" = (/obj/structure/closet/crate/internals,/obj/item/clothing/head/hardhat/orange{name = "protective hat"; pixel_y = 9},/obj/item/clothing/head/hardhat/orange{name = "protective hat"; pixel_y = 9},/obj/item/clothing/head/hardhat/orange{name = "protective hat"; pixel_y = 9},/obj/item/clothing/head/hardhat/orange{name = "protective hat"; pixel_y = 9},/obj/item/tank/internals/emergency_oxygen{pixel_x = 3},/obj/item/tank/internals/emergency_oxygen{pixel_x = 3},/obj/item/tank/internals/emergency_oxygen{pixel_x = 3},/obj/item/tank/internals/emergency_oxygen{pixel_x = 3},/obj/item/clothing/suit/hazardvest{desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks."; name = "emergency lifejacket"},/obj/item/clothing/suit/hazardvest{desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks."; name = "emergency lifejacket"},/obj/item/clothing/suit/hazardvest{desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks."; name = "emergency lifejacket"},/obj/item/clothing/suit/hazardvest{desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks."; name = "emergency lifejacket"},/obj/item/clothing/mask/breath{pixel_x = -3; pixel_y = -3},/obj/item/clothing/mask/breath{pixel_x = -3; pixel_y = -3},/obj/item/clothing/mask/breath{pixel_x = -3; pixel_y = -3},/obj/item/clothing/mask/breath{pixel_x = -3; pixel_y = -3},/obj/item/storage/firstaid/regular,/turf/open/floor/plasteel/dark,/area/shuttle)
+"I" = (/obj/structure/chair/comfy/shuttle{dir = 8},/obj/machinery/status_display/evac{pixel_y = 30},/turf/open/floor/plasteel/dark,/area/shuttle)
+"J" = (/obj/structure/chair/comfy/shuttle{dir = 8},/turf/open/floor/plasteel/dark,/area/shuttle)
+"O" = (/obj/structure/sign/poster/official/safety_internals,/turf/closed/wall/mineral/titanium/nodiagonal,/area/shuttle)
+"Q" = (/obj/effect/spawner/structure/window/shuttle,/turf/open/floor/plating,/area/shuttle)
+"S" = (/obj/machinery/computer/shuttle/mining/common{dir = 4},/turf/open/floor/plasteel/dark,/area/shuttle)
+"U" = (/obj/effect/turf_decal/stripes/white/corner,/obj/item/radio/intercom{pixel_y = -29},/turf/open/floor/plasteel/dark,/area/shuttle)
+"V" = (/obj/structure/shuttle/engine/propulsion{dir = 4},/turf/open/space/basic,/area/shuttle)
+
+(1,1,1) = {"
+aQQpOppa
+QSJIJmsV
+QBiUzfsV
+aQQphppa
+"}
