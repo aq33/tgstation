@@ -132,6 +132,12 @@
 /datum/map_template/shuttle/mining_common/meta
 	suffix = "meta"
 
+/datum/map_template/shuttle/science
+	port_id = "science"
+	suffix = "pope"
+	name = "science outpost shuttle"
+	can_be_bought = FALSE
+
 /datum/map_template/shuttle/arrival
 	port_id = "arrival"
 	can_be_bought = FALSE
