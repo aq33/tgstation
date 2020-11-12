@@ -568,6 +568,10 @@
 	suffix = "pubby"
 	name = "arrival shuttle (Pubby)"
 
+/datum/map_template/shuttle/arrival/pope
+	suffix = "pope"
+	name = "arrival shuttle (pope)"
+
 /datum/map_template/shuttle/arrival/omega
 	suffix = "omega"
 	name = "arrival shuttle (Omega)"
