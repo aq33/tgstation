@@ -125,6 +125,18 @@
 /datum/map_template/shuttle/mining
 	port_id = "mining"
 	can_be_bought = FALSE
+	
+/datum/map_template/shuttle/mining_common
+	port_id = "mining_common"
+	can_be_bought = FALSE
+/datum/map_template/shuttle/mining_common/meta
+	suffix = "meta"
+
+/datum/map_template/shuttle/science
+	port_id = "science"
+	suffix = "pope"
+	name = "science outpost shuttle"
+	can_be_bought = FALSE
 
 /datum/map_template/shuttle/arrival
 	port_id = "arrival"
@@ -458,6 +470,10 @@
 /datum/map_template/shuttle/cargo/donut
 	suffix = "donut"
 	name = "supply shuttle (Donut)"
+
+/datum/map_template/shuttle/cargo/pope
+	suffix = "pope"
+	name = "supply shuttle (Pope)"
 
 /datum/map_template/shuttle/emergency/delta
 	suffix = "delta"
