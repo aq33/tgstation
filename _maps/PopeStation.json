@@ -3,8 +3,9 @@
     "map_path": "map_files/PopeStation",
     "map_file": "PopeStation.dmm",
     "shuttles": {
-	    "emergency": "emergency_Kilo",
+	    "cargo": "cargo_pope",
 	    "ferry": "ferry_fancy",
-	    "cargo": "cargo_pope"
+	    "whiteship": "whiteship_meta",
+	    "emergency": "emergency_kilo"
     }
 }
