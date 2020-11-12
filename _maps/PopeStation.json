@@ -5,7 +5,6 @@
     "shuttles": {
 	    "emergency": "emergency_Kilo",
 	    "ferry": "ferry_fancy",
-	    "cargo": "cargo_pope",
-        "publicmining": "mining_common_meta"
+	    "cargo": "cargo_pope"
     }
 }
