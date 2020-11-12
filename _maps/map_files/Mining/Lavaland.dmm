@@ -3411,6 +3411,9 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+/obj/machinery/computer/shuttle/mining/common{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/mine/production)
 "rp" = (
@@ -5135,6 +5138,13 @@
 "PR" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/mine/abandoned)
+"Qb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/computer/shuttle/science{
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/mine/abandoned)
@@ -17390,7 +17400,7 @@ Oo
 ZT
 Rv
 bD
-Rv
+Qb
 ZJ
 VV
 vM
