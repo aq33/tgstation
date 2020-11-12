@@ -1,7 +1,7 @@
 {
-    "map_name": "PopeStation",
-    "map_path": "map_files/PopeStation",
-    "map_file": "PopeStation.dmm",
+    "map_name": "popestation",
+    "map_path": "map_files/popestation",
+    "map_file": "sopestation.dmm",
     "shuttles": {
 	    "cargo": "cargo_pope",
 	    "ferry": "ferry_fancy",
