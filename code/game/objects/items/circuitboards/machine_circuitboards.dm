@@ -952,7 +952,6 @@
 	name = "Slime Processor (Machine Board)"
 	icon_state = "science"
 	build_path = /obj/machinery/processor/slime
->>>>>>> 1f1671742af... Automatic changelog compile [ci skip]
 
 /obj/item/circuitboard/machine/protolathe/department/science
 	name = "Departmental Protolathe (Machine Board) - Science"

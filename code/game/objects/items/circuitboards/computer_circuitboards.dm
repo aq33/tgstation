@@ -27,15 +27,10 @@
 	name = "DNA Machine (Computer Board)"
 	build_path = /obj/machinery/computer/scan_consolenew
 
-/obj/item/circuitboard/computer/communications
-	name = "Communications (Computer Board)"
-	build_path = /obj/machinery/computer/communications
-	var/lastTimeUsed = 0
 /obj/item/circuitboard/computer/bsa_control
 	name = "Bluespace Artillery Controls (Computer Board)"
 	icon_state = "command"
 	build_path = /obj/machinery/computer/bsa_control
->>>>>>> 1f1671742af... Automatic changelog compile [ci skip]
 
 /obj/item/circuitboard/computer/card
 	name = "ID Console (Computer Board)"

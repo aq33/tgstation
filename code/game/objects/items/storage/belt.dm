@@ -164,7 +164,7 @@
 	if(replicator)
 		new replicator(src)
 	else
-		new /obj/item/stack/cable_coil/orange(src)
+		new /obj/item/stack/cable_coil(src)
 	new /obj/item/screwdriver/brass(src)
 	new /obj/item/wirecutters/brass(src)
 	new /obj/item/wrench/brass(src)
