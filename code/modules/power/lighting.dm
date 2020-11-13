@@ -239,6 +239,11 @@
 	var/bulb_emergency_pow_mul = 0.75	// the multiplier for determining the light's power in emergency mode
 	var/bulb_emergency_pow_min = 0.5	// the minimum value for the light's power in emergency mode
 
+	var/red_alert_mode = FALSE	// if set to true, switch to emergency sprite for light and apply a different color
+	var/red_alert_light_color = "#F5B6AE"
+	var/delta_alert_mode = FALSE // as above, but for delta alert mode
+	var/delta_alert_light_color = "#F77979"
+
 	var/bulb_vacuum_colour = "#4F82FF"	// colour of the light when air alarm is set to severe
 	var/bulb_vacuum_brightness = 8
 
@@ -340,6 +345,8 @@
 				icon_state = "[base_state]_emergency"
 			else if (A?.vacuum)
 				icon_state = "[base_state]_vacuum"
+			else if (red_alert_mode || delta_alert_mode) // less important than vaccum or fire alerts
+				icon_state = "[base_state]_emergency"
 			else
 				icon_state = "[base_state]"
 				if(on)
@@ -372,6 +379,10 @@
 		else if (A?.vacuum)
 			CO = bulb_vacuum_colour
 			BR = bulb_vacuum_brightness
+		else if (red_alert_mode)
+			CO = red_alert_light_color
+		else if (delta_alert_mode)
+			CO = delta_alert_light_color
 		else if (nightshift_enabled)
 			BR = nightshift_brightness
 			PO = nightshift_light_power
@@ -411,6 +422,7 @@
 /obj/machinery/light/update_atom_colour()
 	..()
 	update()
+
 
 /obj/machinery/light/proc/broken_sparks(start_only=FALSE)
 	if(!QDELETED(src) && status == LIGHT_BROKEN && has_power())

@@ -20,6 +20,7 @@
 	paycheck_department = ACCOUNT_MED
 
 	display_order = JOB_DISPLAY_ORDER_VIROLOGIST
+	bounty_types = CIV_JOB_VIRO
 
 /datum/outfit/job/virologist
 	name = "Virologist"

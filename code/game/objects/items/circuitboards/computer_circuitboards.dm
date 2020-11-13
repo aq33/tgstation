@@ -261,6 +261,14 @@
 	icon_state = "generic"
 	build_path = /obj/machinery/computer/pod/old/swf
 
+/obj/item/circuitboard/computer/bountypad
+	name = "Bounty Pad (Computer Board)"
+	build_path = /obj/machinery/computer/piratepad_control/civilian
+
+/obj/item/circuitboard/computer/prisoner
+	name = "Prisoner Management Console (Computer Board)"
+	build_path = /obj/machinery/computer/prisoner
+
 /obj/item/circuitboard/computer/syndicate_shuttle
 	name = "Syndicate Shuttle (Computer Board)"
 	icon_state = "generic"

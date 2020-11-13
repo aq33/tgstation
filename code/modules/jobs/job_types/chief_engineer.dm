@@ -31,6 +31,7 @@
 	paycheck_department = ACCOUNT_ENG
 
 	display_order = JOB_DISPLAY_ORDER_CHIEF_ENGINEER
+	bounty_types = CIV_JOB_ENG
 
 /datum/outfit/job/ce
 	name = "Chief Engineer"
