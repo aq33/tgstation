@@ -1,11 +1,12 @@
 {
-    "map_name": "popestation",
-    "map_path": "map_files/popestation",
-    "map_file": "popestation.dmm",
+    "map_name": "PopeStation",
+    "map_path": "map_files/PopeStation",
+    "map_file": "PopeStation.dmm",
     "shuttles": {
-	    "cargo": "cargo_pope",
 	    "ferry": "ferry_fancy",
 	    "whiteship": "whiteship_meta",
-	    "emergency": "emergency_kilo"
+	    "emergency": "emergency_meta"
+      "publicmining": "mining_common_meta"
     }
 }
+
