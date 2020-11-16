@@ -159,6 +159,9 @@
 		icon_state = "basalt[rand(0, 12)]"
 		set_basalt_light(src)
 
+/turf/open/floor/grass/snow/basalt/heated
+	desc = "promieniuje wulkanicznym ciepłem."
+	temperature = T20C
 
 /turf/open/floor/carpet
 	name = "carpet"

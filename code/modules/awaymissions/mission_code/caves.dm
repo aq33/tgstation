@@ -23,6 +23,12 @@
 
 /area/awaymission/caves/northblock //engineering, bridge (not really north but it doesnt really need its own APC)
 
+/area/awaymission/caves/spider_den
+	name = "Spider Den"
+	icon_state = "awaycontent7"
+    /// How hot the turf is, in kelvin
+	var/temperature = T20C
+
 /area/awaymission/caves/listeningpost
 	name = "Listening Post"
 	icon_state = "awaycontent6"

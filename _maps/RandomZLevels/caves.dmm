@@ -363,16 +363,14 @@
 /area/awaymission/caves/BMP_asteroid/level_four)
 "bb" = (
 /mob/living/simple_animal/hostile/poison/giant_spider/hunter,
-/turf/open/floor/plating/asteroid/basalt{
-	initial_gas_mix = "n2=23;o2=14"
-	},
-/area/awaymission/caves/BMP_asteroid/level_three)
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
 "bc" = (
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plating/asteroid/basalt{
 	initial_gas_mix = "n2=23;o2=14"
 	},
-/area/awaymission/caves/BMP_asteroid/level_three)
+/area/awaymission/caves/spider_den)
 "be" = (
 /obj/structure/spawner/mining/goliath,
 /turf/open/floor/plating/asteroid/basalt{
@@ -387,10 +385,8 @@
 /area/awaymission/caves/BMP_asteroid/level_four)
 "bg" = (
 /mob/living/simple_animal/hostile/poison/giant_spider/nurse,
-/turf/open/floor/plating/asteroid/basalt{
-	initial_gas_mix = "n2=23;o2=14"
-	},
-/area/awaymission/caves/BMP_asteroid/level_three)
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
 "bh" = (
 /mob/living/simple_animal/hostile/skeleton,
 /turf/open/floor/plating/asteroid/basalt{
@@ -486,16 +482,12 @@
 "bt" = (
 /obj/structure/spider/stickyweb,
 /mob/living/simple_animal/hostile/poison/giant_spider/hunter,
-/turf/open/floor/plating/asteroid/basalt{
-	initial_gas_mix = "n2=23;o2=14"
-	},
-/area/awaymission/caves/BMP_asteroid/level_three)
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
 "bu" = (
 /obj/structure/spider/cocoon,
-/turf/open/floor/plating/asteroid/basalt{
-	initial_gas_mix = "n2=23;o2=14"
-	},
-/area/awaymission/caves/BMP_asteroid/level_three)
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
 "bv" = (
 /obj/structure/destructible/cult/pylon,
 /turf/open/floor/plating/asteroid/basalt{
@@ -511,17 +503,13 @@
 /area/awaymission/caves/BMP_asteroid/level_four)
 "bx" = (
 /obj/item/organ/brain/alien,
-/turf/open/floor/plating/asteroid/basalt{
-	initial_gas_mix = "n2=23;o2=14"
-	},
-/area/awaymission/caves/BMP_asteroid/level_three)
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
 "by" = (
 /obj/item/twohanded/mjollnir,
 /mob/living/simple_animal/hostile/poison/giant_spider/nurse,
-/turf/open/floor/plating/asteroid/basalt{
-	initial_gas_mix = "n2=23;o2=14"
-	},
-/area/awaymission/caves/BMP_asteroid/level_three)
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
 "bz" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood,
@@ -539,10 +527,8 @@
 /area/awaymission/caves/BMP_asteroid/level_four)
 "bB" = (
 /obj/item/clothing/head/collectable/wizard,
-/turf/open/floor/plating/asteroid/basalt{
-	initial_gas_mix = "n2=23;o2=14"
-	},
-/area/awaymission/caves/BMP_asteroid/level_three)
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
 "bC" = (
 /turf/open/floor/engine/cult{
 	initial_gas_mix = "n2=23;o2=14"
@@ -2276,6 +2262,59 @@
 /obj/effect/baseturf_helper/asteroid/basalt,
 /turf/closed/wall,
 /area/awaymission/caves/northblock)
+"iB" = (
+/turf/open/floor/plating/asteroid/basalt{
+	initial_gas_mix = "n2=23;o2=14"
+	},
+/area/awaymission/caves/spider_den)
+"jQ" = (
+/obj/effect/decal/cleanable/blood,
+/turf/closed/mineral/volcanic,
+/area/awaymission/caves/spider_den)
+"nQ" = (
+/obj/structure/flora/rock,
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
+"xQ" = (
+/mob/living/simple_animal/hostile/poison/giant_spider/nurse,
+/obj/structure/spider/cocoon,
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
+"zT" = (
+/obj/structure/fans/tiny/invisible,
+/turf/closed/wall/rust,
+/area/awaymission/caves/spider_den)
+"Hc" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
+"Hq" = (
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
+"Hx" = (
+/obj/structure/spider/stickyweb,
+/obj/structure/spider/cocoon,
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
+"QM" = (
+/turf/closed/mineral/random/high_chance,
+/area/awaymission/caves/spider_den)
+"SC" = (
+/obj/structure/spider/stickyweb,
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
+"UG" = (
+/turf/closed/mineral/volcanic,
+/area/awaymission/caves/spider_den)
+"VS" = (
+/obj/structure/spider/stickyweb,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
+"XJ" = (
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/grass/snow/basalt/heated,
+/area/awaymission/caves/spider_den)
 
 (1,1,1) = {"
 aa
@@ -4651,17 +4690,17 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
+UG
 ac
 ac
 ac
@@ -4908,17 +4947,17 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-bc
-bc
-bc
-bc
-ae
-ae
-ac
+UG
+UG
+jQ
+UG
+SC
+SC
+SC
+Hx
+Hq
+Hq
+UG
 ac
 ac
 ac
@@ -5162,21 +5201,21 @@ ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ae
-ae
-ae
-bc
-bc
-ae
+UG
+UG
+UG
+UG
+UG
+Hq
+Hq
+Hq
+SC
+SC
+Hq
 bb
 bx
-ac
-ac
+UG
+UG
 ac
 ac
 ac
@@ -5418,23 +5457,23 @@ ak
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ae
-bc
-ae
+UG
+UG
+UG
+UG
+Hq
+SC
+Hq
 bg
-ae
-bc
-bc
-ae
-bc
-bc
-bc
-ac
-ac
+Hq
+SC
+SC
+bu
+SC
+SC
+SC
+UG
+UG
 ac
 ac
 ac
@@ -5675,23 +5714,23 @@ ak
 ac
 ac
 ac
-ac
-ac
+UG
+UG
 bb
-ae
-ae
-ae
-ae
-bc
-ae
+Hq
+Hc
+Hq
+Hq
+SC
+Hq
 bb
-ae
-ae
-bc
-bc
-bc
-bg
-ac
+Hq
+Hc
+SC
+SC
+SC
+xQ
+UG
 ac
 ac
 ac
@@ -5932,23 +5971,23 @@ ak
 ac
 ac
 ac
-ac
-aJ
-bc
+UG
+zT
+VS
 bb
-bc
-ae
-ac
-ac
-bc
-ae
-ae
+SC
+Hq
+UG
+UG
+SC
+Hq
+Hq
 bt
-bc
-bc
-ae
-bc
-ac
+SC
+SC
+Hq
+SC
+UG
 ac
 ac
 ac
@@ -6187,25 +6226,25 @@ ak
 ak
 ak
 ac
-ac
-ac
-ac
-ae
-aJ
-ac
-ac
-ac
-ac
-ac
-ac
-ae
+UG
+UG
+UG
+Hq
+XJ
+UG
+UG
+UG
+UG
+UG
+UG
+iB
 bc
-bc
-bc
+SC
+SC
 by
 bB
-ae
-ac
+Hq
+UG
 ac
 ac
 ac
@@ -6444,25 +6483,25 @@ ae
 ae
 ae
 ae
-ae
-ae
-ae
-ae
-ae
+Hq
+Hq
+Hq
+Hq
+Hq
+UG
 ac
 ac
 ac
 ac
-ac
-ac
-ae
+UG
+iB
 bc
-bc
-ae
+SC
+Hq
 bt
-bc
-ae
-ac
+SC
+Hq
+UG
 ac
 ac
 ac
@@ -6701,25 +6740,25 @@ ae
 ae
 ae
 ae
-aj
-ae
-ae
-ae
-ae
+nQ
+Hq
+Hq
+Hq
+Hq
+UG
 ac
 ac
 ac
 ac
-ac
-ac
-ac
-ac
-ae
+UG
+UG
+UG
+Hq
 bg
-bc
-bc
+SC
+SC
 bu
-ac
+UG
 ac
 ac
 ac
@@ -6961,22 +7000,22 @@ ah
 ah
 ah
 ah
-ae
-ae
+Hq
+Hq
+UG
+UG
+UG
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
+UG
+UG
+UG
 bu
-ae
-ae
-ac
-ac
-ac
+Hq
+Hq
+UG
+UG
+UG
 ac
 ac
 ac
@@ -7218,22 +7257,22 @@ ah
 ah
 ah
 ah
-ae
-ae
-ae
-ae
+Hq
+Hq
+Hq
+Hq
+UG
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ak
-ak
-ak
-ak
-ak
+UG
+UG
+UG
+UG
+QM
+QM
+QM
+QM
+QM
 ac
 ac
 ac
@@ -7475,12 +7514,12 @@ ah
 ah
 ah
 ah
-ae
-ae
-ae
-ae
-ae
-ae
+Hq
+Hq
+Hq
+Hq
+Hq
+Hq
 ae
 ak
 ak
@@ -7736,8 +7775,8 @@ ah
 ah
 ah
 ah
-ae
-ae
+Hq
+Hq
 ae
 ak
 ak
@@ -7993,8 +8032,8 @@ ah
 ah
 ah
 ah
-ae
-aj
+Hq
+nQ
 ae
 ae
 ae
