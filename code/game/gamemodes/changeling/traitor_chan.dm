@@ -33,6 +33,9 @@
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		restricted_jobs += "Assistant"
 
+	if(CONFIG_GET(flag/protect_heads_from_antagonist))
+		restricted_jobs += GLOB.command_positions
+
 	var/list/datum/mind/possible_changelings = get_players_for_role(ROLE_CHANGELING)
 
 	var/num_changelings = 1
@@ -80,9 +83,8 @@
 	..()
 
 /datum/game_mode/traitor/changeling/generate_report()
-	return "The Syndicate has started some experimental research regarding humanoid shapeshifting.  There are rumors that this technology will be field tested on a Nanotrasen station \
-			for infiltration purposes.  Be advised that support personel may also be deployed to defend these shapeshifters. Trust nobody - suspect everybody. Do not announce this to the crew, \
-			as paranoia may spread and inhibit workplace efficiency."
+	return "Niedawno Syndykat rozpoczął badania nad zmiennokształtnymi humanoidami. Wycieki z ich bazy danych sugerują, że ta technologia jest testowana na jednej z naszych stacji. Dodatkowo informujemy że Syndykat przydzielił agentów by bronić zmiennokształtnych. Nie ufajcie nikomu - każdy może być jednym z nich. Nie ogłaszajcie tego załodze, paranoja i strach obniżają produktywność."
+
 
 /datum/game_mode/traitor/changeling/trustnobody
 	name = "traitor + lings + no protected roles"

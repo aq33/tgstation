@@ -11,6 +11,10 @@
 "d" = (
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/unpowered)
+"F" = (
+/obj/machinery/bluespace_beacon,
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/unpowered)
 
 (1,1,1) = {"
 a
@@ -641,7 +645,7 @@ c
 c
 b
 b
-d
+F
 d
 d
 d

@@ -1,8 +1,8 @@
 GLOBAL_VAR(posibrain_notify_cooldown)
 
 /obj/item/mmi/posibrain
-	name = "positronic brain"
-	desc = "A cube of shining metal, four inches to a side and covered in shallow grooves."
+	name = "mózg pozytronowy"
+	desc = "Kostka z lśniącego metalu pokryta ze wszystkich stron płytkimi żłobieniami."
 	icon = 'icons/obj/assemblies.dmi'
 	icon_state = "posibrain"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -14,17 +14,17 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 	mecha = null//This does not appear to be used outside of reference in mecha.dm.
 	braintype = "Android"
 	var/autoping = TRUE //if it pings on creation immediately
-	var/begin_activation_message = "<span class='notice'>You carefully locate the manual activation switch and start the positronic brain's boot process.</span>"
-	var/success_message = "<span class='notice'>The positronic brain pings, and its lights start flashing. Success!</span>"
-	var/fail_message = "<span class='notice'>The positronic brain buzzes quietly, and the golden lights fade away. Perhaps you could try again?</span>"
+	var/begin_activation_message = "<span class='notice'>Ostrożnie naciskasz przycisk manualnej aktywacji pozytrona rozpoczynając jego proces aktywacji.</span>"
+	var/success_message = "<span class='notice'>Pozytron wydaje z siebie głośne 'ping' i zaczyna błyszczeć. Sukces!</span>"
+	var/fail_message = "<span class='notice'>Pozytron cichutko buczy, a złote światło zanika. Być może warto spróbować ponownie?</span>"
 	var/new_role = "Positronic Brain"
-	var/welcome_message = "<span class='warning'>ALL PAST LIVES ARE FORGOTTEN.</span>\n\
-	<b>You are a positronic brain, brought into existence aboard Space Station 13.\n\
-	As a synthetic intelligence, you answer to all crewmembers and the AI.\n\
-	Remember, the purpose of your existence is to serve the crew and the station. Above all else, do no harm.</b>"
-	var/new_mob_message = "<span class='notice'>The positronic brain chimes quietly.</span>"
-	var/dead_message = "<span class='deadsay'>It appears to be completely inactive. The reset light is blinking.</span>"
-	var/recharge_message = "<span class='warning'>The positronic brain isn't ready to activate again yet! Give it some time to recharge.</span>"
+	var/welcome_message = "<span class='warning'>NIE PAMIĘTASZ POPRZEDNICH ŻYĆ.</span>\n\
+	<b>Jesteś mózgiem pozytronowym, stworzonym na pokładzie stacji.\n\
+	Jako syntetyczna inteligencja, podlegasz wszystkim istotom na stacji oraz SI.\n\
+	Pamiętaj, istotą Twojego istnienia jest służenie stacji i załodze. Nie wywołuj krzywdy.</b>"
+	var/new_mob_message = "<span class='notice'>Pozytron cicho dzwoni.</span>"
+	var/dead_message = "<span class='deadsay'>Wygląda na całkowicie nieaktywny. Dioda restartu mruga w regularnych interwałach.</span>"
+	var/recharge_message = "<span class='warning'>Pozytron nie jest jeszcze gotowy do restartu!</span>"
 	var/list/possible_names //If you leave this blank, it will use the global posibrain names
 	var/picked_name
 
@@ -44,7 +44,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 	if(!brainmob)
 		brainmob = new(src)
 	if(is_occupied())
-		to_chat(user, "<span class='warning'>This [name] is already active!</span>")
+		to_chat(user, "<span class='warning'>Ten [name] jest już aktywne!</span>")
 		return
 	if(next_ask > world.time)
 		to_chat(user, recharge_message)
@@ -88,10 +88,10 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 	if(is_occupied() || is_banned_from(user.ckey, ROLE_POSIBRAIN) || QDELETED(brainmob) || QDELETED(src) || QDELETED(user))
 		return
 	if(user.suiciding) //if they suicided, they're out forever.
-		to_chat(user, "<span class='warning'>[src] fizzles slightly. Sadly it doesn't take those who suicided!</span>")
+		to_chat(user, "<span class='warning'>[src] nieco syczy. Niestety, nie akceptuje samobójców!</span>")
 		return
-	var/posi_ask = alert("Become a [name]? (Warning, You can no longer be cloned, and all past lives will be forgotten!)","Are you positive?","Yes","No")
-	if(posi_ask == "No" || QDELETED(src))
+	var/posi_ask = alert("Chcesz grać jako [name]? (UWAGA, nie możesz po tym zostać sklonowany i wszystkie poprzednie życia są zapomniane!)","Czy jesteś pewien?","Tak","Nie")
+	if(posi_ask == "Nie" || QDELETED(src))
 		return
 	if(brainmob.suiciding) //clear suicide status if the old occupant suicided.
 		brainmob.set_suicide(FALSE)
@@ -120,7 +120,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 	if(QDELETED(brainmob))
 		return
 	if(is_occupied()) //Prevents hostile takeover if two ghosts get the prompt or link for the same brain.
-		to_chat(candidate, "<span class='warning'>This [name] was taken over before you could get to it! Perhaps it might be available later?</span>")
+		to_chat(candidate, "<span class='warning'>Ten [name] zostało już przejęte! Być może później będzie dostępnych ich więcej?</span>")
 		return FALSE
 	if(candidate.mind && !isobserver(candidate))
 		candidate.mind.transfer_to(brainmob)
@@ -144,9 +144,9 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 		switch(brainmob.stat)
 			if(CONSCIOUS)
 				if(!brainmob.client)
-					. += "It appears to be in stand-by mode." //afk
+					. += "Wygląda na to, że jest w trybie czuwania." //afk
 			if(DEAD)
-				. += "<span class='deadsay'>It appears to be completely inactive.</span>"
+				. += "<span class='deadsay'>Wygląda na całkowicie nieaktywne.</span>"
 	else
 		. += "[dead_message]"
 

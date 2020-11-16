@@ -1,0 +1,795 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bi" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1{
+	dir = 4;
+	icon_state = "scrub_map_on-1"
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"bZ" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"cj" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8;
+	icon_state = "pipe11-1"
+	},
+/turf/open/floor/plating,
+/area/engine/engineering)
+"dp" = (
+/obj/effect/turf_decal/stripes/red/line,
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"dz" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"ee" = (
+/obj/machinery/particle_accelerator/control_box,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"en" = (
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"eY" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
+	dir = 4
+	},
+/obj/structure/cable/layer1,
+/obj/effect/turf_decal/arrows/red{
+	dir = 4;
+	pixel_y = -5
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"fi" = (
+/obj/machinery/door/airlock/engineering/glass{
+	name = "Stormdrive Engine";
+	req_access_txt = "10"
+	},
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"gS" = (
+/obj/structure/particle_accelerator/particle_emitter/right,
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"hs" = (
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 10
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"hz" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 10;
+	icon_state = "pipe11-1"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"iI" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"jc" = (
+/obj/structure/particle_accelerator/end_cap,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"jh" = (
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 9
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"ka" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer1{
+	dir = 8;
+	icon_state = "manifold-1"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"ks" = (
+/obj/item/control_rod,
+/obj/effect/turf_decal/stripes/box,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"lk" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"lD" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible,
+/obj/machinery/portable_atmospherics/canister/toxins,
+/obj/effect/turf_decal/stripes/box,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"lR" = (
+/obj/structure/particle_accelerator/power_box,
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"nb" = (
+/obj/structure/cable/layer1,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"nk" = (
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"nA" = (
+/obj/machinery/light,
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"nT" = (
+/obj/structure/cable/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8;
+	icon_state = "pipe11-1"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"oc" = (
+/obj/effect/turf_decal/stripes/box,
+/obj/machinery/computer/ship/reactor_control_computer{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"qG" = (
+/obj/machinery/camera{
+	c_tag = "Stormdrive engine";
+	network = list("ss13","engine")
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"rm" = (
+/obj/machinery/atmospherics/components/binary/stormdrive_reactor,
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"rD" = (
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"ta" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"tf" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"tt" = (
+/obj/effect/turf_decal/stripes/red/full,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"tY" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"vr" = (
+/obj/structure/cable/multilayer{
+	cable_layer = 1
+	},
+/obj/machinery/power/terminal{
+	dir = 4;
+	icon_state = "term"
+	},
+/obj/machinery/camera{
+	c_tag = "Stormdrive engine";
+	dir = 6;
+	network = list("ss13","engine")
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"vt" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"vJ" = (
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
+	dir = 6
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"xK" = (
+/obj/machinery/atmospherics/pipe/simple/purple/visible,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/turf_decal/arrows/white{
+	pixel_x = 5
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"yZ" = (
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"za" = (
+/obj/machinery/atmospherics/components/binary/pump{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"zu" = (
+/obj/structure/sign/warning/radiation,
+/turf/closed/wall,
+/area/engine/engineering)
+"zO" = (
+/obj/machinery/atmospherics/components/binary/pump{
+	dir = 4
+	},
+/obj/effect/turf_decal/arrows/red{
+	dir = 4;
+	pixel_y = -5
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Bc" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Bh" = (
+/obj/machinery/atmospherics/pipe/simple/purple/visible,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"BZ" = (
+/obj/machinery/atmospherics/pipe/manifold/purple/visible{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"ED" = (
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 4
+	},
+/turf/closed/wall/r_wall,
+/area/engine/engineering)
+"EN" = (
+/obj/machinery/door/airlock/engineering/glass{
+	name = "Stormdrive Engine";
+	req_access_txt = "10"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Fi" = (
+/turf/closed/wall/r_wall,
+/area/engine/engineering)
+"Ft" = (
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/engineering/glass{
+	name = "Stormdrive Engine";
+	req_access_txt = "10"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Gm" = (
+/obj/machinery/camera{
+	c_tag = "Stormdrive engine";
+	dir = 8;
+	network = list("ss13","engine")
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"GZ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
+	dir = 4
+	},
+/turf/closed/wall/r_wall,
+/area/engine/engineering)
+"He" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"Il" = (
+/obj/structure/particle_accelerator/particle_emitter/center,
+/obj/effect/turf_decal/stripes/line{
+	dir = 2
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"IL" = (
+/obj/structure/cable/multilayer{
+	cable_layer = 1
+	},
+/obj/machinery/power/terminal{
+	dir = 4;
+	icon_state = "term"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"JM" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"KK" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/machinery/atmospherics/pipe/simple/purple/visible,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"Ln" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"Lx" = (
+/obj/structure/particle_accelerator/particle_emitter/left,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"LL" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/turf_decal/stripes/box,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"LQ" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1{
+	dir = 1;
+	icon_state = "scrub_map_on-1"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Nv" = (
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 8;
+	icon_state = "warningline_red"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
+	dir = 5
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Rl" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"Ru" = (
+/obj/structure/cable/multilayer{
+	cable_layer = 3
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"RP" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"RS" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"Sf" = (
+/obj/structure/cable/layer1,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Sz" = (
+/obj/machinery/atmospherics/pipe/simple/purple/visible,
+/obj/effect/turf_decal/arrows/white{
+	pixel_x = 5
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"SP" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
+	dir = 4
+	},
+/obj/effect/turf_decal/arrows/red{
+	dir = 4;
+	pixel_y = -5
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"SZ" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"Te" = (
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 4;
+	icon_state = "warningline_red"
+	},
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 10
+	},
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Tg" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/structure/cable/layer1,
+/turf/open/floor/plating,
+/area/engine/engineering)
+"Uw" = (
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Vl" = (
+/obj/machinery/light,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"VG" = (
+/obj/structure/table/reinforced,
+/obj/machinery/button{
+	id = "stormdrive";
+	name = "Reactor shutters control";
+	pixel_y = 6;
+	req_access_txt = "10"
+	},
+/obj/machinery/button{
+	id = "controlroom";
+	name = "Control room shutters control";
+	pixel_y = -2;
+	req_access_txt = "10"
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"Wy" = (
+/obj/structure/particle_accelerator/fuel_chamber,
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"Xa" = (
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "controlroom";
+	name = "Reactor control room shutters"
+	},
+/obj/machinery/door/airlock/engineering/glass{
+	name = "Control Room";
+	req_access_txt = "10"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"Xn" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Xs" = (
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"Ya" = (
+/obj/machinery/atmospherics/pipe/manifold/purple/visible{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Yi" = (
+/obj/structure/cable,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"YO" = (
+/obj/machinery/camera{
+	c_tag = "Stormdrive engine";
+	dir = 4;
+	network = list("ss13","engine")
+	},
+/obj/item/control_rod,
+/obj/effect/turf_decal/stripes/box,
+/turf/open/floor/engine,
+/area/engine/engineering)
+"Ze" = (
+/obj/machinery/camera{
+	c_tag = "Stormdrive engine";
+	dir = 6;
+	network = list("ss13","engine")
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"Zt" = (
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 5
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
+
+(1,1,1) = {"
+qG
+Uw
+Uw
+Uw
+Uw
+za
+Uw
+Uw
+Uw
+Uw
+Uw
+Fi
+JM
+JM
+Fi
+Fi
+"}
+(2,1,1) = {"
+bZ
+Xn
+tY
+RP
+Uw
+hs
+xK
+Sz
+Sz
+Bh
+Zt
+He
+lD
+Ya
+LL
+Fi
+"}
+(3,1,1) = {"
+ta
+Bc
+Fi
+Fi
+He
+He
+Fi
+Fi
+Uw
+Uw
+nk
+Ft
+Uw
+za
+Uw
+Vl
+"}
+(4,1,1) = {"
+Yi
+tf
+Xa
+SZ
+SZ
+RS
+VG
+Fi
+Fi
+Uw
+hs
+KK
+Bh
+BZ
+Zt
+Gm
+"}
+(5,1,1) = {"
+Yi
+Vl
+Fi
+Xs
+Xs
+Xs
+Xs
+nA
+Fi
+Uw
+Uw
+zu
+Fi
+EN
+ED
+Fi
+"}
+(6,1,1) = {"
+Yi
+Uw
+Fi
+Ln
+ee
+dz
+Lx
+Xs
+He
+tt
+tt
+He
+vJ
+Nv
+en
+Uw
+"}
+(7,1,1) = {"
+Yi
+Uw
+Fi
+jc
+Wy
+lR
+Il
+Xs
+He
+tt
+tt
+He
+rD
+rm
+dp
+Fi
+"}
+(8,1,1) = {"
+Yi
+Uw
+Fi
+Rl
+vt
+vt
+gS
+Xs
+He
+tt
+tt
+He
+yZ
+Te
+jh
+Uw
+"}
+(9,1,1) = {"
+Yi
+Uw
+Fi
+Ze
+Xs
+Xs
+Xs
+nA
+Fi
+Uw
+Uw
+zu
+GZ
+fi
+Fi
+Fi
+"}
+(10,1,1) = {"
+Yi
+Vl
+Fi
+Xs
+Xs
+bi
+oc
+Fi
+Fi
+Uw
+Uw
+He
+zO
+Yi
+ks
+YO
+"}
+(11,1,1) = {"
+Yi
+Uw
+Fi
+Fi
+He
+cj
+Fi
+Fi
+Uw
+Uw
+Uw
+Ft
+SP
+Yi
+Uw
+Vl
+"}
+(12,1,1) = {"
+iI
+iI
+iI
+iI
+iI
+nT
+Sf
+nb
+nb
+nb
+nb
+Tg
+eY
+Ru
+ks
+Fi
+"}
+(13,1,1) = {"
+vr
+IL
+Yi
+IL
+Yi
+hz
+ka
+LQ
+Uw
+Uw
+Uw
+Fi
+lk
+JM
+Fi
+Fi
+"}

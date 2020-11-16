@@ -23,22 +23,6 @@ map metastation
 	votable
 endmap
 
-map pubbystation
-	maxplayers 50
-	votable
-endmap
-
-map deltastation
-	minplayers 40
-	votable
-endmap
-
-map donutstation
-	minplayers 60
-	maxplayers 120
-	disabled
-endmap
-
 map runtimestation
 	disabled
 endmap
