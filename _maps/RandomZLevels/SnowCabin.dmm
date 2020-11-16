@@ -396,11 +396,6 @@
 	},
 /turf/open/floor/carpet,
 /area/awaymission/cabin)
-"bf" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/awaymission/cabin)
 "bg" = (
 /obj/machinery/door/window/westleft{
 	name = "manager's desk"
@@ -909,10 +904,6 @@
 /obj/structure/cable,
 /turf/open/floor/carpet,
 /area/awaymission/cabin)
-"cI" = (
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/awaymission/cabin)
 "cJ" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/condiment/peppermill{
@@ -1417,11 +1408,11 @@
 /area/awaymission/cabin)
 "eo" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/mug/coco{
+/obj/item/reagent_containers/food/drinks/mug/cocoa{
 	desc = "Still hot!";
 	pixel_y = -2
 	},
-/obj/item/reagent_containers/food/drinks/mug/coco{
+/obj/item/reagent_containers/food/drinks/mug/cocoa{
 	desc = "Still hot!";
 	pixel_x = 8;
 	pixel_y = 8
@@ -2851,11 +2842,6 @@
 	},
 /turf/open/floor/carpet,
 /area/awaymission/cabin)
-"hm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/awaymission/cabin)
 "hn" = (
 /obj/structure/sign/poster/official/high_class_martini{
 	pixel_y = 32
@@ -2882,14 +2868,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/awaymission/cabin)
-"hs" = (
-/obj/structure/cable,
-/turf/open/floor/carpet,
-/area/awaymission/cabin)
-"ht" = (
-/obj/structure/cable,
-/turf/open/floor/carpet,
 /area/awaymission/cabin)
 "hu" = (
 /obj/structure/table/reinforced,
@@ -2918,11 +2896,6 @@
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
-/area/awaymission/cabin)
-"hx" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable,
-/turf/open/floor/plating,
 /area/awaymission/cabin)
 "hy" = (
 /obj/machinery/door/airlock/maintenance{
@@ -2961,10 +2934,6 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/awaymission/cabin)
-"hD" = (
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/awaymission/cabin)
 "hE" = (
 /obj/machinery/door/airlock/wood{
 	name = "Gateway"
@@ -2974,18 +2943,13 @@
 /area/awaymission/cabin)
 "hF" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/mug/coco{
+/obj/item/reagent_containers/food/drinks/mug/cocoa{
 	desc = "Still hot!";
 	pixel_y = 2
 	},
 /turf/open/floor/carpet,
 /area/awaymission/cabin)
 "hG" = (
-/obj/effect/landmark/awaystart,
-/obj/structure/cable,
-/turf/open/floor/carpet,
-/area/awaymission/cabin)
-"hH" = (
 /obj/effect/landmark/awaystart,
 /obj/structure/cable,
 /turf/open/floor/carpet,
@@ -3358,7 +3322,7 @@
 /area/awaymission/cabin/caves)
 "iR" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/mug/coco{
+/obj/item/reagent_containers/food/drinks/mug/cocoa{
 	desc = "Still hot!";
 	pixel_x = -7;
 	pixel_y = -2
@@ -3367,7 +3331,7 @@
 /area/awaymission/cabin)
 "iS" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/mug/coco{
+/obj/item/reagent_containers/food/drinks/mug/cocoa{
 	desc = "Still hot!";
 	pixel_x = 7;
 	pixel_y = 2
@@ -3376,7 +3340,7 @@
 /area/awaymission/cabin)
 "iT" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/mug/coco{
+/obj/item/reagent_containers/food/drinks/mug/cocoa{
 	desc = "Still hot!";
 	pixel_x = -4;
 	pixel_y = 4
@@ -3385,12 +3349,12 @@
 /area/awaymission/cabin)
 "iU" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/mug/coco{
+/obj/item/reagent_containers/food/drinks/mug/cocoa{
 	desc = "Still hot!";
 	pixel_x = -5;
 	pixel_y = 2
 	},
-/obj/item/reagent_containers/food/drinks/mug/coco{
+/obj/item/reagent_containers/food/drinks/mug/cocoa{
 	desc = "Still hot!";
 	pixel_x = 7;
 	pixel_y = -2
@@ -34965,7 +34929,7 @@ an
 aU
 an
 cz
-cI
+cz
 cL
 db
 di
@@ -34974,7 +34938,7 @@ hA
 hB
 di
 cL
-hD
+cz
 aq
 an
 dB
@@ -35731,11 +35695,11 @@ ax
 an
 aw
 aF
-bf
+aD
 hr
-hs
-hs
-ht
+cH
+cH
+cH
 an
 bk
 bJ
@@ -35986,7 +35950,7 @@ ac
 dB
 ax
 ar
-hm
+aD
 ed
 hu
 an
@@ -36000,9 +35964,9 @@ an
 cc
 cp
 hC
-cI
-cI
-hH
+cz
+cz
+hG
 hj
 an
 dB
@@ -36243,7 +36207,7 @@ ac
 dB
 ax
 aD
-hx
+aD
 ed
 hv
 an
