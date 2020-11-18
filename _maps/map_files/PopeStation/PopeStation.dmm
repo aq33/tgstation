@@ -26668,9 +26668,11 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
+	name = "Medbay Maintenance";
 	req_access_txt = "null";
-	req_one_access_txt = "12;5"
+	req_one_access_txt = "5;22"
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/central)
@@ -27203,7 +27205,6 @@
 /obj/structure/cable,
 /obj/machinery/door/airlock{
 	name = "Service Hall";
-	req_access_txt = "null";
 	req_one_access_txt = "25;26;35;28;22;37;46;38"
 	},
 /obj/machinery/door/firedoor/border_only{
@@ -30155,6 +30156,11 @@
 /obj/effect/turf_decal/bot{
 	dir = 1
 	},
+/obj/machinery/door/window/northleft{
+	dir = 8;
+	name = "MuleBot Access";
+	req_access_txt = "50"
+	},
 /turf/open/floor/plating,
 /area/maintenance/port/central)
 "bjm" = (
@@ -32272,7 +32278,9 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance/glass{
+	req_one_access_txt = "25;26;35;28;22;37;46;38"
+	},
 /turf/open/floor/plating,
 /area/maintenance/port/central)
 "bnL" = (
@@ -32896,6 +32904,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/barricade/wooden,
 /turf/open/floor/plating,
 /area/maintenance/port/central)
 "boX" = (
@@ -33350,8 +33359,9 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/maintenance{
+	name = "Medbay Maintenance";
 	req_access_txt = "null";
-	req_one_access_txt = "12;5"
+	req_one_access_txt = "5;22"
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/central)
@@ -34280,6 +34290,7 @@
 /area/medical/patients_rooms/room_a)
 "bsg" = (
 /obj/machinery/door/airlock/maintenance{
+	id_tag = "C";
 	name = "Medbay Maintenance";
 	req_access_txt = "null";
 	req_one_access_txt = "25;26;28;22;37;46;38;113"
@@ -34288,7 +34299,6 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
-/obj/effect/mapping_helpers/airlock/unres,
 /turf/open/floor/plating,
 /area/maintenance/port/central)
 "bsh" = (
@@ -34304,7 +34314,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	id_tag = "C"
+	},
 /turf/open/floor/plating,
 /area/maintenance/port/central)
 "bsk" = (
@@ -34744,6 +34756,7 @@
 "btc" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/medical{
+	id_tag = "A";
 	name = "Patient Room A";
 	req_one_access_txt = "5;22;38;70;112"
 	},
@@ -34784,6 +34797,15 @@
 "bte" = (
 /obj/structure/cable,
 /obj/vehicle/ridden/wheelchair,
+/obj/machinery/button/door{
+	id = "C";
+	name = "Doors Bolt Control, Hospital";
+	normaldoorcontrol = 1;
+	pixel_x = 6;
+	pixel_y = 26;
+	req_one_access_txt = "5";
+	specialfunctions = 4
+	},
 /turf/open/floor/plasteel/white,
 /area/medical/break_room)
 "btf" = (
@@ -35212,11 +35234,11 @@
 /turf/open/floor/plasteel/white,
 /area/medical/patients_rooms/room_a)
 "bue" = (
-/obj/effect/spawner/structure/window,
 /obj/machinery/door/poddoor/preopen{
 	id = "isola";
 	name = "privacy shutters"
 	},
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plasteel/white,
 /area/medical/patients_rooms/room_a)
 "buf" = (
@@ -36089,11 +36111,11 @@
 /turf/open/floor/plasteel/white,
 /area/medical/patients_rooms/room_b)
 "bwg" = (
-/obj/effect/spawner/structure/window,
 /obj/machinery/door/poddoor/preopen{
 	id = "isolb";
 	name = "privacy shutters"
 	},
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plasteel/white,
 /area/medical/patients_rooms/room_b)
 "bwh" = (
@@ -36754,6 +36776,7 @@
 "bxy" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/medical{
+	id_tag = "B";
 	name = "Patient Room B";
 	req_one_access_txt = "5;22;38;70;114"
 	},
@@ -46417,7 +46440,7 @@
 "bRK" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/maintenance{
-	req_access_txt = "12"
+	req_one_access_txt = "12;47"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
@@ -48773,6 +48796,14 @@
 /obj/item/stack/cable_coil/cut,
 /turf/open/floor/plating,
 /area/space)
+"eVz" = (
+/obj/machinery/door/firedoor/window,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/hallway/secondary/entry)
 "eYY" = (
 /obj/structure/table,
 /obj/item/wallframe/airalarm,
@@ -49370,6 +49401,29 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"mSL" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/button/door{
+	id = "B";
+	name = "Door Bolt Control, Isolation B";
+	normaldoorcontrol = 1;
+	pixel_x = -25;
+	pixel_y = -8;
+	req_one_access_txt = "45;70";
+	specialfunctions = 4
+	},
+/obj/machinery/button/door{
+	id = "A";
+	name = "Door Bolt Control, Isolation A";
+	normaldoorcontrol = 1;
+	pixel_x = -25;
+	pixel_y = 7;
+	req_one_access_txt = "45;70";
+	specialfunctions = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/break_room)
 "mZk" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/pipe/simple/general/visible{
@@ -68724,7 +68778,7 @@ aaa
 aaa
 aKT
 aJc
-aMt
+eVz
 aLu
 aOE
 aPR
@@ -69238,7 +69292,7 @@ aaa
 aaa
 aKT
 aJc
-aMt
+eVz
 aLu
 aOE
 aPU
@@ -72607,7 +72661,7 @@ brd
 bsg
 btd
 buf
-buf
+mSL
 buf
 bxz
 byE
