@@ -4999,7 +4999,7 @@
 	dir = 1
 	},
 /obj/machinery/camera{
-	c_tag = "Science Dock;
+	c_tag = "Science Dock";
 	network = list("mine")
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
