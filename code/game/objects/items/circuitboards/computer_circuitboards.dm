@@ -327,9 +327,9 @@
 
 /obj/item/circuitboard/computer/mining_shuttle
 	name = "Mining Shuttle (Computer Board)"
-	build_path = /obj/machinery/computer/shuttle/mining
+	build_path = /obj/machinery/computer/shuttle/mining/common
 
-/obj/item/circuitboard/computer/mining_shuttle/public_mining
+/obj/item/circuitboard/computer/mining_shuttle/common
 	name = "Publiczny Prom Wydobywczy (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/mining/public_mining
 
