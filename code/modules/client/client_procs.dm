@@ -205,6 +205,9 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if(connection != "seeker" && connection != "web")//Invalid connection type.
 		return null
 
+	if(CONFIG_GET(flag/respect_upstream_bans) || CONFIG_GET(flag/respect_upstream_permabans))
+		check_upstream_bans()
+
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
 
@@ -288,10 +291,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 
 
 	. = ..()	//calls mob.Login()
-	if (length(GLOB.stickybanadminexemptions))
-		GLOB.stickybanadminexemptions -= ckey
-		if (!length(GLOB.stickybanadminexemptions))
-			restore_stickybans()
 
 	if (byond_version >= 512)
 		if (!byond_build || byond_build < 1386)
@@ -451,7 +450,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		if (menuitem)
 			menuitem.Load_checked(src)
 
-	view_size = new(src, getScreenSize(FALSE))
+	view_size = new(src, getScreenSize(mob))
 	view_size.resetFormat()
 	view_size.setZoomMode()
 	fit_viewport()
@@ -1049,3 +1048,34 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 
 /client/proc/restore_account_identifier()
 	verbs += /client/proc/show_account_identifier
+
+/client/proc/check_upstream_bans()
+	set waitfor = 0
+
+	if(!CONFIG_GET(string/centcom_ban_db))
+		return
+
+	var/datum/http_request/request = new()
+	request.prepare(RUSTG_HTTP_METHOD_GET, "[CONFIG_GET(string/centcom_ban_db)]/[ckey]", "", "")
+	request.begin_async()
+	UNTIL(request.is_complete())
+
+	var/datum/http_response/response = request.into_response()
+
+	var/list/bans
+
+	if(response.errored || response.status_code != 200 || response.body == "[]")
+		return
+
+	bans = json_decode(response["body"])
+	for(var/list/ban in bans)
+		var/list/ban_attributes = ban["banAttributes"]
+		if(ban_attributes["BeeStationGlobal"])
+			if(CONFIG_GET(flag/respect_upstream_permabans) && ban["expires"])
+				continue
+
+			to_chat(src, "<span class='userdanger'>Your connection has been closed because you are currently banned from BeeStation.</span>")
+			message_admins("[key_name(src)] was removed from the game due to a ban from BeeStation.")
+			qdel(src)
+			return
+

@@ -14,7 +14,7 @@
 	var/list/initial_species_traits //for getting these values back for assume_disguise()
 	var/list/initial_inherent_traits
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC
-	species_language_holder = /datum/language_holder/synthetic
+	species_language_holder = /datum/language_holder/ipc
 
 
 /datum/species/synth/New()

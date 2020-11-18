@@ -60,6 +60,7 @@
 		message_admins("[key_name_admin(src)] has cancelled their reply to [key_name_admin(C, 0, 0)]'s admin help.")
 		return
 	cmd_admin_pm(whom, msg)
+	AH.Claim()
 
 /client/proc/cmd_ahelp_reply_instant(whom, msg)
 	if(prefs.muted & MUTE_ADMINHELP)
@@ -172,7 +173,7 @@
 	else
 		if(recipient.holder)
 			if(holder)	//both are admins
-				to_chat(recipient, "<span class='danger'>Admin PM from-<b>[key_name(src, recipient, 1)]</b>: <span class='linkify'>[keywordparsedmsg]</span></span>", type = MESSAGE_TYPE_ADMINPM, confidential=TRUE)
+				to_chat(recipient, "<span class='danger'>Admin PM from-<b>[key_name(src, recipient, 1)]</b>: <span class='linkify'>[keywordparsedmsg]</span></span>", type = MESSAGE_TYPE_ADMINPM)
 				to_chat(src, "<span class='notice'>Admin PM to-<b>[key_name(recipient, src, 1)]</b>: <span class='linkify'>[keywordparsedmsg]</span></span>", type = MESSAGE_TYPE_ADMINPM, confidential=TRUE)
 
 				//omg this is dumb, just fill in both their tickets
@@ -209,7 +210,11 @@
 				if(CONFIG_GET(flag/popup_admin_pm))
 					spawn()	//so we don't hold the caller proc up
 						var/sender = src
-						var/sendername = key
+						var/sendername
+						if(holder.fakekey)
+							sendername = holder.fakekey
+						else
+							sendername = key
 						var/reply = stripped_multiline_input(recipient, msg,"Admin PM from-[sendername]", "")		//show message and await a reply
 						if(recipient && reply)
 							if(sender)
