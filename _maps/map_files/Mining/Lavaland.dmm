@@ -1762,13 +1762,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/laborcamp/security)
-"fs" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/computer/shuttle/science{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/science/research/abandoned)
 "ft" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -17369,7 +17362,7 @@ vn
 fZ
 fm
 Gu
-fs
+fm
 iL
 MM
 fM
