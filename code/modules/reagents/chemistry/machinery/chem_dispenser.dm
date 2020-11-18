@@ -92,6 +92,9 @@
 	if(upgrade_reagents)
 		upgrade_reagents = sortList(upgrade_reagents, /proc/cmp_reagents_asc)
 	update_icon()
+	if(!cell) //how?
+		component_parts += new /obj/item/stock_parts/cell(null)
+		RefreshParts()
 
 /obj/machinery/chem_dispenser/Destroy()
 	QDEL_NULL(beaker)
@@ -109,7 +112,7 @@
 
 /obj/machinery/chem_dispenser/process()
 	if (recharge_counter >= 4)
-		if(!is_operational() || !cell)
+		if(!is_operational())
 			return
 		var/usedpower = cell.give(recharge_amount)
 		if(usedpower)
