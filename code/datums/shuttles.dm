@@ -520,6 +520,12 @@
 	suffix = "delta"
 	name = "cargo ferry (Delta)"
 
+/datum/map_template/shuttle/science
+	port_id = "science"
+	suffix = "outpost"
+	name = "science outpost shuttle"
+	can_be_bought = FALSE
+
 /datum/map_template/shuttle/mining/delta
 	suffix = "delta"
 	name = "mining shuttle (Delta)"
