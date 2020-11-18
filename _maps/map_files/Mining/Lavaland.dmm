@@ -732,7 +732,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "cl" = (
 /obj/machinery/door/airlock{
 	id_tag = "miningdorm1";
@@ -974,7 +974,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "cY" = (
 /obj/machinery/door/airlock/research{
 	name = "Testing Lab";
@@ -988,7 +988,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "cZ" = (
 /obj/structure/fence{
 	dir = 4
@@ -1076,7 +1076,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "dq" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 5
@@ -1094,7 +1094,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "dr" = (
 /obj/machinery/power/apc/auto_name/north{
 	start_charge = 0
@@ -1116,7 +1116,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "ds" = (
 /obj/structure/sign/poster/official/work_for_a_future{
 	pixel_y = 32
@@ -1178,7 +1178,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "dJ" = (
 /obj/machinery/computer/security/telescreen/toxins{
 	dir = 8;
@@ -1188,7 +1188,7 @@
 /obj/item/folder/white,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "dK" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/binary/volume_pump{
@@ -1233,7 +1233,7 @@
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "dU" = (
 /obj/machinery/light/small,
 /turf/open/floor/plasteel,
@@ -1316,12 +1316,12 @@
 /area/mine/laborcamp)
 "ei" = (
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "ek" = (
 /obj/effect/decal/cleanable/greenglow,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/engine,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "el" = (
 /obj/structure/chair{
 	dir = 8
@@ -1407,7 +1407,7 @@
 /obj/item/mop,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/engine,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "ew" = (
 /obj/machinery/flasher{
 	id = "labor";
@@ -1419,10 +1419,10 @@
 /obj/structure/closet/crate/radiation,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/engine,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "ey" = (
 /turf/closed/wall/r_wall,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "eB" = (
 /obj/machinery/conveyor{
 	id = "gulag"
@@ -1506,7 +1506,7 @@
 "eN" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/engine,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "eO" = (
 /obj/structure/closet/crate{
 	icon_state = "crateopen"
@@ -1541,7 +1541,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "eS" = (
 /obj/machinery/suit_storage_unit/mining,
 /obj/effect/turf_decal/tile/purple{
@@ -1601,7 +1601,7 @@
 "fa" = (
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "fb" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
@@ -1737,11 +1737,11 @@
 "fm" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "fn" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "fo" = (
 /obj/machinery/button/door{
 	id = "labor";
@@ -1768,7 +1768,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "ft" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -1789,7 +1789,7 @@
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "fw" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/beer{
@@ -1874,7 +1874,7 @@
 "fG" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "fH" = (
 /obj/machinery/door/firedoor/window,
 /obj/effect/spawner/structure/window/reinforced,
@@ -1996,7 +1996,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "gb" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
@@ -2038,7 +2038,7 @@
 /obj/structure/cable,
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "gh" = (
 /obj/machinery/computer/security/labor,
 /obj/effect/turf_decal/tile/red{
@@ -2128,7 +2128,7 @@
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/engine,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "gy" = (
 /obj/structure/stone_tile/cracked,
 /obj/structure/stone_tile{
@@ -2217,7 +2217,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/structure/cable,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "gY" = (
 /obj/machinery/light/small,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -2249,7 +2249,7 @@
 /obj/structure/spider/stickyweb,
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "hH" = (
 /obj/structure/stone_tile/block{
 	dir = 1
@@ -2380,7 +2380,7 @@
 "iI" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "iK" = (
 /obj/structure/stone_tile/block,
 /obj/structure/stone_tile/cracked{
@@ -2390,14 +2390,14 @@
 /area/lavaland/surface/outdoors)
 "iL" = (
 /turf/closed/wall,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "iP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "iV" = (
 /obj/structure/rack,
 /obj/item/clothing/mask/breath,
@@ -2533,7 +2533,7 @@
 	},
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "js" = (
 /obj/structure/stone_tile/block/cracked{
 	dir = 8
@@ -2672,7 +2672,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/engine,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "kw" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -2697,7 +2697,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "ky" = (
 /obj/structure/stone_tile/cracked{
 	dir = 4
@@ -2850,7 +2850,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "lp" = (
 /obj/structure/stone_tile/block/cracked{
 	dir = 4
@@ -3422,7 +3422,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "no" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -3438,7 +3438,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "nr" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -3458,14 +3458,14 @@
 /obj/structure/frame/machine,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "ny" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/engine,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "nA" = (
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume{
 	dir = 8
@@ -3481,7 +3481,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "nI" = (
 /obj/machinery/atmospherics/pipe/layer_manifold{
 	dir = 1
@@ -3504,7 +3504,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "nL" = (
 /obj/machinery/light{
 	dir = 8
@@ -3533,7 +3533,7 @@
 	},
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "oe" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining Dock Airlock"
@@ -3612,7 +3612,7 @@
 	pixel_x = -26
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "pi" = (
 /obj/machinery/door/airlock/mining/glass{
 	name = "Mining Station EVA";
@@ -3672,7 +3672,7 @@
 "qj" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "qv" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/machinery/light/small{
@@ -3682,7 +3682,7 @@
 	pixel_x = -26
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "qD" = (
 /obj/structure/table,
 /obj/item/storage/box/donkpockets,
@@ -3717,7 +3717,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "rO" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
@@ -3794,7 +3794,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "sQ" = (
 /obj/machinery/vending/cola/random,
 /obj/effect/turf_decal/tile/blue{
@@ -3848,7 +3848,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "tI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/purple{
@@ -3858,7 +3858,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "tN" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
@@ -3885,7 +3885,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "un" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -3916,7 +3916,7 @@
 	},
 /obj/item/mmi,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "uE" = (
 /obj/machinery/camera{
 	c_tag = "Science Entrance";
@@ -3926,7 +3926,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "uF" = (
 /obj/machinery/atmospherics/pipe/manifold/supply{
 	dir = 1
@@ -3965,11 +3965,11 @@
 	name = "Test Chamber Blast Door"
 	},
 /turf/open/floor/plating,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "vB" = (
 /obj/machinery/vending/wardrobe/science_wardrobe,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "vI" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -3992,7 +3992,7 @@
 "vV" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "vW" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -4029,12 +4029,12 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "wH" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "xj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -4050,7 +4050,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "xA" = (
 /obj/machinery/atmospherics/components/binary/dp_vent_pump{
 	dir = 4
@@ -4120,7 +4120,7 @@
 	name = "Test Chamber Blast Door"
 	},
 /turf/closed/wall/r_wall,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "zg" = (
 /obj/machinery/vending/assist,
 /obj/effect/decal/cleanable/dirt,
@@ -4128,7 +4128,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "zr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 8
@@ -4139,7 +4139,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "zu" = (
 /obj/machinery/button/door{
 	id = "miningbathroom";
@@ -4156,7 +4156,7 @@
 	},
 /obj/structure/window/reinforced,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "zK" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -4186,7 +4186,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Aj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
@@ -4196,7 +4196,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Aw" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -4281,12 +4281,12 @@
 	},
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "BT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "BV" = (
 /obj/machinery/computer/mech_bay_power_console{
 	dir = 1
@@ -4308,7 +4308,7 @@
 	req_access_txt = "7"
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Ck" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera{
@@ -4323,14 +4323,14 @@
 	dir = 6
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Cn" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Cp" = (
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
@@ -4349,7 +4349,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Dl" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -4369,7 +4369,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Dy" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -4447,7 +4447,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/engine,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "EG" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/item/stack/marker_beacon{
@@ -4469,7 +4469,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "EX" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -4493,7 +4493,7 @@
 "Fh" = (
 /obj/effect/decal/cleanable/oil/slippery,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Fj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 8
@@ -4506,7 +4506,7 @@
 	},
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Fn" = (
 /obj/structure/chair/comfy/brown{
 	buildstackamount = 0;
@@ -4528,7 +4528,7 @@
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "FL" = (
 /turf/closed/wall/r_wall,
 /area/mine/production)
@@ -4541,7 +4541,7 @@
 "FT" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Gc" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -4592,7 +4592,7 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Gu" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 8
@@ -4604,12 +4604,12 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "GC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "GK" = (
 /obj/machinery/mineral/unloading_machine{
 	dir = 6;
@@ -4666,11 +4666,11 @@
 "HK" = (
 /obj/structure/frame/machine,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "HN" = (
 /obj/machinery/status_display/evac,
 /turf/closed/wall,
-/area/lavaland/surface/outdoors)
+/area/mine/production)
 "HO" = (
 /obj/machinery/light/small,
 /obj/structure/closet/emcloset/anchored,
@@ -4713,7 +4713,7 @@
 	pixel_x = -27
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Ij" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
@@ -4802,7 +4802,7 @@
 	dir = 6
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "JJ" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -4844,14 +4844,14 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Kq" = (
 /obj/machinery/door/airlock/external{
 	name = "Science Outpost Airlock";
 	req_access_txt = "47"
 	},
 /turf/open/floor/plating,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "KD" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -4865,7 +4865,7 @@
 /obj/machinery/rnd/experimentor,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/engine,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "KZ" = (
 /turf/open/floor/plating,
 /area/mine/laborcamp)
@@ -4894,14 +4894,14 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Lr" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "LA" = (
 /obj/structure/sink{
 	dir = 4;
@@ -4940,7 +4940,7 @@
 /obj/structure/cable,
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Mn" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
@@ -4964,7 +4964,7 @@
 /obj/structure/showcase/machinery/signal_decrypter,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Mr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 8
@@ -4974,7 +4974,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Ms" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
@@ -5058,7 +5058,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Oj" = (
 /obj/machinery/door/airlock/research{
 	name = "tachyon-doppler array booth";
@@ -5072,7 +5072,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Oq" = (
 /obj/structure/window{
 	dir = 8
@@ -5115,7 +5115,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Pt" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/spawner/structure/window/reinforced,
@@ -5150,7 +5150,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
 /turf/open/floor/plating,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Qe" = (
 /obj/machinery/vending/snack,
 /obj/effect/turf_decal/tile/bar,
@@ -5168,7 +5168,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "QN" = (
 /obj/machinery/shower{
 	pixel_y = 22
@@ -5222,7 +5222,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "RL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -5230,7 +5230,7 @@
 	},
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "RO" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
@@ -5250,19 +5250,19 @@
 /obj/structure/spider/stickyweb,
 /obj/machinery/light,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Sd" = (
 /obj/machinery/rnd/destructive_analyzer,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Si" = (
 /obj/structure/window/reinforced,
 /obj/machinery/computer{
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Sk" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -5275,7 +5275,7 @@
 	dir = 10
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "SA" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -5312,14 +5312,14 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "TA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/open/floor/engine,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "TK" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -5360,7 +5360,7 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3/lavaland,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Ug" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -5373,7 +5373,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Uh" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -5411,7 +5411,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Uz" = (
 /obj/structure/fence/door,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -5419,7 +5419,7 @@
 "UE" = (
 /obj/machinery/recharge_station,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "UF" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3/lavaland{
 	dir = 4
@@ -5449,7 +5449,7 @@
 	},
 /obj/effect/decal/cleanable/greenglow/filled,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Vb" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -5479,7 +5479,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "VK" = (
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume{
 	dir = 4
@@ -5488,16 +5488,16 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "VS" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "VU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "VW" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -5505,7 +5505,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Wd" = (
 /obj/structure/table,
 /obj/machinery/microwave{
@@ -5556,7 +5556,7 @@
 	network = list("mine")
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "WA" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
@@ -5605,7 +5605,7 @@
 	req_access_txt = "29"
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "WY" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plasteel,
@@ -5624,7 +5624,7 @@
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Xi" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -5640,14 +5640,14 @@
 	},
 /obj/item/clothing/glasses/welding,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Xl" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Xz" = (
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
@@ -5664,20 +5664,20 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Yf" = (
 /obj/structure/table,
 /obj/item/storage/backpack/duffelbag/med{
 	name = "surgical duffel bag"
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Yo" = (
 /obj/machinery/atmospherics/pipe/layer_manifold{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "Ys" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -5691,9 +5691,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
-"Yv" = (
-/turf/closed/wall/r_wall,
-/area/lavaland/surface/outdoors)
 "Yw" = (
 /obj/machinery/door/airlock/research/glass{
 	name = "Research Division Atrium";
@@ -5707,7 +5704,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "YF" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
@@ -5726,7 +5723,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/mine/abandoned)
+/area/science/research/abandoned)
 "YS" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 1
@@ -16074,7 +16071,7 @@ eL
 DY
 BC
 HN
-Yv
+FL
 do
 Un
 do
