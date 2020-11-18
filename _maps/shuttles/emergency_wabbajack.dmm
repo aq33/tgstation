@@ -487,6 +487,10 @@
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
+"ev" = (
+/obj/structure/closet/secure_closet/award,
+/turf/open/floor/mineral/titanium,
+/area/shuttle/escape)
 "ft" = (
 /obj/structure/grille,
 /obj/structure/window/shuttle/tinted,
@@ -758,7 +762,7 @@ ab
 ah
 ae
 aH
-aq
+ev
 aq
 aq
 el

@@ -425,6 +425,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	cost = 6
 	surplus = 30
 	include_modes = list(/datum/game_mode/nuclear)
+	illegal_tech = FALSE // koniec z bieganiem do zbrojowni po illegale
 
 /datum/uplink_item/dangerous/pie_cannon
 	name = "Banana Cream Pie Cannon"

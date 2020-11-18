@@ -19,6 +19,7 @@
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
+	hitscan = TRUE
 
 /obj/item/projectile/beam/laser/heavylaser
 	name = "heavy laser"
@@ -46,6 +47,7 @@
 	name = "practice laser"
 	damage = 0
 	nodamage = TRUE
+	hitscan = FALSE
 
 /obj/item/projectile/beam/scatter
 	name = "laser pellet"
@@ -69,7 +71,7 @@
 /obj/item/projectile/beam/disabler
 	name = "disabler beam"
 	icon_state = "omnilaser"
-	damage = 35
+	damage = 24
 	damage_type = STAMINA
 	flag = "energy"
 	hitsound = 'sound/weapons/tap.ogg'
@@ -192,3 +194,40 @@
 		var/mob/living/carbon/M = target
 		M.visible_message("<span class='danger'>[M] explodes into a shower of gibs!</span>")
 		M.gib()
+
+/obj/item/projectile/beam/laser/pistol
+	name = "laser beam"
+	damage = 10
+
+/obj/item/projectile/beam/laser/tribeam
+	name = "tribeam laser"
+	damage = 10
+
+/obj/item/projectile/energy/plasma
+	name = "plasma bolt"
+	icon_state = "plasma"
+	damage_type = BURN
+	var/knockdown_chance = 1
+	light_color = LIGHT_COLOR_GREEN
+	impact_type = /obj/effect/projectile/impact/pulse
+	muzzle_type = /obj/effect/projectile/muzzle/bfg
+	hitsound = 'sound/weapons/sear.ogg'
+	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
+
+/obj/item/projectile/energy/plasma/plasmagun
+	icon_state = "plasma3"
+	damage = 24
+	irradiate = 60
+	knockdown_chance = 50
+
+/obj/item/projectile/energy/plasma/pistol
+	icon_state = "plasma2"
+	damage = 15
+	irradiate = 30
+	knockdown_chance = 20
+
+/obj/item/projectile/energy/plasma/scatter
+	icon_state = "plasma1"
+	damage = 10
+	irradiate = 34
+	knockdown_chance = 15

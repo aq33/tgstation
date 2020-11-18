@@ -103,11 +103,10 @@
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "y" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/toolbox/emergency,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/closet/secure_closet/award,
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/escape)
 "A" = (
@@ -187,6 +186,7 @@
 /obj/structure/table/reinforced,
 /obj/item/storage/firstaid/regular,
 /obj/structure/window/reinforced,
+/obj/item/storage/toolbox/emergency,
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/escape)
 "M" = (

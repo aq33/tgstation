@@ -46,7 +46,7 @@
 	window.send_asset(get_asset_datum(/datum/asset/simple/namespaced/fontawesome))
 	window.send_asset(get_asset_datum(/datum/asset/spritesheet/chat))
 	request_telemetry()
-	addtimer(CALLBACK(src, .proc/on_initialize_timed_out), 2 SECONDS)
+	addtimer(CALLBACK(src, .proc/on_initialize_timed_out), 5 SECONDS)
 
 /**
  * private
@@ -54,9 +54,9 @@
  * Called when initialization has timed out.
  */
 /datum/tgui_panel/proc/on_initialize_timed_out()
-		winset(src, "output", "on-show=&is-disabled=0&is-visible=1")
-		winset(src, "browseroutput", "is-disabled=1;is-visible=0")
-		initialize()
+	// Currently does nothing but sending a message to old chat.
+	SEND_TEXT(client, "<span class=\"userdanger\">Nie udalo sie zaladowac chatu. Uzyj opcji fix tgui 4 w zakladce ooc by naprawic ten problem.</span>")
+	log_tgui("ERROR: [client.ckey] failed to load their fancy chat after a 5 second timeout when loading.")
 
 /**
  * private

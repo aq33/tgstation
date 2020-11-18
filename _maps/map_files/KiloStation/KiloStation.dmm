@@ -2103,6 +2103,8 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
+/obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "aer" = (
@@ -3113,7 +3115,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/machinery/computer/prisoner,
+/obj/machinery/computer/prisoner/management,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "agv" = (
@@ -7175,7 +7177,9 @@
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/qm)
 "aop" = (
-/obj/structure/displaycase/captain,
+/obj/structure/displaycase/captain{
+	req_access_txt = "20"
+	},
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = -26
@@ -9559,7 +9563,9 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
-/obj/machinery/computer/cargo/request,
+/obj/machinery/bounty_board{
+	pixel_y = 22
+	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
 "atu" = (
@@ -10423,7 +10429,13 @@
 	dir = 4;
 	icon_state = "scrub_map_on-1"
 	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/turf/open/floor/plasteel/showroomfloor,
 /area/security/brig)
 "avu" = (
 /obj/structure/sign/warning/explosives/alt,
@@ -11609,12 +11621,18 @@
 /turf/open/floor/plasteel/dark,
 /area/chapel/main)
 "axL" = (
-/obj/structure/bodycontainer/morgue,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/brig_phys,
+/turf/open/floor/plasteel/showroomfloor,
 /area/security/brig)
 "axM" = (
 /obj/structure/table,
@@ -18390,7 +18408,14 @@
 	dir = 4;
 	pixel_x = -23
 	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red,
+/turf/open/floor/plasteel/showroomfloor,
 /area/security/brig)
 "aKM" = (
 /obj/structure/chair/sofa/left{
@@ -30313,7 +30338,6 @@
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/bar/atrium)
 "bfx" = (
-/obj/structure/filingcabinet/chestdrawer,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -40440,10 +40464,6 @@
 /obj/structure/closet/firecloset,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/aft)
-"bBz" = (
-/obj/structure/sign/departments/cargo,
-/turf/closed/wall,
-/area/hallway/primary/starboard)
 "bBA" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/neutral,
@@ -42408,8 +42428,8 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-05"
+/obj/machinery/computer/cargo/request{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
@@ -45664,6 +45684,9 @@
 	dir = 8
 	},
 /obj/machinery/light,
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
 "bKH" = (
@@ -60233,7 +60256,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/obj/machinery/computer/prisoner{
+/obj/machinery/computer/prisoner/management{
 	dir = 1
 	},
 /turf/open/floor/plasteel/showroomfloor,
@@ -65193,6 +65216,9 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/machinery/computer/prisoner/gulag_teleporter_computer{
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/processing)
@@ -71407,6 +71433,28 @@
 /obj/machinery/atmospherics/pipe/layer_manifold,
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
+"mgC" = (
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "research_shutters";
+	name = "Research Privacy Shutter"
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/obj/machinery/autolathe,
+/obj/effect/turf_decal/stripes/box,
+/obj/machinery/door/window/westleft{
+	base_state = "right";
+	dir = 4;
+	icon_state = "right";
+	name = "Research and Development Desk";
+	req_one_access_txt = "7;29"
+	},
+/turf/open/floor/plating,
+/area/science/lab)
 "mix" = (
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/virology)
@@ -71767,6 +71815,14 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/virology)
+"tXX" = (
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/machinery/piratepad/civilian,
+/turf/open/floor/plasteel,
+/area/hallway/primary/starboard)
 "ubE" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8;
@@ -108594,7 +108650,7 @@ bCu
 bFR
 bHd
 bmL
-bly
+tXX
 bKG
 bnv
 bjX
@@ -108837,12 +108893,12 @@ ayU
 bco
 bdL
 aYf
-aYK
+mgC
 aYK
 aYd
 bij
 bhN
-bBz
+bnv
 ats
 bCv
 bly

@@ -122,6 +122,7 @@
 	display_name = "Data Theory"
 	description = "Big Data, in space!"
 	prereq_ids = list("base")
+	design_ids = list("bounty_pad","bounty_pad_control")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -518,7 +519,7 @@
 	display_name = "Subdermal Implants"
 	description = "Electronic implants buried beneath the skin."
 	prereq_ids = list("biotech")
-	design_ids = list("implanter", "implantcase", "implant_chem", "implant_tracking", "locator", "c38_trac")
+	design_ids = list("implanter", "implantcase", "implant_chem", "implant_securitydown", "implant_tracking", "locator", "c38_trac")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -654,7 +655,7 @@
 	id = "sec_basic"
 	display_name = "Basic Security Equipment"
 	description = "Standard equipment used by security."
-	design_ids = list("seclite", "pepperspray", "bola_energy", "zipties", "evidencebag", "flashbulb")
+	design_ids = list("seclite", "pepperspray", "bola_energy", "zipties", "evidencebag", "flashbulb", "laserpistol", "gun_cell")
 	prereq_ids = list("base")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000)
 	export_price = 5000
@@ -694,7 +695,7 @@
 	display_name = "Weapon Development Technology"
 	description = "Our researchers have found new ways to weaponize just about everything now."
 	prereq_ids = list("engineering")
-	design_ids = list("pin_testing", "tele_shield", "sleepy", "gun_cell")
+	design_ids = list("pin_testing", "tele_shield", "sleepy", "laserrifle")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 
@@ -712,7 +713,7 @@
 	display_name = "Advanced Weapon Development Technology"
 	description = "Our weapons are breaking the rules of reality by now."
 	prereq_ids = list("adv_engi", "weaponry")
-	design_ids = list("pin_loyalty", "taser", "gun_cell_upgraded")
+	design_ids = list("pin_loyalty", "taser", "gun_cell_upgraded", "laserrifletri")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 
@@ -739,7 +740,16 @@
 	display_name = "Radioactive Weaponry"
 	description = "Weapons using radioactive technology."
 	prereq_ids = list("adv_engi", "adv_weaponry")
-	design_ids = list("nuclear_gun", "advtaser")
+	design_ids = list("nuclear_gun", "advtaser", "plasmapistol")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	export_price = 5000
+
+/datum/techweb_node/adv_radioactive_weapons
+	id = "adv_radioactive_weapons"
+	display_name = "Advanced Radioactive Weaponry"
+	description = "Weapons using more radioactive technology."
+	prereq_ids = list("adv_engi", "adv_weaponry", "radioactive_weapons")
+	design_ids = list("plasmagun", "multiplas")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -1196,7 +1206,7 @@
 	display_name = "Illegal Technology"
 	description = "Dangerous research used to create dangerous objects."
 	prereq_ids = list("adv_engi", "adv_weaponry", "explosive_weapons")
-	design_ids = list("decloner", "borg_syndicate_module", "ai_cam_upgrade", "suppressor", "largecrossbow", "donksofttoyvendor", "donksoft_refill", "advanced_camera")
+	design_ids = list("decloner", "largecrossbow", "memorizer", "borg_syndicate_module", "ai_cam_upgrade", "suppressor", "donksofttoyvendor", "donksoft_refill", "advanced_camera")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 	hidden = TRUE

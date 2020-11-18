@@ -264,6 +264,10 @@
 /obj/item/defibrillator/loaded,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
+"cS" = (
+/obj/structure/closet/secure_closet/award,
+/turf/open/floor/mineral/titanium/blue,
+/area/shuttle/escape)
 "mv" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "bridge door";
@@ -403,7 +407,7 @@ aa
 (4,1,1) = {"
 aa
 MN
-aj
+cS
 aC
 av
 ab

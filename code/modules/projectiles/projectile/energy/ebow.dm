@@ -56,4 +56,6 @@
 	icon_state = "candy_corn"
 
 /obj/item/projectile/energy/bolt/large
-	damage = 20
+	damage = 25
+	stamina = 30
+	knockdown = 5
