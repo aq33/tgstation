@@ -195,10 +195,6 @@
 	name = "Magix (Computer Board)"
 	build_path = /obj/machinery/computer/pod/old/swf
 
-/obj/item/circuitboard/computer/bountypad
-	name = "Bounty Pad (Computer Board)"
-	build_path = /obj/machinery/computer/piratepad_control/civilian
-
 /obj/item/circuitboard/computer/prisoner
 	name = "Prisoner Management Console (Computer Board)"
 	build_path = /obj/machinery/computer/prisoner
@@ -328,6 +324,14 @@
 /obj/item/circuitboard/computer/mining_shuttle
 	name = "Mining Shuttle (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/mining
+
+/obj/item/circuitboard/computer/mining_shuttle/public_mining
+	name = "Publiczny Prom Wydobywczy (Computer Board)"
+	build_path = /obj/machinery/computer/shuttle/mining/public_mining
+
+/obj/item/circuitboard/computer/science_shuttle
+	name = "Science Shuttle (Computer Board)"
+	build_path = /obj/machinery/computer/shuttle/science
 
 /obj/item/circuitboard/computer/white_ship
 	name = "White Ship (Computer Board)"
