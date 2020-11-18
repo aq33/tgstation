@@ -283,7 +283,7 @@ GLOBAL_VAR(restart_counter)
 
 	s += "<b>Polska Aquila Station 13</b>"
 	s += " (<a href='https://discord.gg/wQFUt5R'>Discord</a>)"
-	s += "<br>-All Slavs welcome"
+	s += "<br>-BEE Expanded"
 	s += "<br>-MRP"
 	s += "<br>-Dla początkujących i nie tylko"
 	s += "<br>"
