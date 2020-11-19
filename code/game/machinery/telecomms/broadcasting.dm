@@ -183,8 +183,12 @@
 	// Always call this on the virtualspeaker to avoid issues.
 	var/spans = data["spans"]
 	var/rendered = virt.compose_message(virt, language, message, frequency, spans)
-	for(var/atom/movable/hearer in receive)
+
+	for(var/mob/M in receive)
+		var/atom/movable/hearer = M
 		hearer.Hear(rendered, virt, language, message, frequency, spans)
+		if (M.client && (M.client.prefs.toggles & SOUND_RADIO))
+			playsound(M, 'sound/effects/radio.ogg', 50, 1, 1)
 
 	// This following recording is intended for research and feedback in the use of department radio channels
 	if(length(receive))

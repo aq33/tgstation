@@ -1,7 +1,5 @@
 GLOBAL_LIST_INIT(department_radio_prefixes, list(":", "."))
 
-GLOBAL_LIST_INIT(radio_sounds, list('sound/effects/radio1.ogg','sound/effects/radio2.ogg','sound/effects/radio3.ogg'))
-
 GLOBAL_LIST_INIT(department_radio_keys, list(
 	// Location
 	MODE_KEY_R_HAND = MODE_R_HAND,
@@ -250,11 +248,6 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	SEND_SIGNAL(src, COMSIG_MOVABLE_HEAR, args)
 
 	show_message(message, 2, deaf_message, deaf_type)
-
-	if(GLOB.radio_sounds.len && radio_freq && (client.prefs.toggles & SOUND_RADIO))
-		var/sound/radio_sound = pick(GLOB.radio_sounds)
-		playsound(src, radio_sound, 50, 1)
-
 	return message
 
 /mob/living/send_speech(message, message_range = 6, obj/source = src, bubble_type = bubble_icon, list/spans, datum/language/message_language=null, message_mode)
