@@ -177,7 +177,7 @@
 			new /obj/item/storage/toolbox/syndicate(src) // 1 tc
 			new /obj/item/pen/edagger(src)
 			new /obj/item/gun/energy/wormhole_projector(src) //mooorttyyyy
-			new /obj/item/gun/energy/decloner/unrestricted(src)
+			new /obj/item/gun/energy/decloner/weak(src)
 
 		if("bee")
 			new /obj/item/paper/fluff/bee_objectives(src) // 0 tc (motivation)
