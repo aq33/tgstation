@@ -1251,6 +1251,19 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
+"yI" = (
+/obj/structure/closet/syndicate{
+	anchored = 1;
+	armor = list("melee" = 70, "bullet" = 40, "laser" = 40, "energy" = 30, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 60);
+	desc = "A basic closet for all your villainous needs.";
+	locked = 1;
+	name = "Closet";
+	req_one_access_txt = "150";
+	secure = 1
+	},
+/obj/effect/spawner/lootdrop/armory_contraband/metastation,
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "EP" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 4
@@ -2746,7 +2759,7 @@ aa
 aa
 aa
 aq
-cg
+yI
 ce
 bW
 aw

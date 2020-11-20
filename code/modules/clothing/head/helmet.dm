@@ -14,7 +14,6 @@
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEHAIR
 	bang_protect = 1
-	clothing_flags = THICKMATERIAL
 
 	dog_fashion = /datum/dog_fashion/head/helmet
 
@@ -102,8 +101,8 @@
 	actions_types = list(/datum/action/item_action/toggle)
 	visor_flags_inv = HIDEFACE
 	toggle_cooldown = 0
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
+	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
 	dog_fashion = null
 
 /obj/item/clothing/head/helmet/attack_self(mob/user)

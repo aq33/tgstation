@@ -1,4 +1,4 @@
-/proc/priority_announce(text, title = "", sound = 'sound/ai/attention.ogg', type, sender_override, auth_id)
+/proc/priority_announce(text, title = "", sound = 'sound/ai/attention.ogg', type , sender_override)
 	if(!text)
 		return
 
@@ -28,8 +28,6 @@
 
 	announcement += "<br><span class='alert'>[html_encode(text)]</span><br>"
 	announcement += "<br>"
-	if(auth_id)
-		announcement += "<span class='alert'>-[auth_id]</span><br>"
 
 	var/s = sound(sound)
 	for(var/mob/M in GLOB.player_list)
@@ -51,16 +49,13 @@
 
 	SScommunications.send_message(M)
 
-/proc/minor_announce(message, title = "Attention:", alert, from)
+/proc/minor_announce(message, title = "Attention:", alert)
 	if(!message)
 		return
 
 	for(var/mob/M in GLOB.player_list)
 		if(!isnewplayer(M) && M.can_hear())
-			var/complete_msg = "<span class='big bold'><font color = red>[html_encode(title)]</font color><BR>[html_encode(message)]</span><BR>"
-			if(from)
-				complete_msg += "<span class='alert'>-[from]</span>"
-			to_chat(M, complete_msg)
+			to_chat(M, "<span class='big bold'><font color = red>[html_encode(title)]</font color><BR>[html_encode(message)]</span><BR>")
 			if(M.client.prefs.toggles & SOUND_ANNOUNCEMENTS)
 				if(alert)
 					SEND_SOUND(M, sound('sound/misc/notice1.ogg'))

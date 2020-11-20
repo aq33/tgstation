@@ -38,10 +38,6 @@
 		return FLASH_USE_BURNOUT
 	return FLASH_USE
 
-/obj/item/flashbulb/single
-	name = "single-use flashbulb"
-	charges_left = 1
-	
 /obj/item/flashbulb/weak
 	name = "weakened flashbulb"
 	charges_left = 4
@@ -236,6 +232,8 @@
 		log_combat(user, R, "flashed", src)
 		update_icon(1)
 		R.Paralyze(70)
+		var/diff = 5 * CONFUSION_STACK_MAX_MULTIPLIER - M.confused
+		R.confused += min(5, diff)
 		R.flash_act(affect_silicon = 1, type = /obj/screen/fullscreen/flash/static)
 		user.visible_message("<span class='disarm'>[user] overloads [R]'s sensors with the flash!</span>", "<span class='danger'>You overload [R]'s sensors with the flash!</span>")
 		return TRUE
@@ -305,40 +303,6 @@
 	icon = 'icons/obj/device.dmi'
 	icon_state = "memorizer"
 	item_state = "nullrod"
-	bulb = /obj/item/flashbulb/single
-
-/obj/item/assembly/flash/memorizer/flash_carbon(mob/living/carbon/M, mob/user, power = 15, targeted = TRUE, generic_message = FALSE)
-	if(!istype(M))
-		return
-	if(user)
-		log_combat(user, M, "[targeted? "memorizered(targeted)" : "memorizered(AOE)"]", src)
-	else //caused by emp/remote signal
-		M.log_message("was [targeted? "memorizered(targeted)" : "memorizered(AOE)"]",LOG_ATTACK)
-	if(generic_message && M != user)
-		to_chat(M, "<span class='disarm'>[src] emits a blinding light!</span>")
-	if(targeted)
-		if(M.flash_act(1, 1))
-			if(user)
-				terrible_conversion_proc(M, user)
-				visible_message("<span class='disarm'>[user] blinds [M] with the memorizer!</span>")
-				to_chat(user, "<span class='danger'>You blind [M] with the memorizer!</span>")
-			M.Paralyze(100)
-			to_chat(M, "<span class='userdanger'>Zapominasz ostatnią minutę swojego życia!</span>")
-
-		else if(user)
-			visible_message("<span class='disarm'>[user] fails to blind [M] with the memorizer!</span>")
-			to_chat(user, "<span class='warning'>You fail to blind [M] with the memorizer!</span>")
-			to_chat(M, "<span class='danger'>[user] fails to blind you with the memorizer!</span>")
-		else
-			to_chat(M, "<span class='danger'>[src] fails to blind you!</span>")
-	else
-		M.flash_act()
-
-/obj/item/assembly/flash/memorizer/wirecutter_act(mob/living/user, obj/item/I)
-	return
-
-/obj/item/assembly/flash/memorizer/screwdriver_act(mob/living/user, obj/item/I)
-	return
 
 /obj/item/assembly/flash/handheld //this is now the regular pocket flashes
 

@@ -17,7 +17,6 @@
 	Your goal is to cultivate and spread life wherever it will go while waiting for contact from your creators. \
 	Estimated time of last contact: Deployment, 5000 millennia ago."
 	assignedrole = "Lifebringer"
-	use_cooldown = TRUE
 
 /obj/effect/mob_spawn/human/seed_vault/special(mob/living/new_spawn)
 	var/plant_name = pick("Tomato", "Potato", "Broccoli", "Carrot", "Ambrosia", "Pumpkin", "Ivy", "Kudzu", "Banana", "Moss", "Flower", "Bloom", "Root", "Bark", "Glowshroom", "Petal", "Leaf", \
@@ -53,7 +52,6 @@
 	Fresh sacrifices for your nest."
 	assignedrole = "Ash Walker"
 	var/datum/team/ashwalkers/team
-	use_cooldown = TRUE
 
 /obj/effect/mob_spawn/human/ash_walker/special(mob/living/new_spawn)
 	new_spawn.fully_replace_character_name(null,random_unique_lizard_name(gender))
@@ -93,7 +91,6 @@
 	flavour_text = "Years ago, you sacrificed the lives of your trusted friends and the humanity of yourself to reach the Wish Granter. Though you \
 	did so, it has come at a cost: your very body rejects the light, dooming you to wander endlessly in this horrible wasteland."
 	assignedrole = "Exile"
-	use_cooldown = TRUE
 
 /obj/effect/mob_spawn/human/exile/Destroy()
 	new/obj/structure/fluff/empty_sleeper(get_turf(src))
@@ -196,7 +193,6 @@
 	has_owner = TRUE
 	name = "inert servant golem shell"
 	mob_name = "a servant golem"
-	use_cooldown = FALSE
 
 
 /obj/effect/mob_spawn/human/golem/adamantine
@@ -205,7 +201,6 @@
 	mob_name = "a free golem"
 	can_transfer = FALSE
 	mob_species = /datum/species/golem/adamantine
-	use_cooldown = TRUE	//Only the roundstart free golems are
 
 //Malfunctioning cryostasis sleepers: Spawns in makeshift shelters in lavaland. Ghosts become hermits with knowledge of how they got to where they are now.
 /obj/effect/mob_spawn/human/hermit
@@ -223,7 +218,6 @@
 	the hostile creatures, and the ash drakes swooping down from the cloudless skies, all you can wish for is the feel of soft grass between your toes and \
 	the fresh air of Earth. These thoughts are dispelled by yet another recollection of how you got here... "
 	assignedrole = "Hermit"
-	use_cooldown = TRUE
 
 /obj/effect/mob_spawn/human/hermit/Initialize(mapload)
 	. = ..()
@@ -286,7 +280,6 @@
 	though fate has other plans for you."
 	flavour_text = "Good. It seems as though your ship crashed. You remember that you were convicted of "
 	assignedrole = "Escaped Prisoner"
-	use_cooldown = TRUE
 
 /obj/effect/mob_spawn/human/prisoner_transport/special(mob/living/L)
 	L.fully_replace_character_name(null,"NTP #LL-0[rand(111,999)]") //Nanotrasen Prisoner #Lavaland-(numbers)
@@ -326,7 +319,6 @@
 	flavour_text = "You are a staff member of a top-of-the-line space hotel! Cater to guests and make sure the manager doesn't fire you."
 	important_info = "DON'T leave the hotel"
 	assignedrole = "Hotel Staff"
-	use_cooldown = TRUE
 
 /datum/outfit/hotelstaff
 	name = "Hotel Staff"
@@ -334,7 +326,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	r_pocket = /obj/item/radio/off
 	back = /obj/item/storage/backpack
-	implants = list(/obj/item/implant/mindshield, /obj/item/implant/exile/hotel)
+	implants = list(/obj/item/implant/mindshield)
 
 /obj/effect/mob_spawn/human/hotel_staff/security
 	name = "hotel security sleeper"
@@ -495,18 +487,16 @@
 	death = FALSE
 	random = TRUE
 	mob_species = /datum/species/human
-	short_desc = "You are a security officer working for Nanotrasen, stationed onboard a state of the art research station."
-	flavour_text = "You vaguely recall rushing into a cryogenics pod due to an oncoming radiation storm. \
-	The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. \
-	As you open your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod. \
-	Work as a team with your fellow survivors and do not abandon them."
+	flavour_text = "<span class='big bold'>You are a security officer working for Nanotrasen,</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
+	cryogenics pod due to an oncoming radiation storm. The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
+	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod. \
+	Work as a team with your fellow survivors and do not abandon them.</b>"
 	uniform = /obj/item/clothing/under/rank/security/officer
 	shoes = /obj/item/clothing/shoes/jackboots
 	id = /obj/item/card/id/away/old/sec
 	r_pocket = /obj/item/restraints/handcuffs
 	l_pocket = /obj/item/assembly/flash/handheld
 	assignedrole = "Ancient Crew"
-	use_cooldown = TRUE
 
 /obj/effect/mob_spawn/human/oldsec/Destroy()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
@@ -522,18 +512,16 @@
 	death = FALSE
 	random = TRUE
 	mob_species = /datum/species/human
-	short_desc = "You are an engineer working for Nanotrasen, stationed onboard a state of the art research station."
-	flavour_text = "You vaguely recall rushing into a cryogenics pod due to an oncoming radiation storm. \
-	The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. \
-	As you open your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod. \
-	Work as a team with your fellow survivors and do not abandon them."
+	flavour_text = "<span class='big bold'>You are an engineer working for Nanotrasen,</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
+	cryogenics pod due to an oncoming radiation storm. The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
+	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod. \
+	Work as a team with your fellow survivors and do not abandon them.</b>"
 	uniform = /obj/item/clothing/under/rank/engineering/engineer
 	shoes = /obj/item/clothing/shoes/workboots
 	id = /obj/item/card/id/away/old/eng
 	gloves = /obj/item/clothing/gloves/color/fyellow/old
 	l_pocket = /obj/item/tank/internals/emergency_oxygen
 	assignedrole = "Ancient Crew"
-	use_cooldown = TRUE
 
 /obj/effect/mob_spawn/human/oldeng/Destroy()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
@@ -549,17 +537,15 @@
 	death = FALSE
 	random = TRUE
 	mob_species = /datum/species/human
-	short_desc = "You are a scientist working for Nanotrasen, stationed onboard a state of the art research station."
-	flavour_text = "<span class='big bold'> You vaguely recall rushing into a cryogenics pod due to an oncoming radiation storm. \
-	The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. \
-	As you open your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod. \
-	Work as a team with your fellow survivors and do not abandon them."
+	flavour_text = "<span class='big bold'>You are a scientist working for Nanotrasen,</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
+	cryogenics pod due to an oncoming radiation storm. The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
+	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod. \
+	Work as a team with your fellow survivors and do not abandon them.</b>"
 	uniform = /obj/item/clothing/under/rank/rnd/scientist
 	shoes = /obj/item/clothing/shoes/laceup
 	id = /obj/item/card/id/away/old/sci
 	l_pocket = /obj/item/stack/medical/suture
 	assignedrole = "Ancient Crew"
-	use_cooldown = TRUE
 
 /obj/effect/mob_spawn/human/oldsci/Destroy()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())

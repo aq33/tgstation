@@ -17,8 +17,8 @@
 /obj/item/storage/fancy
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "donutbox6"
-	name = "null box do not use"
-	desc = "Mmm. Runtimes."
+	name = "donut box"
+	desc = "Mmm. Donuts."
 	resistance_flags = FLAMMABLE
 	var/icon_type = "donut"
 	var/spawn_type = null
@@ -67,7 +67,6 @@
 	icon_state = "donutbox6"
 	icon_type = "donut"
 	name = "donut box"
-	desc = "Mmm. Donuts."
 	spawn_type = /obj/item/reagent_containers/food/snacks/donut
 	fancy_open = TRUE
 

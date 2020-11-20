@@ -30,31 +30,23 @@
 			loot_spawned++
 	return INITIALIZE_HINT_QDEL
 
-/obj/effect/spawner/lootdrop/donkpockets
-	name = "donk pocket box spawner"
-	lootdoubles = FALSE
-
-	loot = list(
-			/obj/item/storage/box/donkpockets/donkpocketspicy = 1,
-			/obj/item/storage/box/donkpockets/donkpocketteriyaki = 1,
-			/obj/item/storage/box/donkpockets/donkpocketpizza = 1,
-			/obj/item/storage/box/donkpockets/donkpocketberry = 1,
-			/obj/item/storage/box/donkpockets/donkpockethonk = 1,
-			/obj/item/storage/box/donkpockets = 1
-		)
-
-
 /obj/effect/spawner/lootdrop/armory_contraband
 	name = "armory contraband gun spawner"
 	lootdoubles = FALSE
 
 	loot = list(
 				/obj/item/gun/ballistic/automatic/pistol = 8,
-				/obj/item/gun/ballistic/shotgun/automatic/combat = 3,
+				/obj/item/gun/ballistic/shotgun/automatic/combat = 5,
+				/obj/item/gun/ballistic/revolver/mateba,
+				/obj/item/gun/ballistic/automatic/pistol/deagle
+				)
+
+/obj/effect/spawner/lootdrop/armory_contraband/metastation
+	loot = list(/obj/item/gun/ballistic/automatic/pistol = 5,
+				/obj/item/gun/ballistic/shotgun/automatic/combat = 5,
 				/obj/item/gun/ballistic/revolver/mateba,
 				/obj/item/gun/ballistic/automatic/pistol/deagle,
-				/obj/item/storage/box/syndie_kit/throwing_weapons = 3,
-				/obj/item/grenade/clusterbuster)
+				/obj/item/storage/box/syndie_kit/throwing_weapons = 3)
 
 /obj/effect/spawner/lootdrop/gambling
 	name = "gambling valuables spawner"
@@ -199,9 +191,9 @@
 /obj/effect/spawner/lootdrop/teratoma/major
 	name = "advanced teratoma spawner"
 	loot = list(
-		/obj/item/organ/adamantine_resonator = 2,,
+		/obj/item/organ/adamantine_resonator = 2,
 		/obj/item/organ/ears/penguin = 2,
-		/obj/item/organ/heart/gland/viral = 1,
+		/obj/item/organ/alien/plasmavessel/small = 1,
 		/obj/item/organ/eyes/night_vision = 1,
 		/obj/item/organ/liver/plasmaman = 3,
 		/obj/item/organ/liver/alien = 3,
@@ -215,7 +207,7 @@
 		/obj/item/organ/vocal_cords/adamantine = 1,
 		/obj/effect/gibspawner/xeno = 1,
 		/obj/effect/mob_spawn/human/corpse/assistant = 1,
-		/obj/effect/mob_spawn/teratomamonkey = 5,
+		/obj/effect/mob_spawn/teratomamonkey = 2,
 		/obj/item/organ/wings/moth/robust = 1,
 		/obj/item/organ/wings/dragon = 1)
 
@@ -231,11 +223,6 @@
 		/obj/item/bikehorn = 5,
 		/obj/item/reagent_containers/food/snacks/pie/cream = 3)
 
-/obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner
-	name = "2% chance xeno egg spawner"
-	loot = list(
-		/obj/effect/decal/remains/xeno = 49,
-		/obj/effect/spawner/xeno_egg_delivery = 1)
 
 /obj/effect/spawner/lootdrop/xenobiology_fun_spawner
 	name = "xenobiology fun spawner"
@@ -454,22 +441,3 @@
 				/obj/item/circuitboard/computer/apc_control,
 				/obj/item/circuitboard/computer/robotics
 				)
-
-/obj/effect/spawner/lootdrop/trap
-	name = "10% pressure plate spawner"
-	loot = list(
-		/obj/effect/spawner/lootdrop/maintenance = 9,
-		/obj/effect/trap/trigger/all = 1)
-
-/obj/effect/spawner/lootdrop/trap/reusable
-	loot = list(
-		/obj/effect/spawner/lootdrop/maintenance = 9,
-		/obj/effect/trap/trigger/reusable/all = 1)
-
-/obj/effect/spawner/lootdrop/clowntrap
-	name = "clown trap spawner"
-	loot = list(
-		/obj/effect/spawner/lootdrop/maintenance = 9,
-		/obj/effect/trap/nexus/trickyspawner/clownmutant = 2,
-		/obj/effect/trap/nexus/trickyspawner/honkling = 3,
-		/obj/effect/trap/nexus/cluwnecurse = 1)

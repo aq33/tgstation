@@ -133,6 +133,19 @@
 	user.visible_message("<span class='suicide'>[user] scratches a grid on [user.p_their()] wrist with the paper! It looks like [user.p_theyre()] trying to commit sudoku...</span>")
 	return (BRUTELOSS)
 
+/// ONLY USED FOR APRIL FOOLS
+/obj/item/paper/proc/reset_spamflag()
+	spam_flag = FALSE
+
+
+/obj/item/paper/attack_self(mob/user)
+	if(rigged && (SSevents.holidays && SSevents.holidays[APRIL_FOOLS]))
+		if(!spam_flag)
+			spam_flag = TRUE
+			playsound(loc, 'sound/items/bikehorn.ogg', 50, 1)
+			addtimer(CALLBACK(src, .proc/reset_spamflag), 20)
+	. = ..()
+
 /obj/item/paper/proc/clearpaper()
 	info = ""
 	stamps = null
@@ -167,11 +180,6 @@
 	return ..()
 
 
-
-/obj/item/paper/can_interact(mob/user)
-	if(in_contents_of(/obj/machinery/door/airlock))
-		return TRUE
-	return ..()
 
 /obj/item/paper/can_interact(mob/user)
 	if(in_contents_of(/obj/machinery/door/airlock))

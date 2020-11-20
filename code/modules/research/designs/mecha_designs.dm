@@ -181,12 +181,11 @@
 	name = "Exosuit Weapon (LBX AC 10 \"Scattershot\")"
 	desc = "Allows for the construction of LBX AC 10."
 	id = "mech_scattershot"
-	build_type = PROTOLATHE
+	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot
 	materials = list(/datum/material/iron=10000)
 	construction_time = 100
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	category = list("Exosuit Equipment")
 
 /datum/design/mech_scattershot_ammo
 	name = "LBX AC 10 Scattershot Ammunition"
@@ -203,12 +202,11 @@
 	name = "Exosuit Weapon (FD-11 \"Bush Boss\" Thermal Defoliant.)"
 	desc = "Allows for the construction of FD-11 \"Bush Boss\" Thermal Defoliant."
 	id = "mech_carbine"
-	build_type = PROTOLATHE
+	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/carbine
 	materials = list(/datum/material/iron=10000)
 	construction_time = 100
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	category = list("Exosuit Equipment")
 
 /datum/design/mech_carbine_ammo
 	name = "FD-11 Thermal Defoliant Ammunition"
@@ -225,12 +223,11 @@
 	name = "Exosuit Weapon (\"Ultra AC 2\" LMG)"
 	desc = "A weapon for combat exosuits. Shoots a rapid, three shot burst."
 	id = "mech_lmg"
-	build_type = PROTOLATHE
+	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg
 	materials = list(/datum/material/iron=10000)
 	construction_time = 100
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	category = list("Exosuit Equipment")
 
 /datum/design/mech_lmg_ammo
 	name = "Ultra AC 2 Ammunition"
@@ -268,40 +265,37 @@
 	name = "Exosuit Weapon (MKIV Ion Heavy Cannon)"
 	desc = "Allows for the construction of MKIV Ion Heavy Cannon."
 	id = "mech_ion"
-	build_type = PROTOLATHE
+	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/ion
 	materials = list(/datum/material/iron=20000, /datum/material/silver=6000, /datum/material/uranium=2000)
 	construction_time = 100
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	category = list("Exosuit Equipment")
 
 /datum/design/mech_tesla
 	name = "Exosuit Weapon (MKI Tesla Cannon)"
 	desc = "Allows for the construction of MKI Tesla Cannon."
 	id = "mech_tesla"
-	build_type = PROTOLATHE
+	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/tesla
 	materials = list(/datum/material/iron=20000, /datum/material/silver=8000)
 	construction_time = 100
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	category = list("Exosuit Equipment")
 
 /datum/design/mech_laser
 	name = "Exosuit Weapon (CH-PS \"Immolator\" Laser Cannon)"
 	desc = "Allows for the construction of CH-PS Laser."
 	id = "mech_laser"
-	build_type = PROTOLATHE
+	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
 	materials = list(/datum/material/iron=10000, /datum/material/silver=1000)
 	construction_time = 100
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	category = list("Exosuit Equipment")
 
 /datum/design/mech_laser_heavy
 	name = "Exosuit Weapon (CH-LC \"Solaris\" Heavy Laser Cannon)"
 	desc = "Allows for the construction of CH-LC Laser Cannon."
 	id = "mech_laser_heavy"
-	build_type = PROTOLATHE
+	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy
 	materials = list(/datum/material/iron=10000, /datum/material/gold=1500, /datum/material/silver=1500)
 	construction_time = 100
@@ -315,8 +309,7 @@
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/xray
 	materials = list(/datum/material/iron=10000, /datum/material/gold = 6000, /datum/material/silver=3000, /datum/material/uranium=5000)
 	construction_time = 100
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	category = list("Exosuit Equipment")
 
 /datum/design/mech_disabler
 	name = "Exosuit Weapon (CH-DS \"Peacemaker\" Disabler)"
@@ -353,12 +346,11 @@
 	name = "Exosuit Weapon (HEML-3 Missile Rack)"
 	desc = "Allows for the construction of an HEML-3 Missile Rack."
 	id = "mech_missile_rack"
-	build_type = PROTOLATHE
+	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack
 	materials = list(/datum/material/iron=22000, /datum/material/gold=6000, /datum/material/silver=8000)
 	construction_time = 100
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	category = list("Exosuit Equipment")
 
 /datum/design/mech_missile_rack_ammo
 	name = "HEML-3 Missile Rack Ammunition"
@@ -375,12 +367,11 @@
 	name = "Exosuit Module (SOB-3 Clusterbang Launcher)"
 	desc = "A weapon that violates the Geneva Convention at 3 rounds per minute"
 	id = "clusterbang_launcher"
-	build_type = PROTOLATHE
+	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/flashbang/clusterbang
 	materials = list(/datum/material/iron=20000, /datum/material/gold=10000, /datum/material/uranium=10000)
 	construction_time = 100
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	category = list("Exosuit Equipment")
 
 /datum/design/clusterbang_launcher_ammo
 	name = "SOB-3 Clusterbang Launcher Ammunition"
@@ -533,8 +524,7 @@
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma
 	materials = list(/datum/material/iron=8000, /datum/material/glass=1000, /datum/material/plasma=2000)
 	construction_time = 100
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	category = list("Exosuit Equipment")
 
 /datum/design/mech_sleeper
 	name = "Exosuit Medical Equipment (Mounted Sleeper)"

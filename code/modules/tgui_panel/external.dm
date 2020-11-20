@@ -52,6 +52,7 @@
 		winset(src, "browseroutput", "is-disabled=1;is-visible=0")
 	log_tgui(src, "tgui_panel: Failed to fix.")
 
+
 /client/verb/fix_tgui4()
 	set name = "Fix tgui4"
 	set category = "OOC"

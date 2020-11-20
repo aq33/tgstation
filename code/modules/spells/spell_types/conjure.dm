@@ -31,10 +31,7 @@
 		if(ispath(summoned_object_type, /turf))
 			var/turf/O = spawn_place
 			var/N = summoned_object_type
-			if(istype(O, /turf/open) && ispath(N, /turf/closed) || istype(O, /turf/open/floor/plating))
-				new N(O)
-			else
-				O.ChangeTurf(N, flags = CHANGETURF_INHERIT_AIR)
+			O.ChangeTurf(N, flags = CHANGETURF_INHERIT_AIR)
 		else
 			var/atom/summoned_object = new summoned_object_type(spawn_place)
 

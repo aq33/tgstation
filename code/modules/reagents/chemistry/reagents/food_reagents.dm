@@ -284,16 +284,17 @@
 
 	var/mob/living/carbon/victim = M
 	if(method == TOUCH || method == VAPOR)
+		var/pepper_proof = victim.is_pepper_proof()
+
 		//check for protection
 		//actually handle the pepperspray effects
-		if(!victim.is_eyes_covered() || !victim.is_mouth_covered())
+		if (!(pepper_proof)) // you need both eye and mouth protection
+			if(prob(5))
+				victim.emote("scream")
 			victim.blur_eyes(15)
 			victim.blind_eyes(6)
 			victim.confused = max(M.confused, 10)
 			victim.Knockdown(3 SECONDS)
-			if(prob(5))
-				victim.emote("scream")
-			victim.confused = max(M.confused, 5) // 10 seconds
 			victim.add_movespeed_modifier(MOVESPEED_ID_PEPPER_SPRAY, update=TRUE, priority=100, multiplicative_slowdown=0.25, blacklisted_movetypes=(FLYING|FLOATING))
 			addtimer(CALLBACK(victim, /mob.proc/remove_movespeed_modifier, MOVESPEED_ID_PEPPER_SPRAY), 10 SECONDS)
 		victim.update_damage_hud()
@@ -342,14 +343,14 @@
 	// no color (ie, black)
 	taste_description = "pepper"
 
-/datum/reagent/consumable/cocoa
-	name = "Cocoa Powder"
-	description = "A fatty, bitter paste made from cocoa beans."
+/datum/reagent/consumable/coco
+	name = "Coco Powder"
+	description = "A fatty, bitter paste made from coco beans."
 	reagent_state = SOLID
 	nutriment_factor = 5 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "bitterness"
-/datum/reagent/consumable/cocoa/on_mob_add(mob/living/carbon/M)
+/datum/reagent/consumable/coco/on_mob_add(mob/living/carbon/M)
 	.=..()
 	if(iscatperson(M))
 		to_chat(M, "<span class='warning'>Your insides revolt at the presence of lethal chocolate!</span>")
@@ -357,9 +358,9 @@
 
 
 
-/datum/reagent/consumable/hot_cocoa
+/datum/reagent/consumable/hot_coco
 	name = "Hot Chocolate"
-	description = "Made with love! And cocoa beans."
+	description = "Made with love! And coco beans."
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#403010" // rgb: 64, 48, 16
 	taste_description = "creamy chocolate"
@@ -367,7 +368,7 @@
 	glass_name = "glass of chocolate"
 	glass_desc = "Tasty."
 
-/datum/reagent/consumable/hot_cocoa/on_mob_life(mob/living/carbon/M)
+/datum/reagent/consumable/hot_coco/on_mob_life(mob/living/carbon/M)
 	M.adjust_bodytemperature(5 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
 	..()
 
@@ -518,7 +519,7 @@
 
 /datum/reagent/consumable/rice
 	name = "Rice"
-	description = "Tiny nutritious grains. A fast and filling meal!"
+	description = "tiny nutritious grains"
 	reagent_state = SOLID
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#FFFFFF" // rgb: 0, 0, 0
@@ -557,7 +558,7 @@
 	..()
 /datum/reagent/consumable/honey
 	name = "Honey"
-	description = "Sweet, sweet honey that decays into sugar. Has antibacterial and natural healing properties."
+	description = "Sweet sweet honey that decays into sugar. Has antibacterial and natural healing properties."
 	color = "#d3a308"
 	nutriment_factor = 15 * REAGENTS_METABOLISM
 	metabolization_rate = 1 * REAGENTS_METABOLISM
@@ -633,7 +634,7 @@
 
 /datum/reagent/consumable/nutriment/stabilized
 	name = "Stabilized Nutriment"
-	description = "A bioengineered protein-nutrient structure designed to decompose in high saturation. In layman's terms, it won't get you fat."
+	description = "A bioengineered protien-nutrient structure designed to decompose in high saturation. In layman's terms, it won't get you fat."
 	reagent_state = SOLID
 	nutriment_factor = 15 * REAGENTS_METABOLISM
 	color = "#664330" // rgb: 102, 67, 48
@@ -648,7 +649,7 @@
 
 /datum/reagent/consumable/entpoly
 	name = "Entropic Polypnium"
-	description = "An ichor derived from a certain mushroom. Makes for a bad time."
+	description = "An ichor, derived from a certain mushroom, makes for a bad time."
 	color = "#1d043d"
 	taste_description = "bitter mushroom"
 

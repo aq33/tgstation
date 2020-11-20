@@ -326,7 +326,7 @@
 	set category = "Blob"
 	set name = "Grzybowa Transmisja"
 	set desc = "Powiedz coś ustami swoich zarodników oraz grzybonautów."
-	var/speak_text = capped_input(src, "Co chciałbyś powiedzieć za pomocą swoich sługusów?", "Grzybowa Transmisja")
+	var/speak_text = input(src, "Co chciałbyś powiedzieć za pomocą swoich sługusów?", "Grzybowa Transmisja", null) as text
 	if(!speak_text)
 		return
 	else

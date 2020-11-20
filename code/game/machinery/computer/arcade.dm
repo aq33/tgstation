@@ -45,9 +45,6 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 		/obj/item/card/emagfake = 1,
 		/obj/item/clothing/shoes/wheelys = 2,
 		/obj/item/clothing/shoes/kindleKicks = 2,
-		/obj/item/toy/plush/moth = 2,
-		/obj/item/storage/box/heretic_asshole = 1,
-		/obj/item/toy/eldrich_book = 1,
 		/obj/item/storage/belt/military/snack = 2))
 
 /obj/machinery/computer/arcade
@@ -455,7 +452,7 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 	var/dat = ""
 	if(gameStatus == ORION_STATUS_GAMEOVER)
 		dat = "<center><h1>Game Over</h1></center>"
-		dat += "Like many before you, your crew never made it to Orion, lost to space. <br><b>Forever</b>."
+		dat += "Like many before you, your crew never made it to Orion, lost to space... <br><b>Forever</b>."
 		if(!settlers.len)
 			dat += "<br>Your entire crew died, and your ship joins the fleet of ghost-ships littering the galaxy."
 		else

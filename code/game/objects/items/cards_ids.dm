@@ -373,7 +373,6 @@ update_label("John Doe", "Clowny")
 		"ert",
 		"centcom",
 		"syndicate",
-		"ratvar",
 	)
 
 /obj/item/card/id/syndicate/Initialize()
@@ -389,7 +388,6 @@ update_label("John Doe", "Clowny")
 	if(istype(O, /obj/item/card/id))
 		var/obj/item/card/id/I = O
 		src.access |= I.access
-		log_id("[key_name(user)] copied all avaliable access from [I] to agent ID [src] at [AREACOORD(user)].")
 		if(isliving(user) && user.mind)
 			if(user.mind.special_role || anyone)
 				to_chat(usr, "<span class='notice'>The card's microscanners activate as you pass it over the ID, copying its access.</span>")
@@ -421,7 +419,6 @@ update_label("John Doe", "Clowny")
 			var/target_occupation = stripped_input(user, "What occupation would you like to put on this card?\nNote: This will not grant any access levels other than Maintenance.", "Agent card job assignment", assignment ? assignment : "Assistant", MAX_MESSAGE_LEN)
 			if(!target_occupation)
 				return
-			log_id("[key_name(user)] forged agent ID [src] name to [input_name] and occupation to [target_occupation] at [AREACOORD(user)].")
 			registered_name = input_name
 			assignment = target_occupation
 			update_label()
@@ -444,7 +441,6 @@ update_label("John Doe", "Clowny")
 		else if (popup_input == "Forge/Reset" && forged)
 			registered_name = initial(registered_name)
 			assignment = initial(assignment)
-			log_id("[key_name(user)] reset agent ID [src] name to default at [AREACOORD(user)].")
 			log_game("[key_name(user)] has reset \the [initial(name)] named \"[src]\" to default.")
 			update_label()
 			forged = FALSE
@@ -460,11 +456,6 @@ update_label("John Doe", "Clowny")
 /obj/item/card/id/syndicate/nuke_leader
 	name = "lead agent card"
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
-
-/obj/item/card/id/syndicate/ratvar
-	name = "servant ID card"
-	icon_state = "ratvar"
-	access = list(ACCESS_CLOCKCULT, ACCESS_MAINT_TUNNELS)
 
 /obj/item/card/id/syndicate_command
 	name = "syndicate ID card"
@@ -620,7 +611,7 @@ update_label("John Doe", "Clowny")
 	access = list(ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_MECH_MINING, ACCESS_MAILSORTING, ACCESS_MINERAL_STOREROOM)
 
 /obj/item/card/id/away
-	name = "\proper a perfectly generic identification card"
+	name = "a perfectly generic identification card"
 	desc = "A perfectly generic identification card. Looks like it could use some flavor."
 	access = list(ACCESS_AWAY_GENERAL)
 
@@ -634,7 +625,7 @@ update_label("John Doe", "Clowny")
 	access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_MAINT, ACCESS_AWAY_SEC)
 
 /obj/item/card/id/away/old
-	name = "\proper a perfectly generic identification card"
+	name = "a perfectly generic identification card"
 	desc = "A perfectly generic identification card. Looks like it could use some flavor."
 	icon_state = "centcom"
 

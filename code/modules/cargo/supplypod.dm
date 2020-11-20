@@ -249,7 +249,7 @@
 		depart(src)
 	else
 		if(!stay_after_drop) // Departing should be handled manually
-			addtimer(CALLBACK(src, .proc/depart, holder), departureDelay) //Finish up the pod's duties after a certain amount of time
+			addtimer(CALLBACK(src, .proc/depart, holder), departureDelay) //Finish up the pod's duties after a certain amount of time\
 
 	for(var/datum/callback/C in queued_announces)
 		C.Invoke()

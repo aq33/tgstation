@@ -101,6 +101,7 @@
 		// modify the ignored_things list in __HELPERS/radiation.dm instead
 		var/static/list/blacklisted = typecacheof(list(
 			/turf,
+			/mob,
 			/obj/structure/cable,
 			/obj/machinery/atmospherics,
 			/obj/item/ammo_casing,

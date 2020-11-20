@@ -149,26 +149,6 @@
 
 // Specific bar signs.
 
-/datum/barsign/podpapugami
-	name = "Pod Papugami"
-	icon = "podpapugami"
-	desc = "Szeroko niklowany bar, gdzie nad szklaneczkami chorągiewką żółtą świeci skwar."
-
-/datum/barsign/wadovice
-	name = "Wado Vice"
-	icon = "wadovice"
-	desc = "Wyrusz wyścigową barką w stronę zachodzącego słońca."
-
-/datum/barsign/alkohole
-	name = "Alko Hole"
-	icon = "alkohole"
-	desc = "Osobliwy bar, którego trunki mogą zrodzić dziurę w pamięci."
-
-/datum/barsign/ranczo
-	name = "Baranie Ranczo"
-	icon = "ranczo"
-	desc = "Miejsce spotkań nagich kowbojów z dużymi i twardymi kogutami."
-
 /datum/barsign/maltesefalcon
 	name = "Maltese Falcon"
 	icon = "maltesefalcon"

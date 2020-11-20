@@ -4,7 +4,7 @@
 /obj/item/electronic_assembly
 	name = "electronic assembly"
 	obj_flags = CAN_BE_HIT | UNIQUE_RENAME
-	desc = "A case designed for building small electronics."
+	desc = "It's a case, for building small electronics with."
 	w_class = WEIGHT_CLASS_SMALL
 	icon = 'icons/obj/assemblies/electronic_setups.dmi'
 	icon_state = "setup_small"
@@ -363,7 +363,7 @@
 			component.rename_component(usr)
 			if(component.assembly)
 				component.assembly.add_allowed_scanner(usr.ckey)
-
+		
 		if(href_list["interact"])
 			var/obj/item/I = usr.get_active_held_item()
 			if(istype(I))
@@ -456,15 +456,6 @@
 
 	var/total_part_size = return_total_size()
 	var/total_complexity = return_total_complexity()
-
-	if(IC.max_allowed)
-		var/current_components
-		for(var/obj/item/integrated_circuit/component as anything in assembly_components)
-			if(component.type == IC.type)
-				current_components++
-		if(current_components >= IC.max_allowed)
-			to_chat(user, "<span class='warning'>You can't seem to add the '[IC]', as there are too many installed already.</span>")
-			return FALSE
 
 	if((total_part_size + IC.size) > max_components)
 		to_chat(user, "<span class='warning'>You can't seem to add the '[IC]', as there's insufficient space.</span>")
@@ -817,32 +808,32 @@
 /obj/item/electronic_assembly/calc
 	name = "type-b electronic assembly"
 	icon_state = "setup_small_calc"
-	desc = "A case designed for building small electronics. This one resembles a pocket calculator."
+	desc = "It's a case, for building small electronics with. This one resembles a pocket calculator."
 
 /obj/item/electronic_assembly/clam
 	name = "type-c electronic assembly"
 	icon_state = "setup_small_clam"
-	desc = "A case designed for building small electronics. This one has a clamshell design."
+	desc = "It's a case, for building small electronics with. This one has a clamshell design."
 
 /obj/item/electronic_assembly/simple
 	name = "type-d electronic assembly"
 	icon_state = "setup_small_simple"
-	desc = "A case designed for building small electronics. This one has a simple design."
+	desc = "It's a case, for building small electronics with. This one has a simple design."
 
 /obj/item/electronic_assembly/hook
 	name = "type-e electronic assembly"
 	icon_state = "setup_small_hook"
-	desc = "A case designed for building small electronics. This one looks like it has a belt clip, but it's purely decorative."
+	desc = "It's a case, for building small electronics with. This one looks like it has a belt clip, but it's purely decorative."
 
 /obj/item/electronic_assembly/pda
 	name = "type-f electronic assembly"
 	icon_state = "setup_small_pda"
-	desc = "A case designed for building small electronics. This one resembles a PDA."
+	desc = "It's a case, for building small electronics with. This one resembles a PDA."
 
 /obj/item/electronic_assembly/small
 	name = "electronic device"
 	icon_state = "setup_device"
-	desc = "A case designed for building tiny-sized electronics."
+	desc = "It's a case, for building tiny-sized electronics with."
 	w_class = WEIGHT_CLASS_TINY
 	max_components = IC_MAX_SIZE_BASE / 2
 	max_complexity = IC_COMPLEXITY_BASE / 2
@@ -853,27 +844,27 @@
 /obj/item/electronic_assembly/small/cylinder
 	name = "type-b electronic device"
 	icon_state = "setup_device_cylinder"
-	desc = "A case designed for building tiny-sized electronics. This one has a cylindrical design."
+	desc = "It's a case, for building tiny-sized electronics with. This one has a cylindrical design."
 
 /obj/item/electronic_assembly/small/scanner
 	name = "type-c electronic device"
 	icon_state = "setup_device_scanner"
-	desc = "A case designed for building tiny-sized electronics. This one has a scanner-like design."
+	desc = "It's a case, for building tiny-sized electronics with. This one has a scanner-like design."
 
 /obj/item/electronic_assembly/small/hook
 	name = "type-d electronic device"
 	icon_state = "setup_device_hook"
-	desc = "A case designed for building tiny-sized electronics. This one looks like it has a belt clip, but it's purely decorative."
+	desc = "It's a case, for building tiny-sized electronics with. This one looks like it has a belt clip, but it's purely decorative."
 
 /obj/item/electronic_assembly/small/box
 	name = "type-e electronic device"
 	icon_state = "setup_device_box"
-	desc = "A case designed for building tiny-sized electronics. This one has a box design."
+	desc = "It's a case, for building tiny-sized electronics with. This one has a boxy design."
 
 /obj/item/electronic_assembly/medium
 	name = "electronic mechanism"
 	icon_state = "setup_medium"
-	desc = "A case designed for building medium-sized electonics."
+	desc = "It's a case, for building medium-sized electronics with."
 	w_class = WEIGHT_CLASS_NORMAL
 	max_components = IC_MAX_SIZE_BASE * 2
 	max_complexity = IC_COMPLEXITY_BASE * 2
@@ -884,23 +875,23 @@
 /obj/item/electronic_assembly/medium/box
 	name = "type-b electronic mechanism"
 	icon_state = "setup_medium_box"
-	desc = "A case designed for building medium-sized electonics. This one has a box design."
+	desc = "It's a case, for building medium-sized electronics with. This one has a boxy design."
 
 /obj/item/electronic_assembly/medium/clam
 	name = "type-c electronic mechanism"
 	icon_state = "setup_medium_clam"
-	desc = "A case designed for building medium-sized electonics. This one has a clamshell design."
+	desc = "It's a case, for building medium-sized electronics with. This one has a clamshell design."
 
 /obj/item/electronic_assembly/medium/medical
 	name = "type-d electronic mechanism"
 	icon_state = "setup_medium_med"
-	desc = "A case designed for building medium-sized electonics. This one resembles medical apparatus."
+	desc = "It's a case, for building medium-sized electronics with. This one resembles some type of medical apparatus."
 
 /obj/item/electronic_assembly/medium/gun
 	name = "type-e electronic mechanism"
 	icon_state = "setup_medium_gun"
 	item_state = "circuitgun"
-	desc = "A case designed for building medium-sized electonics. This one resembles a gun, or some type of tool, if you're feeling optimistic. It can fire guns and throw items while the user is holding it."
+	desc = "It's a case, for building medium-sized electronics with. This one resembles a gun, or some type of tool, if you're feeling optimistic. It can fire guns and throw items while the user is holding it."
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
 	can_fire_equipped = TRUE
@@ -908,12 +899,12 @@
 /obj/item/electronic_assembly/medium/radio
 	name = "type-f electronic mechanism"
 	icon_state = "setup_medium_radio"
-	desc = "A case designed for building medium-sized electonics. This one resembles an old radio."
+	desc = "It's a case, for building medium-sized electronics with. This one resembles an old radio."
 
 /obj/item/electronic_assembly/large
 	name = "electronic machine"
 	icon_state = "setup_large"
-	desc = "A case designed for building large electronics."
+	desc = "It's a case, for building large electronics with."
 	w_class = WEIGHT_CLASS_BULKY
 	max_components = IC_MAX_SIZE_BASE * 4
 	max_complexity = IC_COMPLEXITY_BASE * 4
@@ -924,32 +915,32 @@
 /obj/item/electronic_assembly/large/scope
 	name = "type-b electronic machine"
 	icon_state = "setup_large_scope"
-	desc = "A case designed for building large electronics. This one resembles an oscilloscope."
+	desc = "It's a case, for building large electronics with. This one resembles an oscilloscope."
 
 /obj/item/electronic_assembly/large/terminal
 	name = "type-c electronic machine"
 	icon_state = "setup_large_terminal"
-	desc = "A case designed for building large electronics. This one resembles a computer terminal."
+	desc = "It's a case, for building large electronics with. This one resembles a computer terminal."
 
 /obj/item/electronic_assembly/large/arm
 	name = "type-d electronic machine"
 	icon_state = "setup_large_arm"
-	desc = "A case designed for building large electronics. This one resembles a robotic arm."
+	desc = "It's a case, for building large electronics with. This one resembles a robotic arm."
 
 /obj/item/electronic_assembly/large/tall
 	name = "type-e electronic machine"
 	icon_state = "setup_large_tall"
-	desc = "A case designed for building large electronics. This one has a tall design."
+	desc = "It's a case, for building large electronics with. This one has a tall design."
 
 /obj/item/electronic_assembly/large/industrial
 	name = "type-f electronic machine"
 	icon_state = "setup_large_industrial"
-	desc = "A case designed for building mobile electronics. This one resembles industrial machinery."
+	desc = "It's a case, for building large electronics with. This one resembles some kind of industrial machinery."
 
 /obj/item/electronic_assembly/drone
 	name = "electronic drone"
 	icon_state = "setup_drone"
-	desc = "A case designed for building mobile electronics."
+	desc = "It's a case, for building mobile electronics with."
 	w_class = WEIGHT_CLASS_BULKY
 	max_components = IC_MAX_SIZE_BASE * 3
 	max_complexity = IC_COMPLEXITY_BASE * 3
@@ -965,32 +956,32 @@
 /obj/item/electronic_assembly/drone/arms
 	name = "type-b electronic drone"
 	icon_state = "setup_drone_arms"
-	desc = "A case designed for building mobile electronics. This one is armed and dangerous."
+	desc = "It's a case, for building mobile electronics with. This one is armed and dangerous."
 
 /obj/item/electronic_assembly/drone/secbot
 	name = "type-c electronic drone"
 	icon_state = "setup_drone_secbot"
-	desc = "A case designed for building mobile electronics. This one resembles a Securitron."
+	desc = "It's a case, for building mobile electronics with. This one resembles a Securitron."
 
 /obj/item/electronic_assembly/drone/medbot
 	name = "type-d electronic drone"
 	icon_state = "setup_drone_medbot"
-	desc = "A case designed for building mobile electronics. This one resembles a Medibot."
+	desc = "It's a case, for building mobile electronics with. This one resembles a Medibot."
 
 /obj/item/electronic_assembly/drone/genbot
 	name = "type-e electronic drone"
 	icon_state = "setup_drone_genbot"
-	desc = "A case designed for building mobile electronics. This one has a generic bot design."
+	desc = "It's a case, for building mobile electronics with. This one has a generic bot design."
 
 /obj/item/electronic_assembly/drone/android
 	name = "type-f electronic drone"
 	icon_state = "setup_drone_android"
-	desc = "A case designed for building mobile electronics. This one has a hominoid design."
+	desc = "It's a case, for building mobile electronics with. This one has a hominoid design."
 
 /obj/item/electronic_assembly/wallmount
 	name = "wall-mounted electronic assembly"
 	icon_state = "setup_wallmount_medium"
-	desc = "A case designed for building medium-sized electronics.. It has a magnetized backing to allow it to stick to walls, but you'll still need to wrench the anchoring bolts in place to keep it on."
+	desc = "It's a case, for building medium-sized electronics with. It has a magnetized backing to allow it to stick to walls, but you'll still need to wrench the anchoring bolts in place to keep it on."
 	w_class = WEIGHT_CLASS_NORMAL
 	max_components = IC_MAX_SIZE_BASE * 2
 	max_complexity = IC_COMPLEXITY_BASE * 2
@@ -998,7 +989,7 @@
 /obj/item/electronic_assembly/wallmount/heavy
 	name = "heavy wall-mounted electronic assembly"
 	icon_state = "setup_wallmount_large"
-	desc = "A case designed for building large electronics. It has a magnetized backing to allow it to stick to walls, but you'll still need to wrench the anchoring bolts in place to keep it on."
+	desc = "It's a case, for building large electronics with. It has a magnetized backing to allow it to stick to walls, but you'll still need to wrench the anchoring bolts in place to keep it on."
 	w_class = WEIGHT_CLASS_BULKY
 	max_components = IC_MAX_SIZE_BASE * 4
 	max_complexity = IC_COMPLEXITY_BASE * 4
@@ -1006,7 +997,7 @@
 /obj/item/electronic_assembly/wallmount/light
 	name = "light wall-mounted electronic assembly"
 	icon_state = "setup_wallmount_small"
-	desc = "A case designed for building small electronics. It has a magnetized backing to allow it to stick to walls, but you'll still need to wrench the anchoring bolts in place to keep it on."
+	desc = "It's a case, for building small electronics with. It has a magnetized backing to allow it to stick to walls, but you'll still need to wrench the anchoring bolts in place to keep it on."
 	w_class = WEIGHT_CLASS_SMALL
 	max_components = IC_MAX_SIZE_BASE
 	max_complexity = IC_COMPLEXITY_BASE

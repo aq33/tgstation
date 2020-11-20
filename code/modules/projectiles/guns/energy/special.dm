@@ -32,6 +32,7 @@
 	desc = "A gun that discharges high amounts of controlled radiation to slowly break a target into component elements."
 	icon_state = "decloner"
 	ammo_type = list(/obj/item/ammo_casing/energy/declone)
+	pin = null
 	ammo_x_offset = 1
 
 /obj/item/gun/energy/decloner/update_icon()
@@ -40,9 +41,8 @@
 	if(!QDELETED(cell) && (cell.charge > shot.e_cost))
 		add_overlay("decloner_spin")
 
-/obj/item/gun/energy/decloner/weak
-	name = "prototype biological demolecularisor"
-	desc = "A prototype gun that discharges high amounts of controlled radiation to slowly break a target into component elements."
+/obj/item/gun/energy/decloner/unrestricted
+	pin = /obj/item/firing_pin
 	ammo_type = list(/obj/item/ammo_casing/energy/declone/weak)
 
 /obj/item/gun/energy/floragun
@@ -113,12 +113,11 @@
 	name = "energy crossbow"
 	desc = "A reverse engineered weapon using syndicate technology."
 	icon_state = "crossbowlarge"
-	w_class = WEIGHT_CLASS_HUGE
-	slot_flags = ITEM_SLOT_BACK
+	w_class = WEIGHT_CLASS_NORMAL
 	materials = list(/datum/material/iron=4000)
 	suppressed = null
 	ammo_type = list(/obj/item/ammo_casing/energy/bolt/large)
-	overheat_time = 80
+	pin = null
 
 /obj/item/gun/energy/kinetic_accelerator/crossbow/radbow
 	name = "gamma bow"
@@ -140,7 +139,6 @@
 	block_upgrade_walk = 1
 	sharpness = IS_SHARP
 	can_charge = FALSE
-	dead_cell = TRUE
 
 	heat = 3800
 	usesound = list('sound/items/welder.ogg', 'sound/items/welder2.ogg')
@@ -174,7 +172,7 @@
 			to_chat(user, "<span class='notice'>You try to insert [I] into [src], but it's fully charged.</span>") //my cell is round and full
 			return
 		I.use(1)
-		cell.give(50*charge_multiplier)
+		cell.give(500*charge_multiplier)
 		to_chat(user, "<span class='notice'>You insert [I] in [src], recharging it.</span>")
 	else
 		..()
@@ -232,18 +230,9 @@
 	force = 15
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/adv)
 
-/obj/item/gun/energy/plasmacutter/cyborg
-	name = "cyborg plasma cutter"
-	desc = "An integrated plasma cutter."
-	dead_cell = FALSE
-	can_charge = FALSE
-	use_cyborg_cell = TRUE
-	tool_behaviour = null //because it will drain the cutters cell and not the borgs.
-
-
-/obj/item/gun/energy/wormhole_projector
-	name = "bluespace wormhole projector"
-	desc = "A projector that emits high density quantum-coupled bluespace beams."
+/obj/item/gun/energy/wormhole_projector //valve pls don't sue
+	name = "handheld portal device"
+	desc = "Experimental tool designed to place two portals that objects can pass through."
 	ammo_type = list(/obj/item/ammo_casing/energy/wormhole, /obj/item/ammo_casing/energy/wormhole/orange)
 	item_state = null
 	icon_state = "portalgun"

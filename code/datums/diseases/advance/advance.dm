@@ -508,6 +508,3 @@
 
 /datum/disease/advance/proc/totalTransmittable()
 	return properties["transmittable"]
-
-/datum/disease/advance/proc/totalSeverity()
-	return properties["severity"]

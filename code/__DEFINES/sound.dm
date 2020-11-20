@@ -6,9 +6,8 @@
 #define CHANNEL_JUKEBOX_START 1016
 #define CHANNEL_JUSTICAR_ARK 1015
 #define CHANNEL_HEARTBEAT 1014 //sound channel for heartbeats
-#define CHANNEL_AMBIENT_EFFECTS 1018
-#define CHANNEL_AMBIENT_MUSIC 1017
-#define CHANNEL_AMBIENT_BUZZ 1016
+#define CHANNEL_AMBIENCE 1013
+#define CHANNEL_BUZZ 1012
 #define CHANNEL_BICYCLE 1011
 #define CHANNEL_STATION_ALERT_SIREN 1010
 
@@ -67,7 +66,6 @@
 									'sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambimaint.ogg',\
 									'sound/ambience/ambiatmos.ogg', 'sound/ambience/ambiatmos2.ogg', 'sound/ambience/ambiodd.ogg')
 
-#define REEBE list('sound/ambience/ambireebe1.ogg', 'sound/ambience/ambireebe2.ogg', 'sound/ambience/ambireebe3.ogg')
 
 #define CREEPY_SOUNDS list('sound/effects/ghost.ogg', 'sound/effects/ghost2.ogg', 'sound/effects/heart_beat.ogg', 'sound/effects/screech.ogg',\
 	'sound/hallucinations/behind_you1.ogg', 'sound/hallucinations/behind_you2.ogg', 'sound/hallucinations/far_noise.ogg', 'sound/hallucinations/growl1.ogg', 'sound/hallucinations/growl2.ogg',\

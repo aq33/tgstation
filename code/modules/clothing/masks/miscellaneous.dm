@@ -232,7 +232,7 @@
 	flags_cover = MASKCOVERSMOUTH
 	flags_inv = HIDEFACE|HIDEFACIALHAIR
 	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR
-	visor_flags_cover = MASKCOVERSMOUTH
+	visor_flags_cover = MASKCOVERSMOUTH | PEPPERPROOF
 	slot_flags = ITEM_SLOT_MASK
 	adjusted_flags = ITEM_SLOT_HEAD
 	icon_state = "bandbotany"

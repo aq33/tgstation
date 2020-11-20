@@ -94,7 +94,7 @@
 		to_chat(user, "[current.name] selected for law changes.")
 
 /obj/machinery/computer/upload/ipc/can_upload_to(mob/living/carbon/human/H)
-	if(!H || !isipc(H))
+	if(!H || !isIPC(H))
 		return FALSE
 	if(H.stat == DEAD)
 		return FALSE

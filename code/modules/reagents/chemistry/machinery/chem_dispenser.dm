@@ -109,7 +109,7 @@
 
 /obj/machinery/chem_dispenser/process()
 	if (recharge_counter >= 4)
-		if(!is_operational() || !cell)
+		if(!is_operational())
 			return
 		var/usedpower = cell.give(recharge_amount)
 		if(usedpower)

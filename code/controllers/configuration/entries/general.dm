@@ -62,8 +62,6 @@
 
 /datum/config_entry/flag/log_cloning // log cloning actions.
 
-/datum/config_entry/flag/log_id		//log ID changes
-
 /datum/config_entry/flag/log_vote	// log voting
 
 /datum/config_entry/flag/log_whisper	// log client whisper
@@ -205,16 +203,16 @@
 /datum/config_entry/string/banappeals
 
 /datum/config_entry/string/wikiurl
-	config_entry_value = "https://wiki.beestation13.com/view/Main_Page"
+	config_entry_value = "http://www.tgstation13.org/wiki"
 
 /datum/config_entry/string/forumurl
-	config_entry_value = "https://forums.beestation13.com/"
+	config_entry_value = "http://tgstation13.org/phpBB/index.php"
 
 /datum/config_entry/string/rulesurl
-	config_entry_value = "https://beestation13.com/rules"
+	config_entry_value = "http://www.tgstation13.org/wiki/Rules"
 
 /datum/config_entry/string/githuburl
-	config_entry_value = "https://github.com/BeeStation/BeeStation-Hornet"
+	config_entry_value = "https://www.github.com/tgstation/-tg-station"
 
 /datum/config_entry/string/issue_label
 
@@ -486,8 +484,6 @@
 /datum/config_entry/string/default_view
 	config_entry_value = "15x15"
 
-/datum/config_entry/flag/menu_square_view
-
 /datum/config_entry/flag/log_pictures
 
 /datum/config_entry/flag/picture_logging_camera
@@ -547,12 +543,4 @@
 /datum/config_entry/number/vote_autotransfer_interval //length of time to wait before subsequent autotransfer votes (deciseconds, default 30 minutes)
 	config_entry_value = 18000
 	integer = FALSE
-	min_val = 0
-
-/datum/config_entry/flag/respect_upstream_bans
-
-/datum/config_entry/flag/respect_upstream_permabans
-
-/datum/config_entry/number/ghost_role_cooldown
-	config_entry_value = 0
 	min_val = 0
