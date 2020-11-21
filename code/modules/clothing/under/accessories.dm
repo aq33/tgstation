@@ -159,12 +159,24 @@
 
 /obj/item/clothing/accessory/medal/conduct
 	name = "distinguished conduct medal"
-	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award given by Nanotrasen. It is often awarded by a captain to a member of his crew."
+	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award given by Nanotrasen. It is often awarded by a captain or department head to a member of his crew."
 
 /obj/item/clothing/accessory/medal/bronze_heart
 	name = "bronze heart medal"
 	desc = "A bronze heart-shaped medal awarded for sacrifice. It is often awarded posthumously or for severe injury in the line of duty."
 	icon_state = "bronze_heart"
+
+/obj/item/clothing/accessory/medal/engineering
+	name = "silver wrench award"
+	desc = "A silver pressing of a wrench, this award is given to commemorate efforts made towards keeping the station in good shape. Typically given to Station Engineers and Atmospheric Technicians."
+	icon_state = "silver_wrench"
+	materials = list(/datum/material/silver=1000)
+
+/obj/item/clothing/accessory/medal/medical
+	name = "Asclepius medal"
+	desc = "A silver snake coiling around a rod, the symbol of healing and medicine since the ancient times. This award is given to doctors or other personnel of Medbay that have displayed excellence in the field of medicine."
+	icon_state = "asclepius"
+	materials = list(/datum/material/silver=1000)
 
 /obj/item/clothing/accessory/medal/ribbon
 	name = "ribbon"
@@ -175,6 +187,31 @@
 /obj/item/clothing/accessory/medal/ribbon/cargo
 	name = "\"cargo tech of the shift\" award"
 	desc = "An award bestowed only upon those cargotechs who have exhibited devotion to their duty in keeping with the highest traditions of Cargonia."
+
+/obj/item/clothing/accessory/medal/ribbon/engineer
+	name = "\"fixer-upper\" award"
+	desc = "A ribbon awarded to station personnel that performed above-and-beyond maintenance and construction tasks aboard the station."
+	icon_state = "engineer"
+
+/obj/item/clothing/accessory/medal/ribbon/assistant
+	name = "\"helpful assistant\" award"
+	desc = "A simple gray ribbon, awarded to assitants that have provided vital assistance to those that required the assist."
+	icon_state = "assistant"
+
+/obj/item/clothing/accessory/medal/ribbon/service
+	name = "\"exemplary service\" ribbon"
+	desc = "A gold-plated ribbon awarded to service personnel for excellence in performing their vital duties. Typically awarded by the Head of Personnel to top workers."
+	icon_state = "service"
+
+/obj/item/clothing/accessory/medal/ribbon/chemist
+	name = "\"station alchemist\" award"
+	desc = "A ribbon given to chemistry personnel that have made a significant positive influence on the wellbeing of the station and it's inhabitants."
+	icon_state = "chemist"
+
+/obj/item/clothing/accessory/medal/ribbon/paramedic
+	name = "\"lifesaver\" award"
+	desc = "An award given to individuals who went above and beyond in the pursuit of saving lives of the station's inhabitants. Often given to paramedics, but Nanotrasen guidelines specify that any crewmember that saved lives is eligible to recieve this ribbon."
+	icon_state = "paramedic"
 
 /obj/item/clothing/accessory/medal/silver
 	name = "silver medal"
@@ -195,7 +232,7 @@
 /obj/item/clothing/accessory/medal/silver/excellence
 	name = "the head of personnel award for outstanding achievement in the field of excellence"
 	desc = "Nanotrasen's dictionary defines excellence as \"the quality or condition of being excellent\". This is awarded to those rare crewmembers who fit that definition."
-	
+
 /obj/item/clothing/accessory/medal/gold
 	name = "gold medal"
 	desc = "A prestigious golden medal."
@@ -233,6 +270,15 @@
 	desc = "A plasma medal which represents significant contributions to the field of science or engineering."
 
 
+/obj/item/clothing/accessory/medal/clown
+	name = "HONKiest of the HONK! medal"
+	desc = "An award which has almost no mentions in official Nanotrasen guides, this medal is awarded to Clowns that have somehow managed to have a significant net positive impact on the station."
+	icon_state = "clown"
+	materials = list(/datum/material/silver=1000, /datum/material/gold=1000)
+
+/obj/item/clothing/accessory/medal/clown/Initialize() // well duh it has to HONK when stepped on
+	. = ..()
+	AddComponent(/datum/component/squeak, list('sound/items/bikehorn.ogg'=1), 50)
 
 ////////////
 //Armbands//

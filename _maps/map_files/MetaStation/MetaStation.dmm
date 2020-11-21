@@ -25800,16 +25800,19 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "baB" = (
-/obj/machinery/firealarm{
-	pixel_y = 24
-	},
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
-/obj/item/twohanded/required/kirbyplants/random,
+/obj/machinery/bounty_board{
+	pixel_y = 22
+	},
+/obj/structure/closet/crate{
+	icon_state = "crateopen"
+	},
+/obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "baC" = (
@@ -25838,6 +25841,10 @@
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = 24
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
@@ -29912,6 +29919,9 @@
 /obj/structure/sign/departments/minsky/supply/cargo{
 	pixel_x = -32
 	},
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 4
+	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "biO" = (
@@ -30624,10 +30634,6 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "bks" = (
-/obj/structure/closet/crate{
-	icon_state = "crateopen"
-	},
-/obj/effect/spawner/lootdrop/maintenance,
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
@@ -30635,6 +30641,7 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
+/obj/machinery/piratepad/civilian,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "bkt" = (

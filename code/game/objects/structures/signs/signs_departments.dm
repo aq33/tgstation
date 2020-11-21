@@ -1,73 +1,73 @@
 //departmental signs
 
 /obj/structure/sign/departments/examroom
-	name = "\improper EXAM ROOM"
-	desc = "A guidance sign which reads 'EXAM ROOM'."
+	name = "\improper POKÓJ DIAGNOSTYCZNY"
+	desc = "Znak informacyjny z napisem 'POKÓJ DIAGNOSTYCZNY'."
 	icon_state = "examroom"
 
-/obj/structure/sign/departments/science			//These 3 have multiple types, just var-edit the icon_state to whatever one you want on the map
-	name = "\improper SCIENCE"
-	desc = "A sign labelling an area where research and science is performed."
+/obj/structure/sign/departments/science
+	name = "\improper NAUKA"
+	desc = "Znak wskazujący dział, w którym przeprowadzane są badania i rozwój."
 	icon_state = "science1"
 
 /obj/structure/sign/departments/chemistry
-	name = "\improper CHEMISTRY"
-	desc = "A sign labelling an area containing chemical equipment."
+	name = "\improper CHEMIA"
+	desc = "Znak wskazujący miejsce, w którym znajduje się wyposażenie chemiczne."
 	icon_state = "chemistry1"
 
 /obj/structure/sign/departments/botany
-	name = "\improper HYDROPONICS"
-	desc = "A sign labelling an area as a place where plants are grown."
+	name = "\improper HYDROPONIKA"
+	desc = "Znak wskazujący miejsce, w którym prowadzi się uprawę roślin."
 	icon_state = "hydro1"
 
 /obj/structure/sign/departments/xenobio
-	name = "\improper XENOBIOLOGY"
-	desc = "A sign labelling an area as a place where xenobiological entities are researched."
+	name = "\improper KSENOBIOLOGIA"
+	desc = "Znak wskazujący miejsce, w którym przeprowadza się badania nad obcymi formami życia."
 	icon_state = "xenobio"
 
 /obj/structure/sign/departments/evac
-	name = "\improper EVACUATION"
-	desc = "A sign labelling an area where evacuation procedures take place."
+	name = "\improper EWAKUACJA"
+	desc = "Znak wskazujący miejsce ewakuacji."
 	icon_state = "evac"
 
 /obj/structure/sign/departments/drop
-	name = "\improper DROP PODS"
-	desc = "A sign labelling an area where drop pod loading procedures take place."
+	name = "\improper KAPSUŁY ZRZUTU"
+	desc = "Znak wskazujący ładownię dla kapsuł."
 	icon_state = "drop"
 
 /obj/structure/sign/departments/custodian
-	name = "\improper CUSTODIAN"
-	desc = "A sign labelling an area where the custodian works."
+	name = "\improper POMIESZCZENIE GOSPODARCZE"
+	desc = "Znak wskazujący pomieszczenie woźnego."
 	icon_state = "custodian"
 
 /obj/structure/sign/departments/engineering
-	name = "\improper ENGINEERING"
-	desc = "A sign labelling an area where engineers work."
+	name = "\improper INŻYNIERIA"
+	desc = "Znak wskazujący miejsce, gdzie pracują inżynierowie."
 	icon_state = "engine"
 
 /obj/structure/sign/departments/cargo
 	name = "\improper CARGO"
-	desc = "A sign labelling an area where cargo ships dock."
+	desc = "Znak wskazujący ładownię."
 	icon_state = "cargo"
 
 /obj/structure/sign/departments/security
-	name = "\improper SECURITY"
-	desc = "A sign labelling an area where the law is law."
+	name = "\improper OCHRONA"
+	desc = "Znak wskazujący gdzie zachodzi prawo i sprawiedliwość."
 	icon_state = "security"
 
 /obj/structure/sign/departments/holy
-	name = "\improper HOLY"
-	desc = "A sign labelling a religious area."
+	name = "\improper WIARA"
+	desc = "Znak wskazujący miejsce kultu."
 	icon_state = "holy"
 
 /obj/structure/sign/departments/restroom
-	name = "\improper RESTROOM"
-	desc = "A sign labelling a restroom."
+	name = "\improper WC"
+	desc = "Znak wskazujący toalety."
 	icon_state = "restroom"
 
 /obj/structure/sign/departments/medbay
-	name = "\improper MEDBAY"
-	desc = "The Intergalactic symbol of Medical institutions. You'll probably get help here."
+	name = "\improper AMBULATORIUM"
+	desc = "Międzygalaktyczny symbol oznaczający placówki medyczne. Otrzymasz tu pomoc."
 	icon_state = "bluecross"
 
 /obj/structure/sign/departments/medbay/alt
@@ -75,104 +75,104 @@
 
 /obj/structure/sign/departments/medbay/alt2
 	icon_state = "medicalsign"
-	desc = "An image of the Caduceus, with a small cross. Makes sense to someone not well-versed in human mythology. You'll probably get help here."
+	desc = "Wizerunek Kaduceusza. To ma także sens dla kogoś, kto niekoniecznie jest zorientowany w ludzkiej mitologii. Prawdopodobnie uzyskasz tutaj pomoc."
 
 /obj/structure/sign/departments/minsky/research/research
-	name = "Research Department"
-	desc = "A sign labelling where the research and development of new technologies takes place. It's not an experiment if you know what's going on."
+	name = "Dział badań"
+	desc = "Znak wskazujący miejsce gdzie przeprowadza się badania nad nowymi technologiami."
 	icon_state = "minskyrd"
 
 /obj/structure/sign/departments/minsky/research/genetics
-	name = "Genetics Division"
-	desc = "A sign labelling the genetics division of the station. Watch for mutants."
+	name = "Dział genetyki"
+	desc = "Znak wskazujący dział genetyki."
 	icon_state = "minskygene"
 
 /obj/structure/sign/departments/minsky/research/robotics
-	name = "Robotics Division"
-	desc = "A sign labelling the robotics division of the station. Produces $6 cyborgs."
+	name = "Dział robotyki"
+	desc = "Znak wskazujący dział robotyki."
 	icon_state = "minskyrobo"
 
 /obj/structure/sign/departments/minsky/research/xenobiology
-	name = "Xenobiology Division"
-	desc = "A sign labelling the xenobiology division of the station. Xeno Animal Handling Permit #180924609"
+	name = "Wydział Ksenobiologii"
+	desc = "Znak wskazujący wydział ksenobiologii."
 	icon_state = "minskyxeno"
 
 /obj/structure/sign/departments/minsky/engineering/engineering
-	name = "Engineering Department"
-	desc = "A sign labelling the engineering department of the station. The fewer moving parts the better."
+	name = "Dział inżynierii"
+	desc = "Znak wskazujący dział inżynierii. Im mniej ruchomych części, tym lepiej."
 	icon_state = "minskyengi"
 
 /obj/structure/sign/departments/minsky/engineering/telecommmunications
-	name = "Telecommunications Department"
-	desc = "A sign labelling the telecommunications division of the station. 'Nuff said."
+	name = "Dział telekomunikacji"
+	desc = "Znak wskazujący dział telekomunikacji."
 	icon_state = "minskytcom"
 
 /obj/structure/sign/departments/minsky/engineering/atmospherics
-	name = "Atmospherics Division"
-	desc = "A sign labelling the atmospherics division of the station. Making Comrade Dyatlov proud since April 26th, 1981."
+	name = "Dział atmosferyki"
+	desc = "Znak wskazujący dział atmosferyki."
 	icon_state = "minskyatmo"
 
 /obj/structure/sign/departments/minsky/medical/medical1
-	name = "Medical Department"
-	desc = "A sign labelling the medical department of the station. You'll probably get treatment here."
+	name = "Ambulatorium"
+	desc = "Znak wskazujący ambulatorium. Uzyskasz tu pomoc."
 	icon_state = "minskymedic"
 
 /obj/structure/sign/departments/minsky/medical/medical2
-	name = "Medical Department"
-	desc = "A sign labelling the medical department of the station. You'll probably get treatment here."
+	name = "Ambulatorium"
+	desc = "Znak wskazujący ambulatorium. Uzyskasz tu pomoc."
 	icon_state = "minskymedicb"
 
 /obj/structure/sign/departments/minsky/medical/clone/cloning1
-	name = "Cloning Division"
-	desc = "A sign labelling the cloning division of the station. Your last hope."
+	name = "Dział klonowania"
+	desc = "Znak wskazujący dział klonowania. Twoja ostatnia nadzieja."
 	icon_state = "minskyclone"
 
 /obj/structure/sign/departments/minsky/medical/clone/cloning2
-	name = "Cloning Division"
-	desc = "A sign labelling the cloning division of the station. Your last hope."
+	name = "Dział klonowania"
+	desc = "Znak wskazujący dział klonowania. Twoja ostatnia nadzieja."
 	icon_state = "minskycloneb"
 
 /obj/structure/sign/departments/minsky/medical/chemistry/chemical1
-	name = "Chemistry Division"
-	desc = "A sign labelling the chemicals division of the station. Similar to the kitchens, just don't lick the spoon."
+	name = "Dział chemiczny"
+	desc = "Znak wskazujący dział chemiczny. Podobny do kuchni, tylko nie liż łyżki."
 	icon_state = "minskychem"
 
 /obj/structure/sign/departments/minsky/medical/chemistry/chemical2
-	name = "Chemistry Division"
-	desc = "A sign labelling the chemicals division of the station. Similar to the kitchens, just don't lick the spoon."
+	name = "Dział chemiczny"
+	desc = "Znak wskazujący dział chemiczny. Podobny do kuchni, tylko nie liż łyżki."
 	icon_state = "minskychemb"
 
 /obj/structure/sign/departments/minsky/medical/virology/virology1
-	name = "Virology Division"
-	desc = "A sign labelling the virology division of the station. Free hugs!!!."
+	name = "Wydział wirologii"
+	desc = "Znak wskazujący wydział wirologii."
 	icon_state = "minskyviro"
 
 /obj/structure/sign/departments/minsky/medical/virology/virology2
-	name = "Virology Division"
-	desc = "A sign labelling the virology division of the station. Free hugs!!!."
+	name = "Wydział wirologii"
+	desc = "Znak wskazujący wydział wirologii."
 	icon_state = "minskyvirob"
 
 /obj/structure/sign/departments/minsky/security/security
-	name = "Security Department"
-	desc = "A sign labelling the security department of the station. Guilty until proven innocent."
+	name = "Dział ochrony"
+	desc = "Znak wskazujący dział ochrony."
 	icon_state = "minskysec"
 
 /obj/structure/sign/departments/minsky/supply/cargo
-	name = "Cargo Division"
-	desc = "A sign labelling the cargo division of the station. Watch your pockets and credit disks."
+	name = "Zaopatrzenie"
+	desc = "Znak wskazujący dział zaopatrzenia."
 	icon_state = "minskycargo"
 
 /obj/structure/sign/departments/minsky/supply/mining
-	name = "Mining Division"
-	desc = "A sign labelling the mining division of the station. Minions of Smaug."
+	name = "Dział wydobywczy"
+	desc = "Znak wskazujący miejsce przebywania górników."
 	icon_state = "minskymine"
 
 /obj/structure/sign/departments/minsky/supply/janitorial
-	name = "Janitorial Division"
-	desc = "A sign labelling the janitorial closet of the station. Clean up after yourself.... please."
+	name = "Pomieszczenie gospodarcze"
+	desc = "Znak wskazujący pomieszczenie gospodarcze. Posprzątaj po sobie, proszę."
 	icon_state = "minskyjani"
 
 /obj/structure/sign/departments/minsky/supply/hydroponics
-	name = "Hydroponics Division"
-	desc = "A sign labelling the hydroponics division of the station. Don't mind the redeyes and giggles."
+	name = "Hydroponika"
+	desc = "Znak wskazujący miejsce, gdzie zachodzi uprawa roślin."
 	icon_state = "minskyhydro"

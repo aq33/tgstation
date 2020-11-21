@@ -9563,7 +9563,9 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
-/obj/machinery/computer/cargo/request,
+/obj/machinery/bounty_board{
+	pixel_y = 22
+	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
 "atu" = (
@@ -40457,10 +40459,6 @@
 /obj/structure/closet/firecloset,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/aft)
-"bBz" = (
-/obj/structure/sign/departments/cargo,
-/turf/closed/wall,
-/area/hallway/primary/starboard)
 "bBA" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/neutral,
@@ -42425,8 +42423,8 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-05"
+/obj/machinery/computer/cargo/request{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
@@ -45681,6 +45679,9 @@
 	dir = 8
 	},
 /obj/machinery/light,
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
 "bKH" = (
@@ -71809,6 +71810,14 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/virology)
+"tXX" = (
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/machinery/piratepad/civilian,
+/turf/open/floor/plasteel,
+/area/hallway/primary/starboard)
 "ubE" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8;
@@ -108636,7 +108645,7 @@ bCu
 bFR
 bHd
 bmL
-bly
+tXX
 bKG
 bnv
 bjX
@@ -108884,7 +108893,7 @@ aYK
 aYd
 bij
 bhN
-bBz
+bnv
 ats
 bCv
 bly

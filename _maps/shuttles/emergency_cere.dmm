@@ -310,6 +310,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
+/obj/structure/closet/secure_closet/award,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/escape)
 "aE" = (

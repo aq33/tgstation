@@ -541,6 +541,10 @@
 /obj/item/clothing/gloves/fingerless,
 /turf/open/floor/plasteel,
 /area/shuttle/escape)
+"sL" = (
+/obj/structure/closet/secure_closet/award,
+/turf/open/floor/mineral/titanium/blue,
+/area/shuttle/escape)
 "sP" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -815,7 +819,7 @@ bL
 "}
 (9,1,1) = {"
 sP
-af
+sL
 al
 aq
 au

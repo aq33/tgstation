@@ -1285,6 +1285,11 @@
 /obj/structure/cable,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
+"Ym" = (
+/obj/structure/table/reinforced,
+/obj/item/phone/real,
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 
 (1,1,1) = {"
 aa
@@ -3042,7 +3047,7 @@ aW
 bV
 bk
 He
-bV
+Ym
 bV
 bV
 bZ

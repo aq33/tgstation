@@ -1582,12 +1582,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/awaymission/caves/listeningpost)
-"eQ" = (
-/obj/machinery/mineral/mint,
-/turf/open/floor/plating/asteroid/basalt{
-	initial_gas_mix = "n2=23;o2=14"
-	},
-/area/awaymission/caves/BMP_asteroid)
 "eR" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plasteel,
@@ -9414,8 +9408,8 @@ bM
 bM
 bL
 bL
-eQ
-eQ
+bV
+bV
 bV
 bV
 bV

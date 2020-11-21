@@ -21791,6 +21791,9 @@
 	pixel_y = 27
 	},
 /obj/item/twohanded/required/kirbyplants/random,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "bnK" = (
@@ -44879,8 +44882,8 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "gby" = (
-/obj/machinery/light{
-	dir = 1
+/obj/machinery/bounty_board{
+	pixel_y = 22
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
@@ -49824,6 +49827,12 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/engine,
 /area/science/explab)
+"nZe" = (
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/office)
 "oau" = (
 /obj/machinery/hydroponics/constructable,
 /obj/machinery/light{
@@ -55634,6 +55643,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engine_smes)
+"xvx" = (
+/obj/machinery/piratepad/civilian,
+/turf/open/floor/plasteel,
+/area/quartermaster/office)
 "xvU" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
@@ -79545,7 +79558,7 @@ bqs
 wDF
 bbR
 bbR
-bbR
+xvx
 bwd
 bvL
 byI
@@ -79802,7 +79815,7 @@ hKl
 vaL
 btu
 bbR
-bbR
+nZe
 bwd
 ccR
 byK

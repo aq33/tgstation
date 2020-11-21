@@ -17,9 +17,21 @@
 	required = "/datum/mutation/human/strong; /datum/mutation/human/radioactive"
 	result = HULK
 
+/datum/generecipe/megafart
+	required = "/datum/mutation/human/strong; /datum/mutation/human/toxicfart"
+	result = MEGAFART
+
+/datum/generecipe/armblade
+	required = "/datum/mutation/human/strong; /datum/mutation/human/claws"
+	result = ARMBLADE
+
 /datum/generecipe/x_ray
 	required = "/datum/mutation/human/thermal; /datum/mutation/human/radioactive"
-	result = /datum/mutation/human/thermal/x_ray
+	result = XRAY
+
+/datum/generecipe/lasereyes
+	required = "/datum/mutation/human/thermal; /datum/mutation/human/glow"
+	result = LASEREYES
 
 /datum/generecipe/mindread
 	required = "/datum/mutation/human/antenna; /datum/mutation/human/paranoia"
