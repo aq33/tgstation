@@ -385,7 +385,6 @@
 	desc = "Clown bits with banana chunks"
 
 	required_reagents = list(/datum/reagent/consumable/banana)
-	supplementary_reagents = list(/datum/reagent/consumable/banana_peel = 4)
 
 	resulting_atoms = list(/mob/living/simple_animal/hostile/retaliate/clown/banana = 1)
 
