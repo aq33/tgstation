@@ -19,12 +19,12 @@
 	damage_overlay_type = "synth"
 	limbs_id = "synth"
 	burnmod = 1.5
-	heatmod = 1.2
+	heatmod = 1.25
 	toxmod = 0
 	clonemod = 0
 	hygiene_mod = 0
 	staminamod = 0.8
-	siemens_coeff = 1.5
+	siemens_coeff = 1.25
 	reagent_tag = PROCESS_SYNTHETIC
 	species_gibs = "robotic"
 	disliked_food = null
