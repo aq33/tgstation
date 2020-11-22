@@ -18,12 +18,15 @@
 	var/bounty_timer = 0
 
 /datum/bank_account/New(newname, job)
+	if(job == null)
+		add_to_accounts = FALSE
 	if(add_to_accounts)
 		SSeconomy.bank_accounts += src
 	account_holder = newname
 	account_job = job
 	account_id = rand(111111,999999)
-	paycheck_amount = account_job.paycheck
+	if(account_job) // job might not have been provided - account with no paycheck
+		paycheck_amount = account_job.paycheck
 
 /datum/bank_account/Destroy()
 	if(add_to_accounts)
