@@ -69,6 +69,9 @@
 /obj/item/disk/nanite_program/hardening
 	program_type = /datum/nanite_program/hardening
 
+/obj/item/disk/nanite_program/nanojutsu
+	program_type = /datum/nanite_program/nanojutsu
+
 /obj/item/disk/nanite_program/coagulating
 	program_type = /datum/nanite_program/coagulating
 

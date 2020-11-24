@@ -125,3 +125,27 @@
 	. = ..()
 	REMOVE_TRAIT(host_mob, TRAIT_MINDSHIELD, "nanites")
 	host_mob.sec_hud_set_implants()
+
+/datum/nanite_program/nanojutsu
+	name = "Nanojutsu Teaching Program"
+	desc = "The nanites stimulate host's brain, giving them the ability to use the martial art of Nanojutsu."
+	use_rate = 2.5
+	rogue_types = list(/datum/nanite_program/brain_decay, /datum/nanite_program/brain_misfire)
+	var/datum/martial_art/nanojutsu/martial
+
+/datum/nanite_program/nanojutsu/enable_passive_effect()
+	. = ..()
+	if(!ishuman(host_mob))
+		return
+	var/mob/living/carbon/human/H = host_mob
+	martial = new(null)
+	to_chat(H, "<span class='notice'>Your mind is flooded with martial arts knowledge[martial.teach(H, TRUE)?"":", but you manage to block it out"].</span>")
+
+/datum/nanite_program/nanojutsu/disable_passive_effect()
+	. = ..()
+	if(!ishuman(host_mob))
+		return
+	var/mob/living/carbon/human/H = host_mob
+	martial.remove(H)
+	to_chat(H, "<span class='notice'>Your mind feels clear once again, as thoughts about the martial arts leave your head.</span>")
+	QDEL_NULL(martial)

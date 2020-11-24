@@ -258,6 +258,13 @@
 	program_type = /datum/nanite_program/mindshield
 	category = list("Augmentation Nanites")
 
+/datum/design/nanites/nanojutsu
+	name = "Nanojutsu Teaching Program"
+	desc = "The nanites stimulate host's brain, giving them the ability to use the martial art of Nanojutsu."
+	id = "nanojutsu_nanites"
+	program_type = /datum/nanite_program/nanojutsu
+	category = list("Augmentation Nanites")
+
 ////////////////////DEFECTIVE NANITES//////////////////////////////////////
 
 /datum/design/nanites/glitch
