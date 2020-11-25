@@ -6,6 +6,7 @@
 	verb_say = "states"
 	density = TRUE
 	req_access = list(ACCESS_BAR)
+	interaction_flags_machine = INTERACT_MACHINE_OPEN | INTERACT_MACHINE_ALLOW_SILICON
 	var/active = FALSE
 	var/stop = 0
 	var/selection = 1
@@ -27,11 +28,12 @@
 	stop = 0
 	update_icon()
 
-/obj/machinery/jukebox/attackby(obj/item/O, mob/user, params)
-	if(!(flags_1 & NODECONSTRUCT_1))
-		if(O.tool_behaviour == TOOL_WRENCH)
-			default_unfasten_wrench(user, O)
-			return
+/obj/machinery/jukebox/attackby(obj/item/I, mob/user, params)
+	if(default_unfasten_wrench(user, I))
+		return
+	if(default_deconstruction_screwdriver(user, icon_state, icon_state, I))
+		update_icon()
+		return
 	return ..()
 
 /obj/machinery/jukebox/default_unfasten_wrench(mob/user, obj/item/I, time = 20)
@@ -55,6 +57,8 @@
 
 /obj/machinery/jukebox/ui_interact(mob/user)
 	. = ..()
+	if(!is_operational())
+		return
 	if(!user.canUseTopic(src, !issilicon(user)))
 		return
 	if (!anchored)
@@ -93,7 +97,7 @@
 					playsound(src, 'sound/misc/compiler-failure.ogg', 50, 1)
 					return
 				if(!anchored)
-					to_chat(user,"<span class='warning'>This device must be anchored by a wrench!</span>")
+					to_chat(usr, "<span class='warning'>This device must be anchored by a wrench!</span>")
 					return
 				if(!activate_music())
 					to_chat(usr, "<span class='warning'>Error: Hardware failure, try again.</span>")
@@ -120,6 +124,7 @@
 	if(isnull(channel))
 		return null
 	active = TRUE
+	playsound(src,'sound/machines/terminal_on.ogg',50,TRUE)
 	update_icon()
 	stop = world.time + SSjukeboxes.songs[selection].length
 	START_PROCESSING(SSobj, src)
