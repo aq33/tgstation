@@ -1,7 +1,7 @@
 /obj/machinery/jukebox
 	name = "jukebox"
 	desc = "A classic music player."
-	icon = 'icons/obj/stationobjs.dmi'
+	icon = 'icons/obj/machines/jukebox.dmi'
 	icon_state = "jukebox"
 	verb_say = "states"
 	density = TRUE
@@ -10,6 +10,11 @@
 	var/stop = 0
 	var/selection = 1
 	var/channel = null
+	var/state_base = "jukebox"
+
+/obj/machinery/jukebox/Initialize()
+	. = ..()
+	update_icon()
 
 /obj/machinery/jukebox/Destroy()
 	if(!isnull(channel))
@@ -27,14 +32,25 @@
 				to_chat(user,"<span class='notice'>You unsecure and disconnect [src].</span>")
 				setAnchored(FALSE)
 			playsound(src, 'sound/items/deconstruct.ogg', 50, 1)
+			update_icon()
 			return
 	return ..()
 
 /obj/machinery/jukebox/update_icon()
-	if(active)
-		icon_state = "[initial(icon_state)]-active"
-	else
-		icon_state = "[initial(icon_state)]"
+	overlays = 0
+	icon_state = "[state_base]"
+	if((stat & MAINT) || panel_open)
+		overlays += image(icon = icon, icon_state = "[state_base]-panel")
+	if(!(stat & NOPOWER))
+		if(anchored)
+			overlays += image(icon = icon, icon_state = "[state_base]-powered")
+		if(active)
+			overlays += image(icon = icon, icon_state = "[state_base]-playing")
+		if(stat & BROKEN)
+			overlays += image(icon = icon, icon_state = "[state_base]-broken")
+		if((stat & MAINT) || panel_open)
+			overlays += image(icon = icon, icon_state = "[state_base]-panel")
+		return
 
 /obj/machinery/jukebox/ui_interact(mob/user)
 	. = ..()
