@@ -22,6 +22,11 @@
 		channel = null
 	return ..()
 
+/obj/machinery/jukebox/power_change()
+	..()
+	stop = 0
+	update_icon()
+
 /obj/machinery/jukebox/attackby(obj/item/O, mob/user, params)
 	if(!active && !(flags_1 & NODECONSTRUCT_1))
 		if(O.tool_behaviour == TOOL_WRENCH)
