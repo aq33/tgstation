@@ -96,6 +96,9 @@
 					to_chat(usr, "<span class='warning'>Error: The device is still resetting from the last activation, it will be ready again in [DisplayTimeText(stop-world.time)].</span>")
 					playsound(src, 'sound/misc/compiler-failure.ogg', 50, 1)
 					return
+				if(!anchored)
+					to_chat(user,"<span class='warning'>This device must be anchored by a wrench!</span>")
+					return
 				if(!activate_music())
 					to_chat(usr, "<span class='warning'>Error: Hardware failure, try again.</span>")
 					playsound(src, 'sound/misc/compiler-failure.ogg', 50, TRUE)
