@@ -5,11 +5,8 @@
 /datum/wires/jukebox/New(atom/holder)
 	wires = list(
 		WIRE_POWER,
-		WIRE_ZAP1, WIRE_ZAP2,
 		WIRE_SHOCK,
-		WIRE_IDSCAN,
-		WIRE_LIGHT,
-		WIRE_SPEAKER
+		WIRE_ZAP1, WIRE_ZAP2,
 		WIRE_SLOW, WIRE_FAST,
 	)
 	add_duds(4)

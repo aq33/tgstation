@@ -6,7 +6,7 @@
 	verb_say = "states"
 	density = TRUE
 	req_access = list(ACCESS_BAR)
-	interaction_flags_machine = INTERACT_MACHINE_OPEN | INTERACT_MACHINE_ALLOW_SILICON
+	interaction_flags_machine = INTERACT_MACHINE_SET_MACHINE | INTERACT_MACHINE_OPEN | INTERACT_MACHINE_ALLOW_SILICON | INTERACT_MACHINE_OPEN_SILICON
 	var/active = FALSE
 	var/stop = 0
 	var/selection = 1
@@ -55,9 +55,10 @@
 	if(seconds_electrified)
 		if(shock(user, 100))
 			return
+	return ..()
 
 /obj/machinery/jukebox/proc/shock(mob/user, prb)
-	if(stat & (NOPOWER))
+	if(stat & NOPOWER)
 		return FALSE
 	if(!prob(prb))
 		return FALSE
@@ -83,7 +84,7 @@
 
 /obj/machinery/jukebox/ui_interact(mob/user)
 	. = ..()
-	if(!is_operational())
+	if(stat & (BROKEN|NOPOWER))
 		return
 	if(!user.canUseTopic(src, !issilicon(user)))
 		return
@@ -92,15 +93,15 @@
 		return
 	if(!allowed(user))
 		to_chat(user,"<span class='warning'>Error: Access Denied.</span>")
-		user.playsound_local(src,'sound/misc/compiler-failure.ogg', 25, 1)
+		user.playsound_local(src,'sound/machines/deniedbeep.ogg', 25, 1)
 		return
 	if(!SSjukeboxes.songs.len)
 		to_chat(user,"<span class='warning'>Error: No music tracks have been authorized for your station. Petition Central Command to resolve this issue.</span>")
-		playsound(src,'sound/misc/compiler-failure.ogg', 25, 1)
+		playsound(src,'sound/machines/deniedbeep.ogg', 25, 1)
 		return
 	var/list/dat = list()
-	dat +="<div class='statusDisplay' style='text-align:center'>"
-	dat += "<b><A href='?src=[REF(src)];action=toggle'>[!active ? "BREAK IT DOWN" : "SHUT IT DOWN"]<b></A><br>"
+	dat += "<div class='statusDisplay' style='text-align:center'>"
+	dat += "<b><a href='?src=[REF(src)];action=toggle'>[!active ? "BREAK IT DOWN" : "SHUT IT DOWN"]</a><b><br>"
 	dat += "</div><br>"
 	dat += "<A href='?src=[REF(src)];action=select'> Select Track</A><br>"
 	dat += "Track Selected: [SSjukeboxes.songs[selection].name]<br>"
@@ -112,7 +113,12 @@
 /obj/machinery/jukebox/Topic(href, href_list)
 	if(..())
 		return
+	if(stat & (BROKEN|NOPOWER))
+		return
 	add_fingerprint(usr)
+	if(seconds_electrified)
+		if(shock(usr, 100))
+			return
 	switch(href_list["action"])
 		if("toggle")
 			if (QDELETED(src))
@@ -120,20 +126,17 @@
 			if(!active)
 				if(stop > world.time)
 					to_chat(usr, "<span class='warning'>Error: The device is still resetting from the last activation, it will be ready again in [DisplayTimeText(stop-world.time)].</span>")
-					playsound(src, 'sound/misc/compiler-failure.ogg', 50, 1)
 					return
 				if(!anchored)
 					to_chat(usr, "<span class='warning'>This device must be anchored by a wrench!</span>")
 					return
 				if(!activate_music())
 					to_chat(usr, "<span class='warning'>Error: Hardware failure, try again.</span>")
-					playsound(src, 'sound/misc/compiler-failure.ogg', 50, TRUE)
+					playsound(src, 'sound/machines/deniedbeep.ogg', 50, TRUE)
 					return
-				START_PROCESSING(SSobj, src)
 				updateUsrDialog()
 			else if(active)
 				stop = 0
-				updateUsrDialog()
 		if("select")
 			if(active)
 				to_chat(usr, "<span class='warning'>Error: You cannot change the song until the current one is over.</span>")
@@ -146,7 +149,8 @@
 			updateUsrDialog()
 
 /obj/machinery/jukebox/proc/activate_music()
-	channel = SSjukeboxes.add_jukebox(src, selection)
+	if(stat & (BROKEN|NOPOWER))
+		return FALSE
 	var/speed_factor = get_speed_factor()
 	channel = SSjukeboxes.add_jukebox(src, selection, speed_factor)
 	if(isnull(channel))
@@ -161,14 +165,13 @@
 /obj/machinery/jukebox/process()
 	if(stat & (BROKEN|NOPOWER))
 		return PROCESS_KILL
-	if(!active)
-		return
 	if(seconds_electrified > MACHINE_NOT_ELECTRIFIED)
 		seconds_electrified--
 	if(world.time >= stop && active)
 		active = FALSE
 		STOP_PROCESSING(SSobj, src)
 		playsound(src,'sound/machines/terminal_off.ogg',50,TRUE)
+		updateUsrDialog()
 		update_icon()
 		SSjukeboxes.remove_jukebox(channel)
 		channel = null
