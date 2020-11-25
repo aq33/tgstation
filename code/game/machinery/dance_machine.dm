@@ -52,9 +52,6 @@
 			overlays += image(icon = icon, icon_state = "[state_base]-playing")
 		if(stat & BROKEN)
 			overlays += image(icon = icon, icon_state = "[state_base]-broken")
-		if((stat & MAINT) || panel_open)
-			overlays += image(icon = icon, icon_state = "[state_base]-panel")
-		return
 
 /obj/machinery/jukebox/ui_interact(mob/user)
 	. = ..()
