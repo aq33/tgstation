@@ -12,6 +12,7 @@
 	var/selection = 1
 	var/channel = null
 	var/state_base = "jukebox"
+	var/seconds_electrified = MACHINE_NOT_ELECTRIFIED
 
 /obj/machinery/jukebox/Initialize()
 	. = ..()
@@ -46,6 +47,23 @@
 	if(. == SUCCESSFUL_UNFASTEN)
 		stop = 0
 		update_icon()
+
+/obj/machinery/jukebox/_try_interact(mob/user)
+	if(seconds_electrified)
+		if(shock(user, 100))
+			return
+
+/obj/machinery/jukebox/proc/shock(mob/user, prb)
+	if(stat & (NOPOWER))
+		return FALSE
+	if(!prob(prb))
+		return FALSE
+	do_sparks(5, TRUE, src)
+	var/check_range = TRUE
+	if(electrocute_mob(user, get_area(src), src, 0.7, check_range))
+		return TRUE
+	else
+		return FALSE
 
 /obj/machinery/jukebox/update_icon()
 	overlays = 0
@@ -136,6 +154,12 @@
 	return TRUE
 
 /obj/machinery/jukebox/process()
+	if(stat & (BROKEN|NOPOWER))
+		return PROCESS_KILL
+	if(!active)
+		return
+	if(seconds_electrified > MACHINE_NOT_ELECTRIFIED)
+		seconds_electrified--
 	if(world.time >= stop && active)
 		active = FALSE
 		STOP_PROCESSING(SSobj, src)

@@ -24,3 +24,21 @@
 	var/list/status = list()
 	status += "This is a test."
 	return status
+
+/datum/wires/jukebox/on_pulse(wire)
+	var/obj/machinery/jukebox/J = holder
+	switch(wire)
+		if(WIRE_SHOCK)
+			J.seconds_electrified = MACHINE_DEFAULT_ELECTRIFY_TIME
+
+/datum/wires/jukebox/on_cut(wire, mend)
+	var/obj/machinery/jukebox/J = holder
+	switch(wire)
+		if(WIRE_ZAP1, WIRE_ZAP2)
+			if(isliving(usr))
+				J.shock(usr, 50)
+		if(WIRE_SHOCK)
+			if(mend)
+				J.seconds_electrified = MACHINE_NOT_ELECTRIFIED
+			else
+				J.seconds_electrified = MACHINE_ELECTRIFIED_PERMANENT
