@@ -41,6 +41,12 @@
 			return
 	return ..()
 
+/obj/machinery/jukebox/default_unfasten_wrench(mob/user, obj/item/I, time = 20)
+	. = ..()
+	if(. == SUCCESSFUL_UNFASTEN)
+		stop = 0
+		update_icon()
+
 /obj/machinery/jukebox/update_icon()
 	overlays = 0
 	icon_state = "[state_base]"
