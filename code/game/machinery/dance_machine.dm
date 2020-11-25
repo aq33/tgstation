@@ -15,12 +15,14 @@
 
 /obj/machinery/jukebox/Initialize()
 	. = ..()
+	wires = new /datum/wires/jukebox(src)
 	update_icon()
 
 /obj/machinery/jukebox/Destroy()
 	if(!isnull(channel))
 		SSjukeboxes.remove_jukebox(channel)
 		channel = null
+	QDEL_NULL(wires)
 	return ..()
 
 /obj/machinery/jukebox/power_change()
@@ -34,6 +36,9 @@
 	if(default_deconstruction_screwdriver(user, icon_state, icon_state, I))
 		update_icon()
 		return
+	if(panel_open && is_wire_tool(I))
+		wires.interact(user)
+		return TRUE
 	return ..()
 
 /obj/machinery/jukebox/default_unfasten_wrench(mob/user, obj/item/I, time = 20)
