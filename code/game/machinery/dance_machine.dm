@@ -16,10 +16,13 @@
 	var/speed_servo_regulator_cut = FALSE //vaporwave
 	var/speed_servo_resistor_cut = FALSE //nightcore
 	var/speed_potentiometer = 1.0
+	var/selection_blocked = FALSE
+	var/list_source = list()
 
 /obj/machinery/jukebox/Initialize()
 	. = ..()
 	wires = new /datum/wires/jukebox(src)
+	list_source = SSjukeboxes.song_lib
 	update_icon()
 
 /obj/machinery/jukebox/Destroy()
@@ -141,11 +144,14 @@
 			if(active)
 				to_chat(usr, "<span class='warning'>Error: You cannot change the song until the current one is over.</span>")
 				return
-
-			var/selected = input(usr, "Choose your song", "Track:") as null|anything in SSjukeboxes.song_lib
+			if(selection_blocked)
+				to_chat(usr, "<span class='warning'>You press the song picker button, but for some reason nothing happens. Sad!</span>")
+				playsound(src, 'sound/machines/deniedbeep.ogg', 50, 1)
+				return
+			var/selected = input(usr, "Choose your song", "Track:") as null|anything in list_source
 			if(QDELETED(src) || !selected)
 				return
-			selection = SSjukeboxes.song_lib[selected]
+			selection = list_source[selected]
 			updateUsrDialog()
 
 /obj/machinery/jukebox/proc/activate_music()
@@ -186,3 +192,13 @@
 	speed_factor *= speed_potentiometer
 	to_chat(world, "Speed factor is: [speed_factor]") // REMOVE THIS
 	return speed_factor
+
+/obj/machinery/jukebox/proc/pick_random(specific_list = list_source)
+	if(active)
+		to_chat(usr, "<span class='warning'>Error: You cannot change the song until the current one is over.</span>")
+		return
+	var/selected = pick(specific_list)
+	if(QDELETED(src) || !selected)
+		return
+	selection = specific_list[selected]
+	updateUsrDialog()

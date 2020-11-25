@@ -22,6 +22,7 @@
 	var/speed_factor = J.get_speed_factor()
 	var/list/status = list()
 	status += "Wskaźnik napięcia serwomechanizmu pokazuje [round(12.34+(speed_factor*2.37), 0.01)]V."
+	status += "Zielona dioda [J.selection_blocked ? "nie " : ""]świeci się."
 	return status
 
 /datum/wires/jukebox/on_pulse(wire)
@@ -37,6 +38,9 @@
 			J.stop = 0
 			if(J.speed_potentiometer < 1.50)
 				J.speed_potentiometer += 0.01
+		if(WIRE_LISTING)
+			J.stop = 0
+			J.pick_random()
 
 /datum/wires/jukebox/on_cut(wire, mend)
 	var/obj/machinery/jukebox/J = holder
@@ -63,3 +67,8 @@
 			else
 				J.speed_servo_resistor_cut = TRUE
 				J.stop = 0
+		if(WIRE_LISTING)
+			if(mend)
+				J.selection_blocked = FALSE
+			else
+				J.selection_blocked = TRUE

@@ -52,3 +52,4 @@
 #define WIRE_FAIL "Check Failed"
 #define WIRE_SLOW "Servo Regulator"
 #define WIRE_FAST "Servo Resistor"
+#define WIRE_LISTING "Listing Interface"
