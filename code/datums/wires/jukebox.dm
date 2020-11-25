@@ -10,6 +10,7 @@
 		WIRE_IDSCAN,
 		WIRE_LIGHT,
 		WIRE_SPEAKER
+		WIRE_SLOW, WIRE_FAST,
 	)
 	add_duds(4)
 	..()
@@ -21,8 +22,9 @@
 
 /datum/wires/jukebox/get_status()
 	var/obj/machinery/jukebox/J = holder
+	var/speed_factor = J.get_speed_factor()
 	var/list/status = list()
-	status += "This is a test."
+	status += "Wskaźnik napięcia serwomechanizmu pokazuje [round(12.34+(speed_factor*2.37), 0.01)]V."
 	return status
 
 /datum/wires/jukebox/on_pulse(wire)
@@ -30,6 +32,14 @@
 	switch(wire)
 		if(WIRE_SHOCK)
 			J.seconds_electrified = MACHINE_DEFAULT_ELECTRIFY_TIME
+		if(WIRE_SLOW)
+			J.stop = 0
+			if(J.speed_potentiometer > 0.50)
+				J.speed_potentiometer -= 0.01
+		if(WIRE_FAST)
+			J.stop = 0
+			if(J.speed_potentiometer < 1.50)
+				J.speed_potentiometer += 0.01
 
 /datum/wires/jukebox/on_cut(wire, mend)
 	var/obj/machinery/jukebox/J = holder
@@ -42,3 +52,17 @@
 				J.seconds_electrified = MACHINE_NOT_ELECTRIFIED
 			else
 				J.seconds_electrified = MACHINE_ELECTRIFIED_PERMANENT
+		if(WIRE_SLOW)
+			if(mend)
+				J.speed_servo_regulator_cut = FALSE
+				J.stop = 0
+			else
+				J.speed_servo_regulator_cut = TRUE
+				J.stop = 0
+		if(WIRE_FAST)
+			if(mend)
+				J.speed_servo_resistor_cut = FALSE
+				J.stop = 0
+			else
+				J.speed_servo_resistor_cut = TRUE
+				J.stop = 0

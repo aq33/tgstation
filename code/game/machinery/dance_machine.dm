@@ -13,6 +13,9 @@
 	var/channel = null
 	var/state_base = "jukebox"
 	var/seconds_electrified = MACHINE_NOT_ELECTRIFIED
+	var/speed_servo_regulator_cut = FALSE //vaporwave
+	var/speed_servo_resistor_cut = FALSE //nightcore
+	var/speed_potentiometer = 1.0
 
 /obj/machinery/jukebox/Initialize()
 	. = ..()
@@ -144,12 +147,14 @@
 
 /obj/machinery/jukebox/proc/activate_music()
 	channel = SSjukeboxes.add_jukebox(src, selection)
+	var/speed_factor = get_speed_factor()
+	channel = SSjukeboxes.add_jukebox(src, selection, speed_factor)
 	if(isnull(channel))
 		return null
 	active = TRUE
 	playsound(src,'sound/machines/terminal_on.ogg',50,TRUE)
 	update_icon()
-	stop = world.time + SSjukeboxes.songs[selection].length
+	stop = world.time + (SSjukeboxes.songs[selection].length * (1/speed_factor))
 	START_PROCESSING(SSobj, src)
 	return TRUE
 
@@ -168,3 +173,13 @@
 		SSjukeboxes.remove_jukebox(channel)
 		channel = null
 		stop = world.time + 25
+
+/obj/machinery/jukebox/proc/get_speed_factor()
+	var/speed_factor = 1.0
+	if (speed_servo_regulator_cut)
+		speed_factor *= 0.7
+	if (speed_servo_resistor_cut)
+		speed_factor *= 1.3
+	speed_factor *= speed_potentiometer
+	to_chat(world, "Speed factor is: [speed_factor]") // REMOVE THIS
+	return speed_factor

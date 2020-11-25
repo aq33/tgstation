@@ -6,6 +6,7 @@
 /datum/jukebox
 	var/song_id = null
 	var/channel = null
+	var/speed_factor = 1
 	var/obj/jukebox = null
 	var/listeners = list()
 
@@ -18,7 +19,7 @@ SUBSYSTEM_DEF(jukeboxes)
 	var/list/free_channels = list()
 	var/falloff = 7
 
-/datum/controller/subsystem/jukeboxes/proc/add_jukebox(obj/jukebox_obj, selection)
+/datum/controller/subsystem/jukeboxes/proc/add_jukebox(obj/jukebox_obj, selection, speed_factor = 1)
 	if(selection > songs.len)
 		CRASH("[src] tried to play a song with a nonexistant track")
 	if(free_channels.len == 0)
@@ -30,6 +31,7 @@ SUBSYSTEM_DEF(jukeboxes)
 	jukebox.song_id = selection
 	jukebox.channel = channel
 	jukebox.jukebox = jukebox_obj
+	jukebox.speed_factor = speed_factor
 	active_jukeboxes[active_jukeboxes.len] = jukebox
 
 	var/sound/song_played = sound(songs[jukebox.song_id].path)
@@ -41,7 +43,7 @@ SUBSYSTEM_DEF(jukeboxes)
 		if(!(M.client.prefs.toggles & SOUND_INSTRUMENTS))
 			continue
 
-		M.playsound_local(get_turf(jukebox_obj), null, MUSIC_VOLUME, falloff = falloff, channel = jukebox.channel, S = song_played)
+		M.playsound_local(get_turf(jukebox_obj), null, MUSIC_VOLUME, falloff = falloff, channel = jukebox.channel, S = song_played, frequency = jukebox.speed_factor)
 		sleep(5)
 	return channel
 
@@ -110,6 +112,6 @@ SUBSYSTEM_DEF(jukeboxes)
 			if(jukebox_obj.z != M.z)
 				song_played.status |= SOUND_MUTE	//Setting volume = 0 doesn't let the sound properties update at all, which is lame.
 
-			M.playsound_local(get_turf(jukebox_obj), null, MUSIC_VOLUME, falloff = falloff, channel = jukebox.channel, S = song_played)
+			M.playsound_local(get_turf(jukebox_obj), null, MUSIC_VOLUME, falloff = falloff, channel = jukebox.channel, S = song_played, frequency = jukebox.speed_factor)
 			CHECK_TICK
 	return
