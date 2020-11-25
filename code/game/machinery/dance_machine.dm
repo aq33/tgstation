@@ -120,6 +120,9 @@
 		return
 	if(stat & (BROKEN|NOPOWER))
 		return
+	if(!anchored)
+		to_chat(usr, "<span class='warning'>This device must be anchored by a wrench!</span>")
+		return
 	add_fingerprint(usr)
 	if(seconds_electrified)
 		if(shock(usr, 100))
