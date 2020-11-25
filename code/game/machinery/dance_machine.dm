@@ -34,8 +34,9 @@
 
 /obj/machinery/jukebox/power_change()
 	..()
-	stop = 0
 	update_icon()
+	if(stat & NOPOWER)
+		stop = 0
 
 /obj/machinery/jukebox/attackby(obj/item/I, mob/user, params)
 	if(default_unfasten_wrench(user, I))
@@ -169,8 +170,6 @@
 	return TRUE
 
 /obj/machinery/jukebox/process()
-	if(stat & (BROKEN|NOPOWER))
-		return PROCESS_KILL
 	if(seconds_electrified > MACHINE_NOT_ELECTRIFIED)
 		seconds_electrified--
 	if(world.time >= stop && active)
