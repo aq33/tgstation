@@ -185,9 +185,9 @@
 /obj/machinery/jukebox/proc/get_speed_factor()
 	var/speed_factor = 1.0
 	if (speed_servo_regulator_cut)
-		speed_factor *= 0.7
+		speed_factor *= 0.73
 	if (speed_servo_resistor_cut)
-		speed_factor *= 1.3
+		speed_factor *= 1.25
 	speed_factor *= speed_potentiometer
 	to_chat(world, "Speed factor is: [speed_factor]") // REMOVE THIS
 	return speed_factor

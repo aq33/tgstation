@@ -23,7 +23,7 @@
 	var/obj/machinery/jukebox/J = holder
 	var/speed_factor = J.get_speed_factor()
 	var/list/status = list()
-	status += "Wskaźnik napięcia serwomechanizmu pokazuje [round(12.34+(speed_factor*2.37), 0.01)]V."
+	status += "Wskaźnik napięcia serwomechanizmu pokazuje [round(12.34+(speed_factor*2.67), 0.01)]V."
 	status += "Zielona dioda [J.selection_blocked ? "nie " : ""]świeci się."
 	status += "Pomarańczowa dioda [length(J.list_source) == length(SSjukeboxes.song_lib_ranch) ? "" : "nie "]mruga."
 	return status
@@ -35,7 +35,7 @@
 			J.seconds_electrified = MACHINE_DEFAULT_ELECTRIFY_TIME
 		if(WIRE_SLOW)
 			J.stop = 0
-			if(J.speed_potentiometer > 0.50)
+			if(J.speed_potentiometer > 0.65)
 				J.speed_potentiometer -= 0.01
 		if(WIRE_FAST)
 			J.stop = 0
