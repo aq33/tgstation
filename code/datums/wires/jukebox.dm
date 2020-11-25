@@ -8,8 +8,9 @@
 		WIRE_SHOCK,
 		WIRE_ZAP1, WIRE_ZAP2,
 		WIRE_SLOW, WIRE_FAST,
+		WIRE_PLAY,
 		WIRE_LISTING,
-		WIRE_RANCH
+		WIRE_RANCH,
 	)
 	add_duds(4)
 	..()
@@ -47,6 +48,8 @@
 		if(WIRE_RANCH)
 			J.stop = 0
 			J.pick_random(SSjukeboxes.song_lib_ranch)
+		if(WIRE_PLAY)
+			J.attempt_playback()
 
 /datum/wires/jukebox/on_cut(wire, mend)
 	var/obj/machinery/jukebox/J = holder
@@ -85,3 +88,8 @@
 			else
 				J.stop = 0
 				J.list_source = SSjukeboxes.song_lib_ranch
+		if(WIRE_PLAY)
+			if(mend)
+				J.stop_blocked = FALSE
+			else
+				J.stop_blocked = TRUE

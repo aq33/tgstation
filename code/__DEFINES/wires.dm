@@ -54,3 +54,4 @@
 #define WIRE_FAST "Servo Resistor"
 #define WIRE_LISTING "Listing Interface"
 #define WIRE_RANCH "Ranch"
+#define WIRE_PLAY "Playback"

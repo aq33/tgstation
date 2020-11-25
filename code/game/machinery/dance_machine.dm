@@ -17,6 +17,7 @@
 	var/speed_servo_resistor_cut = FALSE //nightcore
 	var/speed_potentiometer = 1.0
 	var/selection_blocked = FALSE
+	var/stop_blocked = FALSE
 	var/list_source = list()
 
 /obj/machinery/jukebox/Initialize()
@@ -125,22 +126,13 @@
 			return
 	switch(href_list["action"])
 		if("toggle")
-			if (QDELETED(src))
-				return
 			if(!active)
-				if(stop > world.time)
-					to_chat(usr, "<span class='warning'>Error: The device is still resetting from the last activation, it will be ready again in [DisplayTimeText(stop-world.time)].</span>")
-					return
-				if(!anchored)
-					to_chat(usr, "<span class='warning'>This device must be anchored by a wrench!</span>")
-					return
-				if(!activate_music())
-					to_chat(usr, "<span class='warning'>Error: Hardware failure, try again.</span>")
-					playsound(src, 'sound/machines/deniedbeep.ogg', 50, TRUE)
-					return
-				updateUsrDialog()
-			else if(active)
-				stop = 0
+				attempt_playback()
+			else
+				if (stop_blocked)
+					to_chat(usr, "<span class='warning'>You try to shut it down, but nothing happens!</span>")
+				else
+					stop = 0
 		if("select")
 			if(active)
 				to_chat(usr, "<span class='warning'>Error: You cannot change the song until the current one is over.</span>")
@@ -200,4 +192,16 @@
 	if(QDELETED(src) || !selected)
 		return
 	selection = specific_list[selected]
+	updateUsrDialog()
+
+/obj/machinery/jukebox/proc/attempt_playback()
+	if (QDELETED(src))
+		return
+	if(stop > world.time)
+		to_chat(usr, "<span class='warning'>Error: The device is still resetting from the last activation, it will be ready again in [DisplayTimeText(stop-world.time)].</span>")
+		return
+	if(!activate_music())
+		to_chat(usr, "<span class='warning'>Error: Hardware failure, try again.</span>")
+		playsound(src, 'sound/machines/deniedbeep.ogg', 50, TRUE)
+		return
 	updateUsrDialog()
