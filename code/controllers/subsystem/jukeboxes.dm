@@ -14,6 +14,7 @@ SUBSYSTEM_DEF(jukeboxes)
 	name = "Jukeboxes"
 	wait = 5
 	var/list/song_lib = list()
+	var/list/song_lib_ranch = list()
 	var/list/datum/track/songs = list()
 	var/list/datum/jukebox/active_jukeboxes = list()
 	var/list/free_channels = list()
@@ -84,7 +85,10 @@ SUBSYSTEM_DEF(jukeboxes)
 			continue
 		songs |= T
 		song_lib[T.name] = songs.len
+		if(findtext(T.name, "ram") > 0 && findtext(T.name, "ranch") > 0)
+			song_lib_ranch[T.name] = songs.len
 	song_lib = sortList(song_lib)
+	song_lib_ranch = sortList(song_lib_ranch)
 	for(var/i in CHANNEL_JUKEBOX_START to CHANNEL_JUKEBOX_END)
 		free_channels |= i
 	return ..()

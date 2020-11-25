@@ -53,3 +53,4 @@
 #define WIRE_SLOW "Servo Regulator"
 #define WIRE_FAST "Servo Resistor"
 #define WIRE_LISTING "Listing Interface"
+#define WIRE_RANCH "Ranch"

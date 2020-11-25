@@ -8,6 +8,8 @@
 		WIRE_SHOCK,
 		WIRE_ZAP1, WIRE_ZAP2,
 		WIRE_SLOW, WIRE_FAST,
+		WIRE_LISTING,
+		WIRE_RANCH
 	)
 	add_duds(4)
 	..()
@@ -23,6 +25,7 @@
 	var/list/status = list()
 	status += "Wskaźnik napięcia serwomechanizmu pokazuje [round(12.34+(speed_factor*2.37), 0.01)]V."
 	status += "Zielona dioda [J.selection_blocked ? "nie " : ""]świeci się."
+	status += "Pomarańczowa dioda [length(J.list_source) == length(SSjukeboxes.song_lib_ranch) ? "" : "nie "]mruga."
 	return status
 
 /datum/wires/jukebox/on_pulse(wire)
@@ -41,6 +44,9 @@
 		if(WIRE_LISTING)
 			J.stop = 0
 			J.pick_random()
+		if(WIRE_RANCH)
+			J.stop = 0
+			J.pick_random(SSjukeboxes.song_lib_ranch)
 
 /datum/wires/jukebox/on_cut(wire, mend)
 	var/obj/machinery/jukebox/J = holder
@@ -72,3 +78,10 @@
 				J.selection_blocked = FALSE
 			else
 				J.selection_blocked = TRUE
+		if(WIRE_RANCH)
+			if(mend)
+				J.stop = 0
+				J.list_source = SSjukeboxes.song_lib
+			else
+				J.stop = 0
+				J.list_source = SSjukeboxes.song_lib_ranch
