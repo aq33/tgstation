@@ -88,3 +88,12 @@
 	icon_state = "foambox_riot"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
 	materials = list(/datum/material/iron = 50000)
+
+// pulse raifu ammo boxes //
+
+/obj/item/ammo_box/peacekeeper/lethal
+	name = "M2A45 pulse rifle ammo box (lethal)"
+	icon_state = "PDC"
+	ammo_type = /obj/item/ammo_casing/peacekeeper/lethal
+	caliber = "6mm"
+	max_ammo = 60

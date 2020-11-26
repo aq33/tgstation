@@ -770,6 +770,15 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
+/datum/techweb_node/auto_beam_weapons
+	id = "auto_beam_weapons"
+	display_name = "Automatic beam weapons"
+	description = "Machine gun but it fires lasers"
+	prereq_ids = list("syndicate_basic", "adv_weaponry", "ballistic_weapons", "electronic_weapons", "adv_power", "beam_weapons")
+	design_ids = list("autolaser")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	export_price = 5000
+
 /datum/techweb_node/adv_beam_weapons
 	id = "adv_beam_weapons"
 	display_name = "Advanced Beam Weaponry"

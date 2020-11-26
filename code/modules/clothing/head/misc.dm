@@ -442,3 +442,56 @@
 	desc = "A horrifying mix of beanie and softcap in CentCom green. You'd have to be pretty desperate for power over your peers to agree to wear this."
 	icon_state = "intern_hat"
 	item_state = "intern_hat"
+
+/obj/item/clothing/head/headband
+	clothing_flags = SNUG_FIT
+	name = "cool white headband"
+	desc = "An white headband. It looks badass."
+	item_state = "headband_white"
+	icon_state = "headband_white"
+	dog_fashion = null
+
+/obj/item/clothing/head/headband/normal/black
+	name = "cool black headband"
+	desc = "An robust black headband. Uses reinforced fabric to offer protection. It looks badass."
+	item_state = "headband"
+	icon_state = "headband"
+
+/obj/item/clothing/head/headband/normal/red
+	name = "cool red headband"
+	desc = "An robust red headband. Uses reinforced fabric to offer protection. It looks badass."
+	item_state = "headband_red"
+	icon_state = "headband_red"
+
+/obj/item/clothing/head/headband/sec
+	name = "cool red headband"
+	desc = "An robust red headband. Uses reinforced fabric to offer protection. It looks badass."
+	item_state = "headband_red"
+	icon_state = "headband_red"
+	armor = list("melee" = 20, "bullet" = 15, "laser" = 20,"energy" = 30, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	strip_delay = 60
+
+/obj/item/clothing/head/headband/sec/black
+	name = "cool black headband"
+	desc = "An robust black headband. Uses reinforced fabric to offer protection. It looks badass."
+	item_state = "headband"
+	icon_state = "headband"
+	strip_delay = 60
+
+/obj/item/clothing/head/helmet/biker
+	name = "motorcycle helmet"
+	desc = "You had your chance."
+	item_state = "biker_helmet"
+	icon_state = "biker_helmet"
+	armor = list("melee" = 20, "bullet" = 5, "laser" = 10,"energy" = 20, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	dog_fashion = null
+
+/obj/item/clothing/head/richard
+	name = "Chicken mask"
+	desc = "Why don't you finish what you've started?"
+	item_state = "richard"
+	icon_state = "richard"
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
+	dog_fashion = null

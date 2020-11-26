@@ -172,3 +172,4 @@
 				/obj/item/clothing/suit/armor/vest = 1,
 				/obj/item/stack/cable_coil = 10)
 	category = CAT_CLOTHING
+

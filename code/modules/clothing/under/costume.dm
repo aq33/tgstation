@@ -290,3 +290,75 @@
 	alt_covers_chest = TRUE
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
+
+/obj/item/clothing/under/costume/metalgear
+	name = "\improper sneaking suit"
+	desc = "It's made of a strong material developed by the Soviet Union centuries ago which provides robust protection."
+	icon_state = "solid"
+	item_state = "solid"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	armor = list("melee" = 10, "bullet" = 5, "laser" = 5,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 30, "acid" = 60)
+	can_adjust = FALSE
+
+/obj/item/clothing/under/costume/biker
+	name = "biker's outfit"
+	desc = "You're not a nice person, are you?"
+	icon_state = "biker"
+	item_state = "biker"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/costume/jacket
+	name = "richard's outfit"
+	desc = "Do you know what time it is?"
+	icon_state = "jacket"
+	item_state = "jacket"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/costume/greaser
+	name = "greaser outfit"
+	desc = "The one that you want!"
+	icon_state = "greaser"
+	item_state = "greaser"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/costume/greaser/snake
+	name = "greaser outfit"
+	desc = "Tunnel Snakes Rule!"
+	icon_state = "greaser_snake"
+	item_state = "greaser"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/costume/greaser/spider
+	name = "greaser outfit"
+	desc = "The one that you want!"
+	icon_state = "greaser_spider"
+	item_state = "greaser"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/costume/greaser/cult
+	name = "greaser outfit"
+	desc = "The one that you want!"
+	icon_state = "greaser_cult"
+	item_state = "greaser"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/costume/CIA
+	name = "cia outfit"
+	desc = "Just looking at this makes you feel in charge."
+	icon_state = "cia"
+	item_state = "cia"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/costume/galo
+	name = "galo outfit"
+	desc = "tan not included."
+	icon_state = "galo"
+	item_state = "galo"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/costume/adidas
+	name = "tracksuit"
+	desc = "Na chuj się kurwa gapisz?"
+	icon_state = "adidas"
+	item_state = "adidas"
+	can_adjust = FALSE

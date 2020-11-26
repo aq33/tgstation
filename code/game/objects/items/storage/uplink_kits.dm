@@ -373,6 +373,8 @@
 
 /obj/item/storage/box/syndie_kit/imp_stealth/PopulateContents()
 	new /obj/item/implanter/stealth(src)
+	new /obj/item/clothing/under/costume/metalgear(src)
+	new /obj/item/clothing/head/headband/sec/black(src)
 
 /obj/item/storage/box/syndie_kit/imp_radio
 	name = "syndicate radio implant box"
