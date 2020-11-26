@@ -36,7 +36,7 @@
 	active_power_usage = 0
 	max_charge = 0
 	for(var/obj/item/stock_parts/capacitor/C in component_parts)
-		active_power_usage += 200 * C.rating
+		active_power_usage += 2000 * C.rating
 		max_charge += 2000 * C.rating
 	full = FALSE
 	update_icon()

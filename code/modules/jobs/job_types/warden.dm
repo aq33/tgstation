@@ -24,6 +24,7 @@
 	mind_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
 
 	display_order = JOB_DISPLAY_ORDER_WARDEN
+	bounty_types = CIV_JOB_SEC
 
 /datum/job/warden/get_access()
 	var/list/L = list()
@@ -53,7 +54,7 @@
 	duffelbag = /obj/item/storage/backpack/duffelbag/sec
 	box = /obj/item/storage/box/security
 
-	implants = list(/obj/item/implant/mindshield)
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/securitydown)
 
 	chameleon_extras = /obj/item/gun/ballistic/shotgun/automatic/combat/compact
 

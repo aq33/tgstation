@@ -51,6 +51,14 @@
 #define GELADIKINESIS		/datum/mutation/human/geladikinesis
 #define CRYOKINESIS /datum/mutation/human/cryokinesis
 #define CLUWNEMUT   /datum/mutation/human/cluwne
+#define EXTENDOARM   /datum/mutation/human/extendoarm
+#define JELLYBONES   /datum/mutation/human/jellybones
+#define BREATHLESS   /datum/mutation/human/breathless
+#define CLAWS   /datum/mutation/human/claws
+#define ARMBLADE   /datum/mutation/human/armblade
+#define MEGAFART   /datum/mutation/human/megafart
+#define TOXICFART   /datum/mutation/human/toxicfart
+#define VORE   /datum/mutation/human/vore
 
 #define UI_CHANGED "ui changed"
 #define UE_CHANGED "ue changed"

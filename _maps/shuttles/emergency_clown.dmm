@@ -320,6 +320,13 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/shuttle/escape)
+"eY" = (
+/obj/machinery/light,
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/turf/open/floor/bluespace,
+/area/shuttle/escape)
 "oM" = (
 /obj/machinery/door/airlock/bananium/glass{
 	name = "Emergency Shuttle Infirmary"
@@ -328,6 +335,10 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
+/turf/open/floor/bluespace,
+/area/shuttle/escape)
+"Dx" = (
+/obj/structure/closet/secure_closet/award,
 /turf/open/floor/bluespace,
 /area/shuttle/escape)
 "KO" = (
@@ -459,7 +470,7 @@ bg
 "}
 (5,1,1) = {"
 Nn
-af
+Dx
 ak
 ap
 ab
@@ -485,7 +496,7 @@ bg
 Nn
 ag
 ak
-aq
+eY
 ab
 av
 ak

@@ -483,6 +483,10 @@
 /obj/machinery/door/firedoor/window,
 /turf/open/floor/plating,
 /area/shuttle/escape)
+"Zn" = (
+/obj/structure/closet/secure_closet/award,
+/turf/open/floor/carpet,
+/area/shuttle/escape)
 
 (1,1,1) = {"
 aa
@@ -630,7 +634,7 @@ bn
 "}
 (7,1,1) = {"
 ac
-af
+Zn
 ak
 ap
 NP

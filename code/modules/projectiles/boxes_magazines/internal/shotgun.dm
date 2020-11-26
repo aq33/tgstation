@@ -45,4 +45,5 @@
 /obj/item/ammo_box/magazine/internal/shot/breaching
 	name = "breaching shotgun internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/breacher
+	caliber = null //"if we fail to find a caliber, then we fall back to ammo_type", dziękuje bazowani deweloperzy ss13
 	max_ammo = 3

@@ -125,6 +125,15 @@
 	new /obj/item/clothing/accessory/medal/bronze_heart(src)
 	new /obj/item/clothing/accessory/medal/plasma/nobel_science(src)
 	new /obj/item/clothing/accessory/medal/plasma/nobel_science(src)
+	new /obj/item/clothing/accessory/medal/medical(src)
+	new /obj/item/clothing/accessory/medal/engineering(src)
+	new /obj/item/clothing/accessory/medal/ribbon/chemist(src)
+	new /obj/item/clothing/accessory/medal/ribbon/engineer(src)
+	new /obj/item/clothing/accessory/medal/ribbon/paramedic(src)
+	new /obj/item/clothing/accessory/medal/ribbon/service(src)
+	new /obj/item/clothing/accessory/medal/ribbon/assistant(src)
+	new /obj/item/clothing/accessory/medal/clown(src)
+
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/accessory/medal/conduct(src)
 
@@ -167,7 +176,8 @@
 	req_access = list(ACCESS_QM)
 
 /obj/item/storage/lockbox/medal/cargo/PopulateContents()
-		new /obj/item/clothing/accessory/medal/ribbon/cargo(src)
+	new /obj/item/clothing/accessory/medal/conduct(src)
+	new /obj/item/clothing/accessory/medal/ribbon/cargo(src)
 
 /obj/item/storage/lockbox/medal/service
 	name = "service award box"
@@ -175,8 +185,13 @@
 	req_access = list(ACCESS_HOP)
 
 /obj/item/storage/lockbox/medal/service/PopulateContents()
-		new /obj/item/clothing/accessory/medal/silver/excellence(src)
-		
+	new /obj/item/clothing/accessory/medal/silver/excellence(src)
+	for(var/i in 1 to 3)
+		new /obj/item/clothing/accessory/medal/ribbon/service(src)
+	for(var/i in 1 to 3)
+		new /obj/item/clothing/accessory/medal/ribbon/assistant(src)
+	new /obj/item/clothing/accessory/medal/clown(src)
+
 /obj/item/storage/lockbox/medal/sci
 	name = "science medal box"
 	desc = "A locked box used to store medals to be given to members of the science department."
@@ -185,3 +200,24 @@
 /obj/item/storage/lockbox/medal/sci/PopulateContents()
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/accessory/medal/plasma/nobel_science(src)
+
+/obj/item/storage/lockbox/medal/eng
+	name = "engineering medal box"
+	desc = "A locked box used to store medals to be given to members of the engineering department."
+	req_access = list(ACCESS_CE)
+
+/obj/item/storage/lockbox/medal/eng/PopulateContents()
+	new /obj/item/clothing/accessory/medal/engineering(src)
+	for(var/i in 1 to 3)
+		new /obj/item/clothing/accessory/medal/ribbon/engineer(src)
+
+/obj/item/storage/lockbox/medal/med
+	name = "medical medal box"
+	desc = "A locked box used to store medals to be given to members of the medical department."
+	req_access = list(ACCESS_CMO)
+
+/obj/item/storage/lockbox/medal/med/PopulateContents()
+	new /obj/item/clothing/accessory/medal/medical(src)
+	new /obj/item/clothing/accessory/medal/ribbon/chemist(src)
+	for(var/i in 1 to 3)
+		new /obj/item/clothing/accessory/medal/ribbon/paramedic(src)

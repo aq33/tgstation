@@ -1,8 +1,8 @@
 //map and direction signs
 
 /obj/structure/sign/map
-	name = "station map"
-	desc = "A framed picture of the station."
+	name = "Mapa stacji"
+	desc = "Ramka z obrazkiem przedstawiającym stację."
 	max_integrity = 500
 
 /obj/structure/sign/map/left
@@ -12,36 +12,36 @@
 	icon_state = "map-right"
 
 /obj/structure/sign/directions/science
-	name = "science department"
-	desc = "A direction sign, pointing out which way the Science department is."
+	name = "Dział naukowy"
+	desc = "Znak wskazujący drogę do działu naukowego."
 	icon_state = "direction_sci"
 
 /obj/structure/sign/directions/engineering
-	name = "engineering department"
-	desc = "A direction sign, pointing out which way the Engineering department is."
+	name = "Dział inżynierii"
+	desc = "Znak wskazujący drogę do maszynowni."
 	icon_state = "direction_eng"
 
 /obj/structure/sign/directions/security
-	name = "security department"
-	desc = "A direction sign, pointing out which way the Security department is."
+	name = "Dział ochrony"
+	desc = "Znak wskazujący drogę do działu ochrony."
 	icon_state = "direction_sec"
 
 /obj/structure/sign/directions/medical
-	name = "medical bay"
-	desc = "A direction sign, pointing out which way the Medical Bay is."
+	name = "Ambulatorium"
+	desc = "Znak wskazujący drogę do ambulatorium."
 	icon_state = "direction_med"
 
 /obj/structure/sign/directions/evac
-	name = "escape arm"
-	desc = "A direction sign, pointing out which way the escape shuttle dock is."
+	name = "Droga ewakuacyjna"
+	desc = "Znak wskazujący drogę ewakuacyjną."
 	icon_state = "direction_evac"
 
 /obj/structure/sign/directions/supply
-	name = "cargo bay"
-	desc = "A direction sign, pointing out which way the Cargo Bay is."
+	name = "Zaopatrzenie"
+	desc = "Znak wskazujący drogę do ładowni i działu zaopatrzenia."
 	icon_state = "direction_supply"
 
 /obj/structure/sign/directions/command
-	name = "command department"
-	desc = "A direction sign, pointing out which way the Command department is."
+	name = "Mostek"
+	desc = "Znak wskazujący drogę do mostku."
 	icon_state = "direction_bridge"
