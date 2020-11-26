@@ -96,13 +96,9 @@
 	if (!anchored)
 		to_chat(user,"<span class='warning'>This device must be anchored by a wrench!</span>")
 		return
-	if(!allowed(user))
-		to_chat(user,"<span class='warning'>Error: Access Denied.</span>")
-		user.playsound_local(src,'sound/machines/deniedbeep.ogg', 25, 1)
-		return
 	if(!SSjukeboxes.songs.len)
 		to_chat(user,"<span class='warning'>Error: No music tracks have been authorized for your station. Petition Central Command to resolve this issue.</span>")
-		playsound(src,'sound/machines/deniedbeep.ogg', 25, 1)
+		playsound(src,'sound/machines/deniedbeep.ogg', 50, 1)
 		return
 	var/list/dat = list()
 	dat += "<div class='statusDisplay' style='text-align:center'>"
@@ -122,6 +118,10 @@
 		return
 	if(!anchored)
 		to_chat(usr, "<span class='warning'>This device must be anchored by a wrench!</span>")
+		return
+	if(!allowed(usr))
+		to_chat(usr,"<span class='warning'>Error: Access Denied.</span>")
+		usr.playsound_local(src,'sound/machines/deniedbeep.ogg', 50, 1)
 		return
 	add_fingerprint(usr)
 	if(seconds_electrified)
