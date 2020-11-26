@@ -410,8 +410,17 @@
 		slot_flags |= ITEM_SLOT_BELT		//but you can wear it on your belt (poorly concealed under a trenchcoat, ideally)
 		recoil = SAWN_OFF_RECOIL
 		sawn_off = TRUE
+		weapon_weight = WEAPON_MEDIUM //bez kolby/krotsza lufa wiec bron mniejsza i latwiej strzelac jedną ręką
+		recoil = 2
 		update_icon()
 		return TRUE
+
+/obj/item/gun/ballistic/shotgun/update_icon(. = ..())
+	var/state = "[initial(item_state)]"
+	if(sawn_off)
+		state += "_sawn"
+
+	item_state = state
 
 // Sawing guns related proc
 /obj/item/gun/ballistic/proc/blow_up(mob/user)

@@ -24,6 +24,7 @@
 					/obj/item/clothing/head/beret/sec = 3,
 					/obj/item/clothing/head/soft/sec = 3,
 					/obj/item/clothing/mask/bandana/red = 3,
+					/obj/item/clothing/head/headband/sec = 3,
 					/obj/item/clothing/under/rank/security/officer/skirt = 3,
 					/obj/item/clothing/under/rank/security/officer/white = 3,
 					/obj/item/clothing/under/pants/khaki = 3,
@@ -33,7 +34,9 @@
 					/obj/item/clothing/neck/tie/black = 6,)
 	premium = list(/obj/item/clothing/under/rank/security/officer/formal = 3,
 					/obj/item/clothing/suit/security/officer = 3,
-					/obj/item/clothing/head/beret/sec/navyofficer = 3)
+					/obj/item/clothing/head/beret/sec/navyofficer = 3,
+					/obj/item/clothing/under/rank/security/officer/nazi = 3,
+					/obj/item/clothing/under/rank/security/officer/nazi_alt =3)
 	refill_canister = /obj/item/vending_refill/wardrobe/sec_wardrobe
 	payment_department = ACCOUNT_SEC
 
@@ -348,7 +351,9 @@
 					/obj/item/clothing/under/rank/civilian/lawyer/blue = 1,
 					/obj/item/clothing/under/rank/civilian/lawyer/red = 1,
 					/obj/item/clothing/under/rank/civilian/lawyer/black = 1,
+					/obj/item/clothing/under/costume/CIA = 1,
 					/obj/item/clothing/shoes/laceup = 2,
+					/obj/item/clothing/shoes/khaki_laceup = 2,
 					/obj/item/clothing/neck/tie/red = 6,
 					/obj/item/clothing/neck/tie/black = 6,
 					/obj/item/clothing/accessory/lawyers_badge = 2)

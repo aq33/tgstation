@@ -708,8 +708,8 @@
 	crate_name = "swat crate"
 
 /datum/supply_pack/security/armory/combatrig
-	name = "Combat RIG crate"
-	desc = "Contains one combat RIG suit, mask, gloves and shoes. If there is a need, there is a way. Requires Armory access to open."
+	name = "SWAT mk. II RIG crate"
+	desc = "Contains full set of military grade RIG suit, mask, gloves and shoes. If there is a need, there is a way. Requires Armory access to open."
 	cost = 40000
 	contains = list(/obj/item/clothing/suit/space/hardsuit/swat,
 					/obj/item/clothing/gloves/combat,
@@ -717,67 +717,29 @@
 					/obj/item/clothing/shoes/combat)
 	crate_name = "Combat RIG crate"
 
-/datum/supply_pack/security/armory/power_armor0
-	name = "Very old Crate"
-	desc = "Unusual crate, has eroded by time sign ,Pro*e*ty of US a*my'. Note; Power Armors were designed for ground operations, not space."
-	cost = 70000
+/datum/supply_pack/security/armory/power_armor
+	name = "Quite an old crate"
+	desc = "Dust covered crate that was found when we were cleaning our cargo departament, its very heavy."
+	cost = 50000
 	contraband = TRUE
-	contains = list(/obj/item/clothing/suit/armor/power_armor/t45,
-					/obj/item/clothing/head/helmet/power_armor/t45)
-	crate_name = "T45 crate"
+	contains = list(/obj/item/storage/backpack/kit/t45,
+					/obj/item/storage/backpack/kit/t51b,
+					/obj/item/storage/backpack/kit/t60,
+					/obj/item/storage/backpack/kit/enclave,
+					/obj/item/storage/backpack/kit/tesla,
+					/obj/item/gun/energy/laser/fo13,
+					/obj/item/gun/energy/laser/pistol/fo13,
+					/obj/item/gun/energy/laser/tribeam/fo13,
+					/obj/item/gun/energy/plasma/pistol/fo13,
+					/obj/item/gun/energy/plasma/rifle/fo13,
+					/obj/item/gun/energy/plasma/multiplas/fo13,
+					/obj/item/stock_parts/cell/gun)
+	crate_name = "Old dusty crate"
 
-/datum/supply_pack/security/armory/power_armor1
-	name = "Very old Crate"
-	desc = "Unusual crate, has eroded by time sign ,Pro*e*ty of US a*my'."
-	cost = 71000
-	contraband = TRUE
-	contains = list(/obj/item/clothing/suit/armor/power_armor/t45d,
-					/obj/item/clothing/head/helmet/power_armor/t45/t45d)
-	crate_name = "T45d crate"
-
-/datum/supply_pack/security/armory/power_armor2
-	name = "Very old Crate"
-	desc = "Unusual crate, has eroded by time sign ,Pro*e*ty of US a*my'."
-	cost = 75000
-	contraband = TRUE
-	contains = list(/obj/item/clothing/suit/armor/power_armor/t51b,
-					/obj/item/clothing/head/helmet/power_armor/t51b)
-	crate_name = "T51b crate"
-
-/datum/supply_pack/security/armory/power_armor3
-	name = "Very old Crate"
-	desc = "Unusual crate, has eroded by time sign ,Pro*e*ty of US a*my'."
-	cost = 80000
-	contraband = TRUE
-	contains = list(/obj/item/clothing/suit/armor/power_armor/t60,
-					/obj/item/clothing/head/helmet/power_armor/t60)
-	crate_name = "T60 crate"
-
-/datum/supply_pack/security/armory/power_armor4
-	name = "Very old Crate"
-	desc = "Has a big E surrounded by stars printed on it."
-	cost = 100000
-	contraband = TRUE
-	contains = list(/obj/item/clothing/suit/armor/power_armor/advanced,
-					/obj/item/clothing/head/helmet/power_armor/advanced)
-	crate_name = "Advanced model crate"
-
-/datum/supply_pack/security/armory/power_armor5
-	name = "Very old Crate"
-	desc = "Has a big E surrounded by stars printed on it."
-	cost = 150000
-	contraband = TRUE
-	contains = list(/obj/item/clothing/suit/armor/power_armor/tesla,
-					/obj/item/clothing/head/helmet/power_armor/tesla)
-	crate_name = "Advanced TESLA model crate"
-
-//datum/supply_pack/security/armory/power_armor6
-//	name = "Power Armor"
-//	desc = "Contains one set of power armor, when you want to become an walking tank. Note; Power Armors were designed for ground operations, not space."
-//	cost = 160000
-//	contains = list(/obj/item/clothing/suit/armor/power_armor/advanced/mk2,
-//					/obj/item/clothing/head/helmet/power_armor/advanced/mk2)
-//	crate_name = "Power Armor crate"
+/datum/supply_pack/security/armory/power_armor/fill(obj/structure/closet/crate/C)
+	for(var/i in 1 to 3)
+		var/item = pick(contains)
+		new item(C)
 
 /datum/supply_pack/security/armory/wt550_single
 	name = "WT-550 Auto Rifle Single-Pack"

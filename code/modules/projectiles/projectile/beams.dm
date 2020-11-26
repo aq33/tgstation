@@ -203,16 +203,20 @@
 	name = "tribeam laser"
 	damage = 10
 
+/obj/item/projectile/beam/laser/laserrifle
+	name = "laser rifle beam"
+	damage = 10
+
 /obj/item/projectile/energy/plasma
 	name = "plasma bolt"
 	icon_state = "plasma"
 	damage_type = BURN
-	var/knockdown_chance = 1
 	light_color = LIGHT_COLOR_GREEN
 	impact_type = /obj/effect/projectile/impact/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/bfg
 	hitsound = 'sound/weapons/sear.ogg'
 	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
+	var/knockdown_chance = 0
 
 /obj/item/projectile/energy/plasma/plasmagun
 	icon_state = "plasma3"
