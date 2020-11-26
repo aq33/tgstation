@@ -13,7 +13,7 @@
 		WIRE_LISTING,
 		WIRE_RANCH,
 	)
-	add_duds(4)
+	add_duds(2)
 	..()
 
 /datum/wires/jukebox/interactable(mob/user)
