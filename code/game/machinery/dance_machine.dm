@@ -7,6 +7,8 @@
 	density = TRUE
 	req_access = list(ACCESS_BAR)
 	interaction_flags_machine = INTERACT_MACHINE_SET_MACHINE | INTERACT_MACHINE_OPEN | INTERACT_MACHINE_ALLOW_SILICON | INTERACT_MACHINE_OPEN_SILICON
+	max_integrity = 500
+	integrity_failure = 250
 	var/active = FALSE
 	var/stop = 0
 	var/selection = 1
@@ -39,6 +41,13 @@
 	if(stat & NOPOWER)
 		stop = 0
 
+/obj/machinery/jukebox/obj_break()
+	if(!(stat & BROKEN) && !(flags_1 & NODECONSTRUCT_1))
+		stop = 0
+		stat |= BROKEN
+		playsound(loc, 'sound/effects/glassbr3.ogg', 100, 1)
+		update_icon()
+
 /obj/machinery/jukebox/attackby(obj/item/I, mob/user, params)
 	if(default_unfasten_wrench(user, I))
 		return
@@ -48,6 +57,17 @@
 	if(panel_open && is_wire_tool(I))
 		wires.interact(user)
 		return TRUE
+	if(I.tool_behaviour == TOOL_WELDER && user.a_intent == INTENT_HELP)
+		if(obj_integrity < max_integrity)
+			if(!I.tool_start_check(user, amount=5))
+				return
+			to_chat(user, "<span class='notice'>You begin repairing [src].</span>")
+			if(I.use_tool(src, user, 40, amount=5, volume=50))
+				obj_integrity = max_integrity
+				stat &= ~BROKEN
+				update_icon()
+				to_chat(user, "<span class='notice'>You repair [src].</span>")
+				return
 	return ..()
 
 /obj/machinery/jukebox/default_unfasten_wrench(mob/user, obj/item/I, time = 20)
@@ -79,13 +99,13 @@
 	icon_state = "[state_base]"
 	if((stat & MAINT) || panel_open)
 		overlays += image(icon = icon, icon_state = "[state_base]-panel")
-	if(!(stat & NOPOWER))
-		if(anchored)
-			overlays += image(icon = icon, icon_state = "[state_base]-powered")
-		if(active)
-			overlays += image(icon = icon, icon_state = "[state_base]-playing")
+	if(!(stat & NOPOWER) && anchored)
 		if(stat & BROKEN)
 			overlays += image(icon = icon, icon_state = "[state_base]-broken")
+		else
+			overlays += image(icon = icon, icon_state = "[state_base]-powered")
+			if(active)
+				overlays += image(icon = icon, icon_state = "[state_base]-playing")
 
 /obj/machinery/jukebox/ui_interact(mob/user)
 	. = ..()
