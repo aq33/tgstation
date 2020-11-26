@@ -415,7 +415,8 @@
 		update_icon()
 		return TRUE
 
-/obj/item/gun/ballistic/shotgun/update_icon(. = ..())
+/obj/item/gun/ballistic/shotgun/update_icon()
+	. = ..()
 	var/state = "[initial(item_state)]"
 	if(sawn_off)
 		state += "_sawn"
