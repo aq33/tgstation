@@ -251,6 +251,7 @@
 		//this will potentially take over existing nanites!
 		infectee.AddComponent(/datum/component/nanites, 10)
 		SEND_SIGNAL(infectee, COMSIG_NANITE_SYNC, nanites)
+		SEND_SIGNAL(infectee, COMSIG_NANITE_SET_CLOUD, nanites.cloud_id)
 		infectee.investigate_log("was infected by spreading nanites by [key_name(host_mob)] at [AREACOORD(infectee)].", INVESTIGATE_NANITES)
 
 /datum/nanite_program/nanite_sting
@@ -277,6 +278,7 @@
 		//unlike with Infective Exo-Locomotion, this can't take over existing nanites, because Nanite Sting only targets non-hosts.
 		infectee.AddComponent(/datum/component/nanites, 5)
 		SEND_SIGNAL(infectee, COMSIG_NANITE_SYNC, nanites)
+		SEND_SIGNAL(infectee, COMSIG_NANITE_SET_CLOUD, nanites.cloud_id)
 		infectee.investigate_log("was infected by a nanite cluster by [key_name(host_mob)] at [AREACOORD(infectee)].", INVESTIGATE_NANITES)
 		to_chat(infectee, "<span class='warning'>You feel a tiny prick.</span>")
 
@@ -350,3 +352,19 @@
 
 /datum/action/innate/nanite_button/Activate()
 	program.press()
+
+/datum/nanite_program/cloud_change
+	name = "Cloud Change"
+	desc = "When triggered, changes the nanites' cloud of reference."
+	unique = FALSE
+	can_trigger = TRUE
+	trigger_cost = 150
+	trigger_cooldown = 600
+	rogue_types = list(/datum/nanite_program/glitch)
+
+/datum/nanite_program/cloud_change/register_extra_settings()
+	extra_settings[NES_CLOUD_OVERWRITE] = new /datum/nanite_extra_setting/number(0, 0, 100)
+
+/datum/nanite_program/cloud_change/on_trigger(comm_message)
+	var/datum/nanite_extra_setting/cloud = extra_settings[NES_CLOUD_OVERWRITE]
+	SEND_SIGNAL(host_mob, COMSIG_NANITE_SET_CLOUD, cloud.get_value())

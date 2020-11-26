@@ -27,6 +27,9 @@
 /obj/item/disk/nanite_program/monitoring
 	program_type = /datum/nanite_program/monitoring
 
+/obj/item/disk/nanite_program/cloud_change
+	program_type = /datum/nanite_program/cloud_change
+
 /obj/item/disk/nanite_program/relay
 	program_type = /datum/nanite_program/relay
 

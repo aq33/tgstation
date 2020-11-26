@@ -133,6 +133,13 @@
 	program_type = /datum/nanite_program/mitosis
 	category = list("Utility Nanites")
 
+/datum/design/nanites/cloud_change
+	name = "Cloud Change"
+	desc = "When triggered, changes the nanites' cloud to that specified."
+	id = "cloud_change_nanites"
+	program_type = /datum/nanite_program/cloud_change
+	category = list("Utility Nanites")
+
 ////////////////////MEDICAL NANITES//////////////////////////////////////
 /datum/design/nanites/regenerative
 	name = "Accelerated Regeneration"
