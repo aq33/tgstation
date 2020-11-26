@@ -22,11 +22,14 @@
 
 /datum/wires/jukebox/get_status()
 	var/obj/machinery/jukebox/J = holder
-	var/speed_factor = J.get_speed_factor()
+	var/unpowered = J.stat & (BROKEN|NOPOWER)
+	var/voltage = 0
+	if(!(J.stat & (BROKEN|NOPOWER)))
+		voltage = round(12.34+(J.get_speed_factor()*2.67), 0.01)
 	var/list/status = list()
-	status += "Wskaźnik napięcia serwomechanizmu pokazuje [round(12.34+(speed_factor*2.67), 0.01)]V."
-	status += "Zielona dioda [J.selection_blocked ? "nie " : ""]świeci się."
-	status += "Pomarańczowa dioda [length(J.list_source) == length(SSjukeboxes.song_lib_ranch) ? "" : "nie "]mruga."
+	status += "Napięcie serwomechanizmu: [voltage]V."
+	status += "Zielona dioda [J.selection_blocked || unpowered ? "nie " : ""]świeci się."
+	status += "Pomarańczowa dioda [length(J.list_source) != length(SSjukeboxes.song_lib_ranch) || unpowered ? "nie " : ""]świeci się."
 	return status
 
 /datum/wires/jukebox/on_pulse(wire)
