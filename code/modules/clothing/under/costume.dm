@@ -325,22 +325,19 @@
 	name = "greaser outfit"
 	desc = "Tunnel Snakes Rule!"
 	icon_state = "greaser_snake"
-	item_state = "greaser"
-	can_adjust = FALSE
+	item_state = "greaser_snake"
 
 /obj/item/clothing/under/costume/greaser/spider
 	name = "greaser outfit"
 	desc = "The one that you want!"
 	icon_state = "greaser_spider"
-	item_state = "greaser"
-	can_adjust = FALSE
+	item_state = "greaser_spider"
 
 /obj/item/clothing/under/costume/greaser/cult
 	name = "greaser outfit"
 	desc = "The one that you want!"
 	icon_state = "greaser_cult"
-	item_state = "greaser"
-	can_adjust = FALSE
+	item_state = "greaser_cult"
 
 /obj/item/clothing/under/costume/CIA
 	name = "cia outfit"
