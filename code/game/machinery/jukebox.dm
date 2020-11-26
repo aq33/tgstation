@@ -119,7 +119,7 @@
 		to_chat(user,"<span class='warning'>To urządzenie musi wpierw być przykręcone do podłoża!</span>")
 		return
 	if(!SSjukeboxes.songs.len)
-		to_chat(user,"<span class='warning'>Błąd: nie znaleziono żadnych utworów. Skonsultuj się z CENTCOM.</span>")
+		to_chat(user,"<span class='warning'>Błąd: nie znaleziono żadnych utworów. Skonsultuj się z Centralą.</span>")
 		playsound(src,'sound/machines/deniedbeep.ogg', 50, 1)
 		return
 	var/list/dat = list()
