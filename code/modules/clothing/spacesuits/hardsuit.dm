@@ -633,8 +633,7 @@
 	item_state = "capspacesuit"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/swat/captain
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
-	blocks_shove_knockdown = TRUE
-	slowdown = 0.10
+	slowdown = 1
 
 	//Clown
 /obj/item/clothing/head/helmet/space/hardsuit/clown
