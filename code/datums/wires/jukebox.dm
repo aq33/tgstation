@@ -23,7 +23,7 @@
 
 /datum/wires/jukebox/get_status()
 	var/obj/machinery/jukebox/J = holder
-	var/unpowered = J.stat & (BROKEN|NOPOWER)
+	var/unpowered = (J.stat & (BROKEN|NOPOWER)) || !J.mains
 	var/voltage = 0
 	if(!(J.stat & (BROKEN|NOPOWER)))
 		voltage = round(12.34+(J.get_speed_factor()*2.67), 0.01)
@@ -35,7 +35,12 @@
 
 /datum/wires/jukebox/on_pulse(wire)
 	var/obj/machinery/jukebox/J = holder
+	if ((J.stat & NOPOWER) || !J.mains)
+		return
 	switch(wire)
+		if(WIRE_POWER)
+			if(isliving(usr))
+				J.shock(usr, 50)
 		if(WIRE_SHOCK)
 			J.seconds_electrified = MACHINE_DEFAULT_ELECTRIFY_TIME
 		if(WIRE_SLOW)
@@ -58,6 +63,15 @@
 /datum/wires/jukebox/on_cut(wire, mend)
 	var/obj/machinery/jukebox/J = holder
 	switch(wire)
+		if(WIRE_POWER)
+			if(isliving(usr))
+				J.shock(usr, 75)
+			if(mend)
+				J.mains = TRUE
+				J.power_change()
+			else
+				J.mains = FALSE
+				J.power_change()
 		if(WIRE_IDSCAN)
 			if(mend)
 				J.verify = TRUE

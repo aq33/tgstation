@@ -17,6 +17,7 @@
 	var/seconds_electrified = MACHINE_NOT_ELECTRIFIED
 	var/speed_servo_regulator_cut = FALSE //vaporwave
 	var/speed_servo_resistor_cut = FALSE //nightcore
+	var/mains = TRUE
 	var/verify = TRUE
 	var/speed_potentiometer = 1.0
 	var/selection_blocked = FALSE
@@ -40,7 +41,7 @@
 /obj/machinery/jukebox/power_change()
 	..()
 	update_icon()
-	if(stat & NOPOWER)
+	if((stat & NOPOWER) || !mains)
 		stop = 0
 
 /obj/machinery/jukebox/obj_break()
@@ -85,7 +86,7 @@
 	return ..()
 
 /obj/machinery/jukebox/proc/shock(mob/user, prb)
-	if(stat & NOPOWER)
+	if(stat & NOPOWER || !mains)
 		return FALSE
 	if(!prob(prb))
 		return FALSE
@@ -101,7 +102,7 @@
 	icon_state = "[state_base]"
 	if((stat & MAINT) || panel_open)
 		overlays += image(icon = icon, icon_state = "[state_base]-panel")
-	if(!(stat & NOPOWER) && anchored)
+	if(!(stat & NOPOWER) && anchored && mains)
 		if(stat & BROKEN)
 			overlays += image(icon = icon, icon_state = "[state_base]-broken")
 		else
@@ -111,7 +112,7 @@
 
 /obj/machinery/jukebox/ui_interact(mob/user)
 	. = ..()
-	if(stat & (BROKEN|NOPOWER))
+	if(stat & (BROKEN|NOPOWER) || !mains)
 		return
 	if(!user.canUseTopic(src, !issilicon(user)))
 		return
@@ -136,7 +137,7 @@
 /obj/machinery/jukebox/Topic(href, href_list)
 	if(..())
 		return
-	if(stat & (BROKEN|NOPOWER))
+	if(stat & (BROKEN|NOPOWER) || !mains)
 		return
 	if(!anchored)
 		to_chat(usr, "<span class='warning'>This device must be anchored by a wrench!</span>")
@@ -173,7 +174,7 @@
 			updateUsrDialog()
 
 /obj/machinery/jukebox/proc/activate_music()
-	if(stat & (BROKEN|NOPOWER))
+	if(stat & (BROKEN|NOPOWER) || !mains)
 		return FALSE
 	var/speed_factor = get_speed_factor()
 	channel = SSjukeboxes.add_jukebox(src, selection, speed_factor)
