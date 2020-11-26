@@ -147,6 +147,23 @@
 /datum/nanite_program/metabolic_synthesis/active_effect()
 	host_mob.adjust_nutrition(-0.5)
 
+/datum/nanite_program/nutrition_synthesis
+	name = "Nutrition Synthesis"
+	desc = "The nanites use themself to synthesise nutriments into host's bloodstream, gradually decaying to feed the host."
+	use_rate = 1
+	rogue_types = list(/datum/nanite_program/toxic)
+
+/datum/nanite_program/nutrition_synthesis/check_conditions()
+	if(!iscarbon(host_mob))
+		return FALSE
+	var/mob/living/carbon/C = host_mob
+	if(C.nutrition >= NUTRITION_LEVEL_WELL_FED)
+		return FALSE
+	return ..()
+
+/datum/nanite_program/nutrition_synthesis/active_effect()
+	host_mob.adjust_nutrition(0.5)
+
 /datum/nanite_program/research
 	name = "Distributed Computing"
 	desc = "The nanites aid the research servers by performing a portion of its calculations, increasing research point generation."

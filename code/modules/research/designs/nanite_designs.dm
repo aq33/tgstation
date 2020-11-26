@@ -18,6 +18,13 @@
 	program_type = /datum/nanite_program/metabolic_synthesis
 	category = list("Utility Nanites")
 
+/datum/design/nanites/nutrition_synthesis
+	name = "Nutrition Synthesis"
+	desc = "The nanites use themself to synthesise nutriments into host's bloodstream, gradually decaying to feed the host."
+	id = "metabolic_nanites"
+	program_type = /datum/nanite_program/nutrition_synthesis
+	category = list("Utility Nanites")
+
 /datum/design/nanites/viral
 	name = "Viral Replica"
 	desc = "The nanites constantly send encrypted signals attempting to forcefully copy their own programming into other nanite clusters."

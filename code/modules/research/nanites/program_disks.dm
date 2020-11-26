@@ -18,6 +18,9 @@
 /obj/item/disk/nanite_program/metabolic_synthesis
 	program_type = /datum/nanite_program/metabolic_synthesis
 
+/obj/item/disk/nanite_program/nutrition_synthesis
+	program_type = /datum/nanite_program/nutrition_synthesis
+
 /obj/item/disk/nanite_program/viral
 	program_type = /datum/nanite_program/viral
 
@@ -38,6 +41,9 @@
 
 /obj/item/disk/nanite_program/spreading
 	program_type = /datum/nanite_program/spreading
+
+/obj/item/disk/nanite_program/nanite_sting
+	program_type = /datum/nanite_program/nanite_sting
 
 /obj/item/disk/nanite_program/regenerative
 	program_type = /datum/nanite_program/regenerative
