@@ -17,6 +17,7 @@
 	var/seconds_electrified = MACHINE_NOT_ELECTRIFIED
 	var/speed_servo_regulator_cut = FALSE //vaporwave
 	var/speed_servo_resistor_cut = FALSE //nightcore
+	var/verify = TRUE
 	var/speed_potentiometer = 1.0
 	var/selection_blocked = FALSE
 	var/stop_blocked = FALSE
@@ -140,7 +141,7 @@
 	if(!anchored)
 		to_chat(usr, "<span class='warning'>This device must be anchored by a wrench!</span>")
 		return
-	if(!allowed(usr))
+	if(!allowed(usr) && verify)
 		to_chat(usr,"<span class='warning'>Error: Access Denied.</span>")
 		usr.playsound_local(src,'sound/machines/deniedbeep.ogg', 50, 1)
 		return

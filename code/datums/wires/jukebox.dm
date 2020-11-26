@@ -8,6 +8,7 @@
 		WIRE_SHOCK,
 		WIRE_ZAP1, WIRE_ZAP2,
 		WIRE_SLOW, WIRE_FAST,
+		WIRE_IDSCAN,
 		WIRE_PLAY,
 		WIRE_LISTING,
 		WIRE_RANCH,
@@ -57,6 +58,11 @@
 /datum/wires/jukebox/on_cut(wire, mend)
 	var/obj/machinery/jukebox/J = holder
 	switch(wire)
+		if(WIRE_IDSCAN)
+			if(mend)
+				J.verify = TRUE
+			else
+				J.verify = FALSE
 		if(WIRE_ZAP1, WIRE_ZAP2)
 			if(isliving(usr))
 				J.shock(usr, 50)
