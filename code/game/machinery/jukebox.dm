@@ -1,6 +1,6 @@
 /obj/machinery/jukebox
-	name = "jukebox"
-	desc = "A classic music player."
+	name = "Jukebox"
+	desc = "Tradycyjny odtwarzacz muzyczny."
 	icon = 'icons/obj/machines/jukebox.dmi'
 	icon_state = "jukebox"
 	verb_say = "states"
@@ -117,10 +117,10 @@
 	if(!user.canUseTopic(src, !issilicon(user)))
 		return
 	if (!anchored)
-		to_chat(user,"<span class='warning'>This device must be anchored by a wrench!</span>")
+		to_chat(user,"<span class='warning'>To urządzenie musi wpierw być przykręcone do podłoża!</span>")
 		return
 	if(!SSjukeboxes.songs.len)
-		to_chat(user,"<span class='warning'>Error: No music tracks have been authorized for your station. Petition Central Command to resolve this issue.</span>")
+		to_chat(user,"<span class='warning'>Błąd: nie znaleziono żadnych utworów. Skonsultuj się z CentCommem.</span>")
 		playsound(src,'sound/machines/deniedbeep.ogg', 50, 1)
 		return
 	var/list/dat = list()
@@ -140,11 +140,11 @@
 	if(stat & (BROKEN|NOPOWER) || !mains)
 		return
 	if(!anchored)
-		to_chat(usr, "<span class='warning'>This device must be anchored by a wrench!</span>")
+		to_chat(usr, "<span class='warning'>To urządzenie musi wpierw być przykręcone do podłoża!</span>")
 		return
 	if(!allowed(usr) && verify)
-		to_chat(usr,"<span class='warning'>Error: Access Denied.</span>")
-		usr.playsound_local(src,'sound/machines/deniedbeep.ogg', 50, 1)
+		to_chat(usr,"<span class='warning'>Nie masz uprawnień, aby korzystać z tego urządzenia.</span>")
+		playsound(src,'sound/machines/deniedbeep.ogg', 50, 1)
 		return
 	add_fingerprint(usr)
 	if(seconds_electrified)
@@ -156,16 +156,16 @@
 				attempt_playback()
 			else
 				if (stop_blocked)
-					to_chat(usr, "<span class='warning'>You try to shut it down, but nothing happens!</span>")
+					to_chat(usr, "<span class='warning'>Wciskasz przycisk zatrzymania odtwarzania, ale nic się nie dzieje. Dziwne.</span>")
 				else
 					stop = 0
 		if("select")
 			if(active)
-				to_chat(usr, "<span class='warning'>Error: You cannot change the song until the current one is over.</span>")
+				to_chat(usr, "<span class='warning'>Nie można wybrać innego utworu gdy trwa odtwarzanie.</span>")
+				playsound(src, 'sound/machines/deniedbeep.ogg', 50, 1)
 				return
 			if(selection_blocked)
-				to_chat(usr, "<span class='warning'>You press the song picker button, but for some reason nothing happens. Sad!</span>")
-				playsound(src, 'sound/machines/deniedbeep.ogg', 50, 1)
+				to_chat(usr, "<span class='warning'>Wciskasz przycisk wyboru utworu, ale nic się nie dzieje. Smutne!</span>")
 				return
 			var/selected = input(usr, "Choose your song", "Track:") as null|anything in list_source
 			if(QDELETED(src) || !selected)
@@ -207,13 +207,9 @@
 	if (speed_servo_resistor_cut)
 		speed_factor *= 1.25
 	speed_factor *= speed_potentiometer
-	to_chat(world, "Speed factor is: [speed_factor]") // REMOVE THIS
 	return speed_factor
 
 /obj/machinery/jukebox/proc/pick_random(specific_list = list_source)
-	if(active)
-		to_chat(usr, "<span class='warning'>Error: You cannot change the song until the current one is over.</span>")
-		return
 	var/selected = pick(specific_list)
 	if(QDELETED(src) || !selected)
 		return
@@ -224,10 +220,11 @@
 	if (QDELETED(src))
 		return
 	if(stop > world.time)
-		to_chat(usr, "<span class='warning'>Error: The device is still resetting from the last activation, it will be ready again in [DisplayTimeText(stop-world.time)].</span>")
+		to_chat(usr, "<span class='warning'>Urządzenie wciąż parkuje płytę, spróbuj ponownie za [DisplayTimeText(stop-world.time)].</span>")
+		playsound(src, 'sound/machines/deniedbeep.ogg', 50, TRUE)
 		return
 	if(!activate_music())
-		to_chat(usr, "<span class='warning'>Error: Hardware failure, try again.</span>")
+		to_chat(usr, "<span class='warning'>Błąd sprzętowy, spróbuj ponownie.</span>")
 		playsound(src, 'sound/machines/deniedbeep.ogg', 50, TRUE)
 		return
 	updateUsrDialog()
