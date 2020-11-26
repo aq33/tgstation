@@ -329,7 +329,7 @@
 	desc = "An laser carbine that goes pew pew."
 	id = "laserrifle"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/gold = 5000, /datum/material/glass = 4000, /datum/material/iron = 5000, /datum/material/titanium = 2000)
+	materials = list(/datum/material/gold = 5000, /datum/material/uranium = 4000, /datum/material/iron = 5000, /datum/material/titanium = 2000)
 	build_path = /obj/item/gun/energy/laser/lgun
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
@@ -339,7 +339,7 @@
 	desc = "An laser shotgun but without the ompf."
 	id = "laserrifletri"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/gold = 4750, /datum/material/glass = 4000, /datum/material/iron = 5000, /datum/material/titanium = 2250)
+	materials = list(/datum/material/gold = 4750, /datum/material/uranium = 4000, /datum/material/iron = 5000, /datum/material/titanium = 2250)
 	build_path = /obj/item/gun/energy/laser/tribeam
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
@@ -349,7 +349,7 @@
 	desc = "Military grade laser rifle, exchanging stopping power for increased rate of fire."
 	id = "autolaser"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/gold = 5000, /datum/material/glass = 2000, /datum/material/iron = 6000, /datum/material/titanium = 4000)
+	materials = list(/datum/material/gold = 5000, /datum/material/uranium = 2000, /datum/material/iron = 6000, /datum/material/titanium = 4000)
 	build_path = /obj/item/gun/energy/laser/laserrifle
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
