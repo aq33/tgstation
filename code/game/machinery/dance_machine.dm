@@ -26,6 +26,7 @@
 	. = ..()
 	wires = new /datum/wires/jukebox(src)
 	list_source = SSjukeboxes.song_lib
+	pick_random()
 	update_icon()
 
 /obj/machinery/jukebox/Destroy()
