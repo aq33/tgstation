@@ -143,3 +143,21 @@
 
 /obj/item/disk/nanite_program/stun
 	program_type = /datum/nanite_program/stun
+
+/obj/item/disk/nanite_program/kickstart
+	program_type = /datum/nanite_program/protocol/kickstart
+
+/obj/item/disk/nanite_program/factory
+	program_type = /datum/nanite_program/protocol/factory
+
+/obj/item/disk/nanite_program/tinker
+	program_type = /datum/nanite_program/protocol/tinker
+
+/obj/item/disk/nanite_program/offline
+	program_type = /datum/nanite_program/protocol/offline
+
+/obj/item/disk/nanite_program/free_range
+	program_type = /datum/nanite_program/protocol/free_range
+
+/obj/item/disk/nanite_program/zip
+	program_type = /datum/nanite_program/protocol/zip

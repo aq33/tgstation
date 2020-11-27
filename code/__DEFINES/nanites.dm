@@ -14,7 +14,10 @@
 
 ///Nanite Protocol types
 #define NANITE_PROTOCOL_REPLICATION "nanite_replication"
-#define NANITE_PROTOCOL_STORAGE "nanite_storage"
+
+//Nanite excess thresholds
+#define NANITE_EXCESS_MINOR 50
+#define NANITE_EXCESS_VOMIT 150
 
 ///Nanite extra settings types: used to help uis know what type an extra setting is
 #define NESTYPE_TEXT "text"

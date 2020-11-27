@@ -584,4 +584,17 @@
 	id = "offline_nanites"
 	program_type = /datum/nanite_program/protocol/offline
 	category = list("Protocols_Nanites")
-	
+
+/datum/design/nanites/free_range
+	name = "Free-Range Protocol"
+	desc = "Replication Protocol: the nanites discard their default storage protocols in favour of a cheaper and more organic approach. Reduces maximum volume, but increases the replication rate."
+	id = "free_range_nanites"
+	program_type = /datum/nanite_program/protocol/free_range
+	category = list("Protocols_Nanites")
+
+/datum/design/nanites/zip
+	name = "Zip Protocol"
+	desc = "Replication Protocol: the nanites are disassembled and compacted when unused, greatly increasing the maximum volume while in a host. However, the process slows down the replication rate slightly."
+	id = "zip_nanites"
+	program_type = /datum/nanite_program/protocol/zip
+	category = list("Protocols_Nanites")

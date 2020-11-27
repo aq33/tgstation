@@ -1155,8 +1155,8 @@
 	display_name = "Nanite Replication Protocols"
 	description = "Advanced behaviours that allow nanites to exploit certain circumstances to replicate faster."
 	prereq_ids = list("nanite_harmonic")
-	design_ids = list("kickstart_nanites","factory_nanites","tinker_nanites","offline_nanites")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000, TECHWEB_POINT_TYPE_NANITES = 4000)
+	design_ids = list("kickstart_nanites","factory_nanites","tinker_nanites","offline_nanites","free_range_nanites","zip_nanites")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 4000, TECHWEB_POINT_TYPE_NANITES = 4000)
 	export_price = 15000
 
 ////////////////////////Alien technology////////////////////////

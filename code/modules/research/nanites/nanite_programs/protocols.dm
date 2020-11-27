@@ -103,3 +103,35 @@
 
 /datum/nanite_program/protocol/offline/active_effect()
 	nanites.adjust_nanites(null, boost)
+
+/datum/nanite_program/protocol/free_range
+	name = "Free-range Protocol"
+	desc = "Replication Protocol: the nanites discard their default storage protocols in favour of a cheaper and more organic approach. Reduces maximum volume, but increases the replication rate."
+	use_rate = -0.5
+	rogue_types = list(/datum/nanite_program/necrotic)
+	protocol_class = NANITE_PROTOCOL_REPLICATION
+	var/extra_volume = -250
+
+/datum/nanite_program/protocol/free_range/enable_passive_effect()
+	. = ..()
+	nanites.set_max_volume(null, nanites.max_nanites + extra_volume)
+
+/datum/nanite_program/protocol/free_range/disable_passive_effect()
+	. = ..()
+	nanites.set_max_volume(null, nanites.max_nanites - extra_volume)
+
+/datum/nanite_program/protocol/zip
+	name = "Zip Protocol"
+	desc = "Replication Protocol: the nanites are disassembled and compacted when unused, greatly increasing the maximum volume while in a host. However, the process slows down the replication rate slightly."
+	use_rate = 0.2
+	rogue_types = list(/datum/nanite_program/necrotic)
+	protocol_class = NANITE_PROTOCOL_REPLICATION
+	var/extra_volume = 250
+
+/datum/nanite_program/protocol/zip/enable_passive_effect()
+	. = ..()
+	nanites.set_max_volume(null, nanites.max_nanites + extra_volume)
+
+/datum/nanite_program/protocol/zip/disable_passive_effect()
+	. = ..()
+	nanites.set_max_volume(null, nanites.max_nanites - extra_volume)
