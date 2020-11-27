@@ -354,6 +354,7 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+
 /datum/design/plasmapistol
 	name = "Experimental Plasma Pistol"
 	desc = "Plasma pistol."
