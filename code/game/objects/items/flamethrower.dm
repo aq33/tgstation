@@ -15,6 +15,8 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	materials = list(/datum/material/iron=500)
 	resistance_flags = FIRE_PROOF
+	light_system = MOVABLE_LIGHT
+	light_on = FALSE
 	var/status = FALSE
 	var/lit = FALSE	//on or off
 	var/operating = FALSE//cooldown
@@ -167,6 +169,7 @@
 			warned_admins = TRUE
 	else
 		STOP_PROCESSING(SSobj,src)
+	set_light_on(lit)
 	update_icon()
 
 /obj/item/flamethrower/CheckParts(list/parts_list)
