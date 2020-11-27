@@ -306,8 +306,10 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 70)
 	resistance_flags = FIRE_PROOF
 	var/hacked = FALSE
-	var/brightness_on = 6 //TWICE AS BRIGHT AS A REGULAR ESWORD
 	var/list/possible_colors = list("red", "blue", "green", "purple")
+	light_system = MOVABLE_LIGHT
+	light_range = 6 //TWICE AS BRIGHT AS A REGULAR ESWORD
+	light_on = FALSE
 
 /obj/item/twohanded/dualsaber/suicide_act(mob/living/carbon/user)
 	if(wielded)
@@ -403,7 +405,7 @@
 		w_class = w_class_on
 		hitsound = 'sound/weapons/blade1.ogg'
 		START_PROCESSING(SSobj, src)
-		set_light(brightness_on)
+		set_light_on(TRUE)
 
 /obj/item/twohanded/dualsaber/unwield() //Specific unwield () to switch hitsounds.
 	sharpness = initial(sharpness)
@@ -411,7 +413,7 @@
 	..()
 	hitsound = "swing_hit"
 	STOP_PROCESSING(SSobj, src)
-	set_light(0)
+	set_light_on(FALSE)
 
 /obj/item/twohanded/dualsaber/process()
 	if(wielded)
@@ -766,10 +768,10 @@
 	throwforce = 24
 	force_unwielded = 19
 	force_wielded = 25
-
-/obj/item/twohanded/pitchfork/demonic/Initialize()
-	. = ..()
-	set_light(3,6,LIGHT_COLOR_RED)
+	light_system = MOVABLE_LIGHT
+	light_range = 3
+	light_power = 6
+	light_color = LIGHT_COLOR_RED
 
 /obj/item/twohanded/pitchfork/demonic/greater
 	force = 24

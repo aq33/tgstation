@@ -110,11 +110,10 @@
 		return
 	chassis.lights = !chassis.lights
 	if(chassis.lights)
-		chassis.set_light(chassis.lights_power)
 		button_icon_state = "mech_lights_on"
 	else
-		chassis.set_light(-chassis.lights_power)
 		button_icon_state = "mech_lights_off"
+	chassis.set_light_on(chassis.lights)
 	chassis.occupant_message("Toggled lights [chassis.lights?"on":"off"].")
 	chassis.log_message("Toggled lights [chassis.lights?"on":"off"].", LOG_MECHA)
 	UpdateButtonIcon()
@@ -264,10 +263,10 @@
 		log_admin("[key_name(chassis.occupant)] probowal przetransformowac mecha innego niz alpha.")
 		return
 	var/obj/mecha/combat/alpha/chassisalpha = chassis
-	
+
 	if(!owner || !chassis || chassis.occupant != owner)
 		return
-	
+
 	chassis.is_currently_transforming = TRUE
 	to_chat(chassis.occupant, "<span class='notice'>You begin the transformation procedure. Equipment is disabled during this process. Hold still.<span>")
 	chassis.can_move = world.time + 14
@@ -276,6 +275,6 @@
 		playsound(chassis, pick('sound/items/drill_use.ogg', 'sound/items/jaws_cut.ogg', 'sound/items/jaws_pry.ogg', 'sound/items/welder.ogg', 'sound/items/ratchet.ogg'), 80, 1, -1)
 		sleep(7)
 	chassis.is_currently_transforming = FALSE
-	
+
 	chassisalpha.stat_transform()
 	chassis.occupant_message("Transformed into [chassis.chase_mode ? "chase" : "standard"] mode.")

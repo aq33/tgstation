@@ -333,3 +333,5 @@
 #define WABBAJACK     (1<<6)
 
 #define SLEEP_CHECK_DEATH(X) sleep(X); if(QDELETED(src) || stat == DEAD) return;
+///Swarmer flags
+#define SWARMER_LIGHT_ON (1<<0)
