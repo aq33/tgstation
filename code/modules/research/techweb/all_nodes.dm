@@ -1186,8 +1186,8 @@
 	id = "alien_bio"
 	display_name = "Alien Biological Tools"
 	description = "Advanced biological tools."
-	prereq_ids = list("advance_surgerytools")
-	design_ids = list("alien_scalpel", "alien_hemostat", "alien_retractor", "alien_saw", "alien_drill", "alien_cautery", "ayyplantgenes")
+	prereq_ids = list("alientech", "adv_biotech")
+	design_ids = list("alien_scalpel", "alien_hemostat", "alien_retractor", "alien_saw", "alien_drill", "alien_cautery")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 	hidden = TRUE
 
@@ -1313,7 +1313,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 4500)
 	export_price = 4500
 	prereq_ids = list("spacepod_pseat", "high_efficiency")
-	design_ids = list("podcargo_lootbox", "podcargo_crate", "podcargo_ore")
+	design_ids = list("podcargo_crate", "podcargo_ore")
 
 /datum/techweb_node/spacepod_lockbuster
 	id = "spacepod_lockbuster"
