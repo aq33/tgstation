@@ -1082,10 +1082,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
-"fI" = (
-/obj/effect/landmark/start/depsec/science,
-/turf/open/floor/plasteel/dark,
-/area/xenoarch/sec)
 "fJ" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -1104,10 +1100,6 @@
 /obj/machinery/computer/rdconsole/core{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
-/area/xenoarch/arch)
-"fN" = (
-/obj/effect/landmark/start/scientist,
 /turf/open/floor/plasteel,
 /area/xenoarch/arch)
 "fR" = (
@@ -1725,13 +1717,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/xenoarch/arch)
-"jo" = (
-/obj/structure/sign/poster/official/random{
-	pixel_x = 32
-	},
-/obj/effect/landmark/start/assistant,
-/turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
 "jp" = (
 /obj/structure/table,
 /obj/item/stack/sheet/iron/fifty,
@@ -4282,10 +4267,6 @@
 "uQ" = (
 /turf/open/floor/engine/air,
 /area/xenoarch/eng)
-"uR" = (
-/obj/effect/landmark/start/scientist,
-/turf/open/floor/plasteel,
-/area/xenoarch/bot)
 "uS" = (
 /obj/machinery/conveyor{
 	id = "gulag"
@@ -5715,10 +5696,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
-"BE" = (
-/obj/effect/landmark/start/assistant,
-/turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
 "BF" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
@@ -7284,17 +7261,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/xenoarch/arch)
-"Jo" = (
-/obj/structure/chair/office/light{
-	dir = 8
-	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = 24
-	},
-/obj/effect/landmark/start/medical_doctor,
-/turf/open/floor/plasteel/white,
-/area/xenoarch/arch)
 "Jq" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -7811,7 +7777,6 @@
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 5
 	},
-/obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/plasteel,
 /area/xenoarch/eng)
 "LV" = (
@@ -8730,15 +8695,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/xenoarch/eng)
-"PU" = (
-/obj/machinery/atmospherics/pipe/simple/green/visible,
-/obj/effect/landmark/start/station_engineer,
-/turf/open/floor/plasteel,
-/area/xenoarch/eng)
-"PY" = (
-/obj/effect/landmark/start/chemist,
-/turf/open/floor/plasteel/white,
-/area/xenoarch/arch)
 "Qc" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible,
 /obj/effect/spawner/structure/window/plasma/reinforced,
@@ -9302,10 +9258,6 @@
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plasteel/dark,
-/area/xenoarch/arch)
-"SF" = (
-/obj/effect/landmark/start/medical_doctor,
-/turf/open/floor/plasteel/white,
 /area/xenoarch/arch)
 "SG" = (
 /obj/structure/cable,
@@ -16380,7 +16332,7 @@ jw
 uC
 fL
 YG
-Jo
+kE
 va
 fL
 gZ
@@ -18946,11 +18898,11 @@ cc
 al
 fL
 WB
-SF
 jw
 jw
 jw
-PY
+jw
+jw
 Bo
 fL
 uP
@@ -20736,7 +20688,7 @@ fL
 al
 cc
 cy
-fI
+fl
 jQ
 Lb
 fl
@@ -21764,10 +21716,10 @@ fL
 al
 fL
 cI
-fN
 Py
 Py
-fN
+Py
+Py
 BZ
 fL
 El
@@ -25897,7 +25849,7 @@ Aj
 We
 LU
 tL
-PU
+gh
 MT
 An
 WY
@@ -26144,9 +26096,9 @@ Sb
 Ss
 FK
 Ba
-uR
 Ph
-uR
+Ph
+Ph
 Ex
 Yw
 jp
@@ -29501,7 +29453,7 @@ Sy
 Sy
 Sy
 el
-BE
+el
 EH
 el
 el
@@ -30786,7 +30738,7 @@ mG
 mG
 Sy
 el
-jo
+QO
 BX
 cR
 QO
