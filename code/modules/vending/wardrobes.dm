@@ -34,11 +34,13 @@
 					/obj/item/clothing/neck/tie/black = 6,)
 	premium = list(/obj/item/clothing/under/rank/security/officer/formal = 3,
 					/obj/item/clothing/suit/security/officer = 3,
-					/obj/item/clothing/head/beret/sec/navyofficer = 3,
-					/obj/item/clothing/under/rank/security/officer/nazi = 3,
-					/obj/item/clothing/under/rank/security/officer/nazi_alt =3)
+					/obj/item/clothing/head/beret/sec/navyofficer = 3)
 	refill_canister = /obj/item/vending_refill/wardrobe/sec_wardrobe
 	payment_department = ACCOUNT_SEC
+
+	contraband = list(/obj/item/clothing/under/rank/security/officer/nazi = 3,
+					/obj/item/clothing/under/rank/security/officer/nazi_alt = 3)
+	extra_price = 300
 
 /obj/item/vending_refill/wardrobe/sec_wardrobe
 	machine_name = "SecDrobe"
