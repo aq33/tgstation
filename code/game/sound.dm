@@ -37,12 +37,10 @@
 	S.channel = channel || open_sound_channel()
 	S.volume = vol
 	S.falloff = (falloff ? falloff : FALLOFF_SOUNDS)
+	S.frequency = frequency
 
-	if(vary)
-		if(frequency)
-			S.frequency = frequency
-		else
-			S.frequency = get_rand_frequency()
+	if(vary && !frequency)
+		S.frequency = get_rand_frequency()
 
 	var/direct = 0
 	var/room   = -10000
