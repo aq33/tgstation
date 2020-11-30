@@ -14,7 +14,7 @@
 	var/sound/S = sound(get_sfx(soundin))
 	var/maxdistance = (world.view * 2 + extrarange)
 	var/z = turf_source.z
-	var/list/listeners = SSmobs.clients_by_zlevel[z]
+	var/list/listeners = SSmobs.clients_by_zlevel[z].Copy()
 	if(!ignore_walls) //these sounds don't carry through walls
 		listeners = listeners & hearers(maxdistance,turf_source)
 	for(var/P in listeners)
@@ -57,7 +57,7 @@
 		if(get_area(T) == get_area(turf_source))
 			direct = 0
 			room   = -250
-		else 
+		else
 			direct = -distance * 100
 			room   = 0
 		if(pressure_affected)

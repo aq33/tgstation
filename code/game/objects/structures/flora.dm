@@ -456,7 +456,7 @@
 	icon = 'icons/obj/xenoarch/jungleflora.dmi'
 	icon_state = "stick"
 	gender = PLURAL
-	light_range = 1.5
+	light_range = 4
 	light_power = 0.5
 	max_integrity = 50
 	var/variants = 9
