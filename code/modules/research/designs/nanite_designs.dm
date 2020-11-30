@@ -21,7 +21,7 @@
 /datum/design/nanites/nutrition_synthesis
 	name = "Nutrition Synthesis"
 	desc = "The nanites use themself to synthesise nutriments into host's bloodstream, gradually decaying to feed the host."
-	id = "metabolic_nanites"
+	id = "nutrition_nanites"
 	program_type = /datum/nanite_program/nutrition_synthesis
 	category = list("Utility Nanites")
 
