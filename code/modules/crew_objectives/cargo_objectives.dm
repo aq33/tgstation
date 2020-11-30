@@ -69,7 +69,7 @@
 
 /datum/objective/crew/fatstacks/update_explanation_text()
 	. = ..()
-	explanation_text = Miej przynajmniej [target_amount] punktów górniczych na swoim koncie ID przed końcem zmiany."
+	explanation_text = "Miej przynajmniej [target_amount] punktów górniczych na swoim koncie ID przed końcem zmiany."
 
 /datum/objective/crew/fatstacks/check_completion()
 	if(owner?.current)
