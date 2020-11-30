@@ -279,6 +279,13 @@
 	program_type = /datum/nanite_program/nanojutsu
 	category = list("Augmentation Nanites")
 
+/datum/design/nanites/camo
+	name = "Adaptive Camouflage"
+	desc = "The nanites coat host with a thin, reflective layer, rendering them almost invisible."
+	id = "camo_nanites"
+	program_type = /datum/nanite_program/camo
+	category = list("Augmentation Nanites")
+
 ////////////////////DEFECTIVE NANITES//////////////////////////////////////
 
 /datum/design/nanites/glitch

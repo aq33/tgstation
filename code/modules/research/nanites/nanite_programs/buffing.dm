@@ -149,3 +149,21 @@
 	martial.remove(H)
 	to_chat(H, "<span class='notice'>Your mind feels clear once again, as thoughts about the martial arts leave your head.</span>")
 	QDEL_NULL(martial)
+
+/datum/nanite_program/camo
+	name = "Adaptive Camouflage"
+	desc = "The nanites coat host with a thin, reflective layer, rendering them almost invisible."
+	use_rate = 2.5
+	rogue_types = list(/datum/nanite_program/skin_decay)
+
+/datum/nanite_program/camo/enable_passive_effect()
+	. = ..()
+	animate(host_mob, alpha = 50,time = 15) //copypasta z ninja suita
+	host_mob.visible_message("<span class='warning'>[host_mob] vanishes into thin air!</span>", \
+					"<span class='notice'>You see your hands turn invisible.</span>")
+
+/datum/nanite_program/camo/disable_passive_effect()
+	. = ..()
+	animate(host_mob, alpha = 255, time = 15)
+	host_mob.visible_message("<span class='warning'>[host_mob] appears from thin air!</span>", \
+					"<span class='notice'>You see your hands reappear.</span>")
