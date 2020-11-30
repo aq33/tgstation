@@ -40,7 +40,7 @@
 
 /datum/objective/crew/points/update_explanation_text()
 	. = ..()
-	explanation_text = Upewnij się, że na stacji jest przynajmniej [target_amount] kredytów przed końcem zmiany."
+	explanation_text = "Upewnij się, że na stacji jest przynajmniej [target_amount] kredytów przed końcem zmiany."
 
 /datum/objective/crew/points/check_completion()
 	if(SSshuttle.points >= target_amount)
