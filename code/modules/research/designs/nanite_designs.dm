@@ -417,6 +417,13 @@
 	program_type = /datum/nanite_program/comm/mind_control
 	category = list("Weaponized Nanites")
 
+/datum/design/nanites/kunai
+	name = "Kunai Form"
+	desc = "When triggered, nanites gather in host's free hand, forming a Kunai knife, which disintegrates a few seconds after being thrown."
+	id = "kunai_nanites"
+	program_type = /datum/nanite_program/kunai
+	category = list("Weaponized Nanites")
+
 ////////////////////SUPPRESSION NANITES//////////////////////////////////////
 
 /datum/design/nanites/shock

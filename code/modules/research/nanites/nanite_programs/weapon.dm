@@ -189,3 +189,23 @@
 /datum/nanite_program/comm/mind_control/disable_passive_effect()
 	. = ..()
 	end_brainwashing()
+
+/datum/nanite_program/kunai
+	name = "Kunai Form"
+	desc = "When triggered, nanites gather in host's free hand, forming a Kunai knife, which disintegrates a few seconds after being thrown."
+	can_trigger = TRUE
+	trigger_cost = 100
+	trigger_cooldown = 50
+	rogue_types = list(/datum/nanite_program/skin_decay)
+
+/datum/nanite_program/kunai/on_trigger(comm_message)
+	var/obj/item/throwing_star/nanite/N = new(get_turf(host_mob))
+	if(!iscarbon(host_mob))
+		to_chat(host_mob, "<span class='notice'>A kunai suddenly appears below you!</span>")
+		return
+	var/mob/living/carbon/C = host_mob
+	if(!C.put_in_hands(N))
+		to_chat(C, "<span class='notice'>A kunai suddenly appears below you!</span>")
+		return
+	to_chat(C, "<span class='notice'>A kunai suddenly appears in your hand!</span>")
+	C.throw_mode_on()

@@ -84,6 +84,9 @@
 /obj/item/disk/nanite_program/camo
 	program_type = /datum/nanite_program/camo
 
+/obj/item/disk/nanite_program/kunai
+	program_type = /datum/nanite_program/kunai
+
 /obj/item/disk/nanite_program/coagulating
 	program_type = /datum/nanite_program/coagulating
 
