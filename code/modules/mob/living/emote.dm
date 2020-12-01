@@ -34,7 +34,10 @@
 
 /datum/emote/living/choke/get_sound(mob/living/user)
 	if(user.mind && ishuman(user) && !user.mind.miming)
-		return 'sound/misc/choke.ogg'
+		if(user.gender == FEMALE)
+			return 'sound/voice/human/femalechoke.ogg'
+		else
+			return 'sound/misc/choke.ogg'
 
 /datum/emote/living/cross
 	key = "cross"
@@ -108,6 +111,11 @@
 			var/mob/living/L = user
 			if(!L.can_speak_vocal() || L.oxyloss >= 50)
 				return //stop the sound if oxyloss too high/cant speak
+			if(ishuman(user))
+				if(user.gender == FEMALE)
+					playsound(user, pick('sound/voice/human/femaledeath1.ogg', 'sound/voice/human/femaledeath2.ogg'), 200, TRUE, TRUE)
+				else
+					playsound(user, pick('sound/voice/human/maledeath1.ogg', 'sound/voice/human/maledeath2.ogg'), 200, TRUE, TRUE)
 		playsound(user, user.deathsound, 200, TRUE, TRUE)
 
 /datum/emote/living/drool
@@ -167,7 +175,10 @@
 
 /datum/emote/living/gasp/get_sound(mob/living/user)
 	if(user.mind && ishuman(user) && !user.mind.miming)
-		return 'sound/misc/gasp.ogg'
+		if(user.gender == FEMALE)
+			return pick('sound/voice/human/femalegasp1.ogg', 'sound/voice/human/femalegasp2.ogg')
+		else
+			return 'sound/misc/gasp.ogg'
 
 /datum/emote/living/giggle
 	key = "giggle"
