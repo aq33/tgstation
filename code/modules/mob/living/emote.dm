@@ -320,7 +320,10 @@
 
 /datum/emote/living/sigh/get_sound(mob/living/user)
 	if(user.mind && ishuman(user) && !user.mind.miming)
-		return 'sound/misc/sigh.ogg'
+		if(user.gender == FEMALE)
+			return pick('sound/voice/human/femalesigh1.ogg','sound/voice/human/femalesigh2.ogg','sound/voice/human/femalesigh3.ogg','sound/voice/human/femalesigh4.ogg')
+		else
+			return 'sound/misc/sigh.ogg'
 
 /datum/emote/living/sit
 	key = "sit"
