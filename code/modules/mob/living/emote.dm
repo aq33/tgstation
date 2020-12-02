@@ -100,6 +100,13 @@
 	message_simple =  "stops moving..."
 	stat_allowed = UNCONSCIOUS
 
+/datum/emote/living/deathgasp/get_sound(mob/living/user)
+	if(ishuman)
+		if(user.gender == FEMALE)
+			return pick('sound/voice/human/femaledeath1.ogg', 'sound/voice/human/femaledeath2.ogg')
+		else
+			return pick('sound/voice/human/maledeath1.ogg', 'sound/voice/human/maledeath2.ogg')
+
 /datum/emote/living/deathgasp/run_emote(mob/user, params, type_override, intentional)
 	var/mob/living/simple_animal/S = user
 	if(istype(S) && S.deathmessage)
@@ -111,11 +118,6 @@
 			var/mob/living/L = user
 			if(!L.can_speak_vocal() || L.oxyloss >= 50)
 				return //stop the sound if oxyloss too high/cant speak
-			if(ishuman(user))
-				if(user.gender == FEMALE)
-					playsound(user, pick('sound/voice/human/femaledeath1.ogg', 'sound/voice/human/femaledeath2.ogg'), 200, TRUE, TRUE)
-				else
-					playsound(user, pick('sound/voice/human/maledeath1.ogg', 'sound/voice/human/maledeath2.ogg'), 200, TRUE, TRUE)
 		playsound(user, user.deathsound, 200, TRUE, TRUE)
 
 /datum/emote/living/drool

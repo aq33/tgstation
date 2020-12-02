@@ -114,7 +114,7 @@
 	var/phase_state = "" //icon_state when phasing
 	var/strafe = FALSE //If we are strafing
 	var/canstrafe = TRUE //if we can turn on strafing
-	
+
 	var/icon_chase = "alphachase"
 	var/step_in_chase = 0.75
 	var/chase_mode = FALSE
@@ -821,7 +821,7 @@
 	update_icon()
 	playsound(src, 'sound/machines/windowdoor.ogg', 50, 1)
 	if(!internal_damage)
-		SEND_SOUND(occupant, sound('sound/mecha/nominal.ogg',volume=50))
+		SEND_SOUND(occupant, sound('sound/mecha/mechboot.ogg',volume=50))
 	AI.cancel_camera()
 	AI.controlled_mech = src
 	AI.remote_control = src
@@ -953,7 +953,7 @@
 		setDir(dir_in)
 		playsound(src, 'sound/machines/windowdoor.ogg', 50, 1)
 		if(!internal_damage)
-			SEND_SOUND(occupant, sound('sound/mecha/nominal.ogg',volume=50))
+			SEND_SOUND(occupant, sound('sound/mecha/mechboot.ogg',volume=50))
 		return 1
 	else
 		return 0
@@ -1009,7 +1009,7 @@
 	setDir(dir_in)
 	log_message("[mmi_as_oc] moved in as pilot.", LOG_MECHA)
 	if(!internal_damage)
-		SEND_SOUND(occupant, sound('sound/mecha/nominal.ogg',volume=50))
+		SEND_SOUND(occupant, sound('sound/mecha/mechboot.ogg',volume=50))
 	GrantActions(brainmob)
 	return TRUE
 
