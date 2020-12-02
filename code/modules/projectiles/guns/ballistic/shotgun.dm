@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/shotgun
 	name = "shotgun"
-	desc = "A traditional shotgun with wood furniture and a six-shell capacity underneath."
+	desc = "A traditional shotgun with wood furniture and a four-shell capacity underneath."
 	icon_state = "shotgun"
 	item_state = "shotgun"
 	fire_sound = "sound/weapons/shotgunshot.ogg"
@@ -66,7 +66,7 @@
 
 /obj/item/gun/ballistic/shotgun/automatic/combat
 	name = "combat shotgun"
-	desc = "A semi automatic shotgun with tactical furniture and a eight-shell capacity underneath."
+	desc = "A semi automatic shotgun with tactical furniture and a six-shell capacity underneath."
 	icon_state = "cshotgun"
 	item_state = "cshotgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/com
