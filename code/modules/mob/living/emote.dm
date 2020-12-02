@@ -101,7 +101,7 @@
 	stat_allowed = UNCONSCIOUS
 
 /datum/emote/living/deathgasp/get_sound(mob/living/user)
-	if(ishuman)
+	if(ishuman(user) == TRUE)
 		if(user.gender == FEMALE)
 			return pick('sound/voice/human/femaledeath1.ogg', 'sound/voice/human/femaledeath2.ogg')
 		else
