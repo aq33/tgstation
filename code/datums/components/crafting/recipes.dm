@@ -571,6 +571,29 @@
 	time = 200
 	category = CAT_MISC
 
+/datum/crafting_recipe/eureka
+	name = "Experimental Wrench"
+	result = /obj/item/wrench/eureka
+	reqs = list(/obj/item/wrench = 1,
+				/obj/item/stock_parts/subspace/amplifier = 1,
+				/obj/item/stock_parts/subspace/analyzer = 1,
+				/obj/item/stack/cable_coil = 5,
+				/obj/item/stack/ore/bluespace_crystal = 1)
+	tools = list(TOOL_WIRECUTTER, TOOL_SCREWDRIVER)
+	time = 100
+	category = CAT_MISC
+
+/datum/crafting_recipe/ubersaw
+	name = "Ubersaw"
+	result = /obj/item/circular_saw/ubersaw
+	reqs = list(/obj/item/circular_saw = 1,
+				/obj/item/reagent_containers/syringe = 1,
+				/obj/item/reagent_containers/glass/beaker = 1,
+				/obj/item/stack/sheet/iron = 5)
+	tools = list(TOOL_WRENCH, TOOL_WELDER)
+	time = 100
+	category = CAT_MISC
+
 /datum/crafting_recipe/mousetrap
 	name = "Mouse Trap"
 	result = /obj/item/assembly/mousetrap
