@@ -213,7 +213,7 @@
 	name = "improvised shotgun"
 	desc = "Essentially a tube that aims shotgun shells."
 	icon_state = "ishotgun"
-	item_state = "isshotgun"
+	item_state = "ishotgun"
 	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
 	w_class = WEIGHT_CLASS_BULKY
