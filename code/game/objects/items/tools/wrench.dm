@@ -118,7 +118,7 @@
 	toolspeed = 1.2
 	materials = list(/datum/material/iron=150,/datum/material/bluespace=50)
 	var/charges = 1
-	var/max_charges = 3
+	var/max_charges = 5
 	var/eureka_channel_teleport = 20 //długość channela teleportu w tickach. 10 ticków = 1 sekunda
 	var/eureka_channel_set = 100 //długość channela anchorowania w tickach
 	var/teleport_ready = FALSE //następna akcja klucza: false - zapisanie pozycji, true - teleport do niej
@@ -167,3 +167,19 @@
 		B.use(1)
 		charges += 1
 		to_chat(user, "<span class='notice'>You insert [I] into [src]. It now has [charges] charges.</span>")
+
+/obj/item/wrench/eureka/suicide_act(mob/living/user)
+	user.visible_message("<span class='suicide'>[user] raises the [src], muttering insults at the God! It looks like [user.p_theyre()] trying to commit suicide!</span>", "<span class='suicide'>You raise the [src], muttering insults at the God!!</span>")
+	playsound(src, 'sound/items/eureka_channel.ogg', 50, 1)
+	if(!do_after(user, eureka_channel_teleport, target = user))
+		return
+	if(charges < 1)
+		to_chat(user, "<span class='notice'>...but it quietly buzzes. Perhaps it can be recharged?</span>")
+		return SHAME
+	charges -= 1
+	playsound(src, 'sound/items/eureka_teleport.ogg', 50, 1)
+	var/turf/T = get_step(get_step(user, NORTH), NORTH)
+	T.Beam(user, icon_state="lightning[rand(1,12)]", time = 5)
+	user.visible_message("<span class='warning'>[user] summoned God's wrath!</span>")
+	user.dust()
+	return FIRELOSS

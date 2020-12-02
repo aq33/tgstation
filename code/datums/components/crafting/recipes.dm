@@ -578,7 +578,7 @@
 				/obj/item/stock_parts/subspace/amplifier = 1,
 				/obj/item/stock_parts/subspace/analyzer = 1,
 				/obj/item/stack/cable_coil = 5,
-				/obj/item/stack/ore/bluespace_crystal = 1)
+				/obj/item/assembly/signaler/anomaly = 1)
 	tools = list(TOOL_WIRECUTTER, TOOL_SCREWDRIVER)
 	time = 100
 	category = CAT_MISC
