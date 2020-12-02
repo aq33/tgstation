@@ -344,17 +344,6 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
-/datum/design/autolaser
-	name = "Laser Rifle"
-	desc = "Military grade laser rifle, exchanging stopping power for increased rate of fire."
-	id = "autolaser"
-	build_type = PROTOLATHE
-	materials = list(/datum/material/gold = 5000, /datum/material/uranium = 2000, /datum/material/iron = 6000, /datum/material/titanium = 4000)
-	build_path = /obj/item/gun/energy/laser/laserrifle
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
-
 /datum/design/plasmapistol
 	name = "Experimental Plasma Pistol"
 	desc = "Plasma pistol."
