@@ -160,6 +160,7 @@ datum/species/ipc/on_species_loss(mob/living/carbon/C)
 			H.visible_message("[H]'s cooling system fans stutter and stall. There is a faint, yet rapid beeping coming from inside their chassis.")
 
 /datum/species/ipc/spec_revival(mob/living/carbon/human/H)
+	playsound(H.loc, 'sound/voice/dialup.ogg', 75, 1)
 	H.dna.features["ipc_screen"] = "BSOD"
 	H.update_body()
 	H.say("Reactivating [pick("core systems", "central subroutines", "key functions")]...")
