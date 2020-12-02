@@ -71,7 +71,7 @@
 	///Cast range for the directional cast (how far away the atom is moved)
 	var/cast_range = 2
 
-/datum/component/overlay_lighting/Initialize(_range, _power, _color, starts_on, is_directional)
+/datum/component/overlay_lighting/Initialize(is_directional, _range, _power, _color, starts_on)
 	if(!ismovable(parent))
 		return COMPONENT_INCOMPATIBLE
 
@@ -409,19 +409,17 @@
 	var/turf/scanning = get_turf(current_holder)
 	for(var/i in 1 to final_distance)
 		var/turf/next_turf = get_step(scanning, current_direction)
-		if(isnull(next_turf) || IS_OPAQUE_TURF(next_turf))
+		if(isnull(next_turf))
 			break
 		scanning = next_turf
 	directional_atom.forceMove(scanning)
 
 ///Called when current_holder changes loc.
 /datum/component/overlay_lighting/proc/on_holder_dir_change(atom/movable/source, olddir, newdir)
-	SIGNAL_HANDLER
 	set_direction(newdir)
 
 ///Called when parent changes loc.
 /datum/component/overlay_lighting/proc/on_parent_dir_change(atom/movable/source, olddir, newdir)
-	SIGNAL_HANDLER
 	set_direction(newdir)
 
 ///Sets a new direction for the directional cast, then updates luminosity

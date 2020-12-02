@@ -10,6 +10,7 @@
 #define CHECK_BITFIELD(variable, flag) (variable & (flag))
 #define TOGGLE_BITFIELD(variable, flag) (variable ^= (flag))
 
+#define ALL_CARDINALS (NORTH|SOUTH|EAST|WEST)
 
 //check if all bitflags specified are present
 #define CHECK_MULTIPLE_BITFIELDS(flagvar, flags) (((flagvar) & (flags)) == (flags))
