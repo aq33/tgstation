@@ -733,6 +733,7 @@
 					/obj/item/gun/energy/plasma/pistol/fo13,
 					/obj/item/gun/energy/plasma/rifle/fo13,
 					/obj/item/gun/energy/plasma/multiplas/fo13,
+					/obj/item/gun/energy/laser/laserrifle,
 					/obj/item/stock_parts/cell/gun)
 	crate_name = "Old dusty crate"
 
