@@ -84,6 +84,7 @@
 	max_ammo = 40
 	multiple_sprites = 3
 	materials = list(/datum/material/iron = 500)
+	custom_price = 50
 
 /obj/item/ammo_box/foambox/riot
 	name = "granat na metalowe kulki"
