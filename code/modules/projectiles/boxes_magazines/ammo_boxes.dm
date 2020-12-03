@@ -77,14 +77,16 @@
 	max_ammo = 14
 
 /obj/item/ammo_box/foambox
-	name = "ammo box (Foam Darts)"
+	name = "granat na kulki"
 	icon = 'icons/obj/guns/toy.dmi'
 	icon_state = "foambox"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart
 	max_ammo = 40
+	multiple_sprites = 3
 	materials = list(/datum/material/iron = 500)
 
 /obj/item/ammo_box/foambox/riot
+	name = "granat na metalowe kulki"
 	icon_state = "foambox_riot"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
 	materials = list(/datum/material/iron = 50000)
