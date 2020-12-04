@@ -63,7 +63,7 @@
 		if(MOVABLE_LIGHT)
 			AddComponent(/datum/component/overlay_lighting)
 		if(MOVABLE_LIGHT_DIRECTIONAL)
-			AddComponent(/datum/component/overlay_lighting, TRUE)
+			AddComponent(/datum/component/overlay_lighting, light_range, light_power, light_color, light_on, TRUE)
 
 /atom/movable/Destroy()
 	QDEL_NULL(em_block)

@@ -71,7 +71,7 @@
 	///Cast range for the directional cast (how far away the atom is moved)
 	var/cast_range = 2
 
-/datum/component/overlay_lighting/Initialize(is_directional, _range, _power, _color, starts_on)
+/datum/component/overlay_lighting/Initialize(_range, _power, _color, starts_on, is_directional)
 	if(!ismovable(parent))
 		return COMPONENT_INCOMPATIBLE
 
@@ -203,21 +203,18 @@
 /datum/component/overlay_lighting/proc/set_parent_attached_to(atom/movable/new_parent_attached_to)
 	if(new_parent_attached_to == parent_attached_to)
 		return
+
 	. = parent_attached_to
 	parent_attached_to = new_parent_attached_to
 	if(.)
 		var/atom/movable/old_parent_attached_to = .
 		UnregisterSignal(old_parent_attached_to, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
-		if(directional)
-			UnregisterSignal(old_parent_attached_to, COMSIG_ATOM_DIR_CHANGE)
 		if(old_parent_attached_to == current_holder)
 			RegisterSignal(old_parent_attached_to, COMSIG_PARENT_QDELETING, .proc/on_holder_qdel)
 			RegisterSignal(old_parent_attached_to, COMSIG_MOVABLE_MOVED, .proc/on_holder_moved)
 	if(parent_attached_to)
 		if(parent_attached_to == current_holder)
 			UnregisterSignal(current_holder, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
-		if(directional)
-			RegisterSignal(parent_attached_to, COMSIG_ATOM_DIR_CHANGE, .proc/on_holder_dir_change)
 		RegisterSignal(parent_attached_to, COMSIG_PARENT_QDELETING, .proc/on_parent_attached_to_qdel)
 		RegisterSignal(parent_attached_to, COMSIG_MOVABLE_MOVED, .proc/on_parent_attached_to_moved)
 	check_holder()
@@ -353,7 +350,6 @@
 		return
 	turn_off() //Falsey value, turn off.
 
-
 ///Triggered right before the parent light flags change.
 /datum/component/overlay_lighting/proc/on_light_flags_change(atom/source, new_value)
 	var/atom/movable/movable_parent = parent
@@ -365,7 +361,6 @@
 	else if(movable_parent.light_flags & LIGHT_ATTACHED) //Lost the LIGHT_ATTACHED property.
 		overlay_lighting_flags &= ~LIGHTING_ATTACHED
 		set_parent_attached_to(null)
-
 
 ///Toggles the light on.
 /datum/component/overlay_lighting/proc/turn_on()
