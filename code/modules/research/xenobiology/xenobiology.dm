@@ -477,7 +477,7 @@
 /obj/item/slime_extract/adamantine
 	name = "adamantine slime extract"
 	icon_state = "adamantine slime extract"
-	effectmod = "crystalline"
+	effectmod = "crystalized"
 	activate_reagents = list(/datum/reagent/toxin/plasma)
 	research = SLIME_RESEARCH_TIER_5
 
