@@ -323,7 +323,7 @@
 							/datum/reagent/consumable/ethanol/bug_spray = -4)
 
 	virus_suspectibility = 0
-	resulting_atoms = list(/mob/living/simple_animal/hostile/cockroach = 5)
+	resulting_atoms = list(/mob/living/simple_animal/cockroach = 5)
 
 /datum/micro_organism/cell_line/pine
 	desc = "Coniferous plant cells"
