@@ -50,3 +50,4 @@
 #define NES_BUTTON_NAME "Button Name"
 #define NES_ICON "Icon"
 #define NES_COLOR "Color"
+#define NES_HOST_AGGRESSION "Host Aggression"

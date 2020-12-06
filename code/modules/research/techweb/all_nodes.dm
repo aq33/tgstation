@@ -1146,7 +1146,7 @@
 	display_name = "Hazardous Nanite Programming"
 	description = "Extremely advanced Nanite programs with the potential of being extremely dangerous."
 	prereq_ids = list("nanite_harmonic", "alientech")
-	design_ids = list("spreading_nanites","mindcontrol_nanites","mitosis_nanites")
+	design_ids = list("spreading_nanites","mindcontrol_nanites","mitosis_nanites","nanoswarm_nanites")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000, TECHWEB_POINT_TYPE_NANITES = 4000)
 	export_price = 15000
 

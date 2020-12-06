@@ -424,6 +424,13 @@
 	program_type = /datum/nanite_program/kunai
 	category = list("Weaponized Nanites")
 
+/datum/design/nanites/nanophage
+	name = "Nano Swarm"
+	desc = "When triggered, nanites gather in host's stomach, forming nanophages - small, pre-programmed drones, then quickly get coughed out."
+	id = "nanoswarm_nanites"
+	program_type = /datum/nanite_program/nanophage
+	category = list("Weaponized Nanites")
+
 ////////////////////SUPPRESSION NANITES//////////////////////////////////////
 
 /datum/design/nanites/shock

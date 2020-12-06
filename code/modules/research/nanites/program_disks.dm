@@ -87,6 +87,9 @@
 /obj/item/disk/nanite_program/kunai
 	program_type = /datum/nanite_program/kunai
 
+/obj/item/disk/nanite_program/nanophage
+	program_type = /datum/nanite_program/nanophage
+
 /obj/item/disk/nanite_program/coagulating
 	program_type = /datum/nanite_program/coagulating
 

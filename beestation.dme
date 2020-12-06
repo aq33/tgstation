@@ -2853,6 +2853,7 @@
 #include "code\modules\research\nanites\nanite_cloud_controller.dm"
 #include "code\modules\research\nanites\nanite_hijacker.dm"
 #include "code\modules\research\nanites\nanite_misc_items.dm"
+#include "code\modules\research\nanites\nanite_misc_mobs.dm"
 #include "code\modules\research\nanites\nanite_program_hub.dm"
 #include "code\modules\research\nanites\nanite_programmer.dm"
 #include "code\modules\research\nanites\nanite_programs.dm"
