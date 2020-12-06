@@ -11,7 +11,6 @@
 	melee_damage = 1
 	attacktext = "bites"
 	attack_sound = 'sound/misc/nanobuzz.ogg'
-	deathsound = 'sound/misc/nanodead.ogg'
 	response_help  = "shoos"
 	response_disarm = "swats away"
 	response_harm   = "squashes"
@@ -32,6 +31,8 @@
 	mob_biotypes = list(MOB_ROBOTIC)
 	movement_type = FLYING
 	ventcrawler = VENTCRAWLER_ALWAYS
+	deathsound = 'sound/misc/nanodead.ogg'
+	deathmessage = "dissolves into a fine, metallic dust..."
 
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
