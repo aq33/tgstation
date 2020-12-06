@@ -81,6 +81,9 @@ GLOBAL_LIST_EMPTY(silo_access_logs)
 	if(default_deconstruction_crowbar(W))
 		return TRUE
 
+	if(user.a_intent == INTENT_HARM) //so we can hit the machine
+		return ..()
+
 
 /obj/machinery/ore_silo/ui_interact(mob/user)
 	user.set_machine(src)
