@@ -64,3 +64,14 @@
 	action = alert(src, "Proba naprawy tgui4 zakonczona.", "", "OK")
 	if(action == "OK")
 		return
+
+/client/verb/doompit()
+	set name = "DOOMP IT"
+	set category = "OOC"
+	var/action
+	log_timer("TIMERS LOGGED:\n")
+	for(var/x in SStimer.timer_id_dict)
+		log_timer("[SStimer.timer_id_dict[x]]\n")
+	action = alert(src, "He bot.", "", "OK")
+	if(action == "OK")
+		return

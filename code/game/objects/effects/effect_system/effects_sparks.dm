@@ -24,9 +24,11 @@
 	light_range = 2
 	light_power = 0.5
 	light_color = LIGHT_COLOR_FIRE
+	var/sparks_cooldown
 
 /obj/effect/particle_effect/sparks/Initialize()
 	..()
+	sparks_cooldown = world.time
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/effect/particle_effect/sparks/LateInitialize()

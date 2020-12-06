@@ -197,6 +197,9 @@
 /proc/log_mapping(text)
 	WRITE_LOG(GLOB.world_map_error_log, text)
 
+/proc/log_timer(text)
+	WRITE_LOG(GLOB.timer, text)
+
 /* ui logging */
 /proc/log_tgui(user_or_client, text)
 	var/entry = ""
