@@ -103,7 +103,7 @@
 		recharging = TRUE
 	var/obj/item/stock_parts/cell/C = A.get_cell()
 	var/obj/O
-	var/coefficient = 1
+	var/coefficient = 0.5 //you trade convinience for efficiency
 	if(istype(A, /obj/item/gun/energy))
 		to_chat(user,"Error unable to interface with device")
 		return FALSE
