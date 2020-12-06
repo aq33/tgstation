@@ -129,7 +129,7 @@
 /datum/nanite_program/nanojutsu
 	name = "Nanojutsu Teaching Program"
 	desc = "The nanites stimulate host's brain, giving them the ability to use the martial art of Nanojutsu."
-	use_rate = 2.5
+	use_rate = 3.5
 	rogue_types = list(/datum/nanite_program/brain_decay, /datum/nanite_program/brain_misfire)
 	var/datum/martial_art/nanojutsu/martial
 

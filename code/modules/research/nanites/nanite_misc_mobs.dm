@@ -9,7 +9,9 @@
 	speak_emote = list("states")
 	turns_per_move = 0
 	melee_damage = 1
-	attacktext = "stings"
+	attacktext = "bites"
+	attack_sound = 'sound/misc/nanobuzz.ogg'
+	deathsound = 'sound/misc/nanodead.ogg'
 	response_help  = "shoos"
 	response_disarm = "swats away"
 	response_harm   = "squashes"
@@ -40,7 +42,12 @@
 	AddComponent(/datum/component/swarming)
 	addtimer(CALLBACK(src, .proc/death), 15 SECONDS)
 
-/mob/living/simple_animal/hostile/nanophage/proc/nano_animation()
-	flick("nanophage[rand(1,8)]", src)
+/mob/living/simple_animal/hostile/nanophage/emp_act(severity)
+	. = ..()
+	if(. & EMP_PROTECT_SELF)
+		return
+	death()
 
-//TODO: animacja, umieranie od ataku, reakcja na emp
+/mob/living/simple_animal/hostile/nanophage/Life()
+	.=..()
+	flick("nanophage[rand(1,8)]", src)

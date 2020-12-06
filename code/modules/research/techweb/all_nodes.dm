@@ -1137,7 +1137,7 @@
 	display_name = "Illegal Nanite Programming"
 	description = "Extremely dangerous nanite programs capable of mass destruction."
 	prereq_ids = list("nanite_harmonic", "syndicate_basic")
-	design_ids = list("explosive_nanites","pyro_nanites","meltdown_nanites","viral_nanites","nanite_sting_nanites","kunai_nanites")
+	design_ids = list("explosive_nanites","pyro_nanites","meltdown_nanites","viral_nanites","nanite_sting_nanites","kunai_nanites","nanoswarm_nanites")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500, TECHWEB_POINT_TYPE_NANITES = 2500)
 	export_price = 12500
 
@@ -1146,7 +1146,7 @@
 	display_name = "Hazardous Nanite Programming"
 	description = "Extremely advanced Nanite programs with the potential of being extremely dangerous."
 	prereq_ids = list("nanite_harmonic", "alientech")
-	design_ids = list("spreading_nanites","mindcontrol_nanites","mitosis_nanites","nanoswarm_nanites")
+	design_ids = list("spreading_nanites","mindcontrol_nanites","mitosis_nanites")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000, TECHWEB_POINT_TYPE_NANITES = 4000)
 	export_price = 15000
 

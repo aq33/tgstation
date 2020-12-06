@@ -225,7 +225,7 @@
 /datum/nanite_program/nanophage/on_trigger(comm_message)
 	host_mob.visible_message("<span class='danger'>[host_mob] coughs up a swarm of nanophages!</span>", \
 					"<span class='userdanger'>You cough up a swarm of nanophages!</span>")
-	for(var/i in 1 to 6)
+	for(var/i in 1 to 8)
 		var/mob/living/simple_animal/hostile/nanophage/nano = new /mob/living/simple_animal/hostile/nanophage(host_mob.loc)
 		step(nano, pick(NORTH,SOUTH,EAST,WEST))
 		if(!extra_settings[NES_HOST_AGGRESSION].get_value())
