@@ -3,7 +3,7 @@
 #define CIRCULATOR_HOT 0
 #define CIRCULATOR_COLD 1
 
-/obj/machinery/atmospherics/components/binary/circulator
+/obj/machinery/atmospherics/components/binary/circulator //stop, nerfhammer time
 	name = "circulator/heat exchanger"
 	desc = "A gas circulator pump and heat exchanger."
 	icon_state = "circ-off-0"
@@ -26,7 +26,25 @@
 
 /obj/machinery/atmospherics/components/binary/circulator/Initialize(mapload)
 	.=..()
-	component_parts = list(new /obj/item/circuitboard/machine/circulator)
+	component_parts = list(new /obj/item/circuitboard/machine/circulator,
+		new /obj/item/stock_parts/matter_bin,
+		new /obj/item/stock_parts/matter_bin,
+		new /obj/item/stock_parts/matter_bin,
+		new /obj/item/stock_parts/matter_bin,
+		new /obj/item/stock_parts/manipulator,
+		new /obj/item/stock_parts/manipulator,
+		new /obj/item/stock_parts/manipulator,
+		new /obj/item/stock_parts/manipulator,
+		new /obj/item/stack/sheet/plasteel,
+		new /obj/item/stack/sheet/plasteel,
+		new /obj/item/stack/sheet/plasteel,
+		new /obj/item/stack/sheet/plasteel,
+		new /obj/item/stack/sheet/plasteel,
+		new /obj/item/stack/cable_coil,
+		new /obj/item/stack/cable_coil,
+		new /obj/item/stack/cable_coil,
+		new /obj/item/stack/cable_coil,
+		new /obj/item/stack/cable_coil)
 
 /obj/machinery/atmospherics/components/binary/circulator/ComponentInitialize()
 	. = ..()
@@ -45,8 +63,8 @@
 	var/output_starting_pressure = air1.return_pressure()
 	var/input_starting_pressure = air2.return_pressure()
 
-	if(output_starting_pressure >= input_starting_pressure-10)
-		//Need at least 10 KPa difference to overcome friction in the mechanism
+	if(output_starting_pressure >= input_starting_pressure-100)
+		//Need at least 100 KPa difference to overcome friction in the mechanism
 		last_pressure_delta = 0
 		return null
 

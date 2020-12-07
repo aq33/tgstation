@@ -1,4 +1,4 @@
-/obj/machinery/power/generator
+/obj/machinery/power/generator //stop, nerfhammer time
 	name = "thermoelectric generator"
 	desc = "It's a high efficiency thermoelectric generator."
 	icon_state = "teg"
@@ -19,7 +19,20 @@
 	connect_to_network()
 	SSair.atmos_machinery += src
 	update_icon()
-	component_parts = list(new /obj/item/circuitboard/machine/generator)
+	component_parts = list(new /obj/item/circuitboard/machine/generator,
+		new /obj/item/stock_parts/matter_bin,
+		new /obj/item/stock_parts/matter_bin,
+		new /obj/item/stock_parts/scanning_module,
+		new /obj/item/stock_parts/scanning_module,
+		new /obj/item/stock_parts/scanning_module,
+		new /obj/item/stock_parts/scanning_module,
+		new /obj/item/stack/sheet/glass,
+		new /obj/item/stack/sheet/glass,
+		new /obj/item/stack/cable_coil,
+		new /obj/item/stack/cable_coil,
+		new /obj/item/stack/cable_coil,
+		new /obj/item/stack/cable_coil,
+		new /obj/item/stack/cable_coil)
 
 /obj/machinery/power/generator/ComponentInitialize()
 	. = ..()
@@ -63,14 +76,14 @@
 
 			var/delta_temperature = hot_air.return_temperature() - cold_air.return_temperature()
 
-
 			if(delta_temperature > 0 && cold_air_heat_capacity > 0 && hot_air_heat_capacity > 0)
-				var/efficiency = 0.65
+				var/efficiency = 0.35
 
 				var/energy_transfer = delta_temperature*hot_air_heat_capacity*cold_air_heat_capacity/(hot_air_heat_capacity+cold_air_heat_capacity)
 
 				var/heat = energy_transfer*(1-efficiency)
-				lastgen += energy_transfer*efficiency
+				if(delta_temperature > 1500)
+					lastgen += (energy_transfer*(efficiency/2))/20 //defines output
 
 				hot_air.set_temperature(hot_air.return_temperature() - energy_transfer/hot_air_heat_capacity)
 				cold_air.set_temperature(cold_air.return_temperature() + heat/cold_air_heat_capacity)
@@ -97,11 +110,19 @@
 
 /obj/machinery/power/generator/process()
 	//Setting this number higher just makes the change in power output slower, it doesnt actualy reduce power output cause **math**
-	var/power_output = round(lastgen / 10)
+	var/power_output = round(lastgen / 20)
 	add_avail(power_output)
 	lastgenlev = power_output
 	lastgen -= power_output
+
+	if(power_output > 300000)
+		playsound(src, 'sound/machines/sm/loops/delamming.ogg', 50, FALSE, 10)
+		if(power_output > 400000)
+			var/turf/T = get_turf(src)
+			explosion(T, 0, 2, 3, 4, adminlog = TRUE, ignorecap = FALSE, flame_range = 5, silent = FALSE, smoke = FALSE)
+
 	..()
+
 
 /obj/machinery/power/generator/proc/get_menu(include_link = TRUE)
 	var/t = ""
