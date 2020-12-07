@@ -170,3 +170,33 @@
 
 /obj/item/disk/nanite_program/zip
 	program_type = /datum/nanite_program/protocol/zip
+
+/obj/item/disk/nanite_program/species
+	program_type = /datum/nanite_program/sensor/species
+
+/obj/item/disk/nanite_program/voice
+	program_type = /datum/nanite_program/sensor/voice
+
+/obj/item/disk/nanite_program/damage
+	program_type = /datum/nanite_program/sensor/damage
+
+/obj/item/disk/nanite_program/impact
+	program_type = /datum/nanite_program/sensor/impact
+
+/obj/item/disk/nanite_program/health
+	program_type = /datum/nanite_program/sensor/health
+
+/obj/item/disk/nanite_program/crit
+	program_type = /datum/nanite_program/sensor/crit
+
+/obj/item/disk/nanite_program/nanite_volume
+	program_type = /datum/nanite_program/sensor/nanite_volume
+
+/obj/item/disk/nanite_program/death
+	program_type = /datum/nanite_program/sensor/death
+
+/obj/item/disk/nanite_program/relay_repeat
+	program_type = /datum/nanite_program/sensor/relay_repeat
+
+/obj/item/disk/nanite_program/repeat
+	program_type = /datum/nanite_program/sensor/repeat

@@ -575,6 +575,13 @@
 	program_type = /datum/nanite_program/sensor/species
 	category = list("Sensor Nanites")
 
+/datum/design/nanites/sensor_impact
+	name = "Impact Sensor"
+	desc = "Sends a signal when the nanites detect fluctuations in host's health."
+	id = "sensor_impact_nanites"
+	program_type = /datum/nanite_program/sensor/impact
+	category = list("Sensor Nanites")
+
 ////////////////////NANITE PROTOCOLS//////////////////////////////////////
 //Note about the category name: The UI cuts the last 8 characters from the category name to remove the " Nanites" in the other categories
 //Because of this, Protocols was getting cut down to "P", so i had to add some padding
