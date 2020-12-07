@@ -83,7 +83,7 @@
 
 				var/heat = energy_transfer*(1-efficiency)
 				if(delta_temperature > 1500)
-					lastgen += (energy_transfer*(efficiency/2))/20 //defines output
+					lastgen += (energy_transfer*(efficiency/2))/10 //defines output
 
 				hot_air.set_temperature(hot_air.return_temperature() - energy_transfer/hot_air_heat_capacity)
 				cold_air.set_temperature(cold_air.return_temperature() + heat/cold_air_heat_capacity)
@@ -114,10 +114,15 @@
 	add_avail(power_output)
 	lastgenlev = power_output
 	lastgen -= power_output
+	var/tier = cold_circ.eff + hot_circ.eff
+	for(var/obj/item/stock_parts/matter_bin/MB in component_parts)
+		tier += (abs(MB.rating-1))*1000
+	for(var/obj/item/stock_parts/scanning_module/SM in component_parts)
+		tier += (abs(SM.rating-1))*1000
 
-	if(power_output > 300000)
+	if(power_output > (300000+tier))
 		playsound(src, 'sound/machines/sm/loops/delamming.ogg', 50, FALSE, 10)
-		if(power_output > 400000)
+		if(power_output > (400000+tier))
 			var/turf/T = get_turf(src)
 			explosion(T, 0, 2, 3, 4, adminlog = TRUE, ignorecap = FALSE, flame_range = 5, silent = FALSE, smoke = FALSE)
 
