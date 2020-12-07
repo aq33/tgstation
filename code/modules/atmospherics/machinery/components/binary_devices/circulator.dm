@@ -7,7 +7,7 @@
 	name = "circulator/heat exchanger"
 	desc = "A gas circulator pump and heat exchanger."
 	icon_state = "circ-off-0"
-
+	var/eff
 	var/active = FALSE
 
 	var/last_pressure_delta = 0
@@ -208,7 +208,7 @@
 	update_icon()
 
 obj/machinery/atmospherics/components/binary/circulator/RefreshParts()
-	var/eff = 0
+	eff = 0
 	for(var/obj/item/stock_parts/matter_bin/ccMB in component_parts)
 		eff += (abs(ccMB.rating-1))*1000
 	for(var/obj/item/stock_parts/manipulator/ccM in component_parts)
