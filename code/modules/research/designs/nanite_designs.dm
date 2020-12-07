@@ -503,6 +503,13 @@
 	program_type = /datum/nanite_program/comm/speech
 	category = list("Suppression Nanites")
 
+/datum/design/nanites/movement
+	name = "Forced Locomotion"
+	desc = "The nanites force the host to walk in a pre-programmed direction when triggered."
+	id = "movement_nanites"
+	program_type = /datum/nanite_program/movement
+	category = list("Suppression Nanites")
+
 /datum/design/nanites/hallucination
 	name = "Hallucination"
 	desc = "The nanites make the host see and hear things that aren't real."

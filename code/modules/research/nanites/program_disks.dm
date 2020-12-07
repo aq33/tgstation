@@ -132,6 +132,9 @@
 /obj/item/disk/nanite_program/pacifying
 	program_type = /datum/nanite_program/pacifying
 
+/obj/item/disk/nanite_program/movement
+	program_type = /datum/nanite_program/movement
+
 /obj/item/disk/nanite_program/glitch
 	program_type = /datum/nanite_program/glitch
 
