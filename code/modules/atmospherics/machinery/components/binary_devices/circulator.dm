@@ -59,11 +59,13 @@
 
 	var/datum/gas_mixture/air1 = airs[1]
 	var/datum/gas_mixture/air2 = airs[2]
-
+	var/fric = 0
+	for(var/obj/item/stock_parts/manipulator/M in component_parts)
+		fric = M.rating
 	var/output_starting_pressure = air1.return_pressure()
 	var/input_starting_pressure = air2.return_pressure()
 
-	if(output_starting_pressure >= input_starting_pressure-100)
+	if(output_starting_pressure >= input_starting_pressure-(100/fric))
 		//Need at least 100 KPa difference to overcome friction in the mechanism
 		last_pressure_delta = 0
 		return null
