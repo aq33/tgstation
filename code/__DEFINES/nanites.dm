@@ -51,3 +51,5 @@
 #define NES_ICON "Icon"
 #define NES_COLOR "Color"
 #define NES_HOST_AGGRESSION "Host Aggression"
+#define NES_NANO_RECEIVE "Receive Messages"
+#define NES_NANO_SEND "Send Messages"

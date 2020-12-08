@@ -30,6 +30,9 @@
 /obj/item/disk/nanite_program/monitoring
 	program_type = /datum/nanite_program/monitoring
 
+/obj/item/disk/nanite_program/nanolink
+	program_type = /datum/nanite_program/nanolink
+
 /obj/item/disk/nanite_program/cloud_change
 	program_type = /datum/nanite_program/cloud_change
 

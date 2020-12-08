@@ -53,6 +53,13 @@
 	program_type = /datum/nanite_program/monitoring
 	category = list("Utility Nanites")
 
+/datum/design/nanites/nanolink
+	name = "Nanolink"
+	desc = "The nanites gain the ability to transfer messages between other nano clusters connected to the Nanolink, using the \".z\" key."
+	id = "nanolink_nanites"
+	program_type = /datum/nanite_program/nanolink
+	category = list("Utility Nanites")
+
 /datum/design/nanites/self_scan
 	name = "Host Scan"
 	desc = "The nanites display a detailed readout of a body scan to the host."
