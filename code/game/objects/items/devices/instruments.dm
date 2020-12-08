@@ -245,6 +245,16 @@
 	throw_range = 15
 	hitsound = 'sound/items/bikehorn.ogg'
 
+/obj/item/instrument/random
+	name = "random instrument"
+	desc = "Uh oh!"
+
+/obj/item/instrument/random/Initialize()
+	..()
+	var/T = pick(subtypesof(/obj/item/instrument))
+	new T(loc)
+	return INITIALIZE_HINT_QDEL
+
 ///
 
 /obj/item/choice_beacon/music

@@ -29044,6 +29044,7 @@
 "bdn" = (
 /obj/structure/table/wood,
 /obj/item/storage/crayons,
+/obj/item/instrument/piano_synth,
 /obj/item/storage/crayons,
 /obj/item/bikehorn/rubberducky,
 /obj/structure/sign/poster/contraband/clown{
@@ -45182,6 +45183,7 @@
 /area/crew_quarters/locker)
 "bJO" = (
 /obj/structure/table,
+/obj/item/instrument/random,
 /obj/item/storage/firstaid/regular,
 /obj/structure/cable,
 /turf/open/floor/plasteel,
