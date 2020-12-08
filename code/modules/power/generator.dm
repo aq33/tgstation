@@ -50,7 +50,7 @@
 	else
 		cut_overlays()
 
-		var/L = min(round(lastgenlev/500000),11)
+		var/L = min(round(lastgenlev/75000),11)
 		if(L != 0)
 			add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
 
