@@ -415,6 +415,5 @@
 
 /datum/nanite_program/nanolink/disable_passive_effect()
 	. = ..()
-	if(REMOVE_TRAIT(host_mob, TRAIT_NANORECEIVE, "nanites"))
-		to_chat(host_mob, "<span class='swarmer'><b>\[NANOLINK\]</b> Disconnecting from the Nanolink...</span>")
+	REMOVE_TRAIT(host_mob, TRAIT_NANORECEIVE, "nanites")
 	REMOVE_TRAIT(host_mob, TRAIT_NANOSEND, "nanites")
