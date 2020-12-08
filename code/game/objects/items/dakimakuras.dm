@@ -25,7 +25,7 @@
 		"Casca",
 		"Centorea",
 		"Chaika",
-		"Coder"
+		"Coder",
 		"Drone",
 		"Elisabeth",
 		"Fillia",
