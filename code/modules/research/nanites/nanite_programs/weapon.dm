@@ -208,7 +208,6 @@
 		to_chat(C, "<span class='notice'>A kunai suddenly appears below you!</span>")
 		return
 	to_chat(C, "<span class='notice'>A kunai suddenly appears in your hand!</span>")
-	C.throw_mode_on()
 
 /datum/nanite_program/nanophage
 	name = "Nano Swarm"
