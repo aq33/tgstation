@@ -17,6 +17,7 @@
 	level = 1
 	layer = GAS_SCRUBBER_LAYER
 
+	var/datum/looping_sound/vent/soundloop
 	var/id_tag = null
 	var/pump_direction = RELEASING
 
@@ -38,6 +39,7 @@
 
 /obj/machinery/atmospherics/components/unary/vent_pump/New()
 	..()
+	soundloop = new(list(src), FALSE)
 	if(!id_tag)
 		id_tag = assign_uid_vents()
 
@@ -61,32 +63,40 @@
 
 	if(welded)
 		icon_state = "vent_welded"
+		soundloop.stop()
 		return
 
 	if(!nodes[1] || !on || !is_operational())
 		if(icon_state == "vent_welded")
 			icon_state = "vent_off"
+			soundloop.stop()
 			return
 
 		if(pump_direction & RELEASING)
 			icon_state = "vent_out-off"
+			soundloop.stop()
 		else // pump_direction == SIPHONING
 			icon_state = "vent_in-off"
+			soundloop.stop()
 		return
 
 	if(icon_state == ("vent_out-off" || "vent_in-off" || "vent_off"))
 		if(pump_direction & RELEASING)
 			icon_state = "vent_out"
+			soundloop.start()
 			flick("vent_out-starting", src)
 		else // pump_direction == SIPHONING
 			icon_state = "vent_in"
+			soundloop.start()
 			flick("vent_in-starting", src)
 		return
 
 	if(pump_direction & RELEASING)
 		icon_state = "vent_out"
+		soundloop.start()
 	else // pump_direction == SIPHONING
 		icon_state = "vent_in"
+		soundloop.start()
 
 /obj/machinery/atmospherics/components/unary/vent_pump/process_atmos()
 	..()

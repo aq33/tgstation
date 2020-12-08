@@ -51,3 +51,52 @@
 	mid_length = 10
 	end_sound = 'sound/machines/microwave/microwave-end.ogg'
 	volume = 90
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/datum/looping_sound/thermal
+	mid_length = 2
+	mid_sounds = list('sound/machines/thermal/thermal_mid.ogg'=1)
+	volume = 20
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/datum/looping_sound/computer
+	start_sound = 'sound/machines/electronics/computer_start.ogg'
+	start_length = 5
+	mid_sounds = list('sound/machines/electronics/computer_mid1.ogg'=1, 'sound/machines/electronics/computer_mid2.ogg'=1, 'sound/machines/electronics/computer_mid3.ogg'=1, 'sound/machines/electronics/computer_mid4.ogg'=1, 'sound/machines/electronics/computer_mid5.ogg'=1)
+	mid_length = 5
+	end_sound = 'sound/machines/electronics/computer_stop.ogg'
+	volume = 15
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/datum/looping_sound/lathe
+	start_sound = 'sound/machines/electronics/lathe_start.ogg'
+	start_length = 2
+	mid_sounds = list('sound/machines/electronics/lathe_idle.ogg'=10, 'sound/machines/electronics/lathe_working.ogg'=1, 'sound/machines/electronics/lathe_working2.ogg'=1, 'sound/machines/electronics/lathe_working3.ogg'=1, 'sound/machines/electronics/lathe_working4.ogg'=1)
+	mid_length = 2
+	end_sound = 'sound/machines/electronics/computer_stop.ogg'
+	volume = 15
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/datum/looping_sound/smes
+	start_sound = 'sound/machines/electronics/transformator_start.ogg'
+	start_length = 2
+	mid_sounds = list('sound/machines/electronics/transformator_mid.ogg'=1)
+	mid_length = 2
+	end_sound = 'sound/machines/electronics/transformator_stop.ogg'
+	volume = 15
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+datum/looping_sound/vent
+	start_sound = 'sound/machines/thermal/vent_start.ogg'
+	start_length = 1
+	mid_sounds = list('sound/machines/thermal/vent_mid.ogg'=1)
+	mid_length = 4
+	end_sound = 'sound/machines/thermal/vent_stop.ogg'
+	volume = 15
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

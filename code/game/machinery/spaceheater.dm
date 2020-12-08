@@ -15,7 +15,7 @@
 	circuit = /obj/item/circuitboard/machine/space_heater
 
 
-
+	var/datum/looping_sound/thermal/soundloop
 	var/obj/item/stock_parts/cell/cell
 	var/on = FALSE
 	var/mode = HEATER_MODE_STANDBY
@@ -32,6 +32,7 @@
 
 /obj/machinery/space_heater/Initialize()
 	. = ..()
+	soundloop = new(list(src), FALSE)
 	cell = new(src)
 	update_icon()
 
@@ -79,6 +80,7 @@
 		if(!istype(L))
 			if(mode != HEATER_MODE_STANDBY)
 				mode = HEATER_MODE_STANDBY
+				soundloop.stop()
 				update_icon()
 			return
 
@@ -86,9 +88,11 @@
 
 		var/newMode = HEATER_MODE_STANDBY
 		if(setMode != HEATER_MODE_COOL && env.return_temperature() < targetTemperature - temperatureTolerance)
+			soundloop.start()
 			newMode = HEATER_MODE_HEAT
 		else if(setMode != HEATER_MODE_HEAT && env.return_temperature() > targetTemperature + temperatureTolerance)
 			newMode = HEATER_MODE_COOL
+			soundloop.start()
 
 		if(mode != newMode)
 			mode = newMode

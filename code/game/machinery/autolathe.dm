@@ -13,6 +13,7 @@
 	circuit = /obj/item/circuitboard/machine/autolathe
 	layer = BELOW_OBJ_LAYER
 
+	var/datum/looping_sound/lathe/soundloop
 	var/operating = FALSE
 	var/list/L = list()
 	var/list/LL = list()
@@ -57,6 +58,7 @@
 
 /obj/machinery/autolathe/Destroy()
 	QDEL_NULL(wires)
+	QDEL_NULL(soundloop)
 	return ..()
 
 /obj/machinery/autolathe/ui_interact(mob/user)
@@ -196,6 +198,7 @@
 				busy = TRUE
 				use_power(power)
 				icon_state = "autolathe_n"
+				soundloop.start()
 				var/time = is_stack ? 32 : (32 * coeff * multiplier) ** 0.8
 				addtimer(CALLBACK(src, .proc/make_item, power, materials_used, custom_materials, multiplier, coeff, is_stack), time)
 			else
@@ -241,6 +244,7 @@
 
 	icon_state = "autolathe"
 	busy = FALSE
+	soundloop.stop()
 	updateDialog()
 
 /obj/machinery/autolathe/RefreshParts()
@@ -427,6 +431,7 @@
 /obj/machinery/autolathe/hacked/Initialize()
 	. = ..()
 	adjust_hacked(TRUE)
+	soundloop = new(list(src), FALSE)
 
 //Called when the object is constructed by an autolathe
 //Has a reference to the autolathe so you can do !!FUN!! things with hacked lathes
