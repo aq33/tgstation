@@ -38,7 +38,7 @@
 		return
 	..()
 
-/mob/living/simple_animal/hostile/cockroach/add_cell_sample()
+/mob/living/simple_animal/cockroach/add_cell_sample()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_COCKROACH, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 7)
 
 /mob/living/simple_animal/cockroach/Crossed(var/atom/movable/AM)

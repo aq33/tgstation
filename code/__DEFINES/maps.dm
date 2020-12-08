@@ -36,7 +36,7 @@ require only minor tweaks.
 #define ZTRAIT_AWAY "Away Mission"
 #define ZTRAIT_SPACE_RUINS "Space Ruins"
 #define ZTRAIT_LAVA_RUINS "Lava Ruins"
-#define ZTRAIT_LAVA_JUNGLE_RUINS "Lava Jungle Ruins" //Skyrat change
+#define ZTRAIT_LAVA_JUNGLE_RUINS "Lava Jungle Ruins"
 #define ZTRAIT_POCKETDIM "Pocket Dimension"
 
 /// number - bombcap is multiplied by this before being applied to bombs
@@ -67,7 +67,6 @@ require only minor tweaks.
 #define ZTRAITS_SPACE list(ZTRAIT_LINKAGE = CROSSLINKED, ZTRAIT_SPACE_RUINS = TRUE)
 #define ZTRAITS_LAVALAND list(\
 	ZTRAIT_MINING = TRUE, \
-	ZTRAIT_ASHSTORM = TRUE, \
 	ZTRAIT_LAVA_RUINS = TRUE, \
 	ZTRAIT_BOMBCAP_MULTIPLIER = 5, \
 	ZTRAIT_DOWN = -1, \

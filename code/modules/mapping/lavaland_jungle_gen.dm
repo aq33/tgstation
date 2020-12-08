@@ -179,7 +179,6 @@
 		AFFECTED_TURFS |= spawn_patch_like_gen(target_z)
 	spawn_river_like_gen(target_z, 3, turf_type = /turf/open/floor/plating/smooth/dirt/lavaland_jungle)
 	spawn_river_like_gen(target_z, 3)
-	spawn_river_like_gen(target_z, 2, turf_type = /turf/open/lava/smooth/lava_land_surface)
 	for(var/turf/T in AFFECTED_TURFS)
 		if(istype(T, /turf/open/floor/plating/smooth/grass/lavaland_jungle))
 			spawn_lavaland_jungle_flora(T)
