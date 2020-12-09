@@ -22,7 +22,7 @@
 	mid_sounds = list('sound/machines/generator/generator_mid1.ogg'=1, 'sound/machines/generator/generator_mid2.ogg'=1, 'sound/machines/generator/generator_mid3.ogg'=1)
 	mid_length = 4
 	end_sound = 'sound/machines/generator/generator_end.ogg'
-	volume = 40
+	volume = 30
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -67,7 +67,7 @@
 	mid_sounds = list('sound/machines/electronics/computer_mid1.ogg'=1, 'sound/machines/electronics/computer_mid2.ogg'=1, 'sound/machines/electronics/computer_mid3.ogg'=1, 'sound/machines/electronics/computer_mid4.ogg'=1, 'sound/machines/electronics/computer_mid5.ogg'=1)
 	mid_length = 5
 	end_sound = 'sound/machines/electronics/computer_stop.ogg'
-	volume = 15
+	volume = 12
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -78,6 +78,7 @@
 	mid_length = 2
 	end_sound = 'sound/machines/electronics/computer_stop.ogg'
 	volume = 15
+	extra_range = 2
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -88,6 +89,7 @@
 	mid_length = 2
 	end_sound = 'sound/machines/electronics/transformator_stop.ogg'
 	volume = 15
+	extra_range = 3
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -97,6 +99,7 @@ datum/looping_sound/vent
 	mid_sounds = list('sound/machines/thermal/vent_mid.ogg'=1)
 	mid_length = 4
 	end_sound = 'sound/machines/thermal/vent_stop.ogg'
-	volume = 15
+	volume = 5
+	extra_range = 2
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

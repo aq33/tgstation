@@ -14,7 +14,6 @@
 	level = 1
 	layer = GAS_SCRUBBER_LAYER
 
-	var/datum/looping_sound/vent/soundloop
 	var/id_tag = null
 	var/scrubbing = SCRUBBING //0 = siphoning, 1 = scrubbing
 
@@ -32,7 +31,6 @@
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/New()
 	..()
-	soundloop = new(list(src), FALSE)
 	if(!id_tag)
 		id_tag = assign_uid_vents()
 
@@ -42,7 +40,6 @@
 			filter_types += gas_id2path(f)
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/Destroy()
-	QDEL_NULL(soundloop)
 	var/area/A = get_area(src)
 	if (A)
 		A.air_scrub_names -= id_tag
@@ -77,24 +74,19 @@
 
 	if(welded)
 		icon_state = "scrub_welded"
-		soundloop.stop()
 		return
 
 	if(!nodes[1] || !on || !is_operational())
 		icon_state = "scrub_off"
-		soundloop.stop()
 		return
 
 	if(scrubbing & SCRUBBING)
 		if(widenet)
 			icon_state = "scrub_wide"
-			soundloop.start()
 		else
 			icon_state = "scrub_on"
-			soundloop.start()
 	else //scrubbing == SIPHONING
 		icon_state = "scrub_purge"
-		soundloop.start()
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/proc/set_frequency(new_frequency)
 	SSradio.remove_object(src, frequency)

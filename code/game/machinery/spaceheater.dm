@@ -62,8 +62,10 @@
 /obj/machinery/space_heater/update_icon()
 	if(on)
 		icon_state = "sheater-[mode]"
+		soundloop.start()
 	else
 		icon_state = "sheater-off"
+		soundloop.stop()
 
 	cut_overlays()
 	if(panel_open)
@@ -80,7 +82,6 @@
 		if(!istype(L))
 			if(mode != HEATER_MODE_STANDBY)
 				mode = HEATER_MODE_STANDBY
-				soundloop.stop()
 				update_icon()
 			return
 
@@ -88,11 +89,9 @@
 
 		var/newMode = HEATER_MODE_STANDBY
 		if(setMode != HEATER_MODE_COOL && env.return_temperature() < targetTemperature - temperatureTolerance)
-			soundloop.start()
 			newMode = HEATER_MODE_HEAT
 		else if(setMode != HEATER_MODE_HEAT && env.return_temperature() > targetTemperature + temperatureTolerance)
 			newMode = HEATER_MODE_COOL
-			soundloop.start()
 
 		if(mode != newMode)
 			mode = newMode
