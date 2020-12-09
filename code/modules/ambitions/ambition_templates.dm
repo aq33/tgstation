@@ -16,10 +16,10 @@
 	var/list/tips
 
 /datum/ambition_template/blank
-	name = "Blank"
+	name = "Pusty"
 
 /datum/ambition_template/money_problems
-	name = "Money Problems"
-	narrative = "In need of money for personal reasons, tired of living like a drone, for measly wages, you're out to get some money to satisfy your needs and debts!"
-	objectives = list("Acquire 20,000 credits.")
-	tips = list("You should add an objective on your main money making plan!" , "You could buy a gun and mug people, but make sure to conceal your identity, you can do this with a mask from a chameleon kit, and agent ID, or you'll risk being wanted quite quickly", "Setting up a shop is not a bad idea! Consider partnering up with cargo or science people for goods or implants", "If you're feeling brave you can bust the vault up!")
+	name = "Problemy Finansowe"
+	narrative = "W potrzebie przypływu gotówki na własne zachcianki, zmęczony życiem jak dron, za żałosne pensje, masz zamiar zdobyć jakiś szmal by w końcu sobie ulżyć i spłacić długi!"
+	objectives = list("Zdobądź 20,000 kredytów.")
+	tips = list("Spróbuj dodać cel pomagający spełnić twój wielki plan zgromadzenia szmalcu!" , "Możesz dokonać tego kupując broń i rabując ludzi, ale pamiętaj o ukryciu tożsamości. Użyj do tego chameleon kit i agent's ID, inaczej zaryzykujesz bycie poszukiwanym.", "Założenie sklepu też nie jest złym pomysłem! Przemyśl współpracę z działem zaopatrzenia i naukowym w celu uzyskania dóbr, czy implantów.", "Jeśli czujesz się wystarczająco pewnie, możesz nawet dokonać skoku na skarbiec!")

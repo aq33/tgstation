@@ -33,9 +33,9 @@
 	else
 		owner_name = my_mind.current.real_name
 	//Greet our antag player and give him a link to open ambitions!
-	to_chat(my_mind.current, "<span class='boldwarning'>You're a story driven antagonist, this means you'll have to fill ambitions before you start antagonising!</span>")
-	to_chat(my_mind.current, "<span class='boldwarning'>After filling them out you'll get access to your uplink or powers.</span>")
-	to_chat(my_mind.current, "<span class='boldwarning'>Click <a href='?src=[REF(src)];pref=show_ambitions'>here</a> to set your ambitions, or access them at any time from your IC tab.</span>")
+	to_chat(my_mind.current, "<span class='boldwarning'>Twoja postać jest motywowana historią, a to oznacza, że musisz przedstawić swoje ambicje, zanim zaczniesz zachowywać się jak antagonista!</span>")
+	to_chat(my_mind.current, "<span class='boldwarning'>Po wypełnieniu pól poniżej otrzymasz dostęp do specjalnych narzędzi które pomogą Ci w zrealizowaniu twoich celów.</span>")
+	to_chat(my_mind.current, "<span class='boldwarning'>Kliknij <a href='?src=[REF(src)];pref=show_ambitions'>tutaj</a> by ustawić swoje ambicje lub uzyskaj do nich dostęp w każdej chwili w zakładce IC.</span>")
 
 /datum/ambitions/proc/ShowPanel(mob/user, admin_view = FALSE)
 	if(!user || !user.client)
@@ -58,42 +58,42 @@
 		dat += " <a href='?src=[REF(src)];admin_pref=logs'>Logs</a>"
 		dat += "<HR>"
 
-	dat += "<b>Antagonists are supposed to provide excitement and intrigue, drive a story with the crew, and provide fun and interesting experience for people involved. <BR> Remember, it's not about winning or losing, but about the story and interactions, this is a roleplay server.</b><BR><BR>"
-	dat += "<i>Here you write your ambitions for your antagonist round! Ambitions are your motive and what you plan to accomplish throught the round.</i>"
-	dat += "<BR><i>After filling all things out and submitting your ambition, your uplink/powers will unlock.</i>"
-	dat += "<BR><i>If you can't come up with anything, use a <b>template</b>, and if you don't know if your ambition are proper, or too extreme, <b>request admin review</b>.</i>"
-	dat += "<BR><i>You can still edit them post submission.</i>"
-	dat += "<BR><b><font color='#FF0000'>If your ambitions are nonsensical, you may be subjected to an antagonist ban.</font></b>"
+	dat += "<b>Rolą antagonisty jest napędzanie konfliktów, zapewnienie dynamiki rundzie oraz interesujących interakcji. <BR> Pamiętaj, że nie chodzi tu o wygraną czy przegraną, ale o stworzone historie. Gra opiera się na roleplayu.</b><BR><BR>"
+	dat += "<i>W tym miejscu wpisz motywacje swojej postaci! Określ co i w jaki sposób chcesz osiągnąć w tej rundzie.</i>"
+	dat += "<BR><i>Po wypełnieniu i potwierdzeniu swoich ambicji otrzymasz dostęp do specjalnych narzędzi które pomogą Ci w zrealizowaniu twoich celów.</i>"
+	dat += "<BR><i>Jeśli nie możesz niczego wymyślić, użyj <b>szablonu</b>, a jeśli nie wiesz, czy twoje ambicje są odpowiednie lub czy nie są zbyt ekstremalne, <b>poproś administrację o ocenę</b>.</i>"
+	dat += "<BR><i>Możesz nadal edytować motywacje po ich zatwierdzeniu.</i>"
+	dat += "<BR><b><font color='#FF0000'>Jeżeli twoje motywacje są niedorzeczne, możesz otrzymać bana na rolę antagonisty.</font></b>"
 	var/review_link = (is_proper_ambitions() && !admin_review_requested) ? "href='?src=[REF(src)];pref=request_review'" : "class='linkOff'"
 	var/submit_link = "class='linkOff'"
 	if(!is_proper_ambitions())
-		dat += "<BR><center><b>Before you'll be able to submit your ambitions, you need to fill narratives, objectives and intensity.</b></center>"
+		dat += "<BR><center><b>Zanim będziesz mógł potwierdzić swoje ambicje, musisz wypełnić narrację, cele i intensywność.</b></center>"
 	else if(admin_review_requested && !admin_approval)
-		dat += "<BR><center><b>You've requested admin approval, ambitions will automatically be submitted after approval.</b></center>"
+		dat += "<BR><center><b>Wysłałeś prośbe do administratora o sprawdzenie. Ambicje zostaną automatycznie zatwierdzone po ocenie.</b></center>"
 	else if(!submitted)
 		submit_link = "href='?src=[REF(src)];pref=submit'"
 	else
-		dat += "<BR><center><b>You've already submitted your ambitions, but feel free to edit them.</b></center>"
-	dat += "<center><a [submit_link]>Submit</a> <a href='?src=[REF(src)];pref=template'>Choose template</a> <a [review_link]>Request admin review (optional)</a></center>"
+		dat += "<BR><center><b>Już zatwierdziłeś swoje ambicje, ale wciąż możesz je edytować.</b></center>"
+	dat += "<center><a [submit_link]>Zatwierdź</a> <a href='?src=[REF(src)];pref=template'>Wybierz szablon</a> <a [review_link]>Poproś administrację o ocenę (opcjonalne)</a></center>"
 	dat += "<HR>"
 	if(changed_after_approval)
-		dat += "<BR><b><font color='#ffd500'>Some fields were changed after an admin approval.</font></b>"
+		dat += "<BR><b><font color='#ffd500'>Niektóre pozycje zostały zmienione po ocenie administratora.</font></b>"
 	if(last_requested_change)
-		dat += "<BR><b><font color='#ffd500'>Requested changes:</font></b>"
+		dat += "<BR><b><font color='#ffd500'>Proponowane zmiany:</font></b>"
 		dat += "<BR><b><font color='#ffd500'>[last_requested_change]</font></b>"
-		dat += "<BR><a href='?src=[REF(src)];pref=requested_done'>Notify admin that you've done them!</a></b>"
-	dat += "<h3>Narrative:</h3>"
-	dat += "<i>Here you set your narrative. It's the reason on why you're doing antagonistic things. Perhaps you need money for personal reasons, or you were contracted to do someone's dirty work, or want to take down the BigPharma.</i>"
+		dat += "<BR><a href='?src=[REF(src)];pref=requested_done'>Poinformuj administratora o zmianach!</a></b>"
+	dat += "<h3>Narracja:</h3>"
+	dat += "<i>Tutaj ustalasz swoją narrację. To przyczyna dla której wykonujesz nikczemne uczynki. Możliwe że potrzebujesz pieniędzy z przyczyn osobistych, mogłeś zostać zatrudniony do wykonania brudnej roboty, a może chcesz po prostu zniszczyć wszystkich, którzy chcą ci zaszczepić implanty marki Bill Gates.</i>"
 	dat += "<BR><table align='center'; width='100%'; style='background-color:#13171C'><tr><td><center>"
 	if(narrative == "")
-		dat += "<font color='#CCCCFF'><b>Please set your narrative!</b></font>"
+		dat += "<font color='#CCCCFF'><b>Ustaw swój scenariusz!</b></font>"
 	else
 		dat += narrative
-	dat += "</center><center><a href='?src=[REF(src)];pref=set_narrative'>Set your narrative</a></center>"
+	dat += "</center><center><a href='?src=[REF(src)];pref=set_narrative'>Ustaw scenariusz</a></center>"
 	dat += "</td></tr></table>"
 	dat += "<BR>"
-	dat += "<h3>Objectives:</h3>"
-	dat += "<i>Here you add your objectives. Think about them as milestones to your narratives.</i>"
+	dat += "<h3>Cele:</h3>"
+	dat += "<i>Tutaj dodajesz swoje cele. Pomyśl o nich jak o krokach milowych dla swojej niecnej historii.</i>"
 	dat += "<BR><table align='center'; width='100%'; style='background-color:#13171C'>"
 	if(length(objectives))
 		var/even = TRUE
@@ -104,16 +104,16 @@
 			var/bg_color = "#23273C"
 			if(even)
 				bg_color = "#19222C"
-			dat += "<tr style='background-color:[bg_color]'><td><center> * [objectiv] <a href='?src=[REF(src)];pref=edit_objective;index=[index]'>Edit</a> <a href='?src=[REF(src)];pref=remove_objective;index=[index]'>Remove</a></center></td></tr>"
+			dat += "<tr style='background-color:[bg_color]'><td><center> * [objectiv] <a href='?src=[REF(src)];pref=edit_objective;index=[index]'>Edytuj</a> <a href='?src=[REF(src)];pref=remove_objective;index=[index]'>Usuń</a></center></td></tr>"
 	else
-		dat += "<tr><td><center><font color='#CCCCFF'><b>Please add atleast one objective!</b></font></center></td></tr>"
-	dat += "<tr><td><center><a href='?src=[REF(src)];pref=add_objective'>Add new objective</a></center></td></tr>"
+		dat += "<tr><td><center><font color='#CCCCFF'><b>Dodaj przynajmniej jeden cel!</b></font></center></td></tr>"
+	dat += "<tr><td><center><a href='?src=[REF(src)];pref=add_objective'>Dodaj cel</a></center></td></tr>"
 	dat += "</table>"
 	dat += "<BR>"
-	dat += "<h3>Intensity:</h3>"
-	dat += "<i>Set the estimated intensity of your ambitions, this helps the admins gauge on how chaotic a round may be. Please set it accordingly.</i>"
+	dat += "<h3>Intensywność:</h3>"
+	dat += "<i>Ustal przewidywaną intensywność swoich ambicji. To pomoże administratorom przewidzieć jak chaotyczna może być runda. Ustaw ją adekwatnie.</i>"
 	if(intensity == 0)
-		dat += "<BR><center><font color='#CCCCFF'><b>Please set your intensity!</b></font></center>"
+		dat += "<BR><center><font color='#CCCCFF'><b>Ustal intensywność swoich ambicji!</b></font></center>"
 	dat += "<table>"
 	dat += "<tr><td width=15%></td><td width=85%></td></tr>"
 	for(var/i in 1 to 5)
@@ -136,37 +136,37 @@
 		var/spice_color
 		switch(current_spice)
 			if(AMBITION_INTENSITY_STEALTH)
-				spice_name = "Stealth"
-				spice_desc = "Unseen by the majority of players, actions affecting only a small area/group of players."
+				spice_name = "Skryty"
+				spice_desc = "Niewidoczny dla większości graczy, akcje dotykają tylko małego obszaru/grupy graczy."
 				spice_color = "#a6a6a6"
 			if(AMBITION_INTENSITY_MILD)
-				spice_name = "Mild"
-				spice_desc = "Mugging, stealing or vandalism."
+				spice_name = "Łagodny"
+				spice_desc = "Rabowanie, kradzież lub wandalizm."
 				spice_color = "#fcdf03"
 			if(AMBITION_INTENSITY_MEDIUM)
-				spice_name = "Medium"
-				spice_desc = "Assault, manslaughter, severe vandalism, rioting."
+				spice_name = "Umiarkowany"
+				spice_desc = "Napaść, pozbawienie życia, ostry wandalizm, czy zamieszki."
 				spice_color = "#fcb103"
 			if(AMBITION_INTENSITY_SEVERE)
-				spice_name = "Severe"
-				spice_desc = "Murder, grand theft, grand tresspass."
+				spice_name = "Poważny"
+				spice_desc = "Morderstwo, poważne napady i ostre naruszenia prawa."
 				spice_color = "#fc8c03"
 			if(AMBITION_INTENSITY_EXTREME)
-				spice_name = "Extreme"
-				spice_desc = "Bombings, open combat and terrorism."
+				spice_name = "Ekstremalny"
+				spice_desc = "Zamachy, otwarta walka i terroryzm."
 				spice_color = "#fc5603"
 		dat += "<tr style='background-color:[spice_color]'><td><a [spice_link]>[spice_name]</a></td><td><center><i><font color='#000000'><b>[spice_desc]</b></font></i></center></td></tr>"
 	dat += "</table>"
 	dat += "<HR>"
-	dat += "<h3>Note to Admin (optional):</h3>"
-	dat += "<i>If you want to request a review, you can set this to explain your reasoning or what experience you hope to bring to the station.</i>"
+	dat += "<h3>Notatka dla administracji (opcjonalne):</h3>"
+	dat += "<i>Jeżeli chcesz poprosić o ocenę administratora, możesz wypełnić pole poniżej z opisem doświadczeń jakie chcesz zapewnić stacji.</i>"
 	dat += "<BR><table align='center'; width='100%'; style='background-color:#13171C'><tr><td><center>"
 	dat += note_to_admins
-	dat += "</center><BR><center><a href='?src=[REF(src)];pref=edit_admin_note'>Edit your note to admin</a></center>"
+	dat += "</center><BR><center><a href='?src=[REF(src)];pref=edit_admin_note'>Edytuj swoją notatkę dla administracji</a></center>"
 	dat += "</td></tr></table>"
 
 	winshow(usr, "ambition_window", TRUE)
-	var/datum/browser/popup = new(usr, "ambition_window", "<div align='center'>Ambitions</div>", 950, 750)
+	var/datum/browser/popup = new(usr, "ambition_window", "<div align='center'>Ambicje</div>", 950, 750)
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
 	onclose(usr, "ambition_window", src)
@@ -175,9 +175,9 @@
 	if(!user || !user.client)
 		return
 	var/list/dat =  list("<center>")
-	dat += "<i>Templates shown here are mostly ideas for your antagonism, you are encouraged to edit them to fit your character the most.</i>"
-	dat += "<BR><i>Not all of them have all fields, mostly intensity, as it's up to you how you execute a lot of narratives.</i>"
-	dat += "<BR><i>Hopefully those can give you fun ideas on how to do antagonism in the future too!</i>"
+	dat += "<i>Wzory przedstawione tutaj to głównie pomysły dla twojego stylu gry, możesz je dowolnie edytować tak by odpowiadały twojej postaci.</i>"
+	dat += "<BR><i>Nie wszystkie z nich mają wypełnione wszystkie pola, większość z nich jedynie 'intensywność'. To od ciebie zależy jaką wybierzesz narrację.</i>"
+	dat += "<BR><i>Miejmy nadzieję, że to pomoże ci znaleźć ciekawe pomysły na swoje nikczemne czyny w przyszłości!</i>"
 	var/list/available_templates = list()
 	for(var/name in GLOB.ambitions_templates)
 		var/datum/ambition_template/AT = GLOB.ambitions_templates[name]
@@ -196,12 +196,12 @@
 	for(var/temp in available_templates)
 		var/datum/ambition_template/AT = temp
 		dat += "<table align='center'; width='100%'; style='background-color:#13171C'>"
-		dat += "<tr><td><b>[AT.name]</b>  <a href='?src=[REF(src)];temp_pref=choose;name=[AT.name]'>Choose</a></td></tr>"
+		dat += "<tr><td><b>[AT.name]</b>  <a href='?src=[REF(src)];temp_pref=choose;name=[AT.name]'>Wybierz</a></td></tr>"
 		if(AT.narrative != "")
-			dat += "<tr style='background-color:#21526b'><td>Narrative:</td></tr>"
+			dat += "<tr style='background-color:#21526b'><td>Scenariusz:</td></tr>"
 			dat += "<tr><td>[AT.narrative]</td></tr>"
 		if(length(AT.objectives))
-			dat += "<tr style='background-color:#21526b'><td>Objectives:</td></tr>"
+			dat += "<tr style='background-color:#21526b'><td>Cele:</td></tr>"
 			var/even = FALSE
 			for(var/objec in AT.objectives)
 				even = !even
@@ -211,18 +211,18 @@
 			var/string = "ERROR"
 			switch(AT.intensity)
 				if(AMBITION_INTENSITY_STEALTH)
-					string = "Stealth"
+					string = "Skryty"
 				if(AMBITION_INTENSITY_MILD)
-					string = "Mild"
+					string = "Łagodny"
 				if(AMBITION_INTENSITY_MEDIUM)
-					string = "Medium"
+					string = "Umiarkowany"
 				if(AMBITION_INTENSITY_SEVERE)
-					string = "Severe"
+					string = "Poważny"
 				if(AMBITION_INTENSITY_EXTREME)
-					string = "Extreme"
-			dat += "<tr style='background-color:#21526b'><td>Intensity: [string]</td></tr>"
+					string = "Ekstremalny"
+			dat += "<tr style='background-color:#21526b'><td>Intensywność: [string]</td></tr>"
 		if(length(AT.tips))
-			dat += "<tr style='background-color:#21526b'><td>Tips:</td></tr>"
+			dat += "<tr style='background-color:#21526b'><td>Porady:</td></tr>"
 			var/even = FALSE
 			for(var/tip in AT.tips)
 				even = !even
@@ -232,7 +232,7 @@
 		dat += "<BR>"
 
 	winshow(usr, "ambition_template_window", TRUE)
-	var/datum/browser/popup = new(usr, "ambition_template_window", "<div align='center'>Ambition Templates</div>", 950, 750)
+	var/datum/browser/popup = new(usr, "ambition_template_window", "<div align='center'>Szablony Ambicji</div>", 950, 750)
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
 	onclose(usr, "ambition_template_window", src)
@@ -260,17 +260,17 @@
 			if("handle")
 				var/last_ckey = GLOB.ambitions_to_review[src]
 				if(last_ckey && last_ckey != usr.ckey)
-					var/action = alert(usr, "[last_ckey] is already handling this review! Do you want to handle nonetheless?", "", "Yes", "No")
+					var/action = alert(usr, "[last_ckey] zajmuje się już recenzją! Czy chcesz się nią zająć mimo to?", "", "Yes", "No")
 					if(action && !(action == "Yes"))
 						return
 				GLOB.ambitions_to_review[src] = usr.ckey
 				message_admins("<span class='adminhelp'>[usr.ckey] is handling [owner_name]'s ambitions. (<a href='?src=[REF(src)];admin_pref=show_ambitions'>VIEW</a>)</span>")
-				to_chat(my_mind.current, "<span class='boldnotice'>[usr.ckey] is handling your ambitions.</span>")
+				to_chat(my_mind.current, "<span class='boldnotice'>[usr.ckey] zajmuje się twoimi ambicjami.</span>")
 			if("request_changes")
-				var/changes_wanted = input(usr, "Requested changes:", "Ambitions")  as message|null
+				var/changes_wanted = input(usr, "Proponowane zmiany:", "Ambicje")  as message|null
 				if(changes_wanted)
 					last_requested_change = changes_wanted
-					to_chat(my_mind.current, "<span class='boldwarning'>[usr.ckey] requested changes on your ambitions: [changes_wanted]. (<a href='?src=[REF(src)];pref=show_ambitions'>VIEW</a>)</span>")
+					to_chat(my_mind.current, "<span class='boldwarning'>[usr.ckey] zażądał zmian twoich ambicji: [changes_wanted]. (<a href='?src=[REF(src)];pref=show_ambitions'>VIEW</a>)</span>")
 					message_admins("<span class='adminhelp'>[usr.ckey] requested changes in [ADMIN_TPMONTY(my_mind.current)]'s ambitions. (<a href='?src=[REF(src)];admin_pref=show_ambitions'>VIEW</a>)</span>")
 			if("discard_review")
 				var/action = alert(usr, "Are you sure you want to discard this review request (Use request changes if you want it changed instead)?", "", "Yes", "No")
@@ -280,7 +280,7 @@
 					changed_after_approval = FALSE
 					last_requested_change = null
 					GLOB.ambitions_to_review -= src
-					to_chat(my_mind.current, "<span class='warning'><b>Your ambitions review request was discarded by [usr.ckey].</b></span>")
+					to_chat(my_mind.current, "<span class='warning'><b>Twoje żądanie recenzji ambicji zostało odrzucone przez [usr.ckey].</b></span>")
 					message_admins("<span class='adminhelp'>[ADMIN_TPMONTY(my_mind.current)]'s ambitions review request was DISCARDED by [usr.ckey]. (<a href='?src=[REF(src)];admin_pref=show_ambitions'>VIEW</a>)</span>")
 			if("approve")
 				admin_approval = TRUE
@@ -288,7 +288,7 @@
 				last_requested_change = null
 				GLOB.ambitions_to_review -= src
 				log_action("APPROVED: Got an approval from [usr.ckey]", FALSE)
-				to_chat(my_mind.current, "<span class='nicegreen'><b>Your ambitions were approved by [usr.ckey].</b></span>")
+				to_chat(my_mind.current, "<span class='nicegreen'><b>Twoje ambicje zostały zaakceptowane przez [usr.ckey].</b></span>")
 				message_admins("<span class='nicegreen'>[ADMIN_TPMONTY(my_mind.current)]'s ambitions were approved by [usr.ckey]. (<a href='?src=[REF(src)];admin_pref=show_ambitions'>VIEW</a>)</span>")
 				submit()
 			if("logs")
@@ -306,7 +306,7 @@
 				ShowTemplatePanel(usr)
 				return
 			if("requested_done")
-				to_chat(src, "<span class='nicegreen'><b>You notify admins that you have adressed the requested changes.</b></span>")
+				to_chat(src, "<span class='nicegreen'><b>Poinformowałeś administrację o dokonanych zmianach.</b></span>")
 				message_admins("<span class='adminhelp'>[ADMIN_TPMONTY(usr)] notifies that he has finished the requested changes in his ambitions. (<a href='?src=[REF(src)];admin_pref=show_ambitions'>VIEW</a>)</span>")
 			if("request_review")
 				admin_review_requested = TRUE
@@ -343,12 +343,12 @@
 						GLOB.intensity_counts["[new_intensity]"] += 1
 				intensity = new_intensity
 			if("edit_admin_note")
-				var/msg = input(usr, "Set your note to admins!", "Note to admins", note_to_admins) as message|null
+				var/msg = input(usr, "Edytuj swoją notatkę dla administracji!", "Notatka dla administracji", note_to_admins) as message|null
 				if(msg)
 					note_to_admins = strip_html_simple(msg, MAX_AMBI_LEN, TRUE)
 					log_action("NOTE: [note_to_admins]", FALSE)
 			if("set_narrative")
-				var/msg = input(usr, "Set your narrative!", "Narrative", narrative) as message|null
+				var/msg = input(usr, "Ustaw swoją narrację!", "Narracja", narrative) as message|null
 				if(msg)
 					narrative = strip_html_simple(msg, MAX_AMBI_LEN, TRUE)
 					log_action("NARRATIVE - change: [narrative]")
@@ -363,14 +363,14 @@
 				if(length(objectives) < index)
 					return
 				var/old_obj = objectives[index]
-				var/msg = input(usr, "Edit objective:", "Objectives", old_obj) as message|null
+				var/msg = input(usr, "Edytuj cel:", "Cele", old_obj) as message|null
 				if(msg)
 					if(length(objectives) < index)
 						return
 					objectives[index] = strip_html_simple(msg, MAX_AMBI_LEN, TRUE)
 					log_action("OBJ - edit: [old_obj] TO-> [objectives[index]]")
 			if("add_objective")
-				var/msg = input(usr, "Add new objective:", "Objectives", "") as message|null
+				var/msg = input(usr, "Dodaj cel:", "Cele", "") as message|null
 				if(msg)
 					var/new_obj = strip_html_simple(msg, MAX_AMBI_LEN, TRUE)
 					objectives += new_obj
@@ -399,9 +399,9 @@
 	GLOB.intensity_counts["[intensity]"] += 1
 
 /mob/proc/view_ambitions()
-	set name = "View Ambitions"
+	set name = "Pokaż ambicje"
 	set category = "IC"
-	set desc = "View and edit your character's ambitions."
+	set desc = "Pokaż i edytuj ambicje swojej postaci."
 	if(!mind)
 		return
 	if(!mind.my_ambitions)
