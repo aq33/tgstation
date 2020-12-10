@@ -20,3 +20,19 @@
 	caliber = "a556"
 	max_ammo = 30
 	multiple_sprites = 2
+
+// pulse raifu mags //
+
+/obj/item/ammo_box/magazine/peacekeeper/lethal
+	name = "M2A45 pulse rifle magazine"
+	icon_state = "peacekeeper"
+	ammo_type = /obj/item/ammo_casing/peacekeeper/lethal
+	caliber = "6mm"
+	max_ammo = 30
+
+/obj/item/ammo_box/magazine/peacekeeper/update_icon()
+	..()
+	if(ammo_count() > 0)
+		icon_state = "[initial(icon_state)]-30"
+	else
+		icon_state = "[initial(icon_state)]-0"

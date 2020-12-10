@@ -52,3 +52,11 @@
 	item_state = "robotics"
 	item_color = "robotics"
 	resistance_flags = NONE
+
+/obj/item/clothing/under/rank/rnd/scientist/hlsci
+	desc = "It's a suit worn by scientists, made of a special fiber that provides minor protection against explosives."
+	name = "scientist's suit"
+	icon_state = "scisuit"
+	item_state = "scisuit"
+	item_color = "scisuit"
+	can_adjust = FALSE

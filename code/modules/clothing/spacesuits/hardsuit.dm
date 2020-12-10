@@ -91,7 +91,6 @@
 	. = ..()
 	display_visor_message("[severity > 1 ? "Light" : "Strong"] electromagnetic pulse detected!")
 
-
 /obj/item/clothing/suit/space/hardsuit
 	name = "hardsuit"
 	desc = "A special suit that protects against hazardous, low pressure environments. Has radiation shielding."
@@ -183,6 +182,7 @@
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 10, "energy" = 15, "bomb" = 10, "bio" = 100, "rad" = 75, "fire" = 100, "acid" = 75)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/engine
 	resistance_flags = FIRE_PROOF
+	slowdown = 0.6
 
 	//Atmospherics
 /obj/item/clothing/head/helmet/space/hardsuit/engine/atmos
@@ -204,7 +204,7 @@
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS					//Uncomment to enable firesuit protection
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/engine/atmos
-
+	slowdown = 1
 
 	//Chief Engineer's hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/engine/elite
@@ -227,6 +227,7 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/engine/elite
 	jetpack = /obj/item/tank/jetpack/suit
+	slowdown = 0.8
 
 	//Mining hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/mining
@@ -357,8 +358,8 @@
 //Elite Syndie suit
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite
 	name = "elite syndicate hardsuit helmet"
-	desc = "An elite version of the syndicate helmet, with improved armour and fireproofing. It is in EVA mode. Property of Gorlex Marauders."
-	alt_desc = "An elite version of the syndicate helmet, with improved armour and fireproofing. It is in combat mode. Property of Gorlex Marauders."
+	desc = "An military grade hardware which appears to be modified, with improved armour and fireproofing. It is in EVA mode. Property of Gorlex Marauders."
+	alt_desc = "An military grade hardware which appears to be modified, with improved armour and fireproofing. It is in combat mode. Property of Gorlex Marauders."
 	icon_state = "hardsuit0-syndielite"
 	item_color = "syndielite"
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 55, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
@@ -368,8 +369,8 @@
 
 /obj/item/clothing/suit/space/hardsuit/syndi/elite
 	name = "elite syndicate hardsuit"
-	desc = "An elite version of the syndicate hardsuit, with improved armour and fireproofing. It is in travel mode."
-	alt_desc = "An elite version of the syndicate hardsuit, with improved armour and fireproofing. It is in combat mode."
+	desc = "An military grade hardware which appears to be modified, with improved armour and fireproofing. It is in travel mode."
+	alt_desc = "An military grade hardware which appears to be modified, with improved armour and fireproofing. It is in combat mode."
 	icon_state = "hardsuit0-syndielite"
 	item_color = "syndielite"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite
@@ -378,6 +379,7 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	blocks_shove_knockdown = TRUE
+	slowdown = 0.5
 
 //The Owl Hardsuit
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/owl
@@ -452,7 +454,7 @@
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/storage/firstaid, /obj/item/healthanalyzer, /obj/item/stack/medical)
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 10, "energy" = 15, "bomb" = 10, "bio" = 100, "rad" = 60, "fire" = 60, "acid" = 75)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/medical
-	slowdown = 0.5
+	slowdown = 0.4
 
 /obj/item/clothing/head/helmet/space/hardsuit/medical/cmo
 	name = "chief medical officer's hardsuit helmet"
@@ -463,51 +465,52 @@
 	name = "chief medical officer's hardsuit"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/medical/cmo
 
-	//Research Director hardsuit
-/obj/item/clothing/head/helmet/space/hardsuit/rd
+	//HEV suit
+/obj/item/clothing/head/helmet/space/hardsuit/hev
 	name = "HEV suit helmet"
-	desc = "A Hazardous Environment Helmet. It fits snug over the suit and has a heads-up display for researchers. The flashlight seems broken, fitting considering this was made before the start of the milennium."
-	icon_state = "hardsuit-rd"
-	item_color = "rd"
+	desc = "A Hazardous Environment Helmet. It fits snug over the suit and has a heads-up display for researchers."
+	icon_state = "hardsuit0-hev"
+	item_state = "hev_helm"
+	item_color = "hev"
 	resistance_flags = ACID_PROOF | FIRE_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	armor = list("melee" = 30, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 60, "fire" = 60, "acid" = 80)
 	var/obj/machinery/doppler_array/integrated/bomb_radar
 	scan_reagents = TRUE
-	actions_types = list(/datum/action/item_action/toggle_research_scanner)
+	actions_types = list(/datum/action/item_action/toggle_research_scanner, /datum/action/item_action/toggle_helmet_light)
 
-/obj/item/clothing/head/helmet/space/hardsuit/rd/Initialize()
+/obj/item/clothing/head/helmet/space/hardsuit/hev/Initialize()
 	. = ..()
 	bomb_radar = new /obj/machinery/doppler_array/integrated(src)
 
-/obj/item/clothing/head/helmet/space/hardsuit/rd/equipped(mob/living/carbon/human/user, slot)
+/obj/item/clothing/head/helmet/space/hardsuit/hev/equipped(mob/living/carbon/human/user, slot)
 	..()
 	if (slot == SLOT_HEAD)
 		var/datum/atom_hud/DHUD = GLOB.huds[DATA_HUD_DIAGNOSTIC_BASIC]
 		DHUD.add_hud_to(user)
 
-/obj/item/clothing/head/helmet/space/hardsuit/rd/dropped(mob/living/carbon/human/user)
+/obj/item/clothing/head/helmet/space/hardsuit/hev/dropped(mob/living/carbon/human/user)
 	..()
 	if (user.head == src)
 		var/datum/atom_hud/DHUD = GLOB.huds[DATA_HUD_DIAGNOSTIC_BASIC]
 		DHUD.remove_hud_from(user)
 
-/obj/item/clothing/suit/space/hardsuit/rd
+/obj/item/clothing/suit/space/hardsuit/hev
 	name = "HEV Suit"
 	desc = "A Hazardous Environment suit, often called the Hazard suit. It was designed to protect scientists from the blunt trauma, radiation, energy discharge that hazardous materials might produce or entail. Fits you like a glove. The automatic medical system seems broken."
-	item_state = "hardsuit-rd"
-	icon_state = "hardsuit-rd"
+	item_state = "hardsuit-hev"
+	icon_state = "hardsuit-hev"
 	resistance_flags = ACID_PROOF | FIRE_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT //Same as an emergency firesuit. Not ideal for extended exposure.
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/gun/energy/wormhole_projector,
 	/obj/item/hand_tele, /obj/item/aicard)
-	armor = list("melee" = 30, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 60, "fire" = 60, "acid" = 80)
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/rd
+	armor = list("melee" = 30, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 60, "fire" = 60, "acid" = 100)
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/hev
 	slowdown = 0.7
 	var/morphine_cooldown = 0
 	var/morphine_cooldown_duration = 500
 
-/obj/item/clothing/suit/space/hardsuit/rd/equipped(mob/user, slot)
+/obj/item/clothing/suit/space/hardsuit/hev/equipped(mob/user, slot)
 	. = ..()
 	if(!ishuman(user))
 		return
@@ -516,7 +519,7 @@
 		playsound(src, 'sound/items/hev/hev_logon.ogg', 50, 0)
 	return
 
-/obj/item/clothing/suit/space/hardsuit/rd/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+/obj/item/clothing/suit/space/hardsuit/hev/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(world.time > morphine_cooldown)
 		if(owner.health < 20)
 			owner.reagents.add_reagent(/datum/reagent/medicine/epinephrine, 10)
@@ -533,7 +536,7 @@
 	icon_state = "hardsuit0-sec"
 	item_state = "sec_helm"
 	item_color = "sec"
-	armor = list("melee" = 35, "bullet" = 15, "laser" = 30,"energy" = 40, "bomb" = 10, "bio" = 100, "rad" = 50, "fire" = 75, "acid" = 75)
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 35,"energy" = 60, "bomb" = 10, "bio" = 100, "rad" = 50, "fire" = 75, "acid" = 75)
 
 
 /obj/item/clothing/suit/space/hardsuit/security
@@ -541,7 +544,7 @@
 	name = "security hardsuit"
 	desc = "A special suit that protects against hazardous, low pressure environments. Has an additional layer of armor."
 	item_state = "sec_hardsuit"
-	armor = list("melee" = 35, "bullet" = 15, "laser" = 30, "energy" = 40, "bomb" = 10, "bio" = 100, "rad" = 50, "fire" = 75, "acid" = 75)
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 35, "energy" = 60, "bomb" = 10, "bio" = 100, "rad" = 50, "fire" = 75, "acid" = 75)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/security
 
 /obj/item/clothing/suit/space/hardsuit/security/Initialize()
@@ -554,31 +557,30 @@
 	desc = "A special bulky helmet designed for work in a hazardous, low pressure environment. Has an additional layer of armor."
 	icon_state = "hardsuit0-hos"
 	item_color = "hos"
-	armor = list("melee" = 45, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 100, "rad" = 50, "fire" = 95, "acid" = 95)
+	armor = list("melee" = 45, "bullet" = 40, "laser" = 35, "energy" = 60, "bomb" = 25, "bio" = 100, "rad" = 50, "fire" = 95, "acid" = 95)
 
 
 /obj/item/clothing/suit/space/hardsuit/security/hos
 	icon_state = "hardsuit-hos"
 	name = "head of security's hardsuit"
 	desc = "A special bulky suit that protects against hazardous, low pressure environments. Has an additional layer of armor."
-	armor = list("melee" = 45, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 100, "rad" = 50, "fire" = 95, "acid" = 95)
+	armor = list("melee" = 45, "bullet" = 40, "laser" = 35, "energy" = 60, "bomb" = 25, "bio" = 100, "rad" = 50, "fire" = 95, "acid" = 95)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/security/hos
 	jetpack = /obj/item/tank/jetpack/suit
 
 	//SWAT MKII
 /obj/item/clothing/head/helmet/space/hardsuit/swat
-	name = "An MK.II SWAT Helmet"
-	icon_state = "swat2helm"
-	item_state = "swat2helm"
+	name = "MK.II SWAT Helmet"
+	icon_state = "hardsuit0-swat2helm"
+	item_state = "hardsuit0-swat2helm"
+	item_color = "swat2helm"
 	desc = "A tactical SWAT helmet MK.II."
 	armor = list("melee" = 50, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 60, "bio" = 100, "rad" = 30, "fire" = 100, "acid" = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	visor_flags_inv = HIDEMASK|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
-	actions_types = list()
-
-/obj/item/clothing/head/helmet/space/hardsuit/swat/attack_self()
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 
 /obj/item/clothing/suit/space/hardsuit/swat
 	name = "MK.II SWAT Suit"
@@ -591,7 +593,7 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT //this needed to be added a long fucking time ago
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/swat
 	blocks_shove_knockdown = TRUE
-	slowdown = 0.4
+	slowdown = 0.5
 
 /obj/item/clothing/suit/space/hardsuit/swat/Initialize()
 	. = ..()
@@ -600,8 +602,9 @@
 	//Captain
 /obj/item/clothing/head/helmet/space/hardsuit/swat/captain
 	name = "Captain's hardsuit helmet"
-	icon_state = "capspace"
-	item_state = "capspacehelmet"
+	icon_state = "hardsuit0-capspace"
+	item_state = "hardsuit0-capspace"
+	item_color = "capspace"
 	desc = "An custom tactical helmet boasting better protection, there is a lot of data on the visor."
 	var/obj/machinery/doppler_array/integrated/bomb_radar
 	visor_flags_inv = HIDEMASK|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
@@ -631,8 +634,7 @@
 	item_state = "capspacesuit"
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/swat/captain
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
-	blocks_shove_knockdown = TRUE
-	slowdown = 0.2
+	slowdown = 1
 
 	//Clown
 /obj/item/clothing/head/helmet/space/hardsuit/clown

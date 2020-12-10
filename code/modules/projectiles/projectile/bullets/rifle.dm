@@ -14,3 +14,10 @@
 	name = "enchanted 7.62 bullet"
 	damage = 20
 	stamina = 80
+
+//pulse raifu projectile //
+
+/obj/item/projectile/bullet/peacekeeper
+	name = "6mm tungsten round"
+	damage = 15
+	armour_penetration = 60

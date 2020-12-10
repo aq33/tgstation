@@ -675,3 +675,66 @@
 	new /obj/item/clothing/mask/gas/clown_hat(src)
 	new /obj/item/bikehorn(src)
 	new /obj/item/implanter/sad_trombone(src)
+///////////////////////
+//Power armor kits :v//
+///////////////////////
+/obj/item/storage/backpack/kit
+	name = "wooden case"
+	desc = "This shouldnt exist"
+	icon_state = "kit_case"
+	item_state = "kit_case"
+	w_class = 4
+	slot_flags = null
+	resistance_flags = FLAMMABLE
+	var/foldable = /obj/item/stack/sheet/mineral/wood
+
+/obj/item/storage/backpack/kit/attack_self(mob/user)
+	..()
+
+	if(!foldable)
+		return
+	if(contents.len)
+		to_chat(user, "<span class='warning'>You can't break down this case with items still inside!</span>")
+		return
+	if(!ispath(foldable))
+		return
+
+	to_chat(user, "<span class='notice'>You break [src] down.</span>")
+	var/obj/item/I = new foldable
+	qdel(src)
+	user.put_in_hands(I)
+
+/obj/item/storage/backpack/kit/t45
+	desc = "Wooden case that contains power armor set."
+
+/obj/item/storage/backpack/kit/t51b
+	desc = "Wooden case that contains power armor set."
+
+/obj/item/storage/backpack/kit/t60
+	desc = "Wooden case that contains power armor set."
+
+/obj/item/storage/backpack/kit/enclave
+	desc = "Wooden case that contains power armor set."
+
+/obj/item/storage/backpack/kit/tesla
+	desc = "Wooden case that contains power armor set."
+
+/obj/item/storage/backpack/kit/t45/PopulateContents()
+	new /obj/item/clothing/suit/armor/power_armor/t45d(src)
+	new /obj/item/clothing/head/power_armor/t45d(src)
+
+/obj/item/storage/backpack/kit/t51b/PopulateContents()
+	new /obj/item/clothing/suit/armor/power_armor/t51b(src)
+	new /obj/item/clothing/head/power_armor/t51b(src)
+
+/obj/item/storage/backpack/kit/t60/PopulateContents()
+	new /obj/item/clothing/suit/armor/power_armor/t60(src)
+	new /obj/item/clothing/head/power_armor/t60(src)
+
+/obj/item/storage/backpack/kit/enclave/PopulateContents()
+	new /obj/item/clothing/suit/armor/power_armor/enclave(src)
+	new /obj/item/clothing/head/power_armor/advanced(src)
+
+/obj/item/storage/backpack/kit/tesla/PopulateContents()
+	new /obj/item/clothing/suit/armor/power_armor/tesla(src)
+	new /obj/item/clothing/head/power_armor/tesla(src)
