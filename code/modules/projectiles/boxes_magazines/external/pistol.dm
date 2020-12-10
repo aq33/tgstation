@@ -57,3 +57,29 @@
 	caliber = ".50"
 	max_ammo = 7
 	multiple_sprites = 1
+
+/obj/item/ammo_box/magazine/m9mm_mkshft
+	name = "makeshift pistol magazine (9mm)"
+	icon_state = "9x19mks-6"
+	desc= "A makeshift pistol mag, made out of spare parts. Doesn't look too reliable."
+	ammo_type = /obj/item/ammo_casing/c9mm
+	caliber = "9mm"
+	max_ammo = 6
+	start_empty = TRUE
+
+/obj/item/ammo_box/magazine/m9mm_mkshft/update_icon()
+	..()
+	icon_state = "9x19mks-[ammo_count() ? "6" : "0"]"
+
+/obj/item/ammo_box/magazine/m9mm_mkshft/TEC10
+	name = "makeshift pistol magazine (9mm)"
+	icon_state = "tec10"
+	desc= "Modifed makeshift pistol mag, made out of spare parts, looks quite crude."
+	ammo_type = /obj/item/ammo_casing/c9mm
+	caliber = "9mm"
+	max_ammo = 15
+	start_empty = TRUE
+
+/obj/item/ammo_box/magazine/m9mm_mkshft/TEC10/update_icon()
+	..()
+	icon_state = "tec10-[ammo_count() ? "15" : "0"]"

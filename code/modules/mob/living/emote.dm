@@ -34,7 +34,10 @@
 
 /datum/emote/living/choke/get_sound(mob/living/user)
 	if(user.mind && ishuman(user) && !user.mind.miming)
-		return 'sound/misc/choke.ogg'
+		if(user.gender == FEMALE)
+			return 'sound/voice/human/femalechoke.ogg'
+		else
+			return 'sound/misc/choke.ogg'
 
 /datum/emote/living/cross
 	key = "cross"
@@ -73,7 +76,10 @@
 
 /datum/emote/living/cough/get_sound(mob/living/user)
 	if(user.mind && ishuman(user) && !user.mind.miming)
-		return 'sound/misc/cough.ogg'
+		if(user.gender == FEMALE)
+			return pick('sound/voice/human/femalecough1.ogg', 'sound/voice/human/femalecough2.ogg', 'sound/misc/cough.ogg')
+		else
+			return pick('sound/voice/human/malecough1.ogg', 'sound/misc/cough.ogg')
 
 /datum/emote/living/dance
 	key = "dance"
@@ -96,6 +102,15 @@
 	message_ipc = "gives one shrill beep before falling limp, their monitor flashing blue before completely shutting off..."
 	message_simple =  "stops moving..."
 	stat_allowed = UNCONSCIOUS
+
+/datum/emote/living/deathgasp/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pickweight(list('sound/voice/human/femaledeath1.ogg'=49, 'sound/voice/human/femaledeath2.ogg'=49, 'sound/voice/human/maledeath1.ogg'=2))
+		else
+			return pickweight(list('sound/voice/human/maledeath3.ogg'=90, 'sound/voice/human/maledeath2.ogg'=5, 'sound/voice/human/maledeath4.ogg'=5))
+	else
+		return
 
 /datum/emote/living/deathgasp/run_emote(mob/user, params, type_override, intentional)
 	var/mob/living/simple_animal/S = user
@@ -158,6 +173,10 @@
 	message = "gags."
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/gag/get_sound(mob/living/user)
+	if(user.mind && ishuman(user) && !user.mind.miming)
+		return 'sound/voice/gag.ogg'
+
 /datum/emote/living/gasp
 	key = "gasp"
 	key_third_person = "gasps"
@@ -167,7 +186,10 @@
 
 /datum/emote/living/gasp/get_sound(mob/living/user)
 	if(user.mind && ishuman(user) && !user.mind.miming)
-		return 'sound/misc/gasp.ogg'
+		if(user.gender == FEMALE)
+			return pick('sound/voice/human/femalegasp1.ogg', 'sound/voice/human/femalegasp2.ogg')
+		else
+			return 'sound/misc/gasp.ogg'
 
 /datum/emote/living/giggle
 	key = "giggle"
@@ -183,6 +205,14 @@
 	message_param = "glares at %t."
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/gnome
+	key = "gnome"
+	key_third_person = "gnomes"
+	message = "gnomes!"
+
+datum/emote/living/gnome/get_sound(mob/living/user)
+	if(user.mind && ishuman(user) && !user.mind.miming)
+		return 'sound/misc/gnome.ogg'
 /datum/emote/living/grin
 	key = "grin"
 	key_third_person = "grins"
@@ -320,7 +350,10 @@
 
 /datum/emote/living/sigh/get_sound(mob/living/user)
 	if(user.mind && ishuman(user) && !user.mind.miming)
-		return 'sound/misc/sigh.ogg'
+		if(user.gender == FEMALE)
+			return pick('sound/voice/human/femalesigh1.ogg','sound/voice/human/femalesigh2.ogg','sound/voice/human/femalesigh3.ogg','sound/voice/human/femalesigh4.ogg')
+		else
+			return 'sound/misc/sigh.ogg'
 
 /datum/emote/living/sit
 	key = "sit"
@@ -340,7 +373,10 @@
 
 /datum/emote/living/sneeze/get_sound(mob/living/user)
 	if(user.mind && ishuman(user) && !user.mind.miming)
-		return 'sound/misc/sneeze.ogg'
+		if(user.gender == FEMALE)
+			return pick('sound/voice/human/femalesneeze1.ogg','sound/voice/human/femalesneeze2.ogg')
+		else
+			return pick('sound/voice/human/malesneeze1.ogg', 'sound/misc/sneeze.ogg')
 
 /datum/emote/living/smug
 	key = "smug"

@@ -1056,3 +1056,19 @@
 	build_path = /obj/item/swab
 	category = list("initial","Misc","Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
+
+/datum/design/pistolslide
+	name = "Pistol Slide"
+	id = "pistolslide"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 10000)
+	build_path = /obj/item/weaponcrafting/slide
+	category = list("hacked", "Security")
+
+/datum/design/magspring
+	name = "Magazine Spring"
+	id = "magspring"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 15000)
+	build_path = /obj/item/weaponcrafting/magspring
+	category = list("hacked", "Security")

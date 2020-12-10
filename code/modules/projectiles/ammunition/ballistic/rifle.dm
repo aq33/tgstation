@@ -26,3 +26,11 @@
 	caliber = "40mm"
 	icon_state = "40mmHE"
 	projectile_type = /obj/item/projectile/bullet/a40mm
+
+//pulse raifu casing //
+
+/obj/item/ammo_casing/peacekeeper/lethal
+	name = "6mm tungsten round"
+	desc = " A 6mm tungsten bullet casing."
+	caliber = "6mm"
+	projectile_type = /obj/item/projectile/bullet/peacekeeper

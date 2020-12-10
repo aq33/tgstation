@@ -190,6 +190,8 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	//the outline filter on hover
 	var/outline_filter
 
+	blocks_emissive = EMISSIVE_BLOCK_GENERIC
+
 /obj/item/Initialize()
 
 	materials =	typelist("materials", materials)
