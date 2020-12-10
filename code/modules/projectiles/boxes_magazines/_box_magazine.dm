@@ -114,9 +114,11 @@
 	var/shells_left = stored_ammo.len
 	switch(multiple_sprites)
 		if(1)
-			icon_state = "[initial(icon_state)]-[shells_left]"
+			icon_state = "[initial(icon_state)]-[shells_left]" //sprite for each projectile in box
 		if(2)
-			icon_state = "[initial(icon_state)]-[shells_left ? "[max_ammo]" : "0"]"
+			icon_state = "[initial(icon_state)]-[shells_left ? "[max_ammo]" : "0"]" //sprite for either full or empty ammo box
+		if(3)
+			icon_state = "[initial(icon_state)]-[round(shells_left/max_ammo*4)]" //sprite for 4 stages of 'fullness' and when empty
 	desc = "[initial(desc)] There [(shells_left == 1) ? "is" : "are"] [shells_left] shell\s left!"
 	for (var/material in bullet_cost)
 		var/material_amount = bullet_cost[material]

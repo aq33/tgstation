@@ -69,6 +69,38 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	clothing_flags = SNUG_FIT
 
+/obj/item/clothing/head/ertcommanderfake
+	name = "ERT commander helmet replica"
+	icon_state = "hardsuit0-ert_commander"
+	item_state = "hardsuit0-ert_commander"
+	desc = "A plastic replica of the ERT Commander space helmet. You'll look just like a real competent ERT Commander in this! This is a toy, it is not made for use in space!"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	clothing_flags = SNUG_FIT
+
+/obj/item/clothing/head/ertsecurityfake
+	name = "ERT security helmet replica"
+	icon_state = "hardsuit0-ert_security"
+	item_state = "hardsuit0-ert_security"
+	desc = "A plastic replica of the ERT Security space helmet. You'll look just like a real competent ERT Security in this! This is a toy, it is not made for use in space!"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	clothing_flags = SNUG_FIT
+
+/obj/item/clothing/head/ertmedicalfake
+	name = "ERT medic helmet replica"
+	icon_state = "hardsuit0-ert_medical"
+	item_state = "hardsuit0-ert_medical"
+	desc = "A plastic replica of the ERT Medic space helmet. You'll look just like a real competent ERT Medic in this! This is a toy, it is not made for use in space!"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	clothing_flags = SNUG_FIT
+
+/obj/item/clothing/head/ertengineerfake
+	name = "ERT engineer helmet replica"
+	icon_state = "hardsuit0-ert_engineer"
+	item_state = "hardsuit0-ert_engineer"
+	desc = "A plastic replica of the ERT Engineer space helmet. You'll look just like a real competent ERT Engineer in this! This is a toy, it is not made for use in space!"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	clothing_flags = SNUG_FIT
+
 /obj/item/clothing/head/cueball
 	name = "cueball helmet"
 	desc = "A large, featureless white orb meant to be worn on your head. How do you even see out of this thing?"
