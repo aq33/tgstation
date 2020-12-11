@@ -139,7 +139,7 @@
 		return
 	var/mob/living/carbon/human/H = host_mob
 	martial = new(null)
-	to_chat(H, "<span class='notice'>Your mind is flooded with martial arts knowledge[martial.teach(H, TRUE)?"":", but you manage to block it out"].</span>")
+	to_chat(H, "<span class='notice'>Your mind is flooded with martial arts knowledge[martial.teach(H, TRUE)?".<br>You can learn more about your newfound art by using the Recall Teachings verb in the Nanojutsu tab":", but you manage to block it out"].</span>")
 
 /datum/nanite_program/nanojutsu/disable_passive_effect()
 	. = ..()

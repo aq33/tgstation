@@ -225,13 +225,18 @@
 	host_mob.visible_message("<span class='danger'>[host_mob] throws up a swarm of nanophages!</span>", \
 					"<span class='userdanger'>You throw up a swarm of nanophages!</span>")
 	playsound(host_mob, 'sound/misc/nanobirth.ogg', 50)
+	
+	var/list/factions = list()
+	
+	if(!extra_settings[NES_HOST_AGGRESSION].get_value())
+		factions = host_mob.faction.Copy() //copypasta z dehydrated carpa. sprawdźmy czy zadziała
+		for(var/F in factions)
+			if(F == "neutral")
+				factions -= F
+	
 	for(var/i in 1 to 8)
 		var/mob/living/simple_animal/hostile/nanophage/nano = new /mob/living/simple_animal/hostile/nanophage(get_turf(host_mob))
 		step(nano, pick(NORTH,SOUTH,EAST,WEST))
 		if(!extra_settings[NES_HOST_AGGRESSION].get_value())
-			var/list/factions = host_mob.faction.Copy() //copypasta z dehydrated carpa. sprawdźmy czy zadziała
-			for(var/F in factions)
-				if(F == "neutral")
-					factions -= F
 			nano.faction = factions
 		sleep(1)

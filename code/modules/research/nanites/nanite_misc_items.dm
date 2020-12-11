@@ -22,6 +22,8 @@
 
 /obj/item/throwing_star/nanite/Initialize()
 	..()
-	spawn(160)
-		visible_message("<span class='warning'>[src] falls apart!</span>")
-		Destroy(src)
+	addtimer(CALLBACK(src, .proc/crumble), 15 SECONDS) //podobno nie powinno się używać spawna w ten sposób, więc przepisałem to na timery
+
+/obj/item/throwing_star/nanite/proc/crumble()
+	visible_message("<span class='warning'>[src] falls apart!</span>")
+	Destroy(src)
