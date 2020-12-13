@@ -37,10 +37,14 @@
 	dug = TRUE
 
 /turf/open/floor/plating/asteroid/proc/can_dig(mob/user)
-	if(!dug)
-		return TRUE
-	if(user)
-		to_chat(user, "<span class='notice'>Looks like someone has dug here already.</span>")
+	if(!istype(src, /turf/open/floor/plating/asteroid/basalt/vein))
+		if(!dug)
+			return TRUE
+		if(user)
+			to_chat(user, "<span class='notice'>Looks like someone has dug here already.</span>")
+	else
+		to_chat(user, "<span class='notice'>You cannot dig here.</span>")
+		return FALSE
 
 /turf/open/floor/plating/asteroid/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
 	return
@@ -86,13 +90,56 @@
 	icon_plating = "basalt"
 	environment_type = "basalt"
 	floor_variance = 15
-	digResult = /obj/item/stack/ore/glass/basalt
 
 /turf/open/floor/plating/asteroid/basalt/lava //lava underneath
 	baseturfs = /turf/open/lava/smooth
 
 /turf/open/floor/plating/asteroid/basalt/airless
 	initial_gas_mix = AIRLESS_ATMOS
+
+//ORE VEINS/////////////////////////////////////////////////////////////////////////////////
+
+/turf/open/floor/plating/asteroid/basalt/vein
+	name = "mineral vein"
+	desc = "Looks like there's a rich deposit of oopsie woopsie. Tell coders about this."
+	baseturfs = /turf/open/floor/plating/asteroid/basalt
+	icon = 'icons/turf/floors.dmi'
+	icon_state = "vein_common"
+	environment_type = "basalt"
+	floor_variance = 0
+	var/list/ore_rates
+
+/turf/open/floor/plating/asteroid/basalt/vein/common
+	name = "common minerals vein"
+	desc = "Looks like there's a rich deposit of common minerals here."
+	icon_state = "vein_common"
+	ore_rates = list(/datum/material/iron = 1, /datum/material/glass = 1, /datum/material/copper = 0.5) //with T1 parts on drill rig 1 -> 200 sheets with high-capacity power cell
+
+/turf/open/floor/plating/asteroid/basalt/vein/volatile
+	name = "volatile minerals vein"
+	desc = "Looks like there's a rich deposit of volatile minerals here."
+	icon_state = "vein_volatile"
+	ore_rates = list(/datum/material/plasma = 0.25, /datum/material/uranium = 0.15)
+
+/turf/open/floor/plating/asteroid/basalt/vein/noble
+	name = "noble minerals vein"
+	desc = "Looks like there's a rich deposit of noble minerals here."
+	icon_state = "vein_noble"
+	ore_rates = list(/datum/material/silver = 0.15, /datum/material/gold = 0.15, /datum/material/titanium = 0.2)
+
+/turf/open/floor/plating/asteroid/basalt/vein/rare
+	name = "rare-earth minerals vein"
+	desc = "Looks like there's a rich deposit of rare-earth minerals here."
+	icon_state = "vein_rare"
+	ore_rates = list(/datum/material/diamond = 0.1, /datum/material/bluespace = 0.1)
+
+/turf/open/floor/plating/asteroid/basalt/vein/honk
+	name = "funny minerals vein"
+	desc = "Oh god, don't tell clown about this."
+	icon_state = "vein_funny"
+	ore_rates = list(/datum/material/bananium = 0.1)
+
+///////////////////////////////////////////////////////////////////////////////////////////
 
 /turf/open/floor/plating/asteroid/basalt/Initialize()
 	. = ..()
@@ -104,9 +151,9 @@
 
 /proc/set_basalt_light(turf/open/floor/B)
 	switch(B.icon_state)
-		if("basalt1", "basalt2", "basalt3")
+		if("basalt1", "basalt2", "basalt3", "vein_common", "vein_volatile", "vein_noble")
 			B.set_light(2, 0.6, LIGHT_COLOR_LAVA) //more light
-		if("basalt5", "basalt9")
+		if("basalt5", "basalt9", "vein_rare")
 			B.set_light(1.4, 0.6, LIGHT_COLOR_LAVA) //barely anything!
 
 ///////Surface. The surface is warm, but survivable without a suit. Internals are required. The floors break to chasms, which drop you into the underground.
