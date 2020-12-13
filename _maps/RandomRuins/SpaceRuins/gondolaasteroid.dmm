@@ -82,6 +82,10 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space/has_grav)
+"y" = (
+/obj/machinery/spaceship_navigation_beacon,
+/turf/open/space/basic,
+/area/ruin/space/has_grav)
 "E" = (
 /obj/machinery/bluespace_beacon,
 /turf/open/floor/plating/asteroid/airless,
@@ -593,7 +597,7 @@ b
 b
 b
 b
-b
+y
 b
 b
 h

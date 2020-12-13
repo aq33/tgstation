@@ -392,6 +392,10 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/turretedoutpost)
+"Vf" = (
+/obj/machinery/spaceship_navigation_beacon,
+/turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/turretedoutpost)
 
 (1,1,1) = {"
 aa
@@ -781,7 +785,7 @@ ad
 aj
 ak
 ad
-al
+Vf
 ad
 aK
 aP

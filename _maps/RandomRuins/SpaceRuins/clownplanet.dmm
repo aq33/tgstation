@@ -376,6 +376,10 @@
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/plating/asteroid,
 /area/ruin/powered/clownplanet)
+"pt" = (
+/obj/machinery/spaceship_navigation_beacon,
+/turf/open/floor/plasteel/bluespace,
+/area/ruin/powered/clownplanet)
 "ST" = (
 /obj/item/gps{
 	gpstag = "X-06"
@@ -683,7 +687,7 @@ an
 aU
 at
 at
-at
+pt
 at
 at
 at

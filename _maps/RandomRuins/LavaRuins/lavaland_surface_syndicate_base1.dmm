@@ -563,6 +563,7 @@
 	pixel_y = 4
 	},
 /obj/item/storage/toolbox/mechanical,
+/obj/item/construction/rcd,
 /turf/open/floor/plasteel/dark,
 /area/ruin/unpowered/syndicate_lava_base/cargo)
 "ec" = (
@@ -5419,6 +5420,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/machinery/photocopier/faxmachine,
 /turf/open/floor/plasteel/dark,
 /area/ruin/unpowered/syndicate_lava_base/telecomms)
 "nK" = (
@@ -5840,8 +5842,14 @@
 /area/ruin/unpowered/syndicate_lava_base/telecomms)
 "ov" = (
 /obj/structure/table/reinforced,
-/obj/item/paper_bin,
+/obj/item/paper_bin{
+	pixel_x = -4
+	},
 /obj/item/pen,
+/obj/item/phone/real{
+	pixel_x = 6;
+	pixel_y = 6
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/unpowered/syndicate_lava_base/telecomms)
 "ox" = (

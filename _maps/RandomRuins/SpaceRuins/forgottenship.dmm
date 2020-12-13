@@ -151,6 +151,7 @@
 	dir = 1
 	},
 /obj/structure/table/reinforced,
+/obj/item/documents/syndicate,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "aB" = (
@@ -1264,6 +1265,10 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
+"iK" = (
+/obj/machinery/spaceship_navigation_beacon,
+/turf/open/floor/mineral/plastitanium,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
 "EP" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 4
@@ -1279,6 +1284,11 @@
 /obj/item/gps{
 	gpstag = "Forgotten Ship"
 	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/ruin/space/has_grav/syndicate_forgotten_ship)
+"Ob" = (
+/obj/structure/table/reinforced,
+/obj/machinery/photocopier/faxmachine,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)
 "So" = (
@@ -1776,7 +1786,7 @@ al
 al
 dm
 dt
-al
+iK
 dp
 dq
 al
@@ -3044,7 +3054,7 @@ bZ
 bV
 bV
 aW
-bV
+Ob
 bk
 He
 Ym

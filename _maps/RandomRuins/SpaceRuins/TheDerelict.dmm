@@ -3711,6 +3711,10 @@
 /obj/item/stack/rods,
 /turf/open/floor/plating/airless,
 /area/ruin/space/derelict/hallway/primary/port)
+"Bk" = (
+/obj/machinery/spaceship_navigation_beacon,
+/turf/open/floor/plating/airless,
+/area/ruin/space/derelict/bridge/ai_upload)
 "Bx" = (
 /turf/open/floor/plasteel/airless{
 	icon_state = "damaged3"
@@ -10739,7 +10743,7 @@ bj
 ax
 bz
 bO
-bO
+Bk
 bz
 bz
 ax
