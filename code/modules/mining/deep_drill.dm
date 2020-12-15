@@ -4,7 +4,7 @@
 	icon = 'icons/mecha/mech_fab.dmi'
 	icon_state = "deep_drill-off"
 	density = TRUE
-	circuit = /obj/item/circuitboard/machine/deep_drill
+	//circuit = /obj/item/circuitboard/machine/deep_drill
 	layer = BELOW_OBJ_LAYER
 	var/bluespace_upgrade = FALSE //Can it link with Ore Silo?
 	var/on = FALSE
@@ -20,6 +20,10 @@
 	var/hack_wire
 	var/disable_wire
 	var/shock_wire
+
+	var/overlayopen = "deep_drill-ovopen"
+	var/overlayeject = "deep_drill-oveject"
+	var/overlaymining = "deep_drill-ovdrilling"
 
 /obj/machinery/mineral/deep_drill/Initialize(mapload)
 	. = ..()
@@ -97,24 +101,18 @@
 	else if(!on && !panel_open)
 		on = TRUE
 		to_chat(user, "<span class='notice'>You switch the [src] on.</span>")
-
-/obj/machinery/mineral/deep_drill/AltClick(mob/user) //When alt-clicked the drill will try to drop stored mats.
-	shock(user, 70)
-	if(user.canUseTopic(src, !issilicon(usr)))
-		drill_eject_mats()
-
-/obj/machinery/mineral/deep_drill/attack_hand(mob/user) //Handles interactions with empty hand
-	. = ..() //code magic, references eldritch knowledge, hidden deep within the codebase - no touchey
-	if(.)
-		return
 	if(!cell)
 		return
-	shock(user, 100)
 	if(panel_open && cell)
 		to_chat(user, "<span class='notice'>You remove the [cell] from the [src]</span>")
 		user.put_in_hands(cell)
 		cell.add_fingerprint(user)
 		cell = null
+
+/obj/machinery/mineral/deep_drill/AltClick(mob/user) //When alt-clicked the drill will try to drop stored mats.
+	shock(user, 70)
+	if(user.canUseTopic(src, !issilicon(usr)))
+		drill_eject_mats()
 
 /obj/machinery/mineral/deep_drill/multitool_act(mob/living/user, obj/item/multitool/M) //Handles linking to Ore Silo if drill has Bluespace Resource Transfer Upgrade
 	if(bluespace_upgrade)
@@ -157,7 +155,7 @@
 			return
 
 	else if(I.tool_behaviour == TOOL_SCREWDRIVER)
-		default_deconstruction_screwdriver(user, "deep_drill-off", "deep_drill-off", I)
+		default_deconstruction_screwdriver(user, "deep_drill-off", "deep_drill-on", I)
 		return
 
 	else if(panel_open && is_wire_tool(I))
@@ -198,6 +196,31 @@
 
 obj/machinery/mineral/deep_drill/proc/draw_power() //This draws power from the cell when called
 	cell.use(power_draw)
+
+/obj/machinery/mineral/deep_drill/update_icon(stat)
+	//cut_overlays()
+	//SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
+	if(panel_open)
+		add_overlay(overlayopen)
+		return
+	else
+		cut_overlay(overlayopen)
+		return
+	if(on && cell && cell.charge > 0)
+		icon_state = "deep_drill-on"
+		if("eject")
+			add_overlay(overlayeject)
+			sleep(6)
+			cut_overlay(overlayeject)
+			return
+		if("mining")
+			add_overlay(overlaymining)
+			return
+	else
+		cut_overlays()
+		icon_state = "deep_drill-off"
+		return
+	stat = null
 
 //HACKING PROCS//
 
@@ -260,7 +283,7 @@ Roadmap:
 -Wariant z Diamond Drillem DONE
 -Wariant z Plasma Cutterem
 -tgui?
--Techweb DONE
+-Techweb
 -Drop pod z wiertłem
 -generowanie mining points
 -random gen veinów
