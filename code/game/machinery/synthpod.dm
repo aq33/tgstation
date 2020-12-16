@@ -7,7 +7,7 @@
 	icon_state = "autodoc_machine"
 	verb_say = "states"
 	idle_power_usage = 50
-	circuit = /obj/item/circuitboard/machine/autodoc
+	circuit = /obj/item/circuitboard/machine/synthpod
 	var/processing = FALSE
 	var/surgerytime = 300
 
