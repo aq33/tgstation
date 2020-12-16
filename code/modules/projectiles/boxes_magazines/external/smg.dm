@@ -27,6 +27,15 @@
 	..()
 	icon_state = "46x30mmtI-[round(ammo_count(),4)]"
 
+/obj/item/ammo_box/magazine/wt550m9/wtnl
+	name = "wt550 magazine (Non-Lethal 4.6x30mm)"
+	icon_state = "46x30mmtnl-20"
+	ammo_type = /obj/item/ammo_casing/c46x30mm/nl
+
+/obj/item/ammo_box/magazine/wt550m9/wtnl/update_icon()
+	..()
+	icon_state = "46x30mmtnl-[round(ammo_count(),4)]"
+
 /obj/item/ammo_box/magazine/uzim9mm
 	name = "uzi magazine (9mm)"
 	icon_state = "uzi9mm-32"

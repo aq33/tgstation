@@ -98,6 +98,9 @@
 	fire_rate = 3
 	block_upgrade_walk = 1
 
+/obj/item/gun/ballistic/automatic/wt550/nl
+	mag_type = /obj/item/ammo_box/magazine/wt550m9/wtnl
+
 /obj/item/gun/ballistic/automatic/mini_uzi
 	name = "\improper Type U3 Uzi"
 	desc = "A lightweight submachine gun, for when you really want someone dead. Uses 9mm rounds."
