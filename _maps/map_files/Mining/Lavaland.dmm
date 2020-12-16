@@ -3245,10 +3245,6 @@
 /turf/open/floor/plasteel,
 /area/mine/laborcamp)
 "vS" = (
-/obj/machinery/door/airlock/mining/glass{
-	name = "Mining Station Bridge";
-	req_access_txt = "48"
-	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -3259,6 +3255,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
 	},
+/obj/machinery/door/airlock/glass,
 /turf/open/floor/plasteel,
 /area/mine/production)
 "vU" = (
@@ -8505,7 +8502,7 @@
 	height = 6;
 	id = "science_outpost";
 	name = "outpost shuttle dock";
-	roundstart_template = /datum/map_template/shuttle/science;
+	roundstart_template = null;
 	width = 9
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
