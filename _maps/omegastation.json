@@ -1,6 +1,6 @@
 {
     "map_name": "OmegaStation",
-    "map_path": "map_files/Omegastation",
+    "map_path": "map_files/OmegaStation",
     "map_file": "omegastation.dmm",
     "shuttles": {
 	    "emergency": "emergency_box",
