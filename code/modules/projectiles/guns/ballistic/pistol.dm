@@ -43,6 +43,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	mag_type = /obj/item/ammo_box/magazine/sec9mm
+	fire_sound = "sound/weapons/secshot.ogg"
 	can_suppress = FALSE
 	fire_delay = 2
 	burst_size = 2
