@@ -50,6 +50,28 @@
 	..()
 	icon_state = "9x19p-[ammo_count() ? "8" : "0"]"
 
+/obj/item/ammo_box/magazine/sec9mm
+	name = "security pistol magazine (9mm)"
+	icon_state = "sec9mm-12"
+	ammo_type = /obj/item/ammo_casing/c9mm
+	caliber = "9mm"
+	max_ammo = 12
+
+/obj/item/ammo_box/magazine/sec9mm/update_icon()
+	..()
+	icon_state = "sec9mm-[ammo_count() ? "12" : "0"]"
+
+/obj/item/ammo_box/magazine/sec9mm/nl
+	name = "security pistol magazine (9mm)"
+	icon_state = "sec9mmnl-12"
+	ammo_type = /obj/item/ammo_casing/c9mm/nl
+	caliber = "9mm"
+	max_ammo = 12
+
+/obj/item/ammo_box/magazine/sec9mm/nl/update_icon()
+	..()
+	icon_state = "sec9mmnl-[ammo_count() ? "12" : "0"]"
+
 /obj/item/ammo_box/magazine/m50
 	name = "handgun magazine (.50ae)"
 	icon_state = "50ae"

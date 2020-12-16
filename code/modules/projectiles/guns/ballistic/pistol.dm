@@ -26,14 +26,45 @@
 	install_suppressor(S)
 
 /obj/item/gun/ballistic/automatic/pistol/m1911
-	name = "\improper Security Pistol"
+	name = "\improper M1911"
 	desc = "A classic .45 handgun with a small magazine capacity."
-	icon_state = "secpistol"
+	icon_state = "m1911"
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m45
 	can_suppress = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/m1911/no_mag
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/secpistol
+	name = "\improper security pistol"
+	desc = "Classic pistol modernised for use by station's security force."
+	icon_state = "secpistol"
+	w_class = WEIGHT_CLASS_NORMAL
+	actions_types = list(/datum/action/item_action/toggle_firemode)
+	mag_type = /obj/item/ammo_box/magazine/sec9mm
+	can_suppress = FALSE
+	fire_delay = 2
+	burst_size = 2
+
+/obj/item/gun/ballistic/automatic/pistol/secpistol/burst_select()
+	var/mob/living/carbon/human/user = usr
+	switch(select)
+		if(0)
+			select = 1
+			burst_size = initial(burst_size)
+			fire_delay = initial(fire_delay)
+			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
+		if(1)
+			select = 0
+			burst_size = 1
+			fire_delay = 0
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	update_icon()
+	return
+
+/obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag
 	spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/deagle
