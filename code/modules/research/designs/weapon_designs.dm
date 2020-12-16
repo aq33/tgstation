@@ -444,7 +444,7 @@
 
 //Security Pistol Mags
 /datum/design/mag_secpistol/nl
-	name = "Security Pistol Non-Lethal Magazine (4.6x30mm)"
+	name = "Security Pistol Non-Lethal Magazine (9mm)"
 	desc = "A 12 round magazine for the standard-issue security pistol loaded with rubber ammo."
 	id = "mag_secpistol_nl"
 	build_type = PROTOLATHE
@@ -454,12 +454,22 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/mag_secpistol
-	name = "Security Pistol Magazine (4.6x30mm)"
+	name = "Security Pistol Magazine (9mm)"
 	desc = "A 12 round magazine for the standard-issue security pistol loaded with standard ammo."
 	id = "mag_secpistol"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = 7000, /datum/material/glass = 5000, /datum/material/copper = 150)
 	build_path = /obj/item/ammo_box/magazine/sec9mm
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/mag_secpistol/ext
+	name = "Security Pistol Extended Magazine (9mm)"
+	desc = "A 20 round magazine for the standard-issue security pistol loaded with standard ammo."
+	id = "mag_secpistol_ext"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 13000, /datum/material/glass = 7500, /datum/material/copper = 200)
+	build_path = /obj/item/ammo_box/magazine/sec9mm/ext
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
