@@ -39,7 +39,7 @@
 /obj/item/circuitboard/computer/science_shuttle,
 /obj/item/stack/sheet/glass,
 /obj/item/stack/sheet/glass,
-/obj/item/stack/cable_coil/orange,
+/obj/item/stack/cable_coil,
 /obj/item/storage/toolbox/electrical,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/science)
@@ -65,13 +65,11 @@
 	port_direction = 4;
 	width = 9
 	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/science)
 "s" = (
-/obj/structure/cable/yellow,
+/obj/structure/cable,
 /obj/machinery/power/apc/auto_name/east,
 /obj/effect/mapping_helpers/apc/discharged,
 /obj/structure/janitorialcart,
@@ -82,9 +80,7 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/science)
 "x" = (
-/obj/structure/cable/yellow{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/science)
 "y" = (
