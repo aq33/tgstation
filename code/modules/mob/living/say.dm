@@ -295,6 +295,12 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 			speech_bubble_recipients.Add(M.client)
 
 	INVOKE_ASYNC(GLOBAL_PROC, /.proc/animate_chat, src, message, message_language, message_mode, speech_bubble_recipients, 50) // see chatheader.dm
+	
+	//speech sound
+	if(speech_sound && speech_sound_cd < world.time)
+		playsound(src, speech_sound, 15, TRUE, (-7 + message_range), ignore_walls = FALSE)
+		speech_sound_cd = world.time + speech_sound_delay
+
 
 /proc/animate_speechbubble(image/I, list/show_to, duration)
 	var/matrix/M = matrix()
