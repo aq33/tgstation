@@ -30,7 +30,6 @@
 	disliked_food = null
 	liked_food = null
 	deathsound = "sound/voice/borg_deathsound.ogg"
-	var/disguise_fail_health = 75 //When their health gets to this level their synthflesh partially falls off
 	var/datum/species/fake_species //a species to do most of our work for us, unless we're damaged
 	var/list/initial_species_traits //for getting these values back for assume_disguise()
 	var/list/initial_inherent_traits
@@ -42,7 +41,7 @@
 	id = "military_synth"
 	armor = 25
 	punchdamage = 14
-	disguise_fail_health = 50
+	mutant_organs = list(/obj/item/organ/cyberimp/arm/baton, /obj/item/organ/cyberimp/arm/power_cord, /obj/item/organ/cyberimp/brain/anti_stun)
 	changesource_flags = MIRROR_BADMIN | WABBAJACK
 
 /datum/species/synth/New()
@@ -59,13 +58,11 @@
 	for(var/obj/item/bodypart/O in H.bodyparts)
 		O.synthetic = TRUE
 	assume_disguise(old_species, H)
-	RegisterSignal(H, COMSIG_MOB_SAY, .proc/handle_speech)
 
 
 /datum/species/synth/on_species_loss(mob/living/carbon/human/H)
 	. = ..()
 	REMOVE_TRAIT(H, TRAIT_XENO_IMMUNE, "xeno immune")
-	UnregisterSignal(H, COMSIG_MOB_SAY)
 
 /datum/species/synth/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
 	if(chem.type == /datum/reagent/medicine/synthflesh)
@@ -80,6 +77,7 @@
 	if(S && !istype(S, type))
 		name = S.name
 		say_mod = S.say_mod
+		speech_sound = S.speech_sound
 		sexes = S.sexes
 		species_traits = initial_species_traits.Copy()
 		inherent_traits = initial_inherent_traits.Copy()
@@ -101,6 +99,7 @@
 	else
 		name = initial(name)
 		say_mod = initial(say_mod)
+		speech_sound = initial(speech_sound)
 		species_traits = initial_species_traits.Copy()
 		inherent_traits = initial_inherent_traits.Copy()
 		attack_verb = initial(attack_verb)
@@ -146,17 +145,6 @@
 		fake_species.handle_mutant_bodyparts(H,forced_colour)
 	else
 		return ..()
-
-
-/datum/species/synth/proc/handle_speech(datum/source, list/speech_args)
-	if (isliving(source)) // yeah it's gonna be living but just to be clean
-		var/mob/living/L = source
-		if(fake_species && L.health > disguise_fail_health)
-			switch (fake_species.type)
-				if (/datum/species/golem/bananium)
-					speech_args[SPEECH_SPANS] |= SPAN_CLOWN
-				if (/datum/species/golem/clockwork)
-					speech_args[SPEECH_SPANS] |= SPAN_ROBOT
 
 /datum/species/synth/spec_life(mob/living/carbon/human/H)
 	. = ..()

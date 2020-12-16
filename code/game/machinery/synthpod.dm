@@ -25,7 +25,7 @@
 	. = ..()
 	if(obj_flags & EMAGGED)
 		if(panel_open)
-			. += "<span class='warning'>[src]'s surgery protocols have been corrupted!</span>"
+			. += "<span class='warning'>[src]'s conversion protocols have been corrupted!</span>"
 		else
 			. += "<span class='warning'>[src]'s control panel is slightly smoking.</span>"
 	if(processing)
@@ -61,18 +61,17 @@
 		return
 	
 	var/mob/living/carbon/human/dummy = new /mob/living/carbon/human(loc)
-	C.dna.transfer_identity(dummy)
+	C.dna.transfer_identity(dummy) //copypasta regenerative blacka
 	dummy.updateappearance(mutcolor_update=1)
 	dummy.real_name = C.real_name
 	dummy.adjustBruteLoss(C.getBruteLoss())
 	dummy.adjustFireLoss(C.getFireLoss())
-	dummy.adjustToxLoss(C.getToxLoss())
-	dummy.adjustOxyLoss(C.getOxyLoss())
-	dummy.death()
+	ADD_TRAIT(dummy, TRAIT_EMOTEMUTE, "conversion")		//dziwne rozwiązanie dziwnego błędu. z jakiegoś powodu ciała używały deathgasp z innym imieniem niż powinny mieć.
+	dummy.death()										//prawdopodobnie transfer_identity działa z opóźnieniem. próbowałem spawn(0), ale nie pomogło, więc możemy tylko wyciszyć deathgaspa
+	REMOVE_TRAIT(dummy, TRAIT_EMOTEMUTE, "conversion")
 	
 	if(obj_flags & EMAGGED)
-		C.forceMove(drop_location())
-		C.Robotize()
+		C.set_species(/datum/species/ipc)
 	else
 		C.set_species(/datum/species/synth)
 	
