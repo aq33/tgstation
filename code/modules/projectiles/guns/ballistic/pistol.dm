@@ -68,6 +68,9 @@
 /obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag
 	spawnwithmagazine = FALSE
 
+/obj/item/gun/ballistic/automatic/pistol/secpistol/nl_mag
+	mag_type = /obj/item/ammo_box/magazine/sec9mm/nl
+
 /obj/item/gun/ballistic/automatic/pistol/deagle
 	name = "\improper Desert Eagle"
 	desc = "A robust .50 AE handgun."

@@ -1113,12 +1113,15 @@
 /area/ai_monitored/security/armory)
 "acM" = (
 /obj/structure/rack,
-/obj/item/gun/energy/e_gun{
+/obj/item/gun/ballistic/automatic/wt550/nl{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/gun/energy/e_gun,
-/obj/item/gun/energy/e_gun{
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/gun/ballistic/automatic/wt550/nl,
+/obj/item/gun/ballistic/automatic/wt550/nl{
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -1301,12 +1304,15 @@
 /area/ai_monitored/security/armory)
 "adj" = (
 /obj/structure/rack,
-/obj/item/gun/energy/disabler{
+/obj/item/gun/ballistic/automatic/pistol/secpistol/nl_mag{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/gun/energy/disabler,
-/obj/item/gun/energy/disabler{
+/obj/item/ammo_box/magazine/sec9mm/nl,
+/obj/item/ammo_box/magazine/sec9mm/nl,
+/obj/item/ammo_box/magazine/sec9mm/nl,
+/obj/item/gun/ballistic/automatic/pistol/secpistol/nl_mag,
+/obj/item/gun/ballistic/automatic/pistol/secpistol/nl_mag{
 	pixel_x = 3;
 	pixel_y = -3
 	},
