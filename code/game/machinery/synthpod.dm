@@ -3,8 +3,8 @@
 	desc = "An advanced machine used for converting its occupant into a synth."
 	density = TRUE
 	state_open = FALSE
-	icon = 'icons/obj/machines/autodoc.dmi'
-	icon_state = "autodoc_machine"
+	icon = 'icons/obj/machines/synthpod.dmi'
+	icon_state = "synth"
 	verb_say = "states"
 	idle_power_usage = 50
 	circuit = /obj/item/circuitboard/machine/synthpod
@@ -76,7 +76,7 @@
 		C.set_species(/datum/species/synth)
 	
 	occupant.visible_message("<span class='notice'>[src] completes the conversion procedure")
-	playsound(src, 'sound/machines/microwave/microwave-end.ogg', 100, 0)
+	playsound(src, 'sound/machines/ping.ogg', 100, 0)
 	processing = FALSE
 	open_machine()
 
@@ -119,27 +119,26 @@
 	if(default_deconstruction_crowbar(I))
 		return TRUE
 
+/obj/machinery/synthpod/power_change()
+	. = ..()
+	update_icon()
+	return
 
 /obj/machinery/synthpod/update_icon()
-	overlays.Cut()
-	if(!state_open)
-		if(processing)
-			overlays += "[icon_state]_door_on"
-			overlays += "[icon_state]_stack"
-			overlays += "[icon_state]_smoke"
-			overlays += "[icon_state]_green"
+	if(processing)
+		icon_state = "synth-working"
+	else if(panel_open)
+		icon_state = "synth-panel"
+	else if(!state_open)
+		if(powered(AREA_USAGE_EQUIP))
+			icon_state = "synth-closed"
 		else
-			overlays += "[icon_state]_door_off"
-			if(occupant)
-				if(powered(AREA_USAGE_EQUIP))
-					overlays += "[icon_state]_stack"
-					overlays += "[icon_state]_yellow"
-			else
-				overlays += "[icon_state]_red"
-	else if(powered(AREA_USAGE_EQUIP))
-		overlays += "[icon_state]_red"
-	if(panel_open)
-		overlays += "[icon_state]_panel"
+			icon_state = "synth-nopowerclosed"
+	else
+		if(powered(AREA_USAGE_EQUIP))
+			icon_state = "synth-open"
+		else
+			icon_state = "synth-nopoweropen"
 
 /obj/machinery/synthpod/emag_act(mob/user)
 	if(obj_flags & EMAGGED)
