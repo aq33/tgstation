@@ -47,42 +47,6 @@
 	build_path = /obj/item/ammo_casing/shotgun/sleepytime
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
-/datum/design/c9mm/sec
-	name = "9mm Ammo Box"
-	id = "9mmbox"
-	build_type = PROTOLATHE
-	category = list("Ammo")
-	materials = list(/datum/material/iron = 20000, /datum/material/glass = 15000, /datum/material/copper = 500)
-	build_path = /obj/item/ammo_box/c9mm
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
-/datum/design/c9mmnl/sec
-	name = "9mm Rubber Ammo Box"
-	id = "9mmboxnl"
-	build_type = PROTOLATHE
-	category = list("Ammo")
-	materials = list(/datum/material/iron = 15000, /datum/material/glass = 10000, /datum/material/copper = 500)
-	build_path = /obj/item/ammo_box/c9mm/nl
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
-/datum/design/c46x30mm/sec
-	name = "4.6x30mm Ammo Box"
-	id = "wtbox"
-	build_type = PROTOLATHE
-	category = list("Ammo")
-	materials = list(/datum/material/iron = 24000, /datum/material/glass = 15000, /datum/material/copper = 500)
-	build_path = /obj/item/ammo_box/c46x30mm
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
-/datum/design/c46x30mmnl/sec
-	name = "4.6x30mm Rubber Ammo Box"
-	id = "wtboxnl"
-	build_type = PROTOLATHE
-	category = list("Ammo")
-	materials = list(/datum/material/iron = 19000, /datum/material/glass = 10000, /datum/material/copper = 500)
-	build_path = /obj/item/ammo_box/c46x30mm/nl
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
 /datum/design/rubbershot/sec
 	id = "sec_rshot"
 	build_type = PROTOLATHE
@@ -497,6 +461,43 @@
 	materials = list(/datum/material/iron = 7000, /datum/material/glass = 5000, /datum/material/copper = 150)
 	build_path = /obj/item/ammo_box/magazine/sec9mm
 	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+//Ammo Boxes
+/datum/design/c9mm/sec
+	name = "9mm Ammo Box"
+	id = "9mmbox"
+	build_type = PROTOLATHE
+	category = list("Ammo")
+	materials = list(/datum/material/iron = 20000, /datum/material/glass = 15000, /datum/material/copper = 500)
+	build_path = /obj/item/ammo_box/c9mm
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/c9mmnl/sec
+	name = "9mm Rubber Ammo Box"
+	id = "9mmboxnl"
+	build_type = PROTOLATHE
+	category = list("Ammo")
+	materials = list(/datum/material/iron = 15000, /datum/material/glass = 10000, /datum/material/copper = 500)
+	build_path = /obj/item/ammo_box/c9mm/nl
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/c46x30mm/sec
+	name = "4.6x30mm Ammo Box"
+	id = "wtbox"
+	build_type = PROTOLATHE
+	category = list("Ammo")
+	materials = list(/datum/material/iron = 24000, /datum/material/glass = 15000, /datum/material/copper = 500)
+	build_path = /obj/item/ammo_box/c46x30mm
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/c46x30mmnl/sec
+	name = "4.6x30mm Rubber Ammo Box"
+	id = "wtboxnl"
+	build_type = PROTOLATHE
+	category = list("Ammo")
+	materials = list(/datum/material/iron = 19000, /datum/material/glass = 10000, /datum/material/copper = 500)
+	build_path = /obj/item/ammo_box/c46x30mm/nl
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/stunshell
