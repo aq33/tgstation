@@ -40907,14 +40907,12 @@
 	pixel_y = -7
 	},
 /obj/item/radio/intercom{
-	!INVALID_VAR! = 1;
 	freerange = 1;
 	listening = 0;
 	name = "Custom Channel";
 	pixel_y = -27
 	},
 /obj/item/radio/intercom{
-	!INVALID_VAR! = 1;
 	broadcasting = 0;
 	freerange = 1;
 	frequency = 1447;
