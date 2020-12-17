@@ -64,14 +64,14 @@
 /obj/item/ammo_box/c46x30mm
 	name = "ammo box (4.6x30mm)"
 	icon_state = "wtbox"
-	ammo_type = /obj/item/projectile/bullet/c46x30mm
+	ammo_type = /obj/item/ammo_casing/c46x30mm
 	max_ammo = 40
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/ammo_box/c46x30mm/nl
 	name = "rubber ammo box (4.6x30mm)"
 	icon_state = "wtboxnl"
-	ammo_type = /obj/item/projectile/bullet/c46x30mm_nl
+	ammo_type = /obj/item/ammo_casing/c46x30mm/nl
 
 /obj/item/ammo_box/a40mm
 	name = "ammo box (40mm grenades)"
