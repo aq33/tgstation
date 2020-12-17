@@ -2082,7 +2082,6 @@
 "adm" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1,
 /mob/living/simple_animal/hostile/retaliate/bat{
-	!INVALID_VAR! = 20;
 	desc = "A fierce companion for any person of power, this spider has been carefully trained by Nanotrasen specialists. Its beady, staring eyes send shivers down your spine.";
 	emote_hear = list("chitters");
 	faction = list("spiders");
