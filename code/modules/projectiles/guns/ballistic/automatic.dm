@@ -5,6 +5,7 @@
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	semi_auto = TRUE
 	fire_sound = "sound/weapons/smgshot.ogg"
+	//dry_fire_sound = "sound/weapons/dryfire.ogg" this one doesn't work, but I'll find something better
 	fire_sound_volume = 80
 	vary_fire_sound = FALSE
 	automatic = 1
@@ -84,7 +85,7 @@
 
 /obj/item/gun/ballistic/automatic/wt550
 	name = "security auto rifle"
-	desc = "An outdated personal defence weapon. Uses 4.6x30mm rounds and is designated the WT-550 Automatic Rifle."
+	desc = "Standard issue security PDW. Uses 4.6x30mm rounds and is designated the WT-550 Automatic Rifle."
 	icon_state = "wt550"
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/wt550m9
@@ -99,8 +100,8 @@
 	fire_rate = 3
 	block_upgrade_walk = 1
 
-/obj/item/gun/ballistic/automatic/wt550/nl
-	mag_type = /obj/item/ammo_box/magazine/wt550m9/wtnl
+/obj/item/gun/ballistic/automatic/wt550/no_mag
+	spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/mini_uzi
 	name = "\improper Type U3 Uzi"

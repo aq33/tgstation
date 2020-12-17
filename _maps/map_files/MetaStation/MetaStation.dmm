@@ -3063,15 +3063,18 @@
 /area/ai_monitored/security/armory)
 "agb" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/pistol/secpistol/nl_mag{
+/obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag{
 	pixel_x = -3;
 	pixel_y = 3
 	},
 /obj/item/ammo_box/magazine/sec9mm/nl,
 /obj/item/ammo_box/magazine/sec9mm/nl,
 /obj/item/ammo_box/magazine/sec9mm/nl,
-/obj/item/gun/ballistic/automatic/pistol/secpistol/nl_mag,
-/obj/item/gun/ballistic/automatic/pistol/secpistol/nl_mag{
+/obj/item/ammo_box/magazine/sec9mm/nl,
+/obj/item/ammo_box/magazine/sec9mm/nl,
+/obj/item/ammo_box/magazine/sec9mm/nl,
+/obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag,
+/obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag{
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -3103,21 +3106,21 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/item/gun/ballistic/automatic/laser{
+/obj/item/ammo_box/c9mm{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/gun/ballistic/automatic/laser,
-/obj/item/gun/ballistic/automatic/laser{
+/obj/item/ammo_box/c9mm,
+/obj/item/ammo_box/c46x30mm{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/ammo_box/magazine/recharge{
+/obj/item/ammo_box/magazine/sec9mm{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/ammo_box/magazine/recharge,
-/obj/item/ammo_box/magazine/recharge{
+/obj/item/ammo_box/magazine/sec9mm,
+/obj/item/ammo_box/magazine/sec9mm{
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -3592,15 +3595,15 @@
 /area/ai_monitored/security/armory)
 "agU" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/wt550/nl{
+/obj/item/gun/ballistic/automatic/wt550/no_mag{
 	pixel_x = -3;
 	pixel_y = 3
 	},
 /obj/item/ammo_box/magazine/wt550m9,
 /obj/item/ammo_box/magazine/wt550m9,
 /obj/item/ammo_box/magazine/wt550m9,
-/obj/item/gun/ballistic/automatic/wt550/nl,
-/obj/item/gun/ballistic/automatic/wt550/nl{
+/obj/item/gun/ballistic/automatic/wt550/no_mag,
+/obj/item/gun/ballistic/automatic/wt550/no_mag{
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -14445,7 +14448,7 @@
 /obj/item/storage/backpack/duffelbag/syndie/hitman,
 /obj/item/card/id/silver/reaper,
 /obj/item/lazarus_injector,
-/obj/item/gun/ballistic/automatic/pistol/secpistol/nl_mag,
+/obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag,
 /obj/item/gun/ballistic/revolver/russian,
 /obj/item/ammo_box/a357,
 /obj/item/clothing/neck/stethoscope,

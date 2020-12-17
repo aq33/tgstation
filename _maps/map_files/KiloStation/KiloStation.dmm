@@ -65571,15 +65571,15 @@
 /area/ai_monitored/security/armory)
 "cuY" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/wt550/nl{
+/obj/item/gun/ballistic/automatic/wt550/no_mag{
 	pixel_x = -3;
 	pixel_y = 3
 	},
 /obj/item/ammo_box/magazine/wt550m9,
 /obj/item/ammo_box/magazine/wt550m9,
 /obj/item/ammo_box/magazine/wt550m9,
-/obj/item/gun/ballistic/automatic/wt550/nl,
-/obj/item/gun/ballistic/automatic/wt550/nl{
+/obj/item/gun/ballistic/automatic/wt550/no_mag,
+/obj/item/gun/ballistic/automatic/wt550/no_mag{
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -65599,24 +65599,24 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/gun/ballistic/automatic/laser{
+/obj/item/ammo_box/c9mm{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/gun/ballistic/automatic/laser{
+/obj/item/ammo_box/c9mm{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/gun/ballistic/automatic/laser,
-/obj/item/ammo_box/magazine/recharge{
+/obj/item/ammo_box/c46x30mm,
+/obj/item/ammo_box/magazine/sec9mm{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/ammo_box/magazine/recharge{
+/obj/item/ammo_box/magazine/sec9mm{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/ammo_box/magazine/recharge,
+/obj/item/ammo_box/magazine/sec9mm,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "cva" = (
@@ -66097,15 +66097,18 @@
 /area/ai_monitored/security/armory)
 "cvU" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/pistol/secpistol/nl_mag{
+/obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag{
 	pixel_x = -3;
 	pixel_y = 3
 	},
 /obj/item/ammo_box/magazine/sec9mm/nl,
 /obj/item/ammo_box/magazine/sec9mm/nl,
 /obj/item/ammo_box/magazine/sec9mm/nl,
-/obj/item/gun/ballistic/automatic/pistol/secpistol/nl_mag,
-/obj/item/gun/ballistic/automatic/pistol/secpistol/nl_mag{
+/obj/item/ammo_box/magazine/sec9mm/nl,
+/obj/item/ammo_box/magazine/sec9mm/nl,
+/obj/item/ammo_box/magazine/sec9mm/nl,
+/obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag,
+/obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag{
 	pixel_x = 3;
 	pixel_y = -3
 	},

@@ -46,6 +46,12 @@
 	special_mags = TRUE
 	fire_sound = "sound/weapons/secshot.ogg"
 	can_suppress = FALSE
+	can_flashlight = TRUE
+	flight_x_offset = 15
+	flight_y_offset = 10
+	dual_wield_spread = 40
+	spread = 15
+	recoil = 0.6
 	fire_delay = 2
 	burst_size = 2
 
@@ -54,11 +60,17 @@
 	switch(select)
 		if(0)
 			select = 1
+			dual_wield_spread = initial(dual_wield_spread)
+			spread = initial(spread)
+			recoil = initial(recoil)
 			burst_size = initial(burst_size)
 			fire_delay = initial(fire_delay)
 			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd burst.</span>")
 		if(1)
 			select = 0
+			dual_wield_spread = 30
+			spread = 1
+			recoil = 0.3
 			burst_size = 1
 			fire_delay = 0
 			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
@@ -68,9 +80,6 @@
 
 /obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag
 	spawnwithmagazine = FALSE
-
-/obj/item/gun/ballistic/automatic/pistol/secpistol/nl_mag
-	mag_type = /obj/item/ammo_box/magazine/sec9mm/nl
 
 /obj/item/gun/ballistic/automatic/pistol/deagle
 	name = "\improper Desert Eagle"
