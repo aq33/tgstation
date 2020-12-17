@@ -346,10 +346,16 @@
 	return ..()
 
 /mob/living/carbon/human/proc/handle_gas_mask_sound()
+	var/list/blacklisted_masks = list() 
+	blacklisted_masks = list(/obj/item/clothing/mask/gas/clown_hat, /obj/item/clothing/mask/gas/sexyclown, /obj/item/clothing/mask/gas/mime, /obj/item/clothing/mask/gas/sexymime)
 	if(wear_mask)
 		if(HAS_TRAIT(src, TRAIT_NOBREATH))
 			return
 		if(stat == DEAD)
+			return
+		if(wear_mask.mask_adjusted)
+			return
+		if(wear_mask.type in blacklisted_masks)
 			return
 		if(istype(wear_mask, /obj/item/clothing/mask/gas))
 			var/mask_sound = pick('sound/effects/gasmask1.ogg', 'sound/effects/gasmask2.ogg', 'sound/effects/gasmask3.ogg', 'sound/effects/gasmask4.ogg', 'sound/effects/gasmask5.ogg', 'sound/effects/gasmask6.ogg', 'sound/effects/gasmask7.ogg', 'sound/effects/gasmask8.ogg', 'sound/effects/gasmask9.ogg', 'sound/effects/gasmask10.ogg')
