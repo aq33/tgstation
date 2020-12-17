@@ -30,7 +30,7 @@
 	new /obj/item/clothing/gloves/color/captain(src)
 	new /obj/item/restraints/handcuffs/cable/zipties(src)
 	new /obj/item/storage/belt/sabre(src)
-	new /obj/item/gun/energy/e_gun(src)
+	new /obj/item/gun/ballistic/revolver/golden
 	new /obj/item/door_remote/captain(src)
 	new /obj/item/card/id/captains_spare(src)
 	new /obj/item/storage/photo_album/Captain(src)
@@ -57,7 +57,7 @@
 	new /obj/item/assembly/flash/handheld(src)
 	new /obj/item/clothing/glasses/sunglasses/advanced(src)
 	new /obj/item/restraints/handcuffs/cable/zipties(src)
-	new /obj/item/gun/energy/e_gun/mini(src)
+	new /obj/item/gun/ballistic/automatic/pistol/m1911
 	new /obj/item/clothing/neck/petcollar(src)
 	new /obj/item/pet_carrier(src)
 	new /obj/item/door_remote/civillian(src)
