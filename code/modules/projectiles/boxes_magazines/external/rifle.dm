@@ -18,7 +18,7 @@
 	icon_state = "5.56m"
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = "a556"
-	max_ammo = 30
+	max_ammo = 20
 	multiple_sprites = 2
 
 // pulse raifu mags //
