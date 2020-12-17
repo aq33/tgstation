@@ -84,20 +84,21 @@
 	update_icon()
 
 /obj/item/gun/ballistic/automatic/wt550
-	name = "security auto rifle"
-	desc = "Standard issue security PDW. Uses 4.6x30mm rounds and is designated the WT-550 Automatic Rifle."
+	name = "WT-550 MK.II PDW"
+	desc = "Modernised standard-issue security personal defence weapon. Uses 4.6x30mm rounds."
 	icon_state = "wt550"
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/wt550m9
 	can_suppress = FALSE
 	actions_types = list()
-	can_bayonet = TRUE
-	knife_x_offset = 25
-	knife_y_offset = 12
+	can_flashlight = TRUE
+	flight_x_offset = 19
+	flight_y_offset = 11
+	special_mags = TRUE
 	mag_display = TRUE
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
-	fire_rate = 3
+	fire_rate = 3.5
 	block_upgrade_walk = 1
 
 /obj/item/gun/ballistic/automatic/wt550/no_mag
