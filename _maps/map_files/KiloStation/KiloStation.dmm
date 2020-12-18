@@ -65571,24 +65571,12 @@
 /area/ai_monitored/security/armory)
 "cuY" = (
 /obj/structure/rack,
-<<<<<<< HEAD
-/obj/item/gun/ballistic/automatic/wt550/no_mag{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/wt550m9,
-/obj/item/ammo_box/magazine/wt550m9,
-/obj/item/ammo_box/magazine/wt550m9,
-/obj/item/gun/ballistic/automatic/wt550/no_mag,
-/obj/item/gun/ballistic/automatic/wt550/no_mag{
-=======
 /obj/item/gun/energy/e_gun{
 	pixel_x = -3;
 	pixel_y = 3
 	},
 /obj/item/gun/energy/e_gun,
 /obj/item/gun/energy/e_gun{
->>>>>>> parent of 5bb494eff3... Sec Pistols Maps
 	pixel_x = 3;
 	pixel_y = -3
 	},
