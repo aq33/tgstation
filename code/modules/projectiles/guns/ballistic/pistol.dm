@@ -81,9 +81,13 @@
 /obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag
 	spawnwithmagazine = FALSE
 
-/obj/item/gun/ballistic/automatic/pistol/secpitstol/tactical
+/obj/item/gun/ballistic/automatic/pistol/secpistol/tactical
 	can_suppress = TRUE
+
+/obj/item/gun/ballistic/automatic/pistol/secpistol/Initialize()
 	set_gun_light(new /obj/item/flashlight/seclite(src))
+	update_icon()
+	return ..()
 
 /obj/item/gun/ballistic/automatic/pistol/deagle
 	name = "\improper Desert Eagle"

@@ -99,13 +99,20 @@
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
 	fire_rate = 3.5
+	spread = 15
+	recoil = 0.3
 	block_upgrade_walk = 1
 
 /obj/item/gun/ballistic/automatic/wt550/no_mag
 	spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/wt550/tactical
+	can_suppress = TRUE
+
+/obj/item/gun/ballistic/automatic/wt550/Initialize()
 	set_gun_light(new /obj/item/flashlight/seclite(src))
+	update_icon()
+	return ..()
 
 /obj/item/gun/ballistic/automatic/mini_uzi
 	name = "\improper Type U3 Uzi"

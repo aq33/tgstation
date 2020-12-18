@@ -747,8 +747,8 @@
 	cost = 2500
 	contains = list(/obj/item/ammo_box/magazine/wt550m9,
 					/obj/item/ammo_box/magazine/wt550m9,
-					/obj/item/ammo_box/magazine/wt550m9/nl,
-					/obj/item/ammo_box/magazine/wt550m9/nl)
+					/obj/item/ammo_box/magazine/wt550m9/wtnl,
+					/obj/item/ammo_box/magazine/wt550m9/wtnl)
 
 /datum/supply_pack/security/armory/wt550ammo_single
 	name = "WT-550 Auto Rifle Magazine"
@@ -812,7 +812,6 @@
 	name = "9mm Ammo Crate"
 	desc = "Contains 3 boxes of lethal pistol rounds. Requires Armory access to open."
 	cost = 2000
-	small_item = TRUE
 	contains = list(/obj/item/ammo_box/c9mm,
 					/obj/item/ammo_box/c9mm,
 					/obj/item/ammo_box/c9mm)
@@ -821,7 +820,6 @@
 	name = "9mm Non-Lethal Ammo Crate"
 	desc = "Contains 3 boxes of non-lethal pistol rounds. Requires Armory access to open."
 	cost = 1750
-	small_item = TRUE
 	contains = list(/obj/item/ammo_box/c9mm/nl,
 					/obj/item/ammo_box/c9mm/nl,
 					/obj/item/ammo_box/c9mm/nl)
