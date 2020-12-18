@@ -3063,27 +3063,12 @@
 /area/ai_monitored/security/armory)
 "agb" = (
 /obj/structure/rack,
-<<<<<<< HEAD
-/obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/sec9mm/nl,
-/obj/item/ammo_box/magazine/sec9mm/nl,
-/obj/item/ammo_box/magazine/sec9mm/nl,
-/obj/item/ammo_box/magazine/sec9mm/nl,
-/obj/item/ammo_box/magazine/sec9mm/nl,
-/obj/item/ammo_box/magazine/sec9mm/nl,
-/obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag,
-/obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag{
-=======
 /obj/item/gun/energy/disabler{
 	pixel_x = -3;
 	pixel_y = 3
 	},
 /obj/item/gun/energy/disabler,
 /obj/item/gun/energy/disabler{
->>>>>>> parent of 5bb494eff3... Sec Pistols Maps
 	pixel_x = 3;
 	pixel_y = -3
 	},
