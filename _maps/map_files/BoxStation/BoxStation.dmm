@@ -1113,6 +1113,7 @@
 /area/ai_monitored/security/armory)
 "acM" = (
 /obj/structure/rack,
+<<<<<<< HEAD
 /obj/item/gun/ballistic/automatic/wt550/no_mag{
 	pixel_x = -3;
 	pixel_y = 3
@@ -1122,6 +1123,14 @@
 /obj/item/ammo_box/magazine/wt550m9,
 /obj/item/gun/ballistic/automatic/wt550/no_mag,
 /obj/item/gun/ballistic/automatic/wt550/no_mag{
+=======
+/obj/item/gun/energy/e_gun{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/gun/energy/e_gun,
+/obj/item/gun/energy/e_gun{
+>>>>>>> parent of 5bb494eff3... Sec Pistols Maps
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -1304,6 +1313,7 @@
 /area/ai_monitored/security/armory)
 "adj" = (
 /obj/structure/rack,
+<<<<<<< HEAD
 /obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag{
 	pixel_x = -3;
 	pixel_y = 3
@@ -1316,6 +1326,14 @@
 /obj/item/ammo_box/magazine/sec9mm/nl,
 /obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag,
 /obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag{
+=======
+/obj/item/gun/energy/disabler{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/gun/energy/disabler,
+/obj/item/gun/energy/disabler{
+>>>>>>> parent of 5bb494eff3... Sec Pistols Maps
 	pixel_x = 3;
 	pixel_y = -3
 	},
