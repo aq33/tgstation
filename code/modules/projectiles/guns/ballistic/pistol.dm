@@ -81,6 +81,10 @@
 /obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag
 	spawnwithmagazine = FALSE
 
+/obj/item/gun/ballistic/automatic/pistol/secpitstol/tactical
+	can_suppress = TRUE
+	set_gun_light(new /obj/item/flashlight/seclite(src))
+
 /obj/item/gun/ballistic/automatic/pistol/deagle
 	name = "\improper Desert Eagle"
 	desc = "A robust .50 AE handgun."

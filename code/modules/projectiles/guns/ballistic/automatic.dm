@@ -104,6 +104,9 @@
 /obj/item/gun/ballistic/automatic/wt550/no_mag
 	spawnwithmagazine = FALSE
 
+/obj/item/gun/ballistic/automatic/wt550/tactical
+	set_gun_light(new /obj/item/flashlight/seclite(src))
+
 /obj/item/gun/ballistic/automatic/mini_uzi
 	name = "\improper Type U3 Uzi"
 	desc = "A lightweight submachine gun, for when you really want someone dead. Uses 9mm rounds."
