@@ -14439,11 +14439,7 @@
 /obj/item/storage/backpack/duffelbag/syndie/hitman,
 /obj/item/card/id/silver/reaper,
 /obj/item/lazarus_injector,
-<<<<<<< HEAD
-/obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag,
-=======
 /obj/item/gun/energy/disabler,
->>>>>>> parent of 5bb494eff3... Sec Pistols Maps
 /obj/item/gun/ballistic/revolver/russian,
 /obj/item/ammo_box/a357,
 /obj/item/clothing/neck/stethoscope,
