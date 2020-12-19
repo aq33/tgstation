@@ -155,7 +155,7 @@
 	item_state = "wardenblueclothes"
 	item_color = "wardenblueclothes"
 	alt_covers_chest = TRUE
-	
+
 /obj/item/clothing/under/rank/security/head_of_security/formal
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Head of Security."
 	name = "head of security's formal uniform"
@@ -197,11 +197,11 @@
 	has_sensor = LOCKED_SENSORS
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
-	
+
 /*
  * Triiodine's security uniforms
  */
- 
+
 
 /obj/item/clothing/under/rank/security/officer/mallcop
 	name = "NT mall cop uniform"
@@ -214,3 +214,21 @@
 /obj/item/clothing/under/rank/security/officer/mallcop/deputy
 	name = "deputy uniform"
 	desc = "A lightly armored formal uniform fit for wannabe security members."
+
+//1945 hugo boss collection
+
+/obj/item/clothing/under/rank/security/officer/nazi
+	name = "german soldier uniform"
+	desc = "Bestraft die Verbundeten fur ihren Widerstand."
+	icon_state = "nazi"
+	item_state = "nazi"
+	item_color = "nazi"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/rank/security/officer/nazi_alt
+	name = "german officer uniform"
+	desc = "Bestraft die Juden fur ihre Verbrechen."
+	icon_state = "nazi_alt"
+	item_state = "nazi_alt"
+	item_color = "nazi_alt"
+	can_adjust = FALSE

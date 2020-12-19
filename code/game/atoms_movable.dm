@@ -19,6 +19,9 @@
 	var/verb_sing = "śpiewa"
 	var/verb_yell = "krzyczy"
 	var/speech_span
+	var/speech_sound = ""
+	var/speech_sound_cd
+	var/speech_sound_delay = 3 SECONDS
 	var/inertia_dir = 0
 	var/atom/inertia_last_loc
 	var/inertia_moving = 0
@@ -45,12 +48,40 @@
 	var/list/affected_dynamic_lights
 	///Highest-intensity light affecting us, which determines our visibility.
 	var/affecting_dynamic_lumi = 0
-
+	/// Either FALSE, [EMISSIVE_BLOCK_GENERIC], or [EMISSIVE_BLOCK_UNIQUE]
+	var/blocks_emissive = FALSE
+	///Internal holder for emissive blocker object, do not use directly use blocks_emissive
+	var/atom/movable/emissive_blocker/em_block
 
 /atom/movable/Initialize(mapload)
 	. = ..()
-	if(light_system == MOVABLE_LIGHT)
-		AddComponent(/datum/component/overlay_lighting)
+	switch(blocks_emissive)
+		if(EMISSIVE_BLOCK_GENERIC)
+			update_emissive_block()
+		if(EMISSIVE_BLOCK_UNIQUE)
+			render_target = ref(src)
+			em_block = new(src, render_target)
+			vis_contents += em_block
+	switch(light_system)
+		if(MOVABLE_LIGHT)
+			AddComponent(/datum/component/overlay_lighting)
+		if(MOVABLE_LIGHT_DIRECTIONAL)
+			AddComponent(/datum/component/overlay_lighting, light_range, light_power, light_color, light_on, TRUE)
+
+/atom/movable/Destroy()
+	QDEL_NULL(em_block)
+	return ..()
+
+/atom/movable/proc/update_emissive_block()
+	if(blocks_emissive != EMISSIVE_BLOCK_GENERIC)
+		return
+	if(length(managed_vis_overlays))
+		for(var/a in managed_vis_overlays)
+			var/obj/effect/overlay/vis/vs
+			if(vs.plane == EMISSIVE_BLOCKER_PLANE)
+				SSvis_overlays.remove_vis_overlay(src, list(vs))
+				break
+	SSvis_overlays.add_vis_overlay(src, icon, icon_state, EMISSIVE_BLOCKER_LAYER, EMISSIVE_BLOCKER_PLANE)
 
 /atom/movable/proc/can_zFall(turf/source, levels = 1, turf/target, direction)
 	if(!direction)

@@ -96,3 +96,12 @@
 	round_term = "cluster"
 	direct_load = TRUE
 	ammo_type = "clusterbang"
+
+/obj/item/mecha_ammo/donksoft
+	name = "box of exosuit-grade BBs"
+	desc = "A box of exosuit-grade BBs for toy guns."
+	icon_state = "foam"
+	rounds = 250
+	round_term = "BB"
+	ammo_type = "BB"
+	custom_premium_price = 200

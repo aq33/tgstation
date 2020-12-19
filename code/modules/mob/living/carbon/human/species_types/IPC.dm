@@ -2,6 +2,7 @@
 	name = "IPC" //inherited from the real species, for health scanners and things
 	id = "ipc"
 	say_mod = "states" //inherited from a user's real species
+	speech_sound = "synthetic"
 	sexes = 0
 	species_traits = list(NOTRANSSTING,NOEYESPRITES,NO_DNA_COPY,NOBLOOD,TRAIT_EASYDISMEMBER,ROBOTIC_LIMBS,NOZOMBIE,MUTCOLORS,REVIVESBYHEALING,NOHUSK,NOMOUTH) //all of these + whatever we inherit from the real species
 	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_NOBREATH,TRAIT_RADIMMUNE,TRAIT_LIMBATTACHMENT)
@@ -160,6 +161,7 @@ datum/species/ipc/on_species_loss(mob/living/carbon/C)
 			H.visible_message("[H]'s cooling system fans stutter and stall. There is a faint, yet rapid beeping coming from inside their chassis.")
 
 /datum/species/ipc/spec_revival(mob/living/carbon/human/H)
+	playsound(H.loc, 'sound/voice/dialup.ogg', 75, 1)
 	H.dna.features["ipc_screen"] = "BSOD"
 	H.update_body()
 	H.say("Reactivating [pick("core systems", "central subroutines", "key functions")]...")

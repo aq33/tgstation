@@ -50,3 +50,8 @@
 #define WIRE_ZAP2 "High Voltage Circuit 2"
 #define WIRE_PASS "Check Passed"
 #define WIRE_FAIL "Check Failed"
+#define WIRE_SLOW "Servo Regulator"
+#define WIRE_FAST "Servo Resistor"
+#define WIRE_LISTING "Listing Interface"
+#define WIRE_RANCH "Ranch"
+#define WIRE_PLAY "Playback"

@@ -13,22 +13,34 @@
 		/obj/item/gun/ballistic/shotgun/toy/unrestricted = 10,
 		/obj/item/toy/sword = 10,
 		/obj/item/ammo_box/foambox = 20,
-		/obj/item/toy/foamblade = 10,
-		/obj/item/toy/syndicateballoon = 10,
-		/obj/item/clothing/suit/syndicatefake = 5,
-		/obj/item/clothing/head/syndicatefake = 5)
+		/obj/item/clothing/head/ertcommanderfake = 1,
+		/obj/item/clothing/head/ertsecurityfake = 1,
+		/obj/item/clothing/head/ertmedicalfake = 1,
+		/obj/item/clothing/head/ertengineerfake = 1,
+		/obj/item/toy/foamblade = 10)
+	premium = list(
+		/obj/item/clothing/suit/ertcommanderfake = 1,
+		/obj/item/clothing/suit/ertsecurityfake = 1,
+		/obj/item/clothing/suit/ertmedicalfake = 1,
+		/obj/item/clothing/suit/ertengineerfake = 1,
+		/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/BBchaingun = 2,
+		/obj/item/mecha_ammo/donksoft = 4)
 	contraband = list(
+		/obj/item/toy/syndicateballoon = 10,
+		/obj/item/clothing/suit/syndicatefake = 4,
+		/obj/item/clothing/head/syndicatefake = 4,
 		/obj/item/gun/ballistic/shotgun/toy/crossbow = 10,
 		/obj/item/gun/ballistic/automatic/c20r/toy/unrestricted = 10,
 		/obj/item/gun/ballistic/automatic/l6_saw/toy/unrestricted = 10,
 		/obj/item/toy/katana = 10,
-		/obj/item/twohanded/dualsaber/toy = 5)
+		/obj/item/twohanded/dualsaber/toy = 5,
+		/obj/item/dakimakura = 5)
 
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
 	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/donksoft
-	default_price = 25
-	extra_price = 50
+	default_price = 100
+	extra_price = 300
 	payment_department = ACCOUNT_SRV
 
 /obj/item/vending_refill/donksoft

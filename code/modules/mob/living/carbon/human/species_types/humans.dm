@@ -1,6 +1,8 @@
 /datum/species/human
 	name = "Human"
 	id = "human"
+	speech_sound = "human"
+	gendered_speech = TRUE
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS)
 	default_features = list("mcolor" = "FFF", "wings" = "None")

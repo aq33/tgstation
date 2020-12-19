@@ -37,6 +37,7 @@
 	gender = NEUTER
 	mob_biotypes = list(MOB_ROBOTIC)
 	speak_emote = list("ćwierka")
+	speech_sound = "drone"
 	speech_span = SPAN_ROBOT
 	bubble_icon = "machine"
 	initial_language_holder = /datum/language_holder/drone
