@@ -2,6 +2,8 @@
 /datum/species/human/felinid
 	name = "Felinid"
 	id = "felinid"
+	speech_sound = "felinid"
+	gendered_speech = FALSE
 	limbs_id = "human"
 
 	mutant_bodyparts = list("ears", "tail_human")

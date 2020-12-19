@@ -198,6 +198,17 @@
 	icon_state = "laceups"
 	equip_delay_other = 50
 
+/obj/item/clothing/shoes/khaki_laceup
+	name = "khaki laceup shoes"
+	desc = "The height of fashion, and they're pre-polished!"
+	icon_state = "khaki_laceups"
+	item_state = "khaki_laceups"
+	equip_delay_other = 50
+
+/obj/item/clothing/shoes/laceup/brown
+	name = "brown laceup shoes"
+	icon_state = "brown_laceups"
+
 /obj/item/clothing/shoes/roman
 	name = "roman sandals"
 	desc = "Sandals with buckled leather straps on it."
@@ -317,23 +328,28 @@
 	actions_types = list(/datum/action/item_action/kindleKicks)
 	var/lightCycle = 0
 	var/active = FALSE
+	light_system = MOVABLE_LIGHT
+	light_range = 2
+	light_power = 3
+	light_on = FALSE
 
 /obj/item/clothing/shoes/kindleKicks/ui_action_click(mob/user, action)
 	if(active)
 		return
 	active = TRUE
-	set_light(2, 3, rgb(rand(0,255),rand(0,255),rand(0,255)))
-	addtimer(CALLBACK(src, .proc/lightUp), 5)
+	set_light_color(rgb(rand(0, 255), rand(0, 255), rand(0, 255)))
+	set_light_on(active)
+	addtimer(CALLBACK(src, .proc/lightUp), 0.5 SECONDS)
 
 /obj/item/clothing/shoes/kindleKicks/proc/lightUp(mob/user)
 	if(lightCycle < 15)
-		set_light(2, 3, rgb(rand(0,255),rand(0,255),rand(0,255)))
-		lightCycle += 1
-		addtimer(CALLBACK(src, .proc/lightUp), 5)
+		set_light_color(rgb(rand(0, 255), rand(0, 255), rand(0, 255)))
+		lightCycle++
+		addtimer(CALLBACK(src, .proc/lightUp), 0.5 SECONDS)
 	else
-		set_light(0)
 		lightCycle = 0
 		active = FALSE
+		set_light_on(active)
 
 /obj/item/clothing/shoes/russian
 	name = "russian boots"

@@ -3,13 +3,15 @@
 	icon_state = "laser"
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
 	damage = 20
-	light_range = 2
 	damage_type = BURN
 	hitsound = 'sound/weapons/sear.ogg'
 	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
 	flag = "laser"
 	eyeblur = 2
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/red_laser
+	light_system = MOVABLE_LIGHT
+	light_range = 2
+	light_power = 1
 	light_color = LIGHT_COLOR_RED
 	ricochets_max = 50	//Honk!
 	ricochet_chance = 80
@@ -203,16 +205,20 @@
 	name = "tribeam laser"
 	damage = 10
 
+/obj/item/projectile/beam/laser/laserrifle
+	name = "laser rifle beam"
+	damage = 10
+
 /obj/item/projectile/energy/plasma
 	name = "plasma bolt"
 	icon_state = "plasma"
 	damage_type = BURN
-	var/knockdown_chance = 1
 	light_color = LIGHT_COLOR_GREEN
 	impact_type = /obj/effect/projectile/impact/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/bfg
 	hitsound = 'sound/weapons/sear.ogg'
 	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
+	var/knockdown_chance = 0
 
 /obj/item/projectile/energy/plasma/plasmagun
 	icon_state = "plasma3"

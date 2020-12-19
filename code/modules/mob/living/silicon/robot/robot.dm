@@ -9,7 +9,10 @@
 	designation = "Default" //used for displaying the prefix & getting the current module of cyborg
 	has_limbs = 1
 	hud_type = /datum/hud/robot
-
+	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
+	light_system = MOVABLE_LIGHT_DIRECTIONAL
+	light_on = FALSE
+	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
 	var/custom_name = ""
 	var/braintype = "Cyborg"
 	var/obj/item/robot_suit/robot_suit = null //Used for deconstruction to remember what the borg was constructed out of..
@@ -102,7 +105,6 @@
 
 	wires = new /datum/wires/robot(src)
 	AddComponent(/datum/component/empprotection, EMP_PROTECT_WIRES)
-	
 	RegisterSignal(src, COMSIG_PROCESS_BORGCHARGER_OCCUPANT, .proc/charge)
 
 	robot_modules_background = new()
@@ -154,7 +156,7 @@
 
 	blacklisted_hats = typecacheof(blacklisted_hats)
 
-	playsound(loc, 'sound/voice/liveagain.ogg', 75, 1)
+	playsound(loc, 'sound/voice/dialup.ogg', 75, 1)
 	aicamera = new/obj/item/camera/siliconcam/robot_camera(src)
 	toner = tonermax
 	diag_hud_set_borgcell()
@@ -707,30 +709,36 @@
 		return //won't work if dead
 	set_autosay()
 
+
 /mob/living/silicon/robot/proc/control_headlamp()
 	if(stat || lamp_cooldown > world.time || low_power_mode)
 		to_chat(src, "<span class='danger'>This function is currently offline.</span>")
 		return
-
-//Some sort of magical "modulo" thing which somehow increments lamp power by 2, until it hits the max and resets to 0.
-	lamp_intensity = (lamp_intensity+2) % (lamp_max+2)
-	to_chat(src, "[lamp_intensity ? "Headlamp power set to Level [lamp_intensity/2]" : "Headlamp disabled."]")
+	if(lamp_intensity == 0) //We'll skip intensity of 2, since every mob already has such a see-darkness range, so no much need for it.
+		lamp_intensity = 4
+	else //Some sort of magical "modulo" thing which somehow increments lamp power by 2, until it hits the max and resets to 0.
+		lamp_intensity = (lamp_intensity + 2) % (lamp_max + 2)
+	to_chat(src, "<span class='notice'>[lamp_intensity > 2 ? "Headlamp power set to Level [lamp_intensity * 0.5]" : "Headlamp disabled"].</span>")
 	update_headlamp()
 
-/mob/living/silicon/robot/proc/update_headlamp(var/turn_off = 0, var/cooldown = 100)
-	set_light(0)
-
-	if(lamp_intensity && (turn_off || stat || low_power_mode))
-		to_chat(src, "<span class='danger'>Your headlamp has been deactivated.</span>")
-		lamp_intensity = 0
-		lamp_cooldown = world.time + cooldown
+/mob/living/silicon/robot/proc/update_headlamp(turn_off = FALSE, cooldown = 10 SECONDS)
+	if(lamp_intensity > 2)
+		if(turn_off || stat || low_power_mode)
+			to_chat(src, "<span class='danger'>Your headlamp has been deactivated.</span>")
+			lamp_intensity = 0
+			lamp_cooldown = world.time + cooldown
+			set_light_on(FALSE)
+		else
+			set_light_range(lamp_intensity * 0.5)
+			set_light_on(TRUE)
 	else
-		set_light(lamp_intensity)
+		set_light_on(FALSE)
 
 	if(lamp_button)
 		lamp_button.icon_state = "lamp[lamp_intensity]"
 
 	update_icons()
+
 
 /mob/living/silicon/robot/proc/deconstruct()
 	SEND_SIGNAL(src, COMSIG_BORG_SAFE_DECONSTRUCT)

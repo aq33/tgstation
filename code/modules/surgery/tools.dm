@@ -207,41 +207,48 @@
 	sharpness = IS_SHARP
 
 /obj/item/circular_saw/ubersaw
-	name = "Ubersaw"
+	name = "ubersaw"
 	desc = "Old, rusty abomination of a medical tool. Someone should lose their medical licence."
 	icon_state = "ubersaw"
-	force = 15
-	var/amount_per_transfer_from_this = 10
+	force = 12
+	var/amount_per_transfer_from_this = 5
 	attack_verb = list("attacked", "slashed", "sawed", "cut", "stabbed")
 
 /obj/item/circular_saw/ubersaw/attack(mob/living/M, mob/user)
-    if(!istype(M))
-        return
-
-    if(M.can_inject(user, 1) && reagents.total_volume && M.reagents)
-        to_chat(M, "<span class='danger'>You feel a sharp sting!</span>")
-        reagents.reaction(M, INJECT, reagents.total_volume)
-        reagents.trans_to(M, amount_per_transfer_from_this, transfered_by = user)
-
-        log_combat(user, M, "stabbed", src)
-    . = ..()
+	. = ..()
+	if(!istype(M))
+		return
+	if(M.can_inject(user, 1) && reagents.total_volume && M.reagents)
+		to_chat(M, "<span class='danger'>You feel a sharp sting!</span>")
+		reagents.reaction(M, INJECT, reagents.total_volume)
+		reagents.trans_to(M, amount_per_transfer_from_this, transfered_by = user)
 
 /obj/item/circular_saw/ubersaw/Initialize()
 	. = ..()
-	create_reagents(50, OPENCONTAINER)
+	create_reagents(15, OPENCONTAINER)
 
-/obj/item/circular_saw/ubersaw/verb/empty()
+/obj/item/circular_saw/ubersaw/AltClick(mob/user) //copypasta z ubranek
+	if(..())
+		return 1
+	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	else
+		empty(user)
+
+/obj/item/circular_saw/ubersaw/verb/empty() //rozbiłem to na dwie funkcje
 	set name = "Empty Ubersaw"
 	set category = "Object"
 	set src in usr
-	if(usr.incapacitated())
+	if(!usr.incapacitated())
+		empty(usr)
+	
+/obj/item/circular_saw/ubersaw/empty(mob/user)
+	if(alert(user, "Are you sure you want to empty that?", "Empty Ubersaw:", "Yes", "No") != "Yes")
 		return
-	if (alert(usr, "Are you sure you want to empty that?", "Empty Ubersaw:", "Yes", "No") != "Yes")
-		return
-	if(isturf(usr.loc) && src.loc == usr)
-		to_chat(usr, "<span class='notice'>You empty \the [src] onto the floor.</span>")
-		reagents.reaction(usr.loc)
-		src.reagents.clear_reagents()
+	if(isturf(user.loc) && src.loc == user)
+		to_chat(user, "<span class='notice'>You empty \the [src] onto the floor.</span>")
+		reagents.reaction(user.loc)
+		reagents.clear_reagents()
 
 /obj/item/surgical_drapes
 	name = "surgical drapes"
@@ -338,25 +345,24 @@
 	hitsound = 'sound/weapons/blade1.ogg'
 	force = 16
 	toolspeed = 0.7
+	light_system = MOVABLE_LIGHT
+	light_range = 1
 	light_color = LIGHT_COLOR_GREEN
 	sharpness = IS_SHARP_ACCURATE
 
-/obj/item/scalpel/advanced/Initialize()
-	. = ..()
-	set_light(1)
 
 /obj/item/scalpel/advanced/attack_self(mob/user)
 	playsound(get_turf(user), 'sound/machines/click.ogg', 50, TRUE)
 	if(tool_behaviour == TOOL_SCALPEL)
 		tool_behaviour = TOOL_SAW
 		to_chat(user, "<span class='notice'>You increase the power of [src], now it can cut bones.</span>")
-		set_light(2)
+		set_light_range(2)
 		force += 1 //we don't want to ruin sharpened stuff
 		icon_state = "saw_a"
 	else
 		tool_behaviour = TOOL_SCALPEL
 		to_chat(user, "<span class='notice'>You lower the power of [src], it can no longer cut bones.</span>")
-		set_light(1)
+		set_light_range(1)
 		force -= 1
 		icon_state = "scalpel_a"
 
@@ -392,10 +398,8 @@
 	hitsound = 'sound/items/welder.ogg'
 	toolspeed = 0.7
 	light_color = LIGHT_COLOR_RED
-
-/obj/item/surgicaldrill/advanced/Initialize()
-	. = ..()
-	set_light(1)
+	light_system = MOVABLE_LIGHT
+	light_range = 1
 
 /obj/item/surgicaldrill/advanced/attack_self(mob/user)
 	playsound(get_turf(user), 'sound/weapons/tap.ogg', 50, TRUE)

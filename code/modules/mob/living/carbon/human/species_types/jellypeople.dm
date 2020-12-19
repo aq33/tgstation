@@ -4,6 +4,7 @@
 	id = "jelly"
 	default_color = "00FF90"
 	say_mod = "chirps"
+	speech_sound = "slime"
 	species_traits = list(MUTCOLORS,EYECOLOR,NOBLOOD)
 	inherent_traits = list(TRAIT_TOXINLOVER)
 	mutantlungs = /obj/item/organ/lungs/slime
@@ -447,11 +448,14 @@
 	icon_state = "nothing"
 	light_color = "#FFFFFF"
 	light_range = LUMINESCENT_DEFAULT_GLOW
+	light_system = MOVABLE_LIGHT
+	light_power = 2.5
 
 /obj/effect/dummy/luminescent_glow/Initialize()
 	. = ..()
 	if(!isliving(loc))
 		return INITIALIZE_HINT_QDEL
+
 
 /datum/action/innate/integrate_extract
 	name = "Integrate Extract"

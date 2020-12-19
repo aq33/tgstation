@@ -94,6 +94,8 @@
 	throw_range = 3
 	sharpness = IS_SHARP
 	light_color = "#ff0000"
+	light_system = MOVABLE_LIGHT
+	light_range = 4
 	attack_verb = list("cleaved", "slashed", "tore", "hacked", "ripped", "diced", "carved")
 	icon_state = "cultbastard"
 	item_state = "cultbastard"
@@ -112,7 +114,6 @@
 
 /obj/item/twohanded/required/cult_bastard/Initialize()
 	. = ..()
-	set_light(4)
 	jaunt = new(src)
 	linked_action = new(src)
 	AddComponent(/datum/component/butchering, 50, 80)
@@ -324,6 +325,7 @@
 	allowed = list(/obj/item/tome, /obj/item/melee/cultblade)
 	armor = list("melee" = 50, "bullet" = 30, "laser" = 50,"energy" = 20, "bomb" = 25, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 10)
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	blocks_shove_knockdown = TRUE
 
 /obj/item/clothing/head/helmet/space/hardsuit/cult
 	name = "\improper Nar'Sien hardened helmet"
@@ -331,7 +333,8 @@
 	icon_state = "cult_helmet"
 	item_state = "cult_helmet"
 	armor = list("melee" = 70, "bullet" = 50, "laser" = 30,"energy" = 15, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 40, "acid" = 75)
-	brightness_on = 0
+	light_system = NO_LIGHT_SUPPORT
+	light_range = 0
 	actions_types = list()
 
 /obj/item/clothing/suit/space/hardsuit/cult
@@ -343,6 +346,7 @@
 	allowed = list(/obj/item/tome, /obj/item/melee/cultblade, /obj/item/tank/internals/)
 	armor = list("melee" = 70, "bullet" = 50, "laser" = 30,"energy" = 15, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 40, "acid" = 75)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/cult
+	blocks_shove_knockdown = TRUE
 
 /obj/item/sharpener/cult
 	name = "eldritch whetstone"
@@ -564,7 +568,7 @@
 	name = "void torch"
 	desc = "Used by veteran cultists to instantly transport items to their needful brethren."
 	w_class = WEIGHT_CLASS_SMALL
-	brightness_on = 1
+	light_range = 1
 	icon_state = "torch"
 	item_state = "torch"
 	color = "#ff0000"

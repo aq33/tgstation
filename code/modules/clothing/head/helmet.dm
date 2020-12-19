@@ -26,6 +26,14 @@
 	if(attached_light)
 		alight = new(src)
 
+
+/obj/item/clothing/head/helmet/Destroy()
+	var/obj/item/flashlight/seclite/old_light = set_attached_light(null)
+	if(old_light)
+		qdel(old_light)
+	return ..()
+
+
 /obj/item/clothing/head/helmet/examine(mob/user)
 	. = ..()
 	if(attached_light)
@@ -35,17 +43,33 @@
 	else if(can_flashlight)
 		. += "It has a mounting point for a <b>seclite</b>."
 
-/obj/item/clothing/head/helmet/Destroy()
-	QDEL_NULL(attached_light)
-	return ..()
 
 /obj/item/clothing/head/helmet/handle_atom_del(atom/A)
 	if(A == attached_light)
-		attached_light = null
+		set_attached_light(null)
 		update_helmlight()
 		update_icon()
 		QDEL_NULL(alight)
+		qdel(A)
 	return ..()
+
+
+///Called when attached_light value changes.
+/obj/item/clothing/head/helmet/proc/set_attached_light(obj/item/flashlight/seclite/new_attached_light)
+	if(attached_light == new_attached_light)
+		return
+	. = attached_light
+	attached_light = new_attached_light
+	if(attached_light)
+		attached_light.set_light_flags(attached_light.light_flags | LIGHT_ATTACHED)
+		if(attached_light.loc != src)
+			attached_light.forceMove(src)
+	else if(.)
+		var/obj/item/flashlight/seclite/old_attached_light = .
+		old_attached_light.set_light_flags(old_attached_light.light_flags & ~LIGHT_ATTACHED)
+		if(old_attached_light.loc == src)
+			old_attached_light.forceMove(get_turf(src))
+
 
 /obj/item/clothing/head/helmet/sec
 	can_flashlight = TRUE
@@ -66,12 +90,22 @@
 			return
 	return ..()
 
+/obj/item/clothing/head/helmet/secalt
+	name = "helmet"
+	desc = "Standard Security gear. Protects the head and face from impacts."
+	icon_state = "helmet2"
+	item_state = "helmet2"
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
+	flags_inv = HIDEHAIR|HIDEFACE
+	can_flashlight = FALSE
+	dog_fashion = null
+
 /obj/item/clothing/head/helmet/alt
 	name = "bulletproof helmet"
 	desc = "A bulletproof combat helmet that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
 	icon_state = "helmetalt"
 	item_state = "helmetalt"
-	armor = list("melee" = 15, "bullet" = 60, "laser" = 10, "energy" = 15, "bomb" = 40, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	armor = list("melee" = 15, "bullet" = 70, "laser" = 10, "energy" = 15, "bomb" = 40, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 	can_flashlight = TRUE
 	dog_fashion = null
 
@@ -95,7 +129,7 @@
 	toggle_message = "You pull the visor down on"
 	alt_toggle_message = "You push the visor up on"
 	can_toggle = 1
-	armor = list("melee" = 50, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
+	armor = list("melee" = 60, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
 	flags_inv = HIDEEARS|HIDEFACE
 	strip_delay = 80
 	actions_types = list(/datum/action/item_action/toggle)
@@ -417,9 +451,7 @@
 			if(!user.transferItemToLoc(S, src))
 				return
 			to_chat(user, "<span class='notice'>You click [S] into place on [src].</span>")
-			if(S.on)
-				set_light(0)
-			attached_light = S
+			set_attached_light(S)
 			update_icon()
 			update_helmlight()
 			alight = new(src)
@@ -437,8 +469,7 @@
 		if(Adjacent(user) && !issilicon(user))
 			user.put_in_hands(attached_light)
 
-		var/obj/item/flashlight/removed_light = attached_light
-		attached_light = null
+		var/obj/item/flashlight/removed_light = set_attached_light(null)
 		update_helmlight()
 		removed_light.update_brightness(user)
 		update_icon()
@@ -458,92 +489,122 @@
 	if(user.incapacitated())
 		return
 	attached_light.on = !attached_light.on
-	to_chat(user, "<span class='notice'>You toggle the helmet-light [attached_light.on ? "on":"off"].</span>")
+	attached_light.update_brightness()
+	to_chat(user, "<span class='notice'>You toggle the helmet light [attached_light.on ? "on":"off"].</span>")
 
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_helmlight()
 
 /obj/item/clothing/head/helmet/proc/update_helmlight()
 	if(attached_light)
-		if(attached_light.on)
-			set_light(attached_light.brightness_on)
-		else
-			set_light(0)
 		update_icon()
 
-	else
-		set_light(0)
 	for(var/X in actions)
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
 
 //Power armor helmets
 
-/obj/item/clothing/head/helmet/power_armor
+/obj/item/clothing/head/power_armor
+	desc = "this shouldnt exist"
 	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	min_cold_protection_temperature = EMERGENCY_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	strip_delay = 200
 	slowdown = 0.25
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDEJUMPSUIT
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	clothing_flags = THICKMATERIAL
-	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	clothing_flags = THICKMATERIAL | STOPSPRESSUREDAMAGE | SHOWEROKAY
+	resistance_flags = FIRE_PROOF
 	item_flags = SLOWS_WHILE_IN_HAND
 	flash_protect = 2
-	tint = 0
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	item_color = "none"
+	var/brightness_on = 4
+	var/on = FALSE
 
-/obj/item/clothing/head/helmet/power_armor/advanced
-	name = "advanced power helmet"
-	desc = "It's an advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
-	icon_state = "advancedhelmet"
-	item_state = "advancedpowerarmor"
-	armor = list("melee" = 90, "bullet" = 75, "laser" = 60, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+/obj/item/clothing/head/power_armor/attack_self(mob/living/user)
+	toggle_helmet_light(user)
 
-//obj/item/clothing/head/helmet/power_armor/advanced/mk2
-//	name = "advanced power helmet MK2"
-//	desc = "It's an improved model of advanced power armor, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
-//	icon_state = "advadvanced"
-//	item_state = "advpowerhelmet"
-//	armor = list("melee" = 95, "bullet" = 90, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+/obj/item/clothing/head/power_armor/proc/toggle_helmet_light(mob/living/user)
+	on = !on
+	if(on)
+		turn_on(user)
+	else
+		turn_off(user)
+	update_icon()
 
-/obj/item/clothing/head/helmet/power_armor/tesla
-	name = "tesla power helmet"
-	desc = "A helmet typically used by Enclave special forces.<br>There are three orange energy capacitors on the side."
-	icon_state = "tesla"
-	item_state = "tesla"
-	armor = list("melee" = 90, "bullet" = 50, "laser" = 95, "energy" = 95, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+/obj/item/clothing/head/power_armor/update_icon()
+	icon_state = "powerarmor[on]_[item_color]"
+	item_state = "powerarmor[on]_[item_color]"
+	if(ishuman(loc))
+		var/mob/living/carbon/human/H = loc
+		H.update_inv_head()
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon(force = TRUE)
+	..()
 
-/obj/item/clothing/head/helmet/power_armor/t60
-	name = "T-60 power helmet"
-	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
-	icon_state = "t60helmet"
-	item_state = "t60helmet"
-	armor = list("melee" = 80, "bullet" = 70, "laser" = 50, "energy" = 70, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+/obj/item/clothing/head/power_armor/proc/turn_on(mob/user)
+	set_light(brightness_on)
+
+/obj/item/clothing/head/power_armor/proc/turn_off(mob/user)
+	set_light(0)
 
 
-/obj/item/clothing/head/helmet/power_armor/t51b
-	name = "T-51b power helmet"
-	desc = "It's a t51b power helmet. It looks somewhat charming."
-	icon_state = "t51bhelmet"
-	item_state = "t51bhelmet"
-	armor = list("melee" = 80, "bullet" = 70, "laser" = 50, "energy" = 70, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
-
-/obj/item/clothing/head/helmet/power_armor/t45
-	name = "T-45 power helmet"
-	desc = "It's an old pre-War power armor helmet, heavy and big. It's pretty hot inside of it."
-	icon_state = "t45parmorhelmet"
-	item_state = "t45parmorhelmet"
-	armor = list("melee" = 75, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
-
-/obj/item/clothing/head/helmet/power_armor/t45/t45d
+/obj/item/clothing/head/power_armor/t45d
 	name = "T-45d power helmet"
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
-	icon_state = "t45dhelmet"
-	item_state = "t45dhelmet"
+	icon_state = "powerarmor0_t45dhelmet"
+	item_state = "powerarmor0_t45dhelmet"
+	item_color = "t45dhelmet"
 	armor = list("melee" = 75, "bullet" = 60, "laser" = 40, "energy" = 60, "bomb" = 62, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
+/obj/item/clothing/head/power_armor/t51b
+	name = "T-51b power helmet"
+	desc = "It's a t51b power helmet. It looks somewhat charming."
+	icon_state = "powerarmor0_t51bhelmet"
+	item_state = "powerarmor0_t51bhelmet"
+	item_color = "t51bhelmet"
+	armor = list("melee" = 80, "bullet" = 70, "laser" = 50, "energy" = 70, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
+/obj/item/clothing/head/power_armor/t60
+	name = "T-60 power helmet"
+	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
+	icon_state = "powerarmor0_t60helmet"
+	item_state = "powerarmor0_t60helmet"
+	item_color = "t60helmet"
+	armor = list("melee" = 80, "bullet" = 70, "laser" = 50, "energy" = 70, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+
+/obj/item/clothing/head/power_armor/advanced
+	name = "advanced power helmet"
+	desc = "It's an advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
+	icon_state = "powerarmor0_enclave"
+	item_state = "powerarmor0_enclave"
+	item_color = "enclave"
+	armor = list("melee" = 90, "bullet" = 75, "laser" = 60, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+
+obj/item/clothing/head/power_armor/mk2
+	name = "advanced power helmet MK2"
+	desc = "It's an improved model of advanced power armor, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
+	icon_state = "powerarmor0_enclave2"
+	item_state = "powerarmor0_enclave2"
+	item_color = "enclave2"
+	armor = list("melee" = 95, "bullet" = 90, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+
+/obj/item/clothing/head/power_armor/tesla
+	name = "tesla power helmet"
+	desc = "A helmet typically used by Enclave special forces.<br>There are three orange energy capacitors on the side."
+	icon_state = "powerarmor0_tesla"
+	item_state = "powerarmor0_tesla"
+	item_color = "tesla"
+	armor = list("melee" = 90, "bullet" = 50, "laser" = 95, "energy" = 95, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+
+obj/item/clothing/head/power_armor/shocktrop
+	name = "modified power armor helmet"
+	desc = "An modified power armor helmet."
+	icon_state = "powerarmor0_shocktrop"
+	item_state = "powerarmor0_shocktrop"
+	item_color = "shocktrop"
+	armor = list("melee" = 95, "bullet" = 90, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)

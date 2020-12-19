@@ -62,6 +62,17 @@
 	flags_inv = 0
 	strip_delay = 80
 
+/obj/item/clothing/suit/armor/hos/vest
+	name = "hos's armor vest"
+	desc = "An newer Type II-C armored vest that provides moderate protection against most types of damage. Protects the chest better but doesnt cover the limbs."
+	icon_state = "armoralt2"
+	item_state = "armoralt2"
+	body_parts_covered = CHEST|GROIN|NECK
+	armor = list("melee" = 35, "bullet" = 40, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 90)
+	cold_protection = CHEST|GROIN
+	heat_protection = CHEST|GROIN
+	strip_delay = 80
+
 /obj/item/clothing/suit/armor/vest/warden
 	name = "warden's jacket"
 	desc = "A navy-blue armored jacket with blue shoulder designations and '/Warden/' stitched into one of the chest pockets."
@@ -330,14 +341,18 @@
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEJUMPSUIT
 	item_flags = SLOWS_WHILE_IN_HAND
-	clothing_flags = THICKMATERIAL
+	clothing_flags = THICKMATERIAL | STOPSPRESSUREDAMAGE | SHOWEROKAY
 	strip_delay = 200
-	resistance_flags = FIRE_PROOF | ACID_PROOF
+	resistance_flags = FIRE_PROOF
 	blocks_shove_knockdown = TRUE
+	pocket_storage_component_path = null
+	min_cold_protection_temperature = EMERGENCY_HELM_MIN_TEMP_PROTECT
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	desc = "this shouldnt exist"
 
 /obj/item/clothing/suit/armor/power_armor/mob_can_equip(mob/user, mob/equipper, slot)
 	var/mob/living/carbon/human/H = user
-	if(src == H.wear_suit) //Suit is already equipped
+	if(src == H.wear_suit)
 		return FALSE
 	if(slot == SLOT_WEAR_SUIT)
 		return TRUE
@@ -351,14 +366,6 @@
 	var/mob/living/carbon/human/H = user
 	REMOVE_TRAIT(H, TRAIT_STUNIMMUNE, TRAIT_CONFUSEIMMUNE)
 	return ..()
-
-/obj/item/clothing/suit/armor/power_armor/t45
-	name = "Power Armor T-45"
-	desc = "With this you're an walking tank, and move as fast as one."
-	icon_state = "t45powerarmor"
-	item_state = "t45powerarmor"
-	slowdown = 2.5
-	armor = list("melee" = 75, "bullet" = 65, "laser" = 40, "energy" = 60, "bomb" = 50, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/power_armor/t45d
 	name = "T-45d power armor"
@@ -375,36 +382,29 @@
 	item_state = "t51bpowerarmor"
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 50, "energy" = 70, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 	slowdown = 1.5
+
 /obj/item/clothing/suit/armor/power_armor/t60
-	name = "T-51b power armor"
+	name = "T-60 power armor"
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
-	icon_state = "t51bpowerarmor"
-	item_state = "t51bpowerarmor"
+	icon_state = "t60powerarmor"
+	item_state = "t60powerarmor"
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 50, "energy" = 70, "bomb" = 65, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 	slowdown = 1.4
 
-/obj/item/clothing/suit/armor/power_armor/advanced
+/obj/item/clothing/suit/armor/power_armor/enclave
 	name = "advanced power armor"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
-	icon_state = "advancedpowerarmor"
-	item_state = "advancedpowerarmor"
-	armor = list("melee" = 90, "bullet" = 75, "laser" = 60, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	icon_state = "enclave"
+	item_state = "enclave"
+	armor = list("melee" = 90, "bullet" = 75, "laser" = 60, "energy" = 75, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 80)
 	slowdown = 1
-
-//obj/item/clothing/suit/armor/power_armor/advanced/mk2
-//	name = "advanced power armor mark II"
-//	desc = "It's an improved model of advanced power armor. developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
-//	icon_state = "advpowerarmor2"
-//	item_state = "advpowerarmor2"
-//	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-//	armor = list("melee" = 95, "bullet" = 90, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
 
 /obj/item/clothing/suit/armor/power_armor/tesla
 	name = "tesla power armor"
 	desc = "A variant of the Enclave's advanced power armor Mk I, jury-rigged with a Tesla device that is capable of dispersing a large percentage of the damage done by directed-energy attacks.<br>As it's made of complex composite materials designed to block most of energy damage - it's notably weaker against kinetic impacts."
 	icon_state = "tesla"
 	item_state = "tesla"
-	armor = list("melee" = 90, "bullet" = 50, "laser" = 95, "energy" = 95, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 90, "bullet" = 50, "laser" = 95, "energy" = 95, "bomb" = 62, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 80)
 	var/hit_reflect_chance = 25
 	slowdown = 1
 
@@ -413,3 +413,19 @@
 		return 0
 	if (prob(hit_reflect_chance))
 		return 1
+
+/obj/item/clothing/suit/armor/power_armor/enclave2
+	name = "advanced power armor mark II"
+	desc = "It's an improved model of advanced power armor. developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
+	icon_state = "enclave2"
+	item_state = "enclave2"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list("melee" = 95, "bullet" = 90, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 95)
+
+/obj/item/clothing/suit/armor/power_armor/shocktrooper
+	name = "modified advanced power armor"
+	desc = "An modified power armor, nothing unusual."
+	icon_state = "shocktrooper"
+	item_state = "shocktrooper"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list("melee" = 95, "bullet" = 90, "laser" = 70, "energy" = 90, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 95)

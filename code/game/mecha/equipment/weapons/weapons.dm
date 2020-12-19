@@ -85,7 +85,7 @@
 	harmful = TRUE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/disabler
-	equip_cooldown = 8
+	equip_cooldown = 3
 	name = "\improper CH-DS \"Peacemaker\" disabler"
 	desc = "A weapon for combat exosuits. Shoots basic disablers."
 	icon_state = "mecha_disabler"
@@ -438,6 +438,29 @@
 	//projectile_energy_cost = 250
 	equip_cooldown = 180
 	ammo_type = "railgun"
+
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/BBchaingun
+	name = "\improper LCG-4-BB \"Ratat\" BB Chaingun"
+	desc = "Toy chaingun for exosuits. This is so much fun!"
+	icon_state = "mecha_toychaingun"
+	equip_cooldown = 5
+	projectile = /obj/item/projectile/bullet/reusable/foam_dart
+	fire_sound = "sound/weapons/chaingun.ogg"
+	projectiles = 100
+	projectiles_cache = 0
+	projectiles_cache_max = 500
+	projectiles_per_shot = 5
+	variance = 5
+	randomspread = 1
+	projectile_delay = 1
+	harmful = FALSE
+	ammo_type = "BB"
+
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/BBchaingun/can_attach(obj/mecha/combat/M)
+	if(..())
+		if(istype(M))
+			return 1
+	return 0
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/banana_mortar
 	name = "banana mortar"

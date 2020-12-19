@@ -40,6 +40,11 @@ GLOBAL_LIST_INIT(freqtospan, list(
 		var/atom/movable/AM = _AM
 		AM.Hear(rendered, src, message_language, message, , spans, message_mode)
 
+	//speech sound
+	if(speech_sound && speech_sound_cd < world.time)
+		playsound(src, speech_sound, 15, TRUE, (-7 + range), ignore_walls = FALSE)
+		speech_sound_cd = world.time + speech_sound_delay
+
 /atom/movable/proc/compose_message(atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, message_mode, face_name = FALSE)
 	//This proc uses text() because it is faster than appending strings. Thanks BYOND.
 	//Basic span

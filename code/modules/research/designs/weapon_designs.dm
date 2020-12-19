@@ -43,7 +43,7 @@
 	id = "sleepy"
 	build_type = PROTOLATHE
 	category = list("Ammo")
-	materials = list(/datum/material/iron = 4000, /datum/material/silver = 400, /datum/material/copper = 400)
+	materials = list(/datum/material/iron = 4000, /datum/material/silver = 1000, /datum/material/copper = 1000,  /datum/material/plastic = 1000)
 	build_path = /obj/item/ammo_casing/shotgun/sleepytime
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
@@ -325,8 +325,8 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/laserrifle
-	name = "Laser Rifle"
-	desc = "An laser rifle that goes pew pew."
+	name = "Laser Carbine"
+	desc = "An laser carbine that goes pew pew."
 	id = "laserrifle"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/gold = 5000, /datum/material/uranium = 4000, /datum/material/iron = 5000, /datum/material/titanium = 2000)

@@ -346,7 +346,7 @@
 			else
 				icon_state = "[base_state]"
 				if(on)
-					var/mutable_appearance/glowybit = mutable_appearance(overlayicon, base_state, ABOVE_LIGHTING_LAYER, ABOVE_LIGHTING_PLANE)
+					var/mutable_appearance/glowybit = mutable_appearance(overlayicon, base_state, EMISSIVE_PLANE)
 					glowybit.alpha = CLAMP(light_power*250, 30, 200)
 					add_overlay(glowybit)
 		if(LIGHT_EMPTY)
