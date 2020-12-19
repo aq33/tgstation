@@ -10,3 +10,4 @@
 #define MARTIALART_PLASMAFIST "plasma fist"
 #define MARTIALART_KARATE "karate"
 #define MARTIALART_SHARPSHADOWOFTHEMIST "Sharp Shadow Of The Mist"
+#define MARTIALART_NANOJUTSU "nanojutsu"
