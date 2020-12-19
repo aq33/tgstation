@@ -237,7 +237,7 @@
 	if (!flora_spawn_list)
 		flora_spawn_list = list(/obj/structure/flora/ash/leaf_shroom = 2 , /obj/structure/flora/ash/cap_shroom = 2 , /obj/structure/flora/ash/stem_shroom = 2 , /obj/structure/flora/ash/cacti = 1, /obj/structure/flora/ash/tall_shroom = 2)
 	if(!terrain_spawn_list)
-		terrain_spawn_list = list(/turf/open/floor/plating/asteroid/basalt/vein/common = 10, /turf/open/floor/plating/asteroid/basalt/vein/volatile = 10, /turf/open/floor/plating/asteroid/basalt/vein/noble = 10, /turf/open/floor/plating/asteroid/basalt/vein/rare = 10, /turf/open/floor/plating/asteroid/basalt/vein/common/rich = 3, /turf/open/floor/plating/asteroid/basalt/vein/volatile/rich = 4, /turf/open/floor/plating/asteroid/basalt/vein/noble/rich = 4, /turf/open/floor/plating/asteroid/basalt/vein/rare/rich = 4, /turf/open/floor/plating/asteroid/basalt/vein/honk = 1)
+		terrain_spawn_list = list(/turf/open/floor/plating/asteroid/basalt/vein/common = 10, /turf/open/floor/plating/asteroid/basalt/vein/volatile = 10, /turf/open/floor/plating/asteroid/basalt/vein/noble = 10, /turf/open/floor/plating/asteroid/basalt/vein/rare = 10, /turf/open/floor/plating/asteroid/basalt/vein/common/rich = 3, /turf/open/floor/plating/asteroid/basalt/vein/volatile/rich = 4, /turf/open/floor/plating/asteroid/basalt/vein/noble/rich = 5, /turf/open/floor/plating/asteroid/basalt/vein/rare/rich = 5, /turf/open/floor/plating/asteroid/basalt/vein/honk = 1)
 	. = ..()
 	if(!has_data)
 		produce_tunnel_from_data()
@@ -362,8 +362,8 @@
 
 /turf/open/floor/plating/asteroid/airless/cave/proc/SpawnTerrain(turf/T)
 	if(prob(12))
-		if(istype(loc, /area/mine/explored) || istype(loc, /area/lavaland/surface/outdoors/explored))
-			return
+//		if(istype(loc, /area/mine/explored) || istype(loc, /area/lavaland/surface/outdoors/explored))
+//			return
 		var/randumb = pickweight(terrain_spawn_list)
 		for(var/turf/open/floor/plating/asteroid/basalt/vein/V in range(7, T))
 			T.ChangeTurf(V)
