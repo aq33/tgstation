@@ -5,6 +5,7 @@
 	// Humans cursed to stay in the darkness, lest their life forces drain. They regain health in shadow and die in light.
 	name = "???"
 	id = "shadow"
+	speech_sound = "shadow"
 	sexes = 0
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/shadow
 	species_traits = list(NOBLOOD,NOEYESPRITES,NOFLASH)
@@ -206,7 +207,6 @@
 /obj/item/light_eater/proc/disintegrate(obj/item/O)
 	if(istype(O, /obj/item/pda))
 		var/obj/item/pda/PDA = O
-		PDA.set_light(0)
 		PDA.set_light_on(FALSE)
 		PDA.set_light_range(0) //It won't be turning on again.
 		PDA.update_icon()

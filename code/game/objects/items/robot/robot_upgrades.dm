@@ -64,7 +64,7 @@
 
 	if(R.mind)
 		R.mind.grab_ghost()
-		playsound(loc, 'sound/voice/liveagain.ogg', 75, 1)
+		playsound(loc, 'sound/voice/dialup.ogg', 75, 1)
 
 	R.revive()
 

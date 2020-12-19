@@ -11,6 +11,7 @@
 		type = null,
 		text = null,
 		avoid_highlighting = FALSE,
+		allow_linkify = FALSE,
 		// FIXME: These flags are now pointless and have no effect
 		handle_whitespace = TRUE,
 		trailing_newline = TRUE,
@@ -25,6 +26,7 @@
 	if(text) message["text"] = text
 	if(html) message["html"] = html
 	if(avoid_highlighting) message["avoidHighlighting"] = avoid_highlighting
+	if(allow_linkify) message["allowLinkify"] = allow_linkify
 	var/message_blob = TGUI_CREATE_MESSAGE("chat/message", message)
 	var/message_html = message_to_html(message)
 	if(!confidential)
@@ -57,6 +59,7 @@
 		type = null,
 		text = null,
 		avoid_highlighting = FALSE,
+		allow_linkify = FALSE,
 		// FIXME: These flags are now pointless and have no effect
 		handle_whitespace = TRUE,
 		trailing_newline = TRUE,
@@ -75,4 +78,5 @@
 	if(html) message["html"] = html
 	if(avoid_highlighting) message["avoidHighlighting"] = avoid_highlighting
 	var/message_html = message_to_html(message)
+	if(allow_linkify) message["allowLinkify"] = allow_linkify
 	SSchat.queue(target, message, confidential, message_html)
