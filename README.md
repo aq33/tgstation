@@ -4,17 +4,25 @@
 
 ## Zgłaszanie bugów lub sugestii
 
-Jeżeli chcesz zgłosić buga, lub zasugerować nową zmianę to zrób to w zakładce Issues, i daj odpowiedni label.
+Jeżeli chcesz zgłosić buga, lub zasugerować nową zmianę to zrób to w zakładce Issues.
 
 ## Ważne
 Jeżeli robisz wiele PR z twojego forka, z różnych branchów, to muszą te branche być bazowane na naszym masterze, a nie na twoich innych branchach.
 W innym przypadku jeden branch może nanosić 2 PRy.
 
+Każdy otwarty PR, będzie aktywnie rozpatrywany przez administrację pod względem merge lub test merge,
+dlatego jeżeli uważasz, że PR nie jest gotowy do merge, zamień go w draft PR (guzik jest na prawo pod sekcją reviewers).
+Tak samo administracja może w dowolnym momencie przekonwertować twój PR w draft, pisząc co jest do poprawy.
+Wtedy spowrotem zmień PR w normalny, jeżeli uważasz, że naprawiłeś wskazane błędy i twój PR jest znowu gotowy do merge.
+
+Na dodatek, administracja zakłada, że każdy non-draft PR, był bardzo ogólnie przetestowany na lokalnym serwerze.
+PRy które przez długi czas są w stanie drafta, mogą być zamknięte z powodu braku aktywności, możesz w dowolnej chwili otworzyć taki PR ponownie.
+PRy które zostaną odrzucone ze względu na swój pomysł/funkcjonalność, mogą zostać zamknięte permanentnie.
+
+Gdy masz już gotowy i otwarty PR, musi on przejść testy automatyczne, oraz code review.
+Jeżeli test automatyczny failuje i nie wiesz dlaczego, możesz wejść w details i zobaczyć logi, gdzie znajdziesz konkretny błąd.
+
 ## Pomoc w tłumaczeniu/programowaniu
-
-[Priorytetowe Issues](https://github.com/aq33/tgstation/projects/3)
-
-[Poradnik do Gita/Githuba](https://github.com/aq33/tgstation/wiki/Podstawy-Gita-i-wprowadzania-zmian)
 
 Jeżeli chcesz pomóc to najpierw wybierz issue którym chcesz się zając, napisz tam, ze ty zajmiesz się np. jakimś konkretnym plikiem, lub całym issue, itd.
 Najłatwiejsze issues to te z labelem "tweak", "tłumaczenie", "grafika" i "dźwięk".
@@ -29,16 +37,12 @@ fix: naprawiono jakiś bug
 /:cl:
 ```
 Twój PR będzie wtedy sprawdzany przez automatyczne testy pod względem literówek itd.
-Jeżeli wszystko wygląda git, zukonake zmerge'uje to do repozytorium, lub odpali testowy merge.
+Jeżeli chcesz nanosić zmiany na swoim kompie, będziesz musiał użyć programu jak np. Git Bash lub Github Desktop.
 
 Do programowania polecam Visual Studio Code i wtedy otworzenie workspace, pokaże to zalecane pluginy które bardzo ułatwiają pracę z Byondem.
 
-Jeżeli czegoś nie wiesz/nie rozumiesz to poinformuj nas na kanale #coder, jeżeli nie widzisz tego kanału to spytaj admina o rangę kodera.
+Jeżeli czegoś nie wiesz/nie rozumiesz to poinformuj nas na kanale #koding.
 Tu jest też link do ogólnego Discorda (anglojęzycznego) związanego z programowaniem SS13: https://discord.gg/Vh8TJp9
-
-### Robisz zmianę ale nie wiesz czy zostanie przyjęta?
-
-Polecam zrobić draft pull request i z wyprzedzeniem opisać co zamierzasz dodac, wtedy ktoś zatwierdzi (lub nie) twój pomysł.
 
 ## LICENSE
 

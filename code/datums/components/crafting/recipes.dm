@@ -446,6 +446,49 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
+/datum/crafting_recipe/mpistol
+	name = "Makeshift pistol"
+	result = /obj/item/gun/ballistic/automatic/pistol/makeshift
+	reqs = list(/obj/item/weaponcrafting/receiver = 1,
+				/obj/item/weaponcrafting/slide = 1,
+				/obj/item/pipe = 1,
+				/obj/item/stack/packageWrap = 5)
+	tools = list(TOOL_SCREWDRIVER, TOOL_SAW)
+	time = 180
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/mmag
+	name = "Makeshift magazine"
+	result = /obj/item/ammo_box/magazine/m9mm_mkshft
+	reqs = list(/obj/item/stack/sheet/iron = 4,
+				/obj/item/weaponcrafting/magspring = 1)
+	tools = list(TOOL_WIRECUTTER)
+	time = 60
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/machinepistol
+	name = "Makeshift machine pistol"
+	result = /obj/item/gun/ballistic/automatic/pistol/makeshift/TEC10
+	reqs = list(/obj/item/gun/ballistic/automatic/pistol/makeshift = 1,
+				/obj/item/stack/sheet/iron = 2,
+				/obj/item/pipe = 1)
+	tools = list(TOOL_SCREWDRIVER, TOOL_WELDER)
+	time = 180
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/machinepistolmag
+	name = "Makeshift machine pistol magazine"
+	result = /obj/item/ammo_box/magazine/m9mm_mkshft/TEC10
+	reqs = list(/obj/item/stack/sheet/iron = 5,
+				/obj/item/weaponcrafting/magspring = 1)
+	tools = list(TOOL_WIRECUTTER, TOOL_SCREWDRIVER, TOOL_WELDER)
+	time = 60
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /datum/crafting_recipe/chainsaw
 	name = "Chainsaw"
 	result = /obj/item/twohanded/required/chainsaw
@@ -569,6 +612,29 @@
 		/obj/item/stock_parts/capacitor = 1)
 	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER, TOOL_WRENCH)
 	time = 200
+	category = CAT_MISC
+
+/datum/crafting_recipe/eureka
+	name = "Experimental Wrench"
+	result = /obj/item/wrench/eureka
+	reqs = list(/obj/item/wrench = 1,
+				/obj/item/stock_parts/subspace/amplifier = 1,
+				/obj/item/stock_parts/subspace/analyzer = 1,
+				/obj/item/stack/cable_coil = 5,
+				/obj/item/assembly/signaler/anomaly = 1)
+	tools = list(TOOL_WIRECUTTER, TOOL_SCREWDRIVER)
+	time = 100
+	category = CAT_MISC
+
+/datum/crafting_recipe/ubersaw
+	name = "Ubersaw"
+	result = /obj/item/circular_saw/ubersaw
+	reqs = list(/obj/item/circular_saw = 1,
+				/obj/item/reagent_containers/syringe = 1,
+				/obj/item/reagent_containers/glass/beaker = 1,
+				/obj/item/stack/sheet/iron = 5)
+	tools = list(TOOL_WRENCH, TOOL_WELDER)
+	time = 100
 	category = CAT_MISC
 
 /datum/crafting_recipe/mousetrap
@@ -871,6 +937,13 @@
 	result = /obj/item/clothing/under/costume/mummy
 	reqs = list(/obj/item/stack/sheet/cotton/cloth = 5)
 
+/datum/crafting_recipe/ivory_robes
+	name = "Questionable Ghost Costume"
+	result = /obj/item/clothing/suit/hooded/chaplain_hoodie/klansman
+	time = 10
+	tools = list(TOOL_WIRECUTTER, /obj/item/storage/book/bible)
+	reqs = list(/obj/item/stack/sheet/cotton/cloth = 4)
+	category = CAT_CLOTHING
 
 /datum/crafting_recipe/chaplain_hood
 	name = "Follower Hoodie"

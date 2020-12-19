@@ -112,6 +112,46 @@
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	resistance_flags = NONE
 
+/obj/item/clothing/suit/ertcommanderfake
+	name = "ERT commander suit replica"
+	icon_state = "ert_command"
+	item_state = "ert_command"
+	desc = "A plastic replica of the ERT Commander space suit. You'll look just like a real competent ERT Commander in this! This is a toy, it is not made for use in space!"
+	w_class = WEIGHT_CLASS_NORMAL
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy)
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	resistance_flags = NONE
+
+/obj/item/clothing/suit/ertsecurityfake
+	name = "ERT security suit replica"
+	icon_state = "ert_security"
+	item_state = "ert_security"
+	desc = "A plastic replica of the ERT Security space suit. You'll look just like a real competent ERT Security in this! This is a toy, it is not made for use in space!"
+	w_class = WEIGHT_CLASS_NORMAL
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy)
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	resistance_flags = NONE
+
+/obj/item/clothing/suit/ertmedicalfake
+	name = "ERT medic suit replica"
+	icon_state = "ert_medical"
+	item_state = "ert_medical"
+	desc = "A plastic replica of the ERT Medic space suit. You'll look just like a real competent ERT Medic in this! This is a toy, it is not made for use in space!"
+	w_class = WEIGHT_CLASS_NORMAL
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy)
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	resistance_flags = NONE
+
+/obj/item/clothing/suit/ertengineerfake
+	name = "ERT engineer suit replica"
+	icon_state = "ert_engineer"
+	item_state = "ert_engineer"
+	desc = "A plastic replica of the ERT Engineer space suit. You'll look just like a real competent ERT Engineer in this! This is a toy, it is not made for use in space!"
+	w_class = WEIGHT_CLASS_NORMAL
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy)
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	resistance_flags = NONE
+
 /obj/item/clothing/suit/hastur
 	name = "\improper Hastur's robe"
 	desc = "Robes not meant to be worn by man."
@@ -309,7 +349,7 @@
 	flags_inv = HIDEHAIR|HIDEEARS
 	dynamic_hair_suffix = ""
 
-/obj/item/clothing/suit/hooded/bee_costume/syndie 
+/obj/item/clothing/suit/hooded/bee_costume/syndie
 	name = "BLF costume"
 	armor = list("melee" = 20, "bullet" = 20, "laser" = 20,"energy" = 40, "bomb" = 0, "bio" = 60, "rad" = 0, "fire" = 0, "acid" = 50)
 	hoodtype = /obj/item/clothing/head/hooded/bee_hood/syndie
@@ -660,7 +700,7 @@
 	icon_state = "joker"
 	item_state = "joker"
 	item_color = "joker"
-	can_adjust = FALSE	
+	can_adjust = FALSE
 
 /obj/item/clothing/suit/joker
 	name = "comedian coat"

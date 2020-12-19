@@ -1038,3 +1038,19 @@
 	build_path = /obj/item/stack/ducts
 	category = list("initial", "Construction")
 	maxstack = 50
+
+/datum/design/pistolslide
+	name = "Pistol Slide"
+	id = "pistolslide"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 10000)
+	build_path = /obj/item/weaponcrafting/slide
+	category = list("hacked", "Security")
+
+/datum/design/magspring
+	name = "Magazine Spring"
+	id = "magspring"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 15000)
+	build_path = /obj/item/weaponcrafting/magspring
+	category = list("hacked", "Security")

@@ -110,3 +110,76 @@
 	icon = 'icons/obj/items_cyborg.dmi'
 	icon_state = "wrench_cyborg"
 	toolspeed = 0.5
+
+/obj/item/wrench/eureka
+	name = "experimental wrench"
+	desc = "Bizzare wrench with weird apparatus wired to its side that makes it awkward to use."
+	icon_state = "wrench_eureka"
+	toolspeed = 1.2
+	materials = list(/datum/material/iron=150,/datum/material/bluespace=50)
+	var/charges = 1
+	var/max_charges = 5
+	var/eureka_channel_teleport = 20 //długość channela teleportu w tickach. 10 ticków = 1 sekunda
+	var/eureka_channel_set = 100 //długość channela anchorowania w tickach
+	var/teleport_ready = FALSE //następna akcja klucza: false - zapisanie pozycji, true - teleport do niej
+	var/teleport_x //poniżej koordynaty zapisanego miejsca
+	var/teleport_y
+	var/teleport_z
+
+/obj/item/wrench/eureka/examine(mob/user)
+	. = ..()
+	. += ("A little switch in its handle is set to \"[teleport_ready?"TELEPORT":"ANCHOR"]\".")
+	. += ("<span class='notice'>It has [charges] charges out of [max_charges] left. There seems to be a slot that could fit a bluespace crystal.</span>")
+
+/obj/item/wrench/eureka/attack_self(mob/user)
+	if(!teleport_ready)
+		to_chat(user, "<span class='notice'>You begin [src]'s anchoring procedure.</span>")
+		if(!do_after(user, eureka_channel_set, target = src)) //tutaj pasek ma się pojawiać nad itemem
+			return
+		to_chat(user, "<span class='notice'>[src] anchors to this spot!</span>")
+		var/turf/T = get_turf(user)
+		teleport_x = T.x
+		teleport_y = T.y
+		teleport_z = T.z
+		teleport_ready = TRUE
+	else
+		if(teleport_x && teleport_y && teleport_z)
+			user.visible_message("<span class='warning'>[user] raises the [src]!</span>", "<span class='notice'>You raise the [src]!</span>")
+			playsound(src, 'sound/items/eureka_channel.ogg', 50, 1)
+			if(!do_after(user, eureka_channel_teleport, target = user)) //a tutaj ma się pojawiać nad użytkownikiem
+				return
+			if(charges < 1)
+				to_chat(user, "<span class='notice'>...but it quietly buzzes. Perhaps it can be recharged?</span>")
+				return
+			charges -= 1
+			var/turf/T = locate(teleport_x, teleport_y, teleport_z)
+			to_chat(user, "<span class='notice'>You snap back to [src]'s anchor point!</span>")
+			do_teleport(user, T,  asoundin = 'sound/items/eureka_teleport.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+		teleport_ready = FALSE //na wszelki wypadek tutaj, w razie gdyby teleport_x, y albo z znikneły
+
+/obj/item/wrench/eureka/attackby(obj/item/I, mob/user, params)
+	..()
+	if(istype(I, /obj/item/stack/ore/bluespace_crystal))
+		if(charges >= max_charges)
+			to_chat(user, "<span class='warning'>[src] can't contain any more [I]!</span>")
+			return
+		var/obj/item/stack/ore/bluespace_crystal/B = I
+		B.use(1)
+		charges += 1
+		to_chat(user, "<span class='notice'>You insert [I] into [src]. It now has [charges] charges.</span>")
+
+/obj/item/wrench/eureka/suicide_act(mob/living/user)
+	user.visible_message("<span class='suicide'>[user] raises the [src], muttering insults at the God! It looks like [user.p_theyre()] trying to commit suicide!</span>", "<span class='suicide'>You raise the [src], muttering insults at the God!!</span>")
+	playsound(src, 'sound/items/eureka_channel.ogg', 50, 1)
+	if(!do_after(user, eureka_channel_teleport, target = user))
+		return
+	if(charges < 1)
+		to_chat(user, "<span class='notice'>...but it quietly buzzes. Perhaps it can be recharged?</span>")
+		return SHAME
+	charges -= 1
+	playsound(src, 'sound/items/eureka_teleport.ogg', 50, 1)
+	var/turf/T = get_step(get_step(user, NORTH), NORTH)
+	T.Beam(user, icon_state="lightning[rand(1,12)]", time = 5)
+	user.visible_message("<span class='warning'>[user] summoned God's wrath!</span>")
+	user.dust()
+	return FIRELOSS

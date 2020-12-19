@@ -132,15 +132,15 @@
 		char = t_in[i]
 
 		switch(text2ascii(char))
-			// A  .. Z
-			if(65 to 90)			//Uppercase Letters
-				number_of_alphanumeric++
-				last_char_group = LETTERS_DETECTED
+			// A  .. Z, Ą Ę Ś Ć etc.
+			if(65 to 90,260 to 260,262 to 262,280 to 280,321 to 321,323 to 323,211 to 211,346 to 346,379 to 379,377 to 377)			//Uppercase Letters
+				number_of_alphanumeric++							//Uwaga, bardzo srakod powyżej. Z jakiegoś powodu w switchach, byond najpierw sprawdza zakresy liczb, a dopiero potem faktyczne liczby, więc inaczej else przechwytywałby każdą wartość
+				last_char_group = LETTERS_DETECTED					//TODO: upiększyć to gdy byond sie ogarnie
 
-			// a  .. z
-			if(97 to 122)			//Lowercase Letters
+			// a  .. z, ą ę ś ć etc.
+			if(97 to 122,261 to 261,263 to 263,281 to 281,322 to 322,324 to 324,243 to 243,347 to 347,380 to 380,378 to 378)			//Lowercase Letters
 				if(last_char_group == NO_CHARS_DETECTED || last_char_group == SPACES_DETECTED || last_char_group == SYMBOLS_DETECTED) //start of a word
-					char = uppertext(char)
+					char = uppertext(char)							//TODO: upiększyć to gdy byond sie ogarnie
 				number_of_alphanumeric++
 				last_char_group = LETTERS_DETECTED
 
