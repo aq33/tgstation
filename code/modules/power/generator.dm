@@ -131,9 +131,9 @@
 
 	if(power_output > (500000+tier))
 		playsound(src, 'sound/machines/sm/loops/delamming.ogg', 50, FALSE, 10)
-		if(power_output > (750000+tier))
-			var/turf/T = get_turf(src)
-			explosion(T, 0, 2, 3, 4, adminlog = TRUE, ignorecap = FALSE, flame_range = 5, silent = FALSE, smoke = FALSE)
+//		if(power_output > (750000+tier))
+//			var/turf/T = get_turf(src)
+//			explosion(T, 0, 2, 3, 4, adminlog = TRUE, ignorecap = FALSE, flame_range = 5, silent = FALSE, smoke = FALSE) //tymczasowe usunięcie detonacji przy przekroczeniu progu
 
 	..()
 
