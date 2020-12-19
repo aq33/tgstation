@@ -104,40 +104,64 @@
 	desc = "Looks like there's a rich deposit of oopsie woopsie. Tell coders about this."
 	baseturfs = /turf/open/floor/plating/asteroid/basalt
 	icon = 'icons/turf/floors.dmi'
-	icon_state = "vein_common"
+	icon_state = "vein_coder"
 	environment_type = "basalt"
 	floor_variance = 0
 	var/list/ore_rates
 
 /turf/open/floor/plating/asteroid/basalt/vein/common
 	name = "common minerals vein"
-	desc = "Looks like there's a rich deposit of common minerals here."
+	desc = "Looks like there's a vein of common minerals here."
 	icon_state = "vein_common"
-	ore_rates = list(/datum/material/iron = 1, /datum/material/glass = 1, /datum/material/copper = 0.5) //with T1 parts on drill rig 1 -> 200 sheets with high-capacity power cell
+	ore_rates = list(/datum/material/iron = 0.5, /datum/material/glass = 0.5, /datum/material/copper = 0.25) //with T1 parts on drill rig 1 -> 200 sheets with high-capacity power cell
 
 /turf/open/floor/plating/asteroid/basalt/vein/volatile
 	name = "volatile minerals vein"
-	desc = "Looks like there's a rich deposit of volatile minerals here."
+	desc = "Looks like there's a vein of volatile minerals here."
 	icon_state = "vein_volatile"
 	ore_rates = list(/datum/material/plasma = 0.25, /datum/material/uranium = 0.15)
 
 /turf/open/floor/plating/asteroid/basalt/vein/noble
 	name = "noble minerals vein"
-	desc = "Looks like there's a rich deposit of noble minerals here."
+	desc = "Looks like there's a vein of noble minerals here."
 	icon_state = "vein_noble"
 	ore_rates = list(/datum/material/silver = 0.15, /datum/material/gold = 0.15, /datum/material/titanium = 0.2)
 
 /turf/open/floor/plating/asteroid/basalt/vein/rare
 	name = "rare-earth minerals vein"
-	desc = "Looks like there's a rich deposit of rare-earth minerals here."
+	desc = "Looks like there's a vein of rare-earth minerals here."
 	icon_state = "vein_rare"
 	ore_rates = list(/datum/material/diamond = 0.1, /datum/material/bluespace = 0.1)
 
+/turf/open/floor/plating/asteroid/basalt/vein/common/rich
+	name = "common minerals deposit"
+	desc = "Looks like there's a rich deposit of common minerals here."
+	icon_state = "vein_common_rich"
+	ore_rates = list(/datum/material/iron = 1, /datum/material/glass = 1, /datum/material/copper = 0.5) //with T1 parts on drill rig 1 -> 200 sheets with high-capacity power cell
+
+/turf/open/floor/plating/asteroid/basalt/vein/volatile/rich
+	name = "volatile minerals deposit"
+	desc = "Looks like there's a rich deposit of volatile minerals here."
+	icon_state = "vein_volatile_rich"
+	ore_rates = list(/datum/material/plasma = 0.5, /datum/material/uranium = 0.3)
+
+/turf/open/floor/plating/asteroid/basalt/vein/noble/rich
+	name = "noble minerals deposit"
+	desc = "Looks like there's a rich deposit of noble minerals here."
+	icon_state = "vein_noble_rich"
+	ore_rates = list(/datum/material/silver = 0.3, /datum/material/gold = 0.3, /datum/material/titanium = 0.4)
+
+/turf/open/floor/plating/asteroid/basalt/vein/rare/rich
+	name = "rare-earth minerals deposit"
+	desc = "Looks like there's a rich deposit of rare-earth minerals here."
+	icon_state = "vein_rare_rich"
+	ore_rates = list(/datum/material/diamond = 0.3, /datum/material/bluespace = 0.3)
+
 /turf/open/floor/plating/asteroid/basalt/vein/honk
-	name = "funny minerals vein"
-	desc = "Oh god, don't tell clown about this."
-	icon_state = "vein_funny"
-	ore_rates = list(/datum/material/bananium = 0.1)
+	name = "funny deposit"
+	desc = "Looks like a rich deposit of FUN!"
+	icon_state = "vein_funni"
+	ore_rates = list(/datum/material/bananium = 0.3)
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -151,7 +175,7 @@
 
 /proc/set_basalt_light(turf/open/floor/B)
 	switch(B.icon_state)
-		if("basalt1", "basalt2", "basalt3", "vein_common", "vein_volatile", "vein_noble")
+		if("basalt1", "basalt2", "basalt3", "vein_common", "vein_volatile", "vein_noble", "vein_common_rich", "vein_volatile_rich", "vein_noble_rich", "vein_rare_rich")
 			B.set_light(2, 0.6, LIGHT_COLOR_LAVA) //more light
 		if("basalt5", "basalt9", "vein_rare")
 			B.set_light(1.4, 0.6, LIGHT_COLOR_LAVA) //barely anything!
@@ -213,7 +237,7 @@
 	if (!flora_spawn_list)
 		flora_spawn_list = list(/obj/structure/flora/ash/leaf_shroom = 2 , /obj/structure/flora/ash/cap_shroom = 2 , /obj/structure/flora/ash/stem_shroom = 2 , /obj/structure/flora/ash/cacti = 1, /obj/structure/flora/ash/tall_shroom = 2)
 	if(!terrain_spawn_list)
-		terrain_spawn_list = list(/obj/structure/geyser/random = 1)
+		terrain_spawn_list = list(/turf/open/floor/plating/asteroid/basalt/vein/common = 10, /turf/open/floor/plating/asteroid/basalt/vein/volatile = 10, /turf/open/floor/plating/asteroid/basalt/vein/noble = 10, /turf/open/floor/plating/asteroid/basalt/vein/rare = 10, /turf/open/floor/plating/asteroid/basalt/vein/common/rich = 3, /turf/open/floor/plating/asteroid/basalt/vein/volatile/rich = 4, /turf/open/floor/plating/asteroid/basalt/vein/noble/rich = 4, /turf/open/floor/plating/asteroid/basalt/vein/rare/rich = 4, /turf/open/floor/plating/asteroid/basalt/vein/honk = 1)
 	. = ..()
 	if(!has_data)
 		produce_tunnel_from_data()
@@ -293,7 +317,7 @@
 	if(!sanity)
 		return
 	SpawnFlora(T)
-	// SpawnTerrain(T)
+	SpawnTerrain(T)
 	SpawnMonster(T)
 	T.ChangeTurf(turf_type, null, CHANGETURF_IGNORE_AIR)
 
@@ -337,13 +361,12 @@
 		new randumb(T)
 
 /turf/open/floor/plating/asteroid/airless/cave/proc/SpawnTerrain(turf/T)
-	if(prob(2))
+	if(prob(12))
 		if(istype(loc, /area/mine/explored) || istype(loc, /area/lavaland/surface/outdoors/explored))
 			return
 		var/randumb = pickweight(terrain_spawn_list)
-		for(var/obj/structure/geyser/F in range(7, T))
-			if(istype(F, randumb))
-				return
+		for(var/turf/open/floor/plating/asteroid/basalt/vein/V in range(7, T))
+			T.ChangeTurf(V)
 		new randumb(T)
 
 /turf/open/floor/plating/asteroid/snow

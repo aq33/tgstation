@@ -2,7 +2,7 @@
 	name = "heavy-duty mining rig"
 	desc = "Piece of heavy machinery designed to extract materials from the underground deposits."
 	icon = 'icons/mecha/mech_fab.dmi'
-	icon_state = "deep_drill-off"
+	icon_state = "deep_drill"
 	density = TRUE
 	//circuit = /obj/item/circuitboard/machine/deep_drill
 	layer = BELOW_OBJ_LAYER
@@ -21,9 +21,7 @@
 	var/disable_wire
 	var/shock_wire
 
-	var/overlayopen = "deep_drill-ovopen"
-	var/overlayeject = "deep_drill-oveject"
-	var/overlaymining = "deep_drill-ovdrilling"
+	var/mining = FALSE
 
 /obj/machinery/mineral/deep_drill/Initialize(mapload)
 	. = ..()
@@ -37,6 +35,7 @@
 		new /obj/item/pickaxe/drill)
 	//cell = new(src)
 	RefreshParts()
+	update_icon()
 
 /obj/machinery/mineral/deep_drill/on_deconstruction()
 	if(cell)
@@ -46,6 +45,7 @@
 
 /obj/machinery/mineral/deep_drill/Destroy()
 	QDEL_NULL(wires)
+	QDEL_NULL(cell)
 	drill_eject_mats()
 	materials = null
 	return ..()
@@ -98,9 +98,11 @@
 	if(on && !panel_open)
 		on = FALSE
 		to_chat(user, "<span class='notice'>You switch the [src] off.</span>")
+		update_icon()
 	else if(!on && !panel_open)
 		on = TRUE
 		to_chat(user, "<span class='notice'>You switch the [src] on.</span>")
+		update_icon()
 	if(!cell)
 		return
 	if(panel_open && cell)
@@ -155,7 +157,11 @@
 			return
 
 	else if(I.tool_behaviour == TOOL_SCREWDRIVER)
-		default_deconstruction_screwdriver(user, "deep_drill-off", "deep_drill-on", I)
+		default_deconstruction_screwdriver(user, icon_state, icon_state, I)
+		if(panel_open)
+			overlays += "deep_drill-ovopen"
+		else
+			overlays -= "deep_drill-ovopen"
 		return
 
 	else if(panel_open && is_wire_tool(I))
@@ -178,6 +184,7 @@
 		to_chat(user, "<span class='warning'>[src] can't eject materials from the silo!</span>")
 		return FALSE
 	if(on && cell && cell.charge > 0)
+		update_icon("eject")
 		var/location = get_step(src,EAST)
 		var/datum/component/material_container/mat_container = materials.mat_container
 		mat_container.retrieve_all(location)
@@ -188,39 +195,29 @@
 		return FALSE
 
 /obj/machinery/mineral/deep_drill/proc/drill_mats() //Actually do the mining thing
+	mining = TRUE
 	var/datum/component/material_container/mat_container = materials.mat_container
 	var/turf/open/floor/plating/asteroid/basalt/vein/T = loc
 	var/datum/material/ore = pick(T.ore_rates)
 	mat_container.insert_amount_mat((T.ore_rates[ore] * 1000*efficiency_coeff), ore)
+	update_icon()
 	draw_power()
 
 obj/machinery/mineral/deep_drill/proc/draw_power() //This draws power from the cell when called
 	cell.use(power_draw)
 
 /obj/machinery/mineral/deep_drill/update_icon(stat)
-	//cut_overlays()
-	//SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
-	if(panel_open)
-		add_overlay(overlayopen)
-		return
-	else
-		cut_overlay(overlayopen)
-		return
+	overlays.Cut()
 	if(on && cell && cell.charge > 0)
 		icon_state = "deep_drill-on"
-		if("eject")
-			add_overlay(overlayeject)
-			sleep(6)
-			cut_overlay(overlayeject)
-			return
-		if("mining")
-			add_overlay(overlaymining)
-			return
+		if(mining)
+			overlays += "deep_drill-ovdrilling"
+		if(stat == "eject")
+			overlays += "deep_drill-oveject"
+			sleep(12)
+			overlays -= "deep_drill-oveject"
 	else
-		cut_overlays()
 		icon_state = "deep_drill-off"
-		return
-	stat = null
 
 //HACKING PROCS//
 
@@ -258,12 +255,14 @@ obj/machinery/mineral/deep_drill/proc/draw_power() //This draws power from the c
 /obj/machinery/mineral/deep_drill/process() //Heart of this
 	if(disabled)
 		on = FALSE
+		update_icon()
 		return
 	if(on && cell && cell.charge > 0)
 		if(istype(get_turf(src), /turf/open/floor/plating/asteroid/basalt/vein))
 			drill_mats()
 		else
 			power_draw = 0
+			mining = FALSE
 
 //MISC STUFF//////////////////////
 
