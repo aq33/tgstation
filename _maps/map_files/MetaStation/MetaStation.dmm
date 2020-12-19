@@ -3063,14 +3063,10 @@
 /area/ai_monitored/security/armory)
 "agb" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/ar{
+/obj/item/gun/ballistic/automatic/wt550,
+/obj/item/gun/ballistic/automatic/wt550{
 	pixel_x = 3;
 	pixel_y = -3
-	},
-/obj/item/gun/ballistic/automatic/ar,
-/obj/item/gun/ballistic/automatic/ar{
-	pixel_x = 6;
-	pixel_y = -6
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
