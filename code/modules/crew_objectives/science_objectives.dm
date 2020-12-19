@@ -6,12 +6,12 @@
 
 /datum/objective/crew/cyborgs/New()
 	. = ..()
-	target_amount = rand(3,10)
+	target_amount = rand(3,5)
 	update_explanation_text()
 
 /datum/objective/crew/cyborgs/update_explanation_text()
 	. = ..()
-	explanation_text = "Ensure there are at least [target_amount] functioning cyborgs when the shift ends."
+	explanation_text = "Zapewnij przynajmniej [target_amount] funkcjonujących cyborgów pod koniec zmiany."
 
 /datum/objective/crew/cyborgs/check_completion()
 	var/borgcount = target_amount
@@ -37,7 +37,7 @@
 
 /datum/objective/crew/research/update_explanation_text()
 	. = ..()
-	explanation_text = "Make sure the research required to produce a [initial(targetdesign.name)] is available on the R&D server by the end of the shift."
+	explanation_text = "Upewnij się, że badania potrzebne do [initial(targetdesign.name)] są dostępne na serwerze R&D pod koniec zmiany."
 
 /datum/objective/crew/research/check_completion()
 	for(var/obj/machinery/r_n_d/server/S in GLOB.machines)

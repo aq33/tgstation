@@ -28,8 +28,8 @@
 	id = /obj/item/card/id/job/sci
 	belt = /obj/item/pda/toxins
 	ears = /obj/item/radio/headset/headset_sci
-	uniform = /obj/item/clothing/under/rank/rnd/scientist
-	shoes = /obj/item/clothing/shoes/sneakers/white
+	uniform = /obj/item/clothing/under/rank/rnd/scientist/hlsci
+	shoes = /obj/item/clothing/shoes/laceup/brown
 	suit = /obj/item/clothing/suit/toggle/labcoat/science
 
 	backpack = /obj/item/storage/backpack/science

@@ -1,0 +1,14 @@
+name: Line endings linter
+
+on: [push, pull_request]
+
+jobs:
+  check:
+    name: Line endings linter
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+    - name: Check line endings
+      run: |
+        ! find . -not -type d -regextype posix-egrep -regex ".*\.(sh|dm|dme|dmm)$" -exec file "{}" ";" | grep CRLF | grep .

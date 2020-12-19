@@ -190,6 +190,28 @@
 	new /obj/item/autosurgeon/techpriest(src)
 	new /obj/item/storage/box/microwavekit(src)
 
+//radical faith
+
+/obj/item/clothing/suit/hooded/chaplain_hoodie/klansman
+	name = "ivory robes"
+	desc = "Ghost costume that will actually spook certain people."
+	icon_state = "klansman"
+	item_state = "klansman"
+	hoodtype = /obj/item/clothing/head/hooded/chaplain_hood/klansman
+	flags_inv = HIDEJUMPSUIT
+
+/obj/item/clothing/head/hooded/chaplain_hood/klansman
+	name = "pointy hood"
+	desc = "A pointy white hood that covers your face, it makes you wish that this station was clean. This hood might aswell be a quite effective lighting rod though."
+	alternate_worn_icon = 'icons/mob/large-worn-icons/64x64/head.dmi'
+	icon_state = "klansmanhood"
+	item_state = "klansmanhood"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	dynamic_hair_suffix = ""
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+
+
 // CHAPLAIN NULLROD AND CUSTOM WEAPONS //
 
 /obj/item/nullrod

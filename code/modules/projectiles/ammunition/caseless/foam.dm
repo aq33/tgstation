@@ -1,6 +1,6 @@
 /obj/item/ammo_casing/caseless/foam_dart
-	name = "foam dart"
-	desc = "It's nerf or nothing! Ages 8 and up."
+	name = "plastikowa kulka"
+	desc = "Plastikowa kulka do pistoletu. Nie celuj w oczy!"
 	projectile_type = /obj/item/projectile/bullet/reusable/foam_dart
 	caliber = "foam_force"
 	icon = 'icons/obj/guns/toy.dmi'
@@ -58,8 +58,8 @@
 		FD.pen = null
 
 /obj/item/ammo_casing/caseless/foam_dart/riot
-	name = "riot foam dart"
-	desc = "Whose smart idea was it to use toys as crowd control? Ages 18 and up."
+	name = "metalowa kulka"
+	desc = "Metalowa kulka do pistoletu. Potrafi zaboleć."
 	projectile_type = /obj/item/projectile/bullet/reusable/foam_dart/riot
 	icon_state = "foamdart_riot"
 	materials = list(/datum/material/iron = 1125)
