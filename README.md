@@ -11,11 +11,16 @@ Jeżeli robisz wiele PR z twojego forka, z różnych branchów, to muszą te bra
 W innym przypadku jeden branch może nanosić 2 PRy.
 
 Każdy otwarty PR, będzie aktywnie rozpatrywany przez administrację pod względem merge lub test merge,
-dlatego jeżeli uważasz, że PR nie jest gotowy do merge, tymczasowo go zamknij.
-Tak samo administracja może w dowolnym momencie zamknąć twój PR, prawdopodobnie pisząc co jest do poprawy.
-Możesz otworzyć PR, jeżeli uważasz, że naprawiłeś wskazane błędy i twój PR jest znowu gotowy do merge.
+dlatego jeżeli uważasz, że PR nie jest gotowy do merge, zamień go w draft PR (guzik jest na prawo pod sekcją reviewers).
+Tak samo administracja może w dowolnym momencie przekonwertować twój PR w draft, pisząc co jest do poprawy.
+Wtedy spowrotem zmień PR w normalny, jeżeli uważasz, że naprawiłeś wskazane błędy i twój PR jest znowu gotowy do merge.
 
-Na dodatek, administracja zakłada, że każdy otwarty PR, był bardzo ogólnie przetestowany na lokalnym serwerze.
+Na dodatek, administracja zakłada, że każdy non-draft PR, był bardzo ogólnie przetestowany na lokalnym serwerze.
+PRy które przez długi czas są w stanie drafta, mogą być zamknięte z powodu braku aktywności, możesz w dowolnej chwili otworzyć taki PR ponownie.
+PRy które zostaną odrzucone ze względu na swój pomysł/funkcjonalność, mogą zostać zamknięte permanentnie.
+
+Gdy masz już gotowy i otwarty PR, musi on przejść testy automatyczne, oraz code review.
+Jeżeli test automatyczny failuje i nie wiesz dlaczego, możesz wejść w details i zobaczyć logi, gdzie znajdziesz konkretny błąd.
 
 ## Pomoc w tłumaczeniu/programowaniu
 
