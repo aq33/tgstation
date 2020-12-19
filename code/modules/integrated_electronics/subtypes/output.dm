@@ -491,3 +491,31 @@
 		assembly.investigate_log("displayed \"[html_encode(stuff_to_display)]\" with [type].", INVESTIGATE_CIRCUIT)
 	else
 		investigate_log("displayed \"[html_encode(stuff_to_display)]\" as [type].", INVESTIGATE_CIRCUIT)
+
+/obj/item/integrated_circuit/output/nanite
+	name = "nanite signaler circuit"
+	desc = "Takes a number as an input and will make the device trigger selected nanite code in selected mob's nanites."
+	icon_state = "signal"
+	complexity = 4
+	cooldown_per_use = 5
+	inputs = list("code" = IC_PINTYPE_NUMBER,"mob" = IC_PINTYPE_REF)
+	outputs = list()
+	activators = list(
+		"send signal" = IC_PINTYPE_PULSE_IN,
+		"on signal sent" = IC_PINTYPE_PULSE_OUT)
+	spawn_flags = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
+	power_draw_per_use = 40
+
+/obj/item/integrated_circuit/output/nanite/do_work()
+	var/code = get_pin_data(IC_INPUT, 1)
+	var/mob/living/H = get_pin_data_as_type(IC_INPUT, 2, /mob/living)
+	if(!istype(H)) //Invalid input
+		return
+	if(isnull(code) || !isnum_safe(code))
+		return
+	if(code > 9999 || code < 1)
+		return
+	
+	SEND_SIGNAL(H, COMSIG_NANITE_SIGNAL, code, src)
+	
+	activate_pin(2)
