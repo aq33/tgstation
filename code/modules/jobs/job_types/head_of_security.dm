@@ -50,7 +50,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/wt550/no_mag
 	r_pocket = /obj/item/assembly/flash/handheld
 	l_pocket = /obj/item/restraints/handcuffs
-	backpack_contents = list(/obj/item/melee/baton/loaded=1, /obj/item/club=1, /obj/item/ammo_box/magazine/wt550m9/wtnl = 2)
+	backpack_contents = list(/obj/item/melee/baton/loaded=1, /obj/item/club=1, /obj/item/ammo_box/magazine/wt550m9/wtnl)
 
 	backpack = /obj/item/storage/backpack/security
 	satchel = /obj/item/storage/backpack/satchel/sec
