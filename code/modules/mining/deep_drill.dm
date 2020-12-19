@@ -32,8 +32,11 @@
 		new /obj/item/stock_parts/manipulator,
 		new /obj/item/stock_parts/manipulator,
 		new /obj/item/stock_parts/capacitor,
-		new /obj/item/pickaxe/drill)
-	//cell = new(src)
+		new /obj/item/pickaxe/drill,
+		new /obj/item/stock_parts/cell)
+
+//	for(var//obj/item/stock_parts/cell/c in component_parts)
+//		cell = c
 	RefreshParts()
 	update_icon()
 
@@ -92,7 +95,7 @@
 			. += "<span class='notice'>There is a [cell] installed.</span>"
 		else
 			. += "<span class='warning'> There is no power cell installed!<span>"
-
+/*
 /obj/machinery/mineral/deep_drill/interact(mob/user)
 	shock(user, 70)
 	if(on && !panel_open)
@@ -103,13 +106,15 @@
 		on = TRUE
 		to_chat(user, "<span class='notice'>You switch the [src] on.</span>")
 		update_icon()
-	if(!cell)
-		return
-	if(panel_open && cell)
+	else if(panel_open && cell)
 		to_chat(user, "<span class='notice'>You remove the [cell] from the [src]</span>")
 		user.put_in_hands(cell)
 		cell.add_fingerprint(user)
 		cell = null
+
+	if(!cell)
+		return
+*/
 
 /obj/machinery/mineral/deep_drill/AltClick(mob/user) //When alt-clicked the drill will try to drop stored mats.
 	shock(user, 70)
@@ -128,7 +133,19 @@
 	shock(user, 50) //before anything, try to shock the user
 	if(user.a_intent == INTENT_HARM) //so we can hit the machine
 		return ..()
-
+	if(on && !panel_open)	//POPRAWIĆ BATERIE
+		on = FALSE
+		to_chat(user, "<span class='notice'>You switch the [src] off.</span>")
+		update_icon()
+	else if(!on && !panel_open)
+		on = TRUE
+		to_chat(user, "<span class='notice'>You switch the [src] on.</span>")
+		update_icon()
+	else if(panel_open && cell)
+		to_chat(user, "<span class='notice'>You remove the [cell] from the [src]</span>")
+		user.put_in_hands(cell)
+		cell.add_fingerprint(user)
+		cell = null
 	add_fingerprint(user)
 	if(istype(I, /obj/item/stock_parts/cell))
 		if(panel_open)
@@ -208,6 +225,11 @@ obj/machinery/mineral/deep_drill/proc/draw_power() //This draws power from the c
 
 /obj/machinery/mineral/deep_drill/update_icon(stat)
 	overlays.Cut()
+	if(panel_open)
+		overlays += "deep_drill-ovopen"
+	else
+		overlays -= "deep_drill-ovopen"
+
 	if(on && cell && cell.charge > 0)
 		icon_state = "deep_drill-on"
 		if(mining)
@@ -296,5 +318,6 @@ Roadmap:
 ISSUES:
 -użycie ręki otwiera menu kabelków zamiast wyjąć baterię
 -drill nie razi prądem nawet gdy warunki są spełnione
+-runtime generacji
 */
 

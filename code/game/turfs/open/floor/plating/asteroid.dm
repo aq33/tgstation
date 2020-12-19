@@ -102,11 +102,8 @@
 /turf/open/floor/plating/asteroid/basalt/vein
 	name = "mineral vein"
 	desc = "Looks like there's a rich deposit of oopsie woopsie. Tell coders about this."
-	baseturfs = /turf/open/floor/plating/asteroid/basalt
-	icon = 'icons/turf/floors.dmi'
 	icon_state = "vein_coder"
 	environment_type = "basalt"
-	floor_variance = 0
 	var/list/ore_rates
 
 /turf/open/floor/plating/asteroid/basalt/vein/common
@@ -319,11 +316,12 @@
 	SpawnFlora(T)
 	SpawnTerrain(T)
 	SpawnMonster(T)
+
 	T.ChangeTurf(turf_type, null, CHANGETURF_IGNORE_AIR)
 
 /turf/open/floor/plating/asteroid/airless/cave/proc/SpawnMonster(turf/T)
 	if(prob(30))
-		if(istype(loc, /area/mine/explored) || !istype(loc, /area/lavaland/surface/outdoors/unexplored))
+		if(istype(loc, /area/mine/explored) || !istype(loc, /area/lavaland/surface/outdoors/unexplored) || istype(loc, /turf/open/floor/plating/asteroid/basalt/vein))
 			return
 		var/randumb = pickweight(mob_spawn_list)
 		while(randumb == SPAWN_MEGAFAUNA)
@@ -361,12 +359,13 @@
 		new randumb(T)
 
 /turf/open/floor/plating/asteroid/airless/cave/proc/SpawnTerrain(turf/T)
-	if(prob(12))
-//		if(istype(loc, /area/mine/explored) || istype(loc, /area/lavaland/surface/outdoors/explored))
-//			return
+	if(prob(30))
+		if(istype(loc, /area/mine/explored) || istype(loc, /area/lavaland/surface/outdoors/explored))
+			return
 		var/randumb = pickweight(terrain_spawn_list)
 		for(var/turf/open/floor/plating/asteroid/basalt/vein/V in range(7, T))
 			T.ChangeTurf(V)
+			return
 		new randumb(T)
 
 /turf/open/floor/plating/asteroid/snow
