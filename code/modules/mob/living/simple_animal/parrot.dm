@@ -41,6 +41,7 @@
 
 	speak = list("Hi!","Hello!","Cracker?","BAWWWWK george mellons griffing me!")
 	speak_emote = list("squawks","says","yells")
+	speech_sound = "parrot"
 	emote_hear = list("squawks.","bawks!")
 	emote_see = list("flutters its wings.")
 
