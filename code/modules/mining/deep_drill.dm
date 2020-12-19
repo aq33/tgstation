@@ -32,11 +32,7 @@
 		new /obj/item/stock_parts/manipulator,
 		new /obj/item/stock_parts/manipulator,
 		new /obj/item/stock_parts/capacitor,
-		new /obj/item/pickaxe/drill,
-		new /obj/item/stock_parts/cell)
-
-//	for(var//obj/item/stock_parts/cell/c in component_parts)
-//		cell = c
+		new /obj/item/pickaxe/drill)
 	RefreshParts()
 	update_icon()
 
@@ -95,7 +91,7 @@
 			. += "<span class='notice'>There is a [cell] installed.</span>"
 		else
 			. += "<span class='warning'> There is no power cell installed!<span>"
-/*
+
 /obj/machinery/mineral/deep_drill/interact(mob/user)
 	shock(user, 70)
 	if(on && !panel_open)
@@ -114,7 +110,6 @@
 
 	if(!cell)
 		return
-*/
 
 /obj/machinery/mineral/deep_drill/AltClick(mob/user) //When alt-clicked the drill will try to drop stored mats.
 	shock(user, 70)
@@ -126,7 +121,7 @@
 		return FALSE
 	if(istype(M))
 		if(!M.buffer || !istype(M.buffer, /obj/machinery/ore_silo))
-			to_chat(user, "<span class='warning'>You need to multitool the ore silo first.</span>")
+			to_chat(user, "<span class='warning'>You need to upgrade the ore silo first.</span>")
 			return FALSE
 
 /obj/machinery/mineral/deep_drill/attackby(obj/item/I, mob/user, params) //Handles decon, power cell manipulations and upgrade module

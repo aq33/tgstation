@@ -18,8 +18,8 @@
 /datum/wires/mineral/deep_drill/get_status()
 	var/obj/machinery/mineral/deep_drill/A = holder
 	var/list/status = list()
-	status += "The red light is [A.disabled ? "on" : "off"]."
-	status += "The blue light is [A.hacked ? "on" : "off"]."
+	status += "Czerwona kontrolka [A.disabled ? "świeci się" : "nie świeci się"]."
+	status += "Serwo taśmy jest [A.hacked ? "włączone" : "wyłączone"]."
 	return status
 
 /datum/wires/mineral/deep_drill/on_pulse(wire)
