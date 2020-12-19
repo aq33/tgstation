@@ -120,6 +120,10 @@
 		              /obj/item/gun/magic/wand = 2,
 		              /obj/item/clothing/glasses/sunglasses/advanced/garb = 2,
 		              /obj/item/clothing/glasses/blindfold = 1,
+		              /obj/item/clothing/under/costume/biker = 1,
+		              /obj/item/clothing/head/helmet/biker = 1,
+		              /obj/item/clothing/under/costume/jacket = 1,
+		              /obj/item/clothing/head/richard = 1,
 		              /obj/item/clothing/mask/muzzle = 2)
 	premium = list(/obj/item/clothing/suit/pirate/captain = 2,
 				   /obj/item/clothing/head/pirate/captain = 2,

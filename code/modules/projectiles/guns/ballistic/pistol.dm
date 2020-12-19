@@ -81,3 +81,39 @@
 		to_chat(user, "<span class='notice'>..and falls into view. Whew, that was a close one.</span>")
 		user.dropItemToGround(src)
 
+// makeshiftov //
+
+/obj/item/gun/ballistic/automatic/pistol/makeshift
+	name = "makeshiftov pistol"
+	desc = "A small, makeshift 9mm handgun. It's a miracle if it'll even fire."
+	icon_state = "makeshift"
+	item_state = "makeshiftov"
+	mag_type = /obj/item/ammo_box/magazine/m9mm_mkshft
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/makeshift/chamber_round(keep_bullet = FALSE, mob/living/user, message = TRUE)
+	if(prob(60))
+		playsound(src, dry_fire_sound, 30, TRUE)
+		to_chat(user, "<span class='notice'>\The [src] makes a dry sound as the slide is racked.</span>")
+		return
+	return ..()
+
+/obj/item/gun/ballistic/automatic/pistol/makeshift/TEC10
+	name = "machineshiftov pistol"
+	desc = "crude machine  pistol that resembles TEC-9 made out of unreriable pistol. Hope it wont explode in your face."
+	icon_state = "tec10"
+	item_state = "TEC10"
+	mag_type = /obj/item/ammo_box/magazine/m9mm_mkshft/TEC10
+	automatic = 1
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/gun/ballistic/automatic/pistol/makeshift/TEC10/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
+	if(magazine.caliber != initial(magazine.caliber))
+		if(prob(70 - (magazine.ammo_count() * 10)))	//minimum probability of 10, maximum of 60
+			playsound(user, fire_sound, fire_sound_volume, vary_fire_sound)
+			to_chat(user, "<span class='userdanger'>[src] blows up in your face!</span>")
+			user.take_bodypart_damage(0,20)
+			explosion(src, 0, 0, 1, 1)
+			user.dropItemToGround(src)
+			return 0
+	..()

@@ -10,6 +10,18 @@
 	ammo_x_offset = 1
 	shaded_charge = 1
 
+/obj/item/gun/energy/laser/laserrifle
+	name = "laser rifle."
+	desc = "Laser gun's bigger brother, military grade beam based weapon that sacrafices stopping power for suppresing fire. Its quite bulky."
+	icon_state = "laser-rifle"
+	item_state = "laser-rifle"
+	ammo_type = list(/obj/item/ammo_casing/energy/lasergun/laserrifle)
+	weapon_weight = WEAPON_HEAVY
+	slot_flags = null
+	w_class = WEIGHT_CLASS_BULKY
+	automatic = 1
+	fire_delay = 0.5
+
 /obj/item/gun/energy/laser/lgun
 	icon_state = "lasergun2"
 	item_state = "lasergun2"
@@ -18,7 +30,6 @@
 /obj/item/gun/energy/laser/fo13
 	icon_state = "laser"
 	item_state = "laser"
-	pin = null
 
 /obj/item/gun/energy/laser/pistol
 	name = "laser pistol"
@@ -31,6 +42,11 @@
 /obj/item/gun/energy/laser/pistol/fo13
 	icon_state = "AEP7"
 	item_state = "laser-pistol"
+
+/obj/item/gun/energy/laser/pistol/secpeestol
+	name = "security laser pistol"
+	desc = "Standard-issue high-power laser pointer to fight off dangerous pests such like rats, space carp and moths. Still better than nothing."
+	pin = /obj/item/firing_pin
 
 /obj/item/gun/energy/laser/tribeam
 	name = "tri-beam laser gun"
@@ -113,14 +129,15 @@
 	name = "accelerator laser cannon"
 	desc = "An advanced laser cannon that does more damage the farther away the target is."
 	icon_state = "lasercannon"
-	item_state = "laser"
+	item_state = "lasercannon"
 	w_class = WEIGHT_CLASS_BULKY
 	force = 10
 	flags_1 =  CONDUCT_1
 	slot_flags = ITEM_SLOT_BACK
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/accelerator)
 	pin = null
-	ammo_x_offset = 3
+	ammo_x_offset = 1
+	weapon_weight = WEAPON_HEAVY
 
 /obj/item/ammo_casing/energy/laser/accelerator
 	projectile_type = /obj/item/projectile/beam/laser/accelerator
@@ -212,6 +229,7 @@
 /obj/item/gun/energy/plasma/pistol/fo13
 	icon_state = "plasma-pistol"
 	item_state = "plasma-pistol"
+	pin = /obj/item/firing_pin
 
 /obj/item/gun/energy/plasma/rifle
 	name = "plasma rifle"
@@ -223,6 +241,7 @@
 /obj/item/gun/energy/plasma/rifle/fo13
 	icon_state = "plasma"
 	item_state = "plasma"
+	pin = /obj/item/firing_pin
 
 /obj/item/gun/energy/plasma/multiplas
 	name = "multiplas gun"
@@ -234,3 +253,4 @@
 /obj/item/gun/energy/plasma/multiplas/fo13
 	icon_state = "multiplas"
 	item_state = "multiplas"
+	pin = /obj/item/firing_pin

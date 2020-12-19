@@ -17,6 +17,11 @@
 	projectile_type = /obj/item/projectile/beam/laser/pistol
 	e_cost = 830
 
+/obj/item/ammo_casing/energy/lasergun/laserrifle
+	projectile_type = /obj/item/projectile/beam/laser/laserrifle
+	e_cost = 500
+	select_name = "supress"
+
 /obj/item/ammo_casing/energy/lasergun/old
 	projectile_type = /obj/item/projectile/beam/laser
 	e_cost = 2000
