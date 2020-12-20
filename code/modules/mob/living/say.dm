@@ -129,7 +129,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		say_dead(original_message)
 		return
 
-	if(check_emote(original_message, forced) || !can_speak_basic(original_message, ignore_spam))
+	if(check_emote(original_message, forced) || !can_speak_basic(original_message, ignore_spam, forced))
 		return
 
 	if(in_critical)
@@ -295,6 +295,12 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 			speech_bubble_recipients.Add(M.client)
 
 	INVOKE_ASYNC(GLOBAL_PROC, /.proc/animate_chat, src, message, message_language, message_mode, speech_bubble_recipients, 50) // see chatheader.dm
+	
+	//speech sound
+	if(speech_sound && speech_sound_cd < world.time)
+		playsound(src, speech_sound, 15, TRUE, (-7 + message_range), ignore_walls = FALSE)
+		speech_sound_cd = world.time + speech_sound_delay
+
 
 /proc/animate_speechbubble(image/I, list/show_to, duration)
 	var/matrix/M = matrix()
@@ -317,12 +323,12 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	if(can_speak_basic(message) && can_speak_vocal(message))
 		return 1
 
-/mob/living/proc/can_speak_basic(message, ignore_spam = FALSE) //Check BEFORE handling of xeno and ling channels
+/mob/living/proc/can_speak_basic(message, ignore_spam = FALSE, forced = FALSE) //Check BEFORE handling of xeno and ling channels
 	if(client)
 		if(client.prefs.muted & MUTE_IC)
 			to_chat(src, "<span class='danger'>You cannot speak in IC (muted).</span>")
 			return 0
-		if(!ignore_spam && client.handle_spam_prevention(message,MUTE_IC))
+		if(!ignore_spam && !forced && client.handle_spam_prevention(message,MUTE_IC))
 			return 0
 
 	return 1

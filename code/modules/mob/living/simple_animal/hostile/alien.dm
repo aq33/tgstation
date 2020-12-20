@@ -19,6 +19,7 @@
 	melee_damage = 25
 	attacktext = "slashes"
 	speak_emote = list("hisses")
+	speech_sound = "hiss"
 	bubble_icon = "alien"
 	a_intent = INTENT_HARM
 	attack_sound = 'sound/weapons/bladeslice.ogg'

@@ -69,6 +69,38 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	clothing_flags = SNUG_FIT
 
+/obj/item/clothing/head/ertcommanderfake
+	name = "ERT commander helmet replica"
+	icon_state = "hardsuit0-ert_commander"
+	item_state = "hardsuit0-ert_commander"
+	desc = "A plastic replica of the ERT Commander space helmet. You'll look just like a real competent ERT Commander in this! This is a toy, it is not made for use in space!"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	clothing_flags = SNUG_FIT
+
+/obj/item/clothing/head/ertsecurityfake
+	name = "ERT security helmet replica"
+	icon_state = "hardsuit0-ert_security"
+	item_state = "hardsuit0-ert_security"
+	desc = "A plastic replica of the ERT Security space helmet. You'll look just like a real competent ERT Security in this! This is a toy, it is not made for use in space!"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	clothing_flags = SNUG_FIT
+
+/obj/item/clothing/head/ertmedicalfake
+	name = "ERT medic helmet replica"
+	icon_state = "hardsuit0-ert_medical"
+	item_state = "hardsuit0-ert_medical"
+	desc = "A plastic replica of the ERT Medic space helmet. You'll look just like a real competent ERT Medic in this! This is a toy, it is not made for use in space!"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	clothing_flags = SNUG_FIT
+
+/obj/item/clothing/head/ertengineerfake
+	name = "ERT engineer helmet replica"
+	icon_state = "hardsuit0-ert_engineer"
+	item_state = "hardsuit0-ert_engineer"
+	desc = "A plastic replica of the ERT Engineer space helmet. You'll look just like a real competent ERT Engineer in this! This is a toy, it is not made for use in space!"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	clothing_flags = SNUG_FIT
+
 /obj/item/clothing/head/cueball
 	name = "cueball helmet"
 	desc = "A large, featureless white orb meant to be worn on your head. How do you even see out of this thing?"
@@ -442,3 +474,56 @@
 	desc = "A horrifying mix of beanie and softcap in CentCom green. You'd have to be pretty desperate for power over your peers to agree to wear this."
 	icon_state = "intern_hat"
 	item_state = "intern_hat"
+
+/obj/item/clothing/head/headband
+	clothing_flags = SNUG_FIT
+	name = "cool white headband"
+	desc = "An white headband. It looks badass."
+	item_state = "headband_white"
+	icon_state = "headband_white"
+	dog_fashion = null
+
+/obj/item/clothing/head/headband/normal/black
+	name = "cool black headband"
+	desc = "An robust black headband. Uses reinforced fabric to offer protection. It looks badass."
+	item_state = "headband"
+	icon_state = "headband"
+
+/obj/item/clothing/head/headband/normal/red
+	name = "cool red headband"
+	desc = "An robust red headband. Uses reinforced fabric to offer protection. It looks badass."
+	item_state = "headband_red"
+	icon_state = "headband_red"
+
+/obj/item/clothing/head/headband/sec
+	name = "cool red headband"
+	desc = "An robust red headband. Uses reinforced fabric to offer protection. It looks badass."
+	item_state = "headband_red"
+	icon_state = "headband_red"
+	armor = list("melee" = 20, "bullet" = 15, "laser" = 20,"energy" = 30, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	strip_delay = 60
+
+/obj/item/clothing/head/headband/sec/black
+	name = "cool black headband"
+	desc = "An robust black headband. Uses reinforced fabric to offer protection. It looks badass."
+	item_state = "headband"
+	icon_state = "headband"
+	strip_delay = 60
+
+/obj/item/clothing/head/helmet/biker
+	name = "motorcycle helmet"
+	desc = "You had your chance."
+	item_state = "biker_helmet"
+	icon_state = "biker_helmet"
+	armor = list("melee" = 20, "bullet" = 5, "laser" = 10,"energy" = 20, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	dog_fashion = null
+
+/obj/item/clothing/head/richard
+	name = "Chicken mask"
+	desc = "Why don't you finish what you've started?"
+	item_state = "richard"
+	icon_state = "richard"
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
+	dog_fashion = null

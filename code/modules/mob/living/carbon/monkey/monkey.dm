@@ -1,6 +1,7 @@
 /mob/living/carbon/monkey
 	name = "monkey"
 	verb_say = "chimpers"
+	speech_sound = "monkey"
 	initial_language_holder = /datum/language_holder/monkey
 	possible_a_intents = list(INTENT_HELP, INTENT_DISARM, INTENT_HARM)
 	icon = 'icons/mob/monkey.dmi'
@@ -16,6 +17,7 @@
 	bodyparts = list(/obj/item/bodypart/chest/monkey, /obj/item/bodypart/head/monkey, /obj/item/bodypart/l_arm/monkey,
 					 /obj/item/bodypart/r_arm/monkey, /obj/item/bodypart/r_leg/monkey, /obj/item/bodypart/l_leg/monkey)
 	hud_type = /datum/hud/monkey
+	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
 
 /mob/living/carbon/monkey/Initialize(mapload, cubespawned=FALSE, mob/spawner)
 	verbs += /mob/living/proc/mob_sleep

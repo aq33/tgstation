@@ -545,22 +545,6 @@
 					/obj/item/gun/energy/e_gun/dragnet)
 	crate_name = "\improper DRAGnet crate"
 
-/datum/supply_pack/security/armory/energy_single
-	name = "Energy Guns Single-Pack"
-	desc = "Contains one Energy Gun, capable of firing both nonlethal and lethal blasts of light. Requires Armory access to open."
-	cost = 1500
-	small_item = TRUE
-	contains = list(/obj/item/gun/energy/e_gun)
-
-/datum/supply_pack/security/armory/energy
-	name = "Energy Guns Crate"
-	desc = "Contains two Energy Guns, capable of firing both nonlethal and lethal blasts of light. Requires Armory access to open."
-	cost = 2500
-	contains = list(/obj/item/gun/energy/e_gun,
-					/obj/item/gun/energy/e_gun)
-	crate_name = "energy gun crate"
-	crate_type = /obj/structure/closet/crate/secure/plasma
-
 /datum/supply_pack/security/armory/exileimp
 	name = "Exile Implants Crate"
 	desc = "Contains five Exile implants. Requires Armory access to open."
@@ -708,8 +692,8 @@
 	crate_name = "swat crate"
 
 /datum/supply_pack/security/armory/combatrig
-	name = "Combat RIG crate"
-	desc = "Contains one combat RIG suit, mask, gloves and shoes. If there is a need, there is a way. Requires Armory access to open."
+	name = "SWAT mk. II RIG crate"
+	desc = "Contains full set of military grade RIG suit, mask, gloves and shoes. If there is a need, there is a way. Requires Armory access to open."
 	cost = 40000
 	contains = list(/obj/item/clothing/suit/space/hardsuit/swat,
 					/obj/item/clothing/gloves/combat,
@@ -717,77 +701,40 @@
 					/obj/item/clothing/shoes/combat)
 	crate_name = "Combat RIG crate"
 
-/datum/supply_pack/security/armory/power_armor0
-	name = "Very old Crate"
-	desc = "Unusual crate, has eroded by time sign ,Pro*e*ty of US a*my'. Note; Power Armors were designed for ground operations, not space."
-	cost = 70000
+/datum/supply_pack/security/armory/power_armor
+	name = "Quite an old crate"
+	desc = "Dust covered crate that was found when we were cleaning our cargo departament, its very heavy."
+	cost = 50000
 	contraband = TRUE
-	contains = list(/obj/item/clothing/suit/armor/power_armor/t45,
-					/obj/item/clothing/head/helmet/power_armor/t45)
-	crate_name = "T45 crate"
+	contains = list(/obj/item/storage/backpack/kit/t45,
+					/obj/item/storage/backpack/kit/t51b,
+					/obj/item/storage/backpack/kit/t60,
+					/obj/item/storage/backpack/kit/enclave,
+					/obj/item/storage/backpack/kit/tesla,
+					/obj/item/gun/energy/laser/fo13,
+					/obj/item/gun/energy/laser/pistol/fo13,
+					/obj/item/gun/energy/laser/tribeam/fo13,
+					/obj/item/gun/energy/plasma/pistol/fo13,
+					/obj/item/gun/energy/plasma/rifle/fo13,
+					/obj/item/gun/energy/plasma/multiplas/fo13,
+					/obj/item/gun/energy/laser/laserrifle,
+					/obj/item/stock_parts/cell/gun)
+	crate_name = "Old dusty crate"
 
-/datum/supply_pack/security/armory/power_armor1
-	name = "Very old Crate"
-	desc = "Unusual crate, has eroded by time sign ,Pro*e*ty of US a*my'."
-	cost = 71000
-	contraband = TRUE
-	contains = list(/obj/item/clothing/suit/armor/power_armor/t45d,
-					/obj/item/clothing/head/helmet/power_armor/t45/t45d)
-	crate_name = "T45d crate"
-
-/datum/supply_pack/security/armory/power_armor2
-	name = "Very old Crate"
-	desc = "Unusual crate, has eroded by time sign ,Pro*e*ty of US a*my'."
-	cost = 75000
-	contraband = TRUE
-	contains = list(/obj/item/clothing/suit/armor/power_armor/t51b,
-					/obj/item/clothing/head/helmet/power_armor/t51b)
-	crate_name = "T51b crate"
-
-/datum/supply_pack/security/armory/power_armor3
-	name = "Very old Crate"
-	desc = "Unusual crate, has eroded by time sign ,Pro*e*ty of US a*my'."
-	cost = 80000
-	contraband = TRUE
-	contains = list(/obj/item/clothing/suit/armor/power_armor/t60,
-					/obj/item/clothing/head/helmet/power_armor/t60)
-	crate_name = "T60 crate"
-
-/datum/supply_pack/security/armory/power_armor4
-	name = "Very old Crate"
-	desc = "Has a big E surrounded by stars printed on it."
-	cost = 100000
-	contraband = TRUE
-	contains = list(/obj/item/clothing/suit/armor/power_armor/advanced,
-					/obj/item/clothing/head/helmet/power_armor/advanced)
-	crate_name = "Advanced model crate"
-
-/datum/supply_pack/security/armory/power_armor5
-	name = "Very old Crate"
-	desc = "Has a big E surrounded by stars printed on it."
-	cost = 150000
-	contraband = TRUE
-	contains = list(/obj/item/clothing/suit/armor/power_armor/tesla,
-					/obj/item/clothing/head/helmet/power_armor/tesla)
-	crate_name = "Advanced TESLA model crate"
-
-//datum/supply_pack/security/armory/power_armor6
-//	name = "Power Armor"
-//	desc = "Contains one set of power armor, when you want to become an walking tank. Note; Power Armors were designed for ground operations, not space."
-//	cost = 160000
-//	contains = list(/obj/item/clothing/suit/armor/power_armor/advanced/mk2,
-//					/obj/item/clothing/head/helmet/power_armor/advanced/mk2)
-//	crate_name = "Power Armor crate"
+/datum/supply_pack/security/armory/power_armor/fill(obj/structure/closet/crate/C)
+	for(var/i in 1 to 3)
+		var/item = pick(contains)
+		new item(C)
 
 /datum/supply_pack/security/armory/wt550_single
-	name = "WT-550 Auto Rifle Single-Pack"
-	desc = "Contains one high-powered, semiautomatic rifles chambered in 4.6x30mm. Requires Armory access to open."
+	name = "WT-550 Tactical Auto Rifle Crate"
+	desc = "Contains one high-powered, semiautomatic rifles chambered in 4.6x30mm. Comes with a seclite. Requires Armory access to open."
 	cost = 2000
-	contains = list(/obj/item/gun/ballistic/automatic/wt550)
+	contains = list(/obj/item/gun/ballistic/automatic/wt550/tactical)
 	small_item = TRUE
 
 /datum/supply_pack/security/armory/wt550
-	name = "WT-550 Auto Rifle Crate"
+	name = "WT-550 Auto Rifles Crate"
 	desc = "Contains two high-powered, semiautomatic rifles chambered in 4.6x30mm. Requires Armory access to open."
 	cost = 3500
 	contains = list(/obj/item/gun/ballistic/automatic/wt550,
@@ -795,20 +742,87 @@
 	crate_name = "auto rifle crate"
 
 /datum/supply_pack/security/armory/wt550ammo
-	name = "WT-550 Auto Rifle Ammo Crate"
-	desc = "Contains four 20-round magazine for the WT-550 Auto Rifle. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
-	cost = 3000
+	name = "WT-550 Auto Rifle Magazines Crate"
+	desc = "Contains 2 magazines loaded with lethal rounds and 2 magazines loaded with rubber rounds for the WT-550 Auto Rifle. Requires Armory access to open."
+	cost = 2500
 	contains = list(/obj/item/ammo_box/magazine/wt550m9,
 					/obj/item/ammo_box/magazine/wt550m9,
-					/obj/item/ammo_box/magazine/wt550m9,
-					/obj/item/ammo_box/magazine/wt550m9)
+					/obj/item/ammo_box/magazine/wt550m9/wtnl,
+					/obj/item/ammo_box/magazine/wt550m9/wtnl)
 
 /datum/supply_pack/security/armory/wt550ammo_single
-	name = "WT-550 Auto Rifle Ammo Single-Pack"
+	name = "WT-550 Auto Rifle Magazine"
 	desc = "Contains a 20-round magazine for the WT-550 Auto Rifle. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
 	cost = 750 //one of the few single-pack items that who's price per unit is the exact same as the bulk
 	contains = list(/obj/item/ammo_box/magazine/wt550m9)
 	small_item = TRUE
+
+/datum/supply_pack/security/armory/WTbox
+	name = "4.6x30mm Ammo Crate"
+	desc = "Contains 3 boxes of lethal autorifle rounds. Requires Armory access to open."
+	cost = 2000
+	contains = list(/obj/item/ammo_box/c46x30mm,
+					/obj/item/ammo_box/c46x30mm,
+					/obj/item/ammo_box/c46x30mm)
+
+/datum/supply_pack/security/armory/WTbox/nl
+	name = "4.6x30mm Non-Lethal Ammo Crate"
+	desc = "Contains 3 boxes of non-lethal autorifle rounds. Requires Armory access to open."
+	cost = 1750
+	contains = list(/obj/item/ammo_box/c46x30mm/nl,
+					/obj/item/ammo_box/c46x30mm/nl,
+					/obj/item/ammo_box/c46x30mm/nl)
+
+/datum/supply_pack/security/armory/secpistol_single
+	name = "SG19 Security Pistol Crate"
+	desc = "Contains one standard-issue SG19 pistol chambered in 9mm. Requires Armory access to open."
+	cost = 2000
+	contains = list(/obj/item/gun/ballistic/automatic/pistol/secpistol/tactical)
+	small_item = TRUE
+
+/datum/supply_pack/security/armory/secpistol
+	name = "SG19 Security Pistols Crate"
+	desc = "Contains two standard-issue pistols chambered in 9mm. Requires Armory access to open."
+	cost = 3500
+	contains = list(/obj/item/gun/ballistic/automatic/pistol/secpistol,
+					/obj/item/gun/ballistic/automatic/pistol/secpistol)
+	crate_name = "auto rifle crate"
+
+/datum/supply_pack/security/armory/secpistol/tactical
+	name = "Tactical SG19 Pistols Crate"
+	desc = "Contains two tactical Security Pistols with two spare extended 9mm magazines. Requires Armory access to open."
+	cost = 6000
+	contains = list(/obj/item/gun/ballistic/automatic/pistol/secpistol/tactical,
+					/obj/item/ammo_box/magazine/sec9mm/ext,
+					/obj/item/gun/ballistic/automatic/pistol/secpistol/tactical,
+					/obj/item/ammo_box/magazine/sec9mm/ext)
+	crate_name = "tactical pistols crate"
+
+/datum/supply_pack/security/armory/secmags
+	name = "SG19 Magazines Crate"
+	desc = "Contains two 9mm clips loaded with lethal rounds and two 9mm clips loaded with rubber rounds. Requires Armory access to open."
+	cost = 2500
+	contains = list(/obj/item/ammo_box/magazine/sec9mm,
+					/obj/item/ammo_box/magazine/sec9mm,
+					/obj/item/ammo_box/magazine/sec9mm/nl,
+					/obj/item/ammo_box/magazine/sec9mm/nl)
+	crate_name = "auto rifle crate"
+
+/datum/supply_pack/security/armory/secbox
+	name = "9mm Ammo Crate"
+	desc = "Contains 3 boxes of lethal pistol rounds. Requires Armory access to open."
+	cost = 2000
+	contains = list(/obj/item/ammo_box/c9mm,
+					/obj/item/ammo_box/c9mm,
+					/obj/item/ammo_box/c9mm)
+
+/datum/supply_pack/security/armory/secbox/nl
+	name = "9mm Non-Lethal Ammo Crate"
+	desc = "Contains 3 boxes of non-lethal pistol rounds. Requires Armory access to open."
+	cost = 1750
+	contains = list(/obj/item/ammo_box/c9mm/nl,
+					/obj/item/ammo_box/c9mm/nl,
+					/obj/item/ammo_box/c9mm/nl)
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Engineering /////////////////////////////////////

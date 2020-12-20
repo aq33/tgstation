@@ -76,9 +76,13 @@
 
 /datum/antagonist/changeling/on_gain()
 	generate_name()
+	//AQUILA EDIT REMOVAL BEGIN - AMBITIONS
+	/*
 	create_actions()
 	reset_powers()
 	create_initial_profile()
+	*/
+	//AQUILA EDIT REMOVAL END
 	if(give_objectives)
 		forge_objectives()
 	remove_clownmut()
@@ -93,7 +97,11 @@
 		if(B && (B.decoy_override != initial(B.decoy_override)))
 			B.organ_flags |= ORGAN_VITAL
 			B.decoy_override = FALSE
+	//AQUILA EDIT REMOVAL BEGIN - AMBITIONS
+	/*
 	remove_changeling_powers()
+	*/
+	//AQUILA EDIT REMOVAL END
 	. = ..()
 
 /datum/antagonist/changeling/proc/remove_clownmut()
@@ -361,6 +369,7 @@
 	owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/ling_aler.ogg', 100, FALSE, pressure_affected = FALSE)
 
 	owner.announce_objectives()
+	..() //AQUILA EDIT ADDITION - AMBITIONS
 
 /datum/antagonist/changeling/farewell()
 	to_chat(owner.current, "<span class='userdanger'>You grow weak and lose your powers! You are no longer a changeling and are stuck in your current form!</span>")
@@ -370,6 +379,9 @@
 	//No escape alone because changelings aren't suited for it and it'd probably just lead to rampant robusting
 	//If it seems like they'd be able to do it in play, add a 10% chance to have to escape alone
 
+	objectives += new /datum/objective/ambitions() //AQUILA EDIT ADDITION - AMBITIONS
+	//AQUILA EDIT REMOVAL BEGIN - AMBITIONS
+	/*
 	var/escape_objective_possible = TRUE
 	switch(competitive_objectives ? (team_mode ? rand(1,2) : rand(1,3)) : 1)
 		if(1)
@@ -455,6 +467,8 @@
 			objectives += identity_theft
 			log_objective(owner, identity_theft.explanation_text)
 		escape_objective_possible = FALSE
+	*/
+	//SKYRAT EDIT REMOVAL END
 
 /datum/antagonist/changeling/proc/update_changeling_icons_added()
 	var/datum/atom_hud/antag/hud = GLOB.huds[ANTAG_HUD_CHANGELING]

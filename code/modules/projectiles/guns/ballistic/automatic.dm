@@ -5,11 +5,13 @@
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	semi_auto = TRUE
 	fire_sound = "sound/weapons/smgshot.ogg"
+	//dry_fire_sound = "sound/weapons/dryfire.ogg" this one doesn't work, but I'll find something better
 	fire_sound_volume = 80
 	vary_fire_sound = FALSE
 	automatic = 1
 	rack_sound = "sound/weapons/smgrack.ogg"
 	weapon_weight = WEAPON_MEDIUM
+	recoil = 0.1 //Tiny jolt when you fire it.
 
 /obj/item/gun/ballistic/automatic/proto
 	name = "\improper Nanotrasen Saber SMG"
@@ -82,21 +84,35 @@
 	update_icon()
 
 /obj/item/gun/ballistic/automatic/wt550
-	name = "security auto rifle"
-	desc = "An outdated personal defence weapon. Uses 4.6x30mm rounds and is designated the WT-550 Automatic Rifle."
+	name = "WT-550 MK.II PDW"
+	desc = "Modernised standard-issue security personal defence weapon. Uses 4.6x30mm rounds."
 	icon_state = "wt550"
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/wt550m9
 	can_suppress = FALSE
 	actions_types = list()
-	can_bayonet = TRUE
-	knife_x_offset = 25
-	knife_y_offset = 12
+	can_flashlight = TRUE
+	flight_x_offset = 19
+	flight_y_offset = 11
+	special_mags = TRUE
 	mag_display = TRUE
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
-	fire_rate = 3
+	fire_rate = 3.5
+	spread = 15
+	recoil = 0.3
 	block_upgrade_walk = 1
+
+/obj/item/gun/ballistic/automatic/wt550/no_mag
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/wt550/tactical
+	can_suppress = TRUE
+
+/obj/item/gun/ballistic/automatic/wt550/Initialize()
+	set_gun_light(new /obj/item/flashlight/seclite(src))
+	update_icon()
+	return ..()
 
 /obj/item/gun/ballistic/automatic/mini_uzi
 	name = "\improper Type U3 Uzi"
@@ -190,7 +206,7 @@
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/tommygunm45
-	fire_sound = 'sound/weapons/gunshot_smg.ogg'
+	fire_sound = 'sound/weapons/m4_fire.wav'
 	fire_rate = 5
 	can_suppress = FALSE
 	bolt_type = BOLT_TYPE_OPEN
@@ -203,7 +219,7 @@
 	item_state = "arg"
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/m556
-	fire_sound = 'sound/weapons/gunshot_smg.ogg'
+	fire_sound = 'sound/weapons/m4_fire.wav'
 	can_suppress = FALSE
 	fire_rate = 4
 
@@ -354,3 +370,34 @@
 	block_upgrade_walk = 1
 	bolt_type = BOLT_TYPE_OPEN
 
+// Pulse raifu
+
+/obj/item/gun/ballistic/automatic/peacekeeper
+	name = "M2A45 security pulse rifle"
+	desc = "A large personal defense weapon commonly employed by the colonial peacekeepers. This advanced weapon uses a magnetic acceleration system in favour of traditional gunpowder, allowing specialized 6mm rounds to be loaded."
+	icon = 'icons/obj/guns/projectile.dmi'
+	icon_state = "peacekeeper"
+	item_state = "peacekeeper"
+	mag_type = /obj/item/ammo_box/magazine/peacekeeper/lethal
+	can_suppress = FALSE
+	w_class = 4 //Too big for a backpack. Can fit on your belt or back.
+	fire_delay = 2
+	burst_size = 3
+	spread = 14
+	can_bayonet = TRUE
+	knife_x_offset = 25
+	knife_y_offset = 12
+	mag_display = TRUE
+	mag_display_ammo = TRUE
+	empty_indicator = TRUE
+	weapon_weight = WEAPON_HEAVY
+	slot_flags = null
+	fire_sound = 'sound/weapons/m4_fire.wav'
+	recoil = 0.2
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/peacekeeper/syndie
+	name = "M2A45 pulse rifle"
+	desc = "A large fully automatic weapon commonly employed by the colonial peacekeepers. This advanced weapon uses a magnetic acceleration system in favour of traditional gunpowder, allowing specialized 6mm rounds to be loaded."
+	spawnwithmagazine = TRUE
+	pin = /obj/item/firing_pin/implant/pindicate

@@ -1,6 +1,7 @@
 /datum/species/mush //mush mush codecuck
 	name = "Mushroomperson"
 	id = "mush"
+	speech_sound = "chatter"
 	mutant_bodyparts = list("caps")
 	default_features = list("caps" = "Round")
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | ERT_SPAWN
