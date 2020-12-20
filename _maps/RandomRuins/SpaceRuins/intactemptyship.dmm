@@ -149,7 +149,7 @@
 "H" = (
 /obj/structure/table/wood,
 /obj/item/gps{
-	gpstag = "X-17"
+	gpstag = "?"
 	},
 /turf/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)

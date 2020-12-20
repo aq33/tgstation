@@ -825,6 +825,9 @@
 "cY" = (
 /obj/structure/table,
 /obj/item/paper/fluff/ruins/crashedship/captains_log,
+/obj/item/gps{
+	gpstag = "?"
+	},
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "cZ" = (

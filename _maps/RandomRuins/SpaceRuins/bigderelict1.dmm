@@ -2062,6 +2062,15 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/derelictoutpost/cargobay)
+"iT" = (
+/obj/structure/alien/weeds{
+	color = "#4BAE56";
+	desc = "A thick gelatinous surface covers the floor.  Someone get the golashes.";
+	name = "gelatinous floor"
+	},
+/obj/machinery/syndicatebomb/shuttle_loan,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/derelictoutpost)
 "uV" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -2069,6 +2078,15 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/derelictoutpost/powerstorage)
+"ze" = (
+/obj/structure/alien/weeds{
+	color = "#4BAE56";
+	desc = "A thick gelatinous surface covers the floor.  Someone get the golashes.";
+	name = "gelatinous floor"
+	},
+/mob/living/simple_animal/hostile/syndicate/civilian,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/derelictoutpost)
 "LB" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -3066,7 +3084,7 @@ bn
 ch
 cA
 bF
-bl
+ze
 dk
 bl
 bl
@@ -3174,7 +3192,7 @@ bn
 cB
 cB
 bF
-bl
+iT
 dl
 bF
 bl

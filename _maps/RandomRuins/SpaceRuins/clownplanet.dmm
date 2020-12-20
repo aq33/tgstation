@@ -378,7 +378,7 @@
 /area/ruin/powered/clownplanet)
 "ST" = (
 /obj/item/gps{
-	gpstag = "X-06"
+	gpstag = "?"
 	},
 /turf/open/floor/grass{
 	color = "#1eff00"

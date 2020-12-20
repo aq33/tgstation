@@ -274,7 +274,7 @@
 /obj/structure/table/wood,
 /obj/item/trash/plate,
 /obj/item/gps{
-	gpstag = "X-11"
+	gpstag = "?"
 	},
 /turf/open/floor/plating/airless{
 	icon_state = "platingdmg3"

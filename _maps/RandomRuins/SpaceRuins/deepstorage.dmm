@@ -183,13 +183,12 @@
 /obj/item/storage/box/mousetraps,
 /obj/item/storage/box/mousetraps,
 /obj/item/storage/box/drinkingglasses,
-/obj/item/storage/box/zipties,
 /obj/item/switchblade,
 /obj/effect/turf_decal/delivery,
-/obj/item/gps{
-	gpstag = "DEEP"
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/gps{
+	gpstag = "?"
+	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/deepstorage/storage)
 "aK" = (
@@ -1717,6 +1716,12 @@
 	dir = 4
 	},
 /obj/item/bedsheet,
+/obj/effect/mob_spawn/human/alive{
+	dir = 8;
+	flavour_text = "Coraz bardziej zaostrzajace sie stosunki miedzy Nanotrasen a Syndykatem i wynikajace z tego wojny, glod i codzienny strach o zycie naklonily cie do zbudowania schronu zdolnego przetrwac wszystko";
+	name = "Mieszkaniec schronu";
+	short_desc = "Jestes mieszkancem schronu, ktory zostal zbudowany, by ochronic cie przed wszelkim mozliwym zagrozeniem"
+	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/deepstorage/dorm)
 "el" = (

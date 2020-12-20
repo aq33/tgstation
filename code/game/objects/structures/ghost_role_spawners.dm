@@ -3,7 +3,7 @@
 //Preserved terrarium/seed vault: Spawns in seed vault structures in lavaland. Ghosts become plantpeople and are advised to begin growing plants in the room near them.
 /obj/effect/mob_spawn/human/seed_vault
 	name = "preserved terrarium"
-	desc = "An ancient machine that seems to be used for storing plant matter. The glass is obstructed by a mat of vines."
+	desc = "Starożytna maszyna, która zdaje się być przeznaczona do przechowywania materii roślinnej. Szyba jest prysłonięta pnączami."
 	mob_name = "a lifebringer"
 	icon = 'icons/obj/lavaland/spawners.dmi'
 	icon_state = "terrarium"
@@ -11,16 +11,15 @@
 	roundstart = FALSE
 	death = FALSE
 	mob_species = /datum/species/pod
-	short_desc = "You are a sentient ecosystem, an example of the mastery over life that your creators possessed."
-	flavour_text = "Your masters, benevolent as they were, created uncounted seed vaults and spread them across \
-	the universe to every planet they could chart. You are in one such seed vault. \
-	Your goal is to cultivate and spread life wherever it will go while waiting for contact from your creators. \
-	Estimated time of last contact: Deployment, 5000 millennia ago."
-	assignedrole = "Lifebringer"
+	short_desc = "Jesteś świadomym ekosystemem, przykładem zagadkowego cudu życia, który twoi twórcy poznali."
+	flavour_text = "Twoi mistrzowie w swojej życzliwości stworzyli niezliczone krypty nasion i rozsiali je po całym \
+	wszechświecie, na każdej znanej im planecie. Jesteś w jednej z tych krypt. \
+	Twoim celem jest uprawa i rozsiewanie życia gdziekolwiek się da, w myśl wizji twórców. \
+	Szacowany czas ostatniego kontaktu: 5 tysiącleci temu."
+	assignedrole = "Siewca"
 
 /obj/effect/mob_spawn/human/seed_vault/special(mob/living/new_spawn)
-	var/plant_name = pick("Tomato", "Potato", "Broccoli", "Carrot", "Ambrosia", "Pumpkin", "Ivy", "Kudzu", "Banana", "Moss", "Flower", "Bloom", "Root", "Bark", "Glowshroom", "Petal", "Leaf", \
-	"Venus", "Sprout","Cocoa", "Strawberry", "Citrus", "Oak", "Cactus", "Pepper", "Juniper")
+	var/plant_name = pick("Pomidor Patryk", "Ziemnior", "Brokuł Bartek", "Marchewka Marysia", "Truskaweczka Tosia", "Pieczarka Piotrek", "Gruszka Gosia", "Kudzu", "Bananuch", "Jabłko Antek", "Śliwka Sabina", "Kalafior Krzyś", "Rzodkiewka Żaneta", "Groszek Grześ", "Borówka Basia", "Czosnek Czesio", "Bakłażanek Błażejek")
 	new_spawn.fully_replace_character_name(null,plant_name)
 	if(ishuman(new_spawn))
 		var/mob/living/carbon/human/H = new_spawn
@@ -35,7 +34,7 @@
 
 /obj/effect/mob_spawn/human/ash_walker
 	name = "ash walker egg"
-	desc = "A man-sized yellow egg, spawned from some unfathomable creature. A humanoid silhouette lurks within."
+	desc = "Żółte jajo wielkości człowieka, zrodzone z niezbadanej istoty. Wewnątrz czai się humanoidalna sylwetka."
 	mob_name = "an ash walker"
 	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
 	icon_state = "large_egg"
@@ -46,16 +45,16 @@
 	anchored = FALSE
 	move_resist = MOVE_FORCE_NORMAL
 	density = FALSE
-	short_desc = "You are an ash walker. Your tribe worships the Necropolis."
-	flavour_text = "The wastes are sacred ground, its monsters a blessed bounty. \
-	You have seen lights in the distance... they foreshadow the arrival of outsiders that seek to tear apart the Necropolis and its domain. \
-	Fresh sacrifices for your nest."
+	short_desc = "Jesteś Popiołazem. Twoje plemie czci Necropolis."
+	flavour_text = "Pustkowia są świętą ziemią, jej monstra błogosławioną nagrodą. \
+	Widziałeś światło w oddali... zapowiada nadejście tych, którzy chcą rozerwać Necropolis i jego włości na strzępy. \
+	Śweże ofiary dla twojego gniazda."
 	assignedrole = "Ash Walker"
 	var/datum/team/ashwalkers/team
 
 /obj/effect/mob_spawn/human/ash_walker/special(mob/living/new_spawn)
 	new_spawn.fully_replace_character_name(null,random_unique_lizard_name(gender))
-	to_chat(new_spawn, "<b>Drag the corpses of men and beasts to your nest. It will absorb them to create more of your kind. Don't leave your nest undefended, protect it with your life. Glory to the Necropolis!</b>")
+	to_chat(new_spawn, "<b>Przeciągaj ciała ludzi i potworów do swojego gniazda. To je pochłonie i stworzy więcej takich jak ty. Nie pozostawiaj gniazda bez ochrony, broń go za cenę życia. Chwała Necropolis!</b>")
 
 	new_spawn.mind.add_antag_datum(/datum/antagonist/ashwalker, team)
 
@@ -69,7 +68,7 @@
 	var/area/A = get_area(src)
 	team = ashteam
 	if(A)
-		notify_ghosts("An ash walker egg is ready to hatch in \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE, ignore_key = POLL_IGNORE_ASHWALKER)
+		notify_ghosts("Jajo jest gotowe do wyklucia  [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE, ignore_key = POLL_IGNORE_ASHWALKER)
 
 /datum/outfit/ashwalker
 	name ="Ashwalker"
@@ -80,16 +79,16 @@
 //Timeless prisons: Spawns in Wish Granter prisons in lavaland. Ghosts become age-old users of the Wish Granter and are advised to seek repentance for their past.
 /obj/effect/mob_spawn/human/exile
 	name = "timeless prison"
-	desc = "Although this stasis pod looks medicinal, it seems as though it's meant to preserve something for a very long time."
+	desc = "Mimo że ta kapsuła wygląda na medyczną, zdaje się być zaprojektowana na tyle solidnie, by na długo utrzymać coś przy życiu."
 	mob_name = "a penitent exile"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	roundstart = FALSE
 	death = FALSE
 	mob_species = /datum/species/shadow
-	short_desc = "You are cursed."
-	flavour_text = "Years ago, you sacrificed the lives of your trusted friends and the humanity of yourself to reach the Wish Granter. Though you \
-	did so, it has come at a cost: your very body rejects the light, dooming you to wander endlessly in this horrible wasteland."
+	short_desc = "Jesteś przeklęty."
+	flavour_text = "Lata temu poświęciłeś życia zaufanych przyjaciół, jak i swoje człowieczeństwo, by dotrzeć do Spełniacza Życzeń. Mimo że tego \
+	dokonałeś, nie obyło się bez kosztów: twoje całe ciało odrzuca światło, skazując cie na wieczność w przemierzeniu tych pustkowi."
 	assignedrole = "Exile"
 
 /obj/effect/mob_spawn/human/exile/Destroy()
@@ -97,22 +96,22 @@
 	return ..()
 
 /obj/effect/mob_spawn/human/exile/special(mob/living/new_spawn)
-	new_spawn.fully_replace_character_name(null,"Wish Granter's Victim ([rand(1,999)])")
+	new_spawn.fully_replace_character_name(null,"Ofiara Spełniacza Życzeń ([rand(1,999)])")
 	var/wish = rand(1,4)
 	switch(wish)
 		if(1)
-			to_chat(new_spawn, "<b>You wished to kill, and kill you did. You've lost track of how many, but the spark of excitement that murder once held has winked out. You feel only regret.</b>")
+			to_chat(new_spawn, "<b>Zażyczyłeś sobie zabijać. I tak się stało. Straciłeś już rachubę ilu dokładnie, ale ta iskra podniecenia wygasła. Teraz czujesz tylko żal</b>")
 		if(2)
-			to_chat(new_spawn, "<b>You wished for unending wealth, but no amount of money was worth this existence. Maybe charity might redeem your soul?</b>")
+			to_chat(new_spawn, "<b>Zażyczyłeś sobie wiecznego zdrowia, ale ta egzystencja nie była warta żadnych skarbów. Może dobroczynność cie odkupi?</b>")
 		if(3)
-			to_chat(new_spawn, "<b>You wished for power. Little good it did you, cast out of the light. You are the [gender == MALE ? "king" : "queen"] of a hell that holds no subjects. You feel only remorse.</b>")
+			to_chat(new_spawn, "<b>Zażyczyłeś sobie mocy. Mało ci to dało. Jesteś [gender == MALE ? "królem" : "królową"] piekła bez poddanych. Czujesz tylko wyrzuty sumienia.</b>")
 		if(4)
-			to_chat(new_spawn, "<b>You wished for immortality, even as your friends lay dying behind you. No matter how many times you cast yourself into the lava, you awaken in this room again within a few days. There is no escape.</b>")
+			to_chat(new_spawn, "<b>Zażyczyłeś sobie nieśmiertelności, pomimo tego, że twój przyjaciel leży za tobą i zwija się w agonii. Nieważne ile razy rzucisz się w lawę, budzisz się w tym pomieszczeniu po kilku dniach. Nie ma ucieczki.</b>")
 
 //Golem shells: Spawns in Free Golem ships in lavaland. Ghosts become mineral golems and are advised to spread personal freedom.
 /obj/effect/mob_spawn/human/golem
 	name = "inert free golem shell"
-	desc = "A humanoid shape, empty, lifeless, and full of potential."
+	desc = "Humanoidalny kształt, pusty, bez życia i pełny potencjału."
 	mob_name = "a free golem"
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "construct"
@@ -125,10 +124,10 @@
 	var/has_owner = FALSE
 	var/can_transfer = TRUE //if golems can switch bodies to this new shell
 	var/mob/living/owner = null //golem's owner if it has one
-	short_desc = "You are a Free Golem. Your family worships The Liberator."
-	flavour_text = "In his infinite and divine wisdom, he set your clan free to \
-	travel the stars with a single declaration: \"Yeah go do whatever.\" Though you are bound to the one who created you, it is customary in your society to repeat those same words to newborn \
-	golems, so that no golem may ever be forced to serve again."
+	short_desc = "Jesteś Wolnym Golemem. Twoja rodzina czci Wyzwoliciela."
+	flavour_text = "W swej nieskończonej i boskiej wiedzy uczynił twój klan wolnym by \
+	przemierzać gwiazdy z tylko jednym przesłaniem: \"Ta, rób co chcesz.\" Mimo że jesteś związany ze swoim twórcą, zwyczajem w twojej społeczności stało się powtarzanie tych słów nowonarodzonym \
+	golemom, żeby żaden już nigdy nie musiał nikomu służyć."
 
 /obj/effect/mob_spawn/human/golem/Initialize(mapload, datum/species/golem/species = null, mob/creator = null)
 	if(species) //spawners list uses object name to register so this goes before ..()
@@ -137,18 +136,18 @@
 	. = ..()
 	var/area/A = get_area(src)
 	if(!mapload && A)
-		notify_ghosts("\A [initial(species.prefix)] golem shell has been completed in \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE, ignore_key = POLL_IGNORE_GOLEM)
+		notify_ghosts("\A [initial(species.prefix)] skorupa golema została ukończona w  [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE, ignore_key = POLL_IGNORE_GOLEM)
 	if(has_owner && creator)
-		short_desc = "You are a golem."
-		flavour_text = "You move slowly, but are highly resistant to heat and cold as well as blunt trauma. You are unable to wear clothes, but can still use most tools."
-		important_info = "Serve [creator], and assist [creator.p_them()] in completing [creator.p_their()] goals at any cost."
+		short_desc = "Jesteś golemem."
+		flavour_text = "Poruszasz się wolno, ale jesteś odporny na zimno, ciepło i fizyczne uszkodzenia. Nie jesteś w stanie nosić ubrań, ale dalej możesz używać większości narzędzi."
+		important_info = "Służ [creator], i asytuj [creator.p_them()] w wykonywaniu celów [creator.p_their()] za wszelką cenę."
 		owner = creator
 
 /obj/effect/mob_spawn/human/golem/special(mob/living/new_spawn, name)
 	var/datum/species/golem/X = mob_species
 	to_chat(new_spawn, "[initial(X.info_text)]")
 	if(!owner)
-		to_chat(new_spawn, "Build golem shells in the autolathe, and feed refined mineral sheets to the shells to bring them to life! You are generally a peaceful group unless provoked.")
+		to_chat(new_spawn, "Buduj skorupy golemów w autolathe i karm je przetworzonymi surowcami, by przywrócić je do życia!")
 	else
 		new_spawn.mind.store_memory("<b>Serve [owner.real_name], your creator.</b>")
 		new_spawn.mind.enslave_mind_to_creator(owner)
@@ -177,13 +176,13 @@
 	if(.)
 		return
 	if(isgolem(user) && can_transfer)
-		var/transfer_choice = alert("Transfer your soul to [src]? (Warning, your old body will die!)",,"Yes","No")
+		var/transfer_choice = alert("Przenieść duszę do [src]? (Uwaga, twoje stare ciało umrze!)",,"Tak","Nie")
 		if(transfer_choice != "Yes")
 			return
 		if(QDELETED(src) || uses <= 0)
 			return
 		log_game("[key_name(user)] golem-swapped into [src]")
-		user.visible_message("<span class='notice'>A faint light leaves [user], moving to [src] and animating it!</span>","<span class='notice'>You leave your old body behind, and transfer into [src]!</span>")
+		user.visible_message("<span class='notice'>Drobne światełko ulatuje [user], zmierzając do [src] i ożywiając to!</span>","<span class='notice'>Pozostawiasz dawne ciało za sobą i przenosisz się do [src]!</span>")
 		show_flavour = FALSE
 		create(ckey = user.ckey,name = user.real_name)
 		user.death()
@@ -197,7 +196,7 @@
 
 /obj/effect/mob_spawn/human/golem/adamantine
 	name = "dust-caked free golem shell"
-	desc = "A humanoid shape, empty, lifeless, and full of potential."
+	desc = "Humanoidalny kształt, pusty, bez życia i pełny potencjału."
 	mob_name = "a free golem"
 	can_transfer = FALSE
 	mob_species = /datum/species/golem/adamantine
@@ -205,7 +204,7 @@
 //Malfunctioning cryostasis sleepers: Spawns in makeshift shelters in lavaland. Ghosts become hermits with knowledge of how they got to where they are now.
 /obj/effect/mob_spawn/human/hermit
 	name = "malfunctioning cryostasis sleeper"
-	desc = "A humming sleeper with a silhouetted occupant inside. Its stasis function is broken and it's likely being used as a bed."
+	desc = "Brzęcząca kapsuła z sylwetką pasażera w środku. Jego funkcja stazy jest zepsuta i prawdopodobnie jest używana jako łóżko."
 	mob_name = "a stranded hermit"
 	icon = 'icons/obj/lavaland/spawners.dmi'
 	icon_state = "cryostasis_sleeper"
@@ -213,10 +212,10 @@
 	death = FALSE
 	random = TRUE
 	mob_species = /datum/species/human
-	short_desc = "You've been stranded in this godless prison of a planet for longer than you can remember."
-	flavour_text = "Each day you barely scrape by, and between the terrible conditions of your makeshift shelter, \
-	the hostile creatures, and the ash drakes swooping down from the cloudless skies, all you can wish for is the feel of soft grass between your toes and \
-	the fresh air of Earth. These thoughts are dispelled by yet another recollection of how you got here... "
+	short_desc = "Utknąłeś w tym bezbożnym więzieniu planety dłużej, niż możesz sobie przypomnieć."
+	flavour_text = "Każdego dnia ledwo uchodzisz z życie, z jednej strony prowizoryczny schron ledwo się trzyma, \
+	z drugiej próbują cię dorwać monstra i Smok Popiołów przeszywający niebo. Jedyne czego sobie życzysz, to znów poczuć trawę między palcami \
+	i świeże powietrze Ziemi. Te myśli rozwiewane są przez kolejne wspomnienia jak się tu znalazłeś... "
 	assignedrole = "Hermit"
 
 /obj/effect/mob_spawn/human/hermit/Initialize(mapload)
@@ -224,28 +223,28 @@
 	var/arrpee = rand(1,4)
 	switch(arrpee)
 		if(1)
-			flavour_text += "you were a [pick("arms dealer", "shipwright", "docking manager")]'s assistant on a small trading station several sectors from here. Raiders attacked, and there was \
-			only one pod left when you got to the escape bay. You took it and launched it alone, and the crowd of terrified faces crowding at the airlock door as your pod's engines burst to \
-			life and sent you to this hell are forever branded into your memory.</b>"
+			flavour_text += "byłeś asystentem [pick("handlarza broni", "szkutnika", "szefa doków")] na małej stacji handlowej kilka sektorów stąd. Bandyci zaatakowali i była \
+			i była tylko jedna kapsuła ratunkowa, kiedy dotarłeś do ewakuacji. Wziąłeś ją i wystrzeliłeś sam, patrząc na twarze przeżoneg tłumu tłoczącego się w śluzie i patrzącego jak silnika uruchumiają się \
+			i wysyłają cię do tego piekła. Całe zdarenie na stałe wypala się w twojej pamięci..</b>"
 			outfit.uniform = /obj/item/clothing/under/misc/assistantformal
 		if(2)
-			flavour_text += "you're an exile from the Tiger Cooperative. Their technological fanaticism drove you to question the power and beliefs of the Exolitics, and they saw you as a \
-			heretic and subjected you to hours of horrible torture. You were hours away from execution when a high-ranking friend of yours in the Cooperative managed to secure you a pod, \
-			scrambled its destination's coordinates, and launched it. You awoke from stasis when you landed and have been surviving - barely - ever since."
+			flavour_text += "Jesteś wyrzutkiem Tiger Cooperative. Ich technologiczny fanatyzm sprawił, że zacząłeś kwestionować wiarę w Exoliticów i wtedy właśnie zaczęli postrzegać cię \
+			jako heretyka i poddali całym godzinom straszliwych tortur. Godziny dzieliły cię od egzekucji, kiedy twój wysoko postawiony przyjaciel w zarządzie zdołał zoorganizować ci kaspułę ratunkową, \
+			wpisać współrzędne i wystrzelić ją. Obudziłeś się ze snu i od tamtego czasu starasz się (ledwo) przeżyć."
 			outfit.uniform = /obj/item/clothing/under/rank/prisoner
 			outfit.shoes = /obj/item/clothing/shoes/sneakers/orange
 			outfit.back = /obj/item/storage/backpack
 		if(3)
-			flavour_text += "you were a doctor on one of Nanotrasen's space stations, but you left behind that damn corporation's tyranny and everything it stood for. From a metaphorical hell \
-			to a literal one, you find yourself nonetheless missing the recycled air and warm floors of what you left behind... but you'd still rather be here than there."
+			flavour_text += "byłeś doktorem na jednej ze stacji Nanotrasenu, ale porzuciłeś tę cholerną korporacyjną tyranie i wszystko co za tym stało. Z metaforycznego piekła \
+			do dosłownego i przez to brakuje ci odzyskanego powietrza i ciepłych podłóg, które porzuciłeś... mimo to dalej wolisz być tu, niż tam."
 			outfit.uniform = /obj/item/clothing/under/rank/medical/doctor
 			outfit.suit = /obj/item/clothing/suit/toggle/labcoat
 			outfit.back = /obj/item/storage/backpack/medic
 			outfit.shoes = /obj/item/clothing/shoes/sneakers/black
 		if(4)
-			flavour_text += "you were always joked about by your friends for \"not playing with a full deck\", as they so <i>kindly</i> put it. It seems that they were right when you, on a tour \
-			at one of Nanotrasen's state-of-the-art research facilities, were in one of the escape pods alone and saw the red button. It was big and shiny, and it caught your eye. You pressed \
-			it, and after a terrifying and fast ride for days, you landed here. You've had time to wisen up since then, and you think that your old friends wouldn't be laughing now."
+			flavour_text += "zawsze byłeś wyśmiewany przez przyjaciół za to, że\"coś nie do końca stykało w głowie\", jak to  <i>delikatnie</i> określali. I wychodzi na to, że mieli rację. Na jednej z wycieczek \
+			po najnowocześniejszej stacji kosmicznej Nanotrasenu, byłeś w kapsule ratunkowej sam i zobaczyłeś wielki czerwony guzik. Był tak duży i świecący, że nie mogłeś oderwać wzroku. Nacisnąłeś \
+			go i po przerażającej, szybkiej jeździe po kilku dniach wylądowałeś tutaj. Miałeś czas by zmądrzeć od tamtego czasu i jesteś przekonany, że twoi przyjaciele by się już nie śmiali."
 
 /obj/effect/mob_spawn/human/hermit/Destroy()
 	new/obj/structure/fluff/empty_cryostasis_sleeper(get_turf(src))
@@ -254,11 +253,11 @@
 //Broken rejuvenation pod: Spawns in animal hospitals in lavaland. Ghosts become disoriented interns and are advised to search for help.
 /obj/effect/mob_spawn/human/doctor/alive/lavaland
 	name = "broken rejuvenation pod"
-	desc = "A small sleeper typically used to instantly restore minor wounds. This one seems broken, and its occupant is comatose."
+	desc = "Mała kapsuła, zwykle używana do natychmiastowego leczenia drobnych ran. Ta wydaje się zepsuta, a jej mieszkaniec jest w śpiączce."
 	mob_name = "a translocated vet"
-	flavour_text = "What...? Where are you? What's the purpose of this place? This is still the animal hospital - you should know, you've been an intern here for weeks - but \
-	all you did was apply bruise packs. Why is this place full of advanced medical equipment? And what are those screams you hear? The world outside is desolate - tormented with fire and brimstone. But you took an oath. \
-	You have to save these people! You might not have a fancy cloning machine like a real hospital, but surely there must be some way to save these people with the tools you have. Right?"
+	flavour_text = "Co...? Gdzie jesteś? Co tu się dzieje? To wciąż placówka Orion. Byłeś tu stażystą przez tygodnie, ale jedyne \
+	co robiłeś, to pryklejałeś rannym plastry. Dlaczego to miejsce jest pełne zaawansowanej technologii? I co to za krzyki na zewnątrz? Świat na zewnątrz jest opustoszały - dręczony ogniem i siarką. Ale złożyłeś przysięgę. \
+	Musisz ratować tych ludzi! Może i nie masz tych fikuśnych maszyn do klonowania, co prawdziwe placówki, ale z pewnością musisz znaleźć sposób na ratowanie tych ludzi tym co masz. Prawda?"
 	assignedrole = "Translocated Vet"
 
 /obj/effect/mob_spawn/human/doctor/alive/lavaland/Destroy()
@@ -269,16 +268,16 @@
 //Prisoner containment sleeper: Spawns in crashed prison ships in lavaland. Ghosts become escaped prisoners and are advised to find a way out of the mess they've gotten themselves into.
 /obj/effect/mob_spawn/human/prisoner_transport
 	name = "prisoner containment sleeper"
-	desc = "A sleeper designed to put its occupant into a deep coma, unbreakable until the sleeper turns off. This one's glass is cracked and you can see a pale, sleeping face staring out."
+	desc = "Kapsuła zaprojektowana tak, by wprowadzała okupującego w głęboką śpiączkę, niezniszczalna dopóki nie zostanie opuszczona. W przypadku tej konkretnej szyba jest pęknięta i widzisz w środku bladą twarz śpiącego człowieka."
 	mob_name = "an escaped prisoner"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	outfit = /datum/outfit/lavalandprisoner
 	roundstart = FALSE
 	death = FALSE
-	short_desc = "You're a prisoner, sentenced to hard work in one of Nanotrasen's labor camps, but it seems as \
-	though fate has other plans for you."
-	flavour_text = "Good. It seems as though your ship crashed. You remember that you were convicted of "
+	short_desc = "Jesteś więźniem skazanym przez Nanotrasen na ciężkie roboty w obozie pracy, ale zdaje się że \
+	los ma inne plany dla ciebie."
+	flavour_text = "Dobrze. Wygląda na to, że twój statek się rozbił. Pamiętasz, że byłeś skazany za "
 	assignedrole = "Escaped Prisoner"
 
 /obj/effect/mob_spawn/human/prisoner_transport/special(mob/living/L)
@@ -286,10 +285,10 @@
 
 /obj/effect/mob_spawn/human/prisoner_transport/Initialize(mapload)
 	. = ..()
-	var/list/crimes = list("murder", "larceny", "embezzlement", "unionization", "dereliction of duty", "kidnapping", "gross incompetence", "grand theft", "collaboration with the Syndicate", \
-	"worship of a forbidden deity", "interspecies relations", "mutiny")
-	flavour_text += "[pick(crimes)]. but regardless of that, it seems like your crime doesn't matter now. You don't know where you are, but you know that it's out to kill you, and you're not going \
-	to lose this opportunity. Find a way to get out of this mess and back to where you rightfully belong - your [pick("house", "apartment", "spaceship", "station")]."
+	var/list/crimes = list("morderstwo", "kradzież", "defraudacje", "uzwiązkowienie", "zaniedbanie obowiązków", "porwanie", "rażącą niekompetencje", "wielką kradzież", "współpracę z Syndykatem", \
+	"wyznawanie zakazanych bóstwo", "stosunki międzygatunkowe", "bunt")
+	flavour_text += "[pick(crimes)]. ,ale mimo to te zbrodnie nie mają teraz znaczenia. Nie wiesz gdzie jesteś, ale wiesz, że to miejsce chce cię zabić i nie masz zamiaru  \
+	do tego dopuścić. Znajdź sposób by wydostać się z tego piekła i wróć, gdzie ci się należy - do twojego [pick("domu", "apartamentu", "statku kosmicznego", "miejsca na stacji")]."
 
 /datum/outfit/lavalandprisoner
 	name = "Lavaland Prisoner"
@@ -306,18 +305,18 @@
 //Space Hotel Staff
 /obj/effect/mob_spawn/human/hotel_staff //not free antag u little shits
 	name = "staff sleeper"
-	desc = "A sleeper designed for long-term stasis between guest visits."
+	desc = "Kapsuła stworzona do długich wypoczynków między wizytami gości."
 	mob_name = "hotel staff member"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
-	objectives = "Cater to visiting guests with your fellow staff. Do not leave your assigned hotel and always remember: The customer is always right!"
+	objectives = "Oczekuj aż w hotelu zjawią się goście, następnie zaoferuj im jak najlepszy pobyt i odpraw z powrotem na stację!"
 	death = FALSE
 	roundstart = FALSE
 	random = TRUE
 	outfit = /datum/outfit/hotelstaff
-	short_desc = "You are a staff member of a top-of-the-line space hotel!"
-	flavour_text = "You are a staff member of a top-of-the-line space hotel! Cater to guests and make sure the manager doesn't fire you."
-	important_info = "DON'T leave the hotel"
+	short_desc = "Jesteś pracownikiem prestiżowego kosmicznego hotelu!"
+	flavour_text = "To twój wielki dzień. Niech jedyny kosmiczny hotel na świecie znów znajdzie się na ustach wszystkich."
+	important_info = "Pamiętaj o zapłacie i zadowoleniu gości"
 	assignedrole = "Hotel Staff"
 
 /datum/outfit/hotelstaff
@@ -332,11 +331,11 @@
 	name = "hotel security sleeper"
 	mob_name = "hotel security member"
 	outfit = /datum/outfit/hotelstaff/security
-	short_desc = "You are a peacekeeper."
-	flavour_text = "You have been assigned to this hotel to protect the interests of the company while keeping the peace between \
-		guests and the staff."
-	important_info = "Do NOT leave the hotel, as that is grounds for contract termination."
-	objectives = "Do not leave your assigned hotel. Try and keep the peace between staff and guests, non-lethal force heavily advised if possible."
+	short_desc = "Jesteś ochroniarzem."
+	flavour_text = "Kiedyś twoją rolą była ochrona tego luksusowego kosmicznego hotelu. Jednak jego lata świetności minęły. \
+		Teraz twoim celem jest sprowadzenie tutaj gości, czy tego chcą, czy nie."
+	important_info = "NIE ZABIJAJ nikogo. Narzędzia ci dane służą tylko jako środki ostateczne."
+	objectives = "Ściągaj ludzi do  hotelu wszelkimi możliwymi środkami. Następnie utrzymaj ich jak najdłużej."
 
 /datum/outfit/hotelstaff/security
 	name = "Hotel Security"
@@ -353,7 +352,7 @@
 
 /obj/effect/mob_spawn/human/demonic_friend
 	name = "Essence of friendship"
-	desc = "Oh boy! Oh boy! A friend!"
+	desc = "Rany julek, przyjaciel!"
 	mob_name = "Demonic friend"
 	icon = 'icons/obj/cardboard_cutout.dmi'
 	icon_state = "cutout_basic"
@@ -370,12 +369,12 @@
 /obj/effect/mob_spawn/human/demonic_friend/Initialize(mapload, datum/mind/owner_mind, obj/effect/proc_holder/spell/targeted/summon_friend/summoning_spell)
 	. = ..()
 	owner = owner_mind
-	flavour_text = "You have been given a reprieve from your eternity of torment, to be [owner.name]'s friend for [owner.p_their()] short mortal coil."
-	important_info = "Be aware that if you do not live up to [owner.name]'s expectations, they can send you back to hell with a single thought. [owner.name]'s death will also return you to hell."
+	flavour_text = "Dostałeś szansę wyrwać się z więcznej męki, by być przyjacielem [owner.name] dla[owner.p_their()] kruchej egzystencji."
+	important_info = "Bądź świadom, że jeśli nie spełnisz oczekiwań [owner.name], może cię odesłać do piekła pstryknięciem palców. Śmierć [owner.name]również wrzuci cię z porwotem do piekła."
 	var/area/A = get_area(src)
 	if(!mapload && A)
-		notify_ghosts("\A friendship shell has been completed in \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)
-	objectives = "Be [owner.name]'s friend, and keep [owner.name] alive, so you don't get sent back to hell."
+		notify_ghosts("Więź przyjaźni została utworzona w [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)
+	objectives = "Bądź pryjacielem [owner.name]i utrzymaj [owner.name] przy życiu, żebyś nie musiał wracać do piekła."
 	spell = summoning_spell
 
 
@@ -392,7 +391,7 @@
 		id.registered_name = L.real_name
 		id.update_label()
 	else
-		to_chat(L, "<span class='userdanger'>Your owner is already dead!  You will soon perish.</span>")
+		to_chat(L, "<span class='userdanger'>Twój właściciel już jest martwy!  Wkrótce znikniesz.</span>")
 		addtimer(CALLBACK(L, /mob.proc/dust, 150)) //Give em a few seconds as a mercy.
 
 /datum/outfit/demonic_friend
@@ -479,7 +478,7 @@
 //Ancient cryogenic sleepers. Players become NT crewmen from a hundred year old space station, now on the verge of collapse.
 /obj/effect/mob_spawn/human/oldsec
 	name = "old cryogenics pod"
-	desc = "A humming cryo pod. You can barely recognise a security uniform underneath the built up ice. The machine is attempting to wake up its occupant."
+	desc = "Brzęcząca komor kriogeniczna. Ledwo rozpoznajesz ubiór ochroniarza przez narośniety lód. Maszyna stara się obudzić użytkownika."
 	mob_name = "a security officer"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
@@ -487,9 +486,10 @@
 	death = FALSE
 	random = TRUE
 	mob_species = /datum/species/human
-	flavour_text = "<span class='big bold'>You are a security officer working for Nanotrasen,</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
-	cryogenics pod due to an oncoming radiation storm. The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
-	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod. \
+	flavour_text = "<span class='big bold'>Jesteś oficerem ochrony pracującym dla Nanotrasen,</span><b> stacjonujący na pokładzie najnowocześniejszej technologicznie stacji. Ledwo przypominasz sobie szaleńczy bieg do \
+	kriogeniki przez nadciągającą burzę radiacyjną. Ostatnią rzecz jaką pamiętasz, to Sztuczną Inteligencję stacji mówiącą, że będziesz w stanie snu jedynie przez 8 godzin. Jak tylko otworzyłeś \
+	oczy, wszystko wydało się nagle stare i zardzewiałe. Czyjesz coś niedobrego w kościach, wychodząc z kapsuły. \
+	Pracuj jako drużyna z pozostałymi przy życiu załogantami, by przywrócić stacji świetność lub ondaleźć swojego pracodawcę. \
 	Work as a team with your fellow survivors and do not abandon them.</b>"
 	uniform = /obj/item/clothing/under/rank/security/officer
 	shoes = /obj/item/clothing/shoes/jackboots
@@ -504,7 +504,7 @@
 
 /obj/effect/mob_spawn/human/oldeng
 	name = "old cryogenics pod"
-	desc = "A humming cryo pod. You can barely recognise an engineering uniform underneath the built up ice. The machine is attempting to wake up its occupant."
+	desc = "Brzęcząca komor kriogeniczna. Ledwo rozpoznajesz ubiór inżyniera przez narośniety lód. Maszyna stara się obudzić użytkownika."
 	mob_name = "an engineer"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
@@ -512,10 +512,10 @@
 	death = FALSE
 	random = TRUE
 	mob_species = /datum/species/human
-	flavour_text = "<span class='big bold'>You are an engineer working for Nanotrasen,</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
-	cryogenics pod due to an oncoming radiation storm. The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
-	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod. \
-	Work as a team with your fellow survivors and do not abandon them.</b>"
+	flavour_text = "<span class='big bold'>Jesteś inżynierem pracującym dla Nanotrasen,</span><b> stacjonujący na pokładzie najnowocześniejszej technologicznie stacji. Ledwo przypominasz sobie szaleńczy bieg do \
+	kriogeniki przez nadciągającą burzę radiacyjną. Ostatnią rzecz jaką pamiętasz, to Sztuczną Inteligencję stacji mówiącą, że będziesz w stanie snu jedynie przez 8 godzin. Jak tylko otworzyłeś \
+	oczy, wszystko wydało się nagle stare i zardzewiałe. Czyjesz coś niedobrego w kościach, wychodząc z kapsuły. \
+	Pracuj jako drużyna z pozostałymi przy życiu załogantami, by przywrócić stacji świetność lub ondaleźć swojego pracodawcę.</b>"
 	uniform = /obj/item/clothing/under/rank/engineering/engineer
 	shoes = /obj/item/clothing/shoes/workboots
 	id = /obj/item/card/id/away/old/eng
@@ -529,7 +529,7 @@
 
 /obj/effect/mob_spawn/human/oldsci
 	name = "old cryogenics pod"
-	desc = "A humming cryo pod. You can barely recognise a science uniform underneath the built up ice. The machine is attempting to wake up its occupant."
+	desc = "Brzęcząca komor kriogeniczna. Ledwo rozpoznajesz ubiór naukowca przez narośniety lód. Maszyna stara się obudzić użytkownika."
 	mob_name = "a scientist"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
@@ -537,10 +537,10 @@
 	death = FALSE
 	random = TRUE
 	mob_species = /datum/species/human
-	flavour_text = "<span class='big bold'>You are a scientist working for Nanotrasen,</span><b> stationed onboard a state of the art research station. You vaguely recall rushing into a \
-	cryogenics pod due to an oncoming radiation storm. The last thing you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
-	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod. \
-	Work as a team with your fellow survivors and do not abandon them.</b>"
+	flavour_text = "<span class='big bold'>Jesteś naukowcem pracującym dla Nanotrasen,</span><b> stacjonujący na pokładzie najnowocześniejszej technologicznie stacji. Ledwo przypominasz sobie szaleńczy bieg do \
+	kriogeniki przez nadciągającą burzę radiacyjną. Ostatnią rzecz jaką pamiętasz, to Sztuczną Inteligencję stacji mówiącą, że będziesz w stanie snu jedynie przez 8 godzin. Jak tylko otworzyłeś \
+	oczy, wszystko wydało się nagle stare i zardzewiałe. Czyjesz coś niedobrego w kościach, wychodząc z kapsuły. \
+	Pracuj jako drużyna z pozostałymi przy życiu załogantami, by przywrócić stacji świetność lub ondaleźć swojego pracodawcę.</b>"
 	uniform = /obj/item/clothing/under/rank/rnd/scientist/hlsci
 	shoes = /obj/item/clothing/shoes/laceup
 	id = /obj/item/card/id/away/old/sci
@@ -565,10 +565,10 @@
 	anchored = TRUE
 	density = FALSE
 	show_flavour = FALSE //Flavour only exists for spawners menu
-	short_desc = "You are a space pirate."
-	flavour_text = "The station refused to pay for your protection, protect the ship, siphon the credits from the station and raid it for even more loot."
-	assignedrole = "Space Pirate"
-	var/rank = "Mate"
+	short_desc = "Jesteś kosmicznym piratem."
+	flavour_text = "Stacja odmówiła zapłaty w zamian za waszą ochronę. Broń statku, wysysaj kredyty ze stacji i najeżdzaj ją w poszukiwaniu jeszcze większego zarobku."
+	assignedrole = "Kosmiczny pirat"
+	var/rank = "Majtek"
 
 /obj/effect/mob_spawn/human/pirate/special(mob/living/new_spawn)
 	new_spawn.fully_replace_character_name(new_spawn.real_name,generate_pirate_name())
@@ -584,11 +584,11 @@
 	return ..()
 
 /obj/effect/mob_spawn/human/pirate/captain
-	rank = "Captain"
+	rank = "Kapitan"
 	outfit = /datum/outfit/pirate/space/captain
 
 /obj/effect/mob_spawn/human/pirate/gunner
-	rank = "Gunner"
+	rank = "Strzelec"
 
 //Forgotten syndicate ship
 
@@ -598,9 +598,9 @@
 	death = FALSE
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
-	short_desc = "You are a syndicate operative on old ship, stuck in hostile space."
-	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Fix the ship, find a way to power it and follow your captain's orders."
-	important_info = "Obey orders given by your captain. If no orders given or the captain is missing, stay on the ship. DO NOT let the ship fall into enemy hands."
+	short_desc = "Jesteś operatorem Syndykatu na starym statku, który utknął w niebezpiecznej przestrzeni."
+	flavour_text = "Twój statek po dłuższym czasie dociera do wrogiego miejsca, zgłaszając awarię. Utknąłeś tutaj ze stacją Nanotrasenu w pobliżu. Napraw statek, przywróć mu zasilanie i słuchaj rozkazów kapitana."
+	important_info = "Bądź posłuszny rozkazom kapitana. Jeśli nie ma żadnych rozkazów lub brakuje kapitana, pozostań na statku i oczekuj rozkazów z góry. Skorzystaj z czerwonego telefonu. NIE POZWÓL by statek wpadł w ręce wroga."
 	outfit = /datum/outfit/syndicatespace/syndicrew
 	assignedrole = "Cybersun Crewmember"
 
@@ -616,9 +616,9 @@
 	death = FALSE
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
-	short_desc = "You are the captain of an old ship, stuck in hostile space."
-	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Command your crew and turn your ship into the most protected fortress."
-	important_info = "Protect the ship and secret documents in your backpack with your own life. DO NOT let the ship fall into enemy hands. DO NOT openly engage with the station's crew unless authorized by the Syndicate's command center."
+	short_desc = "Jesteś kapitanem starego statku, który utknął w niebezpiecznej przestrzeni."
+	flavour_text = "Twój statek po dłuższym czasie dociera do wrogiego miejsca, zgłaszając awarię. Utknąłeś tutaj ze stacją Nanotrasenu w pobliżu. Pokieruj swoją załogą z przywróć chwałę tej jednostce."
+	important_info = "Chroń statku i tajnych dokumentów w twoim plecaku za wszelką cenę. NIE POZWÓL by statek wpadł w ręce wroga. OCZEKUJ peleceń z samej góry, zanim wdasz się w otwarty konflikt z załogą stacji. Skorzystaj z czerwonego telefonu na statku."
 	outfit = /datum/outfit/syndicatespace/syndicaptain
 	assignedrole = "Cybersun Captain"
 
@@ -630,7 +630,7 @@
 	return ..()
 
 /datum/outfit/syndicatespace/syndicrew
-	name = "Syndicate Ship Crew Member"
+	name = "Załogant statku Syndykatu"
 	uniform = /obj/item/clothing/under/syndicate/combat
 	glasses = /obj/item/clothing/glasses/night
 	mask = /obj/item/clothing/mask/gas/syndicate
@@ -645,7 +645,7 @@
 	implants = list(/obj/item/implant/weapons_auth)
 
 /datum/outfit/syndicatespace/syndicaptain
-	name = "Syndicate Ship Captain"
+	name = "Kapitan statku Syndykatu"
 	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
 	glasses = /obj/item/clothing/glasses/night

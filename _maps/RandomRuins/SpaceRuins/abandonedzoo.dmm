@@ -143,7 +143,7 @@
 /obj/structure/table/reinforced,
 /obj/item/folder,
 /obj/item/gps{
-	gpstag = "X-02"
+	gpstag = "?"
 	},
 /turf/open/floor/plasteel/dark/side,
 /area/ruin/space/has_grav/abandonedzoo)

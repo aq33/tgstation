@@ -89,6 +89,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+/obj/item/clothing/suit/space/hardsuit/swat,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/turretedoutpost)
 "at" = (
@@ -171,7 +172,7 @@
 	pixel_y = 32
 	},
 /obj/item/gps{
-	gpstag = "X-25"
+	gpstag = "?"
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/turretedoutpost)
@@ -371,6 +372,17 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/turretedoutpost)
+"eH" = (
+/obj/structure/rack,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/item/gun/ballistic/automatic/ar,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/turretedoutpost)
 "tK" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -483,7 +495,7 @@ al
 ad
 ad
 ay
-aF
+eH
 aL
 aF
 ad

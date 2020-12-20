@@ -101,7 +101,7 @@
 /area/ruin/powered)
 "K" = (
 /obj/item/gps{
-	gpstag = "X-24"
+	gpstag = "?"
 	},
 /turf/open/floor/oldshuttle,
 /area/ruin/powered)

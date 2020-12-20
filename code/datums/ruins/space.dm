@@ -318,3 +318,42 @@
 	suffix = "forgottenship.dmm"
 	name = "Syndicate Forgotten Ship"
 	description = "Seemingly abandoned ship went of course right into NT controlled space. It seems that malfunction caused most systems to turn off, except for sleepers."
+
+/datum/map_template/ruin/lavaland/cafe_of_broken_dreams
+	name = "Cafe of Broken Dreams"
+	id = "cafe-of-broken-dreams"
+	description = "Nothing's better the sweet taste of coffee in such an apocalyptic world. The only catch is that there isn't any coffee. But there's lots of fauna. "
+	suffix = "lavaland_surface_cafe_of_broken_dreams.dmm"
+	allow_duplicates = FALSE
+	cost = 10
+
+/datum/map_template/ruin/space/cozy_apartment
+	id = "nicelittlenest"
+	suffix = "nicelittlenest.dmm"
+	name = "Cozy Home"
+	description = "A nice little place for travellers to rest. There is even a mint under the pillow!"
+
+/datum/map_template/ruin/space/harambe
+	id = "bigape"
+	suffix = "bigape.dmm"
+	name = "Big Ape"
+	description = "A gorilla? Out here? But why."
+
+/datum/map_template/ruin/space/drifting_spacepod
+	id = "drifting_spacepod"
+	suffix = "drifting_spacepod.dmm"
+	name = "Drifting Spacepod"
+	description = "An abandoned spacepod, just drifting through space."
+
+/datum/map_template/ruin/space/spacebar
+	id = "spacebar"
+	suffix = "spacebar.dmm"
+	name = "The Space Bar"
+	description = "Technically a Space Bar & Grill, but do you really care about that? No, just about getting drunk and a good (enough) meal."
+
+/datum/map_template/ruin/space/hippie_shuttle
+	id = "hippie_shuttle"
+	suffix = "hippie_shuttle.dmm"
+	name= "Hippie Shuttle"
+	description = "These hippies went a little too far out..."
+

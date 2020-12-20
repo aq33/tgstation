@@ -933,7 +933,7 @@
 	dir = 8
 	},
 /obj/item/gps{
-	gpstag = "X-04"
+	gpstag = "?"
 	},
 /turf/open/floor/plasteel/dark{
 	initial_gas_mix = "TEMP=2.7"

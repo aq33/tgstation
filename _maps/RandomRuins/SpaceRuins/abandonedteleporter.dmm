@@ -34,7 +34,7 @@
 /obj/structure/rack,
 /obj/item/clothing/gloves/color/yellow,
 /obj/item/gps{
-	gpstag = "X-01"
+	gpstag = "?"
 	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/abandoned_tele)
