@@ -58,7 +58,7 @@
 	if(!ishuman(H) && !ismonkey(H))
 		return
 
-	var/obj/item/gun/energy/e_gun/mini/T = new(H)
+	var/obj/item/gun/ballistic/automatic/pistol/secpistol/T = new(H)
 	var/obj/item/restraints/handcuffs/cable/zipties/T2 = new(H)
 	var/list/slots = list (
 		"backpack" = SLOT_IN_BACKPACK,

@@ -1,5 +1,4 @@
-// 9mm (Stechkin APS)
-
+// 9mm (Stechkin APS & Security Pistol)
 /obj/item/projectile/bullet/c9mm
 	name = "9mm bullet"
 	damage = 20
@@ -13,6 +12,11 @@
 	name = "9mm incendiary bullet"
 	damage = 10
 	fire_stacks = 1
+
+/obj/item/projectile/bullet/c9mm_nl
+	name = "9mm rubber bullet"
+	stamina = 25
+	damage = 3
 
 // 10mm (Stechkin)
 
