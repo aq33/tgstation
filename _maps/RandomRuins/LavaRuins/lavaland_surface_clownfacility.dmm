@@ -65,9 +65,7 @@
 /turf/open/floor/mineral/bananium,
 /area/ruin/unpowered)
 "ap" = (
-/obj/structure/bed{
-	pixel_y = 0
-	},
+/obj/structure/bed,
 /obj/item/bedsheet/clown,
 /turf/open/floor/mineral/bananium,
 /area/ruin/unpowered)

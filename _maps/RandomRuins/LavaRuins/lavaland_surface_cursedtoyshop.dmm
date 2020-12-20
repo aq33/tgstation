@@ -698,8 +698,7 @@
 "bH" = (
 /obj/structure/noticeboard{
 	dir = 4;
-	pixel_x = -27;
-	pixel_y = 0
+	pixel_x = -27
 	},
 /turf/open/floor/wood,
 /area/ruin/powered)
