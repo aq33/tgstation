@@ -52,7 +52,8 @@
 	dual_wield_spread = 40
 	spread = 15
 	recoil = 0.6
-	fire_delay = 2
+	fire_rate = 2
+	fire_delay = 1
 	burst_size = 2
 
 /obj/item/gun/ballistic/automatic/pistol/secpistol/burst_select()
@@ -72,6 +73,7 @@
 			spread = 1
 			recoil = 0.3
 			burst_size = 1
+			fire_rate = 3
 			fire_delay = 0
 			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)

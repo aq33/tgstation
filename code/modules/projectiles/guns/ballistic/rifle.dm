@@ -46,6 +46,26 @@ obj/item/gun/ballistic/rifle/attackby(obj/item/A, mob/user, params)
 	. = ..()
 	. += "The bolt is [bolt_locked ? "open" : "closed"]."
 
+/obj/item/gun/ballistic/rifle/riot
+	name = "Riot Rifle"
+	desc = "Semi-automatic riot rifle usually wielded by the security force during high-risk operations"
+	icon_state = "riotrifle"
+	internal_magazine = FALSE
+	mag_type = /obj/item/ammo_box/magazine/m10mm/box
+	bolt_wording = "bolt"
+	bolt_type = BOLT_TYPE_STANDARD
+	semi_auto = TRUE
+	fire_sound = "sound/weapons/rifleshot.ogg"
+	fire_sound_volume = 80
+	vary_fire_sound = FALSE
+	rack_sound = "sound/weapons/mosinboltout.ogg"
+	bolt_drop_sound = "sound/weapons/mosinboltin.ogg"
+	tac_reloads = FALSE
+	weapon_weight = WEAPON_MEDIUM
+	recoil = 0.6
+	fire_rate = 2
+	block_upgrade_walk = 1
+
 ///////////////////////
 // BOLT ACTION RIFLE //
 ///////////////////////

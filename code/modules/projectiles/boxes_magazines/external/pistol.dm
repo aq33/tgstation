@@ -57,7 +57,7 @@
 	icon_state = "sec9mmstd"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = "9mm"
-	max_ammo = 12
+	max_ammo = 10
 
 /obj/item/ammo_box/magazine/sec9mm/nl
 	name = "security pistol magazine (9mm non-lethal)"
@@ -70,7 +70,7 @@
 	icon_state = "sec9mmext"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = "9mm"
-	max_ammo = 20
+	max_ammo = 18
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/ammo_box/magazine/sec9mm/update_icon()
