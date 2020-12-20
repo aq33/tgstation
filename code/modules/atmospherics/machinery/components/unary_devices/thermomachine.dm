@@ -14,7 +14,6 @@
 
 
 	pipe_flags = PIPING_ONE_PER_TURF
-	var/datum/looping_sound/thermal/soundloop
 	var/icon_state_off = "freezer"
 	var/icon_state_on = "freezer_1"
 	var/icon_state_open = "freezer-o"
@@ -28,7 +27,6 @@
 /obj/machinery/atmospherics/components/unary/thermomachine/Initialize()
 	. = ..()
 	initialize_directions = dir
-	soundloop = new(list(src), FALSE)
 
 /obj/machinery/atmospherics/components/unary/thermomachine/on_construction()
 	var/obj/item/circuitboard/machine/thermomachine/board = circuit
@@ -49,10 +47,8 @@
 		icon_state = icon_state_open
 	else if(on && is_operational())
 		icon_state = icon_state_on
-		soundloop.start()
 	else
 		icon_state = icon_state_off
-		soundloop.stop()
 
 	add_overlay(getpipeimage(icon, "pipe", dir, , piping_layer))
 
