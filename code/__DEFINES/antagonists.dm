@@ -24,6 +24,11 @@
 #define APPRENTICE_ROBELESS "robeless"
 #define APPRENTICE_HEALING "healing"
 
+//AQUILA EDIT ADDITION BEGIN - AMBITIONS
+//Traitors
+#define TRAITOR_HUMAN "human"
+#define TRAITOR_AI	  "AI"
+//AQUILA EDIT ADDITION END
 
 //Blob
 #define BLOB_REROLL_TIME 2400 //blob gets a free reroll every X time

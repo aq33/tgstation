@@ -38193,21 +38193,21 @@
 	dir = 1;
 	layer = 2.9
 	},
-/obj/item/gun/ballistic/automatic/laser{
+/obj/item/ammo_box/c9mm{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/gun/ballistic/automatic/laser,
-/obj/item/gun/ballistic/automatic/laser{
+/obj/item/ammo_box/c9mm,
+/obj/item/ammo_box/c46x30mm{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/ammo_box/magazine/recharge{
+/obj/item/ammo_box/magazine/sec9mm{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/ammo_box/magazine/recharge,
-/obj/item/ammo_box/magazine/recharge{
+/obj/item/ammo_box/magazine/sec9mm,
+/obj/item/ammo_box/magazine/sec9mm{
 	pixel_x = -3;
 	pixel_y = 3
 	},
