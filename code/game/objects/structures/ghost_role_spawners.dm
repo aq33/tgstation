@@ -3,7 +3,7 @@
 //Preserved terrarium/seed vault: Spawns in seed vault structures in lavaland. Ghosts become plantpeople and are advised to begin growing plants in the room near them.
 /obj/effect/mob_spawn/human/seed_vault
 	name = "preserved terrarium"
-	desc = "Starożytna maszyna, która zdaje się być przeznaczona do przechowywania materii roślinnej. Szyba jest prysłonięta pnączami."
+	desc = "Starożytna maszyna, która zdaje się być przeznaczona do przechowywania materii roślinnej. Szyba jest przysłonięta pnączami."
 	mob_name = "a lifebringer"
 	icon = 'icons/obj/lavaland/spawners.dmi'
 	icon_state = "terrarium"
