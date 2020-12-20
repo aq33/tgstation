@@ -655,7 +655,7 @@
 	id = "sec_basic"
 	display_name = "Basic Security Equipment"
 	description = "Standard equipment used by security."
-	design_ids = list("seclite", "pepperspray", "bola_energy", "zipties", "evidencebag", "flashbulb", "laserpistol", "gun_cell")
+	design_ids = list("seclite", "pepperspray", "bola_energy", "zipties", "evidencebag", "flashbulb", "laserpistol", "gun_cell", "9mmboxnl", "wtboxnl")
 	prereq_ids = list("base")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000)
 	export_price = 5000
@@ -794,7 +794,7 @@
 	display_name = "Ballistic Weaponry"
 	description = "This isn't research.. This is reverse-engineering!"
 	prereq_ids = list("weaponry")
-	design_ids = list("mag_oldsmg", "mag_oldsmg_ap", "mag_oldsmg_ic", "grenade_launcher")
+	design_ids = list("mag_oldsmg", "mag_oldsmg_ap", "mag_oldsmg_ic", "mag_oldsmg_nl", "mag_secpistol", "mag_secpistol_nl", "mag_secpistol_ext", "wtbox", "9mmbox", "grenade_launcher")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
