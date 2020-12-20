@@ -59,6 +59,9 @@
 	caliber = "9mm"
 	max_ammo = 10
 
+/obj/item/ammo_box/magazine/sec9mm/dry
+	start_empty = TRUE
+
 /obj/item/ammo_box/magazine/sec9mm/nl
 	name = "security pistol magazine (9mm non-lethal)"
 	icon_state = "sec9mmstdnl"
@@ -72,6 +75,9 @@
 	caliber = "9mm"
 	max_ammo = 18
 	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/ammo_box/magazine/sec9mm/ext/dry
+	start_empty = TRUE
 
 /obj/item/ammo_box/magazine/sec9mm/update_icon()
 	icon_state = "[initial(icon_state)]-[ammo_count() ? "1" : "0"]"

@@ -52,8 +52,8 @@
 	dual_wield_spread = 40
 	spread = 15
 	recoil = 0.6
-	fire_rate = 2
-	fire_delay = 1
+	fire_rate = 1.5
+	fire_delay = 2
 	burst_size = 2
 
 /obj/item/gun/ballistic/automatic/pistol/secpistol/burst_select()
@@ -86,7 +86,7 @@
 /obj/item/gun/ballistic/automatic/pistol/secpistol/tactical
 	can_suppress = TRUE
 
-/obj/item/gun/ballistic/automatic/pistol/secpistol/Initialize()
+/obj/item/gun/ballistic/automatic/pistol/secpistol/tactical/Initialize()
 	set_gun_light(new /obj/item/flashlight/seclite(src))
 	update_icon()
 	return ..()

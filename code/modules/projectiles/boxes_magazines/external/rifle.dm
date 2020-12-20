@@ -6,6 +6,12 @@
 	caliber = "10mm"
 	max_ammo = 10
 
+/obj/item/ammo_box/magazine/m10mm/update_icon()
+	..()
+	if(ammo_count())
+		icon_state = "[initial(icon_state)]-1"
+	else
+		icon_state = "[initial(icon_state)]-0"
 /obj/item/ammo_box/magazine/m556
 	name = "toploader magazine (5.56mm)"
 	icon_state = "5.56m"
@@ -14,18 +20,31 @@
 	max_ammo = 30
 	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/m10mm/box
-	name = "rifle box (10mm)"
-	desc = "Standard rifle magazine for 10mm rounds."
-	icon_state = "10mmbox"
-	max_ammo = 12
+/obj/item/ammo_box/magazine/a762/mag
+	name = "riot rifle magazine (7.62mm)"
+	desc = "Standard rifle magazine for 7.62mm rounds."
+	ammo_type = /obj/item/ammo_casing/a762
+	icon_state = "762mmmag"
+	caliber = "a762"
+	max_ammo = 10
 
-/obj/item/ammo_box/magazine/m10mm/update_icon()
+/obj/item/ammo_box/magazine/a762/mag/dry
+	start_empty = TRUE
+
+/obj/item/ammo_box/magazine/a762/mag/nl
+	name = "rifle box NL (7.62mm)"
+	desc = "Standard rifle magazine for 7.62mm rounds. Pre-loaded with non-lethal rubber shells."
+	ammo_type = /obj/item/ammo_casing/a762/nl
+	icon_state = "762mmmagnl"
+	caliber = "a762"
+	max_ammo = 10
+
+/obj/item/ammo_box/magazine/a762/mag/update_icon()
 	..()
 	if(ammo_count())
-		icon_state = "[icon_state]-1"
+		icon_state = "[initial(icon_state)]-1"
 	else
-		icon_state = "[icon_state]-0"
+		icon_state = "[initial(icon_state)]-0"
 
 // pulse raifu mags //
 

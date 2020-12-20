@@ -41,8 +41,9 @@
 	name = "ammo box (9mm)"
 	icon_state = "9mmbox"
 	ammo_type = /obj/item/ammo_casing/c9mm
-	max_ammo = 30
-	w_class = WEIGHT_CLASS_NORMAL
+	max_ammo = 20
+	w_class = WEIGHT_CLASS_BULKY
+	multiple_sprites = 2
 
 /obj/item/ammo_box/c9mm/nl
 	name = "rubber ammo box (9mm)"
@@ -66,13 +67,13 @@
 	icon_state = "wtbox"
 	ammo_type = /obj/item/ammo_casing/c46x30mm
 	max_ammo = 40
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_BULKY
+	multiple_sprites = 2
 
 /obj/item/ammo_box/c46x30mm/nl
 	name = "rubber ammo box (4.6x30mm)"
 	icon_state = "wtboxnl"
 	ammo_type = /obj/item/ammo_casing/c46x30mm/nl
-
 /obj/item/ammo_box/a40mm
 	name = "ammo box (40mm grenades)"
 	icon_state = "40mm"
@@ -87,6 +88,21 @@
 	ammo_type = /obj/item/ammo_casing/a762
 	max_ammo = 5
 	multiple_sprites = 1
+
+/obj/item/ammo_box/a762/box
+	name = "ammo box (7.62mm)"
+	desc = "Big box of 7.62mm rounds."
+	icon_state = "762box"
+	ammo_type = /obj/item/ammo_casing/a762
+	max_ammo = 20
+	w_class = WEIGHT_CLASS_BULKY
+	multiple_sprites = 2
+
+/obj/item/ammo_box/a762/box/nl
+	name = "rubber ammo box (7.62mm)"
+	desc = "Big box of mostly non-lethal 7.62mm rounds."
+	icon_state = "762nlbox"
+	ammo_type = /obj/item/ammo_casing/a762/nl
 
 /obj/item/ammo_box/n762
 	name = "ammo box (7.62x38mmR)"

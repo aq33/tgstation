@@ -51,7 +51,7 @@ obj/item/gun/ballistic/rifle/attackby(obj/item/A, mob/user, params)
 	desc = "Semi-automatic riot rifle usually wielded by the security force during high-risk operations"
 	icon_state = "riotrifle"
 	internal_magazine = FALSE
-	mag_type = /obj/item/ammo_box/magazine/m10mm/box
+	mag_type = /obj/item/ammo_box/magazine/a762/mag
 	bolt_wording = "bolt"
 	bolt_type = BOLT_TYPE_STANDARD
 	semi_auto = TRUE
@@ -61,9 +61,9 @@ obj/item/gun/ballistic/rifle/attackby(obj/item/A, mob/user, params)
 	rack_sound = "sound/weapons/mosinboltout.ogg"
 	bolt_drop_sound = "sound/weapons/mosinboltin.ogg"
 	tac_reloads = FALSE
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	recoil = 0.6
-	fire_rate = 2
+	fire_rate = 1.5
 	block_upgrade_walk = 1
 
 ///////////////////////
@@ -77,6 +77,7 @@ obj/item/gun/ballistic/rifle/attackby(obj/item/A, mob/user, params)
 	item_state = "moistnugget"
 	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
+	weapon_weight = WEAPON_HEAVY
 	can_bayonet = TRUE
 	knife_x_offset = 27
 	knife_y_offset = 13

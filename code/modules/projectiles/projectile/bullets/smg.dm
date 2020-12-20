@@ -9,6 +9,7 @@
 /obj/item/projectile/bullet/c46x30mm
 	name = "4.6x30mm bullet"
 	damage = 20
+	armour_penetration = -10
 
 /obj/item/projectile/bullet/c46x30mm_ap
 	name = "4.6x30mm armor-piercing bullet"
@@ -24,3 +25,4 @@
 	name = "4.6x30mm rubber bullet"
 	stamina = 25
 	damage = 3
+	armour_penetration = -10

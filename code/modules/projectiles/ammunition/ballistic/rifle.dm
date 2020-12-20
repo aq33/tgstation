@@ -7,6 +7,13 @@
 	caliber = "a762"
 	projectile_type = /obj/item/projectile/bullet/a762
 
+/obj/item/ammo_casing/a762/nl
+	name = "7.62 rubber bullet casing"
+	desc = "A 7.62 rubber bullet casing."
+	icon_state = "762-casing"
+	caliber = "a762"
+	projectile_type = /obj/item/projectile/bullet/a762/nl
+
 /obj/item/ammo_casing/a762/enchanted
 	projectile_type = /obj/item/projectile/bullet/a762_enchanted
 

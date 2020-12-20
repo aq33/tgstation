@@ -8,7 +8,14 @@
 
 /obj/item/projectile/bullet/a762
 	name = "7.62 bullet"
-	damage = 50
+	damage = 40
+	armour_penetration = 5
+
+/obj/item/projectile/bullet/a762/nl
+	name = "7.62 rubber bullet"
+	stamina = 50
+	damage = 5
+	armour_penetration = 0
 
 /obj/item/projectile/bullet/a762_enchanted
 	name = "enchanted 7.62 bullet"
