@@ -51,7 +51,7 @@
 /obj/machinery/autolathe/Initialize()
 	AddComponent(/datum/component/material_container, list(/datum/material/iron, /datum/material/glass, /datum/material/copper, /datum/material/gold, /datum/material/gold, /datum/material/silver, /datum/material/diamond, /datum/material/uranium, /datum/material/plasma, /datum/material/bluespace, /datum/material/bananium, /datum/material/titanium), 0, TRUE, null, null, CALLBACK(src, .proc/AfterMaterialInsert))
 	. = ..()
-
+	soundloop = new(list(src), FALSE)
 	wires = new /datum/wires/autolathe(src)
 	stored_research = new /datum/techweb/specialized/autounlocking/autolathe
 	matching_designs = list()
