@@ -32,12 +32,15 @@
 	start_empty = TRUE
 
 /obj/item/ammo_box/magazine/a762/mag/nl
-	name = "rifle box NL (7.62mm)"
+	name = "rifle magazine NL (7.62mm)"
 	desc = "Standard rifle magazine for 7.62mm rounds. Pre-loaded with non-lethal rubber shells."
 	ammo_type = /obj/item/ammo_casing/a762/nl
 	icon_state = "762mmmagnl"
-	caliber = "a762"
-	max_ammo = 10
+
+/obj/item/ammo_box/magazine/a762/mag/sabot
+	name = "rifle magazine (7.62mm)"
+	desc = "Standard rifle magazine for 7.62mm rounds. Pre-loaded with high-velocity sabot shells."
+	ammo_type = /obj/item/ammo_casing/a762/sabot
 
 /obj/item/ammo_box/magazine/a762/mag/update_icon()
 	..()

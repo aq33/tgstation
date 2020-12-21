@@ -74,6 +74,7 @@
 	name = "rubber ammo box (4.6x30mm)"
 	icon_state = "wtboxnl"
 	ammo_type = /obj/item/ammo_casing/c46x30mm/nl
+
 /obj/item/ammo_box/a40mm
 	name = "ammo box (40mm grenades)"
 	icon_state = "40mm"

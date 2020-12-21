@@ -318,6 +318,16 @@
 	small_item = TRUE
 	crate_type = /obj/structure/closet/crate/secure/gear
 
+/datum/supply_pack/security/dragnet
+	name = "DRAGnet Crate"
+	desc = "Contains three \"Dynamic Rapid-Apprehension of the Guilty\" netting devices, a recent breakthrough in law enforcement prisoner management technology. Requires Security access to open."
+	cost = 1500
+	contains = list(/obj/item/gun/energy/e_gun/dragnet,
+					/obj/item/gun/energy/e_gun/dragnet,
+					/obj/item/gun/energy/e_gun/dragnet)
+	crate_name = "\improper DRAGnet crate"
+	crate_type = /obj/structure/closet/crate/secure/gear
+
 /datum/supply_pack/security/baton
 	name = "Stun Batons Crate"
 	desc = "Arm the Civil Protection Forces with three stun batons. Batteries included. Requires Security access to open."
@@ -479,30 +489,6 @@
 					/obj/item/ammo_box/c9mm/nl,
 					/obj/item/ammo_box/c9mm/nl)
 
-/datum/supply_pack/munitions/WTboxnl
-	name = "4.6x30mm Non-Lethal Ammo Crate"
-	desc = "Contains 3 boxes of non-lethal autorifle rounds. Requires Security access to open."
-	cost = 2000
-	contains = list(/obj/item/ammo_box/c46x30mm/nl,
-					/obj/item/ammo_box/c46x30mm/nl,
-					/obj/item/ammo_box/c46x30mm/nl)
-
-/datum/supply_pack/munitions/shottyammonl
-	name = ".410 Non-Lethal Ammo Crate"
-	desc = "Contains 4 boxes of rubbershot shells. Requires Security access to open."
-	cost = 2500
-	contains = list(/obj/item/storage/box/rubbershot,
-					/obj/item/storage/box/rubbershot,
-					/obj/item/storage/box/rubbershot)
-
-/datum/supply_pack/munitions/rifleboxnl
-	name = "7.62mm Non-Lethal Ammo Crate"
-	desc = "Contains 3 boxes of non-lethal rifle rounds. Requires Security access to open."
-	cost = 2000
-	contains = list(/obj/item/ammo_box/a762/box/nl,
-					/obj/item/ammo_box/a762/box/nl,
-					/obj/item/ammo_box/a762/box/nl)
-
 /datum/supply_pack/munitions/sec9mmbox
 	name = "9mm Ammo Crate"
 	desc = "Contains 3 boxes of lethal pistol rounds. Requires Armory access to open."
@@ -513,6 +499,14 @@
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
 
+/datum/supply_pack/munitions/WTboxnl
+	name = "4.6x30mm Non-Lethal Ammo Crate"
+	desc = "Contains 3 boxes of non-lethal autorifle rounds. Requires Security access to open."
+	cost = 2000
+	contains = list(/obj/item/ammo_box/c46x30mm/nl,
+					/obj/item/ammo_box/c46x30mm/nl,
+					/obj/item/ammo_box/c46x30mm/nl)
+
 /datum/supply_pack/munitions/WTbox
 	name = "4.6x30mm Ammo Crate"
 	desc = "Contains 3 boxes of lethal autorifle rounds. Requires Armory access to open."
@@ -522,6 +516,14 @@
 					/obj/item/ammo_box/c46x30mm)
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
+
+/datum/supply_pack/munitions/shottyammonl
+	name = ".410 Non-Lethal Ammo Crate"
+	desc = "Contains 4 boxes of rubbershot shells. Requires Security access to open."
+	cost = 2500
+	contains = list(/obj/item/storage/box/rubbershot,
+					/obj/item/storage/box/rubbershot,
+					/obj/item/storage/box/rubbershot)
 
 /datum/supply_pack/munitions/shottyammo
 	name = ".410 Lethal Ammo Crate"
@@ -534,6 +536,14 @@
 	crate_type = /obj/structure/closet/crate/secure/weapon
 
 /datum/supply_pack/munitions/rifleboxnl
+	name = "7.62mm Non-Lethal Ammo Crate"
+	desc = "Contains 3 boxes of non-lethal rifle rounds. Requires Security access to open."
+	cost = 2000
+	contains = list(/obj/item/ammo_box/a762/box/nl,
+					/obj/item/ammo_box/a762/box/nl,
+					/obj/item/ammo_box/a762/box/nl)
+
+/datum/supply_pack/munitions/riflebox
 	name = "7.62mm Lethal Ammo Crate"
 	desc = "Contains 3 boxes of lethal rifle rounds. Requires Armory access to open."
 	cost = 2500
@@ -656,15 +666,6 @@
 	contains = list(/obj/item/gun/ballistic/shotgun/riot,
 					/obj/item/gun/ballistic/shotgun/riot,
 					/obj/item/gun/ballistic/shotgun/riot)
-
-/datum/supply_pack/security/armory/sec/dragnet
-	name = "DRAGnet Crate"
-	desc = "Contains three \"Dynamic Rapid-Apprehension of the Guilty\" netting devices, a recent breakthrough in law enforcement prisoner management technology. Requires armory access to open."
-	cost = 1500
-	contains = list(/obj/item/gun/energy/e_gun/dragnet,
-					/obj/item/gun/energy/e_gun/dragnet,
-					/obj/item/gun/energy/e_gun/dragnet)
-	crate_name = "\improper DRAGnet crate"
 
 /datum/supply_pack/security/armory/sec/exileimp
 	name = "Exile Implants Crate"
