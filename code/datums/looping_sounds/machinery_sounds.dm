@@ -22,7 +22,7 @@
 	mid_sounds = list('sound/machines/generator/generator_mid1.ogg'=1, 'sound/machines/generator/generator_mid2.ogg'=1, 'sound/machines/generator/generator_mid3.ogg'=1)
 	mid_length = 4
 	end_sound = 'sound/machines/generator/generator_end.ogg'
-	volume = 30
+	volume = 15
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -40,7 +40,7 @@
 /datum/looping_sound/grill
 	mid_length = 2
 	mid_sounds = list('sound/machines/fryer/deep_fryer_1.ogg' = 1, 'sound/machines/fryer/deep_fryer_2.ogg' = 1)
-	volume = 30
+	volume = 20
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -50,14 +50,14 @@
 	mid_sounds = list('sound/machines/microwave/microwave-mid1.ogg'=10, 'sound/machines/microwave/microwave-mid2.ogg'=1)
 	mid_length = 10
 	end_sound = 'sound/machines/microwave/microwave-end.ogg'
-	volume = 90
+	volume = 70
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /datum/looping_sound/thermal
 	mid_length = 2
 	mid_sounds = list('sound/machines/thermal/thermal_mid.ogg'=1)
-	volume = 20
+	volume = 3
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -67,7 +67,7 @@
 	mid_sounds = list('sound/machines/electronics/computer_mid1.ogg'=1, 'sound/machines/electronics/computer_mid2.ogg'=1, 'sound/machines/electronics/computer_mid3.ogg'=1, 'sound/machines/electronics/computer_mid4.ogg'=1, 'sound/machines/electronics/computer_mid5.ogg'=1)
 	mid_length = 5
 	end_sound = 'sound/machines/electronics/computer_stop.ogg'
-	volume = 12
+	volume = 3
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -77,8 +77,8 @@
 	mid_sounds = list('sound/machines/electronics/lathe_idle.ogg'=10, 'sound/machines/electronics/lathe_working.ogg'=1, 'sound/machines/electronics/lathe_working2.ogg'=1, 'sound/machines/electronics/lathe_working3.ogg'=1, 'sound/machines/electronics/lathe_working4.ogg'=1)
 	mid_length = 2
 	end_sound = 'sound/machines/electronics/computer_stop.ogg'
-	volume = 15
-	extra_range = 2
+	volume = 8
+	extra_range = 1
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -88,8 +88,7 @@
 	mid_sounds = list('sound/machines/electronics/transformator_mid.ogg'=1)
 	mid_length = 2
 	end_sound = 'sound/machines/electronics/transformator_stop.ogg'
-	volume = 15
-	extra_range = 3
+	volume = 3
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -100,6 +99,5 @@ datum/looping_sound/vent
 	mid_length = 4
 	end_sound = 'sound/machines/thermal/vent_stop.ogg'
 	volume = 5
-	extra_range = 2
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
