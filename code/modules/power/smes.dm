@@ -23,7 +23,7 @@
 	circuit = /obj/item/circuitboard/machine/smes
 
 
-	var/datum/looping_sound/smes/soundloop
+
 	var/capacity = 5e6 // maximum charge
 	var/charge = 0 // actual charge
 
@@ -49,7 +49,6 @@
 
 /obj/machinery/power/smes/Initialize()
 	. = ..()
-	soundloop = new(list(src), FALSE)
 	dir_loop:
 		for(var/d in GLOB.cardinals)
 			var/turf/T = get_step(src, d)
@@ -222,10 +221,8 @@
 
 	if(outputting)
 		add_overlay("smes-op1")
-		soundloop.start()
 	else
 		add_overlay("smes-op0")
-		soundloop.stop()
 
 	if(inputting)
 		add_overlay("smes-oc1")

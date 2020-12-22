@@ -73,6 +73,7 @@
 		points += O.points * point_upgrade * O.amount
 
 	var/material_amount = mat_container.get_item_material_amount(O)
+
 	if(!material_amount)
 		qdel(O) //no materials, incinerate it
 
@@ -117,7 +118,6 @@
 	for(var/ore in ores_to_process)
 		if(current_amount >= ore_pickup_rate)
 			break
-		playsound(src, 'sound/machines/ormsmelt.ogg', 20)
 		smelt_ore(ore)
 
 /obj/machinery/mineral/ore_redemption/proc/send_console_message()

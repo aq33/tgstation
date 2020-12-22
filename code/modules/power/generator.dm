@@ -4,7 +4,7 @@
 	icon_state = "teg"
 	density = TRUE
 	use_power = NO_POWER_USE
-	var/datum/looping_sound/generator/soundloop
+
 	var/obj/machinery/atmospherics/components/binary/circulator/cold_circ
 	var/obj/machinery/atmospherics/components/binary/circulator/hot_circ
 
@@ -20,7 +20,6 @@
 	SSair.atmos_machinery += src
 	update_icon()
 	component_parts = list(new /obj/item/circuitboard/machine/generator)
-	soundloop = new(list(src), FALSE)
 
 /obj/machinery/power/generator/ComponentInitialize()
 	. = ..()
@@ -28,7 +27,6 @@
 
 /obj/machinery/power/generator/Destroy()
 	kill_circs()
-	QDEL_NULL(soundloop)
 	SSair.atmos_machinery -= src
 	return ..()
 
@@ -36,13 +34,11 @@
 
 	if(stat & (NOPOWER|BROKEN))
 		cut_overlays()
-		soundloop.stop()
 	else
 		cut_overlays()
 
 		var/L = min(round(lastgenlev/100000),11)
 		if(L != 0)
-			soundloop.start()
 			add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
 
 		if(hot_circ && cold_circ)

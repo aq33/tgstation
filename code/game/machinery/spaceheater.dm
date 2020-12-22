@@ -15,7 +15,7 @@
 	circuit = /obj/item/circuitboard/machine/space_heater
 
 
-	var/datum/looping_sound/thermal/soundloop
+
 	var/obj/item/stock_parts/cell/cell
 	var/on = FALSE
 	var/mode = HEATER_MODE_STANDBY
@@ -32,7 +32,6 @@
 
 /obj/machinery/space_heater/Initialize()
 	. = ..()
-	soundloop = new(list(src), FALSE)
 	cell = new(src)
 	update_icon()
 
@@ -62,10 +61,8 @@
 /obj/machinery/space_heater/update_icon()
 	if(on)
 		icon_state = "sheater-[mode]"
-		soundloop.start()
 	else
 		icon_state = "sheater-off"
-		soundloop.stop()
 
 	cut_overlays()
 	if(panel_open)

@@ -130,12 +130,12 @@ GLOBAL_VAR_INIT(security_level, SEC_LEVEL_GREEN)
 	switch(GLOB.security_level)
 		if(SEC_LEVEL_RED)
 			filename = 'sound/misc/red_alert.ogg'
-			volume = 35
-			interval = 2 SECONDS
+			volume = 20
+			interval = 30 SECONDS
 		if(SEC_LEVEL_DELTA)
 			filename = 'sound/misc/delta_alert.ogg'
-			volume = 75
-			interval = 2 SECONDS
+			volume = 50
+			interval = 15 SECONDS
 		else
 			return	// not happening for non-red or non-delta
 

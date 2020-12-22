@@ -14,6 +14,7 @@
 
 
 	pipe_flags = PIPING_ONE_PER_TURF
+
 	var/icon_state_off = "freezer"
 	var/icon_state_on = "freezer_1"
 	var/icon_state_open = "freezer-o"
