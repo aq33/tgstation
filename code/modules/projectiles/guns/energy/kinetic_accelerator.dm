@@ -1,5 +1,5 @@
 /obj/item/gun/energy/kinetic_accelerator
-	name = "proto-kinetic accelerator"
+	name = "kinetic accelerator rifle"
 	desc = "A self recharging, ranged mining tool that does increased damage in low pressure."
 	icon_state = "kineticgun"
 	item_state = "kineticgun"
@@ -7,7 +7,7 @@
 	cell_type = /obj/item/stock_parts/cell/emproof
 	item_flags = NONE
 	obj_flags = UNIQUE_RENAME
-	weapon_weight = WEAPON_LIGHT
+	weapon_weight = WEAPON_HEAVY
 	can_flashlight = TRUE
 	flight_x_offset = 15
 	flight_y_offset = 9
@@ -26,6 +26,17 @@
 	var/list/modkits = list()
 
 	var/recharge_timerid
+
+/obj/item/gun/energy/kinetic_accelerator/pistol
+	name = "kinetic accelerator pistol"
+	desc = "A compact self recharging, ranged mining tool that does increased damage in low pressure."
+	icon_state = "kineticpistol"
+	item_state = "kineticpistol"
+	weapon_weight = WEAPON_LIGHT
+	can_bayonet = FALSE
+	overheat_time = 12
+	spread = 7
+	max_mod_capacity = 90
 
 /obj/item/gun/energy/kinetic_accelerator/examine(mob/user)
 	. = ..()
@@ -66,9 +77,13 @@
 
 /obj/item/gun/energy/kinetic_accelerator/proc/modify_projectile(obj/item/projectile/kinetic/K)
 	K.kinetic_gun = src //do something special on-hit, easy!
+	if(istype(src, /obj/item/gun/energy/kinetic_accelerator/pistol))
+		K.range = 3
+		K.damage = 30
 	for(var/A in get_modkits())
 		var/obj/item/borg/upgrade/modkit/M = A
 		M.modify_projectile(K)
+
 
 /obj/item/gun/energy/kinetic_accelerator/cyborg
 	holds_charge = TRUE
@@ -152,6 +167,13 @@
 	else
 		cut_overlays()
 
+/obj/item/gun/energy/kinetic_accelerator/pistol/update_icon()
+	..()
+	if(!can_shoot())
+		icon_state = "kineticpistol-empty"
+	else
+		icon_state = "kineticpistol"
+
 //Casing
 /obj/item/ammo_casing/energy/kinetic
 	projectile_type = /obj/item/projectile/kinetic
@@ -172,7 +194,7 @@
 	damage = 40
 	damage_type = BRUTE
 	flag = "bomb"
-	range = 3
+	range = 4
 	log_override = TRUE
 
 	var/pressure_decrease_active = FALSE
@@ -234,6 +256,7 @@
 	var/cost = 30
 	var/modifier = 1 //For use in any mod kit that has numerical modifiers
 	var/minebot_upgrade = TRUE
+	var/pistol_upgrade = TRUE
 	var/minebot_exclusive = FALSE
 
 /obj/item/borg/upgrade/modkit/examine(mob/user)
@@ -254,6 +277,9 @@
 
 /obj/item/borg/upgrade/modkit/proc/install(obj/item/gun/energy/kinetic_accelerator/KA, mob/user)
 	. = TRUE
+	if(!pistol_upgrade && istype(KA, /obj/item/gun/energy/kinetic_accelerator/pistol))
+		to_chat(user, "<span class='notice'>This modkit is not compatibile with KAP.</span>")
+		return FALSE
 	if(minebot_upgrade)
 		if(minebot_exclusive && !istype(KA.loc, /mob/living/simple_animal/hostile/mining_drone))
 			to_chat(user, "<span class='notice'>The modkit you're trying to install is only rated for minebot use.</span>")
@@ -358,6 +384,7 @@
 	modifier = 0
 	var/turf_aoe = FALSE
 	var/stats_stolen = FALSE
+	pistol_upgrade = FALSE
 
 /obj/item/borg/upgrade/modkit/aoe/install(obj/item/gun/energy/kinetic_accelerator/KA, mob/user)
 	. = ..()
@@ -545,6 +572,7 @@
 	name = "super chassis"
 	desc = "Makes your KA yellow. All the fun of having a more powerful KA without actually having a more powerful KA."
 	cost = 0
+	pistol_upgrade = FALSE
 	denied_type = /obj/item/borg/upgrade/modkit/chassis_mod
 	var/chassis_icon = "kineticgun_u"
 	var/chassis_name = "super-kinetic accelerator"
