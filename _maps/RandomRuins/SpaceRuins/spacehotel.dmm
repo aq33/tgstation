@@ -1509,14 +1509,6 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/ruin/space/has_grav/hotel/bar)
-"fU" = (
-/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
-/obj/effect/turf_decal/tile/bar,
-/obj/effect/turf_decal/tile/bar{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/hotel/bar)
 "fV" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
@@ -4583,7 +4575,7 @@
 /area/template_noop)
 "FA" = (
 /obj/structure/table,
-/obj/item/melee/baton,
+/obj/item/melee/baton/loaded,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/hotel/dock)
 "FL" = (
@@ -4783,7 +4775,6 @@
 /area/ruin/space/has_grav/hotel)
 "Vu" = (
 /obj/structure/table,
-/obj/item/gun/syringe/dna,
 /obj/item/reagent_containers/glass/bottle/chloralhydrate{
 	pixel_x = 10;
 	pixel_y = 10
@@ -4797,6 +4788,7 @@
 /obj/item/reagent_containers/syringe{
 	pixel_x = -4
 	},
+/obj/item/gun/syringe,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/hotel/dock)
 "Vy" = (
@@ -6850,8 +6842,8 @@ dT
 dc
 aw
 fj
-CY
-CY
+fG
+fG
 CY
 fG
 Di
@@ -6920,9 +6912,9 @@ dT
 dc
 aw
 fi
-fG
-fU
-fG
+CY
+nz
+CY
 gr
 Di
 gZ
