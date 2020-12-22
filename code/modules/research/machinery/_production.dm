@@ -2,6 +2,7 @@
 	name = "technology fabricator"
 	desc = "Makes researched and prototype items with materials and energy."
 	layer = BELOW_OBJ_LAYER
+	var/datum/looping_sound/lathe/soundloop
 	var/consoleless_interface = FALSE			//Whether it can be used without a console.
 	var/efficiency_coeff = 1				//Materials needed / coeff = actual.
 	var/list/categories = list()
@@ -20,6 +21,7 @@
 
 /obj/machinery/rnd/production/Initialize(mapload)
 	. = ..()
+	soundloop = new(list(src), FALSE)
 	create_reagents(0, OPENCONTAINER)
 	matching_designs = list()
 	cached_designs = list()
@@ -34,6 +36,7 @@
 	cached_designs = null
 	matching_designs = null
 	QDEL_NULL(stored_research)
+	QDEL_NULL(soundloop)
 	host_research = null
 	return ..()
 
@@ -156,11 +159,14 @@
 	for(var/R in D.reagents_list)
 		reagents.remove_reagent(R, D.reagents_list[R]*amount/coeff)
 	busy = TRUE
+	soundloop.start()
 	if(production_animation)
 		flick(production_animation, src)
 	var/timecoeff = D.lathe_time_factor / efficiency_coeff
 	addtimer(CALLBACK(src, .proc/reset_busy), (30 * timecoeff * amount) ** 0.5)
 	addtimer(CALLBACK(src, .proc/do_print, D.build_path, amount, efficient_mats, D.dangerous_construction), (32 * timecoeff * amount) ** 0.8)
+	sleep((32 * timecoeff * amount) ** 0.8)
+	soundloop.stop()
 	return TRUE
 
 /obj/machinery/rnd/production/proc/search(string)
