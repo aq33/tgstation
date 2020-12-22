@@ -9,7 +9,6 @@
 	active_power_usage = 5000
 	req_access = list(ACCESS_ROBOTICS)
 	circuit = /obj/item/circuitboard/machine/mechfab
-	var/datum/looping_sound/lathe/soundloop
 	var/time_coeff = 1
 	var/component_coeff = 1
 	var/datum/techweb/specialized/autounlocking/exofab/stored_research
@@ -42,7 +41,6 @@
 /obj/machinery/mecha_part_fabricator/Initialize(mapload)
 	stored_research = new
 	rmat = AddComponent(/datum/component/remote_materials, "mechfab", mapload && link_on_init)
-	soundloop = new(list(src), FALSE)
 	RefreshParts() //Recalculating local material sizes if the fab isn't linked
 	return ..()
 
@@ -165,12 +163,10 @@
 
 	add_overlay("fab-active")
 	use_power = ACTIVE_POWER_USE
-	soundloop.start()
 	updateUsrDialog()
 	sleep(get_construction_time_w_coeff(D))
 	use_power = IDLE_POWER_USE
 	cut_overlay("fab-active")
-	soundloop.stop()
 	desc = initial(desc)
 
 	var/location = get_step(src,(dir))
