@@ -50,6 +50,7 @@ obj/item/gun/ballistic/rifle/attackby(obj/item/A, mob/user, params)
 	name = "Riot Rifle"
 	desc = "Semi-automatic riot rifle usually wielded by the security force during high-risk operations"
 	icon_state = "riotrifle"
+	item_state = "riotrifle"
 	internal_magazine = FALSE
 	mag_type = /obj/item/ammo_box/magazine/a762/mag
 	bolt_wording = "bolt"
