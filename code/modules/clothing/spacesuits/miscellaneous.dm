@@ -269,6 +269,20 @@ Contains:
 	flash_protect = 0
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 20, "fire" = 50, "acid" = 65)
 
+/obj/item/clothing/suit/space/eva/cargo
+	name = "EVA suit"
+	icon_state = "space_cargo"
+	item_state = "eva_suit_cargo"
+	desc = "A lightweight space suit with the basic ability to protect the wearer from the vacuum of space during salvage operations."
+	armor = list("melee" = 10, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 20, "fire" = 50, "acid" = 65)
+
+/obj/item/clothing/head/helmet/space/eva/cargo
+	name = "EVA helmet"
+	icon_state = "space_cargo"
+	item_state = "eva_helmet_cargo"
+	desc = "A lightweight space helmet with the basic ability to protect the wearer from the vacuum of space during salvage operations."
+	armor = list("melee" = 10, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 20, "fire" = 50, "acid" = 65)
+
 /obj/item/clothing/head/helmet/space/freedom
 	name = "eagle helmet"
 	desc = "An advanced, space-proof helmet. It appears to be modeled after an old-world eagle."

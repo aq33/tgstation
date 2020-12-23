@@ -7,7 +7,7 @@
 	cell_type = /obj/item/stock_parts/cell/emproof
 	item_flags = NONE
 	obj_flags = UNIQUE_RENAME
-	weapon_weight = WEAPON_HEAVY
+	weapon_weight = WEAPON_MEDIUM
 	can_flashlight = TRUE
 	flight_x_offset = 15
 	flight_y_offset = 9
@@ -34,6 +34,8 @@
 	item_state = "kineticpistol"
 	weapon_weight = WEAPON_LIGHT
 	can_bayonet = FALSE
+	flight_x_offset = 19
+	flight_y_offset = 12
 	overheat_time = 12
 	spread = 7
 	max_mod_capacity = 90
@@ -107,6 +109,7 @@
 
 /obj/item/gun/energy/kinetic_accelerator/equipped(mob/user)
 	. = ..()
+	update_icon()
 	if(!can_shoot())
 		attempt_reload()
 
@@ -162,6 +165,15 @@
 
 /obj/item/gun/energy/kinetic_accelerator/update_icon()
 	..()
+	if(istype(src, /obj/item/gun/energy/kinetic_accelerator/pistol))
+		return
+	if(iscarbon(loc))
+		var/mob/living/carbon/user = loc
+		if(user.get_inactive_held_item())
+			item_state = "kineticgun"
+		else
+			item_state = "kineticgun_wielded"
+
 	if(!can_shoot())
 		add_overlay("[icon_state]_empty")
 	else
