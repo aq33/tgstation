@@ -385,8 +385,8 @@
 
 /datum/supply_pack/security/disabler
 	name = "Disabler Crate"
-	desc = "Three stamina-draining disabler weapons. Requires Security access to open."
-	cost = 1500
+	desc = "Contains 3 high-tech, experimental stamina-draining disabler weapons. Requires Security access to open."
+	cost = 8000
 	contains = list(/obj/item/gun/energy/disabler,
 					/obj/item/gun/energy/disabler,
 					/obj/item/gun/energy/disabler)
