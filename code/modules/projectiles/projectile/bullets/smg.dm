@@ -19,3 +19,8 @@
 	name = "4.6x30mm incendiary bullet"
 	damage = 10
 	fire_stacks = 1
+
+/obj/item/projectile/bullet/c46x30mm_nl
+	name = "4.6x30mm rubber bullet"
+	stamina = 25
+	damage = 3

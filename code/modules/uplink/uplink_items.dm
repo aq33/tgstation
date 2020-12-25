@@ -212,7 +212,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 			agent card, specialised contractor baton, and three randomly selected low cost items. Can include otherwise unobtainable items."
 	item = /obj/item/storage/box/syndicate/contract_kit
 	cost = 20
-	player_minimum = 15
 	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops, /datum/game_mode/incursion)
 
 /datum/uplink_item/bundles_TC/bundle_A
@@ -480,6 +479,13 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	surplus = 40
 	include_modes = list(/datum/game_mode/nuclear)
 
+/datum/uplink_item/dangerous/pulserifle
+	name = "Pulse Rifle"
+	desc = "A fully-loaded assault rifle. M2A45 Pulse rifle fires 6mm rounds with enough strenght to punch trough most armor."
+	item = /obj/item/gun/ballistic/automatic/peacekeeper/syndie
+	cost = 12
+	include_modes = list(/datum/game_mode/nuclear)
+
 /datum/uplink_item/dangerous/smg
 	name = "C-20r Submachine Gun"
 	desc = "A fully-loaded Scarborough Arms bullpup submachine gun. The C-20r fires .45 rounds with a \
@@ -545,11 +551,10 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "Though capable of near sorcerous feats via use of hardlight holograms and nanomachines, they require an \
 			organic host as a home base and source of fuel. Holoparasites come in various types and share damage with their host."
 	item = /obj/item/guardiancreator/tech
-	cost = 18
+	cost = 20
 	surplus = 10
 	surplus_nullcrates = 0
 	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops)
-	player_minimum = 25
 	restricted = TRUE
 
 /datum/uplink_item/dangerous/machinegun
@@ -891,6 +896,13 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "An additional 24-round .45 magazine suitable for use with the C-20r submachine gun."
 	item = /obj/item/ammo_box/magazine/smgm45
 	cost = 3
+	include_modes = list(/datum/game_mode/nuclear)
+
+/datum/uplink_item/ammo/pulserifle
+	name = "6mm pulse rifle magazine"
+	desc = "An additional 30-round 6mm magazine suitable for use with the pulse rifle."
+	item = /obj/item/ammo_box/magazine/peacekeeper/lethal
+	cost = 4
 	include_modes = list(/datum/game_mode/nuclear)
 
 /datum/uplink_item/ammo/sniper
@@ -2131,15 +2143,6 @@ datum/uplink_item/role_restricted/superior_honkrender
 	item = /obj/item/gun/chem
 	cost = 12
 	restricted_roles = list("Chemist", "Chief Medical Officer")
-
-/datum/uplink_item/role_restricted/ubersaw
-	name = "Ubersaw"
-	desc = "Old, rusty but still sharp abomination of a medical tool. It injects stored chemicals into stabbed victims."
-	item = /obj/item/circular_saw/ubersaw
-	cost = 7
-	limited_stock = 1
-	surplus = 20
-	restricted_roles = list("Chief Medical Officer", "Medical Doctor", "Paramedic")
 
 /datum/uplink_item/role_restricted/reverse_bear_trap
 	name = "Reverse Bear Trap"

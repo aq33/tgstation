@@ -11,7 +11,9 @@
 	infra_luminosity = 15 //byond implementation is bugged.
 	force = 5
 	flags_1 = HEAR_1
-	light_system = MOVABLE_LIGHT
+	light_range = 4
+	light_power = 1
+	light_system = MOVABLE_LIGHT_DIRECTIONAL
 	light_on = FALSE
 	var/ruin_mecha = FALSE //if the mecha starts on a ruin, don't automatically give it a tracking beacon to prevent metagaming.
 	var/can_move = 0 //time of next allowed movement
@@ -114,7 +116,7 @@
 	var/phase_state = "" //icon_state when phasing
 	var/strafe = FALSE //If we are strafing
 	var/canstrafe = TRUE //if we can turn on strafing
-	
+
 	var/icon_chase = "alphachase"
 	var/step_in_chase = 0.75
 	var/chase_mode = FALSE
@@ -821,7 +823,7 @@
 	update_icon()
 	playsound(src, 'sound/machines/windowdoor.ogg', 50, 1)
 	if(!internal_damage)
-		SEND_SOUND(occupant, sound('sound/mecha/nominal.ogg',volume=50))
+		SEND_SOUND(occupant, sound('sound/mecha/welcomebrigador.ogg',volume=50))
 	AI.cancel_camera()
 	AI.controlled_mech = src
 	AI.remote_control = src
@@ -953,7 +955,7 @@
 		setDir(dir_in)
 		playsound(src, 'sound/machines/windowdoor.ogg', 50, 1)
 		if(!internal_damage)
-			SEND_SOUND(occupant, sound('sound/mecha/nominal.ogg',volume=50))
+			SEND_SOUND(occupant, sound('sound/mecha/welcomebrigador.ogg',volume=50))
 		return 1
 	else
 		return 0
@@ -1009,7 +1011,7 @@
 	setDir(dir_in)
 	log_message("[mmi_as_oc] moved in as pilot.", LOG_MECHA)
 	if(!internal_damage)
-		SEND_SOUND(occupant, sound('sound/mecha/nominal.ogg',volume=50))
+		SEND_SOUND(occupant, sound('sound/mecha/welcomebrigador.ogg',volume=50))
 	GrantActions(brainmob)
 	return TRUE
 

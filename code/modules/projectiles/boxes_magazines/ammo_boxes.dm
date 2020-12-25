@@ -42,6 +42,12 @@
 	icon_state = "9mmbox"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	max_ammo = 30
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_box/c9mm/nl
+	name = "rubber ammo box (9mm)"
+	icon_state = "9mmnlbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/nl
 
 /obj/item/ammo_box/c10mm
 	name = "ammo box (10mm)"
@@ -54,6 +60,18 @@
 	icon_state = "45box"
 	ammo_type = /obj/item/ammo_casing/c45
 	max_ammo = 20
+
+/obj/item/ammo_box/c46x30mm
+	name = "ammo box (4.6x30mm)"
+	icon_state = "wtbox"
+	ammo_type = /obj/item/ammo_casing/c46x30mm
+	max_ammo = 40
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_box/c46x30mm/nl
+	name = "rubber ammo box (4.6x30mm)"
+	icon_state = "wtboxnl"
+	ammo_type = /obj/item/ammo_casing/c46x30mm/nl
 
 /obj/item/ammo_box/a40mm
 	name = "ammo box (40mm grenades)"
@@ -77,14 +95,26 @@
 	max_ammo = 14
 
 /obj/item/ammo_box/foambox
-	name = "ammo box (Foam Darts)"
+	name = "granat na kulki"
 	icon = 'icons/obj/guns/toy.dmi'
 	icon_state = "foambox"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart
 	max_ammo = 40
+	multiple_sprites = 3
 	materials = list(/datum/material/iron = 500)
+	custom_price = 50
 
 /obj/item/ammo_box/foambox/riot
+	name = "granat na metalowe kulki"
 	icon_state = "foambox_riot"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
 	materials = list(/datum/material/iron = 50000)
+
+// pulse raifu ammo boxes //
+
+/obj/item/ammo_box/peacekeeper/lethal
+	name = "M2A45 pulse rifle ammo box (lethal)"
+	icon_state = "PDC"
+	ammo_type = /obj/item/ammo_casing/peacekeeper/lethal
+	caliber = "6mm"
+	max_ammo = 60

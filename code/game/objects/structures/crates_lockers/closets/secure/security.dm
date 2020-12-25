@@ -30,7 +30,8 @@
 	new /obj/item/clothing/gloves/color/captain(src)
 	new /obj/item/restraints/handcuffs/cable/zipties(src)
 	new /obj/item/storage/belt/sabre(src)
-	new /obj/item/gun/energy/e_gun(src)
+	new /obj/item/gun/ballistic/automatic/wt550/no_mag(src)
+	new /obj/item/ammo_box/magazine/wt550m9(src)
 	new /obj/item/door_remote/captain(src)
 	new /obj/item/card/id/captains_spare(src)
 	new /obj/item/storage/photo_album/Captain(src)
@@ -57,7 +58,9 @@
 	new /obj/item/assembly/flash/handheld(src)
 	new /obj/item/clothing/glasses/sunglasses/advanced(src)
 	new /obj/item/restraints/handcuffs/cable/zipties(src)
-	new /obj/item/gun/energy/e_gun/mini(src)
+	new /obj/item/ammo_box/magazine/sec9mm/nl(src)
+	new /obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag(src)
+	new /obj/item/ammo_box/magazine/sec9mm/nl(src)
 	new /obj/item/clothing/neck/petcollar(src)
 	new /obj/item/pet_carrier(src)
 	new /obj/item/door_remote/civillian(src)
@@ -121,6 +124,7 @@
 	new /obj/item/circuitboard/machine/techfab/department/security(src)
 	new /obj/item/storage/photo_album/HoS(src)
 	new /obj/item/card/id/departmental_budget/sec(src)
+	new /obj/item/clothing/suit/armor/hos/vest(src)
 
 /obj/structure/closet/secure_closet/warden
 	name = "\proper warden's locker"
@@ -162,6 +166,8 @@
 	new /obj/item/radio/headset/headset_sec/alt(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
 	new /obj/item/flashlight/seclite(src)
+	new /obj/item/clothing/head/helmet/secalt(src)
+	new /obj/item/ammo_box/c9mm/nl(src)
 
 /obj/structure/closet/secure_closet/security/sec
 
@@ -240,7 +246,7 @@
 	..()
 	for(var/i in 1 to 4)
 		new /obj/item/storage/backpack/duffelbag/sec/deputy(src)
-	
+
 /obj/structure/closet/secure_closet/injection
 	name = "lethal injections"
 	req_access = list(ACCESS_HOS)
@@ -318,6 +324,9 @@
 		new /obj/item/storage/box/rubbershot(src)
 	for(var/i in 1 to 3)
 		new /obj/item/gun/ballistic/shotgun/riot(src)
+	new /obj/item/ammo_box/c9mm/nl(src)
+	new /obj/item/ammo_box/c46x30mm/nl(src)
+
 
 /obj/structure/closet/secure_closet/armory3
 	name = "armory energy gun locker"
@@ -346,7 +355,7 @@
 	new /obj/item/clothing/suit/armor/bulletproof(src)
 
 /obj/structure/closet/secure_closet/lethalshots
-	name = "shotgun lethal rounds"
+	name = "lethal rounds locker"
 	req_access = list(ACCESS_ARMORY)
 	icon_state = "tac"
 
@@ -354,3 +363,5 @@
 	..()
 	for(var/i in 1 to 3)
 		new /obj/item/storage/box/lethalshot(src)
+	new /obj/item/ammo_box/c9mm(src)
+	new /obj/item/ammo_box/c46x30mm(src)

@@ -9,8 +9,10 @@
 	designation = "Default" //used for displaying the prefix & getting the current module of cyborg
 	has_limbs = 1
 	hud_type = /datum/hud/robot
-	light_system = MOVABLE_LIGHT
+	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
+	light_system = MOVABLE_LIGHT_DIRECTIONAL
 	light_on = FALSE
+	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
 	var/custom_name = ""
 	var/braintype = "Cyborg"
 	var/obj/item/robot_suit/robot_suit = null //Used for deconstruction to remember what the borg was constructed out of..
@@ -154,7 +156,7 @@
 
 	blacklisted_hats = typecacheof(blacklisted_hats)
 
-	playsound(loc, 'sound/voice/liveagain.ogg', 75, 1)
+	playsound(loc, 'sound/voice/dialup.ogg', 75, 1)
 	aicamera = new/obj/item/camera/siliconcam/robot_camera(src)
 	toner = tonermax
 	diag_hud_set_borgcell()

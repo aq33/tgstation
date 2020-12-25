@@ -198,6 +198,17 @@
 	icon_state = "laceups"
 	equip_delay_other = 50
 
+/obj/item/clothing/shoes/khaki_laceup
+	name = "khaki laceup shoes"
+	desc = "The height of fashion, and they're pre-polished!"
+	icon_state = "khaki_laceups"
+	item_state = "khaki_laceups"
+	equip_delay_other = 50
+
+/obj/item/clothing/shoes/laceup/brown
+	name = "brown laceup shoes"
+	icon_state = "brown_laceups"
+
 /obj/item/clothing/shoes/roman
 	name = "roman sandals"
 	desc = "Sandals with buckled leather straps on it."
