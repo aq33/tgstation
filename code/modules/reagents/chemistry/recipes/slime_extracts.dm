@@ -99,7 +99,7 @@
 	var/turf/location = get_turf(holder.my_atom)
 	new /obj/item/stack/sheet/stalinium(location, 10)
 	..()
-	
+
 /datum/chemical_reaction/slime/slimecapitalisium
 	required_reagents = list(/datum/reagent/gold = 1)
 	required_container = /obj/item/slime_extract/metal
@@ -156,7 +156,7 @@
 
 /datum/chemical_reaction/slime/slimemobspawn/spider/summon_mobs(datum/reagents/holder, turf/T)
 	T.visible_message("<span class='danger'>The slime extract begins to vibrate crikey-ingly!</span>")
-	addtimer(CALLBACK(src, .proc/chemical_mob_spawn, holder, 3, "Traitor Spider Slime", /mob/living/simple_animal/hostile/poison/giant_spider/nurse/midwife, "neutral", FALSE), 50)
+	addtimer(CALLBACK(src, .proc/chemical_mob_spawn, holder, 3, "Traitor Spider Slime", /mob/living/simple_animal/hostile/poison/giant_spider/midwife, "neutral", FALSE), 50)
 
 
 //Silver

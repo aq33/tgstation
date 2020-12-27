@@ -68,8 +68,7 @@
 	..()
 	var/turf/T = get_turf(src)
 
-	var/obj/structure/spider/eggcluster/E = new /obj/structure/spider/eggcluster(T)
-	E.player_spiders = TRUE
+	new /obj/structure/spider/eggcluster(T)
 
 	new /obj/effect/temp_visual/gravpush(T)
 	playsound(T, 'sound/items/party_horn.ogg', 50, 1, -1)
