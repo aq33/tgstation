@@ -76,8 +76,12 @@
 /obj/structure/spider/eggcluster/process()
 	amount_grown += rand(0,2)
 	if(amount_grown >= 100 && !ghost_ready)
-		notify_ghosts("[src] is ready to hatch!", null, enter_link="<a href=?src=[REF(src)];activate=1>(Click to play)</a>", source=src, action=NOTIFY_ATTACK, ignore_key = POLL_IGNORE_SPIDER)
+		if(istype(src, /obj/structure/spider/eggcluster/enriched))
+			color = rgb(214, 149, 241)
+		else
+			color = rgb(255, 182, 73)
 		ghost_ready = TRUE
+		notify_ghosts("[src] is ready to hatch!", 'sound/creatures/spider1.ogg', enter_link=null, source=src, action=NOTIFY_ORBIT, ignore_key = POLL_IGNORE_SPIDER)
 
 /obj/structure/spider/eggcluster/attack_ghost(mob/user)
 	. = ..()

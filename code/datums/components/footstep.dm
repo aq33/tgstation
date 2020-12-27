@@ -75,6 +75,10 @@
 		playsound(T, 'sound/effects/footstep/slime1.ogg', 15 * v)
 		return
 
+	if(istype(LM, /mob/living/simple_animal/hostile/poison/giant_spider))
+		playsound(T, 'sound/effects/footstep/spider_step1.ogg', 15 * v)
+		return
+
 	//for (simple) humanoid mobs (clowns, russians, pirates, etc.)
 	if(isshoefoot(LM))
 		if(!ishuman(LM))

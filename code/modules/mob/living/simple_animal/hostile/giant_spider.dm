@@ -40,6 +40,7 @@
 	icon_state = "guard"
 	icon_living = "guard"
 	icon_dead = "guard_dead"
+	deathsound = 'sound/creatures/spider_death.ogg'
 	mob_biotypes = list(MOB_ORGANIC, MOB_BUG)
 	speak_emote = list("chitters")
 	emote_hear = list("chitters")
@@ -61,12 +62,14 @@
 	pass_flags = PASSTABLE
 	move_to_delay = 6
 	attacktext = "bites"
-	attack_sound = 'sound/weapons/bite.ogg'
+	attack_sound = 'sound/creatures/spider1.ogg'
 	unique_name = 1
 	gold_core_spawnable = HOSTILE_SPAWN
 	see_in_dark = 4
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	poison_per_bite = 0
+	///Whether or not the spider is currently walking on webbing.
+	var/silk_walking = FALSE
 	///Whether or not the spider is in the middle of an action.
 	is_busy = FALSE
 	///How quickly the spider can place down webbing.  One is base speed, larger numbers are slower.
@@ -124,6 +127,8 @@ mob/living/simple_animal/hostile/poison/giant_spider/handle_temperature_damage()
 	poison_per_bite = 10
 	move_to_delay = 5
 	speed = -0.1
+	ventcrawler = VENTCRAWLER_ALWAYS
+	silk_walking = TRUE
 
 /**
   * # Spider Nurse
@@ -151,6 +156,8 @@ mob/living/simple_animal/hostile/poison/giant_spider/handle_temperature_damage()
 
 /mob/living/simple_animal/hostile/poison/giant_spider/nurse/Initialize()
 	. = ..()
+	var/datum/atom_hud/datahud = GLOB.huds[health_hud]
+    datahud.add_hud_to(src)
 
 /mob/living/simple_animal/hostile/poison/giant_spider/nurse/AttackingTarget()
 	if(is_busy)
@@ -199,8 +206,7 @@ mob/living/simple_animal/hostile/poison/giant_spider/handle_temperature_damage()
 	gold_core_spawnable = NO_SPAWN
 	//charger = TRUE
 	//charge_distance = 4
-	///Whether or not the tarantula is currently walking on webbing.
-	var/silk_walking = TRUE
+	silk_walking = TRUE
 	///The spider's charge ability
 	//var/obj/effect/proc_holder/tarantula_charge/charge
 
@@ -209,14 +215,14 @@ mob/living/simple_animal/hostile/poison/giant_spider/handle_temperature_damage()
 	//charge = new
 	//AddAbility(charge)
 
-/mob/living/simple_animal/hostile/poison/giant_spider/tarantula/Moved(atom/oldloc, dir)
+/mob/living/simple_animal/hostile/poison/giant_spider/Moved(atom/oldloc, dir)
 	. = ..()
 	var/obj/structure/spider/stickyweb/web = locate() in loc
 	if(web && !silk_walking)
-		speed = 1
+		speed = initial(speed)
 		silk_walking = TRUE
 	else if(!web && silk_walking)
-		speed = 3
+		speed = initial(speed)/2
 		silk_walking = FALSE
 
 /**
@@ -240,7 +246,9 @@ mob/living/simple_animal/hostile/poison/giant_spider/handle_temperature_damage()
 	move_to_delay = 4
 	poison_type = /datum/reagent/toxin/venom
 	speed = -0.5
+	ventcrawler = VENTCRAWLER_ALWAYS
 	gold_core_spawnable = NO_SPAWN
+	silk_walking = TRUE
 
 /**
   * # Spider Broodmother
@@ -259,8 +267,8 @@ mob/living/simple_animal/hostile/poison/giant_spider/handle_temperature_damage()
 	icon_state = "midwife"
 	icon_living = "midwife"
 	icon_dead = "midwife_dead"
-	maxHealth = 40
-	health = 40
+	maxHealth = 50
+	health = 50
 	melee_damage = 10
 	poison_per_bite = 3
 	gold_core_spawnable = NO_SPAWN
@@ -326,11 +334,20 @@ mob/living/simple_animal/hostile/poison/giant_spider/handle_temperature_damage()
 				if(ishuman(living_target) && (living_target.stat != DEAD || !consumed_mobs[living_target.tag])) //if they're not dead, you can consume them anyway
 					consumed_mobs[living_target.tag] = TRUE
 					fed++
-					lay_eggs.UpdateButtonIcon(TRUE)
+					if(fed >= 1)
+						lay_eggs.UpdateButtonIcon(TRUE)
 					visible_message("<span class='danger'>[src] sticks a proboscis into [living_target] and sucks a viscous substance out.</span>","<span class='notice'>You suck the nutriment out of [living_target], feeding you enough to lay a cluster of eggs.</span>")
 					living_target.death() //you just ate them, they're dead.
+				else if(!ishuman(living_target) && !consumed_mobs[living_target.tag])
+					consumed_mobs[living_target.tag] = TRUE
+					visible_message("<span class='danger'>[src] sticks a proboscis into [living_target] and sucks a viscous substance out.</span>","<span class='notice'>You suck the nutriment out of [living_target]. A tasty snack, but not enough for another cluster by itself.</span>")
+					living_target.death() //you just ate them, they're dead.
+					if(!issilicon(living_target))
+						fed += 0.25
+					if(fed >= 1)
+						lay_eggs.UpdateButtonIcon(TRUE)
 				else
-					to_chat(src, "<span class='warning'>[living_target] cannot sate your hunger!</span>")
+					visible_message("<span class='danger'>[src] wraps [living_target] into a cocoon.</span>","<span class='notice'>You wrap [living_target] into a cocoon.</span>")
 			cocoon_target.forceMove(casing)
 			if(cocoon_target.density || ismob(cocoon_target))
 				casing.icon_state = pick("cocoon_large1","cocoon_large2","cocoon_large3")
@@ -444,7 +461,7 @@ mob/living/simple_animal/hostile/poison/giant_spider/handle_temperature_damage()
 	if(!istype(owner, /mob/living/simple_animal/hostile/poison/giant_spider/midwife))
 		return FALSE
 	var/mob/living/simple_animal/hostile/poison/giant_spider/midwife/S = owner
-	if(enriched && !S.fed)
+	if(enriched && S.fed < 1)
 		return FALSE
 	return TRUE
 
