@@ -1,6 +1,9 @@
+//AQUILA EDIT REMOVAL BEGIN - AMBITIONS
+/*
 #define TRAITOR_HUMAN "human"
 #define TRAITOR_AI	  "AI"
-
+*/
+//AQUILA EDIT REMOVAL END
 /datum/antagonist/traitor
 	name = "Traitor"
 	roundend_category = "traitors"
@@ -71,11 +74,16 @@
 	objectives -= O
 
 /datum/antagonist/traitor/proc/forge_traitor_objectives()
+	add_objective(new /datum/objective/ambitions()) //SKYRAT EDIT ADDITION - AMBITIONS
+	//AQUILA EDIT REMOVAL BEGIN - AMBITIONS
+	/*
 	switch(traitor_kind)
 		if(TRAITOR_AI)
 			forge_ai_objectives()
 		else
 			forge_human_objectives()
+	*/
+	//AQUILA EDIT REMOVAL END
 
 /datum/antagonist/traitor/proc/forge_human_objectives()
 	var/is_hijacker = FALSE
@@ -210,6 +218,7 @@
 	owner.announce_objectives()
 	if(should_give_codewords)
 		give_codewords()
+	..() //AQUILA EDIT ADDITION - AMBITIONS
 
 /datum/antagonist/traitor/proc/update_traitor_icons_added(datum/mind/traitor_mind)
 	var/datum/atom_hud/antag/traitorhud = GLOB.huds[ANTAG_HUD_TRAITOR]
@@ -229,8 +238,12 @@
 			owner.current.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MALF)
 		if(TRAITOR_HUMAN)
 			show_tips('html/antagtips/traitor.html')
+			//AQUILA EDIT REMOVAL BEGIN - AMBITIONS
+			/*
 			if(should_equip)
 				equip(silent)
+			*/
+			//AQUILA EDIT REMOVAL END
 			owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/tatoralert.ogg', 100, FALSE, pressure_affected = FALSE)
 
 /datum/antagonist/traitor/apply_innate_effects(mob/living/mob_override)
