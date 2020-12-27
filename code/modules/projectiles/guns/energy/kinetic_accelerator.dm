@@ -38,7 +38,7 @@
 	flight_y_offset = 12
 	overheat_time = 12
 	spread = 7
-	max_mod_capacity = 90
+	max_mod_capacity = 85
 
 /obj/item/gun/energy/kinetic_accelerator/examine(mob/user)
 	. = ..()
