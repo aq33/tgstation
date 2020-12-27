@@ -157,7 +157,7 @@ mob/living/simple_animal/hostile/poison/giant_spider/handle_temperature_damage()
 /mob/living/simple_animal/hostile/poison/giant_spider/nurse/Initialize()
 	. = ..()
 	var/datum/atom_hud/datahud = GLOB.huds[health_hud]
-    datahud.add_hud_to(src)
+	datahud.add_hud_to(src)
 
 /mob/living/simple_animal/hostile/poison/giant_spider/nurse/AttackingTarget()
 	if(is_busy)
@@ -496,7 +496,6 @@ mob/living/simple_animal/hostile/poison/giant_spider/handle_temperature_damage()
 /datum/action/innate/spider/lay_eggs/enriched
 	name = "Lay Enriched Eggs"
 	desc = "Lay a cluster of eggs, which will soon grow into a greater spider.  Requires you drain a human per cluster of these eggs."
-	button_icon_state = "lay_enriched_eggs"
 	enriched = TRUE
 
 /datum/action/innate/spider/set_directive
