@@ -2675,6 +2675,9 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/structure/sign/warning/vacuum{
+	pixel_y = -32
+	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "afG" = (
@@ -71221,7 +71224,7 @@
 	width = 9
 	},
 /turf/open/space/basic,
-/area/space/nearstation)
+/area/space)
 "gqL" = (
 /obj/structure/cable,
 /obj/structure/closet/secure_closet/brig{
@@ -71367,9 +71370,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
-"jid" = (
-/turf/open/space/basic,
-/area/maintenance/starboard)
 "jwM" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -113899,7 +113899,7 @@ bkd
 aCa
 aCa
 aCa
-bkR
+bkd
 jOM
 ubE
 jFV
@@ -114672,9 +114672,9 @@ aaa
 aaa
 aaa
 gfe
-syW
-jid
-jid
+aaa
+aaa
+aaa
 ajq
 ajq
 ajq
@@ -114929,9 +114929,9 @@ aaa
 aaa
 aaa
 aaa
-syW
-syW
-jid
+aaa
+aaa
+aaa
 ajq
 ajq
 aCa
@@ -115187,8 +115187,8 @@ aaa
 aaa
 aaa
 aaa
-syW
-jid
+aaa
+aaa
 ajq
 ajq
 aCa
@@ -115445,7 +115445,7 @@ aaa
 aaa
 aaa
 aaa
-jid
+aaa
 ajq
 ajq
 aCa
@@ -115702,7 +115702,7 @@ aaa
 aaa
 aaa
 aaa
-syW
+aaa
 ajq
 ajq
 aCa
@@ -115959,7 +115959,7 @@ aaa
 aaa
 aaa
 aaa
-syW
+aaa
 aeU
 ajq
 aCa
