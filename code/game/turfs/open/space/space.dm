@@ -174,6 +174,7 @@
 		//now we're on the new z_level, proceed the space drifting
 		stoplag()//Let a diagonal move finish, if necessary
 		A.newtonian_move(A.inertia_dir)
+		A.inertia_moving = TRUE
 
 
 /turf/open/space/singularity_act()
