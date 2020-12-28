@@ -1,4 +1,4 @@
-/obj/machinery/power/generator //stop, nerfhammer time
+/obj/machinery/power/generator
 	name = "thermoelectric generator"
 	desc = "It's a high efficiency thermoelectric generator."
 	icon_state = "teg"
@@ -50,7 +50,7 @@
 	else
 		cut_overlays()
 
-		var/L = min(round(lastgenlev/75000),11)
+		var/L = min(round(lastgenlev/(100000),11))
 		if(L != 0)
 			add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
 
@@ -82,13 +82,13 @@
 				if((cold_circ.eff+hot_circ.eff)/2000 < 1)
 					techbonus = 0
 				else
-					techbonus = (log((cold_circ.eff+hot_circ.eff)/2000))/4
+					techbonus = (log((cold_circ.eff+hot_circ.eff)/2000))
 
 				var/energy_transfer = delta_temperature*hot_air_heat_capacity*cold_air_heat_capacity/(hot_air_heat_capacity+cold_air_heat_capacity)
 
 				var/heat = energy_transfer*(1-efficiency)
 				if(delta_temperature > 1500)
-					lastgen += ((energy_transfer*efficiency)+(energy_transfer*(techbonus/10)))/10 //defines output
+					lastgen += ((energy_transfer*efficiency)+(energy_transfer*(techbonus/3)))/10 //defines output
 
 				hot_air.set_temperature(hot_air.return_temperature() - energy_transfer/hot_air_heat_capacity)
 				cold_air.set_temperature(cold_air.return_temperature() + heat/cold_air_heat_capacity)
@@ -114,8 +114,8 @@
 	src.updateDialog()
 
 /obj/machinery/power/generator/process()
-	//Setting this number higher just makes the change in power output slower, it doesnt actualy reduce power output cause **math**
 	var/tier
+	var/ohno = FALSE
 	if(cold_circ && hot_circ)
 		tier = (cold_circ.eff + hot_circ.eff)*2
 	else
@@ -124,16 +124,18 @@
 		tier += (abs(MB.rating-1))*2000
 	for(var/obj/item/stock_parts/scanning_module/SM in component_parts)
 		tier += (abs(SM.rating-1))*2000
+	//Setting this number higher just makes the change in power output slower, it doesnt actualy reduce power output cause **math**
 	var/power_output = round(lastgen / 20)
 	add_avail(power_output)
 	lastgenlev = power_output
 	lastgen -= power_output
-
-	if(power_output > (500000+tier))
-		playsound(src, 'sound/machines/sm/loops/delamming.ogg', 50, FALSE, 10)
-//		if(power_output > (750000+tier))
-//			var/turf/T = get_turf(src)
-//			explosion(T, 0, 2, 3, 4, adminlog = TRUE, ignorecap = FALSE, flame_range = 5, silent = FALSE, smoke = FALSE) //tymczasowe usunięcie detonacji przy przekroczeniu progu
+	if(src.obj_integrity < 75)
+		ohno = TRUE
+	if(power_output > (1000000+tier))
+		playsound(src, 'sound/machines/sm/loops/delamming.ogg', 50, TRUE, 10)
+		if(power_output > 1500000 + tier/2 && ohno)
+			var/turf/T = get_turf(src)
+			explosion(T, round((lastgen/3500000)-tier, 3), round((lastgen/3500000)-tier, 3), round((lastgen/3500000)-tier, 5), round((lastgen/3500000)-tier, 10), adminlog = TRUE, ignorecap = FALSE, flame_range = round((lastgen/3500000)-tier, 10), silent = FALSE, smoke = FALSE) //testowo eksplozja uszkodzonego TEGa skaluje się z outputem w momencie uszkodzenia
 
 	..()
 
