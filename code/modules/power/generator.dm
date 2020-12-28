@@ -131,11 +131,11 @@
 	lastgen -= power_output
 	if(src.obj_integrity < 75)
 		ohno = TRUE
-	if(power_output > (1000000+tier))
+	if(power_output > 1500000 + tier)
 		playsound(src, 'sound/machines/sm/loops/delamming.ogg', 50, TRUE, 10)
-		if(power_output > 1500000 + tier/2 && ohno)
+		if(ohno)
 			var/turf/T = get_turf(src)
-			explosion(T, round((lastgen/3500000)-tier, 3), round((lastgen/3500000)-tier, 3), round((lastgen/3500000)-tier, 5), round((lastgen/3500000)-tier, 10), adminlog = TRUE, ignorecap = FALSE, flame_range = round((lastgen/3500000)-tier, 10), silent = FALSE, smoke = FALSE) //testowo eksplozja uszkodzonego TEGa skaluje się z outputem w momencie uszkodzenia
+			explosion(T, round(min((lastgen/5000000)-tier, 4)), round(min((lastgen/4500000)-tier, 4)), round(min((lastgen/4500000)-tier, 5)), round(min((lastgen/4000000)-tier, 6)), adminlog = TRUE, ignorecap = FALSE, flame_range = round(min((lastgen/5000000)-tier, 7)), silent = FALSE, smoke = FALSE) //testowo eksplozja uszkodzonego TEGa skaluje się z outputem w momencie uszkodzenia
 
 	..()
 
@@ -257,6 +257,23 @@
 /obj/machinery/power/generator/crowbar_act(mob/user, obj/item/I)
 	default_deconstruction_crowbar(I)
 	return TRUE
+
+/obj/machinery/power/generator/welder_act(mob/living/user, obj/item/I)
+	if(obj_integrity != max_integrity && user.a_intent == INTENT_HELP)
+		if(!I.tool_start_check(user, amount=15))
+			return
+		user.visible_message(
+			"<span class='notice'>[user] begins patching up [src] with [I].</span>",
+			"<span class='notice'>You begin restoring the damage to [src]...</span>")
+		I.use_tool(src, user, 40, amount=15, volume=50)
+		user.visible_message(
+			"<span class='notice'>[user] fixes [src]!</span>",
+			"<span class='notice'>You repair [src].</span>")
+		obj_integrity = max_integrity
+	else if(user.a_intent != INTENT_HELP)
+		..()
+
+
 
 /obj/machinery/power/generator/on_deconstruction()
 	kill_circs()
