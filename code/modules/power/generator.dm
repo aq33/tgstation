@@ -7,7 +7,7 @@
 
 	var/obj/machinery/atmospherics/components/binary/circulator/cold_circ
 	var/obj/machinery/atmospherics/components/binary/circulator/hot_circ
-
+	var/tier = 0
 	var/lastgen = 0
 	var/lastgenlev = -1
 	var/lastcirc = "00"
@@ -19,6 +19,7 @@
 	connect_to_network()
 	SSair.atmos_machinery += src
 	update_icon()
+	//stock parts needed for TEG
 	component_parts = list(new /obj/item/circuitboard/machine/generator,
 		new /obj/item/stock_parts/matter_bin,
 		new /obj/item/stock_parts/matter_bin,
@@ -50,12 +51,18 @@
 	else
 		cut_overlays()
 
-		var/L = min(round(lastgenlev/(100000),11))
-		if(L != 0)
-			add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
-
+		//display overlay
 		if(hot_circ && cold_circ)
 			add_overlay("teg-oc[lastcirc]")
+
+		//power level overlay
+		var/L = min(round(lastgenlev/(83333)),18)
+		if(L != 0)
+			//if outputting power level that may result in explosion when damaged, start blinking
+			if(lastgenlev > 1500000 + tier)
+				add_overlay(image('icons/obj/power.dmi', "teg-critical"))
+				return
+			add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
 
 
 #define GENRATE 800		// generator output coefficient from Q
@@ -76,20 +83,26 @@
 
 			var/delta_temperature = hot_air.return_temperature() - cold_air.return_temperature()
 
+			//can we start heat transfer thing and potentially start generating power?
 			if(delta_temperature > 0 && cold_air_heat_capacity > 0 && hot_air_heat_capacity > 0)
 				var/efficiency = 0.35
 				var/techbonus
+
+				//stock parts power generation bonus
 				if((cold_circ.eff+hot_circ.eff)/2000 < 1)
 					techbonus = 0
 				else
 					techbonus = (log((cold_circ.eff+hot_circ.eff)/2000))
 
+				//secret ingredient that will help us later
 				var/energy_transfer = delta_temperature*hot_air_heat_capacity*cold_air_heat_capacity/(hot_air_heat_capacity+cold_air_heat_capacity)
-
 				var/heat = energy_transfer*(1-efficiency)
-				if(delta_temperature > 1500)
-					lastgen += ((energy_transfer*efficiency)+(energy_transfer*(techbonus/3)))/10 //defines output
 
+				//minimal delta T for TEG to actually start generating power, math defines power output
+				if(delta_temperature > 1500)
+					lastgen += ((energy_transfer*efficiency)+(energy_transfer*(techbonus/3)))/10
+
+				//math responsible for cooling hot loop gas and heating up cold loop gas
 				hot_air.set_temperature(hot_air.return_temperature() - energy_transfer/hot_air_heat_capacity)
 				cold_air.set_temperature(cold_air.return_temperature() + heat/cold_air_heat_capacity)
 
@@ -114,8 +127,9 @@
 	src.updateDialog()
 
 /obj/machinery/power/generator/process()
-	var/tier
 	var/ohno = FALSE
+
+	//stock parts effect on TEG performance
 	if(cold_circ && hot_circ)
 		tier = (cold_circ.eff + hot_circ.eff)*2
 	else
@@ -124,18 +138,21 @@
 		tier += (abs(MB.rating-1))*2000
 	for(var/obj/item/stock_parts/scanning_module/SM in component_parts)
 		tier += (abs(SM.rating-1))*2000
-	//Setting this number higher just makes the change in power output slower, it doesnt actualy reduce power output cause **math**
+	//How fast power output changes (higher divider, slower change)
 	var/power_output = round(lastgen / 20)
 	add_avail(power_output)
 	lastgenlev = power_output
 	lastgen -= power_output
+	//how damaged TEG needs to be to explode from overload
 	if(src.obj_integrity < 75)
 		ohno = TRUE
+	//menacing hum
 	if(power_output > 1500000 + tier)
 		playsound(src, 'sound/machines/sm/loops/delamming.ogg', 50, TRUE, 10)
+		//create explosion scaled with output
 		if(ohno)
 			var/turf/T = get_turf(src)
-			explosion(T, round(min((lastgen/5000000)-tier, 4)), round(min((lastgen/4500000)-tier, 4)), round(min((lastgen/4500000)-tier, 5)), round(min((lastgen/4000000)-tier, 6)), adminlog = TRUE, ignorecap = FALSE, flame_range = round(min((lastgen/5000000)-tier, 7)), silent = FALSE, smoke = FALSE) //testowo eksplozja uszkodzonego TEGa skaluje się z outputem w momencie uszkodzenia
+			explosion(T, round(0.5*(power_output/(1500000 + tier))), round(1*(power_output/(1500000 + tier))), round(1.5*(power_output/(1500000 + tier))), round(2*(power_output/(1500000 + tier))), adminlog = TRUE, ignorecap = FALSE, flame_range = round(2.5*(power_output/(1500000 + tier))), silent = FALSE, smoke = FALSE)
 
 	..()
 
@@ -270,6 +287,7 @@
 			"<span class='notice'>[user] fixes [src]!</span>",
 			"<span class='notice'>You repair [src].</span>")
 		obj_integrity = max_integrity
+		return
 	else if(user.a_intent != INTENT_HELP)
 		..()
 

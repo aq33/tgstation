@@ -94,14 +94,14 @@
 
 /obj/machinery/atmospherics/components/binary/circulator/update_icon()
 	if(!is_operational())
-		icon_state = "circ-p-[flipped]"
+		icon_state = "circ-p-0"
 	else if(last_pressure_delta > 0)
 		if(last_pressure_delta > ONE_ATMOSPHERE)
-			icon_state = "circ-run-[flipped]"
+			icon_state = "circ-run-0"
 		else
-			icon_state = "circ-slow-[flipped]"
+			icon_state = "circ-slow-0"
 	else
-		icon_state = "circ-off-[flipped]"
+		icon_state = "circ-off-0"
 
 /obj/machinery/atmospherics/components/binary/circulator/wrench_act(mob/living/user, obj/item/I)
 	if(!panel_open)
