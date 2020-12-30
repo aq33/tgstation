@@ -40,11 +40,8 @@
 	SSair.atmos_machinery -= src
 	return ..()
 
-/obj/machinery/power/generator/setDir()
-	..()
-	update_icon()
-
 /obj/machinery/power/generator/update_icon()
+
 	if(stat & (NOPOWER|BROKEN))
 		cut_overlays()
 	else
@@ -145,6 +142,7 @@
 //Main proc
 /obj/machinery/power/generator/process()
 	var/ohno = FALSE
+
 	//stock parts effect on TEG performance
 	if(cold_circ && hot_circ)
 		tier = (cold_circ.eff + hot_circ.eff)*2
@@ -278,7 +276,6 @@
 	if(!anchored)
 		return
 	find_circs()
-	update_icon()
 	to_chat(user, "<span class='notice'>You update [src]'s circulator links.</span>")
 	return TRUE
 
@@ -287,7 +284,6 @@
 		return TRUE
 	panel_open = !panel_open
 	I.play_tool_sound(src)
-	update_icon()
 	to_chat(user, "<span class='notice'>You [panel_open?"open":"close"] the panel on [src].</span>")
 	return TRUE
 

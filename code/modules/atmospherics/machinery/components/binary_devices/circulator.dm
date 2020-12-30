@@ -3,7 +3,7 @@
 #define CIRCULATOR_HOT 0
 #define CIRCULATOR_COLD 1
 
-/obj/machinery/atmospherics/components/binary/circulator //stop, nerfhammer time
+/obj/machinery/atmospherics/components/binary/circulator
 	name = "circulator/heat exchanger"
 	desc = "A gas circulator pump and heat exchanger."
 	icon_state = "circ-off-0"
@@ -39,7 +39,11 @@
 		new /obj/item/stack/sheet/plasteel,
 		new /obj/item/stack/sheet/plasteel,
 		new /obj/item/stack/sheet/plasteel,
-		new /obj/item/stack/cable_coil/five)
+		new /obj/item/stack/cable_coil,
+		new /obj/item/stack/cable_coil,
+		new /obj/item/stack/cable_coil,
+		new /obj/item/stack/cable_coil,
+		new /obj/item/stack/cable_coil)
 
 /obj/machinery/atmospherics/components/binary/circulator/ComponentInitialize()
 	. = ..()
@@ -109,10 +113,8 @@
 	if(!is_operational())
 		icon_state = "circ-p-0"
 	else if(last_pressure_delta > 0)
-		if(last_pressure_delta > 1000)
+		if(last_pressure_delta > ONE_ATMOSPHERE)
 			icon_state = "circ-run-0"
-		else if(last_pressure_delta > 500)
-			icon_state = "circ-mid-0"
 		else
 			icon_state = "circ-slow-0"
 	else
@@ -208,8 +210,20 @@
 	pixel_x = 0
 	pixel_y = 0
 
-/obj/machinery/atmospherics/components/binary/circulator/setDir()
-	..()
+/obj/machinery/atmospherics/components/binary/circulator/verb/circulator_flip()
+	set name = "Flip"
+	set category = "Object"
+	set src in oview(1)
+
+	if(!ishuman(usr))
+		return
+
+	if(anchored)
+		to_chat(usr, "<span class='danger'>[src] is anchored!</span>")
+		return
+
+	flipped = !flipped
+	to_chat(usr, "<span class='notice'>You flip [src].</span>")
 	update_icon()
 
 obj/machinery/atmospherics/components/binary/circulator/RefreshParts()
