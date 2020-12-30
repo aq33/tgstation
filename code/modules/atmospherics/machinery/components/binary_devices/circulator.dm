@@ -3,7 +3,7 @@
 #define CIRCULATOR_HOT 0
 #define CIRCULATOR_COLD 1
 
-/obj/machinery/atmospherics/components/binary/circulator //stop, nerfhammer time
+/obj/machinery/atmospherics/components/binary/circulator
 	name = "circulator/heat exchanger"
 	desc = "A gas circulator pump and heat exchanger."
 	icon_state = "circ-off-0"
@@ -13,8 +13,6 @@
 	pipe_flags = PIPING_ONE_PER_TURF | PIPING_DEFAULT_LAYER_ONLY
 
 	density = TRUE
-
-
 	var/flipped = 0
 	var/mode = CIRCULATOR_HOT
 	var/obj/machinery/power/generator/generator
@@ -87,6 +85,10 @@
 	..()
 	update_icon()
 
+/obj/machinery/atmospherics/components/binary/circulator/setDir()
+	..()
+	update_icon()
+
 /obj/machinery/atmospherics/components/binary/circulator/update_icon()
 	if(stat & (NOPOWER|BROKEN))
 		cut_overlays()
@@ -125,7 +127,7 @@
 		default_unfasten_wrench(user, I)
 		if(generator)
 			disconnectFromGenerator()
-		return TRUE
+			return TRUE
 
 	var/obj/machinery/atmospherics/node1 = nodes[1]
 	var/obj/machinery/atmospherics/node2 = nodes[2]
@@ -208,9 +210,20 @@
 	pixel_x = 0
 	pixel_y = 0
 
-/obj/machinery/atmospherics/components/binary/circulator/setDir()
-	..()
-	update_icon()
+/obj/machinery/atmospherics/components/binary/circulator/verb/circulator_flip()
+	set name = "Flip"
+	set category = "Object"
+	set src in oview(1)
+
+	if(!ishuman(usr))
+		return
+
+	if(anchored)
+		to_chat(usr, "<span class='danger'>[src] is anchored!</span>")
+		return
+
+	flipped = !flipped
+	to_chat(usr, "<span class='notice'>You flip [src].</span>")
 
 obj/machinery/atmospherics/components/binary/circulator/RefreshParts()
 	eff = 0

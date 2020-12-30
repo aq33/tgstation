@@ -80,8 +80,6 @@
 			return
 		add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
 
-#define GENRATE 800		// generator output coefficient from Q
-
 //Handles atmos stuff and power generation math
 /obj/machinery/power/generator/process_atmos()
 
