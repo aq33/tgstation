@@ -9,7 +9,7 @@
 	icon_state = "circ-off-0"
 	var/eff
 	var/active = FALSE
-
+	can_be_unanchored = TRUE
 	var/last_pressure_delta = 0
 	pipe_flags = PIPING_ONE_PER_TURF | PIPING_DEFAULT_LAYER_ONLY
 
@@ -40,11 +40,7 @@
 		new /obj/item/stack/sheet/plasteel,
 		new /obj/item/stack/sheet/plasteel,
 		new /obj/item/stack/sheet/plasteel,
-		new /obj/item/stack/cable_coil,
-		new /obj/item/stack/cable_coil,
-		new /obj/item/stack/cable_coil,
-		new /obj/item/stack/cable_coil,
-		new /obj/item/stack/cable_coil)
+		new /obj/item/stack/cable_coil/five)
 
 /obj/machinery/atmospherics/components/binary/circulator/ComponentInitialize()
 	. = ..()
@@ -93,11 +89,28 @@
 	update_icon()
 
 /obj/machinery/atmospherics/components/binary/circulator/update_icon()
+	if(stat & (NOPOWER|BROKEN))
+		cut_overlays()
+	else
+		cut_overlays()
+
+	//display front face if facing south
+	if(dir == SOUTH && !generator)
+		add_overlay(image('icons/obj/power.dmi', "teg_front", BELOW_OBJ_LAYER, pixel_y = -32))
+
+	if(mode == CIRCULATOR_HOT && anchored)
+		add_overlay(image('icons/obj/atmospherics/components/binary_devices.dmi', "circ-ov-hot"))
+	else if(mode != CIRCULATOR_HOT && anchored)
+		add_overlay(image('icons/obj/atmospherics/components/binary_devices.dmi', "circ-ov-cold"))
+
+	//speen states
 	if(!is_operational())
 		icon_state = "circ-p-0"
 	else if(last_pressure_delta > 0)
-		if(last_pressure_delta > ONE_ATMOSPHERE)
+		if(last_pressure_delta > 1000)
 			icon_state = "circ-run-0"
+		else if(last_pressure_delta > 500)
+			icon_state = "circ-mid-0"
 		else
 			icon_state = "circ-slow-0"
 	else
@@ -111,6 +124,7 @@
 	if(generator)
 		disconnectFromGenerator()
 	to_chat(user, "<span class='notice'>You [anchored?"secure":"unsecure"] [src].</span>")
+	return TRUE
 
 
 	var/obj/machinery/atmospherics/node1 = nodes[1]
@@ -193,20 +207,8 @@
 	pixel_x = 0
 	pixel_y = 0
 
-/obj/machinery/atmospherics/components/binary/circulator/verb/circulator_flip()
-	set name = "Flip"
-	set category = "Object"
-	set src in oview(1)
-
-	if(!ishuman(usr))
-		return
-
-	if(anchored)
-		to_chat(usr, "<span class='danger'>[src] is anchored!</span>")
-		return
-
-	flipped = !flipped
-	to_chat(usr, "<span class='notice'>You flip [src].</span>")
+/obj/machinery/atmospherics/components/binary/circulator/setDir()
+	..()
 	update_icon()
 
 obj/machinery/atmospherics/components/binary/circulator/RefreshParts()

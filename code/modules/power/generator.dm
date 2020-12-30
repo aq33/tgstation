@@ -29,11 +29,7 @@
 		new /obj/item/stock_parts/scanning_module,
 		new /obj/item/stack/sheet/glass,
 		new /obj/item/stack/sheet/glass,
-		new /obj/item/stack/cable_coil,
-		new /obj/item/stack/cable_coil,
-		new /obj/item/stack/cable_coil,
-		new /obj/item/stack/cable_coil,
-		new /obj/item/stack/cable_coil)
+		new /obj/item/stack/cable_coil/five)
 
 /obj/machinery/power/generator/ComponentInitialize()
 	. = ..()
@@ -44,28 +40,42 @@
 	SSair.atmos_machinery -= src
 	return ..()
 
-/obj/machinery/power/generator/update_icon()
+/obj/machinery/power/generator/setDir()
+	..()
+	update_icon()
 
+/obj/machinery/power/generator/update_icon()
 	if(stat & (NOPOWER|BROKEN))
 		cut_overlays()
 	else
 		cut_overlays()
 
-		//display overlay
-		if(hot_circ && cold_circ)
-			add_overlay("teg-oc[lastcirc]")
+	//display front wall of TEG when facing east or west
+	if((dir == EAST || dir == WEST) && (!hot_circ || !cold_circ))
+		add_overlay(image('icons/obj/power.dmi', "teg_front", BELOW_OBJ_LAYER, pixel_y = -32))
 
-		//power level overlay
-		var/L = min(round(lastgenlev/(83333)),18)
-		if(L != 0)
-			//if outputting power level that may result in explosion when damaged, start blinking
-			if(lastgenlev > 1500000 + tier)
-				add_overlay(image('icons/obj/power.dmi', "teg-critical"))
-				return
-			add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
+	//display overlay
+	if(!hot_circ && !cold_circ && anchored)
+		add_overlay("teg-disp-error")
+	else
+		if(hot_circ.loc == get_step(src, EAST) || hot_circ.loc == get_step(src, NORTH))
+			add_overlay("teg-disp-hotright")
+		else if(cold_circ.loc == get_step(src, EAST) || cold_circ.loc == get_step(src, NORTH))
+			add_overlay("teg-disp-coldright")
 
+		if(hot_circ.loc == get_step(src, WEST) || hot_circ.loc == get_step(src, SOUTH))
+			add_overlay("teg-disp-hotleft")
+		else if(cold_circ.loc == get_step(src, WEST) || cold_circ.loc == get_step(src, SOUTH))
+			add_overlay("teg-disp-coldleft")
 
-#define GENRATE 800		// generator output coefficient from Q
+	//power level overlay
+	var/L = min(round(lastgenlev/(83333)),18)
+	if(L != 0 && anchored)
+		//if outputting power level that may result in explosion when damaged, start blinking
+		if(lastgenlev > 1500000 + tier)
+			add_overlay(image('icons/obj/power.dmi', "teg-critical"))
+			return
+		add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
 
 /obj/machinery/power/generator/process_atmos()
 
@@ -128,7 +138,6 @@
 
 /obj/machinery/power/generator/process()
 	var/ohno = FALSE
-
 	//stock parts effect on TEG performance
 	if(cold_circ && hot_circ)
 		tier = (cold_circ.eff + hot_circ.eff)*2
@@ -253,6 +262,7 @@
 	if(!anchored)
 		kill_circs()
 	connect_to_network()
+	update_icon()
 	to_chat(user, "<span class='notice'>You [anchored?"secure":"unsecure"] [src].</span>")
 	return TRUE
 
@@ -260,6 +270,7 @@
 	if(!anchored)
 		return
 	find_circs()
+	update_icon()
 	to_chat(user, "<span class='notice'>You update [src]'s circulator links.</span>")
 	return TRUE
 
@@ -268,6 +279,7 @@
 		return TRUE
 	panel_open = !panel_open
 	I.play_tool_sound(src)
+	update_icon()
 	to_chat(user, "<span class='notice'>You [panel_open?"open":"close"] the panel on [src].</span>")
 	return TRUE
 
