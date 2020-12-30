@@ -466,6 +466,7 @@
 	contains = list(/obj/item/ammo_box/magazine/sec9mm/dry,
 					/obj/item/ammo_box/magazine/sec9mm/dry,
 					/obj/item/ammo_box/magazine/sec9mm/dry)
+	crate_name = "SG19 magazines crate (DRY)"
 
 /datum/supply_pack/munitions/sec9mmmagsrubber
 	name = "SG19 Magazines Crate (RUBBER)"
@@ -474,6 +475,7 @@
 	contains = list(/obj/item/ammo_box/magazine/sec9mm/nl,
 					/obj/item/ammo_box/magazine/sec9mm/nl,
 					/obj/item/ammo_box/magazine/sec9mm/nl)
+	crate_name = "SG19 magazines crate (RUBBER)"
 
 /datum/supply_pack/munitions/sec9mmmagslethal
 	name = "SG19 Magazines Crate (LETHAL)"
@@ -484,6 +486,7 @@
 					/obj/item/ammo_box/magazine/sec9mm)
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_name = "SG19 magazines crate (LETHAL)"
 
 /datum/supply_pack/munitions/sec9mmmagsext
 	name = "SG19 Extended Magazines Crate"
@@ -491,6 +494,7 @@
 	cost = 1000
 	contains = list(/obj/item/ammo_box/magazine/sec9mm/ext/dry,
 					/obj/item/ammo_box/magazine/sec9mm/ext/dry)
+	crate_name = "SG19 extended magazines crate"
 
 /datum/supply_pack/munitions/wt550mags
 	name = "WT-550 Auto Rifle Magazines Crate (DRY)"
@@ -499,6 +503,7 @@
 	contains = list(/obj/item/ammo_box/magazine/wt550m9/dry,
 					/obj/item/ammo_box/magazine/wt550m9/dry,
 					/obj/item/ammo_box/magazine/wt550m9/dry)
+	crate_name = "WT-550 magazines crate (DRY)"
 
 /datum/supply_pack/munitions/wt550magsrubber
 	name = "WT-550 Auto Rifle Magazines Crate (RUBBER)"
@@ -507,6 +512,7 @@
 	contains = list(/obj/item/ammo_box/magazine/wt550m9/wtnl,
 					/obj/item/ammo_box/magazine/wt550m9/wtnl,
 					/obj/item/ammo_box/magazine/wt550m9/wtnl)
+	crate_name = "WT-550 magazines crate (RUBBER)"
 
 /datum/supply_pack/munitions/wt550magslethal
 	name = "WT-550 Auto Rifle Magazines Crate (LETHAL)"
@@ -517,6 +523,7 @@
 					/obj/item/ammo_box/magazine/wt550m9)
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_name = "WT-550 magazines crate (LETHAL)"
 
 /datum/supply_pack/munitions/riflemag
 	name = "wz.14 Riot Rifle Magazines Crate (DRY)"
@@ -525,6 +532,7 @@
 	contains = list(/obj/item/ammo_box/magazine/a762/mag/dry,
 					/obj/item/ammo_box/magazine/a762/mag/dry,
 					/obj/item/ammo_box/magazine/a762/mag/dry)
+	crate_name = "wz.14 magazines crate (DRY)"
 
 /datum/supply_pack/munitions/riflemagrubber
 	name = "wz.14 Riot Rifle Magazines Crate (RUBBER)"
@@ -533,6 +541,7 @@
 	contains = list(/obj/item/ammo_box/magazine/a762/mag/nl,
 					/obj/item/ammo_box/magazine/a762/mag/nl,
 					/obj/item/ammo_box/magazine/a762/mag/nl)
+	crate_name = "wz.14 magazines crate (RUBBER)"
 
 /datum/supply_pack/munitions/riflemaglethal
 	name = "wz.14 Riot Rifle Magazines Crate (LETHAL)"
@@ -543,6 +552,7 @@
 					/obj/item/ammo_box/magazine/a762/mag)
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_name = "wz.14 magazines crate (LETHAL)"
 
 //Ammo boxes
 /datum/supply_pack/munitions/sec9mmboxnl
@@ -552,6 +562,7 @@
 	contains = list(/obj/item/ammo_box/c9mm/nl,
 					/obj/item/ammo_box/c9mm/nl,
 					/obj/item/ammo_box/c9mm/nl)
+	crate_name = "non-lethal ammo crate (9mm)"
 
 /datum/supply_pack/munitions/sec9mmbox
 	name = "9mm Ammo Crate"
@@ -562,6 +573,7 @@
 					/obj/item/ammo_box/c9mm)
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_name = "lethal ammo crate (9mm)"
 
 /datum/supply_pack/munitions/WTboxnl
 	name = "4.6x30mm Non-Lethal Ammo Crate"
@@ -570,6 +582,7 @@
 	contains = list(/obj/item/ammo_box/c46x30mm/nl,
 					/obj/item/ammo_box/c46x30mm/nl,
 					/obj/item/ammo_box/c46x30mm/nl)
+	crate_name = "non-lethal ammo crate (4.6x30mm)"
 
 /datum/supply_pack/munitions/WTbox
 	name = "4.6x30mm Ammo Crate"
@@ -580,6 +593,7 @@
 					/obj/item/ammo_box/c46x30mm)
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_name = "lethal ammo crate (4.6x30mm)"
 
 /datum/supply_pack/munitions/shottyammonl
 	name = ".410 Non-Lethal Ammo Crate"
@@ -589,6 +603,7 @@
 					/obj/item/storage/box/rubbershot,
 					/obj/item/storage/box/rubbershot,
 					/obj/item/storage/belt/bandolier)
+	crate_name = "non-lethal ammo crate (.410)"
 
 /datum/supply_pack/munitions/shottyammo
 	name = ".410 Lethal Ammo Crate"
@@ -600,6 +615,7 @@
 					/obj/item/storage/belt/bandolier)
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_name = "lethal ammo crate (.410)"
 
 /datum/supply_pack/munitions/rifleboxnl
 	name = "7.62mm Non-Lethal Ammo Crate"
@@ -608,6 +624,7 @@
 	contains = list(/obj/item/ammo_box/a762/box/nl,
 					/obj/item/ammo_box/a762/box/nl,
 					/obj/item/ammo_box/a762/box/nl)
+	crate_name = "non-lethal ammo crate (7.62mm)"
 
 /datum/supply_pack/munitions/riflebox
 	name = "7.62mm Lethal Ammo Crate"
@@ -618,6 +635,7 @@
 					/obj/item/ammo_box/a762/box)
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_name = "lethal ammo crate (7.62mm)"
 
 //Mines, grenades
 /datum/supply_pack/munitions/smartmine
@@ -904,7 +922,7 @@
 	cost = 3500
 	contains = list(/obj/item/gun/ballistic/automatic/wt550,
 					/obj/item/gun/ballistic/automatic/wt550)
-	crate_name = "auto rifle crate"
+	crate_name = "PDW crate"
 
 /datum/supply_pack/security/armory/sec/secpistol
 	name = "SG19 Security Pistols Crate"
@@ -912,7 +930,7 @@
 	cost = 3500
 	contains = list(/obj/item/gun/ballistic/automatic/pistol/secpistol,
 					/obj/item/gun/ballistic/automatic/pistol/secpistol)
-	crate_name = "auto rifle crate"
+	crate_name = "SG19 crate"
 
 /datum/supply_pack/security/armory/sec/secpistol/tactical
 	name = "Tactical SG19 Pistols Crate"
@@ -922,7 +940,7 @@
 					/obj/item/ammo_box/magazine/sec9mm/ext,
 					/obj/item/gun/ballistic/automatic/pistol/secpistol/tactical,
 					/obj/item/ammo_box/magazine/sec9mm/ext)
-	crate_name = "tactical pistols crate"
+	crate_name = "tactical SG19 crate"
 
 /datum/supply_pack/security/armory/sec/riotrifle
 	name = "wz.14 Riot Rifle Crate"
@@ -932,6 +950,7 @@
 					/obj/item/gun/ballistic/rifle/riot,
 					/obj/item/ammo_box/magazine/a762/mag,
 					/obj/item/ammo_box/magazine/a762/mag)
+	crate_name = "wz.14 rifle crate"
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Engineering /////////////////////////////////////
