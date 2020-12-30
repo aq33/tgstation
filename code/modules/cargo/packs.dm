@@ -454,33 +454,97 @@
 //////////////////////////////////////////////////////////////////////////////
 
 /datum/supply_pack/munitions
-	group = "Munitions"
+	group = "Ammo"
 	access = ACCESS_SECURITY
 	crate_type = /obj/structure/closet/crate/secure/sec
 
+//Mags
 /datum/supply_pack/munitions/sec9mmmags
-	name = "SG19 Magazines Crate"
+	name = "SG19 Magazines Crate (DRY)"
 	desc = "Contains 3 9mm magazines for SG19 Security Pistol. Rounds not included. Requires Security access to open."
 	cost = 1000
 	contains = list(/obj/item/ammo_box/magazine/sec9mm/dry,
 					/obj/item/ammo_box/magazine/sec9mm/dry,
 					/obj/item/ammo_box/magazine/sec9mm/dry)
 
-/datum/supply_pack/munitions/sec9mmmags
-	name = "SG19 Magazines Crate"
+/datum/supply_pack/munitions/sec9mmmagsrubber
+	name = "SG19 Magazines Crate (RUBBER)"
+	desc = "Contains 3 9mm magazines for SG19 Security Pistol loaded with rubber ammo. Requires Security access to open."
+	cost = 2500
+	contains = list(/obj/item/ammo_box/magazine/sec9mm/nl,
+					/obj/item/ammo_box/magazine/sec9mm/nl,
+					/obj/item/ammo_box/magazine/sec9mm/nl)
+
+/datum/supply_pack/munitions/sec9mmmagslethal
+	name = "SG19 Magazines Crate (LETHAL)"
+	desc = "Contains 3 9mm magazines for SG19 Security Pistol loaded with lethal ammo. Requires Armory access to open."
+	cost = 3000
+	contains = list(/obj/item/ammo_box/magazine/sec9mm,
+					/obj/item/ammo_box/magazine/sec9mm,
+					/obj/item/ammo_box/magazine/sec9mm)
+	access = ACCESS_ARMORY
+	crate_type = /obj/structure/closet/crate/secure/weapon
+
+/datum/supply_pack/munitions/sec9mmmagsext
+	name = "SG19 Extended Magazines Crate"
 	desc = "Contains 2 extended 9mm magazines for SG19 Security Pistol. Rounds not included. Requires Security access to open."
 	cost = 1000
 	contains = list(/obj/item/ammo_box/magazine/sec9mm/ext/dry,
 					/obj/item/ammo_box/magazine/sec9mm/ext/dry)
 
 /datum/supply_pack/munitions/wt550mags
-	name = "WT-550 Auto Rifle Magazines Crate"
-	desc = "Contains 3 magazines WT-550 Auto Rifle. Rounds not included. Requires Security access to open."
+	name = "WT-550 Auto Rifle Magazines Crate (DRY)"
+	desc = "Contains 3 magazines for WT-550 Auto Rifle. Rounds not included. Requires Security access to open."
 	cost = 1000
 	contains = list(/obj/item/ammo_box/magazine/wt550m9/dry,
 					/obj/item/ammo_box/magazine/wt550m9/dry,
 					/obj/item/ammo_box/magazine/wt550m9/dry)
 
+/datum/supply_pack/munitions/wt550magsrubber
+	name = "WT-550 Auto Rifle Magazines Crate (RUBBER)"
+	desc = "Contains 3 magazines for WT-550 Auto Rifle loaded with rubber ammo. Requires Security access to open."
+	cost = 2500
+	contains = list(/obj/item/ammo_box/magazine/wt550m9/wtnl,
+					/obj/item/ammo_box/magazine/wt550m9/wtnl,
+					/obj/item/ammo_box/magazine/wt550m9/wtnl)
+
+/datum/supply_pack/munitions/wt550magslethal
+	name = "WT-550 Auto Rifle Magazines Crate (LETHAL)"
+	desc = "Contains 3 magazines for WT-550 Auto Rifle loaded with lethal ammo. Requires Armory access to open."
+	cost = 3000
+	contains = list(/obj/item/ammo_box/magazine/wt550m9,
+					/obj/item/ammo_box/magazine/wt550m9,
+					/obj/item/ammo_box/magazine/wt550m9)
+	access = ACCESS_ARMORY
+	crate_type = /obj/structure/closet/crate/secure/weapon
+
+/datum/supply_pack/munitions/riflemag
+	name = "wz.14 Riot Rifle Magazines Crate (DRY)"
+	desc = "Contains 3 magazines for wz.14 Riot Rifle. Rounds not included. Requires Security access to open."
+	cost = 1250
+	contains = list(/obj/item/ammo_box/magazine/a762/mag/dry,
+					/obj/item/ammo_box/magazine/a762/mag/dry,
+					/obj/item/ammo_box/magazine/a762/mag/dry)
+
+/datum/supply_pack/munitions/riflemagrubber
+	name = "wz.14 Riot Rifle Magazines Crate (RUBBER)"
+	desc = "Contains 3 magazines for wz.14 Riot Rifle loaded with rubber ammo. Requires Security access to open."
+	cost = 2750
+	contains = list(/obj/item/ammo_box/magazine/a762/mag/nl,
+					/obj/item/ammo_box/magazine/a762/mag/nl,
+					/obj/item/ammo_box/magazine/a762/mag/nl)
+
+/datum/supply_pack/munitions/riflemaglethal
+	name = "wz.14 Riot Rifle Magazines Crate (LETHAL)"
+	desc = "Contains 3 magazines for wz.14 Riot Rifle loaded with lethal ammo. Requires Armory access to open."
+	cost = 3500
+	contains = list(/obj/item/ammo_box/magazine/a762/mag,
+					/obj/item/ammo_box/magazine/a762/mag,
+					/obj/item/ammo_box/magazine/a762/mag)
+	access = ACCESS_ARMORY
+	crate_type = /obj/structure/closet/crate/secure/weapon
+
+//Ammo boxes
 /datum/supply_pack/munitions/sec9mmboxnl
 	name = "9mm Non-Lethal Ammo Crate"
 	desc = "Contains 3 boxes of non-lethal pistol rounds. Requires Security access to open."
@@ -502,7 +566,7 @@
 /datum/supply_pack/munitions/WTboxnl
 	name = "4.6x30mm Non-Lethal Ammo Crate"
 	desc = "Contains 3 boxes of non-lethal autorifle rounds. Requires Security access to open."
-	cost = 2000
+	cost = 1750
 	contains = list(/obj/item/ammo_box/c46x30mm/nl,
 					/obj/item/ammo_box/c46x30mm/nl,
 					/obj/item/ammo_box/c46x30mm/nl)
@@ -510,7 +574,7 @@
 /datum/supply_pack/munitions/WTbox
 	name = "4.6x30mm Ammo Crate"
 	desc = "Contains 3 boxes of lethal autorifle rounds. Requires Armory access to open."
-	cost = 2500
+	cost = 2250
 	contains = list(/obj/item/ammo_box/c46x30mm,
 					/obj/item/ammo_box/c46x30mm,
 					/obj/item/ammo_box/c46x30mm)
@@ -519,19 +583,21 @@
 
 /datum/supply_pack/munitions/shottyammonl
 	name = ".410 Non-Lethal Ammo Crate"
-	desc = "Contains 4 boxes of rubbershot shells. Requires Security access to open."
-	cost = 2500
+	desc = "Contains 3 boxes of rubbershot shells and a bandolier. Requires Security access to open."
+	cost = 1500
 	contains = list(/obj/item/storage/box/rubbershot,
 					/obj/item/storage/box/rubbershot,
-					/obj/item/storage/box/rubbershot)
+					/obj/item/storage/box/rubbershot,
+					/obj/item/storage/belt/bandolier)
 
 /datum/supply_pack/munitions/shottyammo
 	name = ".410 Lethal Ammo Crate"
-	desc = "Contains 4 boxes of lethal shells. Requires Armory access to open."
+	desc = "Contains 3 boxes of lethal shells and a bandolier. Requires Armory access to open."
 	cost = 2000
 	contains = list(/obj/item/storage/box/lethalshot,
 					/obj/item/storage/box/lethalshot,
-					/obj/item/storage/box/lethalshot)
+					/obj/item/storage/box/lethalshot,
+					/obj/item/storage/belt/bandolier)
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
 
@@ -552,6 +618,8 @@
 					/obj/item/ammo_box/a762/box)
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
+
+//Mines, grenades
 /datum/supply_pack/munitions/smartmine
 	name = "Smart Mine Crate"
 	desc = "Contains three nonlethal pressure activated stun mines capable of ignoring mindshieled personnel. Requires Security access to open."

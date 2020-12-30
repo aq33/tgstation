@@ -3,6 +3,7 @@
 	desc = "Some kind of bolt action rifle. You get the feeling you shouldn't have this."
 	icon_state = "moistnugget"
 	icon_state = "moistnugget"
+	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
 	bolt_wording = "bolt"
 	bolt_type = BOLT_TYPE_STANDARD
@@ -14,7 +15,7 @@
 	rack_sound = "sound/weapons/mosinboltout.ogg"
 	bolt_drop_sound = "sound/weapons/mosinboltin.ogg"
 	tac_reloads = FALSE
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	block_upgrade_walk = 1
 
 obj/item/gun/ballistic/rifle/update_icon()
@@ -62,7 +63,6 @@ obj/item/gun/ballistic/rifle/attackby(obj/item/A, mob/user, params)
 	rack_sound = "sound/weapons/mosinboltout.ogg"
 	bolt_drop_sound = "sound/weapons/mosinboltin.ogg"
 	tac_reloads = FALSE
-	weapon_weight = WEAPON_HEAVY
 	recoil = 0.6
 	fire_rate = 1.5
 	block_upgrade_walk = 1
@@ -78,7 +78,6 @@ obj/item/gun/ballistic/rifle/attackby(obj/item/A, mob/user, params)
 	item_state = "moistnugget"
 	slot_flags = 0 //no ITEM_SLOT_BACK sprite, alas
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
-	weapon_weight = WEAPON_HEAVY
 	can_bayonet = TRUE
 	knife_x_offset = 27
 	knife_y_offset = 13
