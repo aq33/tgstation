@@ -1,10 +1,10 @@
 /obj/machinery/power/generator
 	name = "thermoelectric generator"
-	desc = "It's a high efficiency thermoelectric generator."
+	desc = "High-efficiency thermoelectric generator that generates power out of energy transfer between gas loops."
 	icon_state = "teg"
 	density = TRUE
 	use_power = NO_POWER_USE
-
+	//vars for storing data about connected circulators
 	var/obj/machinery/atmospherics/components/binary/circulator/cold_circ
 	var/obj/machinery/atmospherics/components/binary/circulator/hot_circ
 	var/tier = 0
@@ -12,14 +12,13 @@
 	var/lastgenlev = -1
 	var/lastcirc = "00"
 
-
+//Handles stuff that needs to happen when it's created
 /obj/machinery/power/generator/Initialize(mapload)
 	. = ..()
 	find_circs()
 	connect_to_network()
 	SSair.atmos_machinery += src
 	update_icon()
-	//stock parts needed for TEG
 	component_parts = list(new /obj/item/circuitboard/machine/generator,
 		new /obj/item/stock_parts/matter_bin,
 		new /obj/item/stock_parts/matter_bin,
@@ -40,6 +39,7 @@
 	SSair.atmos_machinery -= src
 	return ..()
 
+//It's called when generator is rotated
 /obj/machinery/power/generator/setDir()
 	..()
 	update_icon()
@@ -80,7 +80,7 @@
 			return
 		add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
 
-//Handles atmos stuff and power generation math
+//Called when atmos happens and handles atmos stuff and power generation math
 /obj/machinery/power/generator/process_atmos()
 
 	if(!cold_circ || !hot_circ)
@@ -222,7 +222,6 @@
 		return FALSE
 	return TRUE
 
-
 /obj/machinery/power/generator/power_change()
 	..()
 	update_icon()
@@ -308,8 +307,6 @@
 		return
 	else if(user.a_intent != INTENT_HELP)
 		..()
-
-
 
 /obj/machinery/power/generator/on_deconstruction()
 	kill_circs()
