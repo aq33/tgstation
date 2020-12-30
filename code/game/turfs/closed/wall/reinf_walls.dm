@@ -53,7 +53,7 @@
 /turf/closed/wall/r_wall/try_destroy(var/obj/item/pickaxe/drill/I, mob/user, turf/T)
 	if(istype(I, /obj/item/pickaxe/drill/jackhammer) || istype(I, /obj/item/pickaxe/drill/diamonddrill) || istype(I, /obj/item/pickaxe/drill/cyborg/diamond))
 		to_chat(user, "<span class='notice'>You begin to smash though [src]...</span>")
-		if(do_after(user, 8*I.drill_delay, 1, target = src))
+		if(do_after(user, 14*I.drill_delay, 1, target = src))
 			if(!istype(src, /turf/closed/wall/r_wall))
 				return TRUE
 			I.play_tool_sound(src)

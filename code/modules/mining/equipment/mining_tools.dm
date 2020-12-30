@@ -57,6 +57,7 @@
 
 /obj/item/pickaxe/drill
 	name = "mining drill"
+	desc = "Compact electric mining drill for the especially scrawny."
 	icon_state = "handdrill"
 	item_state = "jackhammer"
 	slot_flags = ITEM_SLOT_BELT
@@ -64,9 +65,11 @@
 	var/drill_delay = 30
 	var/is_drilling = FALSE
 	toolspeed = 0.6
+	w_class = WEIGHT_CLASS_NORMAL
+	sharpness = IS_SHARP
 	usesound = 'sound/weapons/drill.ogg'
 	hitsound = 'sound/weapons/drill.ogg'
-	desc = "An electric mining drill for the especially scrawny."
+
 
 /obj/item/pickaxe/drill/Initialize()
 	. = ..()
@@ -89,8 +92,7 @@
 					"<span class='userdanger'>[user] starts to drill [target]...</span>", \
 					 "<span class='italics'>You start drilling [target].</span>")
 		while(do_after(user, drill_delay, 1, target) && is_drilling)
-			var/obj/T = target
-			if(T == null)
+			if(QDELETED(target))
 				is_drilling = FALSE
 				break
 			is_drilling = TRUE
@@ -111,8 +113,7 @@
 					"<span class='userdanger'>[user] starts to drill [target]...</span>", \
 					 "<span class='italics'>You start drilling [target].</span>")
 		while(do_after(user, drill_delay, 1, target) && is_drilling)
-			var/obj/T = target
-			if(T == null)
+			if(QDELETED(target))
 				is_drilling = FALSE
 				break
 			is_drilling = TRUE
@@ -122,10 +123,6 @@
 		..()
 
 /obj/item/pickaxe/drill/proc/drill_mob(mob/living/target, mob/user)
-	var/obj/T = target
-		if(T == null)
-			is_drilling = FALSE
-			return
 	target.visible_message("<span class='danger'>[user] is drilling [target] with [src]!</span>", \
 						"<span class='userdanger'>[user] is drilling you with [src]!</span>")
 	log_combat(user, target, "drilled", "[name]", "(INTENT: [uppertext(user.a_intent)]) (DAMTYPE: [uppertext(damtype)])")
@@ -139,8 +136,13 @@
 			target.gib()
 	else
 		//drill makes a hole
+		var/obj/effect/decal/cleanable/blood/hitsplatter/B = new(target.loc, target)
+		B.add_blood_DNA(return_blood_DNA())
+		var/dist = rand(0,3)
+		var/turf/targ = get_ranged_target_turf(target, rand(0, 360), dist)
+		B.GoTo(targ, dist)
 		var/obj/item/bodypart/target_part = target.get_bodypart(ran_zone(BODY_ZONE_CHEST))
-		target.apply_damage(10, BRUTE, BODY_ZONE_CHEST, target.run_armor_check(target_part, "melee"))
+		target.apply_damage(10*drill_level, BRUTE, BODY_ZONE_CHEST, target.run_armor_check(target_part, "melee"))
 
 		//blood splatters
 		var/splatter_dir = get_dir(user, target)
@@ -156,7 +158,8 @@
 /obj/item/pickaxe/drill/proc/drill_obj(obj/target, mob/user)
 	if(target == null)
 		return
-	target.take_damage(15, BRUTE, 0, FALSE, get_dir(user, target))
+	target.take_damage(10*drill_level, BRUTE, 0, FALSE, get_dir(user, target))
+	do_sparks(2*drill_level, FALSE, target.loc)
 	target.visible_message("<span class='danger'>[user] is drilling [target] with [src]!</span>")
 	playsound(src,usesound,40,1)
 
@@ -171,29 +174,30 @@
 
 /obj/item/pickaxe/drill/diamonddrill
 	name = "diamond-tipped mining drill"
+	desc = "Compact electric mining drill with diamond-infused drilling bit."
 	icon_state = "diamonddrill"
 	drill_level = DRILL_HARDENED
-	drill_delay = 15
+	drill_delay = 20
 	toolspeed = 0.2
-	desc = "Yours is the drill that will pierce the heavens!"
 
 /obj/item/pickaxe/drill/cyborg/diamond //This is the BORG version!
 	name = "diamond-tipped cyborg mining drill" //To inherit the NODROP_1 flag, and easier to change borg specific drill mechanics.
 	icon_state = "diamonddrill"
 	drill_level = DRILL_HARDENED
-	drill_delay = 15
+	drill_delay = 20
 	toolspeed = 0.2
 
 /obj/item/pickaxe/drill/jackhammer
 	name = "sonic jackhammer"
+	desc = "Heavy-duty mining tool that cracks rocks with sonic blasts."
 	icon_state = "jackhammer"
 	item_state = "jackhammer"
 	drill_level = DRILL_HARDENED
-	drill_delay = 5
-	toolspeed = 0 //the epitome of powertools. extremely fast mining, laughs at puny walls
+	drill_delay = 10
+	toolspeed = 0
+	w_class = WEIGHT_CLASS_BULKY
 	usesound = 'sound/weapons/sonic_jackhammer.ogg'
 	hitsound = 'sound/weapons/sonic_jackhammer.ogg'
-	desc = "Cracks rocks with sonic blasts, and doubles as a demolition power tool for smashing walls."
 
 /obj/item/shovel
 	name = "shovel"

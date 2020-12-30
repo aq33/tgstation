@@ -258,8 +258,8 @@
 /obj/item/borg/upgrade/modkit
 	name = "kinetic accelerator modification kit"
 	desc = "An upgrade for kinetic accelerators."
-	icon = 'icons/obj/objects.dmi'
-	icon_state = "modkit"
+	icon = 'icons/obj/mining.dmi'
+	icon_state = "modkit_generic"
 	w_class = WEIGHT_CLASS_SMALL
 	require_module = 1
 	module_type = /obj/item/robot_module/miner
@@ -346,6 +346,7 @@
 /obj/item/borg/upgrade/modkit/range
 	name = "range increase"
 	desc = "Increases the range of a kinetic accelerator when installed."
+	icon_state = "modkit_range"
 	modifier = 1
 	cost = 25
 
@@ -357,6 +358,7 @@
 /obj/item/borg/upgrade/modkit/damage
 	name = "damage increase"
 	desc = "Increases the damage of kinetic accelerator when installed."
+	icon_state = "modkit_damage"
 	modifier = 10
 
 /obj/item/borg/upgrade/modkit/damage/modify_projectile(obj/item/projectile/kinetic/K)
@@ -367,6 +369,7 @@
 /obj/item/borg/upgrade/modkit/cooldown
 	name = "cooldown decrease"
 	desc = "Decreases the cooldown of a kinetic accelerator. Not rated for minebot use."
+	icon_state = "modkit_cooldown"
 	modifier = 3.2
 	minebot_upgrade = FALSE
 
@@ -393,6 +396,8 @@
 
 //AoE blasts
 /obj/item/borg/upgrade/modkit/aoe
+	icon_state = "modkit_damage"
+	color = "#470e00"
 	modifier = 0
 	var/turf_aoe = FALSE
 	var/stats_stolen = FALSE
@@ -461,6 +466,8 @@
 /obj/item/borg/upgrade/modkit/cooldown/repeater
 	name = "rapid repeater"
 	desc = "Quarters the kinetic accelerator's cooldown on striking a living target, but greatly increases the base cooldown."
+	icon_state = "modkit_cooldown"
+	color = "#9eb8ff"
 	denied_type = /obj/item/borg/upgrade/modkit/cooldown/repeater
 	modifier = -14 //Makes the cooldown 3 seconds(with no cooldown mods) if you miss. Don't miss.
 	cost = 50
@@ -496,6 +503,8 @@
 /obj/item/borg/upgrade/modkit/resonator_blasts
 	name = "resonator blast"
 	desc = "Causes kinetic accelerator shots to leave and detonate resonator blasts."
+	icon_state = "modkit_damage"
+	color = "#9eb8ff"
 	denied_type = /obj/item/borg/upgrade/modkit/resonator_blasts
 	cost = 30
 	modifier = 0.25 //A bonus 15 damage if you burst the field on a target, 60 if you lure them into it.
@@ -552,6 +561,8 @@
 /obj/item/borg/upgrade/modkit/indoors
 	name = "decrease pressure penalty"
 	desc = "A syndicate modification kit that increases the damage a kinetic accelerator does in high pressure environments."
+	icon_state = "modkit_damage"
+	color = "#610000"
 	modifier = 2
 	denied_type = /obj/item/borg/upgrade/modkit/indoors
 	maximum_of_type = 2

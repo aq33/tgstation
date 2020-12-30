@@ -240,7 +240,7 @@
 		if(!iswallturf(src))
 			return TRUE
 		if(user.loc == T)
-			if(do_after(user, 3*I.drill_delay, 1, target = src))
+			if(do_after(user, 7*I.drill_delay, 1, target = src))
 				I.play_tool_sound(src)
 				dismantle_wall()
 				user.visible_message("<span class='warning'>[user] smashes through [src] with [I]!</span>", \
