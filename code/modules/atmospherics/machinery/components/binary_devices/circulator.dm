@@ -9,8 +9,6 @@
 	icon_state = "circ-off-0"
 	var/eff
 	var/active = FALSE
-	can_be_unanchored = TRUE
-	anchored = TRUE
 	var/last_pressure_delta = 0
 	pipe_flags = PIPING_ONE_PER_TURF | PIPING_DEFAULT_LAYER_ONLY
 
