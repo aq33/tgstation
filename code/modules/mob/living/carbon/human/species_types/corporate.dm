@@ -3,6 +3,8 @@
 	id = "agent"
 	hair_alpha = 0
 	say_mod = "declares"
+	speech_sound = "human"
+	gendered_speech = TRUE
 	speedmod = -2//Fast
 	brutemod = 0.7//Tough against firearms
 	burnmod = 0.65//Tough against lasers

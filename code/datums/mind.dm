@@ -110,6 +110,13 @@
 	var/mob/living/old_current = current
 	if(current)
 		current.transfer_observers_to(new_character)	//transfer anyone observing the old character to the new one
+	//AQUILA CHANGE ADDITION BEGIN - AMBITIONS
+	if(my_ambitions)
+		//remove_verb(current, /mob/proc/view_ambitions)
+		//add_verb(new_character, /mob/proc/view_ambitions)
+		current.verbs -= /mob/proc/view_ambitions
+		new_character.verbs += /mob/proc/view_ambitions
+	//AQUILA CHANGE ADDITION END
 	current = new_character								//associate ourself with our new body
 	new_character.mind = src							//and associate our new body with ourself
 	for(var/a in antag_datums)	//Makes sure all antag datums effects are applied in the new body
@@ -165,6 +172,16 @@
 	if(antag_team)
 		antag_team.add_member(src)
 	A.on_gain()
+	//AQUILA EDIT ADDITION BEGIN - AMBITIONS
+	if(A.uses_ambitions)
+		if(!my_ambitions)
+			my_ambitions = new(src)
+			//add_verb(current, /mob/proc/view_ambitions)
+			current.verbs += /mob/proc/view_ambitions
+		//If we already have ambitions done, call the add proc to give us the proper powers/uplinks
+		if(my_ambitions.submitted)
+			A.ambitions_add()
+	//AQUILA EDIT ADDITION END
 	return A
 
 /datum/mind/proc/remove_antag_datum(datum_type)
@@ -173,6 +190,10 @@
 	var/datum/antagonist/A = has_antag_datum(datum_type)
 	if(A)
 		A.on_removal()
+		//AQUILA EDIT ADDITION BEGIN - AMBITIONS
+		if(A.uses_ambitions && my_ambitions.submitted)
+			A.ambitions_removal()
+		//AQUILA EDIT ADDITION END
 		return TRUE
 
 
@@ -256,6 +277,11 @@
 	var/mob/living/carbon/human/traitor_mob = current
 	if (!istype(traitor_mob))
 		return
+
+	//AQUILA EDIT ADDITION BEGIN - AMBITIONS (no doubling uplinks)
+	if(find_syndicate_uplink())
+		return
+	//AQUILA EDIT ADDITION END
 
 	var/list/all_contents = traitor_mob.GetAllContents()
 	var/obj/item/pda/PDA = locate() in all_contents
@@ -548,6 +574,14 @@
 
 	else if (href_list["obj_announce"])
 		announce_objectives()
+	
+	//AQUILA EDIT ADDITION BEGIN - AMBITIONS
+	if (href_list["ambitions"])
+		if(!my_ambitions)
+			return
+		//It's admin viewing the user's ambitions. The user can view them through a verb.
+		my_ambitions.ShowPanel(usr, TRUE)
+	//AQUILA EDIT ADDITION END
 
 	//Something in here might have changed your mob
 	if(self_antagging && (!usr || !usr.client) && current.client)

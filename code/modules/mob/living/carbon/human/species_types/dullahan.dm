@@ -2,6 +2,8 @@
 	name = "Dullahan"
 	id = "dullahan"
 	default_color = "FFFFFF"
+	speech_sound = "human"
+	gendered_speech = TRUE
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS)
 	inherent_traits = list(TRAIT_NOHUNGER,TRAIT_NOBREATH)
 	default_features = list("mcolor" = "FFF", "tail_human" = "None", "ears" = "None", "wings" = "None")
