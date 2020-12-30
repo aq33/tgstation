@@ -50,22 +50,25 @@
 	else
 		cut_overlays()
 
+	if(panel_open)
+		add_overlay("teg-ov-open")
+
 	//display front wall of TEG when facing east or west
 	if((dir == EAST || dir == WEST) && (!hot_circ || !cold_circ))
-		add_overlay(image('icons/obj/power.dmi', "teg_front", BELOW_OBJ_LAYER, pixel_y = -32))
+		add_overlay(image('icons/obj/power.dmi', "teg_front", GAS_PIPE_VISIBLE_LAYER, pixel_y = -32))
 
 	//display overlay
 	if(!hot_circ && !cold_circ && anchored)
 		add_overlay("teg-disp-error")
 	else
-		if(hot_circ.loc == get_step(src, EAST) || hot_circ.loc == get_step(src, NORTH))
+		if(hot_circ.loc == get_step(src, EAST) || hot_circ.loc == get_step(src, SOUTH))
 			add_overlay("teg-disp-hotright")
-		else if(cold_circ.loc == get_step(src, EAST) || cold_circ.loc == get_step(src, NORTH))
+		else if(cold_circ.loc == get_step(src, EAST) || cold_circ.loc == get_step(src, SOUTH))
 			add_overlay("teg-disp-coldright")
 
-		if(hot_circ.loc == get_step(src, WEST) || hot_circ.loc == get_step(src, SOUTH))
+		if(hot_circ.loc == get_step(src, WEST) || hot_circ.loc == get_step(src, NORTH))
 			add_overlay("teg-disp-hotleft")
-		else if(cold_circ.loc == get_step(src, WEST) || cold_circ.loc == get_step(src, SOUTH))
+		else if(cold_circ.loc == get_step(src, WEST) || cold_circ.loc == get_step(src, NORTH))
 			add_overlay("teg-disp-coldleft")
 
 	//power level overlay
@@ -77,6 +80,7 @@
 			return
 		add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
 
+//Handles atmos stuff and power generation math
 /obj/machinery/power/generator/process_atmos()
 
 	if(!cold_circ || !hot_circ)
@@ -136,6 +140,7 @@
 
 	src.updateDialog()
 
+//Main proc
 /obj/machinery/power/generator/process()
 	var/ohno = FALSE
 	//stock parts effect on TEG performance
@@ -165,7 +170,7 @@
 
 	..()
 
-
+//TEG UI
 /obj/machinery/power/generator/proc/get_menu(include_link = TRUE)
 	var/t = ""
 	if(!powernet)
@@ -222,6 +227,7 @@
 	..()
 	update_icon()
 
+//linking circulators
 /obj/machinery/power/generator/proc/find_circs()
 	kill_circs()
 	var/list/circs = list()
@@ -254,16 +260,16 @@
 				hot_circ = C
 				C.generator = src
 
+//tool interactions
 /obj/machinery/power/generator/wrench_act(mob/living/user, obj/item/I)
 	if(!panel_open)
-		return
-	anchored = !anchored
-	I.play_tool_sound(src)
+		return FALSE
+	else
+		default_unfasten_wrench(user, I)
 	if(!anchored)
 		kill_circs()
 	connect_to_network()
 	update_icon()
-	to_chat(user, "<span class='notice'>You [anchored?"secure":"unsecure"] [src].</span>")
 	return TRUE
 
 /obj/machinery/power/generator/multitool_act(mob/living/user, obj/item/I)

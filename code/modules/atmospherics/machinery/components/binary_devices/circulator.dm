@@ -10,6 +10,7 @@
 	var/eff
 	var/active = FALSE
 	can_be_unanchored = TRUE
+	anchored = TRUE
 	var/last_pressure_delta = 0
 	pipe_flags = PIPING_ONE_PER_TURF | PIPING_DEFAULT_LAYER_ONLY
 
@@ -94,13 +95,16 @@
 	else
 		cut_overlays()
 
+	if(panel_open)
+		add_overlay(image('icons/obj/atmospherics/components/binary_devices.dmi', "circ-ov-open"))
+
 	//display front face if facing south
 	if(dir == SOUTH && !generator)
-		add_overlay(image('icons/obj/power.dmi', "teg_front", BELOW_OBJ_LAYER, pixel_y = -32))
+		add_overlay(image('icons/obj/power.dmi', "teg_front", GAS_PIPE_VISIBLE_LAYER, pixel_y = -32))
 
-	if(mode == CIRCULATOR_HOT && anchored)
+	if(mode == CIRCULATOR_HOT && anchored && !panel_open)
 		add_overlay(image('icons/obj/atmospherics/components/binary_devices.dmi', "circ-ov-hot"))
-	else if(mode != CIRCULATOR_HOT && anchored)
+	else if(mode != CIRCULATOR_HOT && anchored && !panel_open)
 		add_overlay(image('icons/obj/atmospherics/components/binary_devices.dmi', "circ-ov-cold"))
 
 	//speen states
@@ -118,14 +122,12 @@
 
 /obj/machinery/atmospherics/components/binary/circulator/wrench_act(mob/living/user, obj/item/I)
 	if(!panel_open)
-		return
-	anchored = !anchored
-	I.play_tool_sound(src)
-	if(generator)
-		disconnectFromGenerator()
-	to_chat(user, "<span class='notice'>You [anchored?"secure":"unsecure"] [src].</span>")
-	return TRUE
-
+		return FALSE
+	else
+		default_unfasten_wrench(user, I)
+		if(generator)
+			disconnectFromGenerator()
+		return TRUE
 
 	var/obj/machinery/atmospherics/node1 = nodes[1]
 	var/obj/machinery/atmospherics/node2 = nodes[2]
@@ -183,6 +185,7 @@
 		return TRUE
 	panel_open = !panel_open
 	I.play_tool_sound(src)
+	update_icon()
 	to_chat(user, "<span class='notice'>You [panel_open?"open":"close"] the panel on [src].</span>")
 	return TRUE
 
