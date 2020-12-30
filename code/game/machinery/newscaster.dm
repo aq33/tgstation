@@ -237,8 +237,8 @@ GLOBAL_LIST_EMPTY(allCasters)
 		else
 			icon_state = "newscaster_normal"
 			if(alert)
-				add_overlay("newscaster_alert")
-		set_light(1)
+				add_overlay("newscaster_news")
+		set_light(2, l_color = "#00aeffff")
 	var/hp_percent = obj_integrity * 100 /max_integrity
 	switch(hp_percent)
 		if(75 to 100)
@@ -856,14 +856,14 @@ GLOBAL_LIST_EMPTY(allCasters)
 /obj/machinery/newscaster/proc/newsAlert(channel, update_alert = TRUE)
 	if(channel)
 		if(update_alert)
-			say("Breaking news from [channel]!")
-			playsound(loc, 'sound/machines/twobeep_high.ogg', 75, TRUE)
+			say("Najnowsze wiadomości z [channel]!!!")
+			playsound(loc, 'sound/machines/warn1.ogg', 75, vary=FALSE, 1)
 		alert = TRUE
 		update_icon()
 		addtimer(CALLBACK(src,.proc/remove_alert),alert_delay,TIMER_UNIQUE|TIMER_OVERRIDE)
 	else if(!channel && update_alert)
-		say("Attention! Wanted issue distributed!")
-		playsound(loc, 'sound/machines/warning-buzzer.ogg', 75, 1)
+		say("UWAGA! OSOBA POSZUKIWANA!")
+		playsound(loc, 'sound/machines/warntripple.ogg', 80, vary=FALSE, 1)
 
 
 /obj/item/newspaper
