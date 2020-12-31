@@ -2,6 +2,7 @@
 	name = "Plasmaman"
 	id = "plasmaman"
 	say_mod = "rattles"
+	speech_sound = "plasma"
 	sexes = 0
 	meat = /obj/item/stack/sheet/mineral/plasma
 	species_traits = list(NOBLOOD,NOTRANSSTING)
