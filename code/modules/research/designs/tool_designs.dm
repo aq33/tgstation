@@ -23,6 +23,16 @@
 	category = list("Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
 
+/datum/design/polytool
+	name = "Wire Polytool"
+	desc = "Versatile tool for any wiring-related work."
+	id = "polytool"
+	build_path = /obj/item/wirecutters/power/polytool
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 3500, /datum/material/gold = 2500, /datum/material/silver = 2500)
+	category = list("Tool Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+
 /datum/design/shuttlecreator
 	name = "Rapid Shuttle Designator"
 	desc = "An advanced device capable of defining areas for use in the creation of shuttles"

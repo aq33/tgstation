@@ -128,6 +128,7 @@
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "polytool-cutter"
 	item_state = "polytool-cutter"
+	materials = list(/datum/material/iron = 350, /datum/material/gold = 250, /datum/material/silver = 250)
 
 /obj/item/wirecutters/power/polytool/attack_self(mob/user)
 	playsound(get_turf(user), 'sound/items/change_jaws.ogg', 50, 1)

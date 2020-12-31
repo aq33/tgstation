@@ -38,6 +38,7 @@
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "polytool-multitool"
 	item_state = "polytool-multitool"
+	materials = list(/datum/material/iron = 350, /datum/material/gold = 250, /datum/material/silver = 250)
 
 /obj/item/multitool/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] puts the [src] to [user.p_their()] chest. It looks like [user.p_theyre()] trying to pulse [user.p_their()] heart off!</span>")

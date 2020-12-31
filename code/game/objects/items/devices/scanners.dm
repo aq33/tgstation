@@ -31,6 +31,7 @@ GENE SCANNER
 	icon_state = "polytool-t-ray"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	materials = list(/datum/material/iron = 350, /datum/material/gold = 250, /datum/material/silver = 250)
 	item_state = "polytool-t-ray"
 	on = TRUE
 
