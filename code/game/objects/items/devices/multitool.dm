@@ -32,6 +32,13 @@
 	usesound = 'sound/weapons/empty.ogg'
 	var/mode = 0
 
+/obj/item/multitool/polytool
+	name = "\improper wire polytool"
+	desc = "A familiar beak adorns this tool. It's inner jaw is a two-step mechanism for gripping and clentching things with the precision that of a surgeon -or a bird, at the end of a small but powerful electric motor. Around to the side is a miniturised multitool and T-ray scanner."
+	icon = 'icons/obj/tools.dmi'
+	icon_state = "polytool-multitool"
+	item_state = "polytool-multitool"
+
 /obj/item/multitool/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] puts the [src] to [user.p_their()] chest. It looks like [user.p_theyre()] trying to pulse [user.p_their()] heart off!</span>")
 	return OXYLOSS//theres a reason it wasnt recommended by doctors
@@ -48,11 +55,19 @@
 	if(buffer)
 		. += "<span class='notice'>Its buffer contains [buffer].</span>"
 
-/obj/item/multitool/attack_self(mob/user)
+/obj/item/multitool/polytool/attack_self(mob/user)
+	playsound(get_turf(user), 'sound/items/change_jaws.ogg', 50, 1)
+	var/obj/item/t_scanner/polytool/polytray = new /obj/item/t_scanner/polytool(drop_location())
+	to_chat(user, "<span class='notice'>You change polytool mode to T-Ray.</span>")
+	qdel(src)
+	user.put_in_active_hand(polytray)
+
+/obj/item/multitool/AltClick(mob/user)
 	if(selected_io)
 		selected_io = null
 		to_chat(user, "<span class='notice'>You clear the wired connection from the multitool.</span>")
-	update_icon()
+	if(!istype(src, /obj/item/multitool/polytool))
+		update_icon()
 
 /obj/item/multitool/update_icon()
 	if(selected_io)

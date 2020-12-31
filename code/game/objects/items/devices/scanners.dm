@@ -24,9 +24,25 @@ GENE SCANNER
 	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'
 	materials = list(/datum/material/iron=150)
 
+/obj/item/t_scanner/polytool
+	name = "\improper wire polytool"
+	desc = "A familiar beak adorns this tool. It's inner jaw is a two-step mechanism for gripping and clentching things with the precision that of a surgeon -or a bird, at the end of a small but powerful electric motor. Around to the side is a miniturised multitool and T-ray scanner."
+	icon = 'icons/obj/tools.dmi'
+	icon_state = "polytool-t-ray"
+	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	item_state = "polytool-t-ray"
+	on = TRUE
+
 /obj/item/t_scanner/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] begins to emit terahertz-rays into [user.p_their()] brain with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return TOXLOSS
+
+/obj/item/t_scanner/polytool/Initialize()
+	if(on)
+		START_PROCESSING(SSobj, src)
+	else
+		STOP_PROCESSING(SSobj, src)
 
 /obj/item/t_scanner/proc/toggle_on()
 	on = !on
@@ -37,7 +53,15 @@ GENE SCANNER
 		STOP_PROCESSING(SSobj, src)
 
 /obj/item/t_scanner/attack_self(mob/user)
-	toggle_on()
+	if(istype(src, /obj/item/t_scanner/polytool))
+		playsound(get_turf(user), 'sound/items/change_jaws.ogg', 50, 1)
+		var/obj/item/wirecutters/power/polytool/polycutter = new /obj/item/wirecutters/power/polytool(drop_location())
+		to_chat(user, "<span class='notice'>You change polytool mode to wirecutter.</span>")
+		qdel(src)
+		user.put_in_active_hand(polycutter)
+		return
+	else
+		toggle_on()
 
 /obj/item/t_scanner/cyborg_unequip(mob/user)
 	if(!on)
@@ -863,7 +887,7 @@ GENE SCANNER
 		icon_state = "extrapolator_sample"
 		scan = FALSE
 		to_chat(user, "<span class='notice'>You remove the probe from the device and set it to EXTRACT</span>")
-	else 
+	else
 		icon_state = "extrapolator_scan"
 		scan = TRUE
 		to_chat(user, "<span class='notice'>You put the probe back in the device and set it to SCAN</span>")
@@ -879,10 +903,10 @@ GENE SCANNER
 			. += "<span class='warning'>The extrapolator is still recharging!</span>"
 		else
 			. += "<span class='info'>The extrapolator is ready to use!</span>"
-	
+
 
 /obj/item/extrapolator/attack(atom/AM, mob/living/user)
-	return 
+	return
 
 /obj/item/extrapolator/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
@@ -894,7 +918,7 @@ GENE SCANNER
 				to_chat(user, "<span class='notice'>the extrapolator fails to return any data</span>")
 			else
 				to_chat(user, "<span class='notice'>the extrapolator's probe detects no diseases</span>")
-	else 
+	else
 		to_chat(user, "<span class='warning'>the extrapolator has no scanner installed</span>")
 
 /obj/item/extrapolator/proc/scan(atom/AM, var/list/diseases = list(), mob/user)
@@ -926,12 +950,12 @@ GENE SCANNER
 	if(isolate)
 		for(var/datum/symptom/S in A.symptoms)
 			if(S.level <= 6 + scanner.rating)
-				symptoms += S 
+				symptoms += S
 			continue
 		var/datum/symptom/chosen = input(user,"What symptom do you wish to isolate") in null|symptoms
 		var/datum/disease/advance/symptomholder = new
-		if(!symptoms.len || !chosen) 
-			to_chat(user, "<span class='warning'>There are no valid diseases to isolate a symptom from.</span>")	
+		if(!symptoms.len || !chosen)
+			to_chat(user, "<span class='warning'>There are no valid diseases to isolate a symptom from.</span>")
 			return
 		symptomholder.name = chosen.name
 		symptomholder.symptoms += chosen
@@ -956,4 +980,4 @@ GENE SCANNER
 	user.put_in_hands(B)
 	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
 	return TRUE
-	
+

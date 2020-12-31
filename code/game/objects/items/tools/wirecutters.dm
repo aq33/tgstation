@@ -122,6 +122,19 @@
 	else
 		..()
 
+/obj/item/wirecutters/power/polytool
+	name = "\improper wire polytool"
+	desc = "A familiar beak adorns this tool. It's inner jaw is a two-step mechanism for gripping and clentching things with the precision that of a surgeon -or a bird, at the end of a small but powerful electric motor. Around to the side is a miniturised multitool and T-ray scanner."
+	icon = 'icons/obj/tools.dmi'
+	icon_state = "polytool-cutter"
+	item_state = "polytool-cutter"
+
+/obj/item/wirecutters/power/polytool/attack_self(mob/user)
+	playsound(get_turf(user), 'sound/items/change_jaws.ogg', 50, 1)
+	var/obj/item/multitool/polytool/polymulti = new /obj/item/multitool/polytool/(drop_location())
+	to_chat(user, "<span class='notice'>You change polytool mode to multitool.</span>")
+	qdel(src)
+	user.put_in_active_hand(polymulti)
 /obj/item/wirecutters/cyborg
 	name = "powered wirecutters"
 	desc = "Cuts wires with the power of ELECTRICITY. Faster than normal wirecutters."
