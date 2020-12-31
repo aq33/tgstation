@@ -857,13 +857,13 @@ GLOBAL_LIST_EMPTY(allCasters)
 	if(channel)
 		if(update_alert)
 			say("Najnowsze wiadomości z [channel]!!!")
-			playsound(loc, 'sound/machines/warn1.ogg', 75, vary=FALSE, 1)
+			playsound(loc, 'sound/machines/warn1.ogg', 75, FALSE, 1)
 		alert = TRUE
 		update_icon()
 		addtimer(CALLBACK(src,.proc/remove_alert),alert_delay,TIMER_UNIQUE|TIMER_OVERRIDE)
 	else if(!channel && update_alert)
 		say("UWAGA! OSOBA POSZUKIWANA!")
-		playsound(loc, 'sound/machines/warntripple.ogg', 80, vary=FALSE, 1)
+		playsound(loc, 'sound/machines/warntripple.ogg', 80, FALSE, 1)
 
 
 /obj/item/newspaper
