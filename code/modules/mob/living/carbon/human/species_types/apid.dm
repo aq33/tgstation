@@ -3,6 +3,7 @@
 	name = "Apids"
 	id = "apid"
 	say_mod = "buzzes"
+	speech_sound = "insect"
 	default_color = "FFE800"
 	species_traits = list(LIPS, NOEYESPRITES, TRAIT_BEEFRIEND)
 	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID, MOB_BUG)

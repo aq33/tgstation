@@ -45,6 +45,7 @@
 #define MODE_KEY_VOCALCORDS "x"
 
 #define MODE_MONKEY "monkeyhive"
+#define MODE_NANO "nanolink"
 
 #define MODE_SING "%"
 
