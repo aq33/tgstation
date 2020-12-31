@@ -449,7 +449,7 @@ mob/living/simple_animal/hostile/poison/giant_spider/handle_temperature_damage()
 
 /datum/action/innate/spider/lay_eggs
 	name = "Lay Eggs"
-	desc = "Lay a cluster of eggs, which will soon grow into a normal spider."
+	desc = "Lay a large egg, which will soon grow into a normal spider."
 	check_flags = AB_CHECK_CONSCIOUS
 	button_icon_state = "lay_eggs"
 	var/enriched = FALSE
@@ -495,7 +495,7 @@ mob/living/simple_animal/hostile/poison/giant_spider/handle_temperature_damage()
 
 /datum/action/innate/spider/lay_eggs/enriched
 	name = "Lay Enriched Eggs"
-	desc = "Lay a cluster of eggs, which will soon grow into a greater spider.  Requires you drain a human per cluster of these eggs."
+	desc = "Lay a large egg, which will soon grow into a greater spider.  Requires you drain a human per cluster of these eggs."
 	enriched = TRUE
 
 /datum/action/innate/spider/set_directive

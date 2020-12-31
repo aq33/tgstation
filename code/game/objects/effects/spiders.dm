@@ -49,9 +49,9 @@
 	return TRUE
 
 /obj/structure/spider/eggcluster
-	name = "egg cluster"
-	desc = "They seem to pulse slightly with an inner life."
-	icon_state = "eggs"
+	name = "egg-like structure"
+	desc = "organic structure resembling an egg, pulses slightly with an inner life."
+	icon_state = "grossegg"
 	///The amount the egg cluster has grown.  Is able to produce a spider when it hits 100.
 	var/amount_grown = 0
 	///The mother's directive at the time the egg was produced.  Passed onto the child.
