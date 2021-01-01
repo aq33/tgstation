@@ -43,6 +43,10 @@
 	name = "weapons crate"
 	icon_state = "weaponcrate"
 
+/obj/structure/closet/crate/secure/sec
+	desc = "A secure security crate. For maximum securing."
+	name = "security crate"
+	icon_state = "securitycrate"
 /obj/structure/closet/crate/secure/plasma
 	desc = "A secure plasma crate."
 	name = "plasma crate"
