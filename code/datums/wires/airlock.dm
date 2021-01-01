@@ -26,13 +26,13 @@
 /datum/wires/airlock/get_status()
 	var/obj/machinery/door/airlock/A = holder
 	var/list/status = list()
-	status += "The door bolts [A.locked ? "have fallen!" : "look up."]"
-	status += "The test light is [A.hasPower() ? "on" : "off"]."
-	status += "The AI connection light is [A.aiControlDisabled || (A.obj_flags & EMAGGED) ? "off" : "on"]."
-	status += "The check wiring light is [A.safe ? "off" : "on"]."
-	status += "The timer is powered [A.autoclose ? "on" : "off"]."
-	status += "The speed light is [A.normalspeed ? "on" : "off"]."
-	status += "The emergency light is [A.emergency ? "on" : "off"]."
+	status += "Rygle drzwi [A.locked ? "opadły!" : "są nieruszone."]"
+	status += "Dioda testowa [A.hasPower() ? "świeci się" : "nie świeci się"]."
+	status += "Lampka połączenia SI [A.aiControlDisabled || (A.obj_flags & EMAGGED) ? "nie świeci się" : "świeci się"]."
+	status += "Lampka sprawdź okablowanie [A.safe ? "nie świeci się" : "świeci się"]."
+	status += "Czasomierz [A.autoclose ? "działa" : "nie działa"]."
+	status += "Regulator czasowy [A.normalspeed ? "działa" : "nie działa"]."
+	status += "Światło awaryjne [A.emergency ? "świeci się" : "nie świeci się"]."
 	return status
 
 /datum/wires/airlock/on_pulse(wire)

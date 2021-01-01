@@ -46,8 +46,8 @@
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 	r_pocket = /obj/item/assembly/flash/handheld
 	l_pocket = /obj/item/restraints/handcuffs
-	suit_store = /obj/item/gun/energy/disabler
-	backpack_contents = list(/obj/item/melee/baton/loaded=1, /obj/item/club=1)
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/secpistol/no_mag
+	backpack_contents = list(/obj/item/melee/baton/loaded=1, /obj/item/club=1, /obj/item/ammo_box/magazine/sec9mm/nl = 2)
 
 	backpack = /obj/item/storage/backpack/security
 	satchel = /obj/item/storage/backpack/satchel/sec
