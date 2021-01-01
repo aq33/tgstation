@@ -545,22 +545,6 @@
 					/obj/item/gun/energy/e_gun/dragnet)
 	crate_name = "\improper DRAGnet crate"
 
-/datum/supply_pack/security/armory/energy_single
-	name = "Energy Guns Single-Pack"
-	desc = "Contains one Energy Gun, capable of firing both nonlethal and lethal blasts of light. Requires Armory access to open."
-	cost = 1500
-	small_item = TRUE
-	contains = list(/obj/item/gun/energy/e_gun)
-
-/datum/supply_pack/security/armory/energy
-	name = "Energy Guns Crate"
-	desc = "Contains two Energy Guns, capable of firing both nonlethal and lethal blasts of light. Requires Armory access to open."
-	cost = 2500
-	contains = list(/obj/item/gun/energy/e_gun,
-					/obj/item/gun/energy/e_gun)
-	crate_name = "energy gun crate"
-	crate_type = /obj/structure/closet/crate/secure/plasma
-
 /datum/supply_pack/security/armory/exileimp
 	name = "Exile Implants Crate"
 	desc = "Contains five Exile implants. Requires Armory access to open."
@@ -743,14 +727,14 @@
 		new item(C)
 
 /datum/supply_pack/security/armory/wt550_single
-	name = "WT-550 Auto Rifle Single-Pack"
-	desc = "Contains one high-powered, semiautomatic rifles chambered in 4.6x30mm. Requires Armory access to open."
+	name = "WT-550 Tactical Auto Rifle Crate"
+	desc = "Contains one high-powered, semiautomatic rifles chambered in 4.6x30mm. Comes with a seclite. Requires Armory access to open."
 	cost = 2000
-	contains = list(/obj/item/gun/ballistic/automatic/wt550)
+	contains = list(/obj/item/gun/ballistic/automatic/wt550/tactical)
 	small_item = TRUE
 
 /datum/supply_pack/security/armory/wt550
-	name = "WT-550 Auto Rifle Crate"
+	name = "WT-550 Auto Rifles Crate"
 	desc = "Contains two high-powered, semiautomatic rifles chambered in 4.6x30mm. Requires Armory access to open."
 	cost = 3500
 	contains = list(/obj/item/gun/ballistic/automatic/wt550,
@@ -758,20 +742,87 @@
 	crate_name = "auto rifle crate"
 
 /datum/supply_pack/security/armory/wt550ammo
-	name = "WT-550 Auto Rifle Ammo Crate"
-	desc = "Contains four 20-round magazine for the WT-550 Auto Rifle. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
-	cost = 3000
+	name = "WT-550 Auto Rifle Magazines Crate"
+	desc = "Contains 2 magazines loaded with lethal rounds and 2 magazines loaded with rubber rounds for the WT-550 Auto Rifle. Requires Armory access to open."
+	cost = 2500
 	contains = list(/obj/item/ammo_box/magazine/wt550m9,
 					/obj/item/ammo_box/magazine/wt550m9,
-					/obj/item/ammo_box/magazine/wt550m9,
-					/obj/item/ammo_box/magazine/wt550m9)
+					/obj/item/ammo_box/magazine/wt550m9/wtnl,
+					/obj/item/ammo_box/magazine/wt550m9/wtnl)
 
 /datum/supply_pack/security/armory/wt550ammo_single
-	name = "WT-550 Auto Rifle Ammo Single-Pack"
+	name = "WT-550 Auto Rifle Magazine"
 	desc = "Contains a 20-round magazine for the WT-550 Auto Rifle. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
 	cost = 750 //one of the few single-pack items that who's price per unit is the exact same as the bulk
 	contains = list(/obj/item/ammo_box/magazine/wt550m9)
 	small_item = TRUE
+
+/datum/supply_pack/security/armory/WTbox
+	name = "4.6x30mm Ammo Crate"
+	desc = "Contains 3 boxes of lethal autorifle rounds. Requires Armory access to open."
+	cost = 2000
+	contains = list(/obj/item/ammo_box/c46x30mm,
+					/obj/item/ammo_box/c46x30mm,
+					/obj/item/ammo_box/c46x30mm)
+
+/datum/supply_pack/security/armory/WTbox/nl
+	name = "4.6x30mm Non-Lethal Ammo Crate"
+	desc = "Contains 3 boxes of non-lethal autorifle rounds. Requires Armory access to open."
+	cost = 1750
+	contains = list(/obj/item/ammo_box/c46x30mm/nl,
+					/obj/item/ammo_box/c46x30mm/nl,
+					/obj/item/ammo_box/c46x30mm/nl)
+
+/datum/supply_pack/security/armory/secpistol_single
+	name = "SG19 Security Pistol Crate"
+	desc = "Contains one standard-issue SG19 pistol chambered in 9mm. Requires Armory access to open."
+	cost = 2000
+	contains = list(/obj/item/gun/ballistic/automatic/pistol/secpistol/tactical)
+	small_item = TRUE
+
+/datum/supply_pack/security/armory/secpistol
+	name = "SG19 Security Pistols Crate"
+	desc = "Contains two standard-issue pistols chambered in 9mm. Requires Armory access to open."
+	cost = 3500
+	contains = list(/obj/item/gun/ballistic/automatic/pistol/secpistol,
+					/obj/item/gun/ballistic/automatic/pistol/secpistol)
+	crate_name = "auto rifle crate"
+
+/datum/supply_pack/security/armory/secpistol/tactical
+	name = "Tactical SG19 Pistols Crate"
+	desc = "Contains two tactical Security Pistols with two spare extended 9mm magazines. Requires Armory access to open."
+	cost = 6000
+	contains = list(/obj/item/gun/ballistic/automatic/pistol/secpistol/tactical,
+					/obj/item/ammo_box/magazine/sec9mm/ext,
+					/obj/item/gun/ballistic/automatic/pistol/secpistol/tactical,
+					/obj/item/ammo_box/magazine/sec9mm/ext)
+	crate_name = "tactical pistols crate"
+
+/datum/supply_pack/security/armory/secmags
+	name = "SG19 Magazines Crate"
+	desc = "Contains two 9mm clips loaded with lethal rounds and two 9mm clips loaded with rubber rounds. Requires Armory access to open."
+	cost = 2500
+	contains = list(/obj/item/ammo_box/magazine/sec9mm,
+					/obj/item/ammo_box/magazine/sec9mm,
+					/obj/item/ammo_box/magazine/sec9mm/nl,
+					/obj/item/ammo_box/magazine/sec9mm/nl)
+	crate_name = "auto rifle crate"
+
+/datum/supply_pack/security/armory/secbox
+	name = "9mm Ammo Crate"
+	desc = "Contains 3 boxes of lethal pistol rounds. Requires Armory access to open."
+	cost = 2000
+	contains = list(/obj/item/ammo_box/c9mm,
+					/obj/item/ammo_box/c9mm,
+					/obj/item/ammo_box/c9mm)
+
+/datum/supply_pack/security/armory/secbox/nl
+	name = "9mm Non-Lethal Ammo Crate"
+	desc = "Contains 3 boxes of non-lethal pistol rounds. Requires Armory access to open."
+	cost = 1750
+	contains = list(/obj/item/ammo_box/c9mm/nl,
+					/obj/item/ammo_box/c9mm/nl,
+					/obj/item/ammo_box/c9mm/nl)
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Engineering /////////////////////////////////////

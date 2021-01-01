@@ -127,6 +127,6 @@
 	if(charging.percent() >= 100)
 		return
 	use_power(charge_rate)
-	charging.give(charge_rate)	//this is 2558, efficient batteries exist
+	charging.give(0.9*charge_rate)	//this is 2558, really efficient, but not perfect batteries exist
 
 	update_icon()
