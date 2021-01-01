@@ -12,9 +12,9 @@
 	mutanttongue = /obj/item/organ/tongue/bone/plasmaman
 	mutantliver = /obj/item/organ/liver/plasmaman
 	mutantstomach = /obj/item/organ/stomach/plasmaman
-	burnmod = 1.5
-	heatmod = 1.5
-	brutemod = 1.5
+	burnmod = 0.7 // We are literally made of plasma
+	heatmod = 0.7 // We should be atleast a slight 
+	coldmod = 0.7 // bit resistant to temperature fluctuations
 	breathid = "tox"
 	damage_overlay_type = ""//let's not show bloody wounds or burns over bones.
 	var/internal_fire = FALSE //If the bones themselves are burning clothes won't help you much
