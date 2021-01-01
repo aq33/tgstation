@@ -21,7 +21,7 @@
 	var/obj/machinery/vending/V = holder
 	var/list/status = list()
 	status += "Pomarańczowa lampka [V.seconds_electrified ? "świeci się" : "nie świeci się"]."
-	status += "Czerwona lampka [V.shoot_inventory ? "nie świeci się" : "mryga"]."
+	status += "Czerwona lampka [V.shoot_inventory ? "nie świeci się" : "mruga"]."
 	status += "Zielona lampka [V.extended_inventory ? "świeci się" : "nie świeci się"]."
 	status += "[V.scan_id ? "Fioletowa" : "Żółta"] lampka się świeci."
 	status += "Dioda głośnika [V.shut_up ? "nie świeci się" : "świeci się"]."
