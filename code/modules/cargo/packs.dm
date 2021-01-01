@@ -937,6 +937,14 @@
 	crate_name = "PACMAN generator crate"
 	crate_type = /obj/structure/closet/crate/engineering/electrical
 
+/datum/supply_pack/engineering/rtg
+	name = "Radioisotope Thermoelectric Generator Crate"
+	desc = "A crate containing a simple nuclear power generator, used in small outposts to reliably provide power for decades."
+	cost = 5000
+	contains = list(/obj/machinery/power/rtg)
+	crate_name = "RTG crate"
+	crate_type = /obj/structure/closet/crate/engineering/electrical
+
 /datum/supply_pack/engineering/power
 	name = "Power Cell Crate"
 	desc = "Looking for power overwhelming? Look no further. Contains three high-voltage power cells."
