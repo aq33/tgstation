@@ -109,7 +109,7 @@
 /obj/item/gun/ballistic/automatic/wt550/tactical
 	can_suppress = TRUE
 
-/obj/item/gun/ballistic/automatic/wt550/Initialize()
+/obj/item/gun/ballistic/automatic/wt550/tactical/Initialize()
 	set_gun_light(new /obj/item/flashlight/seclite(src))
 	update_icon()
 	return ..()

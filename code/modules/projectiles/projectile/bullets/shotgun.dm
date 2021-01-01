@@ -6,6 +6,8 @@
 	name = "beanbag slug"
 	damage = 5
 	stamina = 55
+	icon_state = "bulletnl"
+	hitsound = 'sound/weapons/rubberhit.ogg'
 
 /obj/item/projectile/bullet/incendiary/shotgun
 	name = "incendiary slug"
@@ -76,11 +78,15 @@
 	name = "rubbershot pellet"
 	damage = 3
 	stamina = 11
+	icon_state = "bulletnllc"
+	hitsound = 'sound/weapons/rubberhit.ogg'
 
 /obj/item/projectile/bullet/pellet/shotgun_incapacitate
 	name = "incapacitating pellet"
 	damage = 1
 	stamina = 6
+	icon_state = "bulletnllc"
+	hitsound = 'sound/weapons/rubberhit.ogg'
 
 /obj/item/projectile/bullet/pellet/Range()
 	..()

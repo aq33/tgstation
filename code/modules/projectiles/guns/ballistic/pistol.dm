@@ -52,6 +52,7 @@
 	dual_wield_spread = 40
 	spread = 15
 	recoil = 0.6
+	fire_rate = 1.5
 	fire_delay = 2
 	burst_size = 2
 
@@ -72,6 +73,7 @@
 			spread = 1
 			recoil = 0.3
 			burst_size = 1
+			fire_rate = 3
 			fire_delay = 0
 			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
@@ -84,7 +86,7 @@
 /obj/item/gun/ballistic/automatic/pistol/secpistol/tactical
 	can_suppress = TRUE
 
-/obj/item/gun/ballistic/automatic/pistol/secpistol/Initialize()
+/obj/item/gun/ballistic/automatic/pistol/secpistol/tactical/Initialize()
 	set_gun_light(new /obj/item/flashlight/seclite(src))
 	update_icon()
 	return ..()
