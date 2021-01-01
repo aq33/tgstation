@@ -42,6 +42,12 @@
 	icon_state = "9mmbox"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	max_ammo = 30
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_box/c9mm/nl
+	name = "rubber ammo box (9mm)"
+	icon_state = "9mmnlbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/nl
 
 /obj/item/ammo_box/c10mm
 	name = "ammo box (10mm)"
@@ -54,6 +60,18 @@
 	icon_state = "45box"
 	ammo_type = /obj/item/ammo_casing/c45
 	max_ammo = 20
+
+/obj/item/ammo_box/c46x30mm
+	name = "ammo box (4.6x30mm)"
+	icon_state = "wtbox"
+	ammo_type = /obj/item/ammo_casing/c46x30mm
+	max_ammo = 40
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_box/c46x30mm/nl
+	name = "rubber ammo box (4.6x30mm)"
+	icon_state = "wtboxnl"
+	ammo_type = /obj/item/ammo_casing/c46x30mm/nl
 
 /obj/item/ammo_box/a40mm
 	name = "ammo box (40mm grenades)"
