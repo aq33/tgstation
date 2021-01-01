@@ -25,7 +25,7 @@
 	default_features = list("ipc_screen" = "BSOD", "ipc_antenna" = "None")
 	burnmod = 2
 	heatmod = 2 // computers really dont want to be hot...
-	coldmod = 0 // computers work better when they are cold, don't they?
+	coldmod = 0.35 // computers work better when they are cold, don't they?
 	brutemod = 1
 	toxmod = 0
 	clonemod = 0
