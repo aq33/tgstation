@@ -16,6 +16,12 @@
 	desc = "A 4.6x30mm incendiary bullet casing."
 	projectile_type = /obj/item/projectile/bullet/incendiary/c46x30mm
 
+/obj/item/ammo_casing/c46x30mm/nl
+	name = "4.6x30mm rubber bullet casing"
+	desc = "A 4.6x30mm rubber bullet casing."
+	projectile_type = /obj/item/projectile/bullet/c46x30mm_nl
+	icon_state = "sS-casing"
+
 // .45 (M1911 + C20r)
 
 /obj/item/ammo_casing/c45

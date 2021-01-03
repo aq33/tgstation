@@ -1,31 +1,29 @@
 /obj/item/ammo_box/magazine/wt550m9
 	name = "wt550 magazine (4.6x30mm)"
-	icon_state = "46x30mmt-20"
+	icon_state = "46x30mmt"
 	ammo_type = /obj/item/ammo_casing/c46x30mm
 	caliber = "4.6x30mm"
 	max_ammo = 20
 
-/obj/item/ammo_box/magazine/wt550m9/update_icon()
-	..()
-	icon_state = "46x30mmt-[round(ammo_count(),4)]"
-
+/obj/item/ammo_box/magazine/wt550m9/dry
+	start_empty = TRUE
 /obj/item/ammo_box/magazine/wt550m9/wtap
 	name = "wt550 magazine (Armour Piercing 4.6x30mm)"
-	icon_state = "46x30mmtA-20"
+	icon_state = "46x30mmtA"
 	ammo_type = /obj/item/ammo_casing/c46x30mm/ap
-
-/obj/item/ammo_box/magazine/wt550m9/wtap/update_icon()
-	..()
-	icon_state = "46x30mmtA-[round(ammo_count(),4)]"
 
 /obj/item/ammo_box/magazine/wt550m9/wtic
 	name = "wt550 magazine (Incendiary 4.6x30mm)"
-	icon_state = "46x30mmtI-20"
+	icon_state = "46x30mmtI"
 	ammo_type = /obj/item/ammo_casing/c46x30mm/inc
 
-/obj/item/ammo_box/magazine/wt550m9/wtic/update_icon()
-	..()
-	icon_state = "46x30mmtI-[round(ammo_count(),4)]"
+/obj/item/ammo_box/magazine/wt550m9/wtnl
+	name = "wt550 magazine (Non-Lethal 4.6x30mm)"
+	icon_state = "46x30mmtnl"
+	ammo_type = /obj/item/ammo_casing/c46x30mm/nl
+
+/obj/item/ammo_box/magazine/wt550m9/update_icon()
+	icon_state = "[initial(icon_state)]-[round(ammo_count(),4)]"
 
 /obj/item/ammo_box/magazine/uzim9mm
 	name = "uzi magazine (9mm)"

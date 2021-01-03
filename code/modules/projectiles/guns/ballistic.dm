@@ -90,6 +90,7 @@
 				add_overlay("[icon_state]_mag_empty")
 		else
 			add_overlay("[icon_state]_mag")
+		if (mag_display_ammo)
 			var/capacity_number = 0
 			switch(get_ammo() / magazine.max_ammo)
 				if(0.2 to 0.39)
@@ -102,8 +103,7 @@
 					capacity_number = 80
 				if(1.0)
 					capacity_number = 100
-			if (capacity_number)
-				add_overlay("[icon_state]_mag_[capacity_number]")
+			add_overlay("[icon_state]_mag_[capacity_number]")
 
 
 /obj/item/gun/ballistic/process_chamber(empty_chamber = TRUE, from_firing = TRUE, chamber_next_round = TRUE)

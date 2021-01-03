@@ -1,6 +1,6 @@
 /datum/wires/vending
 	holder_type = /obj/machinery/vending
-	proper_name = "Vending Unit"
+	proper_name = "Automat"
 
 /datum/wires/vending/New(atom/holder)
 	wires = list(
@@ -20,11 +20,11 @@
 /datum/wires/vending/get_status()
 	var/obj/machinery/vending/V = holder
 	var/list/status = list()
-	status += "The orange light is [V.seconds_electrified ? "on" : "off"]."
-	status += "The red light is [V.shoot_inventory ? "off" : "blinking"]."
-	status += "The green light is [V.extended_inventory ? "on" : "off"]."
-	status += "A [V.scan_id ? "purple" : "yellow"] light is on."
-	status += "The speaker light is [V.shut_up ? "off" : "on"]."
+	status += "Pomarańczowa lampka [V.seconds_electrified ? "świeci się" : "nie świeci się"]."
+	status += "Czerwona lampka [V.shoot_inventory ? "nie świeci się" : "mruga"]."
+	status += "Zielona lampka [V.extended_inventory ? "świeci się" : "nie świeci się"]."
+	status += "[V.scan_id ? "Fioletowa" : "Żółta"] lampka się świeci."
+	status += "Dioda głośnika [V.shut_up ? "nie świeci się" : "świeci się"]."
 	return status
 
 /datum/wires/vending/on_pulse(wire)

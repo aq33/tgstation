@@ -9,6 +9,7 @@
 	max_integrity = 200
 	integrity_failure = 100
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 40, "acid" = 20)
+	var/datum/looping_sound/computer/soundloop
 	var/brightness_on = 2
 	var/icon_keyboard = "generic_key"
 	var/icon_screen = "generic"
@@ -18,6 +19,7 @@
 /obj/machinery/computer/Initialize(mapload, obj/item/circuitboard/C)
 	. = ..()
 	power_change()
+	soundloop = new(list(src), FALSE)
 	if(!QDELETED(C))
 		qdel(circuit)
 		circuit = C
@@ -25,11 +27,14 @@
 
 /obj/machinery/computer/Destroy()
 	QDEL_NULL(circuit)
+	QDEL_NULL(soundloop)
 	return ..()
 
 /obj/machinery/computer/process()
 	if(stat & (NOPOWER|BROKEN))
+		soundloop.stop()
 		return 0
+	soundloop.start()
 	return 1
 
 /obj/machinery/computer/ratvar_act()

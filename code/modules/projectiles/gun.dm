@@ -76,6 +76,7 @@
 	var/atom/autofire_target = null //What are we aiming at? This will change if you move your mouse whilst spraying.
 	var/next_autofire = 0 //As to stop mag dumps, Whoops!
 	var/pb_knockback = 0
+	var/ranged_cooldown = 0
 
 /obj/item/gun/Initialize()
 	. = ..()
@@ -214,7 +215,9 @@
 	if(!can_shoot()) //Just because you can pull the trigger doesn't mean it can shoot.
 		shoot_with_empty_chamber(user)
 		return
-
+		
+	if (ranged_cooldown>world.time)
+		return
 	//Exclude lasertag guns from the TRAIT_CLUMSY check.
 	if(clumsy_check)
 		if(istype(user))
@@ -307,9 +310,9 @@
 /obj/item/gun/proc/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	add_fingerprint(user)
 	if(fire_rate)
-		user.changeNext_move(10 / fire_rate)
+		ranged_cooldown = world.time + 10 / fire_rate
 	else
-		user.changeNext_move(CLICK_CD_RANGE)
+		ranged_cooldown = world.time + CLICK_CD_RANGE
 	if(semicd)
 		return
 
@@ -548,7 +551,25 @@
 	update_gunlight()
 
 /obj/item/gun/proc/update_gunlight()
-	update_icon()
+	if(gun_light)
+		if(gun_light.on)
+			set_light(gun_light.light_range)
+		else
+			set_light(0)
+		cut_overlays(flashlight_overlay, TRUE)
+		var/state = "flight[gun_light.on? "_on":""]"	//Generic state.
+		if(gun_light.icon_state in icon_states('icons/obj/guns/flashlights.dmi'))	//Snowflake state?
+			state = gun_light.icon_state
+		flashlight_overlay = mutable_appearance('icons/obj/guns/flashlights.dmi', state)
+		flashlight_overlay.pixel_x = flight_x_offset
+		flashlight_overlay.pixel_y = flight_y_offset
+		add_overlay(flashlight_overlay, TRUE)
+		add_overlay(knife_overlay, TRUE)
+	else
+		set_light(0)
+		cut_overlays(flashlight_overlay, TRUE)
+		flashlight_overlay = null
+	update_icon(TRUE)
 	for(var/X in actions)
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
