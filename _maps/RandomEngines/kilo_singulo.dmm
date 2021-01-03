@@ -61,8 +61,8 @@
 	dir = 4
 	},
 /obj/machinery/advanced_airlock_controller{
-	pixel_x = 26;
-	pixel_y = 2
+	pixel_x = -30;
+	pixel_y = 30
 	},
 /obj/structure/cable/layer1,
 /turf/open/floor/plating,
@@ -150,8 +150,8 @@
 	dir = 4
 	},
 /obj/machinery/advanced_airlock_controller{
-	pixel_x = -26;
-	pixel_y = 2
+	pixel_x = 30;
+	pixel_y = 30
 	},
 /obj/structure/cable/layer1,
 /turf/open/floor/plating,
