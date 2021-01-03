@@ -29,9 +29,8 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/item/clothing/head/helmet/space/hardsuit/Destroy()
-	QDEL_NULL(soundloop)
+	. = ..()
 	STOP_PROCESSING(SSobj, src)
-	return ..()
 
 /obj/item/clothing/head/helmet/space/hardsuit/attack_self(mob/user)
 	on = !on
@@ -801,7 +800,7 @@
 	src.recharge_cooldown += 150
 	src.durability = 0
 	var/turf/T = get_turf(src)
-	var/mob/living/carbon/human/owner = src
+	var/mob/living/carbon/human/owner = loc
 	START_PROCESSING(SSobj, src)
 	do_sparks(3, FALSE, src)
 	T.visible_message("[owner]'s energy shield falters!")
@@ -809,10 +808,11 @@
 	update_icon()
 	..()
 
+//handles being hit, for some reason code wants to deal bonus 3 points of damage to the shield regardless of what hits it, I give up on trying to fix it and accept it as a feature
 /obj/item/clothing/suit/space/hardsuit/shielded/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text, final_block_chance = 0, damage, attack_type)
 	recharge_cooldown = world.time + recharge_delay
-	playsound(loc, 'sound/effects/shieldhit.ogg', 75, 1)
 	if(durability)
+		playsound(loc, 'sound/effects/shieldhit.ogg', 100, 1)
 		var/attackforce = 0
 		//projectile attacks
 		if(isprojectile(hitby))
@@ -823,7 +823,13 @@
 				attackforce = (P.damage * 1.5)
 			if(P.damage_type == BURN)
 				attackforce = (P.damage * 0.5)
+			if(P.movement_type & UNSTOPPABLE) //you can't block piercing rounds!
+				owner.visible_message("<span class='danger'>[P] pierces through the [owner]'s shield!</span>")
+				do_sparks(3, FALSE, src)
+				//update_icon()
+				return 0
 			durability -= attackforce
+			//update_icon()
 
 		//thrown item attacks
 		if(isitem(hitby))
@@ -834,51 +840,80 @@
 			if(I.damtype == STAMINA) //pure stamina damage wont affect blocks
 				attackforce = 0
 			durability -= attackforce
+			//update_icon()
 
 		//simplemob attacks
 		else if(isliving(hitby)) //not putting an anti stamina clause in here. only stamina damage simplemobs i know of are swarmers, and them eating shields makes sense
 			attackforce = (damage * 2) //simplemobs have an advantage here because of how much these blocking mechanics put them at a disadvantage
 			durability -= attackforce
+			//update_icon()
 
+		//update shield visuals
+
+		else
+			var/durabilitypercent = round((durability/max_durability) * 100, 1)
+			if(durabilitypercent > 80)
+				shield_state = "[shield_on]"
+			if(durabilitypercent < 80 && durabilitypercent > 30)
+				shield_state = "[shield_damaged]"
+			if(durabilitypercent < 30 && durabilitypercent > 0)
+				shield_state = "[shield_critical]"
+
+		do_sparks(3, FALSE, src)
+		owner.update_inv_wear_suit()
 		//shield overload
 		if(durability <= attackforce)
 			var/turf/T = get_turf(owner)
-			do_sparks(3, FALSE, T)
 			T.visible_message("[owner]'s shield overloads!")
 			playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
-			owner.update_inv_wear_suit()
 			durability = 0
+			shield_state = "[shield_down]"
 			START_PROCESSING(SSobj, src)
-			update_icon()
+			//update_icon()
 			return 0
-
-		//feedback
-		do_sparks(3, FALSE, src)
-		owner.visible_message("<span class='danger'>[owner]'s shields deflect [attack_text] in a shower of sparks!</span>")
+		else
+			//feedback
+			owner.visible_message("<span class='danger'>[owner]'s shields deflect [attack_text] in a shower of sparks!</span>")
+			//update_icon()
 		//recharge shield
 		if(recharge_rate && durability < max_durability)
-			update_icon()
 			START_PROCESSING(SSobj, src)
-		update_icon()
+		//update_icon()
 		return 1
 	else
-		update_icon()
+		shield_state = "[shield_down]"
 		return 0
 
 /obj/item/clothing/suit/space/hardsuit/shielded/process()
+
+	if(durability == 0)
+		shield_state = "[shield_down]"
+
+	//check if cooldown is gone, if so, start recharging
 	if(world.time > recharge_cooldown && durability < max_durability)
-		add_overlay(image("effects.dmi", src, "shield-recharging", MOB_LAYER + 0.02))
+		add_overlay(image("icons/effects/effects.dmi", loc, "shield-recharging", MOB_LAYER + 0.02))
+
+		//if shield just started recharging play vaguely familiar, totally non-copyrighted sound effect
 		if(durability == 0)
 			playsound(loc, 'sound/effects/shieldraised.ogg', 75, 0)
 		durability = CLAMP((durability + durability_recharge), 0, max_durability)
-		update_icon()
+		//update_icon()
+		var/durabilitypercent = round((durability/max_durability) * 100, 1)
+		if(durabilitypercent > 80)
+			shield_state = "[shield_on]"
+		if(durabilitypercent < 80 && durabilitypercent > 30)
+			shield_state = "[shield_damaged]"
+		if(durabilitypercent < 30 && durabilitypercent > 0)
+			shield_state = "[shield_critical]"
+		//stop recharging when full
 		if(durability == max_durability)
-			update_icon()
+			//update_icon()
 			STOP_PROCESSING(SSobj, src)
+			cut_overlays()
 		if(ishuman(loc))
 			var/mob/living/carbon/human/C = loc
 			C.update_inv_wear_suit()
-	update_icon()
+	//update_icon()
 
 /obj/item/clothing/suit/space/hardsuit/shielded/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -888,8 +923,20 @@
 	. = list()
 	if(!isinhands && durability != 0)
 		. += mutable_appearance('icons/effects/effects.dmi', shield_state, MOB_LAYER + 0.01)
-
+/*
 /obj/item/clothing/suit/space/hardsuit/shielded/update_icon()
+	if(durability == 0)
+		shield_state = "[shield_down]"
+		return
+	var/durabilitypercent = round((durability/max_durability) * 100, 1)
+	if(durabilitypercent > 80)
+		shield_state = "[shield_on]"
+	if(durabilitypercent < 80 && durabilitypercent > 30)
+		shield_state = "[shield_damaged]"
+	if(durabilitypercent < 30 && durabilitypercent > 0)
+		shield_state = "[shield_critical]"
+*/
+/*
 	if(durability < 1)
 		shield_state = "[shield_down]"
 		return
@@ -903,15 +950,6 @@
 			if(1 to 30)
 				shield_state = "[shield_critical]"
 
-/*
-	if(current_charges == max_charges)
-		shield_state = "[shield_on]"
-	if(current_charges < max_charges && current_charges > 1)
-		shield_state = "[shield_damaged]"
-	if(current_charges == 1)
-		shield_state = "[shield_critical]"
-	if(current_charges == 0)
-		shield_state = "[shield_down]"
 */
 
 /obj/item/clothing/head/helmet/space/hardsuit/shielded
