@@ -8,30 +8,34 @@
 /obj/structure/cable/layer1,
 /turf/open/floor/plating,
 /area/space/nearstation)
-"cB" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
-	dir = 5;
-	icon_state = "pipe11-1"
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
 "cK" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/open/floor/plating,
 /area/space/nearstation)
-"dv" = (
-/obj/machinery/door/airlock/external{
-	req_access_txt = "13"
+"cR" = (
+/obj/structure/particle_accelerator/particle_emitter/right,
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
 	},
-/obj/structure/fans/tiny,
+/turf/open/floor/monotile/dark,
+/area/engine/engineering)
+"dv" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/cable,
+/turf/open/floor/plasteel/techmaint,
+/area/engine/engineering)
+"dD" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "engsing";
-	name = "Singularity Access"
+	name = "Tesla Access"
 	},
-/obj/structure/cable/layer1,
-/obj/structure/cable,
+/obj/machinery/door/firedoor/window,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
 /turf/open/floor/plating,
 /area/engine/engineering)
 "dE" = (
@@ -44,14 +48,7 @@
 /turf/open/floor/plating,
 /area/space/nearstation)
 "ep" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
-	dir = 5;
-	icon_state = "pipe11-1"
-	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/tech/grid,
 /area/engine/engineering)
 "eI" = (
 /turf/closed/wall/r_wall,
@@ -62,12 +59,21 @@
 	},
 /turf/open/floor/plating,
 /area/space/nearstation)
-"fR" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 5
-	},
-/turf/open/floor/plating,
+"gb" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/techmaint,
 /area/engine/engineering)
+"gJ" = (
+/obj/structure/cable/layer1,
+/obj/item/clothing/shoes/workboots,
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating{
+	icon_state = "platingdmg2"
+	},
+/area/space/nearstation)
 "gZ" = (
 /obj/effect/turf_decal/stripes/box,
 /obj/machinery/field/generator,
@@ -75,6 +81,15 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/space/nearstation)
+"hL" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
+	},
+/turf/open/floor/plasteel/tech/grid,
+/area/engine/engineering)
 "iD" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/box,
@@ -82,17 +97,19 @@
 /turf/open/floor/plating,
 /area/space/nearstation)
 "jg" = (
-/obj/structure/cable,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
+/obj/machinery/light{
+	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/tech/grid,
 /area/engine/engineering)
 "ka" = (
-/obj/structure/cable/layer1,
-/obj/structure/cable,
-/obj/machinery/light,
-/turf/open/floor/plating,
+/obj/machinery/camera{
+	c_tag = "Engineering Singularity";
+	dir = 6;
+	network = list("ss13","engine");
+	upgrades = 2
+	},
+/turf/open/floor/plasteel/tech/grid,
 /area/engine/engineering)
 "kF" = (
 /obj/machinery/power/emitter/anchored{
@@ -107,6 +124,12 @@
 /obj/structure/cable/layer1,
 /turf/open/floor/plating,
 /area/space/nearstation)
+"lH" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/monotile/dark,
+/area/engine/engineering)
 "mr" = (
 /obj/machinery/the_singularitygen/tesla,
 /turf/open/floor/plating,
@@ -123,83 +146,157 @@
 /obj/effect/turf_decal/stripes/box,
 /turf/open/floor/plating,
 /area/space/nearstation)
-"oB" = (
-/obj/structure/cable/layer1,
-/obj/structure/cable,
+"pb" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
-	dir = 10;
+	dir = 5;
 	icon_state = "pipe11-1"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/techmaint,
 /area/engine/engineering)
 "pz" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/closet/emcloset{
+	anchored = 1
+	},
+/turf/open/floor/plating/airless,
+/area/engine/engineering)
+"qh" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "10; 13"
+	},
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plating,
+/area/engine/engineering)
+"qi" = (
+/obj/structure/particle_accelerator/particle_emitter/left,
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/monotile/dark,
 /area/engine/engineering)
 "qR" = (
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
-"vd" = (
-/obj/structure/particle_accelerator/power_box,
+"rW" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/open/floor/plasteel/techmaint,
+/area/engine/engineering)
+"su" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/techmaint,
+/area/engine/engineering)
+"sR" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "10; 13"
+	},
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/structure/cable/layer1,
 /turf/open/floor/plating,
 /area/engine/engineering)
-"wG" = (
+"vd" = (
 /obj/structure/cable/layer1,
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/techmaint,
+/area/engine/engineering)
+"wH" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/monotile/dark,
 /area/engine/engineering)
 "xC" = (
 /obj/machinery/power/grounding_rod,
 /obj/effect/turf_decal/stripes/box,
 /turf/open/floor/plating,
 /area/space/nearstation)
+"xO" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/closed/wall/r_wall,
+/area/engine/engineering)
 "yg" = (
-/obj/structure/particle_accelerator/particle_emitter/right,
-/obj/effect/turf_decal/stripes/line{
-	dir = 6
+/obj/structure/cable/multilayer{
+	cable_layer = 1
 	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"Ak" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1{
+/obj/machinery/power/terminal{
 	dir = 4;
-	icon_state = "scrub_map_on-1"
+	icon_state = "term"
+	},
+/turf/open/floor/plasteel/techmaint,
+/area/engine/engineering)
+"yv" = (
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "engsing";
+	name = "Tesla Access"
+	},
+/obj/machinery/door/firedoor/window,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
-"AT" = (
-/obj/effect/turf_decal/stripes/line{
+"Ag" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 9
 	},
-/turf/open/floor/plating,
+/obj/structure/sign/warning/electricshock,
+/turf/closed/wall,
 /area/engine/engineering)
 "BF" = (
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space/nearstation)
 "BK" = (
-/obj/machinery/button/door{
-	id = "engsing";
-	name = "Singularity Access";
-	pixel_y = -24;
-	req_access_txt = "10"
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
+/obj/structure/lattice/catwalk,
+/turf/open/space,
+/area/space/nearstation)
 "BQ" = (
-/obj/structure/particle_accelerator/particle_emitter/left,
-/obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
-	dir = 10
+	dir = 9
 	},
-/turf/open/floor/plating,
+/turf/open/floor/monotile/dark,
 /area/engine/engineering)
 "CH" = (
-/obj/structure/particle_accelerator/particle_emitter/center,
-/obj/effect/turf_decal/stripes/line,
+/obj/structure/particle_accelerator/end_cap,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/monotile/dark,
+/area/engine/engineering)
+"Dk" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/binary/dp_vent_pump{
+	dir = 4
+	},
+/obj/machinery/advanced_airlock_controller{
+	pixel_x = -26;
+	pixel_y = 2
+	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "Do" = (
@@ -209,14 +306,41 @@
 /area/space/nearstation)
 "DI" = (
 /obj/structure/cable,
-/turf/open/floor/plating,
-/area/engine/engineering)
-"Ey" = (
-/obj/machinery/light{
+/obj/machinery/door/airlock/external{
+	req_access_txt = "10; 13"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "engsing";
+	name = "Tesla Access"
+	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plating,
 /area/engine/engineering)
+"Gp" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/turf/open/floor/plasteel/tech/grid,
+/area/engine/engineering)
+"GC" = (
+/obj/structure/cable,
+/turf/open/floor/plasteel/techmaint,
+/area/engine/engineering)
+"Hf" = (
+/obj/structure/lattice/catwalk,
+/obj/item/stack/marker_beacon{
+	anchored = 1;
+	icon_state = "markerburgundy-on";
+	light_color = "#FA644B";
+	light_power = 3;
+	light_range = 2;
+	name = "landing marker";
+	picked_color = "Burgundy"
+	},
+/turf/open/space/basic,
+/area/space/nearstation)
 "Hs" = (
 /obj/machinery/power/emitter/anchored{
 	dir = 4;
@@ -226,36 +350,106 @@
 /turf/open/floor/plating,
 /area/space/nearstation)
 "HD" = (
-/obj/machinery/camera{
-	c_tag = "Engineering Tesla";
-	dir = 6;
-	network = list("ss13","engine")
+/obj/effect/spawner/structure/window/plasma/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "engsing";
+	name = "Tesla Access"
+	},
+/obj/machinery/door/firedoor/window,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
 	},
 /turf/open/floor/plating,
+/area/engine/engineering)
+"Ib" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/layer_manifold,
+/turf/open/floor/plasteel/techmaint,
 /area/engine/engineering)
 "IL" = (
 /obj/structure/cable/layer1,
 /turf/open/floor/plating,
 /area/space/nearstation)
 "Jk" = (
-/obj/machinery/particle_accelerator/control_box,
-/obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
-	dir = 8
+	dir = 5
 	},
-/turf/open/floor/plating,
+/turf/open/floor/monotile/dark,
 /area/engine/engineering)
 "JI" = (
 /turf/open/space/basic,
 /area/space)
-"Lg" = (
+"JM" = (
 /obj/structure/cable/layer1,
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/tech/grid,
+/area/engine/engineering)
+"Lg" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/turf/open/floor/plasteel/techmaint,
+/area/engine/engineering)
+"LK" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/closet/emcloset{
+	anchored = 1
+	},
+/turf/open/floor/plating/airless,
+/area/engine/engineering)
+"LN" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/tech/grid,
+/area/engine/engineering)
+"LV" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/binary/dp_vent_pump{
+	dir = 4
+	},
+/obj/machinery/advanced_airlock_controller{
+	pixel_x = 26;
+	pixel_y = 2
+	},
+/obj/structure/cable/layer1,
 /turf/open/floor/plating,
-/area/space/nearstation)
+/area/engine/engineering)
+"Mq" = (
+/obj/structure/sign/warning/vacuum/external,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 6
+	},
+/turf/closed/wall,
+/area/engine/engineering)
 "MM" = (
-/obj/structure/particle_accelerator/fuel_chamber,
-/turf/open/floor/plating,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/techmaint,
+/area/engine/engineering)
+"MS" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1{
+	dir = 4;
+	icon_state = "scrub_map_on-1"
+	},
+/turf/open/floor/plasteel/techmaint,
 /area/engine/engineering)
 "OU" = (
 /obj/machinery/camera{
@@ -263,32 +457,36 @@
 	dir = 10;
 	network = list("ss13","engine")
 	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/space/nearstation)
 "Pb" = (
 /turf/open/floor/plating,
 /area/space/nearstation)
 "Qn" = (
-/obj/structure/particle_accelerator/end_cap,
+/turf/open/floor/plating/airless,
+/area/space/nearstation)
+"QP" = (
+/obj/structure/particle_accelerator/particle_emitter/center,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/monotile/dark,
+/area/engine/engineering)
+"RE" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating,
-/area/engine/engineering)
-"QY" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
+/area/space/nearstation)
 "SJ" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/turf/open/floor/plating,
+/obj/structure/cable,
+/turf/open/floor/plasteel/tech/grid,
 /area/engine/engineering)
 "SO" = (
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/techmaint,
 /area/engine/engineering)
 "Tz" = (
 /obj/effect/turf_decal/stripes/box,
@@ -298,42 +496,92 @@
 /obj/structure/cable/layer1,
 /turf/open/floor/plating,
 /area/space/nearstation)
-"Ur" = (
-/obj/effect/spawner/structure/window/plasma/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
+"TQ" = (
+/obj/machinery/button/door{
 	id = "engsing";
-	name = "Singularity Access"
+	name = "Tesla Access";
+	pixel_y = -24;
+	req_access_txt = "10"
 	},
-/turf/open/floor/plating,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/techmaint,
 /area/engine/engineering)
-"Wm" = (
+"Uk" = (
 /obj/structure/cable/layer1,
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/engine/engineering)
-"XP" = (
-/obj/structure/cable/layer1,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/engine/engineering)
-"XS" = (
-/obj/structure/cable/multilayer{
-	cable_layer = 1
-	},
-/obj/machinery/power/terminal{
-	dir = 4;
-	icon_state = "term"
-	},
-/turf/open/floor/plating,
-/area/engine/engineering)
-"YW" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 10;
 	icon_state = "pipe11-1"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/techmaint,
+/area/engine/engineering)
+"Ur" = (
+/obj/machinery/particle_accelerator/control_box,
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/monotile/dark,
+/area/engine/engineering)
+"Wm" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/obj/structure/lattice/catwalk,
+/turf/open/floor/plating/airless,
+/area/space/nearstation)
+"XP" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 5;
+	icon_state = "pipe11-1"
+	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/techmaint,
+/area/engine/engineering)
+"XS" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 10;
+	icon_state = "pipe11-1"
+	},
+/obj/machinery/button/door{
+	id = "engineaccess";
+	name = "Engine Access Lockdown";
+	pixel_x = 24;
+	req_one_access_txt = "10"
+	},
+/turf/open/floor/plasteel/techmaint,
+/area/engine/engineering)
+"XY" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8
+	},
+/turf/open/floor/plasteel/techmaint,
+/area/engine/engineering)
+"Yh" = (
+/obj/structure/particle_accelerator/power_box,
+/turf/open/floor/monotile/dark,
+/area/engine/engineering)
+"YW" = (
+/obj/structure/particle_accelerator/fuel_chamber,
+/turf/open/floor/monotile/dark,
+/area/engine/engineering)
+"Zl" = (
+/obj/structure/sign/warning/vacuum/external,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/closed/wall,
+/area/engine/engineering)
+"ZZ" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
+	},
+/obj/structure/sign/warning/electricshock,
+/turf/closed/wall,
 /area/engine/engineering)
 
 (1,1,1) = {"
@@ -346,6 +594,12 @@ SO
 SO
 SO
 eI
+eI
+eI
+eI
+eI
+eI
+eI
 qR
 qR
 qR
@@ -357,13 +611,19 @@ qR
 (2,1,1) = {"
 SO
 SO
-SO
-SO
-SO
-SO
-SO
+Lg
+su
+su
+XY
+su
+ZZ
 eI
-eI
+Wm
+Wm
+Wm
+Wm
+Wm
+Wm
 cy
 IL
 IL
@@ -373,15 +633,21 @@ cK
 Hs
 "}
 (3,1,1) = {"
-pz
-pz
-pz
-QY
+dv
+dv
+MM
+rW
 SO
+TQ
+eI
+pz
+eI
+Wm
 BK
-eI
-eI
-Pb
+BK
+BK
+BK
+BK
 lG
 JI
 iD
@@ -391,15 +657,21 @@ JI
 Pb
 "}
 (4,1,1) = {"
-SO
-SO
+ep
+ep
+SJ
+ep
+ep
+JM
+sR
+LV
 DI
-SO
-SO
-XP
-dv
-Lg
-Lg
+Wm
+BK
+BF
+JI
+JI
+JI
 Tz
 mD
 mD
@@ -409,52 +681,70 @@ mD
 Do
 "}
 (5,1,1) = {"
-SO
-SO
-DI
-SO
-SO
-ka
+ep
+ep
+SJ
+ep
+ep
+LN
+Mq
+dD
 eI
-Pb
-Pb
-Pb
+Hf
+JI
+BF
+BF
+BF
+BF
+RE
 JI
 JI
 BF
 JI
 JI
-Pb
+RE
 "}
 (6,1,1) = {"
-SO
-AT
-Jk
-jg
+ep
 BQ
-XP
 Ur
-Pb
+wH
+qi
+JM
+HD
+Qn
+JI
+BF
+JI
+BF
+JI
+JI
 xC
-Pb
+RE
 JI
 JI
 BF
 JI
 JI
-Pb
+RE
 "}
 (7,1,1) = {"
-Ey
-Qn
-MM
-vd
+jg
 CH
-XP
-Ur
-Pb
+YW
+Yh
+QP
+JM
+HD
+Qn
 BF
 BF
+BF
+BF
+BF
+BF
+BF
+RE
 BF
 BF
 mr
@@ -463,51 +753,69 @@ BF
 OU
 "}
 (8,1,1) = {"
+ka
+Jk
+lH
+lH
+cR
+JM
 HD
-fR
-SJ
-SJ
-yg
-XP
-Ur
-Pb
+Qn
+JI
+BF
+JI
+BF
+JI
+JI
 xC
-Pb
+RE
 JI
 JI
 BF
 JI
 JI
-Pb
+RE
 "}
 (9,1,1) = {"
-SO
-SO
-SO
-SO
-SO
-ka
+ep
+ep
+ep
+ep
+ep
+hL
+Zl
+yv
 eI
-Pb
-Pb
-Pb
+Hf
+JI
+BF
+BF
+BF
+BF
+RE
 JI
 JI
 BF
 JI
 JI
-Pb
+RE
 "}
 (10,1,1) = {"
-SO
-SO
-SO
-SO
-SO
-XP
-dv
-Lg
-Lg
+ep
+ep
+ep
+ep
+ep
+Gp
+qh
+Dk
+DI
+Wm
+BK
+BF
+JI
+JI
+JI
 gZ
 mD
 mD
@@ -520,12 +828,18 @@ Do
 SO
 SO
 SO
-Ak
+MS
 SO
-XP
+vd
+xO
+LK
 eI
-eI
-SO
+Wm
+BK
+BK
+BK
+BK
+BK
 lG
 JI
 iD
@@ -535,32 +849,44 @@ JI
 Pb
 "}
 (12,1,1) = {"
+vd
+vd
+vd
+Uk
+Ib
+gb
 XP
-XP
-XP
-oB
+Ag
+eI
 Wm
-wG
-cB
-eI
-eI
+Wm
+Wm
+Wm
+Wm
+Wm
 dE
 IL
-IL
+gJ
 IL
 Pb
 fP
 kF
 "}
 (13,1,1) = {"
-XS
-XS
-DI
-XS
-DI
+yg
+yg
+GC
+yg
+GC
 SO
-YW
-ep
+XS
+pb
+eI
+eI
+eI
+eI
+eI
+eI
 eI
 qR
 qR
