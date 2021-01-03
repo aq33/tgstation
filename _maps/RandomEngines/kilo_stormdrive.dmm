@@ -292,6 +292,7 @@
 	pixel_x = 24;
 	req_one_access_txt = "10"
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
 /turf/open/floor/plasteel/techmaint,
 /area/engine/engineering)
 "vt" = (
