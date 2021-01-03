@@ -728,47 +728,63 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	var/current_charges = 3
 	var/max_charges = 3 //How many charges total the shielding has
-	var/recharge_delay = 200 //How long after we've been shot before we can start recharging. 20 seconds here
+	var/durability = 100
+	var/max_durability = 100
+	var/durability_recharge = 5
+	var/recharge_delay = 100 //How long after we've been shot before we can start recharging. 20 seconds here
 	var/recharge_cooldown = 0 //Time since we've last been shot
 	var/recharge_rate = 1 //How quickly the shield recharges once it starts charging
-	var/shield_state = "shield-old"
-	var/shield_on = "shield-old"
+	var/shield_state = "shield"
+	var/shield_on = "shield"
+	var/shield_damaged = "shield-damaged"
+	var/shield_critical = "shield-critical"
+	var/shield_down = "shield-recharging"
 
 /obj/item/clothing/suit/space/hardsuit/shielded/Initialize()
 	. = ..()
 	if(!allowed)
 		allowed = GLOB.advanced_hardsuit_allowed
+/*
+/obj/item/clothing/suit/space/hardsuit/shielded/emp_act(severity)
+	recharge_cooldown += 150
+	current_charges = 0
+	hit_reaction()
+	do_sparks(3, FALSE, src)
+	visible_message("Energy shield rapidly falters!")
+	playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
 
 /obj/item/clothing/suit/space/hardsuit/shielded/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	recharge_cooldown = world.time + recharge_delay
+	update_icon()
 	if(current_charges > 0)
+		update_icon()
 		var/datum/effect_system/spark_spread/s = new
 		s.set_up(2, 1, src)
 		s.start()
 		owner.visible_message("<span class='danger'>[owner]'s shields deflect [attack_text] in a shower of sparks!</span>")
 		current_charges--
-		if(recharge_rate)
+		if(recharge_rate && current_charges < max_charges)
+			update_icon()
 			START_PROCESSING(SSobj, src)
 		if(current_charges <= 0)
+			update_icon()
+			do_sparks(3, FALSE, src)
 			owner.visible_message("[owner]'s shield overloads!")
-			shield_state = "broken"
+			playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
 			owner.update_inv_wear_suit()
 		return 1
 	return 0
 
-
-/obj/item/clothing/suit/space/hardsuit/shielded/Destroy()
-	STOP_PROCESSING(SSobj, src)
-	return ..()
-
 /obj/item/clothing/suit/space/hardsuit/shielded/process()
+	update_icon()
 	if(world.time > recharge_cooldown && current_charges < max_charges)
+		if(current_charges == 0)
+			playsound(loc, 'sound/effects/shieldraised.ogg', 50, 0)
 		current_charges = CLAMP((current_charges + recharge_rate), 0, max_charges)
-		playsound(loc, 'sound/magic/charge.ogg', 50, 1)
+		update_icon()
 		if(current_charges == max_charges)
-			playsound(loc, 'sound/machines/ding.ogg', 50, 1)
+			update_icon()
 			STOP_PROCESSING(SSobj, src)
-		shield_state = "[shield_on]"
 		if(ishuman(loc))
 			var/mob/living/carbon/human/C = loc
 			C.update_inv_wear_suit()
@@ -777,6 +793,125 @@
 	. = list()
 	if(!isinhands)
 		. += mutable_appearance('icons/effects/effects.dmi', shield_state, MOB_LAYER + 0.01)
+*/
+
+//EMP
+/obj/item/clothing/suit/space/hardsuit/shielded/emp_act(severity)
+	src.recharge_cooldown += 150
+	src.durability = 0
+	var/turf/T = get_turf(src)
+	var/mob/living/carbon/human/owner = src
+	START_PROCESSING(SSobj, src)
+	do_sparks(3, FALSE, src)
+	T.visible_message("[owner]'s energy shield falters!")
+	playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
+	update_icon()
+	..()
+
+/obj/item/clothing/suit/space/hardsuit/shielded/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text, final_block_chance = 0, damage, attack_type)
+	recharge_cooldown = world.time + recharge_delay
+	playsound(loc, 'sound/effects/shieldhit.ogg', 75, 1)
+	if(durability)
+		var/attackforce = 0
+		//projectile attacks
+		if(isprojectile(hitby))
+			var/obj/item/projectile/P = hitby
+			if(P.damage_type == STAMINA) //disablers dont do shit to shields
+				attackforce = 0
+			if(P.damage_type == BRUTE)
+				attackforce = (P.damage * 1.5)
+			if(P.damage_type == BURN)
+				attackforce = (P.damage * 0.5)
+			durability -= attackforce
+
+		//thrown item attacks
+		if(isitem(hitby))
+			var/obj/item/I = hitby
+			if(!I.damtype == BRUTE)
+				attackforce = (damage * 0.5)
+			attackforce = (damage * I.attack_weight)
+			if(I.damtype == STAMINA) //pure stamina damage wont affect blocks
+				attackforce = 0
+			durability -= attackforce
+
+		//simplemob attacks
+		else if(isliving(hitby)) //not putting an anti stamina clause in here. only stamina damage simplemobs i know of are swarmers, and them eating shields makes sense
+			attackforce = (damage * 2) //simplemobs have an advantage here because of how much these blocking mechanics put them at a disadvantage
+			durability -= attackforce
+
+		//shield overload
+		if(durability <= attackforce)
+			var/turf/T = get_turf(owner)
+			do_sparks(3, FALSE, T)
+			T.visible_message("[owner]'s shield overloads!")
+			playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
+			owner.update_inv_wear_suit()
+			durability = 0
+			START_PROCESSING(SSobj, src)
+			update_icon()
+			return 0
+
+		//feedback
+		do_sparks(3, FALSE, src)
+		owner.visible_message("<span class='danger'>[owner]'s shields deflect [attack_text] in a shower of sparks!</span>")
+		//recharge shield
+		if(recharge_rate && durability < max_durability)
+			update_icon()
+			START_PROCESSING(SSobj, src)
+		update_icon()
+		return 1
+	else
+		update_icon()
+		return 0
+
+/obj/item/clothing/suit/space/hardsuit/shielded/process()
+	if(world.time > recharge_cooldown && durability < max_durability)
+		add_overlay(image("effects.dmi", src, "shield-recharging", MOB_LAYER + 0.02))
+		if(durability == 0)
+			playsound(loc, 'sound/effects/shieldraised.ogg', 75, 0)
+		durability = CLAMP((durability + durability_recharge), 0, max_durability)
+		update_icon()
+		if(durability == max_durability)
+			update_icon()
+			STOP_PROCESSING(SSobj, src)
+		if(ishuman(loc))
+			var/mob/living/carbon/human/C = loc
+			C.update_inv_wear_suit()
+	update_icon()
+
+/obj/item/clothing/suit/space/hardsuit/shielded/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	return ..()
+
+/obj/item/clothing/suit/space/hardsuit/shielded/worn_overlays(isinhands)
+	. = list()
+	if(!isinhands && durability != 0)
+		. += mutable_appearance('icons/effects/effects.dmi', shield_state, MOB_LAYER + 0.01)
+
+/obj/item/clothing/suit/space/hardsuit/shielded/update_icon()
+	if(durability < 1)
+		shield_state = "[shield_down]"
+		return
+	else
+		var/durabilitypercent = round((durability/max_durability) * 100, 1)
+		switch(durabilitypercent)
+			if(80 to 100)
+				shield_state = "[shield_on]"
+			if(30 to 80)
+				shield_state = "[shield_damaged]"
+			if(1 to 30)
+				shield_state = "[shield_critical]"
+
+/*
+	if(current_charges == max_charges)
+		shield_state = "[shield_on]"
+	if(current_charges < max_charges && current_charges > 1)
+		shield_state = "[shield_damaged]"
+	if(current_charges == 1)
+		shield_state = "[shield_critical]"
+	if(current_charges == 0)
+		shield_state = "[shield_down]"
+*/
 
 /obj/item/clothing/head/helmet/space/hardsuit/shielded
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -850,9 +985,12 @@
 	allowed = list(/obj/item/gun, /obj/item/ammo_box, /obj/item/ammo_casing, /obj/item/melee/baton, /obj/item/melee/transforming/energy/sword/saber, /obj/item/restraints/handcuffs, /obj/item/tank/internals)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/shielded/syndi
 	slowdown = 0
-	shield_state = "shield-red"
-	shield_on = "shield-red"
-
+	shield_state = "shieldred"
+	shield_on = "shieldred"
+	shield_damaged = "shieldred-damaged"
+	shield_critical = "shieldred-critical"
+	shield_down = "shield-recharging"
+/*
 /obj/item/clothing/suit/space/hardsuit/shielded/syndi/multitool_act(mob/living/user, obj/item/I)
 	. = ..()
 	if(shield_state == "broken")
@@ -869,7 +1007,7 @@
 		shield_on = "shield-red"
 		to_chat(user, "<span class='warning'>You update the hardsuit's hardware, changing back the shield's color to red.</span>")
 	user.update_inv_wear_suit()
-
+*/
 /obj/item/clothing/suit/space/hardsuit/shielded/syndi/Initialize()
 	jetpack = new /obj/item/tank/jetpack/suit(src)
 	. = ..()
