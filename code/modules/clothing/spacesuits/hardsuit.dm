@@ -726,79 +726,37 @@
 	allowed = null
 	armor = list("melee" = 30, "bullet" = 15, "laser" = 30, "energy" = 40, "bomb" = 10, "bio" = 100, "rad" = 50, "fire" = 100, "acid" = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	var/current_charges = 3
-	var/max_charges = 3 //How many charges total the shielding has
-	var/durability = 100
-	var/max_durability = 100
-	var/durability_recharge = 5
-	var/recharge_delay = 100 //How long after we've been shot before we can start recharging. 20 seconds here
-	var/recharge_cooldown = 0 //Time since we've last been shot
-	var/recharge_rate = 1 //How quickly the shield recharges once it starts charging
-	var/shield_state = "shield"
-	var/shield_on = "shield"
-	var/shield_damaged = "shield-damaged"
-	var/shield_critical = "shield-critical"
+
+//Shield vars
+	//How much damage shield can take
+	var/capacity = 100
+	var/max_capacity = 100
+	//How quickly shield will recharge capacity
+	var/recharge_rate = 5
+	//How long after we've been shot before we can start recharging. 10 seconds here
+	var/recharge_delay = 100
+	//Time since we've last been shot
+	var/recharge_cooldown = 0
+	//Shield visual states
+	var/shield_state = "shieldblue"
+	var/shield_on = "shieldblue"
+	var/shield_damaged = "shieldblue-damaged"
+	var/shield_critical = "shieldblue-critical"
 	var/shield_down = "shield-recharging"
 
 /obj/item/clothing/suit/space/hardsuit/shielded/Initialize()
 	. = ..()
 	if(!allowed)
 		allowed = GLOB.advanced_hardsuit_allowed
-/*
-/obj/item/clothing/suit/space/hardsuit/shielded/emp_act(severity)
-	recharge_cooldown += 150
-	current_charges = 0
-	hit_reaction()
-	do_sparks(3, FALSE, src)
-	visible_message("Energy shield rapidly falters!")
-	playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
 
-/obj/item/clothing/suit/space/hardsuit/shielded/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+/////////////////////////////////////////////////////////////////
+////SHIELD CODE//////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+//EMP hit - shield is gone
+/obj/item/clothing/suit/space/hardsuit/shielded/emp_act(severity)
 	recharge_cooldown = world.time + recharge_delay
-	update_icon()
-	if(current_charges > 0)
-		update_icon()
-		var/datum/effect_system/spark_spread/s = new
-		s.set_up(2, 1, src)
-		s.start()
-		owner.visible_message("<span class='danger'>[owner]'s shields deflect [attack_text] in a shower of sparks!</span>")
-		current_charges--
-		if(recharge_rate && current_charges < max_charges)
-			update_icon()
-			START_PROCESSING(SSobj, src)
-		if(current_charges <= 0)
-			update_icon()
-			do_sparks(3, FALSE, src)
-			owner.visible_message("[owner]'s shield overloads!")
-			playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
-			owner.update_inv_wear_suit()
-		return 1
-	return 0
-
-/obj/item/clothing/suit/space/hardsuit/shielded/process()
-	update_icon()
-	if(world.time > recharge_cooldown && current_charges < max_charges)
-		if(current_charges == 0)
-			playsound(loc, 'sound/effects/shieldraised.ogg', 50, 0)
-		current_charges = CLAMP((current_charges + recharge_rate), 0, max_charges)
-		update_icon()
-		if(current_charges == max_charges)
-			update_icon()
-			STOP_PROCESSING(SSobj, src)
-		if(ishuman(loc))
-			var/mob/living/carbon/human/C = loc
-			C.update_inv_wear_suit()
-
-/obj/item/clothing/suit/space/hardsuit/shielded/worn_overlays(isinhands)
-	. = list()
-	if(!isinhands)
-		. += mutable_appearance('icons/effects/effects.dmi', shield_state, MOB_LAYER + 0.01)
-*/
-
-//EMP
-/obj/item/clothing/suit/space/hardsuit/shielded/emp_act(severity)
-	src.recharge_cooldown += 150
-	src.durability = 0
+	capacity = 0
 	var/turf/T = get_turf(src)
 	var/mob/living/carbon/human/owner = loc
 	START_PROCESSING(SSobj, src)
@@ -806,151 +764,137 @@
 	T.visible_message("[owner]'s energy shield falters!")
 	playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
 	update_icon()
+	owner.update_inv_wear_suit()
 	..()
 
 //handles being hit, for some reason code wants to deal bonus 3 points of damage to the shield regardless of what hits it, I give up on trying to fix it and accept it as a feature
 /obj/item/clothing/suit/space/hardsuit/shielded/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text, final_block_chance = 0, damage, attack_type)
+	//you've been hit by, you've been struck by, wait
 	recharge_cooldown = world.time + recharge_delay
-	if(durability)
+	if(capacity)
 		playsound(loc, 'sound/effects/shieldhit.ogg', 100, 1)
 		var/attackforce = 0
+
 		//projectile attacks
 		if(isprojectile(hitby))
 			var/obj/item/projectile/P = hitby
-			if(P.damage_type == STAMINA) //disablers dont do shit to shields
+
+			//disablers don't damage shields
+			if(P.damage_type == STAMINA)
 				attackforce = 0
+
+			//kinetic attacks are pretty effective at defeating shields
 			if(P.damage_type == BRUTE)
-				attackforce = (P.damage * 1.5)
+				attackforce = (P.damage * 1.3)
+
+			//most energy weapons deal burn damage
 			if(P.damage_type == BURN)
-				attackforce = (P.damage * 0.5)
-			if(P.movement_type & UNSTOPPABLE) //you can't block piercing rounds!
+				attackforce = (P.damage)
+
+			//piercing rounds won't damage the shield but will pierce it
+			if(P.movement_type & UNSTOPPABLE)
 				owner.visible_message("<span class='danger'>[P] pierces through the [owner]'s shield!</span>")
 				do_sparks(3, FALSE, src)
-				//update_icon()
+				update_icon()
 				return 0
-			durability -= attackforce
-			//update_icon()
+			capacity -= attackforce
 
-		//thrown item attacks
+		//Melee
 		if(isitem(hitby))
 			var/obj/item/I = hitby
+			attackforce = (damage * I.attack_weight)
+
+			//non-brute melee attacks aren't gonna be effective
 			if(!I.damtype == BRUTE)
 				attackforce = (damage * 0.5)
-			attackforce = (damage * I.attack_weight)
-			if(I.damtype == STAMINA) //pure stamina damage wont affect blocks
+
+			//pure stamina damage will be completely blocked
+			if(I.damtype == STAMINA)
 				attackforce = 0
-			durability -= attackforce
-			//update_icon()
+			capacity -= attackforce
 
-		//simplemob attacks
-		else if(isliving(hitby)) //not putting an anti stamina clause in here. only stamina damage simplemobs i know of are swarmers, and them eating shields makes sense
-			attackforce = (damage * 2) //simplemobs have an advantage here because of how much these blocking mechanics put them at a disadvantage
-			durability -= attackforce
-			//update_icon()
-
-		//update shield visuals
-
-		else
-			var/durabilitypercent = round((durability/max_durability) * 100, 1)
-			if(durabilitypercent > 80)
-				shield_state = "[shield_on]"
-			if(durabilitypercent < 80 && durabilitypercent > 30)
-				shield_state = "[shield_damaged]"
-			if(durabilitypercent < 30 && durabilitypercent > 0)
-				shield_state = "[shield_critical]"
+		//simplemob/unarmed attacks
+		else if(isliving(hitby))
+			attackforce = damage
+			capacity -= attackforce
 
 		do_sparks(3, FALSE, src)
-		owner.update_inv_wear_suit()
-		//shield overload
-		if(durability <= attackforce)
+
+		//If damage taken exceeds shield capacity, user is hit by the full force
+		if(capacity <= attackforce)
 			var/turf/T = get_turf(owner)
 			T.visible_message("[owner]'s shield overloads!")
 			playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
-			durability = 0
-			shield_state = "[shield_down]"
+			capacity = 0
 			START_PROCESSING(SSobj, src)
-			//update_icon()
+			update_icon()
+			owner.update_inv_wear_suit()
 			return 0
 		else
-			//feedback
 			owner.visible_message("<span class='danger'>[owner]'s shields deflect [attack_text] in a shower of sparks!</span>")
-			//update_icon()
-		//recharge shield
-		if(recharge_rate && durability < max_durability)
+			update_icon()
+		//start recharging shield
+		if(recharge_rate && capacity < max_capacity)
 			START_PROCESSING(SSobj, src)
-		//update_icon()
+		update_icon()
+		owner.update_inv_wear_suit()
 		return 1
 	else
-		shield_state = "[shield_down]"
 		return 0
 
+//handles shield recharging
 /obj/item/clothing/suit/space/hardsuit/shielded/process()
-
-	if(durability == 0)
-		shield_state = "[shield_down]"
-
 	//check if cooldown is gone, if so, start recharging
-	if(world.time > recharge_cooldown && durability < max_durability)
-		add_overlay(image("icons/effects/effects.dmi", loc, "shield-recharging", MOB_LAYER + 0.02))
+	if(world.time > recharge_cooldown)
+		playsound(loc, 'sound/effects/shieldraised.ogg', 75, 0)
 
-		//if shield just started recharging play vaguely familiar, totally non-copyrighted sound effect
-		if(durability == 0)
-			playsound(loc, 'sound/effects/shieldraised.ogg', 75, 0)
-		durability = CLAMP((durability + durability_recharge), 0, max_durability)
-		//update_icon()
-		var/durabilitypercent = round((durability/max_durability) * 100, 1)
-		if(durabilitypercent > 80)
-			shield_state = "[shield_on]"
-		if(durabilitypercent < 80 && durabilitypercent > 30)
-			shield_state = "[shield_damaged]"
-		if(durabilitypercent < 30 && durabilitypercent > 0)
-			shield_state = "[shield_critical]"
+		//if shield just started recharging boost it up so player is actually rewarded for getting out of hot situation after complete depletion
+		if(capacity == 0)
+			capacity += 20
+		//if not, recharge as usual
+		else
+			capacity = CLAMP((capacity + recharge_rate), 0, max_capacity)
+		update_icon()
+
 		//stop recharging when full
-		if(durability == max_durability)
-			//update_icon()
+		if(capacity == max_capacity)
+			update_icon()
+			playsound(loc, 'sound/effects/shieldbeep2.ogg', 100, 1)
 			STOP_PROCESSING(SSobj, src)
-			cut_overlays()
 		if(ishuman(loc))
-			var/mob/living/carbon/human/C = loc
-			C.update_inv_wear_suit()
-	//update_icon()
+			var/mob/living/carbon/human/owner = loc
+			owner.update_inv_wear_suit()
 
 /obj/item/clothing/suit/space/hardsuit/shielded/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/item/clothing/suit/space/hardsuit/shielded/worn_overlays(isinhands)
-	. = list()
-	if(!isinhands && durability != 0)
-		. += mutable_appearance('icons/effects/effects.dmi', shield_state, MOB_LAYER + 0.01)
-/*
+//what icons should be updated to
 /obj/item/clothing/suit/space/hardsuit/shielded/update_icon()
-	if(durability == 0)
-		shield_state = "[shield_down]"
-		return
-	var/durabilitypercent = round((durability/max_durability) * 100, 1)
-	if(durabilitypercent > 80)
-		shield_state = "[shield_on]"
-	if(durabilitypercent < 80 && durabilitypercent > 30)
-		shield_state = "[shield_damaged]"
-	if(durabilitypercent < 30 && durabilitypercent > 0)
-		shield_state = "[shield_critical]"
-*/
-/*
-	if(durability < 1)
+	if(capacity == 0)
 		shield_state = "[shield_down]"
 		return
 	else
-		var/durabilitypercent = round((durability/max_durability) * 100, 1)
-		switch(durabilitypercent)
+		var/capacitypercent = round((capacity/max_capacity) * 100, 1)
+		switch(capacitypercent)
 			if(80 to 100)
 				shield_state = "[shield_on]"
 			if(30 to 80)
 				shield_state = "[shield_damaged]"
-			if(1 to 30)
+			if(0 to 30)
 				shield_state = "[shield_critical]"
 
-*/
+//actually update the icons
+/obj/item/clothing/suit/space/hardsuit/shielded/worn_overlays(isinhands)
+	. = list()
+	if(!isinhands)
+		. += mutable_appearance('icons/effects/effects.dmi', shield_state, MOB_LAYER + 0.01)
+
+/obj/item/clothing/suit/space/hardsuit/shielded/examine(mob/user)
+	var/capacitypercent = round((capacity/max_capacity) * 100, 1)
+	. += "<span class='info'>Display shows [src] is at [capacitypercent] shield capacity.</span>"
+
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/item/clothing/head/helmet/space/hardsuit/shielded
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -967,7 +911,6 @@
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/shielded/ctf
 	armor = list("melee" = 0, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 50, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 95)
 	slowdown = 0
-	max_charges = 5
 
 /obj/item/clothing/suit/space/hardsuit/shielded/ctf/red
 	name = "red shielded hardsuit"
@@ -1066,8 +1009,6 @@
 	icon_state = "deathsquad"
 	item_state = "swat_suit"
 	item_color = "syndi"
-	max_charges = 4
-	current_charges = 4
 	recharge_delay = 15
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 50, "energy" =60, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 	strip_delay = 130
@@ -1110,8 +1051,6 @@
 	desc = "A somehow spaceworthy set of armor with outstanding protection against almost everything. Comes in an oddly nostalgic green. "
 	icon_state = "doomguy"
 	item_state = "doomguy"
-	max_charges = 1
-	current_charges = 1
 	recharge_delay = 100
 	armor = list("melee" = 135, "bullet" = 135, "laser" = 135, "energy" = 135, "bomb" = 135, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 	strip_delay = 130
