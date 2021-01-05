@@ -109,7 +109,7 @@
 		cell = null
 
 	if(!cell)
-		return
+		return FALSE
 
 /obj/machinery/mineral/deep_drill/AltClick(mob/user) //When alt-clicked the drill will try to drop stored mats.
 	shock(user, 70)
@@ -128,19 +128,6 @@
 	shock(user, 50) //before anything, try to shock the user
 	if(user.a_intent == INTENT_HARM) //so we can hit the machine
 		return ..()
-	if(on && !panel_open)	//POPRAWIĆ BATERIE
-		on = FALSE
-		to_chat(user, "<span class='notice'>You switch the [src] off.</span>")
-		update_icon()
-	else if(!on && !panel_open)
-		on = TRUE
-		to_chat(user, "<span class='notice'>You switch the [src] on.</span>")
-		update_icon()
-	else if(panel_open && cell)
-		to_chat(user, "<span class='notice'>You remove the [cell] from the [src]</span>")
-		user.put_in_hands(cell)
-		cell.add_fingerprint(user)
-		cell = null
 	add_fingerprint(user)
 	if(istype(I, /obj/item/stock_parts/cell))
 		if(panel_open)
@@ -152,6 +139,7 @@
 				cell = I
 				I.add_fingerprint(usr)
 				user.visible_message("<span class='notice'>\The [user] inserts a power cell into \the [src].</span>", "<span class='notice'>You insert the power cell into \the [src].</span>")
+				update_icon()
 				return
 		else
 			to_chat(user, "<span class='warning'>The maintenance hatch must be open to install the [I]!</span>")
@@ -163,6 +151,9 @@
 				user.visible_message("<span class='notice'>\The [user] inserts a device into \the [src].</span>", "<span class='notice'>You insert the upgrade module into \the [src].</span>")
 				user.transferItemToLoc(I, src)
 				bluespace_upgrade = TRUE
+				return
+			else
+				to_chat(user, "<span class='warning'>The silo upgrade is already installed!</span>")
 				return
 		else
 			to_chat(user, "<span class='warning'>The maintenance hatch must be open to install the [I]!</span>")

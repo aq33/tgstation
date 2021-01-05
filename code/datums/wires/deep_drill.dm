@@ -12,7 +12,7 @@
 
 /datum/wires/mineral/deep_drill/interactable(mob/user)
 	var/obj/machinery/mineral/deep_drill/A = holder
-	if(A.panel_open)
+	if(A.panel_open && !A.cell)
 		return TRUE
 
 /datum/wires/mineral/deep_drill/get_status()
