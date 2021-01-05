@@ -28,7 +28,6 @@
 	block_upgrade_walk = 1
 	pb_knockback = 2
 	recoil = 1 //BENG
-	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/shotgun/blow_up(mob/user)
 	. = 0
@@ -216,6 +215,8 @@
 	item_state = "ishotgun"
 	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
 	w_class = WEIGHT_CLASS_BULKY
 	force = 10
 	slot_flags = null

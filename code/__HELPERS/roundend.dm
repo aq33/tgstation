@@ -506,6 +506,27 @@
 			currrent_category = A.roundend_category
 			previous_category = A
 		result += A.roundend_report()
+		//AQUILA EDIT ADDITION BEGIN - AMBITIONS
+		if(A.owner && A.owner.my_ambitions)
+			var/datum/ambitions/AMB = A.owner.my_ambitions
+			result += "<br><b>Narrative</b>: [AMB.narrative]"
+			result += "<br><b>Ambitions</b>:"
+			for(var/stri in AMB.objectives)
+				result += "<br>* [stri]"
+			var/intensity = "NOT SET"
+			switch(AMB.intensity)
+				if(AMBITION_INTENSITY_STEALTH)
+					intensity = "Stealth"
+				if(AMBITION_INTENSITY_MILD)
+					intensity = "Mild"
+				if(AMBITION_INTENSITY_MEDIUM)
+					intensity = "Medium"
+				if(AMBITION_INTENSITY_SEVERE)
+					intensity = "Severe"
+				if(AMBITION_INTENSITY_EXTREME)
+					intensity = "Extreme"
+			result += "<br><b>Intensity</b>: [intensity]"
+		//AQUILA EDIT ADDITION END - AMBITIONS
 		result += "<br><br>"
 		CHECK_TICK
 

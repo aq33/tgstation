@@ -408,28 +408,114 @@
 
 /datum/design/mag_oldsmg
 	name = "WT-550 Auto Gun Magazine (4.6x30mm)"
-	desc = "A 20 round magazine for the out of date security WT-550 Auto Rifle"
+	desc = "An empty 20 round magazine for the security WT-550 PDW"
 	id = "mag_oldsmg"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 4000)
-	build_path = /obj/item/ammo_box/magazine/wt550m9
+	materials = list(/datum/material/iron = 2000, /datum/material/glass = 500)
+	build_path = /obj/item/ammo_box/magazine/wt550m9/dry
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/mag_oldsmg/ap_mag
 	name = "WT-550 Auto Gun Armour Piercing Magazine (4.6x30mm AP)"
-	desc = "A 20 round armour piercing magazine for the out of date security WT-550 Auto Rifle"
+	desc = "A 20 round armour piercing magazine for the security WT-550 PDW"
 	id = "mag_oldsmg_ap"
-	materials = list(/datum/material/iron = 6000, /datum/material/silver = 600)
+	materials = list(/datum/material/iron = 12000, /datum/material/silver = 600)
 	build_path = /obj/item/ammo_box/magazine/wt550m9/wtap
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/mag_oldsmg/ic_mag
 	name = "WT-550 Auto Gun Incendiary Magazine (4.6x30mm IC)"
-	desc = "A 20 round armour piercing magazine for the out of date security WT-550 Auto Rifle"
+	desc = "A 20 round armour piercing magazine for security WT-550 PDW"
 	id = "mag_oldsmg_ic"
-	materials = list(/datum/material/iron = 6000, /datum/material/silver = 600, /datum/material/glass = 1000)
+	materials = list(/datum/material/iron = 12000, /datum/material/silver = 600, /datum/material/glass = 1000)
 	build_path = /obj/item/ammo_box/magazine/wt550m9/wtic
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+//Security Pistol Mags
+/datum/design/mag_secpistol
+	name = "Security Pistol Magazine (9mm)"
+	desc = "An empty 12 round magazine for the standard-issue security pistol loaded."
+	id = "mag_secpistol"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 2000, /datum/material/glass = 500, /datum/material/copper = 15)
+	build_path = /obj/item/ammo_box/magazine/sec9mm/dry
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/mag_secpistol/ext
+	name = "Security Pistol Extended Magazine (9mm)"
+	desc = "An empty 20 round magazine for the standard-issue security pistol."
+	id = "mag_secpistol_ext"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 3000, /datum/material/glass = 750, /datum/material/copper = 20)
+	build_path = /obj/item/ammo_box/magazine/sec9mm/ext/dry
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/mag_riotrifle/
+	name = "Riot Rifle Magazine (7.62mm)"
+	desc = "An empty 10 round magazine for the security riot rifle."
+	id = "mag_riotrifle"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 3000, /datum/material/glass = 750, /datum/material/copper = 20)
+	build_path = /obj/item/ammo_box/magazine/a762/mag/dry
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+//Ammo Boxes
+/datum/design/c9mm/sec
+	name = "9mm Ammo Box"
+	id = "9mmbox"
+	build_type = PROTOLATHE
+	category = list("Ammo")
+	materials = list(/datum/material/iron = 20000, /datum/material/glass = 15000, /datum/material/copper = 500)
+	build_path = /obj/item/ammo_box/c9mm
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/c9mmnl/sec
+	name = "9mm Rubber Ammo Box"
+	id = "9mmboxnl"
+	build_type = PROTOLATHE
+	category = list("Ammo")
+	materials = list(/datum/material/iron = 15000, /datum/material/glass = 10000, /datum/material/copper = 500)
+	build_path = /obj/item/ammo_box/c9mm/nl
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/c46x30mm/sec
+	name = "4.6x30mm Ammo Box"
+	id = "wtbox"
+	build_type = PROTOLATHE
+	category = list("Ammo")
+	materials = list(/datum/material/iron = 24000, /datum/material/glass = 15000, /datum/material/copper = 500)
+	build_path = /obj/item/ammo_box/c46x30mm
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/c46x30mmnl/sec
+	name = "4.6x30mm Rubber Ammo Box"
+	id = "wtboxnl"
+	build_type = PROTOLATHE
+	category = list("Ammo")
+	materials = list(/datum/material/iron = 19000, /datum/material/glass = 10000, /datum/material/copper = 500)
+	build_path = /obj/item/ammo_box/c46x30mm/nl
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/a762/sec
+	name = "7.62mm Ammo Box"
+	id = "762box"
+	build_type = PROTOLATHE
+	category = list("Ammo")
+	materials = list(/datum/material/iron = 26000, /datum/material/glass = 15000, /datum/material/copper = 500)
+	build_path = /obj/item/ammo_box/a762/box
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/a762nl/sec
+	name = "7.62mm Rubber Ammo Box"
+	id = "762boxnl"
+	build_type = PROTOLATHE
+	category = list("Ammo")
+	materials = list(/datum/material/iron = 21000, /datum/material/glass = 10000, /datum/material/copper = 500)
+	build_path = /obj/item/ammo_box/a762/box/nl
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/stunshell

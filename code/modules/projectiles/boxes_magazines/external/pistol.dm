@@ -25,6 +25,10 @@
 	desc= "A gun magazine. Loaded with rounds which penetrate armour, but are less effective against normal targets."
 	ammo_type = /obj/item/ammo_casing/c10mm/ap
 
+/obj/item/ammo_box/magazine/m10mm/update_icon()
+	..()
+	icon_state = "9x19p-[ammo_count() ? "8" : "0"]"
+
 /obj/item/ammo_box/magazine/m45
 	name = "handgun magazine (.45)"
 	icon_state = "45-8"
@@ -49,6 +53,38 @@
 /obj/item/ammo_box/magazine/pistolm9mm/update_icon()
 	..()
 	icon_state = "9x19p-[ammo_count() ? "8" : "0"]"
+
+//Security Pistol
+
+/obj/item/ammo_box/magazine/sec9mm
+	name = "security pistol magazine (9mm)"
+	icon_state = "sec9mmstd"
+	ammo_type = /obj/item/ammo_casing/c9mm
+	caliber = "9mm"
+	max_ammo = 10
+
+/obj/item/ammo_box/magazine/sec9mm/dry
+	start_empty = TRUE
+
+/obj/item/ammo_box/magazine/sec9mm/nl
+	name = "security pistol magazine (9mm non-lethal)"
+	icon_state = "sec9mmstdnl"
+	ammo_type = /obj/item/ammo_casing/c9mm/nl
+	caliber = "9mm"
+
+/obj/item/ammo_box/magazine/sec9mm/ext
+	name = "security pistol magazine (9mm extended)"
+	icon_state = "sec9mmext"
+	ammo_type = /obj/item/ammo_casing/c9mm
+	caliber = "9mm"
+	max_ammo = 18
+	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/ammo_box/magazine/sec9mm/ext/dry
+	start_empty = TRUE
+
+/obj/item/ammo_box/magazine/sec9mm/update_icon()
+	icon_state = "[initial(icon_state)]-[ammo_count() ? "1" : "0"]"
 
 /obj/item/ammo_box/magazine/m50
 	name = "handgun magazine (.50ae)"

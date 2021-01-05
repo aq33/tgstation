@@ -182,9 +182,6 @@
 	. = ..()
 	languages_possible = languages_possible_alien
 
-/obj/item/organ/tongue/alien/handle_speech(datum/source, list/speech_args)
-	playsound(owner, "hiss", 25, 1, 1)
-
 /obj/item/organ/tongue/bee
 	name = "proboscis"
 	desc = "A freakish looking meat tube that apparently can take in liquids, this one smells slighlty like flowers."

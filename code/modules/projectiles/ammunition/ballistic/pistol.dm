@@ -39,6 +39,11 @@
 	desc = "A 9mm incendiary bullet casing."
 	projectile_type = /obj/item/projectile/bullet/incendiary/c9mm
 
+/obj/item/ammo_casing/c9mm/nl
+	name = "9mm rubber bullet casing"
+	desc = "A 9mm rubber bullet casing."
+	projectile_type = /obj/item/projectile/bullet/c9mm_nl
+	icon_state = "sS-casing"
 
 // .50AE (Desert Eagle)
 

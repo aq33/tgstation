@@ -1,6 +1,8 @@
 /datum/species/vampire
 	name = "Vampire"
 	id = "vampire"
+	speech_sound = "human"
+	gendered_speech = TRUE
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,DRINKSBLOOD)
 	inherent_traits = list(TRAIT_NOHUNGER,TRAIT_NOBREATH)
