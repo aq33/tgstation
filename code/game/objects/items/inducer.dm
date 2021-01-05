@@ -8,7 +8,9 @@
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
 	force = 7
 	var/powertransfer = 1000
+	var/coefficient = 0.7 // you trade convenience for inefficiency
 	var/opened = FALSE
+	var/canopen = TRUE
 	var/cell_type = /obj/item/stock_parts/cell/high
 	var/obj/item/stock_parts/cell/cell
 	var/recharging = FALSE
@@ -18,7 +20,7 @@
 	if(!cell && cell_type)
 		cell = new cell_type
 
-/obj/item/inducer/proc/induce(obj/item/stock_parts/cell/target, coefficient)
+/obj/item/inducer/proc/induce(obj/item/stock_parts/cell/target)
 	var/totransfer = min(cell.charge,(powertransfer * coefficient))
 	var/transferred = target.give(totransfer)
 	cell.use(transferred)
@@ -62,6 +64,9 @@
 
 /obj/item/inducer/attackby(obj/item/W, mob/user)
 	if(W.tool_behaviour == TOOL_SCREWDRIVER)
+		if(!canopen)
+			to_chat(user, "<span class='notice'>You can't find the battery compartment.</span>")
+			return
 		W.play_tool_sound(src)
 		if(!opened)
 			to_chat(user, "<span class='notice'>You unscrew the battery compartment.</span>")
@@ -103,7 +108,6 @@
 		recharging = TRUE
 	var/obj/item/stock_parts/cell/C = A.get_cell()
 	var/obj/O
-	var/coefficient = 0.7 //you trade convinience for efficiency
 	if(istype(A, /obj/item/gun/energy))
 		to_chat(user,"Error unable to interface with device")
 		return FALSE
@@ -119,7 +123,7 @@
 		while(C.charge < C.maxcharge)
 			if(do_after(user, 10, target = user) && cell.charge)
 				done_any = TRUE
-				induce(C, coefficient)
+				induce(C)
 				do_sparks(1, FALSE, A)
 				if(O)
 					O.update_icon()
@@ -159,8 +163,8 @@
 		. += "<span class='notice'>Its display shows: [DisplayEnergy(cell.charge)].</span>"
 	else
 		. += "<span class='notice'>Its display is dark.</span>"
-	if(opened)
-		. += "<span class='notice'>Its battery compartment is open.</span>"
+	if (canopen)
+		. += "<span class='notice'>It's battery compartment is currently [opened ? "open" : "closed"] and it can be [opened ? "closed" : "opened"] with a screwdriver.</span>"
 
 /obj/item/inducer/update_icon()
 	cut_overlays()
@@ -181,3 +185,23 @@
 /obj/item/inducer/sci/Initialize()
 	. = ..()
 	update_icon()
+
+/obj/item/inducer/syndicate 
+	desc = "A tool for inductively charging internal power cells. This one has a suspicious colour scheme, and seems to be rigged to transfer charge at a much faster rate."
+	icon_state = "inducer-syndi"
+	item_state = "inducer-syndi"
+	cell_type = /obj/item/stock_parts/cell/super 
+	powertransfer = 2000
+
+/obj/item/inducer/abductor
+	name = "alien inducer"
+	desc = "An alien tool for inductively charging internal power cells. It seems to produce it's own power in an unknown way."
+	icon = 'icons/obj/abductor.dmi'
+	icon_state = "inducer"
+	item_state = "inducer"
+	lefthand_file = 'icons/mob/inhands/antag/abductor_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/antag/abductor_righthand.dmi'
+	cell_type = /obj/item/stock_parts/cell/infinite/abductor
+	canopen = FALSE
+	coefficient = 1 // aliens, bro
+	powertransfer = 5000
