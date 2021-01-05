@@ -174,7 +174,8 @@
 	defer_change = 1
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium/volcanic = 35, /turf/closed/mineral/diamond/volcanic = 30, /turf/closed/mineral/gold/volcanic = 45, /turf/closed/mineral/titanium/volcanic = 45,
-		/turf/closed/mineral/silver/volcanic = 50, /turf/closed/mineral/copper/volcanic = 50, /turf/closed/mineral/plasma/volcanic = 50, /turf/closed/mineral/bscrystal/volcanic = 20)
+		/turf/closed/mineral/silver/volcanic = 50, /turf/closed/mineral/copper/volcanic = 50, /turf/closed/mineral/plasma/volcanic = 50, /turf/closed/mineral/bscrystal/volcanic = 20,
+		/turf/closed/mineral/vein_common/volcanic = 20, /turf/closed/mineral/vein_volatile/volcanic = 30, /turf/closed/mineral/vein_noble/volcanic = 30, /turf/closed/mineral/vein_rare/volcanic = 30)
 
 
 
@@ -431,6 +432,31 @@
 	baseturfs = /turf/open/floor/plating/asteroid/snow/ice
 	environment_type = "snow_cavern"
 	turf_type = /turf/open/floor/plating/asteroid/snow/ice
+
+//ORE VEINS
+/turf/closed/mineral/vein_common/volcanic
+	environment_type = "basalt"
+	turf_type = /turf/open/floor/plating/asteroid/basalt/vein/common/rich
+	baseturfs = /turf/open/floor/plating/asteroid/basalt/vein/common/rich
+	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
+
+/turf/closed/mineral/vein_volatile/volcanic
+	environment_type = "basalt"
+	turf_type = /turf/open/floor/plating/asteroid/basalt/vein/volatile/rich
+	baseturfs = /turf/open/floor/plating/asteroid/basalt/vein/volatile/rich
+	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
+
+/turf/closed/mineral/vein_noble/volcanic
+	environment_type = "basalt"
+	turf_type = /turf/open/floor/plating/asteroid/basalt/vein/noble/rich
+	baseturfs = /turf/open/floor/plating/asteroid/basalt/vein/noble/rich
+	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
+
+/turf/closed/mineral/vein_rare/volcanic
+	environment_type = "basalt"
+	turf_type = /turf/open/floor/plating/asteroid/basalt/vein/rare/rich
+	baseturfs = /turf/open/floor/plating/asteroid/basalt/vein/rare/rich
+	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 
 //GIBTONITE
 
