@@ -43,7 +43,7 @@
 	build_path = /obj/item/gps
 	category = list("Bluespace Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING | DEPARTMENTAL_FLAG_CARGO
-	
+
 /datum/design/desynchronizer
 	name = "Desynchronizer"
 	desc = "A device that can desynchronize the user from spacetime."
@@ -63,7 +63,7 @@
 	build_path = /obj/item/storage/bag/ore/holding
 	category = list("Bluespace Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_CARGO
-	
+
 /datum/design/swapper
 	name = "Quantum Spin Inverter"
 	desc = "An experimental device that is able to swap the locations of two entities by switching their particles' spin values. Must be linked to another device to function."
@@ -83,3 +83,23 @@
 	build_path = /obj/item/pipe/bluespace
 	category = list("Bluespace Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+
+/datum/design/shield_vest
+	name = "Hardlight Shield Vest"
+	desc = "Advanced piece of protective gear that shields the user from kinetic and energy-based impacts."
+	id = "shieldvest"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/titanium = 2000, /datum/material/gold = 1000, /datum/material/diamond = 1000, /datum/material/uranium = 250, /datum/material/bluespace = 2000)
+	build_path = /obj/item/clothing/suit/armor/reactive/shielded
+	category = list("Bluespace Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/shield_belt
+	name = "Hardlight Shield Belt"
+	desc = "Miniaturised hardlight shield projector fitted on a belt."
+	id = "shieldbelt"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/titanium = 1000, /datum/material/gold = 1000, /datum/material/diamond = 750, /datum/material/uranium = 250, /datum/material/bluespace = 1500)
+	build_path = /obj/item/clothing/suit/armor/reactive/shielded/belt
+	category = list("Bluespace Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_SECURITY

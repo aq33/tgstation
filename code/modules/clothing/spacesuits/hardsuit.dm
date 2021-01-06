@@ -827,6 +827,9 @@
 			var/turf/T = get_turf(owner)
 			T.visible_message("[owner]'s shield overloads!")
 			playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
+			var/overcap = (attackforce - capacity)
+			owner.take_overall_damage(0, overcap)
+			to_chat(owner, "<span class='danger'>Your shield overloads in a shower of sparks, burning you!</span>")
 			capacity = 0
 			START_PROCESSING(SSobj, src)
 			update_icon()

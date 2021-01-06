@@ -253,15 +253,17 @@
 //personal energy shields
 /obj/item/clothing/suit/armor/reactive/shielded
 	name = "experimental shielded vest"
-	desc = "Extremely advanced vest housing hardlight shield projector. It's pretty heavy."
+	desc = "Advanced vest housing hardlight shield projector. It's pretty heavy."
 	icon_state = "shieldvest"
 	w_class = WEIGHT_CLASS_NORMAL
-	resistance_flags = FIRE_PROOF | ACID_PROOF
+	body_parts_covered = CHEST | GROIN
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 10, "energy" = 10, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
+	slowdown = 0.1
+
 //Shield vars
 	//How much damage shield can take
-	slowdown = 0.2
 	var/capacity = 0
-	var/max_capacity = 100
+	var/max_capacity = 120
 
 	var/isrecharging = FALSE
 
@@ -357,7 +359,7 @@
 				return 0
 			capacity -= attackforce
 
-		//Melee
+		//melee and yeet attacks
 		if(isitem(hitby))
 			var/obj/item/I = hitby
 			attackforce = (damage * I.attack_weight)
@@ -379,20 +381,26 @@
 		do_sparks(3, FALSE, src)
 		var/capacitypercent = round((capacity/max_capacity) * 100, 1)
 		if(capacitypercent < 30)
-			to_chat(owner, "<span class='danger'>[src] display shows a warning: <B>'SHIELD CRITICAL'</B>!</span>")
-		//If damage taken exceeds shield capacity, user is hit by the full force
+			to_chat(owner, "<span class='danger'>[src] display shows a warning: <B>'SHIELD CRITICAL'</B>!</span>") //let's warn the user that his shield isn't doing too well
+
+		//uh-oh, shield machine broke
 		if(capacity <= attackforce)
 			var/turf/T = get_turf(owner)
 			T.visible_message("[owner]'s shield overloads!")
 			playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
+			var/overcap = (attackforce - capacity)
+			//deal leftover damage to the owner and it's dealt as burn definitely as a conscious design decision and not laziness
+			owner.take_overall_damage(0, overcap)
+			to_chat(owner, "<span class='danger'>Your shield overloads in a shower of sparks, burning you!</span>")
 			capacity = 0
 			START_PROCESSING(SSobj, src)
 			update_icon()
 			update_inventory(owner)
-			return 0
+			return 1	//since we've already dealt damage let's not add it for the second time
 		else
 			owner.visible_message("<span class='danger'>[owner]'s shields deflect [attack_text] in a shower of sparks!</span>")
 			update_icon()
+
 		//start recharging shield
 		if(recharge_rate && capacity < max_capacity)
 			START_PROCESSING(SSobj, src)
@@ -407,7 +415,7 @@
 	//check if cooldown is gone, if so, start recharging
 	if(world.time > recharge_cooldown)
 		isrecharging = TRUE
-		//if shield just started recharging boost it up so player is actually rewarded for getting out of hot situation after complete depletion
+		//if shield just started recharging boost it up a little bit
 		if(capacity == 0)
 			playsound(loc, 'sound/effects/shieldraised.ogg', 75, 0)
 			capacity += 20
@@ -424,6 +432,7 @@
 			playsound(loc, 'sound/effects/shieldbeep2.ogg', 100, 0)
 			src.audible_message("<span class='notify'>[src] makes a loud beep.</span>")
 			STOP_PROCESSING(SSobj, src)
+		//do we need to update inventory states?
 		if(ishuman(loc))
 			var/mob/living/carbon/human/owner = loc
 			update_inventory(owner)
@@ -434,7 +443,7 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-//what icons should be updated to
+//in actuality, icon are being handled in many places, this one mostly sets shield states, then worn_overlays does its thing, possibly can be done better
 /obj/item/clothing/suit/armor/reactive/shielded/update_icon()
 	if(!active)
 		icon_state = "[initial(icon_state)]-off"
@@ -482,12 +491,14 @@
 	name = "shieldbelt"
 	desc = "Hardlight shield projector miniaturised and installed on a belt. Less powerful than counterparts, but doesn't restrict movement."
 	slot_flags = ITEM_SLOT_BELT
+	body_parts_covered = GROIN
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 10, "energy" = 10, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30)
 	slowdown = 0
 	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/belt_righthand.dmi'
 	icon = 'icons/obj/clothing/belts.dmi'
 	icon_state = "shieldbelt"
 	item_state = "shieldbelt"
-	max_capacity = 60
-	recharge_rate = 6
-	recharge_delay = 100
+	max_capacity = 90
+	recharge_rate = 10
+	recharge_delay = 75

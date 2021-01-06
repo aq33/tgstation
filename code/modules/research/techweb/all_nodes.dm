@@ -248,6 +248,14 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 2500
 
+/datum/techweb_node/hardlight
+	id = "hardlight_shields"
+	display_name = "Hardlight Shields Technology"
+	description = "Bluespace technology allowing for creation of man-portable hardlight shield projectors."
+	prereq_ids = list("adv_engi", "micro_bluespace")
+	design_ids = list("shieldbelt", "shieldvest")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3500)
+	export_price = 2500
 
 /////////////////////////plasma tech/////////////////////////
 /datum/techweb_node/basic_plasma
