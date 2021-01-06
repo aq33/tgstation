@@ -109,12 +109,14 @@
 			return 1
 	return 0
 
+//checks if the mob is shielded and if so, shield takes the damage instead of the mob
 /mob/living/carbon/human/proc/check_shields(atom/AM, var/damage, attack_text = "the attack", attack_type = MELEE_ATTACK, armour_penetration = 0)
 	for(var/obj/item/I in held_items)
 		if(!istype(I, /obj/item/clothing))
 			if(I.hit_reaction(src, AM, attack_text, damage, attack_type))
 				I.on_block(src, AM, attack_text, damage, attack_type)
 				return 1
+	//what slots can potentially provide shield cover to mob?
 	if(wear_suit)
 		if(wear_suit.hit_reaction(src, AM, attack_text, damage, attack_type))
 			return TRUE
@@ -123,6 +125,9 @@
 			return TRUE
 	if(wear_neck)
 		if(wear_neck.hit_reaction(src, AM, attack_text, damage, attack_type))
+			return TRUE
+	if(belt)
+		if(belt.hit_reaction(src, AM, attack_text, damage, attack_type))
 			return TRUE
 	return FALSE
 
@@ -237,7 +242,7 @@
 	if(M.a_intent == INTENT_DISARM) //the fact that this fucking works is hilarious to me
 		dna.species.disarm(M, src)
 		return 1
-	
+
 	if(M.limb_destroyer)
 		dismembering_strike(M, affecting.body_zone)
 
@@ -891,7 +896,7 @@
 
 	for(var/obj/item/I in torn_items)
 		I.take_damage(damage_amount, damage_type, damage_flag, 0)
-	
+
 /mob/living/carbon/human/proc/blockbreak()
 	to_chat(src, "<span class ='userdanger'>Your block was broken!</span>")
 	ADD_TRAIT(src, TRAIT_NOBLOCK, type)

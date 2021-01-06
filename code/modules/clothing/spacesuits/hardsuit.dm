@@ -819,7 +819,9 @@
 			capacity -= attackforce
 
 		do_sparks(3, FALSE, src)
-
+		var/capacitypercent = round((capacity/max_capacity) * 100, 1)
+		if(capacitypercent < 30)
+			to_chat(owner, "<span class='danger'>[src] display shows a warning: <B>'SHIELD CRITICAL'</B>!</span>")
 		//If damage taken exceeds shield capacity, user is hit by the full force
 		if(capacity <= attackforce)
 			var/turf/T = get_turf(owner)
@@ -846,10 +848,9 @@
 /obj/item/clothing/suit/space/hardsuit/shielded/process()
 	//check if cooldown is gone, if so, start recharging
 	if(world.time > recharge_cooldown)
-		playsound(loc, 'sound/effects/shieldraised.ogg', 75, 0)
-
 		//if shield just started recharging boost it up so player is actually rewarded for getting out of hot situation after complete depletion
 		if(capacity == 0)
+			playsound(loc, 'sound/effects/shieldraised.ogg', 75, 0)
 			capacity += 20
 		//if not, recharge as usual
 		else
@@ -859,7 +860,7 @@
 		//stop recharging when full
 		if(capacity == max_capacity)
 			update_icon()
-			playsound(loc, 'sound/effects/shieldbeep2.ogg', 100, 1)
+			playsound(loc, 'sound/effects/shieldbeep2.ogg', 100, 0)
 			STOP_PROCESSING(SSobj, src)
 		if(ishuman(loc))
 			var/mob/living/carbon/human/owner = loc
@@ -890,7 +891,9 @@
 	if(!isinhands)
 		. += mutable_appearance('icons/effects/effects.dmi', shield_state, MOB_LAYER + 0.01)
 
+//display how much shield is left on examine
 /obj/item/clothing/suit/space/hardsuit/shielded/examine(mob/user)
+	. = ..()
 	var/capacitypercent = round((capacity/max_capacity) * 100, 1)
 	. += "<span class='info'>Display shows [src] is at [capacitypercent] shield capacity.</span>"
 

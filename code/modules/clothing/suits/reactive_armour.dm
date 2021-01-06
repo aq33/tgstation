@@ -28,11 +28,11 @@
 /obj/item/clothing/suit/armor/reactive
 	name = "reactive armor"
 	desc = "Doesn't seem to do much for some reason."
-	var/active = 0
+	var/active = FALSE
 	var/reactivearmor_cooldown_duration = 0 //cooldown specific to reactive armor
 	var/reactivearmor_cooldown = 0
-	icon_state = "reactiveoff"
-	item_state = "reactiveoff"
+	icon_state = "reactive"
+	item_state = "reactive"
 	blood_overlay_type = "armor"
 	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 100)
 	actions_types = list(/datum/action/item_action/toggle)
@@ -44,12 +44,12 @@
 	active = !(active)
 	if(active)
 		to_chat(user, "<span class='notice'>[src] is now active.</span>")
-		icon_state = "reactive"
-		item_state = "reactive"
+		icon_state = "[initial(icon_state)]-on"
+		item_state = "[initial(item_state)]-on"
 	else
 		to_chat(user, "<span class='notice'>[src] is now inactive.</span>")
-		icon_state = "reactiveoff"
-		item_state = "reactiveoff"
+		icon_state = "[initial(icon_state)]-off"
+		item_state = "[initial(item_state)]-off"
 	add_fingerprint(user)
 	return
 
@@ -58,8 +58,8 @@
 	if(. & EMP_PROTECT_SELF)
 		return
 	active = 0
-	icon_state = "reactiveoff"
-	item_state = "reactiveoff"
+	icon_state = "reactive-off"
+	item_state = "reactive-off"
 	reactivearmor_cooldown = world.time + 200
 
 //When the wearer gets hit, this armor will teleport the user a short distance away (to safety or to more danger, no one knows. That's the fun of it!)
@@ -249,3 +249,245 @@
 
 /obj/item/clothing/suit/armor/reactive/table/emp_act()
 	return
+
+//personal energy shields
+/obj/item/clothing/suit/armor/reactive/shielded
+	name = "experimental shielded vest"
+	desc = "Extremely advanced vest housing hardlight shield projector. It's pretty heavy."
+	icon_state = "shieldvest"
+	w_class = WEIGHT_CLASS_NORMAL
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+//Shield vars
+	//How much damage shield can take
+	slowdown = 0.2
+	var/capacity = 0
+	var/max_capacity = 100
+
+	var/isrecharging = FALSE
+
+	//How quickly shield will recharge capacity
+	var/recharge_rate = 10
+	//How long after we've been shot before we can start recharging.
+	var/recharge_delay = 100
+	//Time since we've last been shot
+	var/recharge_cooldown = 0
+	//Shield visual states
+	var/shield_state = "nothing"
+	var/shield_on = "shieldblue"
+	var/shield_damaged = "shieldblue-damaged"
+	var/shield_critical = "shieldblue-critical"
+	var/shield_down = "shield-recharging"
+
+/////////////////////////////////////////////////////////////////
+////SHIELD CODE//////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+/obj/item/clothing/suit/armor/reactive/shielded/attack_self(mob/owner)
+	active = !(active)
+	if(active)
+		to_chat(owner, "<span class='notice'>[src] is now active.</span>")
+		icon_state = "[initial(icon_state)]-on"
+		item_state = "[initial(item_state)]-on"
+		recharge_cooldown = world.time + recharge_delay
+		w_class = WEIGHT_CLASS_BULKY
+		START_PROCESSING(SSobj, src)
+		update_icon()
+		update_inventory(owner)
+	else
+		to_chat(owner, "<span class='notice'>[src] is now inactive.</span>")
+		icon_state = "[initial(icon_state)]-off"
+		item_state = "[initial(item_state)]-off"
+		capacity = 0
+		w_class = WEIGHT_CLASS_NORMAL
+		STOP_PROCESSING(SSobj, src)
+		update_icon()
+		update_inventory(owner)
+	add_fingerprint(owner)
+	return
+
+//EMP hit - shield is gone
+/obj/item/clothing/suit/armor/reactive/shielded/emp_act(severity)
+	recharge_cooldown = world.time + recharge_delay
+	capacity = 0
+	active = !(active)
+	var/turf/T = get_turf(src)
+	var/mob/living/carbon/human/owner = loc
+	do_sparks(3, FALSE, src)
+	T.visible_message("[owner]'s energy shield falters!")
+	playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
+	update_icon()
+	update_inventory(owner)
+	START_PROCESSING(SSobj, src)
+	..()
+
+//handles being hit, for some reason code wants to deal bonus 3 points of damage to the shield regardless of what hits it, I give up on trying to fix it and accept it as a feature
+/obj/item/clothing/suit/armor/reactive/shielded/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text, final_block_chance = 0, damage, attack_type)
+	//you've been hit by, you've been struck by, wait
+	recharge_cooldown = world.time + recharge_delay
+	if(!active)
+		update_icon()
+		update_inventory(owner)
+		return 0
+
+	if(capacity)
+		playsound(loc, 'sound/effects/shieldhit.ogg', 100, 1)
+		var/attackforce = 0
+
+		//projectile attacks
+		if(isprojectile(hitby))
+			var/obj/item/projectile/P = hitby
+
+			//disablers don't damage shields
+			if(P.damage_type == STAMINA)
+				attackforce = 0
+
+			//kinetic attacks are pretty effective at defeating shields
+			if(P.damage_type == BRUTE)
+				attackforce = (P.damage * 1.3)
+
+			//most energy weapons deal burn damage
+			if(P.damage_type == BURN)
+				attackforce = (P.damage)
+
+			//piercing rounds won't damage the shield but will pierce it
+			if(P.movement_type & UNSTOPPABLE)
+				owner.visible_message("<span class='danger'>[P] pierces through the [owner]'s shield!</span>")
+				do_sparks(3, FALSE, src)
+				update_icon()
+				return 0
+			capacity -= attackforce
+
+		//Melee
+		if(isitem(hitby))
+			var/obj/item/I = hitby
+			attackforce = (damage * I.attack_weight)
+
+			//non-brute melee attacks aren't gonna be effective
+			if(!I.damtype == BRUTE)
+				attackforce = (damage * 0.5)
+
+			//pure stamina damage will be completely blocked
+			if(I.damtype == STAMINA)
+				attackforce = 0
+			capacity -= attackforce
+
+		//simplemob/unarmed attacks
+		else if(isliving(hitby))
+			attackforce = damage
+			capacity -= attackforce
+
+		do_sparks(3, FALSE, src)
+		var/capacitypercent = round((capacity/max_capacity) * 100, 1)
+		if(capacitypercent < 30)
+			to_chat(owner, "<span class='danger'>[src] display shows a warning: <B>'SHIELD CRITICAL'</B>!</span>")
+		//If damage taken exceeds shield capacity, user is hit by the full force
+		if(capacity <= attackforce)
+			var/turf/T = get_turf(owner)
+			T.visible_message("[owner]'s shield overloads!")
+			playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
+			capacity = 0
+			START_PROCESSING(SSobj, src)
+			update_icon()
+			update_inventory(owner)
+			return 0
+		else
+			owner.visible_message("<span class='danger'>[owner]'s shields deflect [attack_text] in a shower of sparks!</span>")
+			update_icon()
+		//start recharging shield
+		if(recharge_rate && capacity < max_capacity)
+			START_PROCESSING(SSobj, src)
+		update_icon()
+		update_inventory(owner)
+		return 1
+	else
+		return 0
+
+//handles shield recharging
+/obj/item/clothing/suit/armor/reactive/shielded/process()
+	//check if cooldown is gone, if so, start recharging
+	if(world.time > recharge_cooldown)
+		isrecharging = TRUE
+		//if shield just started recharging boost it up so player is actually rewarded for getting out of hot situation after complete depletion
+		if(capacity == 0)
+			playsound(loc, 'sound/effects/shieldraised.ogg', 75, 0)
+			capacity += 20
+		//if not, recharge as usual
+		else
+			capacity = CLAMP((capacity + recharge_rate), 0, max_capacity)
+
+		update_icon()
+
+		//stop recharging when full
+		if(capacity == max_capacity)
+			isrecharging = FALSE
+			update_icon()
+			playsound(loc, 'sound/effects/shieldbeep2.ogg', 100, 0)
+			src.audible_message("<span class='notify'>[src] makes a loud beep.</span>")
+			STOP_PROCESSING(SSobj, src)
+		if(ishuman(loc))
+			var/mob/living/carbon/human/owner = loc
+			update_inventory(owner)
+	else
+		isrecharging = FALSE
+
+/obj/item/clothing/suit/armor/reactive/shielded/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	return ..()
+
+//what icons should be updated to
+/obj/item/clothing/suit/armor/reactive/shielded/update_icon()
+	if(!active)
+		icon_state = "[initial(icon_state)]-off"
+		item_state = "[initial(item_state)]-off"
+		shield_state = "nothing"
+		return
+	if(capacity == 0)
+		shield_state = "[shield_down]"
+		return
+	else
+		var/capacitypercent = round((capacity/max_capacity) * 100, 1)
+		switch(capacitypercent)
+			if(80 to 100)
+				shield_state = "[shield_on]"
+			if(30 to 80)
+				shield_state = "[shield_damaged]"
+			if(0 to 30)
+				shield_state = "[shield_critical]"
+
+/obj/item/clothing/suit/armor/reactive/shielded/proc/update_inventory(mob/owner)
+	if(slot_flags == ITEM_SLOT_OCLOTHING)
+		owner.update_inv_wear_suit()
+	else if(slot_flags == ITEM_SLOT_BELT)
+		owner.update_inv_belt()
+	else
+		return
+
+//actually update the icons
+/obj/item/clothing/suit/armor/reactive/shielded/worn_overlays(isinhands)
+	. = list()
+	if(!isinhands)
+		. += mutable_appearance('icons/effects/effects.dmi', shield_state, MOB_LAYER + 0.01)
+		if(isrecharging)
+			. += mutable_appearance('icons/effects/effects.dmi', shield_down, MOB_LAYER + 0.02)
+
+//display how much shield is left on examine
+/obj/item/clothing/suit/armor/reactive/shielded/examine(mob/user)
+	. = ..()
+	var/capacitypercent = round((capacity/max_capacity) * 100, 1)
+	. += "<span class='info'>Display shows [src] is at [capacitypercent] shield capacity.</span>"
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+/obj/item/clothing/suit/armor/reactive/shielded/belt
+	name = "shieldbelt"
+	desc = "Hardlight shield projector miniaturised and installed on a belt. Less powerful than counterparts, but doesn't restrict movement."
+	slot_flags = ITEM_SLOT_BELT
+	slowdown = 0
+	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/belt_righthand.dmi'
+	icon = 'icons/obj/clothing/belts.dmi'
+	icon_state = "shieldbelt"
+	item_state = "shieldbelt"
+	max_capacity = 60
+	recharge_rate = 6
+	recharge_delay = 100
