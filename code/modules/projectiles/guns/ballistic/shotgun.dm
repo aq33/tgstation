@@ -28,7 +28,6 @@
 	block_upgrade_walk = 1
 	pb_knockback = 2
 	recoil = 1 //BENG
-	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/shotgun/blow_up(mob/user)
 	. = 0
