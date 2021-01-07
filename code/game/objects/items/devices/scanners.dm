@@ -486,6 +486,7 @@ GENE SCANNER
 	if(!istype(location))
 		return
 
+	scan_turf(user, location)
 	
 /obj/item/analyzer/AltClick(mob/user) //Barometer output for measuring when the next storm happens
 	..()
