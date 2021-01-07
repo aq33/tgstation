@@ -43,7 +43,7 @@
 	name = "9mm rubber bullet casing"
 	desc = "A 9mm rubber bullet casing."
 	projectile_type = /obj/item/projectile/bullet/c9mm_nl
-
+	icon_state = "sS-casing"
 
 // .50AE (Desert Eagle)
 
