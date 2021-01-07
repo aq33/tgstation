@@ -13,6 +13,7 @@
 	circuit = /obj/item/circuitboard/machine/autolathe
 	layer = BELOW_OBJ_LAYER
 
+	var/datum/looping_sound/lathe/soundloop
 	var/operating = FALSE
 	var/list/L = list()
 	var/list/LL = list()
@@ -50,13 +51,14 @@
 /obj/machinery/autolathe/Initialize()
 	AddComponent(/datum/component/material_container, list(/datum/material/iron, /datum/material/glass, /datum/material/copper, /datum/material/gold, /datum/material/gold, /datum/material/silver, /datum/material/diamond, /datum/material/uranium, /datum/material/plasma, /datum/material/bluespace, /datum/material/bananium, /datum/material/titanium), 0, TRUE, null, null, CALLBACK(src, .proc/AfterMaterialInsert))
 	. = ..()
-
+	soundloop = new(list(src), FALSE)
 	wires = new /datum/wires/autolathe(src)
 	stored_research = new /datum/techweb/specialized/autounlocking/autolathe
 	matching_designs = list()
 
 /obj/machinery/autolathe/Destroy()
 	QDEL_NULL(wires)
+	QDEL_NULL(soundloop)
 	return ..()
 
 /obj/machinery/autolathe/ui_interact(mob/user)
@@ -196,6 +198,7 @@
 				busy = TRUE
 				use_power(power)
 				icon_state = "autolathe_n"
+				soundloop.start()
 				var/time = is_stack ? 32 : (32 * coeff * multiplier) ** 0.8
 				addtimer(CALLBACK(src, .proc/make_item, power, materials_used, custom_materials, multiplier, coeff, is_stack), time)
 			else
@@ -241,6 +244,7 @@
 
 	icon_state = "autolathe"
 	busy = FALSE
+	soundloop.stop()
 	updateDialog()
 
 /obj/machinery/autolathe/RefreshParts()

@@ -1,11 +1,22 @@
 // 7.62 (Nagant Rifle)
 
 /obj/item/ammo_casing/a762
-	name = "7.62 bullet casing"
-	desc = "A 7.62 bullet casing."
+	name = "7.62mm cartridge casing"
+	desc = "A 7.62mm cartridge casing."
 	icon_state = "762-casing"
 	caliber = "a762"
 	projectile_type = /obj/item/projectile/bullet/a762
+
+/obj/item/ammo_casing/a762/nl
+	name = "7.62mm rubber cartridge casing"
+	desc = "A 7.62mm rubber cartridge casing."
+	projectile_type = /obj/item/projectile/bullet/a762/nl
+	icon_state = "762nl-casing"
+
+/obj/item/ammo_casing/a762/sabot
+	name = "7.62mm sabot cartridge casing"
+	desc = "A 7.62mm sabot cartridge casing."
+	projectile_type = /obj/item/projectile/bullet/a762/sabot
 
 /obj/item/ammo_casing/a762/enchanted
 	projectile_type = /obj/item/projectile/bullet/a762_enchanted

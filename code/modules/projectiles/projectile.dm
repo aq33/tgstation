@@ -13,7 +13,7 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	movement_type = FLYING
 	hitsound = 'sound/weapons/pierce.ogg'
-	var/hitsound_wall = ""
+	var/hitsound_wall = 'sound/weapons/metalwallhit.ogg'
 
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/def_zone = ""	//Aiming at
