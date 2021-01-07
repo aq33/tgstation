@@ -345,6 +345,8 @@
 			if(P.damage_type == BURN)
 				attackforce = (P.damage)
 
+
+
 			//piercing rounds will obliterate the shield and the overload will ignite the owner
 			if(P.movement_type & UNSTOPPABLE)
 				owner.visible_message("<span class='danger'>[P] shatters the [owner]'s shield!</span>")
@@ -352,6 +354,8 @@
 				attackforce = (P.damage)
 				owner.fire_stacks += 1
 				owner.IgniteMob()
+			else
+				P.damage = 0
 			capacity -= attackforce
 
 		//melee and yeet attacks

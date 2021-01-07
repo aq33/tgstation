@@ -800,6 +800,8 @@
 				attackforce = (P.damage)
 				owner.fire_stacks += 1
 				owner.IgniteMob()
+			else
+				P.damage = 0
 			capacity -= attackforce
 
 		//Melee

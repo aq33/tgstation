@@ -14,6 +14,6 @@
 		var/obj/effect/decal/cleanable/blood/hitsplatter/B = new(target.loc, target)
 		playsound(target.loc, 'sound/effects/bullet_hit.ogg', 100, 1)
 		B.add_blood_DNA(return_blood_DNA())
-		var/dist = rand(2,5)
+		var/dist = rand(1,3)
 		var/turf/targ = get_ranged_target_turf(target, get_dir(starting, target), dist)
 		B.GoTo(targ, dist)
