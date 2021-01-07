@@ -80,7 +80,7 @@
 
 	var/temperature_delta= abs(old_temperature - air_contents.return_temperature())
 	if(temperature_delta > 1)
-		active_power_usage = (heat_capacity * temperature_delta) / 10 + idle_power_usage
+		active_power_usage = ((heat_capacity * (2 * temperature_delta)) / 10 + idle_power_usage) * 3
 		update_parents()
 	else
 		active_power_usage = idle_power_usage
@@ -183,7 +183,7 @@
 	on = !on
 	update_icon()
 
-/obj/machinery/atmospherics/components/unary/thermomachine/freezer
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer //stop, nerfhammer time
 	name = "freezer"
 	icon_state = "freezer"
 	icon_state_off = "freezer"
