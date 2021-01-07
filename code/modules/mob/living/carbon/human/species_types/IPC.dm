@@ -24,8 +24,7 @@
 	mutant_bodyparts = list("ipc_screen", "ipc_antenna", "ipc_chassis")
 	default_features = list("ipc_screen" = "BSOD", "ipc_antenna" = "None")
 	burnmod = 2
-	heatmod = 1.75 // computers really dont want to be hot...
-	coldmod = 0.75 // computers work better when they are cold, don't they?
+	heatmod = 1.5
 	brutemod = 1
 	toxmod = 0
 	clonemod = 0
