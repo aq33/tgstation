@@ -9,6 +9,7 @@
 		#include "map_files\MetaStation\MetaStation.dmm"
 		#include "map_files\BoxStation\BoxStation.dmm"
 		#include "map_files\KiloStation\KiloStation.dmm"
+		#include "map_files\OmegaStation\OmegaStation.dmm"
 
 		#ifdef TRAVISBUILDING
 			#include "templates.dm"
