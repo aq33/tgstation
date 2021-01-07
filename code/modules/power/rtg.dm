@@ -9,6 +9,8 @@
 	density = TRUE
 	use_power = NO_POWER_USE
 	circuit = /obj/item/circuitboard/machine/rtg
+	can_be_unanchored = TRUE
+
 
 	// You can buckle someone to RTG, then open its panel. Fun stuff.
 	can_buckle = TRUE
@@ -21,10 +23,23 @@
 
 /obj/machinery/power/rtg/Initialize()
 	. = ..()
-	connect_to_network()
+	if(anchored)
+		connect_to_network()
+
+/obj/machinery/power/port_gen/should_have_node()
+	return anchored
+
+/obj/machinery/power/port_gen/connect_to_network()
+	if(!anchored)
+		return FALSE
+	. = ..()
 
 /obj/machinery/power/rtg/process()
 	..()
+	if(anchored)
+		connect_to_network()
+	else
+		disconnect_from_network()
 	add_avail(power_gen)
 	if(panel_open && irradiate)
 		radiation_pulse(src, 60)
@@ -40,6 +55,12 @@
 	. = ..()
 	if(in_range(user, src) || isobserver(user))
 		. += "<span class='notice'>The status display reads: Power generation now at <b>[power_gen*0.001]</b>kW.<span>"
+
+/obj/machinery/power/rtg/wrench_act(mob/living/user, obj/item/I)
+	default_unfasten_wrench(user, I)
+
+	playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
+	return TRUE
 
 /obj/machinery/power/rtg/attackby(obj/item/I, mob/user, params)
 	if(default_deconstruction_screwdriver(user, "[initial(icon_state)]-open", initial(icon_state), I))

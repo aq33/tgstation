@@ -5,6 +5,7 @@
 	density = TRUE
 	use_power = NO_POWER_USE
 	//vars for storing data about connected circulators
+	var/datum/looping_sound/generator/soundloop
 	var/obj/machinery/atmospherics/components/binary/circulator/cold_circ
 	var/obj/machinery/atmospherics/components/binary/circulator/hot_circ
 	var/tier = 0
@@ -36,6 +37,7 @@
 
 /obj/machinery/power/generator/Destroy()
 	kill_circs()
+	QDEL_NULL(soundloop)
 	SSair.atmos_machinery -= src
 	return ..()
 
@@ -47,11 +49,16 @@
 /obj/machinery/power/generator/update_icon()
 	if(stat & (NOPOWER|BROKEN))
 		cut_overlays()
+		soundloop.stop()
 	else
 		cut_overlays()
 
 	if(panel_open)
 		add_overlay("teg-ov-open")
+		var/L = min(round(lastgenlev/100000),11)
+		if(L != 0)
+			soundloop.start()
+			add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
 
 	//display front wall of TEG when facing east or west
 	if((dir == EAST || dir == WEST) && (!hot_circ || !cold_circ))

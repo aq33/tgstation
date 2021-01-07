@@ -5,6 +5,8 @@
 	caliber = "4.6x30mm"
 	max_ammo = 20
 
+/obj/item/ammo_box/magazine/wt550m9/dry
+	start_empty = TRUE
 /obj/item/ammo_box/magazine/wt550m9/wtap
 	name = "wt550 magazine (Armour Piercing 4.6x30mm)"
 	icon_state = "46x30mmtA"
