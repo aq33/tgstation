@@ -309,6 +309,7 @@
 
 //EMP hit - shield is gone
 /obj/item/clothing/suit/armor/reactive/shielded/emp_act(severity)
+	update_icon()
 	recharge_cooldown = world.time + recharge_delay
 	capacity = 0
 	active = !(active)
@@ -317,20 +318,13 @@
 	do_sparks(3, FALSE, src)
 	T.visible_message("[owner]'s energy shield falters!")
 	playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
-	update_icon()
-	update_inventory(owner)
 	START_PROCESSING(SSobj, src)
-	..()
+	update_inventory(owner)
 
 //handles being hit, for some reason code wants to deal bonus 3 points of damage to the shield regardless of what hits it, I give up on trying to fix it and accept it as a feature
 /obj/item/clothing/suit/armor/reactive/shielded/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text, final_block_chance = 0, damage, attack_type)
 	//you've been hit by, you've been struck by, wait
 	recharge_cooldown = world.time + recharge_delay
-	if(!active)
-		update_icon()
-		update_inventory(owner)
-		return 0
-
 	if(capacity)
 		playsound(loc, 'sound/effects/shieldhit.ogg', 100, 1)
 		var/attackforce = 0
@@ -345,18 +339,19 @@
 
 			//kinetic attacks are pretty effective at defeating shields
 			if(P.damage_type == BRUTE)
-				attackforce = (P.damage * 1.3)
+				attackforce = (P.damage * 1.25)
 
 			//most energy weapons deal burn damage
 			if(P.damage_type == BURN)
 				attackforce = (P.damage)
 
-			//piercing rounds won't damage the shield but will pierce it
+			//piercing rounds will obliterate the shield and the overload will ignite the owner
 			if(P.movement_type & UNSTOPPABLE)
-				owner.visible_message("<span class='danger'>[P] pierces through the [owner]'s shield!</span>")
-				do_sparks(3, FALSE, src)
-				update_icon()
-				return 0
+				owner.visible_message("<span class='danger'>[P] shatters the [owner]'s shield!</span>")
+				capacity = 0
+				attackforce = (P.damage)
+				owner.fire_stacks += 1
+				owner.IgniteMob()
 			capacity -= attackforce
 
 		//melee and yeet attacks
@@ -378,10 +373,8 @@
 			attackforce = damage
 			capacity -= attackforce
 
+		update_icon()
 		do_sparks(3, FALSE, src)
-		var/capacitypercent = round((capacity/max_capacity) * 100, 1)
-		if(capacitypercent < 30)
-			to_chat(owner, "<span class='danger'>[src] display shows a warning: <B>'SHIELD CRITICAL'</B>!</span>") //let's warn the user that his shield isn't doing too well
 
 		//uh-oh, shield machine broke
 		if(capacity <= attackforce)
@@ -393,20 +386,21 @@
 			owner.take_overall_damage(0, overcap)
 			to_chat(owner, "<span class='danger'>Your shield overloads in a shower of sparks, burning you!</span>")
 			capacity = 0
-			START_PROCESSING(SSobj, src)
 			update_icon()
+			START_PROCESSING(SSobj, src)
 			update_inventory(owner)
 			return 1	//since we've already dealt damage let's not add it for the second time
 		else
 			owner.visible_message("<span class='danger'>[owner]'s shields deflect [attack_text] in a shower of sparks!</span>")
-			update_icon()
+			var/capacitypercent = round((capacity/max_capacity) * 100, 1) //let's warn the user that his shield isn't doing too well
+			if(capacitypercent < 30)
+				to_chat(owner, "<span class='danger'>[src] display shows a warning: <B>'SHIELD CRITICAL: [capacitypercent]%'</B>!</span>")
 
 		//start recharging shield
 		if(recharge_rate && capacity < max_capacity)
 			START_PROCESSING(SSobj, src)
-		update_icon()
 		update_inventory(owner)
-		return 1
+		return 1	//work done, damage blocked
 	else
 		return 0
 
@@ -415,6 +409,7 @@
 	//check if cooldown is gone, if so, start recharging
 	if(world.time > recharge_cooldown)
 		isrecharging = TRUE
+
 		//if shield just started recharging boost it up a little bit
 		if(capacity == 0)
 			playsound(loc, 'sound/effects/shieldraised.ogg', 75, 0)
@@ -424,7 +419,6 @@
 			capacity = CLAMP((capacity + recharge_rate), 0, max_capacity)
 
 		update_icon()
-
 		//stop recharging when full
 		if(capacity == max_capacity)
 			isrecharging = FALSE
@@ -483,7 +477,7 @@
 /obj/item/clothing/suit/armor/reactive/shielded/examine(mob/user)
 	. = ..()
 	var/capacitypercent = round((capacity/max_capacity) * 100, 1)
-	. += "<span class='info'>Display shows [src] is at [capacitypercent] shield capacity.</span>"
+	. += "<span class='info'>Display shows that [src] is at [capacitypercent]% shield capacity.</span>"
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 

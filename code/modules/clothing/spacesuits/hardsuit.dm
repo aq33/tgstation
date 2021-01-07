@@ -731,6 +731,9 @@
 	//How much damage shield can take
 	var/capacity = 100
 	var/max_capacity = 100
+
+	var/isrecharging = FALSE
+
 	//How quickly shield will recharge capacity
 	var/recharge_rate = 5
 	//How long after we've been shot before we can start recharging. 10 seconds here
@@ -755,17 +758,16 @@
 
 //EMP hit - shield is gone
 /obj/item/clothing/suit/space/hardsuit/shielded/emp_act(severity)
+	update_icon()
 	recharge_cooldown = world.time + recharge_delay
 	capacity = 0
 	var/turf/T = get_turf(src)
 	var/mob/living/carbon/human/owner = loc
-	START_PROCESSING(SSobj, src)
 	do_sparks(3, FALSE, src)
 	T.visible_message("[owner]'s energy shield falters!")
 	playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
-	update_icon()
+	START_PROCESSING(SSobj, src)
 	owner.update_inv_wear_suit()
-	..()
 
 //handles being hit, for some reason code wants to deal bonus 3 points of damage to the shield regardless of what hits it, I give up on trying to fix it and accept it as a feature
 /obj/item/clothing/suit/space/hardsuit/shielded/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text, final_block_chance = 0, damage, attack_type)
@@ -791,12 +793,13 @@
 			if(P.damage_type == BURN)
 				attackforce = (P.damage)
 
-			//piercing rounds won't damage the shield but will pierce it
+			//piercing rounds will obliterate the shield and the overload will ignite the owner
 			if(P.movement_type & UNSTOPPABLE)
-				owner.visible_message("<span class='danger'>[P] pierces through the [owner]'s shield!</span>")
-				do_sparks(3, FALSE, src)
-				update_icon()
-				return 0
+				owner.visible_message("<span class='danger'>[P] shatters the [owner]'s shield!</span>")
+				capacity = 0
+				attackforce = (P.damage)
+				owner.fire_stacks += 1
+				owner.IgniteMob()
 			capacity -= attackforce
 
 		//Melee
@@ -818,30 +821,32 @@
 			attackforce = damage
 			capacity -= attackforce
 
+		update_icon()
 		do_sparks(3, FALSE, src)
-		var/capacitypercent = round((capacity/max_capacity) * 100, 1)
-		if(capacitypercent < 30)
-			to_chat(owner, "<span class='danger'>[src] display shows a warning: <B>'SHIELD CRITICAL'</B>!</span>")
-		//If damage taken exceeds shield capacity, user is hit by the full force
+
+		//uh-oh, shield machine broke
 		if(capacity <= attackforce)
 			var/turf/T = get_turf(owner)
 			T.visible_message("[owner]'s shield overloads!")
 			playsound(loc, 'sound/effects/shieldbeep.ogg', 75, 0)
 			var/overcap = (attackforce - capacity)
+			//deal leftover damage to the owner and it's dealt as burn definitely as a conscious design decision and not laziness
 			owner.take_overall_damage(0, overcap)
-			to_chat(owner, "<span class='danger'>Your shield overloads in a shower of sparks, burning you!</span>")
+			to_chat(owner, "<span class='danger'><B>Your shield overloads in a shower of sparks, burning you!</B></span>")
 			capacity = 0
-			START_PROCESSING(SSobj, src)
 			update_icon()
+			START_PROCESSING(SSobj, src)
 			owner.update_inv_wear_suit()
-			return 0
+			return 1	//since we've already dealt damage let's not add it for the second time
 		else
 			owner.visible_message("<span class='danger'>[owner]'s shields deflect [attack_text] in a shower of sparks!</span>")
-			update_icon()
+			var/capacitypercent = round((capacity/max_capacity) * 100, 1) //let's warn the user that his shield isn't doing too well
+			if(capacitypercent < 30)
+				to_chat(owner, "<span class='danger'>[src] display shows a warning: <B>'SHIELD CRITICAL: [capacitypercent]%'</B>!</span>")
+
 		//start recharging shield
 		if(recharge_rate && capacity < max_capacity)
 			START_PROCESSING(SSobj, src)
-		update_icon()
 		owner.update_inv_wear_suit()
 		return 1
 	else
@@ -851,23 +856,30 @@
 /obj/item/clothing/suit/space/hardsuit/shielded/process()
 	//check if cooldown is gone, if so, start recharging
 	if(world.time > recharge_cooldown)
-		//if shield just started recharging boost it up so player is actually rewarded for getting out of hot situation after complete depletion
+		isrecharging = TRUE
+
+		//if shield just started recharging boost it up a little bit
 		if(capacity == 0)
 			playsound(loc, 'sound/effects/shieldraised.ogg', 75, 0)
 			capacity += 20
 		//if not, recharge as usual
 		else
 			capacity = CLAMP((capacity + recharge_rate), 0, max_capacity)
-		update_icon()
 
+		update_icon()
 		//stop recharging when full
 		if(capacity == max_capacity)
+			isrecharging = FALSE
 			update_icon()
 			playsound(loc, 'sound/effects/shieldbeep2.ogg', 100, 0)
+			src.audible_message("<span class='notify'>[src] makes a loud beep.</span>")
 			STOP_PROCESSING(SSobj, src)
+		//do we need to update inventory states?
 		if(ishuman(loc))
 			var/mob/living/carbon/human/owner = loc
 			owner.update_inv_wear_suit()
+	else
+		isrecharging = FALSE
 
 /obj/item/clothing/suit/space/hardsuit/shielded/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -893,12 +905,14 @@
 	. = list()
 	if(!isinhands)
 		. += mutable_appearance('icons/effects/effects.dmi', shield_state, MOB_LAYER + 0.01)
+		if(isrecharging)
+			. += mutable_appearance('icons/effects/effects.dmi', shield_down, MOB_LAYER + 0.02)
 
 //display how much shield is left on examine
 /obj/item/clothing/suit/space/hardsuit/shielded/examine(mob/user)
 	. = ..()
 	var/capacitypercent = round((capacity/max_capacity) * 100, 1)
-	. += "<span class='info'>Display shows [src] is at [capacitypercent] shield capacity.</span>"
+	. += "<span class='info'>Display shows that [src] is at [capacitypercent]% shield capacity.</span>"
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
