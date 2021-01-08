@@ -447,8 +447,8 @@
 	var/energy_produced = nob_formed*(NOBLIUM_FORMATION_ENERGY/(max(air.get_moles(/datum/gas/bz),1)))
 	if ((air.get_moles(/datum/gas/tritium) - 5*nob_formed < 0) || (air.get_moles(/datum/gas/nitrogen) - 10*nob_formed < 0))
 		return NO_REACTION
-	air.adjust_moles(/datum/gas/tritium, -10*nob_formed)
-	air.adjust_moles(/datum/gas/nitrogen, -20*nob_formed)
+	air.adjust_moles(/datum/gas/tritium, -5*nob_formed)
+	air.adjust_moles(/datum/gas/nitrogen, -10*nob_formed)
 	air.adjust_moles(/datum/gas/hypernoblium, nob_formed)
 	SSresearch.science_tech.add_point_type(TECHWEB_POINT_TYPE_DEFAULT, nob_formed*NOBLIUM_RESEARCH_AMOUNT)
 
