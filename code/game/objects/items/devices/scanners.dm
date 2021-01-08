@@ -643,7 +643,7 @@ GENE SCANNER
 	name = "long-range analyzer"
 	desc = "A hand-held scanner which uses advanced spectroscopy and infrared readings to analyze gases as a distance. Alt-Click to use the built in barometer function."
 	icon = 'icons/obj/device.dmi'
-	icon_state = "analyzer_old"
+	icon_state = "analyzer_adv"
 
 /obj/item/analyzer/ranged/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
