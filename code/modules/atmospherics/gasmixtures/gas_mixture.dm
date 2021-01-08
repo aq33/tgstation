@@ -186,7 +186,8 @@ GLOBAL_LIST_INIT(gaslist_cache, init_gaslist_cache())
 
 			var/list/min_reqs = reaction.min_requirements
 			if((min_reqs["TEMP"] && temp < min_reqs["TEMP"]) \
-			|| (min_reqs["ENER"] && ener < min_reqs["ENER"]))
+			|| (min_reqs["ENER"] && ener < min_reqs["ENER"]) \
+			|| (min_reqs["MAX_TEMP"] && temp > min_reqs["MAX_TEMP"]))
 				continue
 
 			for(var/id in min_reqs)
