@@ -102,11 +102,6 @@
 		on = TRUE
 		to_chat(user, "<span class='notice'>You switch the [src] on.</span>")
 		update_icon()
-	else if(panel_open && cell)
-		to_chat(user, "<span class='notice'>You remove the [cell] from the [src]</span>")
-		user.put_in_hands(cell)
-		cell.add_fingerprint(user)
-		cell = null
 
 	if(!cell)
 		return FALSE

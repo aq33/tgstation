@@ -14,6 +14,13 @@
 	var/obj/machinery/mineral/deep_drill/A = holder
 	if(A.panel_open && !A.cell)
 		return TRUE
+	else if(A.panel_open && A.cell)
+		to_chat(user, "<span class='notice'>You remove the [A.cell] from the [A]</span>")
+		user.put_in_hands(A.cell)
+		A.cell.add_fingerprint(user)
+		A.cell = null
+		A.update_icon()
+		return FALSE
 
 /datum/wires/mineral/deep_drill/get_status()
 	var/obj/machinery/mineral/deep_drill/A = holder

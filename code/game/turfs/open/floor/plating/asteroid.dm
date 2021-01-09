@@ -294,6 +294,12 @@
 				var/turf/open/floor/plating/asteroid/airless/cave/C = tunnel.ChangeTurf(data_having_type, null, CHANGETURF_IGNORE_AIR)
 				C.going_backwards = FALSE
 				C.produce_tunnel_from_data(rand(10, 15), dir)
+				if(prob(80))
+					var/randumb = pickweight(terrain_spawn_list)
+						for(var/turf/open/floor/plating/asteroid/basalt/vein/V in range(7, C))
+							C.ChangeTurf(turf_type, null, CHANGETURF_IGNORE_AIR)
+							if(istype(V, randumb))
+								break
 			else
 				SpawnFloor(tunnel)
 		else //if(!istype(tunnel, parent)) // We hit space/normal/wall, stop our tunnel.
@@ -316,7 +322,7 @@
 	if(!sanity)
 		return
 	SpawnFlora(T)
-	SpawnTerrain(T)
+	//SpawnTerrain(T)
 	SpawnMonster(T)
 
 	T.ChangeTurf(turf_type, null, CHANGETURF_IGNORE_AIR)
