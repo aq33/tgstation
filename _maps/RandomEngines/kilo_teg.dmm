@@ -265,7 +265,9 @@
 /turf/open/floor/engine,
 /area/engine/engineering)
 "pW" = (
-/obj/structure/cable/multilayer,
+/obj/structure/cable/multilayer{
+	cable_layer = 3
+	},
 /turf/open/floor/monotile/steel,
 /area/engine/engineering)
 "qk" = (
