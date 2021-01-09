@@ -70979,15 +70979,6 @@
 	},
 /turf/open/floor/plasteel/techmaint,
 /area/security)
-"fGF" = (
-/obj/structure/sign/warning/radiation,
-/turf/closed/wall,
-/area/space/nearstation)
-"fGR" = (
-/obj/structure/lattice,
-/obj/structure/grille,
-/turf/open/space,
-/area/space)
 "fqQ" = (
 /obj/machinery/door/airlock/research{
 	name = "Science Outpost Shuttle";
@@ -71007,6 +70998,15 @@
 	icon_state = "platingdmg3"
 	},
 /area/maintenance/starboard)
+"fGF" = (
+/obj/structure/sign/warning/radiation,
+/turf/closed/wall,
+/area/space/nearstation)
+"fGR" = (
+/obj/structure/lattice,
+/obj/structure/grille,
+/turf/open/space,
+/area/space)
 "fOA" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -71201,6 +71201,13 @@
 /obj/structure/lattice,
 /turf/open/space,
 /area/space)
+"iGV" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8;
+	icon_state = "pipe11-1"
+	},
+/turf/closed/wall/rust,
+/area/maintenance/starboard)
 "iRb" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "armory";
@@ -71213,13 +71220,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
 /turf/open/floor/plasteel/techmaint,
 /area/security)
-"iGV" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
-	dir = 8;
-	icon_state = "pipe11-1"
-	},
-/turf/closed/wall/rust,
-/area/maintenance/starboard)
 "iTA" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/decal/cleanable/dirt,
@@ -71941,16 +71941,15 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/security/brig)
-"tIx" = (
-/turf/open/floor/plasteel/stairs/left,
-/area/ai_monitored/security/armory)
 "tyq" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "lavascistation"
 	},
 /turf/open/floor/plasteel/stairs/left,
 /area/ai_monitored/security/armory)
->>>>>>> master
+"tIx" = (
+/turf/open/floor/plasteel/stairs/left,
+/area/ai_monitored/security/armory)
 "tOb" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/window,
