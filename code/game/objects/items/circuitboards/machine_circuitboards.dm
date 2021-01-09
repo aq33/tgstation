@@ -1057,12 +1057,18 @@
 /obj/item/circuitboard/machine/generator
 	name = "Thermo-Electric Generator (Machine Board)"
 	build_path = /obj/machinery/power/generator
-	req_components = list()
+	req_components = list(/obj/item/stock_parts/matter_bin = 2,
+		/obj/item/stock_parts/scanning_module = 4,
+		/obj/item/stack/sheet/glass = 2,
+		/obj/item/stack/cable_coil = 5)
 
 /obj/item/circuitboard/machine/circulator
 	name = "Circulator/Heat Exchanger (Machine Board)"
 	build_path = /obj/machinery/atmospherics/components/binary/circulator
-	req_components = list()
+	req_components = list(/obj/item/stock_parts/matter_bin = 4,
+		/obj/item/stock_parts/manipulator = 4,
+		/obj/item/stack/sheet/plasteel = 5,
+		/obj/item/stack/cable_coil = 5)
 
 /obj/item/circuitboard/machine/harvester
 	name = "Harvester (Machine Board)"
