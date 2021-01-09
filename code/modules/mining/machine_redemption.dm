@@ -63,7 +63,7 @@
 	var/datum/component/material_container/mat_container = materials.mat_container
 	if (!mat_container)
 		return
-
+	flick("ore_redemption-smelt", src)
 	if(O.refined_type == null)
 		return
 
@@ -109,7 +109,6 @@
 			build_amount = smeltable_sheets
 
 		build_amount = min(build_amount, smeltable_sheets)
-
 	return build_amount
 
 /obj/machinery/mineral/ore_redemption/proc/process_ores(list/ores_to_process)
@@ -303,6 +302,7 @@
 				mats[mat] = MINERAL_MATERIAL_AMOUNT
 				materials.silo_log(src, "released", -count, "sheets", mats)
 				//Logging deleted for quick coding
+			flick("ore_redemption-smelt", src)
 			return TRUE
 		if("diskInsert")
 			var/obj/item/disk/design_disk/disk = usr.get_active_held_item()
