@@ -31,6 +31,7 @@ GENE SCANNER
 	icon_state = "polytool-t-ray"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	var/obj/machinery/polybuffer
 	materials = list(/datum/material/iron = 350, /datum/material/gold = 250, /datum/material/silver = 250)
 	item_state = "polytool-t-ray"
 	on = TRUE
@@ -54,15 +55,16 @@ GENE SCANNER
 		STOP_PROCESSING(SSobj, src)
 
 /obj/item/t_scanner/attack_self(mob/user)
-	if(istype(src, /obj/item/t_scanner/polytool))
-		playsound(get_turf(user), 'sound/items/change_jaws.ogg', 50, 1)
-		var/obj/item/wirecutters/power/polytool/polycutter = new /obj/item/wirecutters/power/polytool(drop_location())
-		to_chat(user, "<span class='notice'>You change polytool mode to wirecutter.</span>")
-		qdel(src)
-		user.put_in_active_hand(polycutter)
-		return
-	else
-		toggle_on()
+	toggle_on()
+
+/obj/item/t_scanner/polytool/attack_self(mob/user)
+	playsound(get_turf(user), 'sound/items/change_jaws.ogg', 50, 1)
+	var/obj/item/wirecutters/power/polytool/polycutter = new /obj/item/wirecutters/power/polytool(drop_location())
+	to_chat(user, "<span class='notice'>You change polytool mode to wirecutter.</span>")
+	polycutter.polybuffer = polybuffer
+	qdel(src)
+	user.put_in_active_hand(polycutter)
+	return
 
 /obj/item/t_scanner/cyborg_unequip(mob/user)
 	if(!on)

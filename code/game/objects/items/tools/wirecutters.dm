@@ -115,7 +115,7 @@
 	user.put_in_active_hand(pryjaws)
 
 /obj/item/wirecutters/power/attack(mob/living/carbon/C, mob/user)
-	if(istype(C) && C.handcuffed)
+	if(istype(C) && C.handcuffed && !istype(src, /obj/item/wirecutters/power/polytool))
 		user.visible_message("<span class='notice'>[user] cuts [C]'s restraints with [src]!</span>")
 		qdel(C.handcuffed)
 		return
@@ -128,14 +128,17 @@
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "polytool-cutter"
 	item_state = "polytool-cutter"
+	var/obj/machinery/polybuffer
 	materials = list(/datum/material/iron = 350, /datum/material/gold = 250, /datum/material/silver = 250)
 
 /obj/item/wirecutters/power/polytool/attack_self(mob/user)
 	playsound(get_turf(user), 'sound/items/change_jaws.ogg', 50, 1)
 	var/obj/item/multitool/polytool/polymulti = new /obj/item/multitool/polytool/(drop_location())
 	to_chat(user, "<span class='notice'>You change polytool mode to multitool.</span>")
+	polymulti.buffer = polybuffer
 	qdel(src)
 	user.put_in_active_hand(polymulti)
+
 /obj/item/wirecutters/cyborg
 	name = "powered wirecutters"
 	desc = "Cuts wires with the power of ELECTRICITY. Faster than normal wirecutters."

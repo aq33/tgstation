@@ -60,6 +60,7 @@
 	playsound(get_turf(user), 'sound/items/change_jaws.ogg', 50, 1)
 	var/obj/item/t_scanner/polytool/polytray = new /obj/item/t_scanner/polytool(drop_location())
 	to_chat(user, "<span class='notice'>You change polytool mode to T-Ray.</span>")
+	polytray.polybuffer = buffer
 	qdel(src)
 	user.put_in_active_hand(polytray)
 
