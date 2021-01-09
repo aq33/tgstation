@@ -1,25 +1,35 @@
 /obj/machinery/power/generator
 	name = "thermoelectric generator"
-	desc = "It's a high efficiency thermoelectric generator."
+	desc = "High-efficiency thermoelectric generator that generates power out of energy transfer between gas loops."
 	icon_state = "teg"
 	density = TRUE
 	use_power = NO_POWER_USE
-
+	//vars for storing data about connected circulators
+	var/datum/looping_sound/generator/soundloop
 	var/obj/machinery/atmospherics/components/binary/circulator/cold_circ
 	var/obj/machinery/atmospherics/components/binary/circulator/hot_circ
-
+	var/tier = 0
 	var/lastgen = 0
 	var/lastgenlev = -1
 	var/lastcirc = "00"
 
-
+//Handles stuff that needs to happen when it's created
 /obj/machinery/power/generator/Initialize(mapload)
 	. = ..()
 	find_circs()
 	connect_to_network()
 	SSair.atmos_machinery += src
 	update_icon()
-	component_parts = list(new /obj/item/circuitboard/machine/generator)
+	component_parts = list(new /obj/item/circuitboard/machine/generator,
+		new /obj/item/stock_parts/matter_bin,
+		new /obj/item/stock_parts/matter_bin,
+		new /obj/item/stock_parts/scanning_module,
+		new /obj/item/stock_parts/scanning_module,
+		new /obj/item/stock_parts/scanning_module,
+		new /obj/item/stock_parts/scanning_module,
+		new /obj/item/stack/sheet/glass,
+		new /obj/item/stack/sheet/glass,
+		new /obj/item/stack/cable_coil/five)
 
 /obj/machinery/power/generator/ComponentInitialize()
 	. = ..()
@@ -27,26 +37,57 @@
 
 /obj/machinery/power/generator/Destroy()
 	kill_circs()
+	QDEL_NULL(soundloop)
 	SSair.atmos_machinery -= src
 	return ..()
 
-/obj/machinery/power/generator/update_icon()
+//It's called when generator is rotated
+/obj/machinery/power/generator/setDir()
+	..()
+	update_icon()
 
+/obj/machinery/power/generator/update_icon()
 	if(stat & (NOPOWER|BROKEN))
 		cut_overlays()
+		soundloop.stop()
 	else
 		cut_overlays()
 
+	if(panel_open)
+		add_overlay("teg-ov-open")
 		var/L = min(round(lastgenlev/100000),11)
 		if(L != 0)
+			soundloop.start()
 			add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
 
-		if(hot_circ && cold_circ)
-			add_overlay("teg-oc[lastcirc]")
+	//display front wall of TEG when facing east or west
+	if((dir == EAST || dir == WEST) && (!hot_circ || !cold_circ))
+		add_overlay(image('icons/obj/power.dmi', "teg_front", GAS_PIPE_VISIBLE_LAYER, pixel_y = -32))
 
+	//display overlay
+	if(!hot_circ && !cold_circ && anchored)
+		add_overlay("teg-disp-error")
+	else
+		if(hot_circ.loc == get_step(src, EAST) || hot_circ.loc == get_step(src, SOUTH))
+			add_overlay("teg-disp-hotright")
+		else if(cold_circ.loc == get_step(src, EAST) || cold_circ.loc == get_step(src, SOUTH))
+			add_overlay("teg-disp-coldright")
 
-#define GENRATE 800		// generator output coefficient from Q
+		if(hot_circ.loc == get_step(src, WEST) || hot_circ.loc == get_step(src, NORTH))
+			add_overlay("teg-disp-hotleft")
+		else if(cold_circ.loc == get_step(src, WEST) || cold_circ.loc == get_step(src, NORTH))
+			add_overlay("teg-disp-coldleft")
 
+	//power level overlay
+	var/L = min(round(lastgenlev/(83333)),18)
+	if(L != 0 && anchored)
+		//if outputting power level that may result in explosion when damaged, start blinking
+		if(lastgenlev > 1500000 + tier)
+			add_overlay(image('icons/obj/power.dmi', "teg-critical"))
+			return
+		add_overlay(image('icons/obj/power.dmi', "teg-op[L]"))
+
+//Called when atmos happens and handles atmos stuff and power generation math
 /obj/machinery/power/generator/process_atmos()
 
 	if(!cold_circ || !hot_circ)
@@ -63,15 +104,26 @@
 
 			var/delta_temperature = hot_air.return_temperature() - cold_air.return_temperature()
 
-
+			//can we start heat transfer thing and potentially start generating power?
 			if(delta_temperature > 0 && cold_air_heat_capacity > 0 && hot_air_heat_capacity > 0)
-				var/efficiency = 0.65
+				var/efficiency = 0.35
+				var/techbonus
 
+				//stock parts power generation bonus
+				if((cold_circ.eff+hot_circ.eff)/2000 < 1)
+					techbonus = 0
+				else
+					techbonus = (log((cold_circ.eff+hot_circ.eff)/2000))
+
+				//secret ingredient that will help us later
 				var/energy_transfer = delta_temperature*hot_air_heat_capacity*cold_air_heat_capacity/(hot_air_heat_capacity+cold_air_heat_capacity)
-
 				var/heat = energy_transfer*(1-efficiency)
-				lastgen += energy_transfer*efficiency
 
+				//minimal delta T for TEG to actually start generating power, math defines power output
+				if(delta_temperature > 1500)
+					lastgen += ((energy_transfer*efficiency)+(energy_transfer*(techbonus/3)))/10
+
+				//math responsible for cooling hot loop gas and heating up cold loop gas
 				hot_air.set_temperature(hot_air.return_temperature() - energy_transfer/hot_air_heat_capacity)
 				cold_air.set_temperature(cold_air.return_temperature() + heat/cold_air_heat_capacity)
 
@@ -95,14 +147,37 @@
 
 	src.updateDialog()
 
+//Main proc
 /obj/machinery/power/generator/process()
-	//Setting this number higher just makes the change in power output slower, it doesnt actualy reduce power output cause **math**
-	var/power_output = round(lastgen / 10)
+	var/ohno = FALSE
+	//stock parts effect on TEG performance
+	if(cold_circ && hot_circ)
+		tier = (cold_circ.eff + hot_circ.eff)*2
+	else
+		tier = 0
+	for(var/obj/item/stock_parts/matter_bin/MB in component_parts)
+		tier += (abs(MB.rating-1))*2000
+	for(var/obj/item/stock_parts/scanning_module/SM in component_parts)
+		tier += (abs(SM.rating-1))*2000
+	//How fast power output changes (higher divider, slower change)
+	var/power_output = round(lastgen / 20)
 	add_avail(power_output)
 	lastgenlev = power_output
 	lastgen -= power_output
+	//how damaged TEG needs to be to explode from overload
+	if(src.obj_integrity < 75)
+		ohno = TRUE
+	//menacing hum
+	if(power_output > 1500000 + tier)
+		playsound(src, 'sound/machines/sm/loops/delamming.ogg', 50, TRUE, 10)
+		//create explosion scaled with output
+		if(ohno)
+			var/turf/T = get_turf(src)
+			explosion(T, round(0.5*(power_output/(1500000 + tier))), round(1*(power_output/(1500000 + tier))), round(1.5*(power_output/(1500000 + tier))), round(2*(power_output/(1500000 + tier))), adminlog = TRUE, ignorecap = FALSE, flame_range = round(2.5*(power_output/(1500000 + tier))), silent = FALSE, smoke = FALSE)
+
 	..()
 
+//TEG UI
 /obj/machinery/power/generator/proc/get_menu(include_link = TRUE)
 	var/t = ""
 	if(!powernet)
@@ -154,11 +229,11 @@
 		return FALSE
 	return TRUE
 
-
 /obj/machinery/power/generator/power_change()
 	..()
 	update_icon()
 
+//linking circulators
 /obj/machinery/power/generator/proc/find_circs()
 	kill_circs()
 	var/list/circs = list()
@@ -191,21 +266,23 @@
 				hot_circ = C
 				C.generator = src
 
+//tool interactions
 /obj/machinery/power/generator/wrench_act(mob/living/user, obj/item/I)
 	if(!panel_open)
-		return
-	anchored = !anchored
-	I.play_tool_sound(src)
+		return FALSE
+	else
+		default_unfasten_wrench(user, I)
 	if(!anchored)
 		kill_circs()
 	connect_to_network()
-	to_chat(user, "<span class='notice'>You [anchored?"secure":"unsecure"] [src].</span>")
+	update_icon()
 	return TRUE
 
 /obj/machinery/power/generator/multitool_act(mob/living/user, obj/item/I)
 	if(!anchored)
 		return
 	find_circs()
+	update_icon()
 	to_chat(user, "<span class='notice'>You update [src]'s circulator links.</span>")
 	return TRUE
 
@@ -214,12 +291,29 @@
 		return TRUE
 	panel_open = !panel_open
 	I.play_tool_sound(src)
+	update_icon()
 	to_chat(user, "<span class='notice'>You [panel_open?"open":"close"] the panel on [src].</span>")
 	return TRUE
 
 /obj/machinery/power/generator/crowbar_act(mob/user, obj/item/I)
 	default_deconstruction_crowbar(I)
 	return TRUE
+
+/obj/machinery/power/generator/welder_act(mob/living/user, obj/item/I)
+	if(obj_integrity != max_integrity && user.a_intent == INTENT_HELP)
+		if(!I.tool_start_check(user, amount=15))
+			return
+		user.visible_message(
+			"<span class='notice'>[user] begins patching up [src] with [I].</span>",
+			"<span class='notice'>You begin restoring the damage to [src]...</span>")
+		I.use_tool(src, user, 40, amount=15, volume=50)
+		user.visible_message(
+			"<span class='notice'>[user] fixes [src]!</span>",
+			"<span class='notice'>You repair [src].</span>")
+		obj_integrity = max_integrity
+		return
+	else if(user.a_intent != INTENT_HELP)
+		..()
 
 /obj/machinery/power/generator/on_deconstruction()
 	kill_circs()

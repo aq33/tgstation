@@ -16,7 +16,6 @@
 	welded = FALSE
 	level = 1
 	layer = GAS_SCRUBBER_LAYER
-
 	var/id_tag = null
 	var/pump_direction = RELEASING
 

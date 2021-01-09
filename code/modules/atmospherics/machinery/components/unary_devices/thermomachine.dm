@@ -14,7 +14,6 @@
 
 
 	pipe_flags = PIPING_ONE_PER_TURF
-
 	var/icon_state_off = "freezer"
 	var/icon_state_on = "freezer_1"
 	var/icon_state_open = "freezer-o"
@@ -81,7 +80,7 @@
 
 	var/temperature_delta= abs(old_temperature - air_contents.return_temperature())
 	if(temperature_delta > 1)
-		active_power_usage = (heat_capacity * temperature_delta) / 10 + idle_power_usage
+		active_power_usage = ((heat_capacity * (2 * temperature_delta)) / 10 + idle_power_usage) * 3
 		update_parents()
 	else
 		active_power_usage = idle_power_usage
@@ -184,7 +183,7 @@
 	on = !on
 	update_icon()
 
-/obj/machinery/atmospherics/components/unary/thermomachine/freezer
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer //stop, nerfhammer time
 	name = "freezer"
 	icon_state = "freezer"
 	icon_state_off = "freezer"

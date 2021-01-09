@@ -655,7 +655,7 @@
 	id = "sec_basic"
 	display_name = "Basic Security Equipment"
 	description = "Standard equipment used by security."
-	design_ids = list("seclite", "pepperspray", "bola_energy", "zipties", "evidencebag", "flashbulb", "laserpistol", "gun_cell", "9mmboxnl", "wtboxnl")
+	design_ids = list("seclite", "pepperspray", "bola_energy", "zipties", "evidencebag", "flashbulb")
 	prereq_ids = list("base")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000)
 	export_price = 5000
@@ -692,10 +692,10 @@
 
 /datum/techweb_node/weaponry
 	id = "weaponry"
-	display_name = "Weapon Development Technology"
+	display_name = "Energy Weapons Development Technology"
 	description = "Our researchers have found new ways to weaponize just about everything now."
-	prereq_ids = list("engineering")
-	design_ids = list("pin_testing", "tele_shield", "sleepy", "laserrifle")
+	prereq_ids = list("engineering", "adv_power")
+	design_ids = list("pin_testing", "tele_shield", "sleepy", "laserrifle", "laserpistol", "gun_cell")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 
@@ -780,21 +780,30 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
+/datum/techweb_node/ballistic_weapons
+	id = "ballistic_weapons"
+	display_name = "Ballistic Weaponry"
+	description = "Projectile-based armaments for all your station security needs"
+	prereq_ids = list("engineering", "sec_basic")
+	design_ids = list("mag_oldsmg", "mag_secpistol", "9mmbox", "9mmboxnl", "wtbox", "wtboxnl")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	export_price = 2500
+
+/datum/techweb_node/advballistic_weapons
+	id = "adv_ballistic_weapons"
+	display_name = "Advanced Ballistic Weaponry"
+	description = "When regular ballistics aren't enough."
+	prereq_ids = list("ballistic_weapons")
+	design_ids = list("mag_oldsmg_ap", "mag_oldsmg_ic", "mag_secpistol_ext", "mag_riotrifle", "762box", "762boxnl")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	export_price = 2500
+
 /datum/techweb_node/explosive_weapons
 	id = "explosive_weapons"
 	display_name = "Explosive & Pyrotechnical Weaponry"
 	description = "If the light stuff just won't do it."
-	prereq_ids = list("adv_weaponry")
-	design_ids = list("large_Grenade", "pyro_Grenade", "adv_Grenade")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-	export_price = 5000
-
-/datum/techweb_node/ballistic_weapons
-	id = "ballistic_weapons"
-	display_name = "Ballistic Weaponry"
-	description = "This isn't research.. This is reverse-engineering!"
-	prereq_ids = list("weaponry")
-	design_ids = list("mag_oldsmg", "mag_oldsmg_ap", "mag_oldsmg_ic", "mag_oldsmg_nl", "mag_secpistol", "mag_secpistol_nl", "mag_secpistol_ext", "wtbox", "9mmbox", "grenade_launcher")
+	prereq_ids = list("adv_ballistic_weapons")
+	design_ids = list("large_Grenade", "pyro_Grenade", "adv_Grenade", "grenade_launcher")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -916,7 +925,7 @@
 	id = "mecha_tools"
 	display_name = "Exosuit Weapon (LBX AC 10 \"Scattershot\")"
 	description = "An advanced piece of mech weaponry"
-	prereq_ids = list("ballistic_weapons")
+	prereq_ids = list("advballistic_weapons")
 	design_ids = list("mech_scattershot", "mech_scattershot_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
@@ -925,7 +934,7 @@
 	id = "mech_carbine"
 	display_name = "Exosuit Weapon (FD-11 \"Bush Boss\" Thermal Defoliant.)"
 	description = "An advanced piece of mech weaponry"
-	prereq_ids = list("ballistic_weapons")
+	prereq_ids = list("advballistic_weapons")
 	design_ids = list("mech_carbine", "mech_carbine_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
@@ -934,7 +943,7 @@
 	id = "mech_lmg"
 	display_name = "Exosuit Weapon (\"Ultra AC 2\" LMG)"
 	description = "An advanced piece of mech weaponry"
-	prereq_ids = list("ballistic_weapons")
+	prereq_ids = list("advballistic_weapons")
 	design_ids = list("mech_lmg", "mech_lmg_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
@@ -970,7 +979,7 @@
 	id = "mech_railgun"
 	display_name = "Exosuit Weapon (GER-X1 Railgun)"
 	description = "An advanced piece of mech weaponry"
-	prereq_ids = list("ballistic_weapons", "electronic_weapons", "adv_power")
+	prereq_ids = list("advballistic_weapons", "electronic_weapons", "adv_power")
 	design_ids = list("mech_railgun", "mech_railgun_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
