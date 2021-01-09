@@ -627,7 +627,7 @@
 	},
 /obj/effect/turf_decal/stripes/corner,
 /turf/open/floor/plasteel/techmaint,
-/area/engine/engineering)
+/area/engine/supermatter)
 "Bg" = (
 /turf/open/floor/plating,
 /area/engine/engineering)

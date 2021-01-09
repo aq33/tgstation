@@ -100,7 +100,7 @@
 "gx" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "controlroom";
+	id = "strmdrivcontrolroom";
 	name = "Reactor control room shutters"
 	},
 /turf/open/floor/plating,
@@ -320,6 +320,12 @@
 	},
 /turf/open/floor/monotile/steel,
 /area/engine/engineering)
+"xb" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/tech/grid,
+/area/engine/engineering)
 "ye" = (
 /obj/machinery/atmospherics/pipe/simple/purple/visible,
 /turf/open/floor/plasteel/tech/grid,
@@ -480,7 +486,7 @@
 /area/engine/engineering)
 "Il" = (
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "controlroom";
+	id = "strmdrivcontrolroom";
 	name = "Reactor control room shutters"
 	},
 /obj/machinery/door/airlock/engineering/glass{
@@ -546,7 +552,7 @@
 	icon_state = "pipe11-1"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "controlroom";
+	id = "strmdrivcontrolroom";
 	name = "Reactor control room shutters"
 	},
 /turf/open/floor/plating,
@@ -703,7 +709,7 @@
 	req_access_txt = "10"
 	},
 /obj/machinery/button{
-	id = "controlroom";
+	id = "strmdrivcontrolroom";
 	name = "Control room shutters control";
 	pixel_y = -2;
 	req_access_txt = "10"
@@ -1034,7 +1040,7 @@ kh
 Fi
 Tg
 Ru
-Ru
+xb
 gQ
 ks
 "}
