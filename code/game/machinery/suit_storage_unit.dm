@@ -93,6 +93,12 @@
 	suit_type = /obj/item/clothing/suit/space/hardsuit/mining
 	mask_type = /obj/item/clothing/mask/breath
 
+/obj/machinery/suit_storage_unit/mining/explorer
+	suit_type = /obj/item/clothing/suit/space/eva/cargo
+	helmet_type = /obj/item/clothing/head/helmet/space/eva/cargo
+	mask_type = /obj/item/clothing/mask/gas/explorer
+	storage_type = /obj/item/tank/jetpack/carbondioxide
+
 /obj/machinery/suit_storage_unit/cmo
 	suit_type = /obj/item/clothing/suit/space/hardsuit/medical/cmo
 	mask_type = /obj/item/clothing/mask/breath
