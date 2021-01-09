@@ -12,8 +12,8 @@
 
 	outfit = /datum/outfit/job/explorer
 
-	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_QM, ACCESS_MINING, ACCESS_MECH_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM, ACCESS_GATEWAY, ACCESS_EVA)
-	minimal_access = list(ACCESS_MINING, ACCESS_MECH_MINING, ACCESS_MINING_STATION, ACCESS_MAILSORTING, ACCESS_MINERAL_STOREROOM, ACCESS_GATEWAY, ACCESS_EVA, ACCESS_MAINT_TUNNELS)
+	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_QM, ACCESS_MINING, ACCESS_MECH_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM, ACCESS_GATEWAY)
+	minimal_access = list(ACCESS_MINING, ACCESS_MECH_MINING, ACCESS_MINING_STATION, ACCESS_MAILSORTING, ACCESS_MINERAL_STOREROOM, ACCESS_GATEWAY, ACCESS_MAINT_TUNNELS)
 	paycheck = PAYCHECK_HARD
 	paycheck_department = ACCOUNT_CAR
 
@@ -27,19 +27,17 @@
 	belt = /obj/item/pda/shaftminer
 	ears = /obj/item/radio/headset/headset_cargo/mining
 	shoes = /obj/item/clothing/shoes/workboots/mining
-	glasses = /obj/item/clothing/glasses/meson
 	head = /obj/item/clothing/head/fedora/curator
 	gloves = /obj/item/clothing/gloves/color/black
 	uniform = /obj/item/clothing/under/rank/civilian/curator/treasure_hunter
-	l_pocket = /obj/item/gps
-	r_pocket = /obj/item/survivalcapsule
+	l_pocket = /obj/item/reagent_containers/hypospray/medipen/survival
+	r_pocket = /obj/item/storage/bag/ore
 	backpack_contents = list(
-		/obj/item/t_scanner/adv_mining_scanner/lesser = 1,
-		/obj/item/storage/bag/ore = 1,
-		/obj/item/fulton_core = 1,
-        /obj/item/extraction_pack = 1,
-		/obj/item/choice_beacon/exploring = 1,
-        /obj/item/kitchen/knife/combat/survival=1)
+		/obj/item/flashlight/seclite=1,
+		/obj/item/kitchen/knife/combat/survival=1,
+		/obj/item/stack/marker_beacon/ten=1,
+		/obj/item/card/mining_point_card=1,
+        /obj/item/gps=1)
 
 	backpack = /obj/item/storage/backpack/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
