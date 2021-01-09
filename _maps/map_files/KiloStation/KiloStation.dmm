@@ -25581,7 +25581,6 @@
 /turf/open/floor/plasteel/dark,
 /area/science/lab)
 "aXo" = (
-/obj/machinery/rnd/experimentor,
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/engine,
 /area/science/explab)
@@ -25982,6 +25981,7 @@
 	dir = 5;
 	icon_state = "pipe11-1"
 	},
+/obj/machinery/rnd/experimentor,
 /turf/open/floor/engine,
 /area/science/explab)
 "aXT" = (
