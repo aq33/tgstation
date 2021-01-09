@@ -47,6 +47,71 @@
 		-->
 		<div class="commit sansserif">
 
+			<h2 class="date">09 January 2021</h2>
+			<h3 class="author">Quartofel updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Kinetic Accelerator Pistol: lekki wariant akceleratora kinetycznego o nieco wyższej bazowej szybkostrzelności, nieco mniejszych obrażeniach oraz mod capacity, ale za to może być używany bez problemu jedną ręką</li>
+				<li class="tweak">Proto-Kinetic Accelerator nazywa się teraz Kinetic Accelerator Rifle</li>
+				<li class="balance">KAR jest teraz bronią średnią</li>
+				<li class="code_imp">refactor działania broni średnich - bronie średnie mogą być używane jedną ręką ale otrzymują dość dużą karę do celności</li>
+				<li class="balance">bazowy zasięg KARa to teraz 4 pola</li>
+				<li class="tweak">plasma cuttery startują puste</li>
+				<li class="balance">może się okazjonalnie tak stać, że trzeba włożyć plazmę do cuttera</li>
+				<li class="rscadd">wszystkie wiertła mogą z różną skutecznością rozwiercać ściany, moby oraz obiekty</li>
+				<li class="balance">wiertła mają teraz w_class NORMAL</li>
+				<li class="balance">wiertła są teraz dużo lepszymi narzędziami do kopania, kilofy natomiast nieco gorszymi</li>
+				<li class="rscadd">Explorer Locker (po merge trzeba będzie dodać je na mapy)</li>
+				<li class="rscadd">Explorer Suit Storage Unit (po merge trzeba będzie dodać je na mapy)</li>
+				<li class="rscadd">Cargo EVA suit</li>
+				<li class="rscdel">Explorer Gamer Beacon is gone :crab:</li>
+				<li class="balance">Explorer startuje z bardziej rozsądną ilością sprzętu porównywalną z wyposażeniem startowym reszty zawodów na stacji</li>
+				<li class="imageadd">nowe sprite ORM, Mining Vendora, wierteł i jackhammera Jump Boots, KC, resonatora, Kinetic Acceleratora oraz Modkitów</li>
+			</ul>
+			<h3 class="author">faceslav2 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">poprawiono ID guzików i żaluzji</li>
+				<li class="bugfix">poprawiono obszar widziany przez air alarm w supermatter</li>
+				<li class="bugfix">poprawiono podłogę w sci</li>
+				<li class="bugfix">poprawiono łącze multilayer cable</li>
+				<li class="bugfix">postawiono maszyne experimentora troche bliżej by konsola wykrywała go</li>
+			</ul>
+
+			<h2 class="date">07 January 2021</h2>
+			<h3 class="author">Autor: Joker updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">dodano nową stacje - omegastation</li>
+			</ul>
+			<h3 class="author">Faceslav updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">zmiany estetyczne silników, vault, brig, xenbio, rnd, ai sat, tcomms</li>
+				<li class="rscadd">dodano coś bardzo ważnego do kwatery kondoma jak i kanciapy kuratora</li>
+				<li class="rscadd">dodano troche metalu i plastali by policja mogła stawiać barykady</li>
+				<li class="rscadd">guzik do random engines odpowiedzialny za shutters od maintów</li>
+				<li class="rscadd">dodano warrant console przed brig</li>
+				<li class="tweak">armory jest w pełni balistyczne już, nie licząc ion rifle i temperature gun</li>
+				<li class="tweak">gravgen ma teraz poprawne ostrzeżenia</li>
+				<li class="balance">zabrano nadmiar reinforced floors który był prawie wszędzie, nie powinno tak być e.g. patrz meta</li>
+				<li class="balance">zabrano m1911 z armory</li>
+				<li class="balance">zabrano 2 darmowe kanistry plasmy z random engines TEG, idź do atmos leniu daleko nie masz</li>
+				<li class="balance">krematorium już jest tylko w kaplicy tak jak powinno być</li>
+				<li class="bugfix">Zwiększono odległosc singulo od SMES</li>
+				<li class="bugfix">poprawiono wyjscie EVA w utylizacja odpadów</li>
+				<li class="bugfix">guziki w pokoju kontrolnym stormdrive już działają</li>
+				<li class="bugfix">przebywanie w brig nie daje już mood debuff który powinien występować tylko w celach</li>
+			</ul>
+			<h3 class="author">Quartofel updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">naprawiono exploit z setupem TEGa na Freezerach i Heaterach.</li>
+				<li class="rscadd">konstrukcja TEGa wymaga teraz stock parts</li>
+				<li class="rscadd">mechanika przeciążenia - jeżeli silnik jest uszkodzony poniżej 75 punktów integralności i generuje więcej niż 1,5MW energii dochodzi do eksplozji. Rozmiar eksplozji skaluje się z ilością produkowanej energii.</li>
+				<li class="rscadd">tier części w TEGu wpływa na jego działanie</li>
+				<li class="balance">zmodyfikowano output energii TEGa</li>
+				<li class="balance">zmodyfikowano power draw freezerów i heaterów</li>
+				<li class="tweak">całkowity resprite TEGa</li>
+				<li class="soundadd">gdy TEG będzie zbliżać się do niebezpiecznego poziomu pracy zacznie charakterystycznie buczeć</li>
+				<li class="imageadd">cell charger z Bee</li>
+			</ul>
+
 			<h2 class="date">01 January 2021</h2>
 			<h3 class="author">Anonimek updated:</h3>
 			<ul class="changes bgimages16">
@@ -338,25 +403,6 @@
 			<h3 class="author">weeeeelp updated:</h3>
 			<ul class="changes bgimages16">
 				<li class="rscadd">dodano dźwięki i czerwone światła przy station alert level red oraz delta</li>
-			</ul>
-
-			<h2 class="date">06 November 2020</h2>
-			<h3 class="author">zukonake updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="balance">Cybersun nie może teraz rozpoczynać konfliktu ze stacją bez autoryzacji od Syndykatu (administratorów).</li>
-				<li class="rscadd">dodano telefon do syndykatu na statku Cybersuna</li>
-			</ul>
-
-			<h2 class="date">31 October 2020</h2>
-			<h3 class="author">B4CKU updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="balance">przyspiesza dziesięciokrotnie czas ładowania baterii eksportowych</li>
-			</ul>
-			<h3 class="author">weeeeelp updated:</h3>
-			<ul class="changes bgimages16">
-				<li class="rscadd">nowe medale dla eng (CE), med (CMO) oraz service (HoP) w szafkach headów</li>
-				<li class="rscadd">szafka z medalami (award locker) na mostku (większości) escape shuttle</li>
-				<li class="rscadd">nowy implant dla sec generujący dźwięk przy ich śmierci a'la sad trombone</li>
 			</ul>
 		</div>
 
