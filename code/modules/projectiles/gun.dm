@@ -215,10 +215,12 @@
 	if(!can_shoot()) //Just because you can pull the trigger doesn't mean it can shoot.
 		shoot_with_empty_chamber(user)
 		return
-		
+
 	if (ranged_cooldown>world.time)
 		return
 	//Exclude lasertag guns from the TRAIT_CLUMSY check.
+	var/bonus_spread = 0
+	var/loop_counter = 0
 	if(clumsy_check)
 		if(istype(user))
 			if (HAS_TRAIT(user, TRAIT_CLUMSY) && prob(40))
@@ -232,9 +234,10 @@
 		to_chat(user, "<span class='userdanger'>You need both hands free to fire \the [src]!</span>")
 		return
 
+	if(src.weapon_weight == WEAPON_MEDIUM && user.get_inactive_held_item())
+		bonus_spread += 45
+
 	//DUAL (or more!) WIELDING
-	var/bonus_spread = 0
-	var/loop_counter = 0
 	if(ishuman(user) && user.a_intent == INTENT_HARM)
 		var/mob/living/carbon/human/H = user
 		for(var/obj/item/gun/G in H.held_items)
