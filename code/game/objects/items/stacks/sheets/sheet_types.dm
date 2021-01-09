@@ -424,9 +424,9 @@ GLOBAL_LIST_INIT(cardboard_recipes, list (														\
 		new /datum/stack_recipe("nugget box", /obj/item/storage/fancy/nugget_box),			\
 		null,																					\
 
-		new /datum/stack_recipe("lethal ammo box", /obj/item/storage/box/lethalshot),			\
-		new /datum/stack_recipe("rubber shot ammo box", /obj/item/storage/box/rubbershot),		\
-		new /datum/stack_recipe("bean bag ammo box", /obj/item/storage/box/beanbag),			\
+		new /datum/stack_recipe("lethal ammo box", /obj/item/storage/box/ammo/lethalshot),			\
+		new /datum/stack_recipe("rubber shot ammo box", /obj/item/storage/box/ammo/rubbershot),		\
+		new /datum/stack_recipe("bean bag ammo box", /obj/item/storage/box/ammo/beanbag),			\
 		new /datum/stack_recipe("flashbang box", /obj/item/storage/box/flashbangs),				\
 		new /datum/stack_recipe("flashes box", /obj/item/storage/box/flashes),					\
 		new /datum/stack_recipe("handcuffs box", /obj/item/storage/box/handcuffs),				\

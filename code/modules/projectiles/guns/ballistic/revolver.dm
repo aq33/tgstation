@@ -137,6 +137,32 @@
 			to_chat(user, "<span class='notice'>You remove the modifications on [src]. Now it will fire .38 rounds.</span>")
 	return TRUE
 
+/obj/item/gun/ballistic/revolver/zubr
+	name = "\improper Żubr .410 revolver"
+	desc = "Unholy mixture of shotgun and a revolver. Better hold it tight!"
+	icon_state = "zubr"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/zubr
+	fire_sound = "sound/weapons/shotgunshot.ogg"
+	can_flashlight = 1
+	flight_x_offset = 17
+	flight_y_offset = 13
+	recoil = 0.8
+	spread = 5
+
+/obj/item/gun/ballistic/revolver/zubr/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
+	if(chambered.BB != null)
+		if(user.get_inactive_held_item())
+			recoil = 3
+			spread = 15
+			if(prob(5))
+				user.dropItemToGround(src, FALSE, FALSE)
+				user.visible_message("<span class='danger'>[src] flings out of [user]'s hand!</span>")
+				to_chat(user, "<span class='danger'>[src] kicks out of your hand!</span>")
+		else
+			recoil = initial(recoil)
+			spread = initial(spread)
+	..()
+
 
 /obj/item/gun/ballistic/revolver/mateba
 	name = "\improper Unica 6 auto-revolver"

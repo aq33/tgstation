@@ -303,7 +303,7 @@
 	name = "Box of Buckshot"
 	id = "buckshot"
 	cost = 5
-	item_path = /obj/item/storage/box/lethalshot
+	item_path = /obj/item/storage/box/ammo/lethalshot
 
 /datum/gang_item/weapon/pistol
 	name = "10mm Pistol"

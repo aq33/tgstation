@@ -596,22 +596,40 @@
 	crate_name = "lethal ammo crate (4.6x30mm)"
 
 /datum/supply_pack/munitions/shottyammonl
-	name = ".410 Non-Lethal Ammo Crate"
+	name = ".410 Non-Lethal Ammo Crate (rubbershot)"
 	desc = "Contains 3 boxes of rubbershot shells and a bandolier. Requires Security access to open."
 	cost = 1500
-	contains = list(/obj/item/storage/box/rubbershot,
-					/obj/item/storage/box/rubbershot,
-					/obj/item/storage/box/rubbershot,
+	contains = list(/obj/item/storage/box/ammo/rubbershot,
+					/obj/item/storage/box/ammo/rubbershot,
+					/obj/item/storage/belt/bandolier)
+	crate_name = "non-lethal ammo crate (.410)"
+
+/datum/supply_pack/munitions/shottyammonl
+	name = ".410 Non-Lethal Ammo Crate (beanbag)"
+	desc = "Contains 3 boxes of rubbershot shells and a bandolier. Requires Security access to open."
+	cost = 1500
+	contains = list(/obj/item/storage/box/ammo/beanbag,
+					/obj/item/storage/box/ammo/beanbag,
 					/obj/item/storage/belt/bandolier)
 	crate_name = "non-lethal ammo crate (.410)"
 
 /datum/supply_pack/munitions/shottyammo
-	name = ".410 Lethal Ammo Crate"
-	desc = "Contains 3 boxes of lethal shells and a bandolier. Requires Armory access to open."
+	name = ".410 Lethal Ammo Crate (buckshot)"
+	desc = "Contains 3 boxes of lethal buckshot shells and a bandolier. Requires Armory access to open."
 	cost = 2000
-	contains = list(/obj/item/storage/box/lethalshot,
-					/obj/item/storage/box/lethalshot,
-					/obj/item/storage/box/lethalshot,
+	contains = list(/obj/item/storage/box/ammo/lethalshot,
+					/obj/item/storage/box/ammo/lethalshot,
+					/obj/item/storage/belt/bandolier)
+	access = ACCESS_ARMORY
+	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_name = "lethal ammo crate (.410)"
+
+/datum/supply_pack/munitions/shottyammo
+	name = ".410 Lethal Ammo Crate (slug)"
+	desc = "Contains 3 boxes of lethal slug shells and a bandolier. Requires Armory access to open."
+	cost = 2000
+	contains = list(/obj/item/storage/box/ammo/slug,
+					/obj/item/storage/box/ammo/slug,
 					/obj/item/storage/belt/bandolier)
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon

@@ -22504,13 +22504,13 @@
 /area/crew_quarters/bar/atrium)
 "dLc" = (
 /obj/structure/rack,
-/obj/item/storage/box/rubbershot,
-/obj/item/storage/box/rubbershot,
-/obj/item/storage/box/rubbershot{
+/obj/item/storage/box/ammo/rubbershot,
+/obj/item/storage/box/ammo/rubbershot,
+/obj/item/storage/box/ammo/rubbershot{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/storage/box/rubbershot{
+/obj/item/storage/box/ammo/rubbershot{
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -22525,7 +22525,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/obj/item/storage/box/breacherslug{
+/obj/item/storage/box/ammo/breacherslug{
 	pixel_x = 6;
 	pixel_y = -6
 	},

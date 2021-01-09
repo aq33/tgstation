@@ -17,6 +17,12 @@
 	max_ammo = 6
 	multiload = 0
 
+/obj/item/ammo_box/magazine/internal/cylinder/zubr
+	name = "\improper Żubr .410 revolver cylinder"
+	ammo_type = /obj/item/ammo_casing/shotgun
+	caliber = "shotgun"
+	max_ammo = 5
+
 /obj/item/ammo_box/magazine/internal/rus357/Initialize()
 	stored_ammo += new ammo_type(src)
 	. = ..()

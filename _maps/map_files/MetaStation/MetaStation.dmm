@@ -3559,15 +3559,15 @@
 "agT" = (
 /obj/structure/rack,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/item/storage/box/rubbershot,
-/obj/item/storage/box/rubbershot,
-/obj/item/storage/box/rubbershot,
-/obj/item/storage/box/rubbershot,
-/obj/item/storage/box/rubbershot,
-/obj/item/storage/box/rubbershot,
-/obj/item/storage/box/breacherslug,
-/obj/item/storage/box/breacherslug,
-/obj/item/storage/box/breacherslug,
+/obj/item/storage/box/ammo/rubbershot,
+/obj/item/storage/box/ammo/rubbershot,
+/obj/item/storage/box/ammo/rubbershot,
+/obj/item/storage/box/ammo/rubbershot,
+/obj/item/storage/box/ammo/rubbershot,
+/obj/item/storage/box/ammo/rubbershot,
+/obj/item/storage/box/ammo/breacherslug,
+/obj/item/storage/box/ammo/breacherslug,
+/obj/item/storage/box/ammo/breacherslug,
 /obj/item/gun/ballistic/shotgun/riot{
 	pixel_x = -3;
 	pixel_y = 3

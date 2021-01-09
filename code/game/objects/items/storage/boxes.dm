@@ -804,45 +804,72 @@
 	else
 		new /obj/item/tank/internals/plasmaman/belt(src)
 
-/obj/item/storage/box/rubbershot
+/obj/item/storage/box/ammo
+	name = "cardboard ammo box"
+	desc = "Cardboard box for shotgun slugs"
+	icon_state = "rubbershot_box"
+	illustration = null
+
+/obj/item/storage/box/ammo/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 14
+	STR.display_numerical_stacking = TRUE
+	STR.can_hold = typecacheof(list(
+		/obj/item/ammo_casing/shotgun
+		))
+
+/obj/item/storage/box/ammo/rubbershot
 	name = "box of rubber shots"
 	desc = "A box full of rubber shots, designed for riot shotguns."
 	icon_state = "rubbershot_box"
 	illustration = null
 
-/obj/item/storage/box/rubbershot/PopulateContents()
-	for(var/i in 1 to 7)
+/obj/item/storage/box/ammo/rubbershot/PopulateContents()
+	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/shotgun/rubbershot(src)
 
-/obj/item/storage/box/lethalshot
+/obj/item/storage/box/ammo/beanbag
+	name = "box of beanbags"
+	desc = "A box full of beanbag shells."
+	icon_state = "beanbag_box"
+	illustration = null
+
+/obj/item/storage/box/ammo/beanbag/PopulateContents()
+	for(var/i in 1 to 14)
+		new /obj/item/ammo_casing/shotgun/beanbag(src)
+
+/obj/item/storage/box/ammo/lethalshot
 	name = "box of lethal shotgun shots"
-	desc = "A box full of lethal shots, designed for riot shotguns."
+	desc = "A box full of buckshot shells, designed for riot shotguns."
 	icon_state = "lethalshot_box"
 	illustration = null
 
-/obj/item/storage/box/lethalshot/PopulateContents()
-	for(var/i in 1 to 7)
+/obj/item/storage/box/ammo/lethalshot/PopulateContents()
+	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/shotgun/buckshot(src)
 
-/obj/item/storage/box/beanbag
-	name = "box of beanbags"
-	desc = "A box full of beanbag shells."
-	icon_state = "rubbershot_box"
+/obj/item/storage/box/ammo/slug
+	name = "box of lethal shotgun shots"
+	desc = "A box full of slug shells, designed for riot shotguns."
+	icon_state = "slug_box"
 	illustration = null
 
-/obj/item/storage/box/beanbag/PopulateContents()
-	for(var/i in 1 to 6)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
+/obj/item/storage/box/ammo/slug/PopulateContents()
+	for(var/i in 1 to 14)
+		new /obj/item/ammo_casing/shotgun(src)
 
-/obj/item/storage/box/breacherslug
+/obj/item/storage/box/ammo/breacherslug
 	name = "box of breaching shotgun shells"
 	desc = "A box full of breaching slugs, designed for rapid entry."
 	icon_state = "breachershot_box"
 	illustration = null
 
-/obj/item/storage/box/breacherslug/PopulateContents()
-	for(var/i in 1 to 7)
+/obj/item/storage/box/ammo/breacherslug/PopulateContents()
+	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/shotgun/breacher(src)
+
+
 
 /obj/item/storage/box/actionfigure
 	name = "box of action figures"
