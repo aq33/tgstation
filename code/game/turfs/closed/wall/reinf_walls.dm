@@ -50,19 +50,20 @@
 		playsound(src, 'sound/effects/bang.ogg', 50, 1)
 		to_chat(M, "<span class='warning'>This wall is far too strong for you to destroy.</span>")
 
-/turf/closed/wall/r_wall/try_destroy(var/obj/item/pickaxe/drill/I, mob/user, turf/T)
+/turf/closed/wall/r_wall/try_destroy(obj/item/I, mob/user, turf/T)
 	if(istype(I, /obj/item/pickaxe/drill/jackhammer) || istype(I, /obj/item/pickaxe/drill/diamonddrill) || istype(I, /obj/item/pickaxe/drill/cyborg/diamond))
+		var/obj/item/pickaxe/drill/drl = I
 		to_chat(user, "<span class='notice'>You begin to smash though [src]...</span>")
-		if(do_after(user, 14*I.drill_delay, 1, target = src))
+		if(do_after(user, 14*drl.drill_delay, 1, target = src))
 			if(!istype(src, /turf/closed/wall/r_wall))
 				return TRUE
-			I.play_tool_sound(src)
+			drl.play_tool_sound(src)
 			visible_message("<span class='warning'>[user] smashes through [src] with [I]!</span>", "<span class='italics'>You hear the grinding of metal.</span>")
 			dismantle_wall()
 			return TRUE
-	else
+	else if(istype(I, /obj/item/pickaxe/drill))
 		to_chat(user, "<span class='danger'>[src] is too durable to drill through.</span>")
-		return
+		return FALSE
 	return FALSE
 
 /turf/closed/wall/r_wall/try_decon(obj/item/W, mob/user, turf/T)
