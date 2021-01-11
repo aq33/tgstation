@@ -332,3 +332,11 @@
 	smoke.effect_type = smoke_type
 	smoke.set_up(range, location)
 	smoke.start()
+
+/obj/effect/particle_effect/smoke/chem/spore
+	icon = 'icons/obj/xenoarch/96x96.dmi'
+	icon_state = "spore"
+	opaque = 0
+
+/datum/effect_system/smoke_spread/chem/spore
+	effect_type = /obj/effect/particle_effect/smoke/chem/spore

@@ -27,7 +27,7 @@
 		if(GIRDER_DISASSEMBLED)
 			. += "<span class='notice'>[src] is disassembled! You probably shouldn't be able to see this examine message.</span>"
 
-/obj/structure/girder/attackby(obj/item/W, mob/user, params)
+/obj/structure/girder/attackby(var/obj/item/W, mob/user, params)
 	add_fingerprint(user)
 
 	if(istype(W, /obj/item/gun/energy/plasmacutter))
@@ -38,11 +38,13 @@
 			M.add_fingerprint(user)
 			qdel(src)
 
-	else if(istype(W, /obj/item/pickaxe/drill/jackhammer))
-		to_chat(user, "<span class='notice'>You smash through the girder!</span>")
-		new /obj/item/stack/sheet/iron(get_turf(src))
-		W.play_tool_sound(src)
-		qdel(src)
+	else if(istype(W, /obj/item/pickaxe/drill))
+		if(do_after(user, 50, 1, target = src))
+			to_chat(user, "<span class='notice'>You smash through the girder!</span>")
+			new /obj/item/stack/sheet/iron(get_turf(src))
+			W.play_tool_sound(src)
+			qdel(src)
+
 
 
 	else if(istype(W, /obj/item/stack))
@@ -330,7 +332,7 @@
 	icon_state= "cultgirder"
 	can_displace = FALSE
 
-/obj/structure/girder/cult/attackby(obj/item/W, mob/user, params)
+/obj/structure/girder/cult/attackby(var/obj/item/W, mob/user, params)
 	add_fingerprint(user)
 	if(istype(W, /obj/item/melee/cultblade/dagger) && iscultist(user)) //Cultists can demolish cult girders instantly with their tomes
 		user.visible_message("<span class='warning'>[user] strikes [src] with [W]!</span>", "<span class='notice'>You demolish [src].</span>")
@@ -348,12 +350,13 @@
 			transfer_fingerprints_to(R)
 			qdel(src)
 
-	else if(istype(W, /obj/item/pickaxe/drill/jackhammer))
-		to_chat(user, "<span class='notice'>Your jackhammer smashes through the girder!</span>")
-		var/obj/item/stack/sheet/runed_metal/R = new(drop_location(), 2)
-		transfer_fingerprints_to(R)
-		W.play_tool_sound(src)
-		qdel(src)
+	else if(istype(W, /obj/item/pickaxe/drill))
+		if(do_after(user, 50, 1, target = src))
+			to_chat(user, "<span class='notice'>You smash through the girder!</span>")
+			var/obj/item/stack/sheet/runed_metal/R = new(drop_location(), 2)
+			W.play_tool_sound(src)
+			transfer_fingerprints_to(R)
+			qdel(src)
 
 	else if(istype(W, /obj/item/stack/sheet/runed_metal))
 		var/obj/item/stack/sheet/runed_metal/R = W
@@ -410,7 +413,7 @@
 	icon_state = "wall_gear"
 	can_displace = FALSE
 
-/obj/structure/girder/bronze/attackby(obj/item/W, mob/living/user, params)
+/obj/structure/girder/bronze/attackby(var/obj/item/W, mob/living/user, params)
 	add_fingerprint(user)
 	if(W.tool_behaviour == TOOL_WELDER)
 		if(!W.tool_start_check(user, amount = 0))
@@ -422,12 +425,13 @@
 			transfer_fingerprints_to(B)
 			qdel(src)
 
-	else if(istype(W, /obj/item/pickaxe/drill/jackhammer))
-		to_chat(user, "<span class='notice'>Your jackhammer smashes through the girder!</span>")
-		var/obj/item/stack/tile/bronze/B = new(drop_location(), 2)
-		transfer_fingerprints_to(B)
-		W.play_tool_sound(src)
-		qdel(src)
+	else if(istype(W, /obj/item/pickaxe/drill))
+		if(do_after(user, 20, 1, target = src))
+			to_chat(user, "<span class='notice'>You smash through the girder!</span>")
+			var/obj/item/stack/tile/bronze/B = new(drop_location(), 2)
+			W.play_tool_sound(src)
+			transfer_fingerprints_to(B)
+			qdel(src)
 
 	else if(istype(W, /obj/item/stack/tile/bronze))
 		var/obj/item/stack/tile/bronze/B = W

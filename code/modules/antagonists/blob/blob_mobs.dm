@@ -17,6 +17,14 @@
 	a_intent = INTENT_HARM
 	var/mob/camera/blob/overmind = null
 	var/obj/structure/blob/factory/factory = null
+	var/independent = FALSE
+
+/mob/living/simple_animal/hostile/blob/Initialize()
+	. = ..()
+	if(!independent) //no pulling people deep into the blob
+		remove_verb(src, /mob/living/verb/pulled)
+	else
+		pass_flags &= ~PASSBLOB
 
 /mob/living/simple_animal/hostile/blob/update_icons()
 	if(overmind)
@@ -99,6 +107,7 @@
 	if(istype(linked_node))
 		factory = linked_node
 		factory.spores += src
+		add_cell_sample()
 	. = ..()
 	/*var/datum/disease/advance/random/blob/R = new //either viro is cooperating with xenobio, or a blob has spawned and the round is probably over sooner than they can make a virus for this
 	disease += R*/
@@ -191,6 +200,13 @@
 		color = initial(color)//looks better.
 		add_overlay(blob_head_overlay)
 
+/mob/living/simple_animal/hostile/blob/blobspore/add_cell_sample()
+	AddElement(/datum/element/swabable, CELL_LINE_TABLE_BLOBSPORE, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
+
+/mob/living/simple_animal/hostile/blob/blobspore/independent
+	gold_core_spawnable = FALSE
+	independent = TRUE
+
 /mob/living/simple_animal/hostile/blob/blobspore/weak
 	name = "fragile blob spore"
 	health = 15
@@ -225,7 +241,6 @@
 	see_in_dark = 8
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	hud_type = /datum/hud/blobbernaut
-	var/independent = FALSE
 
 /mob/living/simple_animal/hostile/blob/blobbernaut/Initialize()
 	. = ..()
@@ -233,6 +248,13 @@
 		verbs -= /mob/living/verb/pulled
 	else
 		pass_flags &= ~PASSBLOB
+
+/mob/living/simple_animal/hostile/blob/blobbernaut/Initialize()
+	. = ..()
+	add_cell_sample()
+
+/mob/living/simple_animal/hostile/blob/blobbernaut/add_cell_sample()
+	AddElement(/datum/element/swabable, CELL_LINE_TABLE_BLOBBERNAUT, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
 /mob/living/simple_animal/hostile/blob/blobbernaut/Life()
 	if(..())

@@ -1,247 +1,100 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"a" = (
+"bv" = (
 /obj/structure/table/wood,
-/obj/effect/decal/cleanable/cobweb,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/paper_bin,
-/obj/item/pen,
+/obj/item/flashlight/lamp,
 /turf/open/floor/plating,
 /area/template_noop)
-"b" = (
+"cw" = (
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/folder,
+/obj/item/pen,
+/turf/open/floor/wood{
+	icon_state = "wood-broken5"
+	},
+/area/template_noop)
+"cU" = (
+/obj/structure/table/wood,
+/obj/item/storage/pill_bottle/dice,
+/turf/open/floor/carpet,
+/area/template_noop)
+"hL" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/folder,
 /obj/item/pen,
 /turf/open/floor/plating,
 /area/template_noop)
-"c" = (
-/obj/structure/bookcase,
-/obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/wood,
-/area/template_noop)
-"d" = (
-/obj/structure/bookcase,
-/turf/open/floor/wood,
-/area/template_noop)
-"e" = (
-/turf/open/floor/plasteel/grimy,
-/area/template_noop)
-"f" = (
-/obj/item/twohanded/required/kirbyplants/random,
-/turf/open/floor/wood{
-	icon_state = "wood-broken7"
-	},
-/area/template_noop)
-"g" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/twohanded/required/kirbyplants/random,
-/turf/open/floor/wood{
-	icon_state = "wood-broken"
-	},
-/area/template_noop)
-"h" = (
-/obj/machinery/photocopier,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/template_noop)
-"i" = (
-/obj/structure/table/wood,
-/obj/item/paper_bin,
-/obj/item/pen,
-/turf/open/floor/wood{
-	icon_state = "wood-broken2"
-	},
-/area/template_noop)
-"j" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/structure/table_frame/wood,
-/turf/open/floor/plating,
-/area/template_noop)
-"k" = (
-/obj/structure/chair/office{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/template_noop)
-"l" = (
-/obj/structure/bookcase,
-/obj/effect/decal/cleanable/cobweb,
-/obj/structure/bookcase/random/nonfiction,
-/turf/open/floor/wood,
-/area/template_noop)
-"m" = (
-/obj/structure/chair/office,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/grimy,
-/area/template_noop)
-"n" = (
-/obj/structure/chair/office,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/template_noop)
-"o" = (
-/obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/item/twohanded/required/kirbyplants/random,
-/turf/open/floor/plasteel/grimy,
-/area/template_noop)
-"p" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood,
-/area/template_noop)
-"q" = (
-/obj/structure/chair/office{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/grimy,
-/area/template_noop)
-"r" = (
+"jI" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/paicard,
 /turf/open/floor/carpet,
 /area/template_noop)
-"s" = (
-/obj/structure/table/wood,
-/obj/item/storage/pill_bottle/dice,
-/turf/open/floor/carpet,
-/area/template_noop)
-"t" = (
-/obj/structure/chair/office{
-	dir = 8
-	},
-/turf/open/floor/plasteel/grimy,
-/area/template_noop)
-"u" = (
-/obj/structure/bookcase/random/fiction,
-/turf/open/floor/wood,
-/area/template_noop)
-"v" = (
-/obj/structure/chair/office{
-	dir = 4
-	},
-/turf/open/floor/plasteel/grimy,
-/area/template_noop)
-"w" = (
-/obj/structure/table/wood,
-/obj/item/toy/cards/deck/cas{
-	pixel_x = -5;
-	pixel_y = 5
-	},
-/obj/item/toy/cards/deck/cas/black{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/turf/open/floor/carpet,
-/area/template_noop)
-"x" = (
-/obj/structure/table/wood,
-/obj/item/clipboard,
-/obj/item/folder/red,
-/turf/open/floor/carpet,
-/area/template_noop)
-"y" = (
-/obj/structure/chair/office{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/template_noop)
-"z" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/blobstart,
-/turf/open/floor/plating,
-/area/template_noop)
-"A" = (
-/obj/structure/chair/office{
-	dir = 1
-	},
-/turf/open/floor/plasteel/grimy,
-/area/template_noop)
-"B" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/grimy,
-/area/template_noop)
-"C" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/template_noop)
-"D" = (
-/turf/closed/wall,
-/area/template_noop)
-"E" = (
-/turf/open/floor/wood{
-	icon_state = "wood-broken7"
-	},
-/area/template_noop)
-"F" = (
-/obj/structure/bookcase/random/reference,
-/turf/open/floor/wood,
-/area/template_noop)
-"G" = (
-/obj/structure/destructible/cult/tome,
-/obj/effect/decal/cleanable/cobweb,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating,
-/area/template_noop)
-"H" = (
-/obj/structure/bookcase/random/adult,
-/turf/open/floor/plasteel/dark,
-/area/template_noop)
-"I" = (
-/mob/living/simple_animal/cockroach,
-/turf/open/floor/wood,
-/area/template_noop)
-"J" = (
-/obj/effect/decal/remains/human,
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/dark,
-/area/template_noop)
-"K" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/item/organ/tongue/bone,
-/turf/open/floor/plating,
-/area/template_noop)
-"L" = (
+"kf" = (
 /obj/structure/chair/office,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/template_noop)
-"M" = (
+"kO" = (
 /obj/structure/chair/office{
 	dir = 4
 	},
-/turf/open/floor/wood{
-	icon_state = "wood-broken5"
-	},
+/turf/open/floor/plasteel/grimy,
 /area/template_noop)
-"N" = (
-/obj/structure/table/wood,
-/obj/item/folder,
-/obj/item/pen,
+"lN" = (
+/obj/structure/bookcase,
+/obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/wood,
 /area/template_noop)
-"O" = (
-/turf/open/floor/wood{
-	icon_state = "wood-broken4"
-	},
+"mw" = (
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/taperecorder,
+/turf/open/floor/plasteel/dark,
 /area/template_noop)
-"P" = (
+"ns" = (
+/obj/structure/chair/office{
+	dir = 8
+	},
+/turf/open/floor/plasteel/grimy,
+/area/template_noop)
+"oR" = (
+/obj/effect/decal/cleanable/garbage,
+/turf/open/floor/plasteel/grimy,
+/area/template_noop)
+"qk" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/grimy,
+/area/template_noop)
+"ql" = (
+/obj/structure/table/wood,
+/obj/item/clothing/under/rank/civilian/curator,
+/obj/effect/spawner/lootdrop/maintenance/two,
+/turf/open/floor/wood,
+/area/template_noop)
+"ro" = (
+/turf/open/floor/plasteel/grimy,
+/area/template_noop)
+"rV" = (
+/turf/closed/wall,
+/area/template_noop)
+"sc" = (
+/obj/structure/dresser,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/template_noop)
+"sx" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plasteel/dark,
+/area/template_noop)
+"tR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/morgue{
 	name = "Occult Study"
@@ -258,10 +111,170 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/template_noop)
-"Q" = (
+"wp" = (
+/obj/structure/bookcase/random/fiction,
+/turf/open/floor/wood,
+/area/template_noop)
+"yz" = (
+/obj/structure/table/wood,
+/obj/item/clipboard,
+/obj/item/folder/red,
+/turf/open/floor/carpet,
+/area/template_noop)
+"Ac" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen,
+/turf/open/floor/wood{
+	icon_state = "wood-broken2"
+	},
+/area/template_noop)
+"CI" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/grimy,
+/area/template_noop)
+"CY" = (
+/obj/structure/easel,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/canvas/twentythreeXtwentythree,
+/obj/item/canvas/twentythreeXtwentythree,
+/obj/machinery/light/small,
+/turf/open/floor/plating,
+/area/template_noop)
+"DT" = (
+/obj/structure/bookcase/random/reference,
+/turf/open/floor/wood,
+/area/template_noop)
+"DU" = (
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/item/twohanded/required/kirbyplants/random,
+/turf/open/floor/plasteel/grimy,
+/area/template_noop)
+"Ew" = (
+/obj/structure/chair/office,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/template_noop)
+"Gj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/twohanded/required/kirbyplants/random,
+/turf/open/floor/wood{
+	icon_state = "wood-broken"
+	},
+/area/template_noop)
+"Ih" = (
+/obj/structure/chair/office{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/template_noop)
-"R" = (
+"IW" = (
+/obj/structure/bed/maint,
+/turf/open/floor/plasteel/dark,
+/area/template_noop)
+"Lq" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood,
+/area/template_noop)
+"LJ" = (
+/obj/structure/table/wood,
+/obj/item/toy/cards/deck/cas{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/toy/cards/deck/cas/black{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/turf/open/floor/carpet,
+/area/template_noop)
+"Mq" = (
+/obj/structure/destructible/cult/tome,
+/obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating,
+/area/template_noop)
+"MQ" = (
+/obj/structure/bookcase,
+/obj/effect/decal/cleanable/cobweb,
+/obj/structure/bookcase/random/nonfiction,
+/turf/open/floor/wood,
+/area/template_noop)
+"MY" = (
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/paper_bin,
+/obj/item/pen,
+/turf/open/floor/plating,
+/area/template_noop)
+"Na" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/turf/open/floor/wood{
+	icon_state = "wood-broken5"
+	},
+/area/template_noop)
+"Ne" = (
+/obj/structure/table/wood,
+/obj/item/folder,
+/obj/item/pen,
+/turf/open/floor/wood,
+/area/template_noop)
+"Nr" = (
+/turf/open/floor/wood{
+	icon_state = "wood-broken4"
+	},
+/area/template_noop)
+"NV" = (
+/obj/structure/chair/office{
+	dir = 1
+	},
+/turf/open/floor/plasteel/grimy,
+/area/template_noop)
+"Od" = (
+/obj/structure/chair/office{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/template_noop)
+"Of" = (
+/obj/machinery/photocopier,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/template_noop)
+"Pl" = (
+/obj/item/twohanded/required/kirbyplants/random,
+/turf/open/floor/wood{
+	icon_state = "wood-broken7"
+	},
+/area/template_noop)
+"Pm" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/item/organ/tongue/bone,
+/turf/open/floor/plating,
+/area/template_noop)
+"Sf" = (
+/turf/open/floor/wood{
+	icon_state = "wood-broken7"
+	},
+/area/template_noop)
+"Tt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/remains/human,
@@ -277,176 +290,168 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/template_noop)
-"S" = (
-/obj/structure/table/wood,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/flashlight/lamp,
-/turf/open/floor/plating,
-/area/template_noop)
-"T" = (
-/obj/structure/table/wood,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/folder,
-/obj/item/pen,
-/turf/open/floor/wood{
-	icon_state = "wood-broken5"
-	},
-/area/template_noop)
-"U" = (
-/obj/structure/table/wood,
-/obj/item/clothing/under/rank/civilian/curator,
-/obj/effect/spawner/lootdrop/maintenance/two,
-/turf/open/floor/wood,
-/area/template_noop)
-"V" = (
+"Ua" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/paper_bin,
 /obj/item/pen,
 /turf/open/floor/wood,
 /area/template_noop)
-"W" = (
-/obj/structure/easel,
+"Ui" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/canvas/twentythreeXtwentythree,
-/obj/item/canvas/twentythreeXtwentythree,
-/obj/machinery/light/small,
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/template_noop)
-"X" = (
-/obj/structure/dresser,
-/obj/effect/decal/cleanable/dirt,
+"Vh" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/table_frame/wood,
 /turf/open/floor/plating,
 /area/template_noop)
-"Y" = (
-/obj/structure/table/wood,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/taperecorder,
+"Wz" = (
+/mob/living/simple_animal/cockroach,
+/turf/open/floor/wood,
+/area/template_noop)
+"Xd" = (
+/obj/structure/bookcase,
+/turf/open/floor/wood,
+/area/template_noop)
+"Xz" = (
+/obj/structure/bookcase/random/adult,
 /turf/open/floor/plasteel/dark,
 /area/template_noop)
-"Z" = (
+"Yt" = (
+/obj/structure/chair/office,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/grimy,
+/area/template_noop)
+"Zx" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/grimy,
 /area/template_noop)
+"ZJ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/template_noop)
 
 (1,1,1) = {"
-a
-j
-d
-u
-e
-e
-d
-u
-L
-S
+MY
+Vh
+Xd
+wp
+ro
+ro
+Xd
+wp
+kf
+bv
 "}
 (2,1,1) = {"
-b
-k
-p
-p
-e
-e
-E
-E
-I
-T
+hL
+Ih
+Lq
+Lq
+ro
+ro
+Sf
+Sf
+Wz
+cw
 "}
 (3,1,1) = {"
-c
-l
-l
-c
-e
-Z
-F
-d
-M
-U
+lN
+MQ
+MQ
+lN
+ro
+Zx
+DT
+Xd
+Na
+ql
 "}
 (4,1,1) = {"
-d
-d
-c
-c
-e
-e
-d
-d
-N
-V
+Xd
+Xd
+lN
+lN
+oR
+ro
+Xd
+Xd
+Ne
+Ua
 "}
 (5,1,1) = {"
-e
-e
-e
-e
-e
-e
-B
-B
-B
-B
+ro
+ro
+ro
+ro
+ro
+ro
+CI
+CI
+CI
+CI
 "}
 (6,1,1) = {"
-Z
-e
-e
-e
-e
-e
-B
-B
-B
-B
+Zx
+ro
+ro
+ro
+ro
+ro
+CI
+CI
+CI
+CI
 "}
 (7,1,1) = {"
-f
-e
-q
-v
-z
-C
-p
-I
-O
-W
+Pl
+ro
+qk
+kO
+Ui
+ZJ
+Lq
+Wz
+Nr
+CY
 "}
 (8,1,1) = {"
-g
-m
-r
-w
-e
-D
-D
-D
-P
-D
+Gj
+Yt
+jI
+LJ
+ro
+rV
+rV
+rV
+tR
+rV
 "}
 (9,1,1) = {"
-h
-n
-s
-x
-A
-D
-G
-J
-Q
-X
+Of
+Ew
+cU
+yz
+NV
+rV
+Mq
+sx
+IW
+sc
 "}
 (10,1,1) = {"
-i
-o
-t
-y
-B
-D
-H
-K
-R
-Y
+Ac
+DU
+ns
+Od
+CI
+rV
+Xz
+Pm
+Tt
+mw
 "}

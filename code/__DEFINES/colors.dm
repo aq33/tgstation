@@ -58,3 +58,10 @@
 #define COLOR_ASSEMBLY_LBLUE   "#5D99BE"
 #define COLOR_ASSEMBLY_BLUE    "#38559E"
 #define COLOR_ASSEMBLY_PURPLE  "#6F6192"
+
+///Colors for xenobiology vatgrowing
+#define COLOR_SAMPLE_YELLOW "#c0b823"
+#define COLOR_SAMPLE_PURPLE "#342941"
+#define COLOR_SAMPLE_GREEN "#98b944"
+#define COLOR_SAMPLE_BROWN "#91542d"
+#define COLOR_SAMPLE_GRAY "#5e5856"

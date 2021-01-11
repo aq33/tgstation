@@ -68,6 +68,27 @@
 	new /obj/item/survivalcapsule(src)
 	new /obj/item/assault_pod/mining(src)
 
+/obj/structure/closet/secure_closet/explorer
+	name = "explorer's equipment"
+	icon_state = "explorer"
+	req_access = list(ACCESS_MINING)
+
+/obj/structure/closet/secure_closet/explorer/PopulateContents()
+	..()
+	new /obj/item/shovel(src)
+	new /obj/item/pickaxe/mini(src)
+	new /obj/item/radio/headset/headset_cargo/mining(src)
+	new /obj/item/flashlight/seclite(src)
+	new /obj/item/storage/bag/plants(src)
+	new /obj/item/storage/bag/ore(src)
+	new /obj/item/t_scanner/adv_mining_scanner/lesser(src)
+	new /obj/item/gun/energy/kinetic_accelerator/pistol(src)
+	new /obj/item/clothing/glasses/meson(src)
+	new /obj/item/survivalcapsule(src)
+	new /obj/item/fulton_core(src)
+	new /obj/item/extraction_pack(src)
+	new /obj/item/storage/toolbox/mechanical(src)
+
 
 /**********************Shuttle Computer**************************/
 
@@ -87,6 +108,15 @@
 		dumb_rev_heads += user.mind
 		return
 	. = ..()
+
+//It is on lavaland, soooo....
+/obj/machinery/computer/shuttle/science
+	name = "science outpost shuttle console"
+	desc = "Used to call and send the science shuttle."
+	circuit = /obj/item/circuitboard/computer/science_shuttle
+	shuttleId = "science"
+	possible_destinations = "science_station;science_outpost"
+	no_destination_swap = 1
 
 /**********************Mining car (Crate like thing, not the rail car)**************************/
 

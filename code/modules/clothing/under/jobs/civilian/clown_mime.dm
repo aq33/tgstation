@@ -23,6 +23,10 @@
 	item_state = "clown"
 	item_color = "clown"
 
+/obj/item/clothing/under/rank/civilian/clown/Initialize()
+	. = ..()
+	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CLOWN, CELL_VIRUS_TABLE_GENERIC, rand(2,3), 0)
+
 /obj/item/clothing/under/rank/civilian/clown/blue
 	name = "blue clown suit"
 	desc = "<i>'BLUE HONK!'</i>"

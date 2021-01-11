@@ -43,6 +43,16 @@
 	category = list("Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
 
+/datum/design/ranged_analyzer
+	name = "Long-range Analyzer"
+	desc = "A new advanced atmospheric analyzer design, capable of performing scans at long range."
+	id = "ranged_analyzer"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 400, /datum/material/glass = 1000, /datum/material/uranium = 800, /datum/material/gold = 200, /datum/material/plastic = 200)
+	build_path = /obj/item/analyzer/ranged
+	category = list("Tool Designs")
+	departmental_flags =  DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+
 /datum/design/rpd
 	name = "Rapid Pipe Dispenser (RPD)"
 	id = "rpd_loaded"
@@ -93,6 +103,23 @@
 	category = list("Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
 
+/datum/design/plumbing_rcd_sci
+	name = "Research Plumbing Constructor"
+	id = "plumbing_rcd_sci"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 75000, /datum/material/glass = 37500, /datum/material/plastic = 1000)
+	build_path = /obj/item/construction/plumbing/research
+	category = list("Tool Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
+
+/datum/design/biopsy_tool
+	name = "Biopsy Tool"
+	id = "biopsy_tool"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 4000, /datum/material/glass = 3000)
+	build_path = /obj/item/biopsy_tool
+	category = list("Tool Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 /////////////////////////////////////////
 //////////////Alien Tools////////////////
 /////////////////////////////////////////
