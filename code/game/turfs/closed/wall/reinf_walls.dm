@@ -55,12 +55,14 @@
 		var/obj/item/pickaxe/drill/drl = I
 		to_chat(user, "<span class='notice'>You begin to smash though [src]...</span>")
 		if(do_after(user, 14*drl.drill_delay, 1, target = src))
+
 			if(!istype(src, /turf/closed/wall/r_wall))
 				return TRUE
 			drl.play_tool_sound(src)
 			visible_message("<span class='warning'>[user] smashes through [src] with [I]!</span>", "<span class='italics'>You hear the grinding of metal.</span>")
 			dismantle_wall()
 			return TRUE
+
 	else if(istype(I, /obj/item/pickaxe/drill))
 		to_chat(user, "<span class='danger'>[src] is too durable to drill through.</span>")
 		return FALSE
