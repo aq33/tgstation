@@ -1155,6 +1155,35 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Laboratorium Nanitowe"
 	icon_state = "nanite"
 
+/area/xenoarch
+	icon = 'icons/obj/xenoarch/areas.dmi'
+	icon_state = "xenogen"
+	has_gravity = STANDARD_GRAVITY
+
+/area/xenoarch/arch
+	name = "Ksenoarcheologia"
+	icon_state = "xenoarch"
+
+/area/xenoarch/bot
+	name = "Ksenoarcheologia Botanika"
+	icon_state = "xenobot"
+
+/area/xenoarch/eng
+	name = "Ksenoarcheologia Inżynieria"
+	icon_state = "xenoeng"
+
+/area/xenoarch/gen
+	name = "Ksenoarcheologia Pomieszczenia Mieszkalne"
+	icon_state = "xenogen"
+
+/area/xenoarch/sec
+	name = "Xenoarchaeology Security"
+	icon_state = "xenosec"
+
+/area/science/shuttledock
+	name = "Science Shuttle Dock"
+	icon_state = "toxmisc"
+
 //Storage
 
 /area/storage/tools
@@ -1348,3 +1377,17 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/podbay
 	name = "Hangar kapsuł kosmicznych ochrony"
 	icon_state = "security"
+
+/area/mining_level_access
+  	name = "Mining Level Access"
+  	icon = 'icons/turf/areas.dmi'
+  	icon_state = "milevel"
+  	requires_power = FALSE
+  	has_gravity = STANDARD_GRAVITY
+  	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
+
+/area/mining_level_access/lower
+	name = "Lower Mining Level Access"
+
+/area/mining_level_access/upper
+	name = "Upper Mining Level Access"

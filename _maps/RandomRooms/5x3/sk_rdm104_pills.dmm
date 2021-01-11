@@ -51,6 +51,10 @@
 "C" = (
 /turf/open/floor/plating,
 /area/template_noop)
+"H" = (
+/obj/effect/decal/cleanable/garbage,
+/turf/open/floor/plating,
+/area/template_noop)
 "I" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/pill/floorpill,
@@ -90,7 +94,7 @@ r
 N
 "}
 (4,1,1) = {"
-C
+H
 I
 C
 "}

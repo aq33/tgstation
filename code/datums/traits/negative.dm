@@ -556,6 +556,7 @@
 		/obj/item/storage/fancy/cigarettes/cigpack_robust,
 		/obj/item/storage/fancy/cigarettes/cigpack_robustgold,
 		/obj/item/storage/fancy/cigarettes/cigpack_carp)
+	quirk_holder?.mind.store_memory("Twoja ulubiona marka papierosów to [initial(drug_container_type.name)].")
 	. = ..()
 
 /datum/quirk/junkie/smoker/announce_drugs()
