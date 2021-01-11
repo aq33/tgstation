@@ -207,20 +207,20 @@ obj/machinery/mineral/deep_drill/proc/draw_power() //This draws power from the c
 /obj/machinery/mineral/deep_drill/update_icon(stat)
 	overlays.Cut()
 	if(panel_open)
-		overlays += "deep_drill-ovopen"
+		overlays += "deep_drill_alt-ovopen"
 	else
-		overlays -= "deep_drill-ovopen"
+		overlays -= "deep_drill_alt-ovopen"
 
 	if(on && cell && cell.charge > 0)
-		icon_state = "deep_drill-on"
+		icon_state = "deep_drill_alt-on"
 		if(mining)
 			overlays += "deep_drill-ovdrilling"
 		if(stat == "eject")
 			overlays += "deep_drill-oveject"
 			sleep(12)
-			overlays -= "deep_drill-oveject"
+			overlays -= "deep_drill_alt-oveject"
 	else
-		icon_state = "deep_drill-off"
+		icon_state = "deep_drill_alt-off"
 
 //HACKING PROCS//
 
