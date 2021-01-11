@@ -293,6 +293,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/template_noop)
+"Z" = (
+/obj/effect/decal/cleanable/garbage,
+/turf/open/floor/wood,
+/area/template_noop)
 
 (1,1,1) = {"
 a
@@ -373,7 +377,7 @@ m
 s
 z
 j
-j
+Z
 c
 c
 c

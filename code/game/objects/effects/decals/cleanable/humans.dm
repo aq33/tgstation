@@ -211,6 +211,7 @@
 	. = ..()
 	setDir(pick(1,2,4,8))
 	add_blood_DNA(list("Non-human DNA" = random_blood_type()))
+	AddElement(/datum/element/swabable, CELL_LINE_TABLE_SLUDGE, CELL_VIRUS_TABLE_GENERIC, rand(2,4), 10)
 	if(prob(50))
 		var/datum/disease/advance/R = new /datum/disease/advance/random(rand(1, 6), rand(5, 9))
 		disease += R
