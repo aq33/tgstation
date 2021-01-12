@@ -582,9 +582,30 @@
 		/obj/item/ammo_casing/shotgun
 		))
 
+/obj/item/storage/belt/bandolier/internal
+	name = "shell pouch"
+	desc = "Small pouch for holding ammo."
+	icon_state = "pouch_shells"
+
+/obj/item/storage/belt/bandoier/internal/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NOPICKUP, INNATE_TRAIT)
+	ADD_TRAIT(src, DROPDEL, INNATE_TRAIT)
+
+/obj/item/storage/belt/bandolier/internal/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 5
+	STR.display_numerical_stacking = TRUE
+	STR.can_hold = typecacheof(list(
+		/obj/item/ammo_casing/shotgun
+		))
+
 /obj/item/storage/belt/holster
 	name = "shoulder holster"
 	desc = "A holster to carry a handgun and ammo. WARNING: Badasses only."
+	slot_flags = ITEM_SLOT_NECK
+	alternate_worn_icon = 'icons/mob/belt.dmi'
 	icon_state = "holster"
 	item_state = "holster"
 	alternate_worn_layer = UNDER_SUIT_LAYER
@@ -605,6 +626,32 @@
 	var/static/items_inside = list(
 		/obj/item/gun/ballistic/revolver/detective = 1,
 		/obj/item/ammo_box/c38 = 2)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/belt/holster/hos
+	name = "shoulder holster"
+	desc = "Shoulder holster to carry a handgun and ammo."
+	slot_flags = ITEM_SLOT_NECK
+	icon_state = "hoslster"
+	item_state = "hoslster"
+	alternate_worn_layer = UNDER_SUIT_LAYER
+
+/obj/item/storage/belt/holster/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 3
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.can_hold = typecacheof(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/storage/belt/bandolier/internal,
+		/obj/item/gun/energy/e_gun/mini
+		))
+
+/obj/item/storage/belt/holster/hos/full/PopulateContents()
+	var/static/items_inside = list(
+		/obj/item/gun/ballistic/revolver/zubr = 1,
+		/obj/item/storage/belt/bandolier/internal = 2)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/belt/quiver

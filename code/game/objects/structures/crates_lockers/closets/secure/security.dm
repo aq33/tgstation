@@ -117,7 +117,7 @@
 	new /obj/item/storage/box/flashbangs(src)
 	new /obj/item/shield/riot/tele(src)
 	new /obj/item/storage/belt/security/full(src)
-	new /obj/item/gun/ballistic/revolver/zubr(src)
+	new /obj/item/storage/belt/holster/hos/full(src)
 	new /obj/item/storage/box/ammo/beanbag(src)
 	new /obj/item/storage/box/ammo/slug(src)
 	new /obj/item/flashlight/seclite(src)
