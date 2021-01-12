@@ -124,6 +124,8 @@
 		M.client.screen -= AM
 	if(isitem(AM))
 		var/obj/item/I = AM
+		if(I.item_flags & NO_PICKUP)
+			return FALSE
 		I.item_flags &= ~IN_STORAGE
 		I.remove_outline()
 		if(ismob(parent.loc))

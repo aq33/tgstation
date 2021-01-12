@@ -586,19 +586,15 @@
 	name = "shell pouch"
 	desc = "Small pouch for holding ammo."
 	icon_state = "pouch_shells"
-
-/obj/item/storage/belt/bandoier/internal/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NOPICKUP, INNATE_TRAIT)
-	ADD_TRAIT(src, DROPDEL, INNATE_TRAIT)
+	item_flags = NO_PICKUP | DROPDEL
 
 /obj/item/storage/belt/bandolier/internal/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 5
+	STR.max_items = 7
 	STR.display_numerical_stacking = TRUE
 	STR.can_hold = typecacheof(list(
-		/obj/item/ammo_casing/shotgun
+		/obj/item/ammo_casing
 		))
 
 /obj/item/storage/belt/holster
@@ -647,6 +643,10 @@
 		/obj/item/storage/belt/bandolier/internal,
 		/obj/item/gun/energy/e_gun/mini
 		))
+
+/obj/item/storage/belt/holster/hos/PopulateContents()
+	var/static/items_inside = list(/obj/item/storage/belt/bandolier/internal = 2)
+	generate_items_inside(items_inside,src)
 
 /obj/item/storage/belt/holster/hos/full/PopulateContents()
 	var/static/items_inside = list(
