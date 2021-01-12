@@ -114,6 +114,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/template_noop)
+"L" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/bed/maint,
+/turf/open/floor/plasteel/dark,
+/area/template_noop)
 
 (1,1,1) = {"
 a
@@ -129,7 +134,7 @@ n
 "}
 (3,1,1) = {"
 c
-c
+L
 c
 o
 "}

@@ -419,3 +419,7 @@
 /obj/item/circuitboard/computer/shuttle/docker
 	name = "Shuttle Navigation Computer (Computer Board)"
 	build_path = /obj/machinery/computer/camera_advanced/shuttle_docker/custom
+
+/obj/item/circuitboard/computer/science_shuttle
+	name = "Science Shuttle (Computer Board)"
+	build_path = /obj/machinery/computer/shuttle/science
