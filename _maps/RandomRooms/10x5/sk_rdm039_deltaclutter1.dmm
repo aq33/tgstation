@@ -293,6 +293,10 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/wood,
 /area/template_noop)
+"M" = (
+/obj/effect/decal/cleanable/garbage,
+/turf/open/floor/wood,
+/area/template_noop)
 "P" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/dark,
@@ -335,7 +339,7 @@ e
 n
 K
 r
-n
+M
 "}
 (6,1,1) = {"
 f

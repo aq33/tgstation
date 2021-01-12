@@ -39,6 +39,10 @@
 /mob/living/simple_animal/pet/cat/Initialize()
 	. = ..()
 	verbs += /mob/living/proc/lay_down
+	add_cell_sample()
+
+/mob/living/simple_animal/pet/cat/add_cell_sample()
+	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CAT, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
 /mob/living/simple_animal/pet/cat/update_mobility()
 	..()
@@ -71,6 +75,8 @@
 	collar_type = null
 	unique_pet = TRUE
 
+/mob/living/simple_animal/pet/cat/original/add_cell_sample()
+	return
 /mob/living/simple_animal/pet/cat/kitten
 	name = "kitten"
 	desc = "D'aaawwww."
@@ -266,6 +272,9 @@
 	attacked_sound = 'sound/items/eatfood.ogg'
 	deathmessage = "loses its false life and collapses!"
 	deathsound = "bodyfall"
+
+/mob/living/simple_animal/pet/cat/cak/add_cell_sample()
+	return
 
 /mob/living/simple_animal/pet/cat/cak/CheckParts(list/parts)
 	..()

@@ -221,6 +221,7 @@
 "r" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line,
+/obj/structure/bed/maint,
 /turf/open/floor/plating,
 /area/template_noop)
 "s" = (
