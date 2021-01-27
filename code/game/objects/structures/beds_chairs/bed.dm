@@ -244,3 +244,4 @@
 	name = "fire truck bed"
 	desc = "Excellent at stopping oven fires."
 	icon_state = "firetruck"
+
