@@ -218,3 +218,29 @@
 /obj/structure/bed/maint/Initialize()
 	. = ..()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MOLD, CELL_VIRUS_TABLE_GENERIC, rand(2,4), 25)
+
+//fast beds
+
+/obj/structure/bed/racecar
+	name = "race car bed"
+	desc = "Vroom Vroom!"
+	icon_state = "racecarbed"
+	resistance_flags = FIRE_PROOF
+	buildstacktype = /obj/item/stack/sheet/plasteel
+	buildstackamount = 2
+	max_integrity = 200
+
+/obj/structure/bed/racecar/classic
+	name = "race car bed"
+	desc = "Only fits one driver."
+	icon_state = "racecarclassic"
+
+/obj/structure/bed/racecar/shuttle
+	name = "shuttle bed"
+	desc = "The Emergency Shuttle has docked with dreamland."
+	icon_state = "eshuttle"
+
+/obj/structure/bed/racecar/firetruck
+	name = "fire truck bed"
+	desc = "Excellent at stopping oven fires."
+	icon_state = "firetruck"
