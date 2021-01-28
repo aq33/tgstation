@@ -150,6 +150,13 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
  * Plasteel
  */
 GLOBAL_LIST_INIT(plasteel_recipes, list ( \
+	new/datum/stack_recipe_list("vehicle beds", list( \
+		new/datum/stack_recipe("classic race car bed", /obj/structure/bed/racecar/classic, 2, one_per_turf = 1, on_floor = 1), \
+		new/datum/stack_recipe("race car bed", /obj/structure/bed/racecar, 2, one_per_turf = 1, on_floor = 1), \
+		new/datum/stack_recipe("shuttle bed", /obj/structure/bed/racecar/shuttle, 2, one_per_turf = 1, on_floor = 1), \
+		new/datum/stack_recipe("fire truck bed", /obj/structure/bed/racecar/firetruck, 2, one_per_turf = 1, on_floor = 1), \
+		)), \
+	null, \
 	new/datum/stack_recipe("AI core", /obj/structure/AIcore, 4, time = 50, one_per_turf = TRUE), \
 	new/datum/stack_recipe("plasteel barricade", /obj/structure/peacekeeper_barricade/metal/plasteel, 5, time = 8 SECONDS, one_per_turf = 1, on_floor = TRUE), \
 	new/datum/stack_recipe("bomb assembly", /obj/machinery/syndicatebomb/empty, 10, time = 50), \
