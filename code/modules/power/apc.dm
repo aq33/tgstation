@@ -550,6 +550,43 @@
 			qdel(src)
 			return TRUE
 
+/obj/machinery/power/apc/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
+	if(the_rcd.mode == RCD_DECONSTRUCT)
+		return list("mode" = RCD_DECONSTRUCT, "delay" = 50, "cost" = 16)
+	else if((has_electronics == APC_ELECTRONICS_MISSING) && (the_rcd.upgrade & RCD_UPGRADE_SIMPLE_CIRCUITS))
+		return list("mode" = RCD_UPGRADE_SIMPLE_CIRCUITS, "delay" = 20, "cost" = 1)
+	else if((has_electronics == APC_ELECTRONICS_SECURED) && (the_rcd.upgrade & RCD_UPGRADE_SIMPLE_CIRCUITS))
+		return list("mode" = RCD_UPGRADE_SIMPLE_CIRCUITS, "delay" = 20, "cost" = 20)
+	return FALSE
+
+/obj/machinery/power/apc/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
+	switch(passed_mode)
+		if(RCD_UPGRADE_SIMPLE_CIRCUITS)
+			if(has_electronics == APC_ELECTRONICS_SECURED)
+				if(cell)
+					to_chat(user, "<span class='warning'>There is a power cell already installed!</span>")
+					return FALSE
+				if (stat & MAINT)
+					to_chat(user, "<span class='warning'>There is no connector for your power cell!</span>")
+					return FALSE
+				cell = new /obj/item/stock_parts/cell/crap/empty(src)
+				user.visible_message("<span class='notice'>[user] fabricates a weak power cell and places it into [src].</span>", \
+				"<span class='warning'>Your RCD whirrs with strain as you create a weak power cell and place it into [src]!</span>")
+				chargecount = 0
+				update_icon()
+			if(has_electronics == APC_ELECTRONICS_MISSING)
+				user.visible_message("<span class='notice'>[user] fabricates a circuit and places it into [src].</span>", \
+				"<span class='notice'>You adapt a power control board and click it into place in [src]'s guts.</span>")
+				has_electronics = APC_ELECTRONICS_INSTALLED
+				locked = FALSE
+				return TRUE
+		if(RCD_DECONSTRUCT)
+			to_chat(user, "<span class='notice'>You deconstruct [src].</span>")
+			qdel(src)
+			return TRUE
+	return FALSE
+
+
 /obj/machinery/power/apc/attackby(obj/item/W, mob/living/user, params)
 
 	if(issilicon(user) && get_dist(src,user)>1)
