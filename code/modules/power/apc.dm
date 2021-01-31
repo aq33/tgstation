@@ -579,6 +579,7 @@
 				"<span class='notice'>You adapt a power control board and click it into place in [src]'s guts.</span>")
 				has_electronics = APC_ELECTRONICS_INSTALLED
 				locked = FALSE
+				update_icon()
 				return TRUE
 		if(RCD_DECONSTRUCT)
 			to_chat(user, "<span class='notice'>You deconstruct [src].</span>")
