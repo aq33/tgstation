@@ -464,7 +464,7 @@
 		return FALSE
 	switch(borg_icon)
 		if("Sleek Security")
-			cyborg_base_icon = "sleekecurity"
+			cyborg_base_icon = "sleeksecurity"
 		if("Noble Security")
 			cyborg_base_icon = "noble-sec"
 		if("Ancient Security")
