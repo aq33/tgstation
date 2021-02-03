@@ -97,7 +97,6 @@ SUBSYSTEM_DEF(vote)
 					else
 						factor = 1.4
 				choices["Initiate Crew Transfer"] += round(non_voters.len * factor)
-				
 	//get all options with that many votes and return them in a list
 	. = list()
 	if(greatest_votes)
