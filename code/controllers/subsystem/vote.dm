@@ -83,7 +83,7 @@ SUBSYSTEM_DEF(vote)
 						var/default_map = global.config.defaultmap.map_name
 						choices[default_map] += 1
 						greatest_votes = max(greatest_votes, choices[default_map])
-			else if(mode == "transfer")
+			/*else if(mode == "transfer")
 				var/factor = 1 // factor defines how non-voters are weighted towards calling the shuttle
 				switch(world.time / (1 MINUTES))
 					if(0 to 60)
@@ -97,6 +97,7 @@ SUBSYSTEM_DEF(vote)
 					else
 						factor = 1.4
 				choices["Initiate Crew Transfer"] += round(non_voters.len * factor)
+				*/
 	//get all options with that many votes and return them in a list
 	. = list()
 	if(greatest_votes)
