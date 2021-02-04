@@ -158,6 +158,28 @@
 /obj/machinery/firealarm/attack_robot(mob/user)
 	return attack_hand(user)
 
+
+/obj/machinery/firealarm/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
+	if(the_rcd.mode == RCD_DECONSTRUCT)
+		return list("mode" = RCD_DECONSTRUCT, "delay" = 50, "cost" = 16)
+	else if((buildstage == 0) && (the_rcd.upgrade & RCD_UPGRADE_SIMPLE_CIRCUITS))
+		return list("mode" = RCD_UPGRADE_SIMPLE_CIRCUITS, "delay" = 20, "cost" = 1)
+	return FALSE
+
+/obj/machinery/firealarm/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
+	switch(passed_mode)
+		if(RCD_UPGRADE_SIMPLE_CIRCUITS)
+			user.visible_message("<span class='notice'>[user] fabricates a circuit and places it into [src].</span>", \
+			"<span class='notice'>You adapt a fire alarm circuit and slot it into the assembly.</span>")
+			buildstage = 1
+			update_icon()
+			return TRUE
+		if(RCD_DECONSTRUCT)
+			to_chat(user, "<span class='notice'>You deconstruct [src].</span>")
+			qdel(src)
+			return TRUE
+	return FALSE
+
 /obj/machinery/firealarm/attackby(obj/item/W, mob/user, params)
 	add_fingerprint(user)
 
