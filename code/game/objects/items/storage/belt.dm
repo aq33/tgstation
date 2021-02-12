@@ -228,7 +228,9 @@
 		/obj/item/restraints/legcuffs/bola,
 		/obj/item/holosign_creator/security,
 		/obj/item/club,
-		/obj/item/shield/riot/tele
+		/obj/item/shield/riot/tele,
+		/obj/item/stock_parts/cell/gun,
+		/obj/item/ammo_box/magazine
 		))
 
 /obj/item/storage/belt/security/full/PopulateContents()
