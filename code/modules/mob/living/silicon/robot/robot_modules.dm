@@ -247,7 +247,8 @@
 		/obj/item/t_scanner/adv_mining_scanner,
 		/obj/item/restraints/handcuffs/cable/zipties,
 		/obj/item/soap/nanotrasen,
-		/obj/item/borg/cyborghug)
+		/obj/item/borg/cyborghug,
+		/obj/item/weapon/gripper/hand)
 	emag_modules = list(/obj/item/melee/transforming/energy/sword/cyborg)
 	moduleselect_icon = "standard"
 	hat_offset = -3
@@ -280,6 +281,7 @@
 			cyborg_base_icon = "booty-flower"
 		if("Roomba")
 			cyborg_base_icon = "zoomba_standard"
+			hat_offset = INFINITY
 	return ..()
 
 /obj/item/robot_module/medical
@@ -304,7 +306,9 @@
 		/obj/item/borg/cyborghug/medical,
 		/obj/item/stack/medical/gauze/cyborg,
 		/obj/item/organ_storage,
-		/obj/item/borg/lollipop)
+		/obj/item/borg/lollipop,
+		/obj/item/weapon/gripper/hand,
+		/obj/item/crowbar/cyborg)
 	emag_modules = list(/obj/item/reagent_containers/borghypo/hacked)
 	cyborg_base_icon = "medical"
 	moduleselect_icon = "medical"
@@ -345,8 +349,10 @@
 			cyborg_base_icon = "eve"
 		if("Roomba")
 			cyborg_base_icon = "zoomba_med"
+			hat_offset = INFINITY
 		if("Roomba ERT")
 			cyborg_base_icon = "zoomba_crisis"
+			hat_offset = INFINITY
 	return ..()
 
 /obj/item/robot_module/engineering
@@ -376,7 +382,9 @@
 		/obj/item/stack/sheet/rglass/cyborg,
 		/obj/item/stack/rods/cyborg,
 		/obj/item/stack/tile/plasteel/cyborg,
-		/obj/item/stack/cable_coil/cyborg)
+		/obj/item/stack/cable_coil/cyborg,
+		/obj/item/borg/apparatus/circuit,
+		/obj/item/weapon/gripper/hand)
 	emag_modules = list(/obj/item/borg/stun)
 	cyborg_base_icon = "engineer"
 	moduleselect_icon = "engineer"
@@ -419,6 +427,7 @@
 			cyborg_base_icon = "wall-e"
 		if("Roomba")
 			cyborg_base_icon = "zoomba_engi"
+			hat_offset = INFINITY
 	return ..()
 
 /obj/item/robot_module/deathsquad
@@ -432,7 +441,10 @@
 		/obj/item/gun/energy/disabler/cyborg,
 		/obj/item/melee/transforming/energy/sword/cyborg,
 		/obj/item/gun/energy/pulse/carbine/cyborg,
-		/obj/item/clothing/mask/gas/sechailer/cyborg)
+		/obj/item/clothing/mask/gas/sechailer/cyborg,
+		/obj/item/crowbar/cyborg,
+		/obj/item/weapon/gripper/hand,
+		/obj/item/borg/sight/thermal)
 	emag_modules = list(/obj/item/gun/energy/laser/cyborg)
 	cyborg_base_icon = "centcom"
 	moduleselect_icon = "malf"
@@ -450,7 +462,11 @@
 		/obj/item/gun/energy/disabler/cyborg,
 		/obj/item/clothing/mask/gas/sechailer/cyborg,
 		/obj/item/extinguisher/mini,
-		/obj/item/borg/cyborghug)
+		/obj/item/borg/cyborghug,
+		/obj/item/clothing/head/helmet/justice/cyborg,
+		/obj/item/borg/projectile_dampen,
+		/obj/item/crowbar/cyborg,
+		/obj/item/weapon/gripper/hand)
 	emag_modules = list(/obj/item/gun/energy/laser/cyborg)
 	cyborg_base_icon = "sec"
 	moduleselect_icon = "security"
@@ -491,6 +507,7 @@
 			cyborg_base_icon = "sec-tread"
 		if("Roomba")
 			cyborg_base_icon = "zoomba_sec"
+			hat_offset = INFINITY
 	return ..()
 
 /obj/item/robot_module/security/do_transform_animation()
@@ -520,7 +537,9 @@
 		/obj/item/holosign_creator/cyborg,
 		/obj/item/borg/cyborghug/peacekeeper,
 		/obj/item/extinguisher,
-		/obj/item/borg/projectile_dampen)
+		/obj/item/borg/projectile_dampen,
+		/obj/item/crowbar/cyborg,
+		/obj/item/weapon/gripper/hand)
 	emag_modules = list(/obj/item/reagent_containers/borghypo/peace/hacked)
 	cyborg_base_icon = "peace"
 	moduleselect_icon = "standard"
@@ -537,6 +556,7 @@
 			cyborg_base_icon = "peace"
 		if("Omoikane")
 			cyborg_base_icon = "omoikane"
+			hat_offset = INFINITY
 		if("Hos")
 			cyborg_base_icon = "peaceborg-hos"
 		if("Warden")
@@ -547,6 +567,7 @@
 			cyborg_base_icon = "peaceborg-noirbw"
 		if("Roomba")
 			cyborg_base_icon = "zoomba_sci"
+			hat_offset = INFINITY
 	return ..()
 
 /obj/item/robot_module/peacekeeper/do_transform_animation()
@@ -572,7 +593,8 @@
 		/obj/item/lightreplacer/cyborg,
 		/obj/item/holosign_creator/janibarrier,
 		/obj/item/borg/cyborghug,
-		/obj/item/reagent_containers/spray/cyborg_drying)
+		/obj/item/reagent_containers/spray/cyborg_drying,
+		/obj/item/weapon/gripper/hand)
 	emag_modules = list(/obj/item/reagent_containers/spray/cyborg_lube)
 	cyborg_base_icon = "janitor"
 	moduleselect_icon = "janitor"
@@ -611,6 +633,7 @@
 			cyborg_base_icon = "noble-jan"
 		if("Roomba")
 			cyborg_base_icon = "zoomba_jani"
+			hat_offset = INFINITY
 	return ..()
 
 /obj/item/reagent_containers/spray/cyborg_drying
@@ -657,7 +680,9 @@
 		/obj/item/borg/lollipop/clown,
 		/obj/item/picket_sign/cyborg,
 		/obj/item/reagent_containers/borghypo/clown,
-		/obj/item/extinguisher/mini)
+		/obj/item/extinguisher/mini,
+		/obj/item/crowbar/cyborg,
+		/obj/item/weapon/gripper/hand)
 	emag_modules = list(
 		/obj/item/reagent_containers/borghypo/clown/hacked,
 		/obj/item/reagent_containers/spray/waterflower/cyborg/hacked)
@@ -685,7 +710,9 @@
 		/obj/item/lighter,
 		/obj/item/storage/bag/tray,
 		/obj/item/reagent_containers/borghypo/borgshaker,
-		/obj/item/borg/lollipop)
+		/obj/item/borg/lollipop,
+		/obj/item/crowbar/cyborg,
+		/obj/item/weapon/gripper/hand)
 	emag_modules = list(/obj/item/reagent_containers/borghypo/borgshaker/hacked)
 	moduleselect_icon = "service"
 	special_light_key = "service"
@@ -735,6 +762,7 @@
 			cyborg_base_icon = "noble-srv"
 		if("Roomba")
 			cyborg_base_icon = "zoomba_service"
+			hat_offset = INFINITY
 	return ..()
 
 /obj/item/robot_module/borgi
@@ -762,7 +790,8 @@
 		/obj/item/storage/bag/sheetsnatcher/borg,
 		/obj/item/gun/energy/kinetic_accelerator/cyborg,
 		/obj/item/gps/cyborg,
-		/obj/item/stack/marker_beacon)
+		/obj/item/stack/marker_beacon,
+		/obj/item/weapon/gripper/hand)
 	emag_modules = list(/obj/item/borg/stun)
 	cyborg_base_icon = "miner"
 	moduleselect_icon = "miner"
@@ -804,6 +833,7 @@
 			cyborg_base_icon = "wall-a"
 		if("Roomba")
 			cyborg_base_icon = "zoomba_miner"
+			hat_offset = INFINITY
 	return ..()
 
 /obj/item/robot_module/miner/rebuild_modules()
@@ -826,7 +856,8 @@
 		/obj/item/borg/charger,
 		/obj/item/crowbar/cyborg,
 		/obj/item/extinguisher/mini,
-		/obj/item/pinpointer/syndicate_cyborg)
+		/obj/item/pinpointer/syndicate_cyborg,
+		/obj/item/weapon/gripper/hand)
 	cyborg_base_icon = "synd_sec"
 	moduleselect_icon = "malf"
 	can_be_pushed = FALSE
@@ -880,7 +911,8 @@
 		/obj/item/pinpointer/syndicate_cyborg,
 		/obj/item/stack/medical/gauze/cyborg,
 		/obj/item/gun/medbeam,
-		/obj/item/organ_storage)
+		/obj/item/organ_storage,
+		/obj/item/weapon/gripper/hand)
 	cyborg_base_icon = "synd_medical"
 	moduleselect_icon = "malf"
 	can_be_pushed = FALSE
@@ -925,7 +957,7 @@
 		/obj/item/card/emag,
 		/obj/item/pinpointer/syndicate_cyborg,
 		/obj/item/borg_chameleon,
-		)
+		/obj/item/weapon/gripper/hand)
 	cyborg_base_icon = "synd_engi"
 	moduleselect_icon = "malf"
 	can_be_pushed = FALSE
