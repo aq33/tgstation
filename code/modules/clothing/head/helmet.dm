@@ -172,6 +172,11 @@
 	active_sound = 'sound/items/weeoo1.ogg'
 	dog_fashion = null
 
+/obj/item/clothing/head/helmet/justice/cyborg
+	name = "police siren"
+	icon_state = "borgsiren"
+	icon = 'icons/obj/items_cyborg.dmi'
+
 /obj/item/clothing/head/helmet/justice/escape
 	name = "alarm helmet"
 	desc = "WEEEEOOO. WEEEEEOOO. STOP THAT MONKEY. WEEEOOOO."
