@@ -1056,5 +1056,10 @@
 	cannot_hold = list(
 		/obj/item/circuitboard,
 		/obj/item/electronics,
-		/obj/item/gun
+		/obj/item/gun,
+		/obj/item/melee/baton,
+		/obj/item/melee/transforming,
+		/obj/item/melee/powerfist,
+		/obj/item/melee/sabre,
+		/obj/item/melee/classic_baton
 		)
