@@ -133,14 +133,15 @@
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/engi
 	glasses =  /obj/item/clothing/glasses/meson/engine
 	back = /obj/item/storage/backpack/ert/engineer
-	belt = /obj/item/storage/belt/utility/full
+	belt = /obj/item/storage/belt/utility/full/powertools
 	l_pocket = /obj/item/rcd_ammo/large
 	r_hand = /obj/item/storage/firstaid/regular
 	backpack_contents = list(/obj/item/storage/box/engineer=1,\
 		/obj/item/melee/baton/loaded=1,\
 		/obj/item/clothing/mask/gas/sechailer=1,\
 		/obj/item/gun/energy/e_gun=1,\
-		/obj/item/construction/rcd/loaded=1)
+		/obj/item/construction/rcd/loaded/upgraded=1,\
+		/obj/item/pipe_dispenser=1)
 
 /datum/outfit/ert/engineer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

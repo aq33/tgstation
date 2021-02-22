@@ -95,6 +95,15 @@
 	new /obj/item/multitool(src)
 	new /obj/item/stack/cable_coil(src,MAXCOIL,pick("red","yellow","orange"))
 
+/obj/item/storage/belt/utility/full/powertools/PopulateContents()
+	new /obj/item/screwdriver/power(src)
+	new /obj/item/crowbar/power(src)
+	new /obj/item/weldingtool/experimental(src)
+	new /obj/item/multitool(src)
+	new /obj/item/holosign_creator/atmos(src)
+	new /obj/item/extinguisher/mini(src)
+	new /obj/item/stack/cable_coil(src,MAXCOIL,pick("red","yellow","orange"))
+
 /obj/item/storage/belt/utility/full/engi/PopulateContents()
 	new /obj/item/screwdriver(src)
 	new /obj/item/wrench(src)
@@ -219,7 +228,9 @@
 		/obj/item/restraints/legcuffs/bola,
 		/obj/item/holosign_creator/security,
 		/obj/item/club,
-		/obj/item/shield/riot/tele
+		/obj/item/shield/riot/tele,
+		/obj/item/stock_parts/cell/gun,
+		/obj/item/ammo_box/magazine
 		))
 
 /obj/item/storage/belt/security/full/PopulateContents()
