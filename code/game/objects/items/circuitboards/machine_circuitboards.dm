@@ -1072,7 +1072,12 @@
 /obj/item/circuitboard/machine/ore_silo
 	name = "Ore Silo (Machine Board)"
 	build_path = /obj/machinery/ore_silo
-	req_components = list()
+	req_components = list(
+		/obj/item/stock_parts/scanning_module = 4,
+		/obj/item/stack/ore/bluespace_crystal = 2,
+		/obj/item/stock_parts/subspace/ansible = 1,
+		/obj/item/stock_parts/subspace/amplifier = 1,
+		/obj/item/stock_parts/subspace/transmitter = 1)
 
 /obj/item/circuitboard/machine/paystand
 	name = "Pay Stand (Machine Board)"
