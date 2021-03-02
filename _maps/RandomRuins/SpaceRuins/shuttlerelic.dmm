@@ -79,10 +79,6 @@
 /mob/living/simple_animal/hostile/retaliate/spaceman,
 /turf/open/floor/oldshuttle,
 /area/ruin/powered)
-"t" = (
-/obj/machinery/power/generator,
-/turf/open/floor/oldshuttle,
-/area/ruin/powered)
 "u" = (
 /obj/machinery/power/smes,
 /turf/open/floor/oldshuttle,
@@ -98,6 +94,10 @@
 "x" = (
 /obj/structure/shuttle/engine/propulsion/burst,
 /turf/template_noop,
+/area/ruin/powered)
+"J" = (
+/obj/structure/closet/crate/secure/loot,
+/turf/open/floor/oldshuttle,
 /area/ruin/powered)
 "K" = (
 /obj/item/gps{
@@ -276,7 +276,7 @@ g
 g
 g
 c
-t
+J
 K
 g
 W

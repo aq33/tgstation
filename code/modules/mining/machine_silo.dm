@@ -15,6 +15,16 @@ GLOBAL_LIST_EMPTY(silo_access_logs)
 
 /obj/machinery/ore_silo/Initialize(mapload)
 	. = ..()
+	component_parts = list(new /obj/item/circuitboard/machine/ore_silo,
+		new /obj/item/stock_parts/scanning_module,
+		new /obj/item/stock_parts/scanning_module,
+		new /obj/item/stock_parts/scanning_module,
+		new /obj/item/stock_parts/scanning_module,
+		new /obj/item/stack/ore/bluespace_crystal,
+		new /obj/item/stack/ore/bluespace_crystal,
+		new /obj/item/stock_parts/subspace/ansible,
+		new /obj/item/stock_parts/subspace/amplifier,
+		new /obj/item/stock_parts/subspace/transmitter)
 	AddComponent(/datum/component/material_container,
 		list(/datum/material/iron, /datum/material/glass, /datum/material/copper, /datum/material/silver, /datum/material/gold, /datum/material/diamond, /datum/material/plasma, /datum/material/uranium, /datum/material/bananium, /datum/material/titanium, /datum/material/bluespace, /datum/material/plastic),
 		INFINITY,
@@ -64,7 +74,14 @@ GLOBAL_LIST_EMPTY(silo_access_logs)
 /obj/machinery/ore_silo/attackby(obj/item/W, mob/user, params)
 	if (istype(W, /obj/item/stack))
 		return remote_attackby(src, user, W)
-	return ..()
+	if(user.a_intent == INTENT_HELP && default_deconstruction_screwdriver(user, "silo_open", "silo", W))
+		return TRUE
+
+	if(default_deconstruction_crowbar(W))
+		return TRUE
+
+	if(user.a_intent == INTENT_HARM) //so we can hit the machine
+		return ..()
 
 /obj/machinery/ore_silo/ui_interact(mob/user)
 	user.set_machine(src)
