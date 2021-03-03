@@ -38,3 +38,13 @@
 		return
 	var/datum/material/ore = pick(ore_rates)
 	mat_container.insert_amount_mat((ore_rates[ore] * 1000), ore)
+
+/obj/machinery/mineral/bluespace_miner/attackby(obj/item/W, mob/user, params)
+	if(user.a_intent == INTENT_HELP && default_deconstruction_screwdriver(user, "bs_miner_open", "bs_miner", W))
+		return TRUE
+
+	if(default_deconstruction_crowbar(W))
+		return TRUE
+
+	if(user.a_intent == INTENT_HARM) //so we can hit the machine
+		return ..()
