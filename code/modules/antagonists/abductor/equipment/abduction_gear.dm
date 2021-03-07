@@ -804,7 +804,7 @@ Gratulacje! Jesteś teraz wyszkolony do inwazyjnych badań ksenobiologicznych!"}
 	. = ..()
 	if(iscarbon(AM))
 		START_PROCESSING(SSobj, src)
-		to_chat(AM, "<span class='danger'>Czujesz serię małych ukłuć!/span>")
+		to_chat(AM, "<span class='danger'>Czujesz serię małych ukłuć!</span>")
 
 /obj/structure/table/optable/abductor/process()
 	. = PROCESS_KILL
