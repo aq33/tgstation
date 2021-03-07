@@ -58,6 +58,12 @@
 	icon_state = "stethoscope"
 	item_color = "stethoscope"
 
+/obj/item/clothing/neck/stethoscopePinkus
+	name = "stethoscope"
+	desc = "An outdated pink medical apparatus for listening to the sounds of the human body. It also makes you look like you know what you're doing."
+	icon_state = "stethoscopePinkus"
+	item_color = "stethoscopePinkus"
+
 /obj/item/clothing/neck/stethoscope/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] puts \the [src] to [user.p_their()] chest! It looks like [user.p_they()] wont hear much!</span>")
 	return OXYLOSS

@@ -62,6 +62,9 @@
 					/obj/item/clothing/under/rank/medical/doctor/blue = 4,
 					/obj/item/clothing/under/rank/medical/doctor/green = 4,
 					/obj/item/clothing/under/rank/medical/doctor/purple = 4,
+					/obj/item/clothing/under/rank/medical/doctor/Lgreen = 4,
+                    /obj/item/clothing/under/rank/medical/doctor/Ppurple = 4,
+                    /obj/item/clothing/under/rank/medical/doctor/Dblue = 4,
 					/obj/item/clothing/under/rank/medical/doctor = 4,
 					/obj/item/clothing/under/plasmaman/medical = 4,
 					/obj/item/clothing/head/helmet/space/plasmaman/replacement/medical = 4,
@@ -70,7 +73,14 @@
 					/obj/item/clothing/shoes/sneakers/white = 4,
 					/obj/item/clothing/head/soft/emt = 4,
 					/obj/item/clothing/suit/apron/surgical = 4,
+					/obj/item/clothing/suit/toggle/labcoat/fullsurgical = 4,
+					/obj/item/clothing/neck/stethoscopePinkus =4,
+                    /obj/item/clothing/neck/stethoscope = 4,
 					/obj/item/clothing/mask/surgical = 4)
+
+
+
+
 	refill_canister = /obj/item/vending_refill/wardrobe/medi_wardrobe
 	payment_department = ACCOUNT_MED
 /obj/item/vending_refill/wardrobe/medi_wardrobe

@@ -69,6 +69,29 @@
 	item_color = "scrubsgreen"
 	can_adjust = FALSE
 
+/obj/item/clothing/under/rank/medical/doctor/Dblue
+    name = "medical scrubs"
+    desc = "It's made of a special fiber that provides minor protection against biohazards. This one is in deep purple."
+    icon_state = "scrubsDblue"
+    item_color = "scrubsDblue"
+    can_adjust = FALSE
+
+/obj/item/clothing/under/rank/medical/doctor/Lgreen
+    name = "medical scrubs"
+    desc = "It's made of a special fiber that provides minor protection against biohazards. This one is in deep purple."
+    icon_state = "scrubsLgreen"
+    item_color = "scrubsLgreen"
+    can_adjust = FALSE
+
+/obj/item/clothing/under/rank/medical/doctor/Ppurple
+    name = "medical scrubs"
+    desc = "It's made of a special fiber that provides minor protection against biohazards. This one is in deep purple."
+    icon_state = "scrubsPpurple"
+    item_color = "scrubsPpurple"
+    can_adjust = FALSE
+
+
+
 /obj/item/clothing/under/rank/medical/doctor/purple
 	name = "medical scrubs"
 	desc = "It's made of a special fiber that provides minor protection against biohazards. This one is in deep purple."
