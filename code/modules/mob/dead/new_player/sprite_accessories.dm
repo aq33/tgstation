@@ -1406,6 +1406,90 @@
 	icon_state = "yellowshirt"
 	gender = NEUTER
 
+///////////////////
+////AQ koszulki////
+///////////////////
+
+/datum/sprite_accessory/undershirt/poleagle
+	name = "T-Shirt (Eagle)"
+	icon_state = "shirt_czerwona_orel"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/redpl
+	name = "T-Shirt (Red PL)"
+	icon_state = "shirt_czerwona_PL"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/whitered
+	name = "T-Shirt (PL Flag)"
+	icon_state = "shirt_bialo_czerwona"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/redwhite
+	name = "T-Shirt (Red Sleeves)"
+	icon_state = "shirt_biala_rekawy"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/whitebord
+	name = "T-Shirt (White Border)"
+	icon_state = "shirt_biala_obwo"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/whitepl
+	name = "T-Shirt (White PL)"
+	icon_state = "shirt_biala_PL"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/polball
+	name = "T-Shirt (PolanBall)"
+	icon_state = "shirt_polandball"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/whiteflag
+	name = "T-Shirt (White Flag)"
+	icon_state = "shirt_biala_flaga"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/ioveflag
+	name = "T-Shirt (I Love flag PL)"
+	icon_state = "shirt_biala_ilpk"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/iovepl
+	name = "T-Shirt (I Love PL)"
+	icon_state = "shirt_biala_ilp"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/poleaglegray
+	name = "T-Shirt (Eagle Gray)"
+	icon_state = "shirt_szara_orel"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/iloveplgray
+	name = "T-Shirt (I Love PL Gray)"
+	icon_state = "shirt_szara_ilp"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/iloveflaggray
+	name = "T-Shirt (I love flag PL Gray)"
+	icon_state = "shirt_szara_flaga"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/pwblack
+	name = "T-Shirt (PW Black)"
+	icon_state = "shirt_czarna_pw_ap"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/pwblackreverse
+	name = "T-Shirt (PW Black Reverse)"
+	icon_state = "shirt_czarna_pw_tyl"
+	gender = NEUTER
+
+/datum/sprite_accessory/undershirt/plblack
+	name = "T-Shirt (PL Black)"
+	icon_state = "shirt_czarna_PL"
+	gender = NEUTER
+
 ///////////////////////
 // Socks Definitions //
 ///////////////////////
