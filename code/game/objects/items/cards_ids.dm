@@ -401,6 +401,9 @@ update_label("John Doe", "Clowny")
 		if(popup_input == "Forge/Reset" && !forged)
 			var/input_name = stripped_input(user, "What name would you like to put on this card? Leave blank to randomise.", "Agent card name", registered_name ? registered_name : (ishuman(user) ? user.real_name : user.name), MAX_NAME_LEN)
 			input_name = reject_bad_name(input_name)
+			// AQ EDIT - BEGIN
+			// AQ EDIT - ORIGINAL
+			/*
 			if(!input_name)
 				// Invalid/blank names give a randomly generated one.
 				if(user.gender == MALE)
@@ -409,6 +412,16 @@ update_label("John Doe", "Clowny")
 					input_name = "[pick(GLOB.first_names_female)] [pick(GLOB.last_names)]"
 				else
 					input_name = "[pick(GLOB.first_names)] [pick(GLOB.last_names)]"
+			*/
+			if(!input_name)
+				// Invalid/blank names give a randomly generated one.
+				if(user.gender == MALE)
+					input_name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names_male)]"
+				else if(user.gender == FEMALE)
+					input_name = "[pick(GLOB.first_names_female)] [pick(GLOB.last_names_female)]"
+				else
+					input_name = "[human_first_name_random()] [human_last_name_random()]"
+			// AQ EDIT - END
 
 			var/target_occupation = stripped_input(user, "What occupation would you like to put on this card?\nNote: This will not grant any access levels other than Maintenance.", "Agent card job assignment", assignment ? assignment : "Assistant", MAX_MESSAGE_LEN)
 			if(!target_occupation)
@@ -446,6 +459,7 @@ update_label("John Doe", "Clowny")
 			set_new_account(user)
 			return
 	return ..()
+
 /obj/item/card/id/syndicate/anyone
 	anyone = TRUE
 

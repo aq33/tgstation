@@ -3212,4 +3212,5 @@
 #include "interface\interface.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
+#include "modular_aquila\modules\POLISH_NAMES\code\names.dm"
 // END_INCLUDE

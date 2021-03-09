@@ -852,7 +852,11 @@ What a mess.*/
 					if(prob(10))
 						R.fields["name"] = "[pick(lizard_name(MALE),lizard_name(FEMALE))]"
 					else
-						R.fields["name"] = "[pick(pick(GLOB.first_names_male), pick(GLOB.first_names_female))] [pick(GLOB.last_names)]"
+						// AQ EDIT - BEGIN
+						// AQ EDIT - ORIGINAL
+						// R.fields["name"] = "[pick(pick(GLOB.first_names_male), pick(GLOB.first_names_female))] [pick(GLOB.last_names)]"
+						R.fields["name"] = "[human_first_name_random()] [human_last_name_random()]"
+						// AQ EDIT - END
 				if(2)
 					R.fields["sex"] = pick("Male", "Female")
 				if(3)
