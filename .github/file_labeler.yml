@@ -1,7 +1,7 @@
-Administration:
+Administracyjne:
 - code/modules/admin/**/*
 
-Config Update:
+Config:
 - config/**/*
 
 GitHub:
@@ -10,17 +10,17 @@ GitHub:
 mapping:
 - _maps/**/*
 
-sound:
+Dźwięk:
 - sound/**/*
 
-sprites:
+Grafika:
 - icons/**/*.dmi
 
 sql:
 - SQL/**/*.sql
 
-tools:
+Narzędzia:
 - tools/**/*
 
-TGUI-Changes:
+TGUI:
 - tgui/**/*
