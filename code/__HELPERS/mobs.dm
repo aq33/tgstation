@@ -101,10 +101,22 @@
 
 /proc/random_unique_name(gender, attempts_to_find_unique_name=10)
 	for(var/i in 1 to attempts_to_find_unique_name)
+		// AQ EDIT - BEGIN
+		// AQ EDIT - ORIGINAL
+		/*
 		if(gender==FEMALE)
 			. = capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
 		else
 			. = capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
+		*/
+		switch(gender)
+			if(MALE)
+				. = capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names_male))
+			if(FEMALE)
+				. = capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names_female))
+			else
+				. = capitalize(human_first_name_random()) + " " + capitalize(human_last_name_random())
+		// AQ EDIT - END
 
 		if(!findname(.))
 			break

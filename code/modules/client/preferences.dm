@@ -1899,10 +1899,20 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		if(CONFIG_GET(flag/humans_need_surnames) && (pref_species.id == "human"))
 			var/firstspace = findtext(real_name, " ")
 			var/name_length = length(real_name)
+			// AQ EDIT - BEGIN
+			// AQ EDIT - ORIGINAL
+			/*
 			if(!firstspace)	//we need a surname
 				real_name += " [pick(GLOB.last_names)]"
 			else if(firstspace == name_length)
 				real_name += "[pick(GLOB.last_names)]"
+			*/
+			if(!firstspace)	//we need a surname
+				real_name += " [human_last_name_random()]"
+			else if(firstspace == name_length)
+				real_name += "[human_last_name_random()]"
+			// AQ EDIT - END
+
 
 	character.real_name = real_name
 	character.name = character.real_name
