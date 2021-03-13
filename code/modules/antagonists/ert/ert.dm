@@ -34,7 +34,11 @@
 
 /datum/antagonist/ert/New()
 	. = ..()
-	name_source = GLOB.last_names
+	// AQ EDIT - BEGIN
+	// AQ EDIT - ORIGINAL
+	// name_source = GLOB.last_names
+	name_source = pick(GLOB.last_names_male, GLOB.last_names_female)
+	// AQ EDIT - END
 
 /datum/antagonist/ert/proc/update_name()
 	owner.current.fully_replace_character_name(owner.current.real_name,"[role] [pick(name_source)]")

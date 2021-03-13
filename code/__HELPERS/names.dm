@@ -30,9 +30,9 @@
 
 proc/squid_name(gender)
 	if(gender == MALE)
-		return "[pick(GLOB.squid_names_male)] [pick(GLOB.last_names)]"
+		return "[pick(GLOB.squid_names_male)] [pick(GLOB.last_names_male)]"
 	else
-		return "[pick(GLOB.squid_names_female)] [pick(GLOB.last_names)]"
+		return "[pick(GLOB.squid_names_female)] [pick(GLOB.last_names_female)]"
 
 GLOBAL_VAR(command_name)
 /proc/command_name()
@@ -211,10 +211,16 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 							if(prob(10))
 								. += pick(lizard_name(MALE),lizard_name(FEMALE))
 							else
+								// AQ EDIT - BEGIN
+								// AQ EDIT - ORIGINAL
+								/*
 								var/new_name = pick(pick(GLOB.first_names_male,GLOB.first_names_female))
 								new_name += " "
 								new_name += pick(GLOB.last_names)
+								*/
+								var/new_name = pick(pick(GLOB.first_names_male) + " " + pick(GLOB.last_names_male), pick(GLOB.first_names_female) + " " + pick(GLOB.last_names_female))
 								. += new_name
+								// AQ EDIT - END
 					if(2)
 						. += pick(get_all_jobs())//Returns a job.
 				safety -= 1
@@ -242,3 +248,4 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 				. += "."
 			else
 				. += ", "
+

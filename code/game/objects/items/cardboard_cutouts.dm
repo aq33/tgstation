@@ -99,7 +99,11 @@
 		add_atom_colour("#FFD7A7", FIXED_COLOUR_PRIORITY)
 	switch(new_appearance)
 		if("Assistant")
-			name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
+			// AQ EDIT - BEGIN
+			// AQ EDIT - ORIGINAL
+			// name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
+			name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names_male)]"
+			// AQ EDIT - END
 			desc = "A cardboat cutout of an assistant."
 			icon_state = "cutout_greytide"
 		if("Clown")
@@ -123,7 +127,11 @@
 			desc = "A cardboard cutout of a cultist."
 			icon_state = "cutout_cultist"
 		if("Clockwork Cultist")
-			name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
+			// AQ EDIT - BEGIN - POLISH_NAMES
+			// AQ EDIT - ORIGINAL
+			// name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
+			name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names_male)]"
+			// AQ EDIT - END
 			desc = "A cardboard cutout of a servant of Ratvar."
 			icon_state = "cutout_servant"
 		if("Revolutionary")
