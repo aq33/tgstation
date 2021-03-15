@@ -1,0 +1,4 @@
+author: aquila33-bot
+delete-after: true
+changes:
+  - bugfix: His grace can no longer be pulled.
