@@ -5,7 +5,7 @@
 
 /obj/item/circuitboard
 	name = "circuit board"
-	icon = 'icons/obj/module.dmi'
+	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/module.dmi' //aquila edit
 	icon_state = "id_mod"
 	item_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
