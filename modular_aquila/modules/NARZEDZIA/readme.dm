@@ -31,6 +31,7 @@ ID: NARZEDZIA
 - code/game/objects/items/flamethrower.dm
 - code/modules/research/stock_parts.dm
 - code/modules/power/supermatter/supermatter.dm
+- code/modules/mining/equipment/mineral_scanner.dm
 
 ### Autorzy:
 faceslav
