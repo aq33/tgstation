@@ -1,6 +1,6 @@
 ### Link do PRa:
 
-https://github.com/aq33/tgstation/pull/
+https://github.com/aq33/tgstation/pull/677
 
 ### ID:
 
@@ -29,7 +29,7 @@ ID: NARZEDZIA
 - code/game/objects/items/devices/camera_bug.dm
 - code/game/objects/items.dm
 - code/game/objects/items/flamethrower.dm
-- code/modules/research/stoch_parts.dm
+- code/modules/research/stock_parts.dm
 - code/modules/power/supermatter/supermatter.dm
 
 ### Autorzy:
