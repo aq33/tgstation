@@ -11,11 +11,11 @@
 /obj/item/geiger_counter //DISCLAIMER: I know nothing about how real-life Geiger counters work. This will not be realistic. ~Xhuis
 	name = "\improper Geiger counter"
 	desc = "A handheld device used for detecting and measuring radiation pulses."
-	icon = 'icons/obj/device.dmi'
+	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/device.dmi' //aquila edit
 	icon_state = "geiger_off"
 	item_state = "multitool"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/equipment/tools_lefthand.dmi' //aquila edit
+	righthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/equipment/tools_righthand.dmi' //aquila edit
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT
 	materials = list(/datum/material/iron = 150, /datum/material/glass = 150)
