@@ -1,4 +1,5 @@
 /turf/open/floor/plasteel
+	icon = 'modular_aquila/modules/PODLOGI/icons/turf/floors.dmi' //aquila edit
 	icon_state = "floor"
 	floor_tile = /obj/item/stack/tile/plasteel
 	broken_states = list("damaged1", "damaged2", "damaged3", "damaged4", "damaged5")
