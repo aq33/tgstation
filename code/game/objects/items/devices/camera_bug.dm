@@ -8,7 +8,7 @@
 /obj/item/camera_bug
 	name = "camera bug"
 	desc = "For illicit snooping through the camera network."
-	icon = 'icons/obj/device.dmi'
+	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/device.dmi' //aquila edit
 	icon_state	= "camera_bug"
 	w_class		= WEIGHT_CLASS_TINY
 	item_state	= "camera_bug"
