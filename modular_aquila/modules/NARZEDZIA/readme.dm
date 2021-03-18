@@ -26,7 +26,6 @@ ID: NARZEDZIA
 - code/game/objects/items/tools/weldingtool.dm
 - code/game/objects/items/tools/wirecutters.dm
 - code/game/objects/items/tools/wrench.dm
-- code/game/objects/items/devices/camera_bug.dm
 - code/game/objects/items.dm
 - code/game/objects/items/flamethrower.dm
 - code/modules/research/stock_parts.dm
