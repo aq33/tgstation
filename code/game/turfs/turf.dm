@@ -1,6 +1,6 @@
 GLOBAL_LIST_EMPTY(station_turfs)
 /turf
-	icon = 'icons/turf/floors.dmi'
+	icon = 'modular_aquila/modules/PODLOGI/icons/turf/floors.dmi' //aquila edit
 	level = 1
 
 	/// If this is TRUE, that means this floor is on top of plating so pipes and wires and stuff will appear under it... or something like that it's not entirely clear.
