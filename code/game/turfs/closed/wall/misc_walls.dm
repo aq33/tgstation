@@ -53,7 +53,7 @@
 /turf/closed/wall/rust
 	name = "rusted wall"
 	desc = "A rusted metal wall."
-	icon = 'icons/turf/walls/rusty_wall.dmi'
+	icon = 'modular_aquila/modules/SCIANY/icons/turf/walls/rusty_wall.dmi' //aquila edit
 	hardness = 45
 
 /turf/closed/wall/rust/rust_heretic_act()
@@ -64,7 +64,7 @@
 /turf/closed/wall/r_wall/rust
 	name = "rusted reinforced wall"
 	desc = "A huge chunk of rusted reinforced metal."
-	icon = 'icons/turf/walls/rusty_reinforced_wall.dmi'
+	icon = 'modular_aquila/modules/SCIANY/icons/turf/walls/rusty_reinforced_wall.dmi' //aquila edit
 	hardness = 15
 
 /turf/closed/wall/r_wall/rust/rust_heretic_act()

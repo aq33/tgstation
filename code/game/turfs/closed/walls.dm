@@ -3,7 +3,7 @@
 /turf/closed/wall
 	name = "wall"
 	desc = "A huge chunk of metal used to separate rooms."
-	icon = 'icons/turf/walls/wall.dmi'
+	icon = 'modular_aquila/modules/SCIANY/icons/turf/walls/wall.dmi' //aquila edit
 	icon_state = "wall"
 	explosion_block = 1
 
