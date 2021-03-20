@@ -3225,4 +3225,5 @@
 #include "modular_aquila\modules\POLICE_TAPES\code\mapping.dm"
 #include "modular_aquila\modules\POLICE_TAPES\code\policetape.dm"
 #include "modular_aquila\modules\POLISH_NAMES\code\names.dm"
+#include "modular_aquila\modules\SKINSUITS\code\modules\clothing\spacesuits\miscellaneous.dm"
 // END_INCLUDE
