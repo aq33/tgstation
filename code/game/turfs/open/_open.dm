@@ -37,7 +37,7 @@
 
 /turf/open/indestructible
 	name = "floor"
-	icon = 'icons/turf/floors.dmi'
+	icon = 'modular_aquila/modules/PODLOGI/icons/turf/floors.dmi' //aquila edit
 	icon_state = "floor"
 	footstep = FOOTSTEP_FLOOR
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
