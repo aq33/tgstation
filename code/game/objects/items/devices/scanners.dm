@@ -14,7 +14,7 @@ GENE SCANNER
 	name = "\improper T-ray scanner"
 	desc = "A terahertz-ray emitter and scanner used to detect underfloor objects such as cables and pipes."
 	custom_price = 10
-	icon = 'icons/obj/device.dmi'
+	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/device.dmi' //aquila edit
 	icon_state = "t-ray0"
 	var/on = FALSE
 	slot_flags = ITEM_SLOT_BELT
@@ -434,7 +434,7 @@ GENE SCANNER
 	desc = "A hand-held environmental scanner which reports current gas levels. Alt-Click to use the built in barometer function."
 	name = "analyzer"
 	custom_price = 10
-	icon = 'icons/obj/device.dmi'
+	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/device.dmi' //aquila edit
 	icon_state = "analyzer"
 	item_state = "analyzer"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
@@ -637,8 +637,14 @@ GENE SCANNER
 /obj/item/analyzer/ranged
 	desc = "A hand-held scanner which uses advanced spectroscopy and infrared readings to analyze gases as a distance. Alt-Click to use the built in barometer function."
 	name = "long-range analyzer"
-	icon = 'icons/obj/device.dmi'
+	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/device.dmi' //aquila edit
 	icon_state = "ranged_analyzer"
+//aquila edit
+	item_state = "ranged_analyzer"
+	lefthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/equipment/tools_lefthand.dmi' 
+	righthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/equipment/tools_righthand.dmi'
+//aquila edit
+
 
 /obj/item/analyzer/ranged/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
