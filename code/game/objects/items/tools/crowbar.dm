@@ -1,10 +1,10 @@
 /obj/item/crowbar
 	name = "pocket crowbar"
 	desc = "A small crowbar. This handy tool is useful for lots of things, such as prying floor tiles or opening unpowered doors."
-	icon = 'icons/obj/tools.dmi'
+	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/tools.dmi' //aquila edit
 	icon_state = "crowbar"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/equipment/tools_lefthand.dmi' //aquila edit
+	righthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/equipment/tools_righthand.dmi' //aquila edit
 	usesound = 'sound/items/crowbar.ogg'
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT

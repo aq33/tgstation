@@ -1,11 +1,11 @@
 /obj/item/flamethrower
 	name = "flamethrower"
 	desc = "You are a firestarter!"
-	icon = 'icons/obj/flamethrower.dmi'
+	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/flamethrower.dmi' //aquila edit
 	icon_state = "flamethrowerbase"
 	item_state = "flamethrower_0"
-	lefthand_file = 'icons/mob/inhands/weapons/flamethrower_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/flamethrower_righthand.dmi'
+	lefthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/weapons/flamethrower_lefthand.dmi' //aquila edit
+	righthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/weapons/flamethrower_righthand.dmi' //aquila edit
 	flags_1 = CONDUCT_1
 	force = 3
 	throwforce = 10
