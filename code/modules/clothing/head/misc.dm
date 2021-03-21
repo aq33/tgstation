@@ -448,7 +448,11 @@
 /////////////////
 
 /obj/item/clothing/head/gangsterwig
+<<<<<<< HEAD
 	name = "gangster wig"
+=======
+	name = "gangstar wig"
+>>>>>>> 15cbe5b6b3... Donator items 2 electric boogaloo  (#3923)
 	desc = "Like father like son."
 	icon_state = "gangster_wig"
 	flags_inv = HIDEHAIR

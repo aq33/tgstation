@@ -90,6 +90,22 @@
 	display_name = "mariner hat"
 	path = /obj/item/clothing/head/marine
 
+<<<<<<< HEAD
+=======
+//NECK
+/datum/gear/donator/neck
+	subtype_path = /datum/gear/donator/neck
+	slot = SLOT_NECK
+
+/datum/gear/donator/neck/bizzare
+	display_name = "bizzare scarf"
+	path = /obj/item/clothing/neck/bizzarescarf
+
+/datum/gear/donator/neck/conductive
+	display_name = "conductive scarf"
+	path = /obj/item/clothing/neck/conductivescarf
+
+>>>>>>> 15cbe5b6b3... Donator items 2 electric boogaloo  (#3923)
 //ITEMS
 
 /datum/gear/donator/item
