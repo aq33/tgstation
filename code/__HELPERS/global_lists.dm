@@ -47,10 +47,11 @@
 		GLOB.surgeries_list += new path()
 	sortList(GLOB.surgeries_list)
 
+	init_keybindings()
 	GLOB.emote_list = init_emote_list()
 
 
-
+/*	AQ EDIT - EMOTES
 	// Keybindings
 	for(var/KB in subtypesof(/datum/keybinding))
 		var/datum/keybinding/keybinding = KB
@@ -64,7 +65,7 @@
 	// Sort all the keybindings by their weight
 	for(var/key in GLOB.keybinding_list_by_key)
 		GLOB.keybinding_list_by_key[key] = sortList(GLOB.keybinding_list_by_key[key])
-
+*/
 
 	init_subtypes(/datum/crafting_recipe, GLOB.crafting_recipes)
 
