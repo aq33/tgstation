@@ -1,0 +1,5 @@
+author: Faceslav
+delete-after: true
+changes:
+  - imageadd: Nowe (stare) sprite narzędzi, PDA, supermatter oraz nowy sprite ranged
+      analyzer
