@@ -114,7 +114,7 @@ If you create T5+ please take a pass at gene_modder.dm [L40]. Max_values MUST fi
 /obj/item/stock_parts
 	name = "stock part"
 	desc = "What?"
-	icon = 'icons/obj/stock_parts.dmi'
+	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/stock_parts.dmi' //aquila edit
 	w_class = WEIGHT_CLASS_SMALL
 	var/rating = 1
 
