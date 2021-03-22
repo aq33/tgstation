@@ -77046,14 +77046,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/atmos)
-"cgH" = (
-/obj/machinery/door/airlock/external{
-	name = "Engineering External Airlock";
-	req_access_txt = "0";
-	req_one_access_txt = "10;24"
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
 "cgI" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -92203,10 +92195,6 @@
 /obj/effect/turf_decal/sand/plating,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
-"cDA" = (
-/obj/structure/lattice/catwalk,
-/turf/open/floor/plating/airless,
-/area/space/nearstation)
 "cDB" = (
 /obj/docking_port/stationary{
 	dir = 1;
@@ -100570,6 +100558,15 @@
 /obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/lab)
+"urq" = (
+/obj/machinery/door/airlock/external{
+	name = "Engineering External Airlock";
+	req_access_txt = "0";
+	req_one_access_txt = "10;24"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel/dark,
+/area/engine/engineering)
 "uJN" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -133673,8 +133670,8 @@ azy
 aMw
 aID
 bVm
-cgH
-cDA
+urq
+cko
 aEg
 aDU
 aDZ
