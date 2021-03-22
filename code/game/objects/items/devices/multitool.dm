@@ -13,11 +13,11 @@
 /obj/item/multitool
 	name = "multitool"
 	desc = "Used for pulsing wires to test which to cut. Not recommended by doctors."
-	icon = 'icons/obj/device.dmi'
+	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/device.dmi' //aquila edit
 	icon_state = "multitool"
 	item_state = "multitool"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/equipment/tools_lefthand.dmi' //aquila edit
+	righthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/equipment/tools_righthand.dmi' //aquila edit
 	force = 5
 	w_class = WEIGHT_CLASS_SMALL
 	tool_behaviour = TOOL_MULTITOOL
