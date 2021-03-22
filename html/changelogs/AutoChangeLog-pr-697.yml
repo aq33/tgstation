@@ -1,0 +1,5 @@
+author: Faceslav
+delete-after: true
+changes:
+  - tweak: Zmniejszono głośność chodzenia z 50 na 25 jak i dźwięk chodzenia w pewnych
+      ubraniach z 100 na 30
