@@ -1,0 +1,4 @@
+author: aquila33-bot
+delete-after: true
+changes:
+  - bugfix: Scout guardians can no longer teleport things while scouted.
