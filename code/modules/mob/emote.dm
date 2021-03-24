@@ -1,3 +1,4 @@
+/* AQ EDIT - MOVED TO modular_aquila/modules/EMOTES/code/emote.dm
 //The code execution of the emote datum is located at code/datums/emotes.dm
 /mob/proc/emote(act, m_type = null, message = null, intentional = FALSE)
 	act = lowertext(act)
@@ -20,6 +21,7 @@
 			return
 	if(intentional)
 		to_chat(src, "<span class='notice'>Unusable emote '[act]'. Say *help for a list.</span>")
+*/
 
 /datum/emote/flip
 	key = "flip"
