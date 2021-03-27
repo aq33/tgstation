@@ -1,0 +1,4 @@
+author: aquila33-bot
+delete-after: true
+changes:
+  - rscadd: Standardized space chess, added space chess cargo crates
