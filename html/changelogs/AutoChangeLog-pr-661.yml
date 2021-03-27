@@ -1,5 +1,0 @@
-author: jack-pie
-delete-after: true
-changes:
-  - rscadd: zaaktualizowano game_options.txt
-  - rscadd: tryb gry bierze teraz pod uwagę liczbę graczy, a nie liczbę graczy gotowych
