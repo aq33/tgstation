@@ -1,4 +1,5 @@
 /turf/open/floor/plasteel
+	icon = 'modular_aquila/modules/PODLOGI/icons/turf/floors.dmi' //aquila edit
 	icon_state = "floor"
 	floor_tile = /obj/item/stack/tile/plasteel
 	broken_states = list("damaged1", "damaged2", "damaged3", "damaged4", "damaged5")
@@ -86,14 +87,6 @@
 
 /turf/open/floor/plasteel/freezer/airless
 	initial_gas_mix = AIRLESS_ATMOS
-
-
-/turf/open/floor/plasteel/kitchen_coldroom
-	name = "cold room floor"
-	initial_gas_mix = KITCHEN_COLDROOM_ATMOS
-
-/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor
-	icon_state = "freezerfloor"
 
 
 /turf/open/floor/plasteel/grimy

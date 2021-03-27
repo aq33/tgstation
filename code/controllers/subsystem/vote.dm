@@ -90,6 +90,10 @@ SUBSYSTEM_DEF(vote)
 					else
 						factor = 1.4
 				choices["Initiate Crew Transfer"] += round(non_voters.len * factor)
+				if(choices["Continue Playing"] >= choices["Initiate Crew Transfer"])	// AQ EDIT BEGIN
+					greatest_votes = choices["Continue Playing"]
+				else
+					greatest_votes = choices["Initiate Crew Transfer"]		// AQ EDIT END
 	//get all options with that many votes and return them in a list
 	. = list()
 	if(greatest_votes)
@@ -145,6 +149,7 @@ SUBSYSTEM_DEF(vote)
 			if("transfer")
 				if(. == "Initiate Crew Transfer")
 					SSshuttle.requestEvac(null, "Crew Transfer Requested.")
+					SSshuttle.emergencyNoRecall = TRUE //Prevent Recall.
 					var/obj/machinery/computer/communications/C = locate() in GLOB.machines
 					if(C)
 						C.post_status("shuttle")

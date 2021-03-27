@@ -564,7 +564,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		owner.blockbreak()
 	return TRUE
 
-/obj/item/proc/talk_into(mob/M, input, channel, spans, datum/language/language)
+/obj/item/proc/talk_into(mob/M, input, channel, spans, datum/language/language, list/message_mods)
 	return ITALICS | REDUCE_RANGE
 
 /obj/item/proc/dropped(mob/user)
@@ -746,7 +746,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	return FALSE
 
 /obj/item/proc/get_belt_overlay() //Returns the icon used for overlaying the object on a belt
-	return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', icon_state)
+	return mutable_appearance('modular_aquila/modules/NARZEDZIA/icons/obj/clothing/belt_overlays.dmi', icon_state)  //aquila edit
 
 /obj/item/proc/update_slot_icon()
 	if(!ismob(loc))

@@ -42,7 +42,7 @@
 	if(!istype(H) || H.wear_suit != src)
 		return
 	if(world.time > footstep)
-		playsound(src, pick(move_sound), 100, 1)
+		playsound(src, pick(move_sound), 30, 1) //AQUILA EDIT
 		footstep = world.time + FOOTSTEP_COOLDOWN
 
 /obj/item/clothing/suit/equipped(mob/user, slot)
@@ -54,6 +54,7 @@
 	if(slot != SLOT_WEAR_SUIT)
 		if(listeningTo)
 			UnregisterSignal(listeningTo, COMSIG_MOVABLE_MOVED)
+			listeningTo = null
 		return
 	if(listeningTo == user)
 		return
@@ -69,6 +70,7 @@
 	//Remove our listener
 	if(listeningTo)
 		UnregisterSignal(listeningTo, COMSIG_MOVABLE_MOVED)
+		listeningTo = null
 
 /obj/item/clothing/suit/Destroy()
 	listeningTo = null
