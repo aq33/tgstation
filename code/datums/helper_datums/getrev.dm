@@ -98,7 +98,7 @@
 				var/ctag = initial(M.config_tag)
 				if(!(ctag in probabilities))
 					continue
-				if((min_pop[ctag] && (min_pop[ctag] > SSticker.totalPlayers)) || (max_pop[ctag] && (max_pop[ctag] < SSticker.totalPlayers)) || (initial(M.required_players) > SSticker.totalPlayers))	// AQ EDIT (totalPlayersReady)
+				if((min_pop[ctag] && (min_pop[ctag] > SSticker.totalPlayersReady)) || (max_pop[ctag] && (max_pop[ctag] < SSticker.totalPlayersReady)) || (initial(M.required_players) > SSticker.totalPlayersReady))
 					current_odds_differ = TRUE
 					continue
 				probs[ctag] = 1
