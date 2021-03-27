@@ -1,0 +1,5 @@
+author: aquila33-bot
+delete-after: true
+changes:
+  - admin: Create Antag now allows for a maximum amount of antags to be selected for
+      some options.
