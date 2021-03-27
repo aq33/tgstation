@@ -90,8 +90,6 @@
 	display_name = "mariner hat"
 	path = /obj/item/clothing/head/marine
 
-<<<<<<< HEAD
-=======
 //NECK
 /datum/gear/donator/neck
 	subtype_path = /datum/gear/donator/neck
@@ -105,7 +103,6 @@
 	display_name = "conductive scarf"
 	path = /obj/item/clothing/neck/conductivescarf
 
->>>>>>> 93b06d9b37... master moment (#3955)
 //ITEMS
 
 /datum/gear/donator/item
