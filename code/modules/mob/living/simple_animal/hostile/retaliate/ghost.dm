@@ -50,16 +50,13 @@
 				name = "ghost of [pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
 			if(1)
 				name = "ghost of [pick(GLOB.first_names_female)] [pick(GLOB.last_names)]"
-<<<<<<< HEAD
 			*/
 			if(0)
 				name = "ghost of [pick(GLOB.first_names_male)] [pick(GLOB.last_names_male)]"
 			if(1)
 				name = "ghost of [pick(GLOB.first_names_female)] [pick(GLOB.last_names_female)]"
 			// AQ EDIT - END
-=======
 	AddComponent(/datum/component/tracking_beacon, "ghost", null, null, TRUE, "#9e4d91", TRUE, TRUE)
->>>>>>> a44ed57dda... Replaces the spectre inspector's ability to see all ghosts with a team locator that points to the position of all ghosts. (#3588)
 
 /mob/living/simple_animal/hostile/retaliate/ghost/Destroy()
 	. = ..()
