@@ -1,11 +1,11 @@
 /obj/item/screwdriver
 	name = "screwdriver"
 	desc = "You can be totally screwy with this."
-	icon = 'icons/obj/tools.dmi'
+	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/tools.dmi' //aquila edit
 	icon_state = "screwdriver_map"
 	item_state = "screwdriver"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/equipment/tools_lefthand.dmi' //aquila edit
+	righthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/equipment/tools_righthand.dmi' //aquila edit
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
 	force = 5
@@ -62,13 +62,13 @@
 
 /obj/item/screwdriver/get_belt_overlay()
 	if(random_color)
-		var/mutable_appearance/body = mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "screwdriver")
-		var/mutable_appearance/head = mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "screwdriver_head")
+		var/mutable_appearance/body = mutable_appearance('modular_aquila/modules/NARZEDZIA/icons/obj/clothing/belt_overlays.dmi', "screwdriver") //aquila edit
+		var/mutable_appearance/head = mutable_appearance('modular_aquila/modules/NARZEDZIA/icons/obj/clothing/belt_overlays.dmi', "screwdriver_head") //aquila edit
 		body.color = color
 		head.add_overlay(body)
 		return head
 	else
-		return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', icon_state)
+		return mutable_appearance('modular_aquila/modules/NARZEDZIA/icons/obj/clothing/belt_overlays.dmi', icon_state) //aquila edit
 
 /obj/item/screwdriver/attack(mob/living/carbon/M, mob/living/carbon/user)
 	if(!istype(M))
@@ -102,7 +102,7 @@
 	random_color = FALSE
 
 /obj/item/screwdriver/abductor/get_belt_overlay()
-	return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "screwdriver_nuke")
+	return mutable_appearance('modular_aquila/modules/NARZEDZIA/icons/obj/clothing/belt_overlays.dmi', "screwdriver_nuke") //aquila edit
 
 /obj/item/screwdriver/cyborg
 	name = "automated screwdriver"

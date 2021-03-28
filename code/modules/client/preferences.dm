@@ -1888,7 +1888,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						new_key = "Numpad[new_key]"
 
 					var/full_key = "[AltMod][CtrlMod][ShiftMod][new_key]"
-					if(old_key && (old_key in key_bindings))
+					if(old_key  && (old_key in key_bindings))
 						key_bindings[old_key] -= kb_name
 					key_bindings[full_key] += list(kb_name)
 					key_bindings[full_key] = sortList(key_bindings[full_key])
@@ -2032,16 +2032,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	if(!LAZYLEN(GLOB.patrons) || !CONFIG_GET(flag/donator_items)) // donator items are only accesibile by servers with a patreon
 		return
 	if(IS_PATRON(parent.ckey))
-		for(var/key in DLC.gear)
-			var/datum/gear/donator/AG = GLOB.gear_datums[key]
+		for(var/gear_id in DLC.gear)
+			var/datum/gear/AG = DLC.gear[gear_id]
 			if(AG.id in purchased_gear)
 				continue
 			purchased_gear += AG.id
 			AG.purchase(parent)
 		save_preferences()
 	else if(purchased_gear.len || equipped_gear.len)
-		for(var/key in DLC.gear)
-			var/datum/gear/donator/RG = GLOB.gear_datums[key]
+		for(var/gear_id in DLC.gear)
+			var/datum/gear/RG = DLC.gear[gear_id]
 			equipped_gear -= RG.id
 			purchased_gear -= RG.id
 		save_preferences()
