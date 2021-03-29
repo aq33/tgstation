@@ -1,5 +1,0 @@
-author: aquila33-bot
-delete-after: true
-changes:
-  - bugfix: Golems created by servants of ratvar will automatically get the clockwork
-      cult antag status
