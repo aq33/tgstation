@@ -1,7 +1,0 @@
-author: Faceslav
-delete-after: true
-changes:
-  - rscdel: Skasowano ikonki bee
-  - tweak: Przywrócono ikonki aquila
-  - tweak: Przywrócono normalny rozmiar ekranu
-  - config: Dostosowanie rozmiaru ekranu
