@@ -1,0 +1,10 @@
+author: Faceslav
+delete-after: true
+changes:
+  - rscadd: W szafkach tlenowych nagłego wypadku znajdują się teraz skafandry kosmiczne,
+      te delikatne co są w kapsułach ratunkowych. Żeby nie było aż tak dobrze, mają
+      20 procent szansy na pojawenie się kompletu.
+  - tweak: Skinsuits już nie są hardsuitem
+  - tweak: Skinsuits już nie są z adamantu i mogą zostać przedziurawione
+  - balance: Skinsuits wracają do pudełek przetrwaniowych
+  - imageadd: Przywrócono skasowaną ikone zwiniętego skinsuit
