@@ -633,4 +633,11 @@ DONATOR_ITEMS
 ROUNDSTART_BLUESPACE_MINERS 2
 
 ## Enable the bluespace miner research node?
+<<<<<<< HEAD
 BSMINER_RESEARCHABLE
+=======
+#BSMINER_RESEARCHABLE
+
+## Do we want all the heads to get codes to spare safe, or just one highest in CoC?
+#SPARE_ENFORCE_COC
+>>>>>>> f53db5eb08... Moves spare to safe located in bridge, acting captain gets codes to it (#3838)
