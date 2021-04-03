@@ -20597,6 +20597,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
 "aEy" = (
@@ -31985,6 +31988,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/mixing)
 "aUs" = (
@@ -37167,6 +37173,9 @@
 /area/maintenance/starboard)
 "bbw" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
 /turf/open/floor/engine/vacuum,
 /area/science/mixing/chamber)
 "bbx" = (
@@ -37211,6 +37220,9 @@
 /obj/machinery/light_switch{
 	pixel_x = 24
 	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
 "bbC" = (
@@ -37242,6 +37254,9 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 24
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
@@ -66121,6 +66136,9 @@
 	},
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plasteel,
 /area/maintenance/disposal/incinerator)
 "bPH" = (
@@ -101734,6 +101752,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/checkpoint/engineering)
+"swY" = (
+/obj/machinery/door/poddoor/incinerator_toxmix,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/turf/open/floor/engine/vacuum,
+/area/science/mixing/chamber)
 "sAg" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/landmark/start/brig_phys,
@@ -144083,7 +144108,7 @@ cFW
 aCh
 cGr
 acm
-aXs
+swY
 baq
 bbw
 bbX
