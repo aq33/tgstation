@@ -81371,7 +81371,7 @@
 	name = "Replica CentCom officer's jumpsuit"
 	},
 /obj/item/clothing/head/centhat{
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "stamina" = 0);
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0);
 	desc = "A replica hat of a Central Commander's attire. It has a small tag on it saying, 'It's good to be emperor.'";
 	name = "Replica CentCom hat"
 	},
@@ -81447,7 +81447,7 @@
 /obj/item/folder/red,
 /obj/item/toy/gun,
 /obj/item/clothing/head/beret/sec{
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "stamina" = 0);
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0);
 	desc = "A replica beret resembling that of a special operations officer under Nanotrasen.";
 	name = "replica officer's beret"
 	},
@@ -117635,8 +117635,9 @@
 /turf/open/floor/plasteel/grimy,
 /area/chapel/main)
 "ebi" = (
+/obj/structure/table/wood/fancy,
+/obj/item/storage/book/bible,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/altar_of_gods,
 /turf/open/floor/plasteel/grimy,
 /area/chapel/main)
 "ebj" = (
@@ -121360,11 +121361,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
-"hOt" = (
-/obj/structure/table/wood/fancy,
-/obj/item/storage/book/bible,
-/turf/open/floor/plasteel/grimy,
-/area/chapel/main)
 "hVp" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -126201,6 +126197,20 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/aisat)
+"xTt" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel,
+/area/crew_quarters/bar/atrium)
 "xUp" = (
 /turf/closed/wall,
 /area/maintenance/solars/port/fore)
@@ -161007,7 +161017,7 @@ dYz
 dZk
 dZR
 eaz
-hOt
+ebh
 dVc
 ecA
 dTA
@@ -164490,7 +164500,7 @@ aHE
 aJa
 aKB
 aLM
-aLL
+xTt
 aLL
 aQw
 aLL
