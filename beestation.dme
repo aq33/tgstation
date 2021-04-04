@@ -3218,4 +3218,6 @@
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
 #include "modular_aquila\modules\POLISH_NAMES\code\names.dm"
+#include "modular_aquila\modules\JUKEBOX\code\dance_machine.dm"
+#include "modular_aquila\modules\JUKEBOX\code\jukeboxes.dm"
 // END_INCLUDE
