@@ -1,4 +1,0 @@
-author: aquila33-bot
-delete-after: true
-changes:
-  - bugfix: fixed ex_act being called until the item is destroyed
