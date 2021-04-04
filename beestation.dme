@@ -1830,6 +1830,7 @@
 #include "code\modules\events\anomaly_grav.dm"
 #include "code\modules\events\anomaly_pyro.dm"
 #include "code\modules\events\anomaly_vortex.dm"
+#include "code\modules\events\asteroid_impact.dm"
 #include "code\modules\events\aurora_caelus.dm"
 #include "code\modules\events\blob.dm"
 #include "code\modules\events\brain_trauma.dm"
@@ -2617,6 +2618,7 @@
 #include "code\modules\paperwork\clipboard.dm"
 #include "code\modules\paperwork\contract.dm"
 #include "code\modules\paperwork\filingcabinet.dm"
+#include "code\modules\paperwork\folder_premade.dm"
 #include "code\modules\paperwork\folders.dm"
 #include "code\modules\paperwork\handlabeler.dm"
 #include "code\modules\paperwork\origami.dm"
@@ -3229,4 +3231,5 @@
 #include "modular_aquila\modules\POLICE_TAPES\code\mapping.dm"
 #include "modular_aquila\modules\POLICE_TAPES\code\policetape.dm"
 #include "modular_aquila\modules\POLISH_NAMES\code\names.dm"
+#include "modular_aquila\modules\SKINSUITS\code\modules\clothing\spacesuits\miscellaneous.dm"
 // END_INCLUDE
