@@ -690,7 +690,6 @@
 #include "code\game\machinery\cloning.dm"
 #include "code\game\machinery\constructable_frame.dm"
 #include "code\game\machinery\cryopod.dm"
-#include "code\game\machinery\dance_machine.dm"
 #include "code\game\machinery\defibrillator_mount.dm"
 #include "code\game\machinery\deployable.dm"
 #include "code\game\machinery\dish_drive.dm"
@@ -3232,4 +3231,6 @@
 #include "modular_aquila\modules\POLICE_TAPES\code\policetape.dm"
 #include "modular_aquila\modules\POLISH_NAMES\code\names.dm"
 #include "modular_aquila\modules\SKINSUITS\code\modules\clothing\spacesuits\miscellaneous.dm"
+#include "modular_aquila\modules\JUKEBOX\code\dance_machine.dm"
+#include "modular_aquila\modules\JUKEBOX\code\jukeboxes.dm"
 // END_INCLUDE

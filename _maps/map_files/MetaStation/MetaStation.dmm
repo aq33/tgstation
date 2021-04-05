@@ -85901,6 +85901,17 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
 /area/maintenance/port/aft)
+"tax" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/bar,
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel,
+/area/crew_quarters/bar)
 "tch" = (
 /obj/machinery/atmospherics/pipe/layer_manifold{
 	dir = 1
@@ -120224,7 +120235,7 @@ bAi
 bBT
 bwO
 bFk
-bGZ
+tax
 bIt
 bKe
 bLI
