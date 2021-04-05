@@ -1,0 +1,8 @@
+author: aquila33-bot
+delete-after: true
+changes:
+  - refactor: changes open_speed to be defined as the max animation time taken from
+      all airlock parts
+  - tweak: Changes the animation time of the hatches and the abductor airlock
+  - tweak: animation time now directly influences how long it takes until you can
+      pass trough the airlock
