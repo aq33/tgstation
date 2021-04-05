@@ -1,0 +1,4 @@
+author: aquila33-bot
+delete-after: true
+changes:
+  - bugfix: biometallic replication now allows nanites on inorganics properly
