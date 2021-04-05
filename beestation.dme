@@ -2579,6 +2579,7 @@
 #include "code\modules\paperwork\clipboard.dm"
 #include "code\modules\paperwork\contract.dm"
 #include "code\modules\paperwork\filingcabinet.dm"
+#include "code\modules\paperwork\folder_premade.dm"
 #include "code\modules\paperwork\folders.dm"
 #include "code\modules\paperwork\handlabeler.dm"
 #include "code\modules\paperwork\origami.dm"
@@ -3100,7 +3101,6 @@
 #include "code\modules\tgui\external.dm"
 #include "code\modules\tgui\states.dm"
 #include "code\modules\tgui\tgui.dm"
-#include "code\modules\tgui\tgui_input_list.dm"
 #include "code\modules\tgui\tgui_window.dm"
 #include "code\modules\tgui\states\admin.dm"
 #include "code\modules\tgui\states\always.dm"
@@ -3232,4 +3232,5 @@
 #include "modular_aquila\modules\POLICE_TAPES\code\mapping.dm"
 #include "modular_aquila\modules\POLICE_TAPES\code\policetape.dm"
 #include "modular_aquila\modules\POLISH_NAMES\code\names.dm"
+#include "modular_aquila\modules\SKINSUITS\code\modules\clothing\spacesuits\miscellaneous.dm"
 // END_INCLUDE
