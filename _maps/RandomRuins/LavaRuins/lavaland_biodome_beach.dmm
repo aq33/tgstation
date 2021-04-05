@@ -154,8 +154,8 @@
 /area/ruin/powered/beach)
 "aF" = (
 /obj/machinery/vending/boozeomat{
-	set_obj_flags = "EMAGGED";
-	req_access_txt = "0"
+	req_access_txt = "0";
+	set_obj_flags = "EMAGGED"
 	},
 /turf/open/floor/wood,
 /area/ruin/powered/beach)
@@ -544,7 +544,7 @@
 /turf/open/floor/plasteel,
 /area/ruin/powered/beach)
 "sO" = (
-/obj/machinery/jukebox/disco/indestructible,
+/obj/machinery/jukebox,
 /turf/open/floor/light/colour_cycle,
 /area/ruin/powered/beach)
 "vl" = (
