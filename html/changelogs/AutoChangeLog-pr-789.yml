@@ -1,8 +1,0 @@
-author: Faceslav
-delete-after: true
-changes:
-  - rscadd: przywrócono w pełni nasz jukebox
-  - rscdel: skasowano dance_machine.dm z folderu modularyzacji
-  - tweak: dostosowano lekko głośność title music
-  - bugfix: jukebox teraz powinien działać, chyba
-  - imageadd: dodano nowe sprite jukebox
