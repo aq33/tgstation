@@ -51144,9 +51144,6 @@
 /turf/open/floor/plasteel,
 /area/maintenance/starboard)
 "bJg" = (
-/obj/structure/table/wood,
-/obj/item/clipboard,
-/obj/item/toy/figure/detective,
 /obj/structure/sign/poster/official/report_crimes{
 	pixel_y = 32
 	},
@@ -51160,6 +51157,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/machinery/vending/wardrobe/det_wardrobe,
 /turf/open/floor/plasteel/dark,
 /area/security/detectives_office)
 "bJh" = (
@@ -56463,6 +56461,7 @@
 /obj/item/paper_bin,
 /obj/item/pen,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/item/toy/figure/detective,
 /turf/open/floor/carpet/red,
 /area/security/detectives_office)
 "bRk" = (
@@ -76405,7 +76404,7 @@
 /turf/open/floor/plasteel/dark,
 /area/library)
 "cyc" = (
-/obj/structure/destructible/cult/tome,
+/obj/structure/destructible/cult/tome/library,
 /obj/item/book/codex_gigas,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -121455,6 +121454,20 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
+"iGr" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel,
+/area/crew_quarters/bar/atrium)
 "iHy" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
@@ -164520,7 +164533,7 @@ aHE
 aJa
 aKB
 aLM
-aLL
+iGr
 aLL
 aQw
 aLL
