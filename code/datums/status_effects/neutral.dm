@@ -129,7 +129,9 @@
 	status_type = STATUS_EFFECT_MULTIPLE
 	alert_type = null
 	var/mob/living/listening_in
-
+///////////////
+//AQUILA EDIT//
+///////////////
 /datum/status_effect/bugged/on_apply(mob/living/new_owner, mob/living/tracker)
 	. = ..()
 	if (.)
@@ -141,6 +143,9 @@
 
 /datum/status_effect/bugged/proc/handle_hearing(datum/source, list/hearing_args)
 	listening_in.show_message(hearing_args[HEARING_MESSAGE])
+///////////////////
+//AQUILA EDIT END//
+///////////////////
 
 /datum/status_effect/bugged/on_creation(mob/living/new_owner, mob/living/tracker)
 	. = ..()
