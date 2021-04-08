@@ -626,7 +626,9 @@
 	build_path = /obj/item/circuitboard/machine/stasis
 	category = list("Medical Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
-
+///////////////
+//AQUILA EDIT//
+///////////////
 /datum/design/board/autodoc
 	name = "Machine Design (Autodoc)"
 	desc = "The circuit board for an Autodoc."
@@ -634,6 +636,9 @@
 	build_path = /obj/item/circuitboard/machine/autodoc
 	category = list("Medical Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+///////////////////
+//AQUILA EDIT END//
+///////////////////
 
 /datum/design/board/spaceship_navigation_beacon
 	name = "Machine Design (Bluespace Navigation Gigabeacon)"

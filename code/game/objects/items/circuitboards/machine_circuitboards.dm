@@ -747,7 +747,9 @@
 		/obj/item/stack/cable_coil = 3,
 		/obj/item/stock_parts/manipulator = 1,
 		/obj/item/stock_parts/capacitor = 1)
-
+///////////////
+//AQUILA EDIT//
+///////////////
 /obj/item/circuitboard/machine/autodoc
 	name = "Autodoc (Machine Board)"
 	build_path = /obj/machinery/autodoc
@@ -757,6 +759,9 @@
 		/obj/item/stock_parts/manipulator = 1,
 		/obj/item/stock_parts/micro_laser = 3,
 		/obj/item/stock_parts/matter_bin = 1)
+///////////////////
+//AQUILA EDIT END//
+///////////////////
 
 /obj/item/circuitboard/machine/techfab/department/medical
 	name = "departmental techfab - medical (Machine Board) "
