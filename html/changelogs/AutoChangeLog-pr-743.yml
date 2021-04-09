@@ -1,0 +1,5 @@
+author: Dejaku51
+delete-after: true
+changes:
+  - code_imp: zastępuje OHYDNY proc hear_intercept i on_hear signalami
+  - bugfix: naprawia nanitowy program voice sensor
