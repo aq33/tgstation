@@ -44,7 +44,7 @@
 
 		dosurgery()
 
-obj/machinery/autodoc/proc/dosurgery()
+/obj/machinery/autodoc/proc/dosurgery()
 	if(!storedorgan && !(obj_flags & EMAGGED))
 		to_chat(occupant, "<span class='notice'>[src] currently has no implant stored.</span>")
 		return
