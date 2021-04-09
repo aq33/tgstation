@@ -23,7 +23,7 @@
 
 /datum/brain_trauma/severe/split_personality/proc/get_ghost()
 	set waitfor = FALSE
-	if(owner.stat == DEAD)
+	if(owner.stat == DEAD || !owner.mind)
 		qdel(src)
 		return
 	var/list/mob/dead/observer/candidates = pollCandidatesForMob("Do you want to play as [owner]'s split personality?", ROLE_PAI, null, null, 75, stranger_backseat, POLL_IGNORE_SPLITPERSONALITY)
@@ -193,14 +193,24 @@
 
 /datum/brain_trauma/severe/split_personality/brainwashing/on_life()
 	return //no random switching
-
-/datum/brain_trauma/severe/split_personality/brainwashing/on_hear(message, speaker, message_language, raw_message, radio_freq)
-	if(HAS_TRAIT(owner, TRAIT_DEAF) || owner == speaker)
-		return message
+///////////////
+//AQUILA EDIT//
+///////////////
+///datum/brain_trauma/severe/split_personality/brainwashing/on_hear(message, speaker, message_language, raw_message, radio_freq)
+//	if(HAS_TRAIT(owner, TRAIT_DEAF) || owner == speaker)
+//		return message
+/datum/brain_trauma/severe/split_personality/brainwashing/handle_hearing(datum/source, list/hearing_args)
+	if(HAS_TRAIT(owner, TRAIT_DEAF) || owner == hearing_args[HEARING_SPEAKER])
+		return
+	var/message = hearing_args[HEARING_MESSAGE]
 	if(findtext(message, codeword))
-		message = replacetext(message, codeword, "<span class='warning'>[codeword]</span>")
+		//message = replacetext(message, codeword, "<span class='warning'>[codeword]</span>")
+		hearing_args[HEARING_MESSAGE] = replacetext(message, codeword, "<span class='warning'>[codeword]</span>")
 		addtimer(CALLBACK(src, /datum/brain_trauma/severe/split_personality.proc/switch_personalities), 10)
 	return message
+///////////////////
+//AQUILA EDIT END//
+///////////////////
 
 /datum/brain_trauma/severe/split_personality/brainwashing/handle_speech(datum/source, list/speech_args)
 	if(findtext(speech_args[SPEECH_MESSAGE], codeword))

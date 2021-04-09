@@ -170,24 +170,30 @@
 					to_chat(owner, "<span class='userdanger'>Your heart stops!</span>")
 				stress++
 
-
-
-/datum/brain_trauma/mild/phobia/on_hear(message, speaker, message_language, raw_message, radio_freq)
-
+///////////////
+//AQUILA EDIT//
+///////////////
+///datum/brain_trauma/mild/phobia/on_hear(message, speaker, message_language, raw_message, radio_freq)
+/datum/brain_trauma/mild/phobia/handle_hearing(datum/source, list/hearing_args)
 	if(!owner.can_hear()) //words can't trigger you if you can't hear them *taps head*
-		return message
+		//return message
+		return
 	if(HAS_TRAIT(owner, TRAIT_FEARLESS))
-		return message
+		//return message
+		return
 	for(var/word in trigger_words)
 		var/regex/reg = regex("(\\b|\\A)[REGEX_QUOTE(word)]'?s*(\\b|\\Z)", "i")
-
-		if(findtext(raw_message, reg))
+		//if(findtext(raw_message, reg))
+		if(findtext(hearing_args[HEARING_RAW_MESSAGE], reg))
 			if(fear_state <= (PHOBIA_STATE_CALM)) //words can put you on edge, but won't take you over it, unless you have gotten stressed already. don't call freak_out to avoid gaming the adrenaline rush
 				fearscore ++
-			message = reg.Replace(message, "<span class='phobia'>$1</span>")
+			//message = reg.Replace(message, "<span class='phobia'>$1</span>")
+			hearing_args[HEARING_MESSAGE] = reg.Replace(hearing_args[HEARING_MESSAGE], "<span class='phobia'>$1</span>")
 			break
-	return message
-
+	//return message
+///////////////////
+//AQUILA EDIT END//
+///////////////////
 /datum/brain_trauma/mild/phobia/handle_speech(datum/source, list/speech_args)
 	if(HAS_TRAIT(owner, TRAIT_FEARLESS))
 		return
@@ -333,4 +339,4 @@
 #undef PHOBIA_STATE_UNEASY
 #undef PHOBIA_STATE_FIGHTORFLIGHT
 #undef PHOBIA_STATE_TERROR
-#undef PHOBIA_STATE_FAINT
+#undef PHOBIA_STATE_FAINT //Aquila Edit
