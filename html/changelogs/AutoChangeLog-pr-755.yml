@@ -1,9 +1,0 @@
-author: Dejaku51
-delete-after: true
-changes:
-  - rscadd: Dodano aparat do biura detektywa na Kilo
-  - rscadd: Dodano Dyspenser botaniczny na Kilo
-  - rscadd: Dodano małe podwójne firelocki na Kilo
-  - rscdel: Usunięto duże firelocki z kilo
-  - bugfix: naprawiono okablowanie SMESa w AI chamber
-  - bugfix: naprawiono okablowanie APC w laboratorium toksyn na Kilo
