@@ -224,35 +224,35 @@
 
 
 // - integrated connector - // Can connect and disconnect properly
-/obj/item/integrated_circuit/atmospherics/connector
-	name = "integrated connector"
-	desc = "Creates an airtight seal with standard connectors found on the floor, \
-		 	allowing the assembly to exchange gases with a pipe network."
-	extended_desc = "This circuit will automatically attempt to locate and connect to ports on the floor beneath it when activated. \
-					You <b>must</b> set a target before connecting."
-	spawn_flags = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
-	inputs = list(
-			"target" = IC_PINTYPE_REF
-			)
-	activators = list(
-			"toggle connection" = IC_PINTYPE_PULSE_IN,
-			"on connected" = IC_PINTYPE_PULSE_OUT,
-			"on connection failed" = IC_PINTYPE_PULSE_OUT,
-			"on disconnected" = IC_PINTYPE_PULSE_OUT
-			)
-
-	var/obj/machinery/atmospherics/components/unary/portables_connector/connector
-
-/obj/item/integrated_circuit/atmospherics/connector/Initialize()
-	air_contents = new(volume)
-	START_PROCESSING(SSobj, src)
-	. = ..()
+///obj/item/integrated_circuit/atmospherics/connector
+//	name = "integrated connector"
+//	desc = "Creates an airtight seal with standard connectors found on the floor, \
+//		 	allowing the assembly to exchange gases with a pipe network."
+//	extended_desc = "This circuit will automatically attempt to locate and connect to ports on the floor beneath it when activated. \
+//					You <b>must</b> set a target before connecting."
+//	spawn_flags = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
+//	inputs = list(
+//			"target" = IC_PINTYPE_REF
+//			)
+//	activators = list(
+//			"toggle connection" = IC_PINTYPE_PULSE_IN,
+//			"on connected" = IC_PINTYPE_PULSE_OUT,
+//			"on connection failed" = IC_PINTYPE_PULSE_OUT,
+//			"on disconnected" = IC_PINTYPE_PULSE_OUT
+//			)
+//
+//	var/obj/machinery/atmospherics/components/unary/portables_connector/connector
+//
+///obj/item/integrated_circuit/atmospherics/connector/Initialize()
+//	air_contents = new(volume)
+//	START_PROCESSING(SSobj, src)
+//	. = ..()
 
 //Sucks up the gas from the connector
-/obj/item/integrated_circuit/atmospherics/connector/process()
-	set_pin_data(IC_OUTPUT, 2, air_contents.return_pressure())
-
-/obj/item/integrated_circuit/atmospherics/connector/check_gassource(atom/gasholder)
+///obj/item/integrated_circuit/atmospherics/connector/process()
+//	set_pin_data(IC_OUTPUT, 2, air_contents.return_pressure())
+//
+///obj/item/integrated_circuit/atmospherics/connector/check_gassource(atom/gasholder)
 	if(!gasholder)
 		return FALSE
 	if(!istype(gasholder,/obj/machinery/atmospherics/components/unary/portables_connector))
@@ -260,34 +260,34 @@
 	return TRUE
 
 //If the assembly containing this is moved from the tile the connector pipe is in, the connection breaks
-/obj/item/integrated_circuit/atmospherics/connector/ext_moved()
-	if(connector)
-		if(get_dist(get_object(), connector) > 0)
+///obj/item/integrated_circuit/atmospherics/connector/ext_moved()
+//	if(connector)
+//		if(get_dist(get_object(), connector) > 0)
 			// The assembly is set as connected device and the connector handles the rest
-			connector.connected_device = null
-			connector = null
-			activate_pin(4)
+//			connector.connected_device = null
+//			connector = null
+//			activate_pin(4)
 
-/obj/item/integrated_circuit/atmospherics/connector/do_work()
+///obj/item/integrated_circuit/atmospherics/connector/do_work()
 	// If there is a connection, disconnect
-	if(connector)
-		connector.connected_device = null
-		connector = null
-		activate_pin(4)
-		return
-
-	var/obj/machinery/atmospherics/components/unary/portables_connector/PC = locate() in get_turf(src)
+//	if(connector)
+//		connector.connected_device = null
+//		connector = null
+//		activate_pin(4)
+//		return
+//
+//	var/obj/machinery/atmospherics/components/unary/portables_connector/PC = locate() in get_turf(src)
 	// If no connector can't connect
-	if(!PC)
-		activate_pin(3)
-		return
-	connector = PC
-	connector.connected_device = src
-	activate_pin(2)
+//	if(!PC)
+//		activate_pin(3)
+//		return
+//	connector = PC
+//	connector.connected_device = src
+//	activate_pin(2)
 
 // Required for making the connector port script work
-obj/item/integrated_circuit/atmospherics/connector/portableConnectorReturnAir()
-	return air_contents
+//obj/item/integrated_circuit/atmospherics/connector/portableConnectorReturnAir()
+//	return air_contents
 
 
 // - gas filter - // **works**
