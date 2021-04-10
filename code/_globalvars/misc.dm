@@ -23,7 +23,6 @@ GLOBAL_VAR_INIT(remote_control, TRUE) //! AQUILA!!!!!
 GLOBAL_LIST_EMPTY(polls)
 GLOBAL_PROTECT(polls)
 
-GLOBAL_VAR_INIT(remote_control, TRUE) //! AQUILA!!!
 ///All poll option datums of running polls
 GLOBAL_LIST_EMPTY(poll_options)
 GLOBAL_PROTECT(poll_options)
