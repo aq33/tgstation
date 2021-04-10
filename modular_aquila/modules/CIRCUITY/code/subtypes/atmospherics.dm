@@ -253,11 +253,11 @@
 //	set_pin_data(IC_OUTPUT, 2, air_contents.return_pressure())
 //
 ///obj/item/integrated_circuit/atmospherics/connector/check_gassource(atom/gasholder)
-	if(!gasholder)
-		return FALSE
-	if(!istype(gasholder,/obj/machinery/atmospherics/components/unary/portables_connector))
-		return FALSE
-	return TRUE
+//	if(!gasholder)
+//		return FALSE
+//	if(!istype(gasholder,/obj/machinery/atmospherics/components/unary/portables_connector))
+//		return FALSE
+//	return TRUE
 
 //If the assembly containing this is moved from the tile the connector pipe is in, the connection breaks
 ///obj/item/integrated_circuit/atmospherics/connector/ext_moved()
