@@ -13,6 +13,7 @@ ID: CIRCUITY
 ### Zmiany w plikach poza folderem "aquila":
 
 - code/globalvars/lists/objects.dm
+- code/globalvars/misc.dm
 
 - Usuniecie całego integrated_electronics z code/modules
 
