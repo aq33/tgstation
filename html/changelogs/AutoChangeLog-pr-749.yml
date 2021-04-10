@@ -1,0 +1,8 @@
+author: Dev235PL
+delete-after: true
+changes:
+  - rscadd: Przywrocono całą usuniętą wczesniej przez Bee kategorie modułów i parę
+      innych
+  - tweak: Circuity nie są juz nerfione
+  - code_imp: Usunięto całość kodu circuitów i dodano ich kod z naszego starego kodu,
+      teraz tez kod znajduje się w modular Aquila
