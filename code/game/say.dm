@@ -29,7 +29,8 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	send_speech(message, 7, src, , spans, message_language=language)
 
 /atom/movable/proc/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods = list())
-	SEND_SIGNAL(src, COMSIG_MOVABLE_HEAR, message, speaker, message_language, raw_message, radio_freq, spans, message_mods)
+	//SEND_SIGNAL(src, COMSIG_MOVABLE_HEAR, message, speaker, message_language, raw_message, radio_freq, spans, message_mods) //Aquila Edit
+	SEND_SIGNAL(src, COMSIG_MOVABLE_HEAR, args) //Aquila Edit
 
 /atom/movable/proc/can_speak()
 	return 1

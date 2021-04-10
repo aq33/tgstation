@@ -50,7 +50,8 @@
 				to_chat(owner, "<i>...[lowertext(hypnotic_phrase)]...</i>")
 			if(2)
 				new /datum/hallucination/chat(owner, TRUE, FALSE, "<span class='hypnophrase'>[hypnotic_phrase]</span>")
-
-/datum/brain_trauma/hypnosis/on_hear(message, speaker, message_language, raw_message, radio_freq)
-	message = target_phrase.Replace(message, "<span class='hypnophrase'>$1</span>")
-	return message
+///datum/brain_trauma/hypnosis/on_hear(message, speaker, message_language, raw_message, radio_freq) //Aquila Edit
+//	message = target_phrase.Replace(message, "<span class='hypnophrase'>$1</span>") //Aquila Edit
+//	return message //Aquila Edit
+/datum/brain_trauma/hypnosis/handle_hearing(datum/source, list/hearing_args) //Aquila Edit
+	hearing_args[HEARING_MESSAGE] = target_phrase.Replace(hearing_args[HEARING_MESSAGE], "<span class='hypnophrase'>$1</span>") //Aquila Edit

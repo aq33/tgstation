@@ -53620,7 +53620,7 @@
 /turf/open/floor/plasteel/dark,
 /area/library)
 "cAT" = (
-/obj/structure/destructible/cult/tome,
+/obj/structure/destructible/cult/tome/library,
 /turf/open/floor/plasteel/dark,
 /area/library)
 "cAU" = (
@@ -65835,6 +65835,20 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/plasteel/freezer,
 /area/storage/emergency/port)
+"xQy" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/bar)
 "xSX" = (
 /obj/machinery/airalarm/unlocked{
 	pixel_y = 23
@@ -97238,7 +97252,7 @@ bag
 cpo
 cpt
 cpv
-bag
+xQy
 aPE
 bgr
 aJI

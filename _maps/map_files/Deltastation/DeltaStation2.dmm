@@ -76404,7 +76404,7 @@
 /turf/open/floor/plasteel/dark,
 /area/library)
 "cyc" = (
-/obj/structure/destructible/cult/tome,
+/obj/structure/destructible/cult/tome/library,
 /obj/item/book/codex_gigas,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -121454,6 +121454,20 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
+"iGr" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel,
+/area/crew_quarters/bar/atrium)
 "iHy" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
@@ -164519,7 +164533,7 @@ aHE
 aJa
 aKB
 aLM
-aLL
+iGr
 aLL
 aQw
 aLL
