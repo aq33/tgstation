@@ -387,7 +387,7 @@ Contains:
 
 /obj/item/clothing/head/helmet/space/hardsuit/carp/equipped(mob/living/carbon/human/user, slot)
 	..()
-	if (slot == SLOT_HEAD)
+	if (slot == ITEM_SLOT_HEAD)
 		user.faction |= "carp"
 
 /obj/item/clothing/head/helmet/space/hardsuit/carp/dropped(mob/living/carbon/human/user)
@@ -505,6 +505,7 @@ Contains:
 	strip_delay = 130
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
+/* AQUILA EDIT
 /obj/item/clothing/head/helmet/space/hardsuit/skinsuit
 	name = "skinsuit helmet"
 	icon = 'icons/obj/clothing/hats.dmi'
@@ -552,3 +553,5 @@ Contains:
 
 /obj/item/clothing/suit/space/hardsuit/skinsuit/attackby(obj/item/I, mob/user, params)
 	return
+*/
+//AQUILA EDIT END
