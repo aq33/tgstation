@@ -56,7 +56,13 @@
 			if(1)
 				name = "ghost of [pick(GLOB.first_names_female)] [pick(GLOB.last_names_female)]"
 			// AQ EDIT - END
+	AddComponent(/datum/component/tracking_beacon, "ghost", null, null, TRUE, "#9e4d91", TRUE, TRUE)
 
+/mob/living/simple_animal/hostile/retaliate/ghost/Destroy()
+	. = ..()
+	var/datum/component/tracking_beacon/beacon = GetComponent(/datum/component/tracking_beacon)
+	if(beacon)
+		qdel(beacon)
 
 /mob/living/simple_animal/hostile/retaliate/ghost/proc/give_hair()
 	if(ghost_hair_style != null)
