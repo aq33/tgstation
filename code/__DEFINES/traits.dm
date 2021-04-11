@@ -170,6 +170,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_APPRAISAL			"appraisal"
 #define TRAIT_NOBLOCK			"noblock"
 #define TRAIT_NANITECOMPATIBLE	"nanitecompatible"
+#define TRAIT_NANOSEND			"nanosend" //aquila edit
+#define TRAIT_NANORECEIVE		"nanoreceive" //aquila edit
 #define TRAIT_WARDED       		"curse_immune"
 
 //non-mob traits
