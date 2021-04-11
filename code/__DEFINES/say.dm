@@ -44,6 +44,7 @@
 #define MODE_KEY_VOCALCORDS "x"
 
 #define MODE_MONKEY "monkeyhive"
+#define MODE_NANO "nanolink" // Aquila Edit
 
 #define MODE_SING "%"
 
