@@ -38,5 +38,7 @@ GLOBAL_LIST_EMPTY(ai_status_displays)
 
 GLOBAL_LIST_EMPTY(mob_spawners) 		    // All mob_spawn objects
 GLOBAL_LIST_EMPTY(alert_consoles)			// Station alert consoles, /obj/machinery/computer/station_alert
-
+// AQUILA START
 GLOBAL_LIST_EMPTY(ic_speakers) // circuit stuff
+GLOBAL_LIST_EMPTY(ic_jammers) // circuit stuff
+// AQUILA STOP
