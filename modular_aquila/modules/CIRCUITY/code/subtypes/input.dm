@@ -571,8 +571,9 @@
 		return
 	var/desired_type = A.type
 
+	var/list/nearby_things = range(1, get_turf(src))
 	var/list/valid_things = list()
-	for(var/atom/thing as() in range(1, get_turf(src)))
+	for(var/atom/thing in nearby_things)
 		if(thing.type != desired_type)
 			continue
 		valid_things.Add(thing)
@@ -619,7 +620,8 @@
 		for(var/item in input_list)
 			if(!isnull(item) && !isnum_safe(item))
 				if(istext(item))
-					for(var/atom/thing as() in nearby_things)
+					for(var/i in nearby_things)
+						var/atom/thing = i
 						if(ismob(thing) && !isliving(thing))
 							continue
 						if(findtext(addtext(thing.name," ",thing.desc), item, 1, 0) )
@@ -627,7 +629,8 @@
 				else
 					var/atom/A = item
 					var/desired_type = A.type
-					for(var/atom/thing as() in nearby_things)
+					for(var/i in nearby_things)
+						var/atom/thing = i
 						if(thing.type != desired_type)
 							continue
 						if(ismob(thing) && !isliving(thing))
@@ -776,7 +779,10 @@
 
 	activate_pin(3)
 	audible_message("[icon2html(src, hearers(src))] *beep* *beep* *beep*", null, hearing_range)
-	playsound(get_turf(src), 'sound/machines/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME, TRUE)
+	for(var/CHM in get_hearers_in_view(hearing_range, src))
+		if(ismob(CHM))
+			var/mob/LM = CHM
+			LM.playsound_local(get_turf(src), 'sound/machines/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME, TRUE)
 
 /obj/item/integrated_circuit/input/ntnet_packet
 	name = "NTNet networking circuit"
@@ -928,7 +934,7 @@
 	spawn_flags = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 	power_draw_per_use = 5
 
-/obj/item/integrated_circuit/input/microphone/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, spans, list/message_mods = list())
+/obj/item/integrated_circuit/input/microphone/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, spans, message_mode)
 	. = ..()
 	var/translated = FALSE
 	if(speaker && message)
@@ -1324,7 +1330,8 @@
 	cooldown_per_use = 0.1
 	w_class = WEIGHT_CLASS_SMALL
 	inputs = list(
-		"intercept" = IC_PINTYPE_BOOLEAN
+		"intercept" = IC_PINTYPE_BOOLEAN,
+		"no pass" = IC_PINTYPE_BOOLEAN
 		)
 	outputs = list(
 		"source" = IC_PINTYPE_STRING,
@@ -1339,8 +1346,7 @@
 	power_draw_idle = 0
 	spawn_flags = IC_SPAWN_RESEARCH
 	var/obj/machinery/telecomms/receiver/circuit/receiver
-	var/list/whitelisted_freqs = list(FREQ_COMMON)
-	var/list/encryption_keys = list()
+	var/list/freq_blacklist = list(FREQ_CENTCOM,FREQ_SYNDICATE,FREQ_CTF_RED,FREQ_CTF_BLUE)
 
 /obj/item/integrated_circuit/input/tcomm_interceptor/Initialize()
 	. = ..()
@@ -1348,12 +1354,13 @@
 	receiver.holder = src
 
 /obj/item/integrated_circuit/input/tcomm_interceptor/Destroy()
-	QDEL_NULL(receiver)
+	qdel(receiver)
+	GLOB.ic_jammers -= src
 	..()
 
 /obj/item/integrated_circuit/input/tcomm_interceptor/receive_signal(datum/signal/signal)
 	if((signal.transmission_method == TRANSMISSION_SUBSPACE) && get_pin_data(IC_INPUT, 1))
-		if(!(signal.frequency in whitelisted_freqs))
+		if(signal.frequency in freq_blacklist)
 			return
 		set_pin_data(IC_OUTPUT, 1, signal.data["name"])
 		set_pin_data(IC_OUTPUT, 2, signal.data["job"])
@@ -1364,43 +1371,28 @@
 		activate_pin(1)
 
 /obj/item/integrated_circuit/input/tcomm_interceptor/on_data_written()
-	if(get_pin_data(IC_INPUT, 1))
-		power_draw_idle = 100
+	if(get_pin_data(IC_INPUT, 2))
+		GLOB.ic_jammers |= src
+		if(get_pin_data(IC_INPUT, 1))
+			power_draw_idle = 200
+		else
+			power_draw_idle = 100
 	else
-		power_draw_idle = 0
+		GLOB.ic_jammers -= src
+		if(get_pin_data(IC_INPUT, 1))
+			power_draw_idle = 100
+		else
+			power_draw_idle = 0
 
 /obj/item/integrated_circuit/input/tcomm_interceptor/power_fail()
 	set_pin_data(IC_INPUT, 1, 0)
+	set_pin_data(IC_INPUT, 2, 0)
 
 /obj/item/integrated_circuit/input/tcomm_interceptor/disconnect_all()
 	set_pin_data(IC_INPUT, 1, 0)
+	set_pin_data(IC_INPUT, 2, 0)
 	..()
 
-/obj/item/integrated_circuit/input/tcomm_interceptor/attackby(obj/O, mob/user)
-	if(istype(O, /obj/item/encryptionkey))
-		user.transferItemToLoc(O,src)
-		encryption_keys += O
-		recalculate_channels()
-		to_chat(user, "<span class='notice'>You slide \the [O] inside the circuit.</span>")
-	else
-		..()
-
-/obj/item/integrated_circuit/input/tcomm_interceptor/attack_self(mob/user)
-	if(encryption_keys.len)
-		for(var/obj/item/encryptionkey/O as() in encryption_keys)
-			O.forceMove(drop_location())
-		encryption_keys.Cut()
-		to_chat(user, "<span class='notice'>You slide the encryption keys out of the circuit.</span>")
-		recalculate_channels()
-	else
-		to_chat(user, "<span class='notice'>There are no encryption keys to remove from the mechanism.</span>")
-
-/obj/item/integrated_circuit/input/tcomm_interceptor/proc/recalculate_channels()
-	whitelisted_freqs.Cut()
-	whitelisted_freqs.Add(FREQ_COMMON)
-	for(var/obj/item/encryptionkey/K as() in encryption_keys)
-		for(var/i in K.channels)
-			whitelisted_freqs |= GLOB.radiochannels[i]
 
 // -Inputlist- //
 /obj/item/integrated_circuit/input/selection
