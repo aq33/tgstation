@@ -1,0 +1,7 @@
+author: Dejaku51
+delete-after: true
+changes:
+  - rscadd: Wiele nowych programów! Wszystkie spisane są na githubie Aquila Station
+  - balance: Rebalans wielu programów! Wszystkie spisane są na githubie Aquila Station
+  - bugfix: Naprawiono potencjalne błędy związane z programami zarażającymi innych
+      nanitami
