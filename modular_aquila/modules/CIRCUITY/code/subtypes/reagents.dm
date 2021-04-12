@@ -881,14 +881,12 @@
 	push_data()
 
 /obj/item/integrated_circuit/reagent/storage/synthesizer/do_work(ord)
-	var/cont[0]
-	for(var/datum/reagent/S in reagents.reagent_list)
-		(cont += S)
-
 	switch(ord)
-		if(reagents.total_volume >= 0)
-			if(1)
+		if(1)
+			var/cont[0]
+		for(var/datum/reagent/S in reagents.reagent_list)
+			if(cont += S)
 				reagents.add_reagent(S, 1)
-			if(2)
-				set_pin_data(IC_OUTPUT, 2, WEAKREF(src))
-				push_data()
+		if(2)
+			set_pin_data(IC_OUTPUT, 2, WEAKREF(src))
+			push_data()
