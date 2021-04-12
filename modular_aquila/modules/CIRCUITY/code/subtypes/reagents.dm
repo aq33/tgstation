@@ -865,7 +865,7 @@
 	complexity = 10
 	cooldown_per_use = 5 SECONDS
 	volume = 30
-	power_draw_per_use = 50
+	power_draw_per_use = 300
 	outputs = list(
 		"volume used" = IC_PINTYPE_NUMBER,
 		"self reference" = IC_PINTYPE_SELFREF,
@@ -881,10 +881,11 @@
 	push_data()
 
 /obj/item/integrated_circuit/reagent/storage/synthesizer/do_work(ord)
-	if(reagents.total_volume)
-		for(var/datum/reagent/S in reagents.reagent_list)
-			if(1)
-				reagents.add_reagent(S, 1)
-			if(2)
-				set_pin_data(IC_OUTPUT, 2, WEAKREF(src))
-				push_data()
+	switch(ord)
+		if(reagents.total_volume)
+			for(var/datum/reagent/S in reagents.reagent_list)
+				if(1)
+					reagents.add_reagent(S, 1)
+				if(2)
+					set_pin_data(IC_OUTPUT, 2, WEAKREF(src))
+					push_data()
