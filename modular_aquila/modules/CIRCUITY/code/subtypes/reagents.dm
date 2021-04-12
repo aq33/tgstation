@@ -884,7 +884,7 @@
 	if(reagents.total_volume)
 		for(var/datum/reagent/S in reagents.reagent_list)
 			if(1)
-				R.add_reagent(S, 1)
+				reagents.add_reagent(S, 1)
 			if(2)
 				set_pin_data(IC_OUTPUT, 2, WEAKREF(src))
 				push_data()
