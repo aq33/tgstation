@@ -883,11 +883,11 @@
 /obj/item/integrated_circuit/reagent/storage/synthesizer/do_work(ord)
 	switch(ord)
 		if(1)
-			synthesiz()
+			synth()
 		if(2)
 			set_pin_data(IC_OUTPUT, 2, WEAKREF(src))
 			push_data()
 
-/obj/item/integrated_circuit/reagent/storage/synthesizer/proc/synthesiz
+/obj/item/integrated_circuit/reagent/storage/synthesizer/proc/synth()
 	for(var/datum/reagent/REG in reagents.reagent_list)
 		reagents.add_reagent_list(REG, 1)
