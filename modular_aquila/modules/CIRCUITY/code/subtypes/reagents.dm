@@ -883,8 +883,10 @@
 /obj/item/integrated_circuit/reagent/storage/synthesizer/do_work(ord)
 	switch(ord)
 		if(1)
-			for(var/datum/reagent/S in reagents.reagent_list)
-				reagents.add_reagent_list(S, 1)
+			synthesiz()
 		if(2)
 			set_pin_data(IC_OUTPUT, 2, WEAKREF(src))
 			push_data()
+/obj/item/integrated_circuit/reagent/storage/synthesizer/proc/synthesiz
+	for(var/datum/reagent/S in reagents.reagent_list)
+		reagents.add_reagent_list(S, 1)
