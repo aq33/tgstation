@@ -854,3 +854,36 @@
 	if(istype(loc,/obj/item/integrated_circuit/input/beaker_connector))
 		var/obj/item/integrated_circuit/input/beaker_connector/current_circuit = loc
 		current_circuit.push_vol()
+
+
+// - Miniaturized Synthesizer - //
+/obj/item/integrated_circuit/reagent/storage/synthesizer
+	name = "Miniaturized Synthesizer"
+	desc = "A miniaturized chemical synthesizer."
+	icon_state = "reagent_scan"
+	extended_desc = "It allows the synthesis of basic reagents in small amounts"
+	complexity = 10
+	cooldown_per_use = 5 SECONDS
+	volume = 30
+	power_draw_per_use = 50
+	outputs = list(
+		"volume used" = IC_PINTYPE_NUMBER,
+		"self reference" = IC_PINTYPE_SELFREF,
+		)
+	activators = list(
+		"Synthesize" = IC_PINTYPE_PULSE_IN,
+		"push ref" = IC_PINTYPE_PULSE_IN
+		)
+	spawn_flags = IC_SPAWN_RESEARCH
+
+/obj/item/integrated_circuit/reagent/storage/synthesizer/on_reagent_change(changetype)
+	set_pin_data(IC_OUTPUT, 1, reagents.total_volume)
+	push_data()
+
+/obj/item/integrated_circuit/reagent/storage/synthesizer/do_work(ord)
+	for(var/datum/reagent/S in reagents.reagent_list)
+		if(1)
+			(reagents.add_reagent(S, 1))
+		if(2)
+			set_pin_data(IC_OUTPUT, 2, WEAKREF(src))
+			push_data()
