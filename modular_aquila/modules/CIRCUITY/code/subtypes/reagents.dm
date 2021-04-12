@@ -884,7 +884,7 @@
 	switch(ord)
 		if(1)
 			for(var/datum/reagent/S in reagents.reagent_list)
-				reagents.add_reagent(S, 1)
+				reagents.add_reagent_list(S, 1)
 		if(2)
 			set_pin_data(IC_OUTPUT, 2, WEAKREF(src))
 			push_data()
