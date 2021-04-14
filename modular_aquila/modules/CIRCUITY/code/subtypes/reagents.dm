@@ -878,7 +878,7 @@
 		)
 	spawn_flags = IC_SPAWN_RESEARCH
 	var/list/reagents = list(
-		"fuel"			= '/datum/reagent/fuel'
+		"fuel"			= '/datum/reagent/fuel',
 		"aluminium"		= '/datum/reagent/aluminium')
 
 /obj/item/integrated_circuit/reagent/storage/synthesizer/on_reagent_change(changetype)
