@@ -865,7 +865,7 @@
 	complexity = 10
 	cooldown_per_use = 5 SECONDS
 	volume = 30
-	power_draw_per_use = 300
+	power_draw_per_use = 500
 	outputs = list(
 		"volume used" = IC_PINTYPE_NUMBER,
 		"self reference" = IC_PINTYPE_SELFREF,
@@ -889,5 +889,7 @@
 			push_data()
 
 /obj/item/integrated_circuit/reagent/storage/synthesizer/proc/synth()
-	var/datum/reagents/REG = new (1)
-	REG.add_reagent(pick(reagents.reagent_list), 1)
+	var/cont[0]
+	for(var/datum/reagent/REG in reagents.reagent_list)
+		if(cont += REG)
+			reagents.add_reagent_list(REG, 1)
