@@ -861,11 +861,12 @@
 	name = "Miniaturized Synthesizer"
 	desc = "A miniaturized chemical synthesizer."
 	icon_state = "reagent_scan"
-	extended_desc = "It allows the synthesis of basic reagents in small amounts"
 	complexity = 10
 	cooldown_per_use = 5 SECONDS
 	volume = 30
 	power_draw_per_use = 500
+	inputs = list(
+		"reagent ID" = IC_PINTYPE_STRING)
 	outputs = list(
 		"volume used" = IC_PINTYPE_NUMBER,
 		"self reference" = IC_PINTYPE_SELFREF,
@@ -876,18 +877,29 @@
 		"push ref" = IC_PINTYPE_PULSE_IN
 		)
 	spawn_flags = IC_SPAWN_RESEARCH
-
+	var/list/reagents = list(
+		"fuel"			= '/datum/reagent/fuel'
+		"aluminium"		= '/datum/reagent/aluminium'
+		)
 /obj/item/integrated_circuit/reagent/storage/synthesizer/on_reagent_change(changetype)
 	set_pin_data(IC_OUTPUT, 1, reagents.total_volume)
 	push_data()
 
+/obj/item/integrated_circuit/reagent/storage/synthesizer/Initialize()
+	.= ..()
+	extended_desc = list()
+	extended_desc += "The input pin determines which reagent is used. The choices are; "
+	extended_desc += jointext(reagents, ", ")
 /obj/item/integrated_circuit/reagent/storage/synthesizer/do_work(ord)
 	switch(ord)
 		if(1)
+			var/ID = get_pin_data(IC_INPUT, 1)
 			var/cont[0]
-			for(var/datum/reagent/REG in reagents.reagent_list)
-				if(cont += REG)
-					reagents.add_reagent(/datum/reagent/fuel, 1)
+			if(!isnull(ID))
+				var/selected_reagent = reagents[ID]
+				if(!selected_reagent)
+					return
+			reagents.add_reagent(selected_reagent, 1)
 
 			set_pin_data(IC_OUTPUT, 3, cont)
 			push_data()
