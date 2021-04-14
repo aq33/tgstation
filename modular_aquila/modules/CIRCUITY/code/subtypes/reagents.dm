@@ -861,10 +861,11 @@
 	name = "Miniaturized Synthesizer"
 	desc = "A miniaturized chemical synthesizer."
 	icon_state = "reagent_scan"
-	complexity = 10
-	cooldown_per_use = 5 SECONDS
+	complexity = 20
+	cooldown_per_use = 10 SECONDS
+	ext_cooldown = 5 SECONDS
 	volume = 30
-	power_draw_per_use = 500
+	power_draw_per_use = 1000
 	inputs = list(
 		"reagent ID" = IC_PINTYPE_STRING)
 	outputs = list(
@@ -878,8 +879,32 @@
 		)
 	spawn_flags = IC_SPAWN_RESEARCH
 	var/list/reagent = list(
-		"fuel"			= /datum/reagent/fuel,
-		"aluminium"		= /datum/reagent/aluminium)
+		"aluminium"		= /datum/reagent/aluminium,
+		"bromine"		= /datum/reagent/bromine,
+		"carbon"		= /datum/reagent/carbon,
+		"chlorine"		= /datum/reagent/chlorine,
+		"copper"		= /datum/reagent/copper,
+		"ethanol"		= /datum/reagent/consumable/ethanol,
+		"fluorine"		= /datum/reagent/fluorine,
+		"hydrogen"		= /datum/reagent/hydrogen,
+		"iodine"		= /datum/reagent/iodine,
+		"iron"			= /datum/reagent/iron,
+		"lithium"		= /datum/reagent/lithium,
+		"mercury"		= /datum/reagent/mercury,
+		"nitrogen"		= /datum/reagent/nitrogen,
+		"oxygen"		= /datum/reagent/oxygen,
+		"phosphorus"	= /datum/reagent/phosphorus,
+		"potassium"		= /datum/reagent/potassium,
+		"radium"		= /datum/reagent/uranium/radium,
+		"silicon"		= /datum/reagent/silicon,
+		"silver"		= /datum/reagent/silver,
+		"sodium"		= /datum/reagent/sodium,
+		"stable_plasma"	= /datum/reagent/stable_plasma,
+		"sugar"			= /datum/reagent/consumable/sugar,
+		"sulfur"		= /datum/reagent/sulfur,
+		"acid"			= /datum/reagent/toxin/acid,
+		"water"			= /datum/reagent/water,
+		"fuel"			= /datum/reagent/fuel)
 
 /obj/item/integrated_circuit/reagent/storage/synthesizer/on_reagent_change(changetype)
 	set_pin_data(IC_OUTPUT, 1, reagents.total_volume)
