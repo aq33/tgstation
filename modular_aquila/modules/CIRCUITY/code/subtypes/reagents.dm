@@ -914,7 +914,6 @@
 	switch(ord)
 		if(1)
 			var/ID = get_pin_data(IC_INPUT, 1)
-			var/cont[0]
 			if(!isnull(ID))
 				var/selected_reagent = reagent[ID]
 				if(!selected_reagent)
