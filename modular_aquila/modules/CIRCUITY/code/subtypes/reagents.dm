@@ -896,7 +896,7 @@
 			var/ID = get_pin_data(IC_INPUT, 1)
 			var/cont[0]
 			if(!isnull(ID))
-				var/selected_reagent = reagents[ID]
+				var/selected_reagent = reagent[ID]
 				if(!selected_reagent)
 					return
 				reagents.add_reagent(selected_reagent, 1)
