@@ -862,7 +862,7 @@
 	desc = "A miniaturized chemical synthesizer."
 	extended_desc = "You need to type the reagent ID, e.g. aluminium, water, stable_plasma etc."
 	icon_state = "reagent_scan"
-	complexity = 20
+	complexity = 15
 	cooldown_per_use = 10 SECONDS
 	ext_cooldown = 5 SECONDS
 	volume = 30
