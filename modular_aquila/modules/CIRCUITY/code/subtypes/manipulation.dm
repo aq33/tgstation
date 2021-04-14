@@ -425,79 +425,6 @@
 	update_outputs()
 	push_data()
 
-/obj/item/integrated_circuit/manipulation/thrower
-	name = "thrower"
-	desc = "A compact launcher to throw things from inside or nearby tiles."
-	extended_desc = "The first and second inputs need to be numbers which correspond to the coordinates to throw objects at relative to the machine itself. \
-	The 'fire' activator will cause the mechanism to attempt to throw objects at the coordinates, if possible. Note that the \
-	projectile needs to be inside the machine, or on an adjacent tile, and must be medium sized or smaller. The assembly \
-	must also be a gun if you wish to throw something while the assembly is in hand."
-	complexity = 25
-	w_class = ITEM_SIZE_SMALL
-	size = 2
-	cooldown_per_use = 10
-	ext_cooldown = 1
-	inputs = list(
-		"target X rel" = IC_PINTYPE_NUMBER,
-		"target Y rel" = IC_PINTYPE_NUMBER,
-		"projectile" = IC_PINTYPE_REF
-		)
-	outputs = list()
-	activators = list(
-		"fire" = IC_PINTYPE_PULSE_IN
-	)
-	spawn_flags = IC_SPAWN_RESEARCH
-	action_flags = IC_ACTION_COMBAT
-	power_draw_per_use = 50
-
-/obj/item/integrated_circuit/manipulation/thrower/do_work()
-	var/target_x_rel = round(get_pin_data(IC_INPUT, 1))
-	var/target_y_rel = round(get_pin_data(IC_INPUT, 2))
-	var/obj/item/A = get_pin_data_as_type(IC_INPUT, 3, /obj/item)
-
-	if(!A || A.anchored || A.throwing || A == assembly || istype(A, /obj/item/material/twohanded) || istype(A, /obj/item/device/transfer_valve))
-		return
-
-	if (istype(assembly.loc, /obj/item/implant/compressed)) //Prevents the more abusive form of chestgun.
-		return
-
-	if(A.w_class > assembly.w_class)
-		return
-
-	if(!(IC_FLAG_CAN_FIRE & assembly.circuit_flags) && ishuman(assembly.loc))
-		return
-
-	// Is the target inside the assembly or close to it?
-	if(!check_target(A, exclude_components = TRUE))
-		return
-
-	var/turf/T = get_turf(get_object())
-	if(!T)
-		return
-
-	// If the item is in mob's inventory, try to remove it from there.
-	if(ismob(A.loc))
-		var/mob/living/M = A.loc
-		if(!M.unEquip(A))
-			return
-
-	// If the item is in a grabber circuit we'll update the grabber's outputs after we've thrown it.
-	var/obj/item/integrated_circuit/manipulation/grabber/G = A.loc
-
-	var/x_abs = Clamp(T.x + target_x_rel, 0, world.maxx)
-	var/y_abs = Clamp(T.y + target_y_rel, 0, world.maxy)
-	var/range = round(Clamp(sqrt(target_x_rel*target_x_rel+target_y_rel*target_y_rel),0,8),1)
-
-	assembly.visible_message("<span class='danger'>[assembly] has thrown [A]!</span>")
-	log_attack("[assembly] \ref[assembly] has thrown [A].")
-	A.dropInto(loc)
-	A.throw_at(locate(x_abs, y_abs, T.z), range, 3)
-
-	// If the item came from a grabber now we can update the outputs since we've thrown it.
-	if(istype(G))
-		G.update_outputs()
-
-
 /obj/item/integrated_circuit/manipulation/claw
 	name = "pulling claw"
 	desc = "Circuit which can pull things.."
@@ -811,3 +738,45 @@
 			push_data()
 
 	activate_pin(3)
+
+
+/obj/item/integrated_circuit/manipulation/anchoring
+	name = "anchoring bolts"
+	desc = "Pop-out anchoring bolts which can secure an assembly to the floor."
+
+	outputs = list(
+		"enabled" = IC_PINTYPE_BOOLEAN
+	)
+	activators = list(
+		"toggle" = IC_PINTYPE_PULSE_IN,
+		"on toggle" = IC_PINTYPE_PULSE_OUT
+	)
+
+	complexity = 8
+	cooldown_per_use = 2 SECOND
+	power_draw_per_use = 50
+	spawn_flags = IC_SPAWN_DEFAULT
+	origin_tech = list(TECH_ENGINEERING = 2)
+
+/obj/item/integrated_circuit/manipulation/anchoring/do_work(ord)
+	if(!isturf(assembly.loc))
+		return
+
+	// Doesn't work with anchorable assemblies
+	if(assembly.circuit_flags & IC_FLAG_ANCHORABLE)
+		visible_message("<span class='warning'>\The [get_object()]'s anchoring bolt circuitry blinks red. The preinstalled assembly anchoring bolts are in the way of the pop-out bolts!</span>")
+		return
+
+	if(ord == 1)
+		assembly.anchored = !assembly.anchored
+
+		visible_message(
+			assembly.anchored ? \
+			"<span class='notice'>\The [get_object()] deploys a set of anchoring bolts!</span>" \
+			: \
+			"<span class='notice'>\The [get_object()] retracts its anchoring bolts</span>"
+		)
+
+		set_pin_data(IC_OUTPUT, 1, assembly.anchored)
+		push_data()
+		activate_pin(2)
