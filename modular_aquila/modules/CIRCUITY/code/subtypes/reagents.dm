@@ -884,7 +884,6 @@
 /obj/item/integrated_circuit/reagent/storage/synthesizer/do_work(ord)
 	switch(ord)
 		if(1)
-			var/datum/reagent/REG = GLOB.chemical_reagents_list[reagent]
 			var/cont[0]
 			for(var/datum/reagent/REG in reagents.reagent_list)
 				cont += REG
