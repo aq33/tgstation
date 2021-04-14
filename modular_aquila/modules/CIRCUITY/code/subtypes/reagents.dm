@@ -899,7 +899,7 @@
 				var/selected_reagent = reagents[ID]
 				if(!selected_reagent)
 					return
-			reagents.add_reagent(selected_reagent, 1)
+				reagents.add_reagent(selected_reagent, 1)
 
 			set_pin_data(IC_OUTPUT, 3, cont)
 			push_data()
