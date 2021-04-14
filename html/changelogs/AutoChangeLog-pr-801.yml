@@ -1,0 +1,4 @@
+author: aquila33-bot
+delete-after: true
+changes:
+  - code_imp: prevent explosions flag is actually used now
