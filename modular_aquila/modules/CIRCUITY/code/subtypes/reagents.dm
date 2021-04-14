@@ -877,7 +877,7 @@
 		"push ref" = IC_PINTYPE_PULSE_IN
 		)
 	spawn_flags = IC_SPAWN_RESEARCH
-	var/list/reagents = list(
+	var/list/reagent = list(
 		"fuel"			= '/datum/reagent/fuel',
 		"aluminium"		= '/datum/reagent/aluminium')
 
@@ -889,7 +889,7 @@
 	.= ..()
 	extended_desc = list()
 	extended_desc += "The input pin determines which reagent is used. The choices are; "
-	extended_desc += jointext(reagents, ", ")
+	extended_desc += jointext(reagent, ", ")
 /obj/item/integrated_circuit/reagent/storage/synthesizer/do_work(ord)
 	switch(ord)
 		if(1)
