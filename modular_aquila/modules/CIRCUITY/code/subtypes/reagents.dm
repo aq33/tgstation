@@ -878,8 +878,8 @@
 		)
 	spawn_flags = IC_SPAWN_RESEARCH
 	var/list/reagent = list(
-		"fuel"			= '/datum/reagent/fuel',
-		"aluminium"		= '/datum/reagent/aluminium')
+		"fuel"			= /datum/reagent/fuel,
+		"aluminium"		= /datum/reagent/aluminium)
 
 /obj/item/integrated_circuit/reagent/storage/synthesizer/on_reagent_change(changetype)
 	set_pin_data(IC_OUTPUT, 1, reagents.total_volume)
