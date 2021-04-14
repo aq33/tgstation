@@ -1,0 +1,4 @@
+author: aquila33-bot
+delete-after: true
+changes:
+  - bugfix: Fixes a bug that caused megafauna and silicon to be unable to hear.
