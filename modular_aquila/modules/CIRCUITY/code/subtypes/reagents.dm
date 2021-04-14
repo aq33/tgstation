@@ -889,5 +889,5 @@
 			push_data()
 
 /obj/item/integrated_circuit/reagent/storage/synthesizer/proc/synth()
-	for(var/datum/reagent/REG in reagents.reagent_list)
-		reagents.add_reagent_list(REG, 1)
+	var/datum/reagents/REG = new (1)
+	REG.add_reagent(pick(reagents.reagent_list), 1)
