@@ -888,7 +888,7 @@
 			for(var/datum/reagent/REG in reagents.reagent_list)
 				cont += REG
 
-			reagents.add_reagent(pick(REG), 1)
+			reagents.add_reagent(REG, 1)
 			set_pin_data(IC_OUTPUT, 3, cont)
 			push_data()
 		if(2)
