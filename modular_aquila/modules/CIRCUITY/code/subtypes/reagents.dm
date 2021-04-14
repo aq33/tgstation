@@ -887,7 +887,7 @@
 			var/cont[0]
 			for(var/datum/reagent/REG in reagents.reagent_list)
 				if(cont += REG)
-					reagents.add_reagent(cont, 1)
+					reagents.add_reagent(/datum/reagent/fuel, 1)
 
 			set_pin_data(IC_OUTPUT, 3, cont)
 			push_data()
