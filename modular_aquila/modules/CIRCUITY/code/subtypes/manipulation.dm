@@ -753,7 +753,7 @@
 	)
 
 	complexity = 8
-	cooldown_per_use = 2 SECOND
+	cooldown_per_use = 2 SECONDS
 	power_draw_per_use = 50
 	spawn_flags = IC_SPAWN_DEFAULT
 	origin_tech = list(TECH_ENGINEERING = 2)
