@@ -860,6 +860,7 @@
 /obj/item/integrated_circuit/reagent/storage/synthesizer
 	name = "Miniaturized Synthesizer"
 	desc = "A miniaturized chemical synthesizer."
+	extended_desc = "You need to type the reagent ID, e.g. aluminium, water, stable_plasma etc."
 	icon_state = "reagent_scan"
 	complexity = 20
 	cooldown_per_use = 10 SECONDS
@@ -871,7 +872,6 @@
 	outputs = list(
 		"volume used" = IC_PINTYPE_NUMBER,
 		"self reference" = IC_PINTYPE_SELFREF,
-		"list of reagents" = IC_PINTYPE_LIST
 		)
 	activators = list(
 		"Synthesize" = IC_PINTYPE_PULSE_IN,
@@ -910,11 +910,6 @@
 	set_pin_data(IC_OUTPUT, 1, reagents.total_volume)
 	push_data()
 
-/obj/item/integrated_circuit/reagent/storage/synthesizer/Initialize()
-	.= ..()
-	extended_desc = list()
-	extended_desc += "The input pin determines which reagent is used. The choices are; "
-	extended_desc += jointext(reagent, ", ")
 /obj/item/integrated_circuit/reagent/storage/synthesizer/do_work(ord)
 	switch(ord)
 		if(1)
@@ -926,7 +921,6 @@
 					return
 				reagents.add_reagent(selected_reagent, 1)
 
-			set_pin_data(IC_OUTPUT, 3, cont)
 			push_data()
 		if(2)
 			set_pin_data(IC_OUTPUT, 2, WEAKREF(src))
