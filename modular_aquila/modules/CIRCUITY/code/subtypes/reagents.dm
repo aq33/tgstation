@@ -918,7 +918,7 @@
 				var/selected_reagent = reagent[ID]
 				if(!selected_reagent)
 					return
-				reagents.add_reagent(selected_reagent, 1)
+				reagents.add_reagent(selected_reagent, 5)
 
 			push_data()
 		if(2)
