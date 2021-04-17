@@ -84822,6 +84822,11 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall,
 /area/maintenance/port/aft)
+"oRw" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/droneDispenser/preloaded,
+/turf/open/floor/plasteel,
+/area/science/robotics/lab)
 "oRL" = (
 /obj/docking_port/stationary{
 	dir = 2;
@@ -116167,7 +116172,7 @@ cEm
 cFf
 cFg
 cFh
-cHR
+oRw
 cIL
 cJK
 cCq
