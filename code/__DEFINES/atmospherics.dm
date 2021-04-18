@@ -137,7 +137,7 @@
 #define QUATERNARY	4
 
 //TANKS
-#define TANK_MELT_TEMPERATURE				1000000000000	//! temperature in kelvins at which a tank will start to melt      //AQUILA EDIT
+#define TANK_MELT_TEMPERATURE				1000000	//! temperature in kelvins at which a tank will start to melt
 #define TANK_LEAK_PRESSURE					(30.*ONE_ATMOSPHERE)	//! temperature in kelvins at which a tank starts leaking
 #define TANK_RUPTURE_PRESSURE				(35.*ONE_ATMOSPHERE)	//! temperature in kelvins at which a tank spills all contents into atmosphere
 #define TANK_FRAGMENT_PRESSURE				(40.*ONE_ATMOSPHERE)	//! temperature in kelvins at which a tank creates a boom 3x3 base explosion
