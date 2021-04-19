@@ -1,0 +1,5 @@
+author: Dejaku51
+delete-after: true
+changes:
+  - rscadd: Dodano bronie mechów do exosuit fabricatora
+  - rscdel: Usunięto bronie mechów z protolathe sec
