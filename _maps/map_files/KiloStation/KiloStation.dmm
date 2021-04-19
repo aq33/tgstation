@@ -18129,7 +18129,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "aAC" = (
-/obj/machinery/droneDispenser/preloaded,
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/robotics/lab)
 "aAD" = (
