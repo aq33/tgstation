@@ -55,6 +55,18 @@
 	//Rules that automatically manage if the program's active without requiring separate sensor programs
 	var/list/datum/nanite_rule/rules = list()
 
+<<<<<<< HEAD
+=======
+	//Logic
+	//a list of logic types a nanite program's rules follow
+	var/static/list/logic = list(
+    	"AND" = NL_AND,
+    	"OR" = NL_OR,
+		"NOR" = NL_NOR,
+		"NAND" = NL_NAND,
+	)
+
+>>>>>>> fa9fc0bcbc... fixes nanites (#4114)
 /datum/nanite_program/New()
 	. = ..()
 	register_extra_settings()
