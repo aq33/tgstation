@@ -24868,6 +24868,7 @@
 /obj/machinery/camera/autoname{
 	dir = 1
 	},
+/obj/machinery/droneDispenser/preloaded,
 /turf/open/floor/plasteel/white,
 /area/science/robotics/lab)
 "bsT" = (
