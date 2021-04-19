@@ -233,7 +233,7 @@
 	materials = list(/datum/material/iron=20000,/datum/material/gold=10000,/datum/material/uranium=10000)
 	construction_time = 100
 	category = list("Exosuit Equipment") // Aquila Edit
-departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/mech_wormhole_gen
 	name = "Exosuit Module (Localized Wormhole Generator)"
