@@ -1,5 +1,5 @@
 /obj/structure/closet/bluespace
-	name = "Bluespace Locker"
+	name = "bluespace locker"
 
 /obj/structure/closet/bluespace/proc/get_other_locker()
 	return SSbluespace_locker.internal_locker
@@ -12,14 +12,15 @@
 		. = ..()
 		other.close()
 		dump_contents()
+
 /obj/structure/closet/bluespace/close()
 	var/obj/structure/closet/other = get_other_locker()
 	if(!other)
 		return ..()
-	if(!opened)
+	if(opened)
 		. = ..()
+		other.contents += contents
 		other.open()
-		dump_contents()
 
 /obj/structure/closet/bluespace/internal
 	name = "bluespace locker portal"
@@ -47,7 +48,6 @@
 	if(!other.opened)
 		return TRUE
 	return other.can_close(user)
-
 /obj/structure/closet/bluespace/internal/can_close(user)
 	var/obj/structure/closet/other = get_other_locker()
 	if(!other || other.opened)
@@ -68,6 +68,8 @@
 			var/atom/movable/AM = other.loc
 			AM.relay_container_resist(user, other)
 			return
+
+		//okay, so the closet is either welded or locked... resist!!!
 		user.changeNext_move(CLICK_CD_BREAKOUT)
 		user.last_special = world.time + CLICK_CD_BREAKOUT
 		other.visible_message("<span class='warning'>[other] begins to shake violently!</span>")
@@ -95,7 +97,7 @@
 	var/mutable_appearance/masking_icon = mutable_appearance(other.icon, other.icon_state)
 	masking_icon.blend_mode = BLEND_MULTIPLY
 	masked_icon.add_overlay(masking_icon)
-	//add_overlay(image('yogstation/icons/obj/closet.dmi', "bluespace_locker_frame"))
+	//add_overlay(image('modular_aquila/modules/BLUESPACE_LOCKER/icons/locker.dmi', "bluespace_locker_frame"))
 	add_overlay(masked_icon)
 	if(!opened)
 		layer = OBJ_LAYER
