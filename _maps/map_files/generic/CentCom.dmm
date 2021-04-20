@@ -17127,7 +17127,8 @@
 /area/centcom/supplypod/loading/two)
 "Ou" = (
 /obj/structure/closet/bluespace/internal,
-/turf/closed/indestructible/abductor{
+/turf/open/indestructible{
+	icon = 'icons/turf/walls.dmi';
 	icon_state = "alien22"
 	},
 /area/bluespace_locker)
