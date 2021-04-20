@@ -3250,4 +3250,6 @@
 #include "modular_aquila\modules\POLICE_TAPES\code\policetape.dm"
 #include "modular_aquila\modules\POLISH_NAMES\code\names.dm"
 #include "modular_aquila\modules\SKINSUITS\code\modules\clothing\spacesuits\miscellaneous.dm"
+#include "modular_aquila\modules\BLUESPACE_LOCKER\objects\bluespace_locker.dm"
+#include "modular_aquila\modules\BLUESPACE_LOCKER\subsystem\bluespace_locker.dm"
 // END_INCLUDE
