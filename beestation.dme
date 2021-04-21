@@ -3186,6 +3186,8 @@
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
 #include "modular_aquila\modules\AUTODOC\code\autodoc.dm"
+#include "modular_aquila\modules\BLUESPACE_LOCKER\objects\bluespace_locker.dm"
+#include "modular_aquila\modules\BLUESPACE_LOCKER\subsystem\bluespace_locker.dm"
 #include "modular_aquila\modules\CIRCUITY\code\core\analyzer.dm"
 #include "modular_aquila\modules\CIRCUITY\code\core\assemblies.dm"
 #include "modular_aquila\modules\CIRCUITY\code\core\debugger.dm"
