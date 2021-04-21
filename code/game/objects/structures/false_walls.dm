@@ -6,7 +6,7 @@
 	desc = "A huge chunk of metal used to separate rooms."
 	anchored = TRUE
 //	icon = 'icons/turf/walls/wall.dmi'
-	icon = 'modular_aquila/modules/SCIANY/icons/turf/walls/wall.dmi'
+	icon = 'modular_aquila/modules/SCIANY/icons/turf/walls/wall.dmi' // Aquila Edit
 	icon_state = "wall"
 	layer = LOW_OBJ_LAYER
 	density = TRUE
