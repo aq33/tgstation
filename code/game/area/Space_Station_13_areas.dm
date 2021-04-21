@@ -1161,4 +1161,5 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
   icon_state = "away"
   requires_power = FALSE
   has_gravity = STANDARD_GRAVITY
+  dynamic_lighting = DYNAMIC_LIGHTING_FORCED
   // AQUILA EDIT END
