@@ -5,7 +5,7 @@
 	name = "wall"
 	desc = "A huge chunk of metal used to separate rooms."
 	anchored = TRUE
-	icon = 'icons/turf/walls/wall.dmi'
+//	icon = 'icons/turf/walls/wall.dmi'
 	icon = 'modular_aquila/modules/SCIANY/icons/turf/walls/wall.dmi'
 	icon_state = "wall"
 	layer = LOW_OBJ_LAYER
