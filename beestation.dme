@@ -3252,4 +3252,7 @@
 #include "modular_aquila\modules\POLICE_TAPES\code\policetape.dm"
 #include "modular_aquila\modules\POLISH_NAMES\code\names.dm"
 #include "modular_aquila\modules\SKINSUITS\code\modules\clothing\spacesuits\miscellaneous.dm"
+#include "modular_aquila\modules\BLUESPACE_PIPE\code\construction.dm"
+#include "modular_aquila\modules\BLUESPACE_PIPE\code\bluespace_pipe.dm"
+#include "modular_aquila\modules\BLUESPACE_PIPE\code\design.dm"
 // END_INCLUDE
