@@ -14,5 +14,6 @@ https://github.com/aq33/tgstation/pull/479/
 - code\game\machinery\pipe\construction.dm
 - code\game\machinery\pipe\pipe_dispenser.dm
 - code\game\objects\items\RPD.dm
+- code\modules\research\techweb\all_nodes.dm
 ### Autorzy:
 Dejaku51
