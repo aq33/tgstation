@@ -2268,6 +2268,11 @@
 "gl" = (
 /turf/closed/indestructible/fakeglass,
 /area/space)
+"gn" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien3"
+	},
+/area/bluespace_locker)
 "gp" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -2379,6 +2384,11 @@
 /obj/effect/turf_decal/tile/blue,
 /turf/open/floor/plasteel/dark,
 /area/ctf)
+"gX" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien13"
+	},
+/area/bluespace_locker)
 "hc" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/stripes/line,
@@ -2400,6 +2410,11 @@
 "hl" = (
 /turf/open/floor/plating/asteroid/snow/airless,
 /area/syndicate_mothership)
+"hq" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien21"
+	},
+/area/bluespace_locker)
 "ht" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -2496,6 +2511,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ctf)
+"id" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien5"
+	},
+/area/bluespace_locker)
 "ie" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -4058,6 +4078,11 @@
 	},
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
+"lG" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien9"
+	},
+/area/bluespace_locker)
 "lH" = (
 /turf/closed/indestructible/abductor{
 	icon_state = "alien13"
@@ -9850,6 +9875,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/syndicate_mothership/control)
+"xa" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien10"
+	},
+/area/bluespace_locker)
 "xb" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -10496,6 +10526,11 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/grass,
 /area/wizard_station)
+"yL" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien16"
+	},
+/area/bluespace_locker)
 "yM" = (
 /obj/structure/table/wood/bar,
 /obj/structure/safe/floor,
@@ -13646,6 +13681,11 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/tdome/tdomeobserve)
+"FC" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien23"
+	},
+/area/bluespace_locker)
 "FD" = (
 /obj/machinery/shower{
 	dir = 4
@@ -16678,6 +16718,11 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+"Mt" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien20"
+	},
+/area/bluespace_locker)
 "Mu" = (
 /obj/machinery/light{
 	dir = 1
@@ -16896,6 +16941,11 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/centcom/holding)
+"Nr" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien6"
+	},
+/area/bluespace_locker)
 "Nt" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -17075,6 +17125,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/two)
+"Ou" = (
+/obj/structure/closet/bluespace/internal,
+/turf/open/indestructible{
+	icon = 'icons/turf/walls.dmi';
+	icon_state = "alien22"
+	},
+/area/bluespace_locker)
 "Oz" = (
 /obj/item/cardboard_cutout/adaptive/chess/black/pawn,
 /turf/open/floor/holofloor{
@@ -17162,6 +17219,11 @@
 	},
 /turf/open/floor/carpet/black,
 /area/centcom/holding)
+"Pq" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien7"
+	},
+/area/bluespace_locker)
 "Pr" = (
 /obj/structure/table,
 /obj/item/book/manual/chef_recipes,
@@ -17177,6 +17239,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ctf)
+"Pu" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien17"
+	},
+/area/bluespace_locker)
 "Pv" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
@@ -17459,6 +17526,11 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/centcom/holding)
+"QX" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien8"
+	},
+/area/bluespace_locker)
 "QY" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -17624,6 +17696,11 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+"Sb" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien4"
+	},
+/area/bluespace_locker)
 "Sd" = (
 /turf/open/floor/carpet/black,
 /area/centcom/holding)
@@ -17727,6 +17804,11 @@
 /obj/structure/closet/secure_closet/personal,
 /turf/open/floor/plasteel/dark,
 /area/centcom/supplypod)
+"SL" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien18"
+	},
+/area/bluespace_locker)
 "SN" = (
 /obj/structure/mopbucket,
 /obj/item/mop,
@@ -17981,6 +18063,11 @@
 /obj/item/storage/fancy/donut_box,
 /turf/open/floor/plasteel,
 /area/centcom/supplypod)
+"TV" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien11"
+	},
+/area/bluespace_locker)
 "Ub" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -18114,6 +18201,9 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+"UU" = (
+/turf/open/floor/plating/abductor,
+/area/bluespace_locker)
 "UV" = (
 /obj/machinery/computer/arcade,
 /turf/open/floor/wood,
@@ -18155,6 +18245,11 @@
 /obj/effect/turf_decal/tile/red,
 /turf/open/floor/plasteel/dark,
 /area/ctf)
+"Vt" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien19"
+	},
+/area/bluespace_locker)
 "Vu" = (
 /obj/structure/flora/ausbushes/fernybush,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -18239,6 +18334,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/four)
+"VU" = (
+/obj/effect/landmark/bluespace_locker_origin,
+/turf/open/floor/plating/abductor,
+/area/bluespace_locker)
 "VW" = (
 /turf/open/floor/plasteel/stairs/left{
 	dir = 4
@@ -18248,6 +18347,11 @@
 /obj/effect/landmark/shuttle_import,
 /turf/open/space/basic,
 /area/space)
+"VZ" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien14"
+	},
+/area/bluespace_locker)
 "Wc" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
@@ -18274,6 +18378,11 @@
 	dir = 2
 	},
 /area/syndicate_mothership/control)
+"Wk" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien2"
+	},
+/area/bluespace_locker)
 "Wl" = (
 /obj/structure/barricade/security/ctf,
 /obj/effect/turf_decal/tile/red{
@@ -18310,6 +18419,14 @@
 /obj/machinery/recharger,
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
+"WC" = (
+/turf/open/space/bluespace_locker_mirage,
+/area/bluespace_locker)
+"WG" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien12"
+	},
+/area/bluespace_locker)
 "WJ" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Thunderdome Administration";
@@ -18344,6 +18461,9 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/ferry)
+"WW" = (
+/turf/closed/indestructible/abductor,
+/area/bluespace_locker)
 "WY" = (
 /obj/structure/mineral_door/paperframe{
 	name = "Arcade"
@@ -18512,6 +18632,11 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+"Yj" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien15"
+	},
+/area/bluespace_locker)
 "Ym" = (
 /obj/machinery/computer/arcade/orion_trail,
 /turf/open/floor/wood,
@@ -18525,6 +18650,11 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+"Yp" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien24"
+	},
+/area/bluespace_locker)
 "Yq" = (
 /obj/structure/chair/wood/wings{
 	dir = 8
@@ -24934,29 +25064,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
 aa
 aa
 aa
@@ -25191,29 +25321,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -25448,29 +25578,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -25705,29 +25835,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -25962,29 +26092,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -26219,29 +26349,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -26476,29 +26606,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -26733,29 +26863,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -26990,29 +27120,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+yL
+VZ
+WG
+xa
+Nr
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -27247,29 +27377,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+Mt
+Pu
+UU
+UU
+UU
+Pq
+WW
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -27504,29 +27634,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+hq
+UU
+UU
+UU
+UU
+UU
+Wk
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -27761,29 +27891,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+Ou
+UU
+UU
+VU
+UU
+UU
+gn
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -28018,29 +28148,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+FC
+UU
+UU
+UU
+UU
+UU
+Sb
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -28275,29 +28405,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+Yp
+SL
+UU
+UU
+UU
+QX
+id
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -28532,29 +28662,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+Vt
+Yj
+gX
+TV
+lG
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -28789,29 +28919,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -29046,29 +29176,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -29303,29 +29433,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -29560,29 +29690,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -29817,29 +29947,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -30074,29 +30204,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -30331,29 +30461,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+lI
 aa
 aa
 aa
@@ -30588,29 +30718,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+lI
 aa
 aa
 aa
