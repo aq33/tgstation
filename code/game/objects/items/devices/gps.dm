@@ -54,7 +54,7 @@
 	START_PROCESSING(SSfastprocess, src)
 
 /obj/item/gps/visible_debug/process()
-	var/turf/T = get_turf(src)
+	var/turf/T = get_turf_global(src) // Aquila Edit
 	if(T)
 		// I assume it's faster to color,tag and OR the turf in, rather
 		// then checking if its there
