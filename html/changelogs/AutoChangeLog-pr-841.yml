@@ -1,0 +1,5 @@
+author: Dejaku51
+delete-after: true
+changes:
+  - rscadd: dodano tinyfan do airlocka pomiędzy engi a atmos
+  - rscdel: usunięto catwalk przez airlockiem
