@@ -3249,5 +3249,8 @@
 #include "modular_aquila\modules\POLICE_TAPES\code\mapping.dm"
 #include "modular_aquila\modules\POLICE_TAPES\code\policetape.dm"
 #include "modular_aquila\modules\POLISH_NAMES\code\names.dm"
+#include "modular_aquila\modules\SEKS_NA_GUZIK\code\godhand.dm"
+#include "modular_aquila\modules\SEKS_NA_GUZIK\code\granters.dm"
+#include "modular_aquila\modules\SEKS_NA_GUZIK\code\touch_attacks.dm"
 #include "modular_aquila\modules\SKINSUITS\code\modules\clothing\spacesuits\miscellaneous.dm"
 // END_INCLUDE
