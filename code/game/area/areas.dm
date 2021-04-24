@@ -80,6 +80,7 @@
 	var/lighting_brightness_bulb = 6
 	var/lighting_brightness_night = 6
 
+	var/atom/global_turf_object = null // for bluespace lockers // Aquila Edit
 /**
   * A list of teleport locations
   *

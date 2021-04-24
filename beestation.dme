@@ -3186,6 +3186,8 @@
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
 #include "modular_aquila\modules\AUTODOC\code\autodoc.dm"
+#include "modular_aquila\modules\BLUESPACE_LOCKER\objects\bluespace_locker.dm"
+#include "modular_aquila\modules\BLUESPACE_LOCKER\subsystem\bluespace_locker.dm"
 #include "modular_aquila\modules\CIRCUITY\code\core\analyzer.dm"
 #include "modular_aquila\modules\CIRCUITY\code\core\assemblies.dm"
 #include "modular_aquila\modules\CIRCUITY\code\core\debugger.dm"
@@ -3250,4 +3252,7 @@
 #include "modular_aquila\modules\POLICE_TAPES\code\policetape.dm"
 #include "modular_aquila\modules\POLISH_NAMES\code\names.dm"
 #include "modular_aquila\modules\SKINSUITS\code\modules\clothing\spacesuits\miscellaneous.dm"
+#include "modular_aquila\modules\BLUESPACE_PIPE\code\construction.dm"
+#include "modular_aquila\modules\BLUESPACE_PIPE\code\bluespace_pipe.dm"
+#include "modular_aquila\modules\BLUESPACE_PIPE\code\design.dm"
 // END_INCLUDE
