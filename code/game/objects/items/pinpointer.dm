@@ -65,8 +65,8 @@
 	if(!target)
 		add_overlay("pinon[alert ? "alert" : ""]null[icon_suffix]")
 		return
-	var/turf/here = get_turf(src)
-	var/turf/there = get_turf(target)
+	var/turf/here = get_turf_global(src) // Aquila Edit
+	var/turf/there = get_turf_global(target) // Aquila Edit
 
 	if(here.z != there.z)
 		if(here.z > there.z)
