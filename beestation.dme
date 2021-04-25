@@ -3258,5 +3258,7 @@
 #include "modular_aquila\modules\BLUESPACE_PIPE\code\construction.dm"
 #include "modular_aquila\modules\BLUESPACE_PIPE\code\bluespace_pipe.dm"
 #include "modular_aquila\modules\BLUESPACE_PIPE\code\design.dm"
+#include "modular_aquila\modules\NULLCRATE\code\packs.dm"
+#include "modular_aquila\modules\NULLCRATE\code\uplink_items.dm"
 #include "modular_aquila\modules\SURGERY\code\gender_reasigment\gender_reasigment.dm"
 // END_INCLUDE
