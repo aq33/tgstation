@@ -1,6 +1,6 @@
 ### Link do PRa:
 
-https://github.com/aq33/tgstation/pull/
+https://github.com/aq33/tgstation/pull/844
 
 ### ID:
 
