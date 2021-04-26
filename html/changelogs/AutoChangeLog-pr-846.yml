@@ -1,0 +1,4 @@
+author: aquila33-bot
+delete-after: true
+changes:
+  - bugfix: fixed alt-click rotation on TEG circulators and drink/booze dispensers
