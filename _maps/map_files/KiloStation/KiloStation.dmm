@@ -77970,6 +77970,7 @@
 	req_access_txt = "0";
 	req_one_access_txt = "10;24"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "cgI" = (
@@ -93238,10 +93239,6 @@
 	start_active = 1
 	},
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating/airless,
-/area/space/nearstation)
-"cDA" = (
-/obj/structure/lattice/catwalk,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "cDB" = (
@@ -134930,7 +134927,7 @@ aMw
 aID
 bVm
 cgH
-cDA
+cko
 aEg
 aDU
 aDZ
