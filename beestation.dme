@@ -2108,6 +2108,7 @@
 #include "code\modules\library\lib_machines.dm"
 #include "code\modules\library\random_books.dm"
 #include "code\modules\library\soapstone.dm"
+#include "code\modules\lighting\emissive_blocker.dm"
 #include "code\modules\lighting\lighting_area.dm"
 #include "code\modules\lighting\lighting_atom.dm"
 #include "code\modules\lighting\lighting_corner.dm"
@@ -3260,4 +3261,5 @@
 #include "modular_aquila\modules\BLUESPACE_PIPE\code\design.dm"
 #include "modular_aquila\modules\NULLCRATE\code\packs.dm"
 #include "modular_aquila\modules\NULLCRATE\code\uplink_items.dm"
+#include "modular_aquila\modules\SURGERY\code\gender_reasigment\gender_reasigment.dm"
 // END_INCLUDE
