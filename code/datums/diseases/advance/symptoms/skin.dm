@@ -217,9 +217,9 @@ BONUS
 	. = ..()
 	if(A.properties["resistance"] >= 10)
 		severity -= 1
-	if(A.properties["transmittability"] >= 12)
+	if(A.properties["transmittable"] >= 12)
 		severity += 1
-	if(A.properties["transmittability"] >= 16)
+	if(A.properties["transmittable"] >= 16)
 		severity += 1
 	if(A.properties["stealth"] >= 6)
 		severity += 1
@@ -228,11 +228,19 @@ BONUS
 	if(!..())
 		return
 	if(A.properties["resistance"] >= 10)
+<<<<<<< HEAD
 		thresholds["bigheal"] = TRUE
 	if(A.properties["transmittability"] >= 12)
 		thresholds["alldisease"] = TRUE
 	if(A.properties["transmittability"] >= 16)
 		thresholds["eggsplosion"] = TRUE //Haha get it?
+=======
+		big_heal = TRUE
+	if(A.properties["transmittable"] >= 12)
+		all_disease = TRUE
+	if(A.properties["transmittable"] >= 16)
+		eggsplosion = TRUE //Haha get it?
+>>>>>>> 8f802daf4c... Yet Another Ovulo Bugfix (#4191)
 	if(A.properties["stealth"] >= 6)
 		thresholds["sneaky"] = TRUE
 	if(A.properties["stage_rate"] >= 10)
@@ -257,6 +265,7 @@ BONUS
 			new /obj/item/reagent_containers/food/snacks/eggsac(diseases, thresholds["eggsplosion"],\
 			thresholds["sneaky"], thresholds["bigheal"])
 
+#define EGGSPLODE_DELAY 100 SECONDS
 /obj/item/reagent_containers/food/snacks/eggsac
 	name = "Fleshy Egg Sac"
 	desc = "A small Egg Sac which appears to be made out of someone's flesh!"
@@ -271,21 +280,27 @@ BONUS
 /obj/item/reagent_containers/food/snacks/eggsac/New(var/list/disease, var/eggsplodes, var/sneaky, var/largeheal)
 	for(var/datum/disease/D in disease)
 		diseases += D
+<<<<<<< HEAD
 	if(largeheal)
 		add_initial_reagents(list(/datum/reagent/medicine/bicaridine = 20, /datum/reagent/medicine/tricordrazine = 10))
+=======
+	if(large_heal)
+		reagents.add_reagent_list(list(/datum/reagent/medicine/bicaridine = 20, /datum/reagent/medicine/tricordrazine = 10))
+>>>>>>> 8f802daf4c... Yet Another Ovulo Bugfix (#4191)
 		reagents.add_reagent(/datum/reagent/blood, 10, diseases)
 		bigheal = TRUE
 	else
-		add_initial_reagents(list(/datum/reagent/medicine/bicaridine = 10, /datum/reagent/medicine/tricordrazine = 10))
+		reagents.add_reagent_list(list(/datum/reagent/medicine/bicaridine = 10, /datum/reagent/medicine/tricordrazine = 10))
 		reagents.add_reagent(/datum/reagent/blood, 15, diseases)
 	if(sneaky)
 		icon_state = "icons/obj/food/food/eggsac-sneaky.dmi"
 		sneakyegg = sneaky
 	if(eggsplodes)
-		addtimer(CALLBACK(src, .proc/eggsplode), 100 SECONDS)
+		addtimer(CALLBACK(src, .proc/eggsplode), EGGSPLODE_DELAY)
 	if(LAZYLEN(diseases))
 		AddComponent(/datum/component/infective, diseases)
 
+#undef EGGSPLODE_DELAY
 
 /obj/item/reagent_containers/food/snacks/eggsac/proc/eggsplode()
 	for(var/i = 1, i <= rand(4,8), i++)
@@ -305,11 +320,16 @@ BONUS
 /obj/item/reagent_containers/food/snacks/fleshegg/New(var/list/disease, var/sneaky, var/largeheal)
 	for(var/datum/disease/D in disease)
 		diseases += D
+<<<<<<< HEAD
 	if(largeheal)
 		add_initial_reagents(list(/datum/reagent/medicine/bicaridine = 20, /datum/reagent/medicine/tricordrazine = 10))
+=======
+	if(large_heal)
+		reagents.add_reagent_list(list(/datum/reagent/medicine/bicaridine = 20, /datum/reagent/medicine/tricordrazine = 10))
+>>>>>>> 8f802daf4c... Yet Another Ovulo Bugfix (#4191)
 		reagents.add_reagent(/datum/reagent/blood, 10, diseases)
 	else
-		add_initial_reagents(list(/datum/reagent/medicine/bicaridine = 10, /datum/reagent/medicine/tricordrazine = 10))
+		reagents.add_reagent_list(list(/datum/reagent/medicine/bicaridine = 10, /datum/reagent/medicine/tricordrazine = 10))
 		reagents.add_reagent(/datum/reagent/blood, 15, diseases)
 	if(sneaky)
 		icon_state = "icons/obj/food/food/fleshegg-sneaky.dmi"
