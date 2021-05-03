@@ -288,7 +288,7 @@
 		SEND_SIGNAL(infectee, COMSIG_NANITE_SET_CLOUD, cloud.get_value()) //Aquila Edit
 		SEND_SIGNAL(infectee, COMSIG_NANITE_SYNC, nanites)
 		infectee.investigate_log("was infected by a nanite cluster by [key_name(host_mob)] at [AREACOORD(infectee)].", INVESTIGATE_NANITES)
-		to_chat(infectee, "<span class='warning'>You feel a tiny prick.</span>")
+		to_chat(infectee, "<span class='warning'>You feel a tiny prick!</span>")
 
 /datum/nanite_program/mitosis
 	name = "Mitosis"
