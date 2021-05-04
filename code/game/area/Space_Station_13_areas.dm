@@ -940,6 +940,11 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Xenobiology Lab"
 	icon_state = "toxlab"
 
+/area/science/shuttle
+	name = "Shuttle Construction"
+	lighting_colour_tube = "#ffe3cc"
+	lighting_colour_bulb = "#ffdbb8"
+
 /area/science/storage
 	name = "Toxins Storage"
 	icon_state = "toxstorage"
@@ -1154,3 +1159,12 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/tcommsat/server
 	name = "Telecomms Server Room"
 	icon_state = "tcomsatcham"
+
+ // AQUILA EDIT
+/area/bluespace_locker
+  name = "Bluespace Locker"
+  icon_state = "away"
+  requires_power = FALSE
+  has_gravity = STANDARD_GRAVITY
+  dynamic_lighting = DYNAMIC_LIGHTING_FORCED
+  // AQUILA EDIT END

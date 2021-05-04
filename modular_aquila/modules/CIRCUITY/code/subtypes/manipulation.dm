@@ -49,7 +49,14 @@
 			to_chat(user, "<span class='warning'>There's already a weapon installed.</span>")
 			return
 		user.transferItemToLoc(gun,src)
-		installed_gun = gun
+		if(istype(O, /obj/item/gun/energy/kinetic_accelerator))
+			var/obj/item/gun/energy/kinetic_accelerator/pka = O
+			pka.unique_frequency = TRUE
+			pka.holds_charge = TRUE
+			pka.attempt_reload()
+			installed_gun = pka
+		else
+			installed_gun = gun
 		var/list/gun_properties = gun.get_turret_properties()
 		to_chat(user, "<span class='notice'>You slide \the [gun] into the firing mechanism.</span>")
 		playsound(src, 'sound/items/Crowbar.ogg', 50, 1)
@@ -70,6 +77,11 @@
 
 /obj/item/integrated_circuit/manipulation/weapon_firing/attack_self(var/mob/user)
 	if(installed_gun)
+		if(istype(installed_gun, /obj/item/gun/energy/kinetic_accelerator))
+			var/obj/item/gun/energy/kinetic_accelerator/pka = installed_gun
+			pka.unique_frequency = FALSE
+			pka.holds_charge = FALSE
+			installed_gun = pka
 		installed_gun.forceMove(drop_location())
 		to_chat(user, "<span class='notice'>You slide \the [installed_gun] out of the firing mechanism.</span>")
 		size = initial(size)
@@ -114,6 +126,9 @@
 		return
 	if(!installed_gun.cell.charge)
 		return
+	if(istype(installed_gun, /obj/item/gun/energy/kinetic_accelerator))
+		var/obj/item/gun/energy/kinetic_accelerator/pka = installed_gun
+		pka.attempt_reload()
 	var/obj/item/ammo_casing/energy/shot = installed_gun.ammo_type[mode?2:1]
 	if(installed_gun.cell.charge < shot.e_cost)
 		return
@@ -738,3 +753,4 @@
 			push_data()
 
 	activate_pin(3)
+

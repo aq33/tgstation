@@ -854,3 +854,76 @@
 	if(istype(loc,/obj/item/integrated_circuit/input/beaker_connector))
 		var/obj/item/integrated_circuit/input/beaker_connector/current_circuit = loc
 		current_circuit.push_vol()
+
+
+// - Miniaturized Synthesizer - //
+/obj/item/integrated_circuit/reagent/storage/synthesizer
+	name = "Miniaturized Synthesizer"
+	desc = "A miniaturized chemical synthesizer."
+	extended_desc = "You need to type the reagent ID, e.g. aluminium, water, stable_plasma etc."
+	icon_state = "reagent_scan"
+	complexity = 15
+	cooldown_per_use = 10 SECONDS
+	ext_cooldown = 5 SECONDS
+	volume = 30
+	power_draw_per_use = 1000
+	inputs = list(
+		"reagent ID" = IC_PINTYPE_STRING)
+	outputs = list(
+		"volume used" = IC_PINTYPE_NUMBER,
+		"self reference" = IC_PINTYPE_SELFREF,
+		)
+	activators = list(
+		"Synthesize" = IC_PINTYPE_PULSE_IN,
+		"push ref" = IC_PINTYPE_PULSE_IN
+		)
+	spawn_flags = IC_SPAWN_RESEARCH
+	var/list/reagent = list(
+		"aluminium"		= /datum/reagent/aluminium,
+		"bromine"		= /datum/reagent/bromine,
+		"carbon"		= /datum/reagent/carbon,
+		"chlorine"		= /datum/reagent/chlorine,
+		"copper"		= /datum/reagent/copper,
+		"ethanol"		= /datum/reagent/consumable/ethanol,
+		"fluorine"		= /datum/reagent/fluorine,
+		"hydrogen"		= /datum/reagent/hydrogen,
+		"iodine"		= /datum/reagent/iodine,
+		"iron"			= /datum/reagent/iron,
+		"lithium"		= /datum/reagent/lithium,
+		"mercury"		= /datum/reagent/mercury,
+		"nitrogen"		= /datum/reagent/nitrogen,
+		"oxygen"		= /datum/reagent/oxygen,
+		"phosphorus"	= /datum/reagent/phosphorus,
+		"potassium"		= /datum/reagent/potassium,
+		"radium"		= /datum/reagent/uranium/radium,
+		"silicon"		= /datum/reagent/silicon,
+		"silver"		= /datum/reagent/silver,
+		"sodium"		= /datum/reagent/sodium,
+		"stable_plasma"	= /datum/reagent/stable_plasma,
+		"sugar"			= /datum/reagent/consumable/sugar,
+		"sulfur"		= /datum/reagent/sulfur,
+		"acid"			= /datum/reagent/toxin/acid,
+		"water"			= /datum/reagent/water,
+		"fuel"			= /datum/reagent/fuel)
+
+/obj/item/integrated_circuit/reagent/storage/synthesizer/on_reagent_change(changetype)
+	set_pin_data(IC_OUTPUT, 1, reagents.total_volume)
+	push_data()
+
+/obj/item/integrated_circuit/reagent/storage/synthesizer/do_work(ord)
+	switch(ord)
+		if(1)
+			var/ID = get_pin_data(IC_INPUT, 1)
+			if(!isnull(ID))
+				var/selected_reagent = reagent[ID]
+				if(!selected_reagent)
+					return
+				reagents.add_reagent(selected_reagent, 5)
+
+			push_data()
+		if(2)
+			set_pin_data(IC_OUTPUT, 2, WEAKREF(src))
+			push_data()
+
+
+
