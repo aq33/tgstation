@@ -1,4 +1,0 @@
-author: aquila33-bot
-delete-after: true
-changes:
-  - bugfix: Neets can now properly ignore the hygiene system.
