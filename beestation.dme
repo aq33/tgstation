@@ -34,7 +34,6 @@
 #include "code\__DEFINES\clockcult.dm"
 #include "code\__DEFINES\colors.dm"
 #include "code\__DEFINES\combat.dm"
-#include "code\__DEFINES\components.dm"
 #include "code\__DEFINES\configuration.dm"
 #include "code\__DEFINES\construction.dm"
 #include "code\__DEFINES\contracts.dm"
@@ -118,8 +117,14 @@
 #include "code\__DEFINES\vv.dm"
 #include "code\__DEFINES\wall_dents.dm"
 #include "code\__DEFINES\wires.dm"
+<<<<<<< HEAD
 #include "code\__DEFINES\~aquila_defines\emote.dm"
 #include "code\__DEFINES\~aquila_defines\layers.dm"
+=======
+#include "code\__DEFINES\dcs\flags.dm"
+#include "code\__DEFINES\dcs\helpers.dm"
+#include "code\__DEFINES\dcs\signals.dm"
+>>>>>>> e95cb7a050... adds supports for named argument to components/elements + VV for adding/removing components (#3883)
 #include "code\__HELPERS\_lists.dm"
 #include "code\__HELPERS\_logging.dm"
 #include "code\__HELPERS\_string_lists.dm"
