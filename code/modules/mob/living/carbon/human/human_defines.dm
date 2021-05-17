@@ -6,6 +6,7 @@
 	can_buckle = TRUE
 	buckle_lying = FALSE
 	mob_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
+	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
 	//Hair colour and style
 	var/hair_color = "000"
 	var/hair_style = "Bald"
@@ -53,6 +54,7 @@
 	var/list/datum/bioware = list()
 
 	var/creamed = FALSE //to use with creampie overlays
+	var/gender_ambiguous = FALSE // Aquila Edit
 	var/static/list/can_ride_typecache = typecacheof(list(/mob/living/carbon/human, /mob/living/simple_animal/slime, /mob/living/simple_animal/parrot))
 	var/lastpuke = 0
 	var/last_fire_update

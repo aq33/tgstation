@@ -1454,7 +1454,7 @@
 /datum/supply_pack/medical/randomvirus
 	name = "Virus Sample Crate"
 	desc = "Contains five random experimental disease cultures for epidemiological research"
-	cost = 1500
+	cost = 3750
 	access = ACCESS_VIROLOGY
 	contains = list(/obj/item/reagent_containers/glass/bottle/random_virus,
 					/obj/item/reagent_containers/glass/bottle/random_virus,
@@ -1468,7 +1468,7 @@
 /datum/supply_pack/medical/virology
 	name = "Junior Epidemiology Kit"
 	desc = "Contains the necessary supplies to start an epidemiological research lab. P.A.N.D.E.M.I.C. not included. Comes with a free virologist action figure!"
-	cost = 900
+	cost = 1500
 	access = ACCESS_VIROLOGY
 	contains = list(/obj/item/reagent_containers/food/snacks/monkeycube,
 					/obj/item/reagent_containers/food/drinks/bottle/virusfood,
@@ -1504,6 +1504,24 @@
 	crate_type = /obj/structure/closet/crate/secure/plasma
 	dangerous = TRUE
 
+/datum/supply_pack/medical/extrapolator
+	name = "Virus Extrapolator Supply Crate"
+	desc = "Contains 3 Virus Extrapolators should any existing ones be lost or otherwise destroyed."
+	cost = 4500
+	access = ACCESS_VIROLOGY
+	contains = list(/obj/item/extrapolator, /obj/item/extrapolator, /obj/item/extrapolator)
+	crate_name = "Extrapolator Crate"
+	crate_type = /obj/structure/closet/crate/secure/plasma
+	dangerous = TRUE
+
+/datum/supply_pack/medical/pandemic
+	name = "Pandemic Replacement Crate"
+	desc = "Contains a replacement P.A.N.D.E.M.I.C. in case the ones in virology get destroyed or you want to build a new lab."
+	cost = 7500
+	access = ACCESS_VIROLOGY
+	contains = list(/obj/machinery/computer/pandemic)
+	crate_name = "P.A.N.D.E.M.I.C. Replacement Crate"
+	dangerous = TRUE
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Science /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -2161,6 +2179,28 @@
 		var/mob/living/simple_animal/pet/cat/C = locate() in .
 		qdel(C)
 		new /mob/living/simple_animal/pet/cat/Proc(.)
+
+/datum/supply_pack/critter/cat/exotic
+	name = "Exotic Cat Crate"
+	desc = "Commes with one of the exotic cats, collar and a toy."
+	cost = 5500
+	contains = list(/obj/item/clothing/neck/petcollar,
+					/obj/item/toy/cattoy)
+	crate_name = "cat crate"
+
+/datum/supply_pack/critter/cat/exotic/generate()
+	. = ..()
+	switch(rand(1, 5))
+		if(1)
+			new /mob/living/simple_animal/pet/cat/original(.)
+		if(2)
+			new /mob/living/simple_animal/pet/cat/breadcat(.)
+		if(3)
+			new /mob/living/simple_animal/pet/cat/cak(.)
+		if(4)
+			new /mob/living/simple_animal/pet/cat/space(.)
+		if(5)
+			new /mob/living/simple_animal/pet/cat/halal(.)
 
 /datum/supply_pack/critter/chick
 	name = "Chicken Crate"
