@@ -1,0 +1,4 @@
+author: aquila33-bot
+delete-after: true
+changes:
+  - bugfix: You can no longer teleport with weight machines.
