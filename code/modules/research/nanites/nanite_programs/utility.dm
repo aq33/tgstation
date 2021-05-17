@@ -241,7 +241,7 @@
 	for(var/mob/living/L in ohearers(5, host_mob))
 		if(!prob(25))
 			continue
-		if(!(MOB_ORGANIC in L.mob_biotypes) && !(MOB_UNDEAD in L.mob_biotypes))
+		if(!(MOB_ORGANIC in L.mob_biotypes) && !(MOB_UNDEAD in L.mob_biotypes) && !HAS_TRAIT(host_mob, TRAIT_NANITECOMPATIBLE))
 			continue
 		target_hosts += L
 	if(!target_hosts.len)
@@ -250,21 +250,30 @@
 	if(prob(100 - (infectee.get_permeability_protection() * 100)))
 		//this will potentially take over existing nanites!
 		infectee.AddComponent(/datum/component/nanites, 10)
+		SEND_SIGNAL(infectee, COMSIG_NANITE_SET_CLOUD, nanites.cloud_id) // Aquila Edit
 		SEND_SIGNAL(infectee, COMSIG_NANITE_SYNC, nanites)
 		infectee.investigate_log("was infected by spreading nanites by [key_name(host_mob)] at [AREACOORD(infectee)].", INVESTIGATE_NANITES)
-
+///////////////
+//AQUILA EDIT//
+///////////////
 /datum/nanite_program/nanite_sting
 	name = "Nanite Sting"
-	desc = "When triggered, projects a nearly invisible spike of nanites that attempts to infect a nearby non-host with a copy of the host's nanites cluster."
+//	desc = "When triggered, projects a nearly invisible spike of nanites that attempts to infect a nearby non-host with a copy of the host's nanites cluster."
+	desc = "When triggered, projects a nearly invisible spike of nanites that attempts to infect a nearby non-host with a cluster of nanites."  //Aquila Edit
 	can_trigger = TRUE
-	trigger_cost = 5
+//	trigger_cost = 5
+	trigger_cost = 50 //Aquila Edit
 	trigger_cooldown = 100
 	rogue_types = list(/datum/nanite_program/glitch, /datum/nanite_program/toxic)
-
+//AQUILA EDIT
+/datum/nanite_program/nanite_sting/register_extra_settings()
+	extra_settings[NES_CLOUD_OVERWRITE] = new /datum/nanite_extra_setting/number(0, 0, 100)
+//AQUILA EDIT
 /datum/nanite_program/nanite_sting/on_trigger(comm_message)
+	var/datum/nanite_extra_setting/cloud = extra_settings[NES_CLOUD_OVERWRITE] //Aquila Edit
 	var/list/mob/living/target_hosts = list()
 	for(var/mob/living/L in oview(1, host_mob))
-		if(!(MOB_ORGANIC in L.mob_biotypes) && !(MOB_UNDEAD in L.mob_biotypes))
+		if(!(MOB_ORGANIC in L.mob_biotypes) && !(MOB_UNDEAD in L.mob_biotypes) && !HAS_TRAIT(host_mob, TRAIT_NANITECOMPATIBLE))
 			continue
 		if(SEND_SIGNAL(L, COMSIG_HAS_NANITES) || !L.Adjacent(host_mob))
 			continue
@@ -276,9 +285,10 @@
 	if(prob(100 - (infectee.get_permeability_protection() * 100)))
 		//unlike with Infective Exo-Locomotion, this can't take over existing nanites, because Nanite Sting only targets non-hosts.
 		infectee.AddComponent(/datum/component/nanites, 5)
+		SEND_SIGNAL(infectee, COMSIG_NANITE_SET_CLOUD, cloud.get_value()) //Aquila Edit
 		SEND_SIGNAL(infectee, COMSIG_NANITE_SYNC, nanites)
 		infectee.investigate_log("was infected by a nanite cluster by [key_name(host_mob)] at [AREACOORD(infectee)].", INVESTIGATE_NANITES)
-		to_chat(infectee, "<span class='warning'>You feel a tiny prick.</span>")
+		to_chat(infectee, "<span class='warning'>You feel a tiny prick!</span>")
 
 /datum/nanite_program/mitosis
 	name = "Mitosis"

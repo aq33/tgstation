@@ -22,6 +22,13 @@ PRy które zostaną odrzucone ze względu na swój pomysł/funkcjonalność, mog
 Gdy masz już gotowy i otwarty PR, musi on przejść testy automatyczne, oraz code review.
 Jeżeli test automatyczny failuje i nie wiesz dlaczego, możesz wejść w details i zobaczyć logi, gdzie znajdziesz konkretny błąd.
 
+## Modularyzacja
+Od rebase teraz stosujemy nową metode co do wprowadzania zmian, polega ona na dodawaniu nowego folderu w modular_aquila/modules. W tym folderze jest EXAMPLE_MODULE a w nim plik readme.dm. ![modularyzacja guide 1](https://user-images.githubusercontent.com/60329232/113522111-5fd38080-959e-11eb-93df-6adc94a06947.png) 
+Po zrobieniu folderu głównego twoich zmian dodaj foldery osobne dla code/icons/sounds, czyli jak tylko coś od kodu to tylko code przykładowo. Jeżeli twoja zmiana nie jest tak spora by robić osobne pliki to robisz tak jak na zdjęciu poniżej;![modularyzacja guide 2](https://user-images.githubusercontent.com/60329232/113522310-af667c00-959f-11eb-9eb6-0c28c98d95ef.png) lub; ![modularyzacja guide 3](https://user-images.githubusercontent.com/60329232/113522328-d624b280-959f-11eb-96d8-4c36f7863fda.png) Sprite wymagają nowych osobnych plików, jeżeli dany plik dmi jest używany przez wiele innych objektów i jest łatwiej zamienić jedną ścieżke niż dodać mase nowych to dodaj takie coś przy zmienionych sprite;
+![modularyzacja guide 5](https://user-images.githubusercontent.com/60329232/113522574-edfd3600-95a1-11eb-8dfd-6d44e7e8ab8e.png)
+## Twój PR musi się stosować do zasad modularyzacji jak chcesz by twoja zmiana nie została odrzucona odrazu.
+
+
 ## Pomoc w tłumaczeniu/programowaniu
 
 Jeżeli chcesz pomóc to najpierw wybierz issue którym chcesz się zając, napisz tam, ze ty zajmiesz się np. jakimś konkretnym plikiem, lub całym issue, itd.

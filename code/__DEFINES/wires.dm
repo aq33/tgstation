@@ -48,3 +48,10 @@
 #define WIRE_ZAP "High Voltage Circuit"
 #define WIRE_ZAP1 "High Voltage Circuit 1"
 #define WIRE_ZAP2 "High Voltage Circuit 2"
+//AQUILA EDIT
+#define WIRE_SLOW "Servo Regulator"
+#define WIRE_FAST "Servo Resistor"
+#define WIRE_LISTING "Listing Interface"
+#define WIRE_RANCH "Ranch"
+#define WIRE_PLAY "Playback"
+//AQUILA EDIT

@@ -2,13 +2,27 @@
 #define CHANNEL_LOBBYMUSIC 1024
 #define CHANNEL_ADMIN 1023
 #define CHANNEL_VOX 1022
-#define CHANNEL_JUKEBOX 1021
-#define CHANNEL_JUSTICAR_ARK 1020
-#define CHANNEL_HEARTBEAT 1019 //sound channel for heartbeats
-#define CHANNEL_AMBIENT_EFFECTS 1018
-#define CHANNEL_AMBIENT_MUSIC 1017
-#define CHANNEL_AMBIENT_BUZZ 1016
-
+///////////////
+//AQUILA EDIT//
+///////////////
+#define CHANNEL_JUKEBOX_END 1021
+#define CHANNEL_JUKEBOX_START 1020
+#define CHANNEL_JUSTICAR_ARK 1019
+#define CHANNEL_HEARTBEAT 1018 //sound channel for heartbeats
+#define CHANNEL_AMBIENT_EFFECTS 1017
+#define CHANNEL_BUZZ 1016
+#define CHANNEL_BICYCLE 1016
+#define CHANNEL_AMBIENT_MUSIC 1015
+#define CHANNEL_AMBIENT_BUZZ 1014
+//#define CHANNEL_JUKEBOX 1021
+//#define CHANNEL_JUSTICAR_ARK 1020
+//#define CHANNEL_HEARTBEAT 1019 //sound channel for heartbeats
+//#define CHANNEL_AMBIENT_EFFECTS 1018
+//#define CHANNEL_AMBIENT_MUSIC 1017
+//#define CHANNEL_AMBIENT_BUZZ 1016
+///////////////////
+//AQUILA EDIT END//
+///////////////////
 //THIS SHOULD ALWAYS BE THE LOWEST ONE!
 //KEEP IT UPDATED
 
@@ -71,3 +85,5 @@
 	'sound/hallucinations/growl3.ogg', 'sound/hallucinations/im_here1.ogg', 'sound/hallucinations/im_here2.ogg', 'sound/hallucinations/i_see_you1.ogg', 'sound/hallucinations/i_see_you2.ogg',\
 	'sound/hallucinations/look_up1.ogg', 'sound/hallucinations/look_up2.ogg', 'sound/hallucinations/over_here1.ogg', 'sound/hallucinations/over_here2.ogg', 'sound/hallucinations/over_here3.ogg',\
 	'sound/hallucinations/turn_around1.ogg', 'sound/hallucinations/turn_around2.ogg', 'sound/hallucinations/veryfar_noise.ogg', 'sound/hallucinations/wail.ogg')
+
+#define MUSIC_VOLUME 50 //AQUILA EDIT

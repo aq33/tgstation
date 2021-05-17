@@ -119,7 +119,7 @@
 		"spans" = spans,
 		"mods" = message_mods
 	)
-	var/turf/T = get_turf(source)
+	var/turf/T = get_turf_global(source) // Aquila Edit
 	levels = list(T.z)
 
 /datum/signal/subspace/vocal/copy()

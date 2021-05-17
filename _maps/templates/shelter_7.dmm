@@ -18,7 +18,7 @@
 /turf/template_noop,
 /area/template_noop)
 "h" = (
-/obj/machinery/jukebox/disco,
+/obj/machinery/jukebox,
 /obj/machinery/light/floor,
 /turf/open/floor/light/colour_cycle/dancefloor_b,
 /area/template_noop)

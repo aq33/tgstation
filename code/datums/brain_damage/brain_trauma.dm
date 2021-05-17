@@ -41,16 +41,20 @@
 /datum/brain_trauma/proc/on_gain()
 	to_chat(owner, gain_text)
 	RegisterSignal(owner, COMSIG_MOB_SAY, .proc/handle_speech)
+	RegisterSignal(owner, COMSIG_MOVABLE_HEAR, .proc/handle_hearing) //Aquila Edit
 
 //Called when removed from a mob
 /datum/brain_trauma/proc/on_lose(silent)
 	if(!silent)
 		to_chat(owner, lose_text)
 	UnregisterSignal(owner, COMSIG_MOB_SAY)
+	UnregisterSignal(owner, COMSIG_MOVABLE_HEAR) //Aquila Edit
 
 //Called when hearing a spoken message
-/datum/brain_trauma/proc/on_hear(message, speaker, message_language, raw_message, radio_freq)
-	return message
+///datum/brain_trauma/proc/on_hear(message, speaker, message_language, raw_message, radio_freq) //Aquila Edit
+//	return message //Aquila Edit
+/datum/brain_trauma/proc/handle_hearing(datum/source, list/hearing_args) //Aquila Edit
+	UnregisterSignal(owner, COMSIG_MOVABLE_HEAR) //Aquila Edit
 
 //Called when speaking
 /datum/brain_trauma/proc/handle_speech(datum/source, list/speech_args)

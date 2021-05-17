@@ -38,8 +38,8 @@
 	icon_state = "mouse_[body_color]"
 	icon_living = "mouse_[body_color]"
 	icon_dead = "mouse_[body_color]_dead"
-	if(prob(40))
-		var/datum/disease/advance/R = new /datum/disease/advance/random(rand(2, 4))
+	if(prob(75))
+		var/datum/disease/advance/R = new /datum/disease/advance/random(rand(3, 6), 9, rand(3,4))
 		ratdisease += R
 
 /mob/living/simple_animal/mouse/extrapolator_act(mob/user, var/obj/item/extrapolator/E, scan = TRUE)
@@ -89,10 +89,10 @@
 				if(C.avail())
 					visible_message("<span class='warning'>[src] chews through the [C]. It's toast!</span>")
 					playsound(src, 'sound/effects/sparks2.ogg', 100, 1)
-					C.deconstruct()
+//					C.deconstruct() AQUILA EDIT
 					death(toast=1)
 				else
-					C.deconstruct()
+//					C.deconstruct() AQUILA EDIT
 					visible_message("<span class='warning'>[src] chews through the [C].</span>")
 
 /*

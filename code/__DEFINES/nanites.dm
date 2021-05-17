@@ -1,4 +1,4 @@
-#define NANITE_SYNC_DELAY 300
+#define NANITE_SYNC_DELAY 900
 
 #define NANITE_SHOCK_IMMUNE 1
 #define NANITE_EMP_IMMUNE 2
@@ -14,8 +14,13 @@
 
 ///Nanite Protocol types
 #define NANITE_PROTOCOL_REPLICATION "nanite_replication"
-#define NANITE_PROTOCOL_STORAGE "nanite_storage"
+//AQUILA EDIT
+//#define NANITE_PROTOCOL_STORAGE "nanite_storage"
 
+//Nanite excess thresholds
+#define NANITE_EXCESS_MINOR 50
+#define NANITE_EXCESS_VOMIT 150
+//AQUILA EDIT END
 ///Nanite extra settings types: used to help uis know what type an extra setting is
 #define NESTYPE_TEXT "text"
 #define NESTYPE_NUMBER "number"
@@ -47,3 +52,6 @@
 #define NES_BUTTON_NAME "Button Name"
 #define NES_ICON "Icon"
 #define NES_COLOR "Color"
+#define NES_HOST_AGGRESSION "Host Aggression" // Aquila Edit
+#define NES_NANO_RECEIVE "Receive Messages" // Aquila Edit
+#define NES_NANO_SEND "Send Messages" // Aquila Edit

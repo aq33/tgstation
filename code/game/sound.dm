@@ -24,7 +24,7 @@
 		if(get_dist(M, turf_source) <= maxdistance)
 			M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, pressure_affected, S)
 
-/mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, channel = 0, pressure_affected = TRUE, sound/S, distance_multiplier = 1)
+/mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, channel = 0, pressure_affected = TRUE, sound/S, distance_multiplier = 1, envwet = -10000, envdry = 0) //AQUILA EDIT
 	if(!client || !can_hear())
 		return
 
@@ -34,6 +34,10 @@
 	S.wait = 0 //No queue
 	S.channel = channel || open_sound_channel()
 	S.volume = vol
+//AQUILA EDIT
+	S.environment = 7
+	S.echo = list(envdry, null, envwet, null, null, null, null, null, null, null, null, null, null, 1, 1, 1, null, null)
+//AQUILA EDIT END
 
 	if(vary)
 		if(frequency)
@@ -100,7 +104,10 @@
 /mob/proc/stop_sound_channel(chan)
 	SEND_SOUND(src, sound(null, repeat = 0, wait = 0, channel = chan))
 
-/client/proc/playtitlemusic(vol = 85)
+//AQUILA EDIT
+//client/proc/playtitlemusic(vol = 85)
+/client/proc/playtitlemusic(vol = MUSIC_VOLUME)
+//AQUILA EDIT
 	set waitfor = FALSE
 	UNTIL(SSticker.login_music) //wait for SSticker init to set the login music
 
