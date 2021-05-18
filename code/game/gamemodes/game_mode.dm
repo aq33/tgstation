@@ -69,19 +69,23 @@
 /datum/game_mode/proc/can_start()
 	var/playerC = 0
 	for(var/mob/dead/new_player/player in GLOB.player_list)
+<<<<<<< HEAD
 		if(player.client && player.has_valid_preferences())	// AQ EDIT (&&(player.ready == PLAYER_READY_TO_PLAY))
+=======
+		if(player.client && (player.ready == PLAYER_READY_TO_PLAY) && player.has_valid_preferences(TRUE))
+>>>>>>> ffb324cb5e... e (#4320)
 			playerC++
 	if(!GLOB.Debug2)
 		if(playerC < required_players || (maximum_players >= 0 && playerC > maximum_players))
-			return 0
+			return FALSE
 	antag_candidates = get_players_for_role(antag_flag)
 	if(!GLOB.Debug2)
 		if(antag_candidates.len < required_enemies)
-			return 0
-		return 1
+			return FALSE
+		return TRUE
 	else
 		message_admins("<span class='notice'>DEBUG: GAME STARTING WITHOUT PLAYER NUMBER CHECKS, THIS WILL PROBABLY BREAK SHIT.</span>")
-		return 1
+		return TRUE
 
 
 ///Attempts to select players for special roles the mode might have.
