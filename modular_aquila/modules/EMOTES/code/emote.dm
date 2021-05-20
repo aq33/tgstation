@@ -25,15 +25,21 @@
 		if(prob(20))
 			flippy_mcgee.Knockdown(1 SECONDS)
 			flippy_mcgee.visible_message(
-				"<span class='notice'>[flippy_mcgee] attempts to do a flip and falls over, what a doofus!</span>",
+	/* AQ EDIT	"<span class='notice'>[flippy_mcgee] attempts to do a flip and falls over, what a doofus!</span>",
 				"<span class='notice'>You attempt to do a flip while still off balance from the last flip and fall down!</span>"
+				*/
+				"<span class='notice'>[flippy_mcgee] próbuje zrobić salto ale upada!</span>",
+				"<span class='notice'>Próbujesz ponownie zrobić salto ale tracisz równowagę i upadasz!</span>"
 			)
 			if(prob(50))
 				flippy_mcgee.adjustBruteLoss(1)
 		else
 			flippy_mcgee.visible_message(
-				"<span class='notice'>[flippy_mcgee] stumbles a bit after their flip.</span>",
+	/* AQ EDIT	"<span class='notice'>[flippy_mcgee] stumbles a bit after their flip.</span>",
 				"<span class='notice'>You stumble a bit from still being off balance from your last flip.</span>"
+				*/
+				"<span class='notice'>[flippy_mcgee] robi salto i potyka się.</span>",
+				"<span class='notice'>Tracisz równowagę i potykasz się.</span>"
 			)
 
 /mob/proc/emote(act, m_type = null, message = null, intentional = FALSE)
