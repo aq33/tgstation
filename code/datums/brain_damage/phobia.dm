@@ -339,8 +339,4 @@
 #undef PHOBIA_STATE_UNEASY
 #undef PHOBIA_STATE_FIGHTORFLIGHT
 #undef PHOBIA_STATE_TERROR
-<<<<<<< HEAD
-#undef PHOBIA_STATE_FAINT //Aquila Edit
-=======
 #undef PHOBIA_STATE_FAINT
->>>>>>> 4af7df868d... Reworks Soft Crit (#2997)
