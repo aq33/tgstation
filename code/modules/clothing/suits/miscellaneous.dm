@@ -59,7 +59,6 @@
 	icon_state = "hgpirate"
 	item_state = "hgpirate"
 
-
 /obj/item/clothing/suit/cyborg_suit
 	name = "cyborg suit"
 	desc = "Suit for a cyborg costume."
@@ -69,14 +68,12 @@
 	fire_resist = T0C+5200
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 
-
 /obj/item/clothing/suit/justice
 	name = "justice suit"
 	desc = "this pretty much looks ridiculous" //Needs no fixing
 	icon_state = "justice"
 	item_state = "justice"
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-
 
 /obj/item/clothing/suit/judgerobe
 	name = "judge's robe"
@@ -86,7 +83,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	allowed = list(/obj/item/storage/fancy/cigarettes, /obj/item/stack/spacecash)
 	flags_inv = HIDEJUMPSUIT
-
 
 /obj/item/clothing/suit/apron/overalls
 	name = "coveralls"
@@ -120,7 +116,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 
-
 /obj/item/clothing/suit/imperium_monk
 	name = "\improper Imperium monk suit"
 	desc = "Have YOU killed a xeno today?"
@@ -130,7 +125,6 @@
 	flags_inv = HIDESHOES|HIDEJUMPSUIT
 	allowed = list(/obj/item/storage/book/bible, /obj/item/nullrod, /obj/item/reagent_containers/food/drinks/bottle/holywater, /obj/item/storage/fancy/candle_box, /obj/item/candle, /obj/item/tank/internals/emergency_oxygen)
 
-
 /obj/item/clothing/suit/chickensuit
 	name = "chicken suit"
 	desc = "A suit made long ago by the ancient empire KFC."
@@ -138,7 +132,6 @@
 	item_state = "chickensuit"
 	body_parts_covered = CHEST|ARMS|GROIN|LEGS|FEET
 	flags_inv = HIDESHOES|HIDEJUMPSUIT
-
 
 /obj/item/clothing/suit/monkeysuit
 	name = "monkey suit"
@@ -327,7 +320,6 @@
 	actions_types = list(/datum/action/item_action/toggle_human_head)
 	hoodtype = /obj/item/clothing/head/hooded/human_head
 
-
 /obj/item/clothing/head/hooded/human_head
 	name = "bloated human head"
 	desc = "A horribly bloated and mismatched human head."
@@ -342,6 +334,49 @@
 	icon_state = "officertanjacket"
 	item_state = "officertanjacket"
 	body_parts_covered = CHEST|ARMS
+
+/obj/item/clothing/suit/hooded/hastur
+	name = "\improper Hastur's robe"
+	desc = "Robes not meant to be worn by man."
+	icon_state = "hastur"
+	item_state = "hastur"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	hoodtype = /obj/item/clothing/head/hooded/hasturhood
+
+/obj/item/clothing/head/hooded/hasturhood
+	name = "hastur's hood"
+	desc = "It's <i>unspeakably</i> stylish."
+	icon_state = "hasturhood"
+	body_parts_covered = HEAD
+	flags_inv = HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+
+// Aristocrat Coats
+
+/obj/item/clothing/suit/aristo_orange
+	name = "orange aristocrat coat"
+	desc = "A fancy coat made of silk. This one is orange."
+	icon_state = "aristo_orange"
+	item_state = "aristo_orange"
+
+/obj/item/clothing/suit/aristo_red
+	name = "red aristocrat coat"
+	desc = "A fancy coat made of silk. This one is red."
+	icon_state = "aristo_red"
+	item_state = "aristo_red"
+
+/obj/item/clothing/suit/aristo_brown
+	name = "brown aristocrat coat"
+	desc = "A fancy coat made of silk. This one is brown."
+	icon_state = "aristo_brown"
+	item_state = "aristo_brown"
+
+/obj/item/clothing/suit/aristo_blue
+	name = "blue aristocrat coat"
+	desc = "A fancy coat made of silk. This one is blue."
+	icon_state = "aristo_blue"
+	item_state = "aristo_blue"
 
 /////////////////
 //DONATOR ITEMS//
