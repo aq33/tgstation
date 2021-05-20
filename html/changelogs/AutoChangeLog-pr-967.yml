@@ -1,5 +1,0 @@
-author: aquila33-bot
-delete-after: true
-changes:
-  - rscadd: Changed the memory allocation for space ruin generation
-  - rscadd: Added new ruins
