@@ -1409,7 +1409,11 @@
 /area/quartermaster/storage)
 "aru" = (
 /obj/structure/table/wood,
-/obj/item/storage/box/evidence,
+/obj/item/storage/box/evidence{
+	pixel_x = 6;
+	pixel_y = 15
+	},
+/obj/item/flashlight/lamp,
 /turf/open/floor/carpet/red,
 /area/security/detectives_office)
 "arz" = (
@@ -6834,8 +6838,8 @@
 	dir = 4
 	},
 /obj/machinery/holopad,
+/obj/machinery/atmospherics/pipe/manifold/supply/visible/layer1,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "bEI" = (
@@ -9161,7 +9165,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/visible/layer3{
 	dir = 1
 	},
 /turf/open/floor/plasteel,
@@ -36874,11 +36878,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/visible/layer3{
+	dir = 8
+	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
-	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/engine/storage)
@@ -52120,8 +52124,7 @@
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "ozQ" = (
-/obj/item/flashlight/lamp,
-/obj/structure/table/wood,
+/obj/machinery/vending/wardrobe/det_wardrobe,
 /obj/item/radio/intercom{
 	pixel_y = -28
 	},
@@ -71826,11 +71829,8 @@
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "unQ" = (
-/obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/flask/det,
-/obj/item/melee/classic_baton/police,
-/obj/structure/sign/poster/random{
-	pixel_x = 32
+/obj/machinery/computer/med_data{
+	dir = 8
 	},
 /turf/open/floor/wood,
 /area/security/detectives_office)
@@ -80843,6 +80843,9 @@
 	dir = 1;
 	network = list("aisat")
 	},
+/obj/structure/table/wood,
+/obj/item/melee/classic_baton/police,
+/obj/item/reagent_containers/food/drinks/flask/det,
 /turf/open/floor/wood,
 /area/security/detectives_office)
 "wNW" = (
