@@ -7,43 +7,51 @@
 /datum/emote/living/blush
 	key = "blush"
 	key_third_person = "blushes"
-	message = "blushes"
+	// message = "blushes"
+	message = "rumieni się"
 
 /datum/emote/living/bow
 	key = "bow"
 	key_third_person = "bows"
-	message = "bows"
-	message_param = "bows to %t"
+	// message = "bows"
+	// message_param = "bows to %t"
+	message = "kłania się"
+	message_param = "kłania się %t"
 	restraint_check = TRUE
 
 /datum/emote/living/burp
 	key = "burp"
 	key_third_person = "burps"
-	message = "burps"
+	// message = "burps"
+	message = "beka"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/choke
 	key = "choke"
 	key_third_person = "chokes"
-	message = "chokes"
+	// message = "chokes"
+	message = "dusi się"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/cross
 	key = "cross"
 	key_third_person = "crosses"
-	message = "crosses their arms"
+	// message = "crosses their arms"
+	message = "krzyżuje ramiona"
 	restraint_check = TRUE
 
 /datum/emote/living/chuckle
 	key = "chuckle"
 	key_third_person = "chuckles"
-	message = "chuckles"
+	// message = "chuckles"
+	message = "chichra się"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/collapse
 	key = "collapse"
 	key_third_person = "collapses"
-	message = "collapses"
+	// message = "collapses"
+	message = "upada"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/collapse/run_emote(mob/user, params, type_override, intentional)
@@ -55,7 +63,8 @@
 /datum/emote/living/cough
 	key = "cough"
 	key_third_person = "coughs"
-	message = "coughs"
+	// message = "coughs"
+	message = "kaszle"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/cough/can_run_emote(mob/user, status_check = TRUE , intentional)
@@ -66,13 +75,14 @@
 /datum/emote/living/dance
 	key = "dance"
 	key_third_person = "dances"
-	message = "dances around happily"
+	// message = "dances around happily"
+	message = "tańczy wesoło"
 	restraint_check = TRUE
 
 /datum/emote/living/deathgasp
 	key = "deathgasp"
 	key_third_person = "deathgasps"
-	message = "seizes up and falls limp, their eyes dead and lifeless"
+	/* AQ EDIT message = "seizes up and falls limp, their eyes dead and lifeless"
 	message_robot = "shudders violently for a moment before falling still, its eyes slowly darkening"
 	message_AI = "lets out a flurry of sparks, its screen flickering as its systems slowly halt"
 	message_alien = "lets out a waning guttural screech, green blood bubbling from its maw"
@@ -80,6 +90,15 @@
 	message_monkey = "lets out a faint chimper as it collapses and stops moving"
 	message_ipc = "gives one shrill beep before falling limp, their monitor flashing blue before completely shutting off"
 	message_simple =  "stops moving"
+	*/
+	message = "pada bezwładnie i wydaje ostatnie tchnienie"
+	message_robot = "stara się poruszyć, ostatecznie stając i wyłączając się"
+	message_AI = "obraz ekranu zanika, finalnie ginąc w iskrach i wyładowaniach"
+	message_alien = "wydaje z siebie przeraźliwy skowyt i ginie"
+	message_larva = "syczy i pada martwa"
+	message_monkey = "wydaje cichy pisk i umiera"
+	message_ipc = "brzęczy przenikliwie i ginie, gdy ekran powoli gaśnie"
+	message_simple =  "przestaje się ruszać"
 	stat_allowed = UNCONSCIOUS
 
 /datum/emote/living/deathgasp/run_emote(mob/user, params, type_override, intentional)
@@ -98,12 +117,14 @@
 /datum/emote/living/drool
 	key = "drool"
 	key_third_person = "drools"
-	message = "drools"
+	// message = "drools"
+	message = "ślini się"
 
 /datum/emote/living/faint
 	key = "faint"
 	key_third_person = "faints"
-	message = "faints"
+	// message = "faints"
+	message = "mdleje"
 
 /datum/emote/living/faint/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
@@ -114,7 +135,8 @@
 /datum/emote/living/flap
 	key = "flap"
 	key_third_person = "flaps"
-	message = "flaps their wings"
+	// message = "flaps their wings"
+	message = "macha skrzydłami"
 	restraint_check = TRUE
 	var/wing_time = 20
 
@@ -128,76 +150,93 @@
 /datum/emote/living/flap/aflap
 	key = "aflap"
 	key_third_person = "aflaps"
-	message = "flaps their wings aggressively"
+	// message = "flaps their wings aggressively"
+	message = "trzepocze skrzydłami"
 	restraint_check = TRUE
 	wing_time = 10
 
 /datum/emote/living/frown
 	key = "frown"
 	key_third_person = "frowns"
-	message = "frowns"
+	// message = "frowns"
+	message = "marszczy brwi"
 
 /datum/emote/living/gag
 	key = "gag"
 	key_third_person = "gags"
-	message = "gags"
+	// message = "gags"
+	message = "dławi się"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/gasp
 	key = "gasp"
 	key_third_person = "gasps"
-	message = "gasps"
+	// message = "gasps"
+	message = "łapie oddech"
 	emote_type = EMOTE_AUDIBLE
 	stat_allowed = UNCONSCIOUS
 
 /datum/emote/living/giggle
 	key = "giggle"
 	key_third_person = "giggles"
-	message = "giggles"
-	message_mime = "giggles silently"
+	// message = "giggles"
+	// message_mime = "giggles silently"
+	message = "chichocze"
+	message_mime = "chichocze cichutko"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/glare
 	key = "glare"
 	key_third_person = "glares"
-	message = "glares"
-	message_param = "glares at %t"
+	// message = "glares"
+	// message_param = "glares at %t"
+	message = "wpatruje się"
+	message_param = "wpatruje się w %t"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/grin
 	key = "grin"
 	key_third_person = "grins"
-	message = "grins"
+	// message = "grins"
+	message = "szczerzy się"
 
 /datum/emote/living/groan
 	key = "groan"
 	key_third_person = "groans"
-	message = "groans"
-	message_mime = "appears to groan"
+	// message = "groans"
+	// message_mime = "appears to groan"
+	message = "jęczy"
+	message_mime = "wydaje się jęczeć"
 
 /datum/emote/living/grimace
 	key = "grimace"
 	key_third_person = "grimaces"
-	message = "grimaces"
+	// message = "grimaces"
+	message = "krzywi się"
 
 /datum/emote/living/jump
 	key = "jump"
 	key_third_person = "jumps"
-	message = "jumps"
+	// message = "jumps"
+	message = "podskakuje"
 	restraint_check = TRUE
 
 /datum/emote/living/kiss
 	key = "kiss"
 	key_third_person = "kisses"
-	message = "blows a kiss"
-	message_param = "blows a kiss to %t"
+	// message = "blows a kiss"
+	// message_param = "blows a kiss to %t"
+	message = "posyła buziaka"
+	message_param = "posyła buziaka do %t"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/laugh
 	key = "laugh"
 	key_third_person = "laughs"
-	message = "laughs"
-	message_mime = "laughs silently"
+	// message = "laughs"
+	// message_mime = "laughs silently"
+	message = "śmieje się"
+	message_mime = "śmieje się cicho"
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
 
@@ -220,20 +259,26 @@
 /datum/emote/living/look
 	key = "look"
 	key_third_person = "looks"
-	message = "looks"
-	message_param = "looks at %t"
+	// message = "looks"
+	// message_param = "looks at %t"
+	message = "patrzy"
+	message_param = "patrzy na %t"
 
 /datum/emote/living/nod
 	key = "nod"
 	key_third_person = "nods"
-	message = "nods"
-	message_param = "nods at %t"
+	// message = "nods"
+	// message_param = "nods at %t"
+	message = "kiwa głową"
+	message_param = "kiwa głową do %t"
 
 /datum/emote/living/point
 	key = "point"
 	key_third_person = "points"
-	message = "points"
-	message_param = "points at %t"
+	// message = "points"
+	// message_param = "points at %t"
+	message = "wskazuje"
+	message_param = "wskazuje na %t"
 	restraint_check = TRUE
 
 /datum/emote/living/point/run_emote(mob/user, params, type_override, intentional)
@@ -242,7 +287,8 @@
 		var/mob/living/carbon/human/H = user
 		if(H.get_num_arms() == 0)
 			if(H.get_num_legs() != 0)
-				message_param = "tries to point at %t with a leg, <span class='userdanger'>falling down</span> in the process!"
+			 // message_param = "tries to point at %t with a leg, <span class='userdanger'>falling down</span> in the process!"
+				message_param = "stara się wskazać nogą na %t, ale <span class='userdanger'>upada!</span>"
 				H.Paralyze(20)
 			else
 				message_param = "<span class='userdanger'>bumps [user.p_their()] head on the ground</span> trying to motion towards %t."
@@ -252,101 +298,121 @@
 /datum/emote/living/pout
 	key = "pout"
 	key_third_person = "pouts"
-	message = "pouts"
+	// message = "pouts"
+	message = "nadyma buzię"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/scream
 	key = "scream"
 	key_third_person = "screams"
-	message = "screams"
-	message_mime = "acts out a scream"
+	// message = "screams"
+	// message_mime = "acts out a scream"
+	message = "krzyczy"
+	message_mime = "wydaje się krzyczeć"
 	emote_type = EMOTE_AUDIBLE
 	mob_type_blacklist_typecache = list(/mob/living/carbon/human) //Humans get specialized scream.
 
 /datum/emote/living/scream/select_message_type(mob/user, intentional)
 	. = ..()
 	if(!intentional && isanimal(user))
-		return "makes a loud and pained whimper."
+	 // return "makes a loud and pained whimper."
+		return "skamle z bólu."
 
 /datum/emote/living/scowl
 	key = "scowl"
 	key_third_person = "scowls"
-	message = "scowls"
+	// message = "scowls"
+	message = "patrzy gniewnie"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/shake
 	key = "shake"
 	key_third_person = "shakes"
-	message = "shakes their head"
+	// message = "shakes their head"
+	message = "kręci głową"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/shiver
 	key = "shiver"
 	key_third_person = "shiver"
-	message = "shivers"
+	// message = "shivers"
+	message = "drży"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/sigh
 	key = "sigh"
 	key_third_person = "sighs"
-	message = "sighs"
+	// message = "sighs"
+	message = "wzdycha"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/sit
 	key = "sit"
 	key_third_person = "sits"
-	message = "sits down"
+	// message = "sits down"
+	message = "siada"
 
 /datum/emote/living/smile
 	key = "smile"
 	key_third_person = "smiles"
-	message = "smiles"
+	// message = "smiles"
+	message = "uśmiecha się"
 
 /datum/emote/living/sneeze
 	key = "sneeze"
 	key_third_person = "sneezes"
-	message = "sneezes"
+	// message = "sneezes"
+	message = "kicha"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/smug
 	key = "smug"
 	key_third_person = "smugs"
-	message = "grins smugly"
+	// message = "grins smugly"
+	message = "uśmiecha się w zadowoleniu"
 
 /datum/emote/living/sniff
 	key = "sniff"
 	key_third_person = "sniffs"
-	message = "sniffs"
+	// message = "sniffs"
+	message = "niucha"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/snore
 	key = "snore"
 	key_third_person = "snores"
-	message = "snores"
-	message_mime = "sleeps soundly"
+	// message = "snores"
+	// message_mime = "sleeps soundly"
+	message = "chrapie"
+	message_mime = "chrapie głośno"
 	emote_type = EMOTE_AUDIBLE
 	stat_allowed = UNCONSCIOUS
 
 /datum/emote/living/stare
 	key = "stare"
 	key_third_person = "stares"
-	message = "stares"
-	message_param = "stares at %t"
+	// message = "stares"
+	// message_param = "stares at %t"
+	message = "gapi się"
+	message_param = "gapi się na %t"
 
 /datum/emote/living/strech
 	key = "stretch"
 	key_third_person = "stretches"
-	message = "stretches their arms"
+	// message = "stretches their arms"
+	message = "rozciąga ramiona"
 
 /datum/emote/living/sulk
 	key = "sulk"
 	key_third_person = "sulks"
-	message = "sulks down sadly"
+	// message = "sulks down sadly"
+	message = "dąsa się"
 
 /datum/emote/living/surrender
 	key = "surrender"
 	key_third_person = "surrenders"
-	message = "puts their hands on their head and falls to the ground, surrendering"
+	// message = "puts their hands on their head and falls to the ground, surrendering"
+	message = "kładzie ręce na głowę i pada na ziemię, poddając się"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/surrender/run_emote(mob/user, params, type_override, intentional)
@@ -358,42 +424,51 @@
 /datum/emote/living/sway
 	key = "sway"
 	key_third_person = "sways"
-	message = "sways around dizzily"
+	// message = "sways around dizzily"
+	message = "kiwa się"
 
 /datum/emote/living/tremble
 	key = "tremble"
 	key_third_person = "trembles"
-	message = "trembles in fear"
+	// message = "trembles in fear"
+	message = "drży ze strachu"
 
 /datum/emote/living/twitch
 	key = "twitch"
 	key_third_person = "twitches"
-	message = "twitches violently"
+	// message = "twitches violently"
+	message = "dostaje drgawek"
 
 /datum/emote/living/twitch_s
 	key = "twitch_s"
-	message = "twitches"
+	// message = "twitches"
+	message = "dostaje drgawek"
 
 /datum/emote/living/wave
 	key = "wave"
 	key_third_person = "waves"
-	message = "waves"
+	// message = "waves"
+	message = "macha"
 
 /datum/emote/living/whimper
 	key = "whimper"
 	key_third_person = "whimpers"
-	message = "whimpers"
-	message_mime = "appears hurt"
+	// message = "whimpers"
+	// message_mime = "appears hurt"
+	message = "skamle"
+	message_mime = "krzywi się w bólu"
 
 /datum/emote/living/wsmile
 	key = "wsmile"
 	key_third_person = "wsmiles"
-	message = "smiles weakly"
+	// message = "smiles weakly"
+	message = "uśmiecha się lekko"
 
 /datum/emote/living/yawn
 	key = "yawn"
 	key_third_person = "yawns"
-	message = "yawns"
+	// message = "yawns"
+	message = "ziewa"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/custom
@@ -477,8 +552,10 @@
 /datum/emote/beep
 	key = "beep"
 	key_third_person = "beeps"
-	message = "beeps"
-	message_param = "beeps at %t"
+	// message = "beeps"
+	// message_param = "beeps at %t"
+	message = "pika"
+	message_param = "pika na %t"
 	sound = 'sound/machines/twobeep.ogg'
 	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon)
 
@@ -491,10 +568,12 @@
 	. = ..()
 	var/obj/item/circlegame/N = new(user)
 	if(user.put_in_hands(N))
-		to_chat(user, "<span class='notice'>You make a circle with your hand.</span>")
+	//  to_chat(user, "<span class='notice'>You make a circle with your hand.</span>")
+		to_chat(user, "<span class='notice'>Składasz palce w kółko.</span>")
 	else
 		qdel(N)
-		to_chat(user, "<span class='warning'>You don't have any free hands to make a circle with.</span>")
+	 // to_chat(user, "<span class='warning'>You don't have any free hands to make a circle with.</span>")
+		to_chat(user, "<span class='warning'>Masz zajęte ręce.</span>")
 
 /datum/emote/living/slap
 	key = "slap"
@@ -507,30 +586,37 @@
 		return
 	var/obj/item/slapper/N = new(user)
 	if(user.put_in_hands(N))
-		to_chat(user, "<span class='notice'>You ready your slapping hand.</span>")
+	 // to_chat(user, "<span class='notice'>You ready your slapping hand.</span>")
+		to_chat(user, "<span class='notice'>Przygotowujesz dłoń do klepnięcia.</span>")
 	else
-		to_chat(user, "<span class='warning'>You're incapable of slapping in your current state.</span>")
+	 // to_chat(user, "<span class='warning'>You're incapable of slapping in your current state.</span>")
+		to_chat(user, "<span class='warning'>Nie możesz teraz klepnąć.</span>")
 
 /datum/emote/living/raisehand
 	key = "highfive"
 	key_third_person = "highfives"
-	message = "raises their hand"
+	// message = "raises their hand"
+	message = "podnosi dłoń do piątki"
 	restraint_check = TRUE
 
 /datum/emote/living/raisehand/run_emote(mob/user, params)
 	. = ..()
 	var/obj/item/highfive/N = new(user)
 	if(user.put_in_hands(N))
-		to_chat(user, "<span class='notice'>You raise your hand for a high-five.</span>")
+	 // to_chat(user, "<span class='notice'>You raise your hand for a high-five.</span>")
+		to_chat(user, "<span class='notice'>Podnosisz dłoń do piątki.</span>")
 	else
 		qdel(N)
-		to_chat(user, "<span class='warning'>You don't have any free hands to high-five with.</span>")
+	 // to_chat(user, "<span class='warning'>You don't have any free hands to high-five with.</span>")
+		to_chat(user, "<span class='warning'>Nie masz wolnej dłoni do przybicia piątki.</span>")
 
 /datum/emote/living/snap
 	key = "snap"
 	key_third_person = "snaps"
-	message = "snaps their fingers"
-	message_param = "snaps their fingers at %t"
+	// message = "snaps their fingers"
+	// message_param = "snaps their fingers at %t"
+	message = "pstryka palcami"
+	message_param = "pstryka palcami na %t"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/snap/get_sound(mob/living/user)
@@ -539,24 +625,29 @@
 /datum/emote/living/fingergun
 	key = "fingergun"
 	key_third_person = "fingerguns"
-	message = "forms their fingers into the shape of a crude gun"
+	// message = "forms their fingers into the shape of a crude gun"
+	message = "układa palce w pistolet"
 	restraint_check = TRUE
 
 /datum/emote/living/fingergun/run_emote(mob/user, params)
 	. = ..()
 	var/obj/item/gun/ballistic/revolver/mime/N = new(user)
 	if(user.put_in_hands(N))
-		to_chat(user, "<span class='notice'>You form your fingers into a gun.</span>")
+	 // to_chat(user, "<span class='notice'>You form your fingers into a gun.</span>")
+		to_chat(user, "<span class='notice'>Układasz palce w pistolet.</span>")
 	else
 		qdel(N)
-		to_chat(user, "<span class='warning'>You don't have any free hands to make fingerguns with.</span>")
+	 // to_chat(user, "<span class='warning'>You don't have any free hands to make fingerguns with.</span>")
+		to_chat(user, "<span class='warning'>Nie masz wolnej dłoni do grożenia bronią!.</span>")
 
 /datum/emote/inhale
 	key = "inhale"
 	key_third_person = "inhales"
-	message = "breathes in"
+	// message = "breathes in"
+	message = "bierze wdech"
 
 /datum/emote/exhale
 	key = "exhale"
 	key_third_person = "exhales"
-	message = "breathes out"
+	// message = "breathes out"
+	message = "wydycha powietrze"
