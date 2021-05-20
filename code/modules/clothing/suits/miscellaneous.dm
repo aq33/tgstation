@@ -133,6 +133,10 @@
 	body_parts_covered = CHEST|ARMS|GROIN|LEGS|FEET
 	flags_inv = HIDESHOES|HIDEJUMPSUIT
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cad9e1ea90... Revert "Add's a reddit moment (#4281)" (#4353)
 /obj/item/clothing/suit/monkeysuit
 	name = "monkey suit"
 	desc = "A suit that looks like a primate."
