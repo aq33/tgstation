@@ -1,0 +1,4 @@
+author: aquila33-bot
+delete-after: true
+changes:
+  - rscdel: Removes the filter from the corg filter to space setup
