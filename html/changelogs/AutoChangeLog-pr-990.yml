@@ -1,0 +1,6 @@
+author: aquila33-bot
+delete-after: true
+changes:
+  - bugfix: Synths process chems as intended, and have the proper bitflags and traits
+  - balance: All synths revive on healing like IPCs, and military synths have additional
+      traits.
