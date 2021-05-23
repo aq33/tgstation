@@ -47,7 +47,6 @@
 	var/power = 3
 
 /obj/item/grenade/discogrenade/subgrenade/Initialize(mapload, duplicate = FALSE)
-	. = ..()
 	active = TRUE
 	spawn_new = duplicate
 	icon_state = initial(icon_state) + "_active"
@@ -57,7 +56,11 @@
 	addtimer(CALLBACK(src, .proc/prime), rand(10, 60))
 	randomiseLightColor()
 
+<<<<<<< HEAD
 /obj/item/grenade/discogrenade/subgrenade/prime()
+=======
+/obj/item/grenade/discogrenade/subgrenade/prime(mob/living/lanced_by)
+>>>>>>> 1fd12d2b9f... Disco Fever just got a little less feverish (#4377)
 	update_mob()
 	var/current_turf = get_turf(src)
 	if(!current_turf)
