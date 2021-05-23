@@ -56,11 +56,9 @@
 	addtimer(CALLBACK(src, .proc/prime), rand(10, 60))
 	randomiseLightColor()
 
-<<<<<<< HEAD
-/obj/item/grenade/discogrenade/subgrenade/prime()
-=======
+//obj/item/grenade/discogrenade/subgrenade/prime() test
 /obj/item/grenade/discogrenade/subgrenade/prime(mob/living/lanced_by)
->>>>>>> 1fd12d2b9f... Disco Fever just got a little less feverish (#4377)
+
 	update_mob()
 	var/current_turf = get_turf(src)
 	if(!current_turf)
