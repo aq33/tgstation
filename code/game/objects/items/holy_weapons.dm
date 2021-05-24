@@ -766,3 +766,18 @@
 	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb = list("bashes", "smacks", "whacks")
+
+/obj/item/nullrod/spear
+	name = "ancient spear"
+	desc = "An ancient spear made of brass, I mean gold, I mean bronze. It looks highly mechanical."
+	icon_state = "ratvarian_spear"
+	item_state = "ratvarian_spear"
+	lefthand_file = 'icons/mob/inhands/antag/clockwork_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/antag/clockwork_righthand.dmi'
+	icon = 'icons/obj/clockwork_objects.dmi'
+	slot_flags = ITEM_SLOT_BELT
+	armour_penetration = 10
+	sharpness = IS_SHARP_ACCURATE
+	w_class = WEIGHT_CLASS_BULKY
+	attack_verb = list("stabbed", "poked", "slashed", "clocked")
+	hitsound = 'sound/weapons/bladeslice.ogg'
