@@ -281,7 +281,18 @@
 	//Update the UI for them so it's smooth
 	ui_interact(usr)
 
+<<<<<<< HEAD:code/game/machinery/autolathe.dm
 /obj/machinery/autolathe/proc/update_viewer_statics()
+=======
+/obj/machinery/modular_fabricator/proc/resync_research()
+	for(var/obj/machinery/computer/rdconsole/RDC in orange(7, src))
+		RDC.stored_research.copy_research_to(stored_research)
+		update_static_data(usr)
+		say("Successfully synchronized with R&D server.")
+		return
+
+/obj/machinery/modular_fabricator/proc/update_viewer_statics()
+>>>>>>> 37df472605... Corrected a typo in the Exosuit Fabricator (#4385):code/game/machinery/fabricators/modular_fabricator.dm
 	for(var/mob/M in viewing_mobs)
 		if(QDELETED(M) || !(M.client || M.mind))
 			continue
