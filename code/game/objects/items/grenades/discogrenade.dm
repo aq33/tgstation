@@ -47,6 +47,7 @@
 	var/power = 3
 
 /obj/item/grenade/discogrenade/subgrenade/Initialize(mapload, duplicate = FALSE)
+	. = ..()
 	active = TRUE
 	spawn_new = duplicate
 	icon_state = initial(icon_state) + "_active"
