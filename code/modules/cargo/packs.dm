@@ -2270,8 +2270,13 @@
 
 /datum/supply_pack/critter/monkey
 	name = "Monkey Cube Crate"
+<<<<<<< HEAD
 	desc = "Stop monkeying around! Contains seven monkey cubes. Just add water!"
 	cost = 2000
+=======
+	desc = "Stop monkeying around! Contains five monkey cubes. Just add water!"
+	cost = 1000
+>>>>>>> 43eb978d09... Changes the monkey cube crate's description to accurately reflect its contents. (#4408)
 	contains = list (/obj/item/storage/box/monkeycubes)
 	crate_type = /obj/structure/closet/crate
 	crate_name = "monkey cube crate"
