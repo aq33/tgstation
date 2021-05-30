@@ -106,6 +106,13 @@
 		if(100 to 200)
 			. += "<span class='warning'>[t_He] [t_is] twitching ever so slightly.</span>"
 
+	// AQUILA EDIT
+	if(gender_ambiguous) //someone fucked up a gender reassignment surgery
+		if (gender == MALE)
+			. += "[t_He] has a strange feminine quality to [t_him].\n"
+		else
+			. += "[t_He] has a strange masculine quality to [t_him].\n"
+	//AQUILA EDIT END
 	var/appears_dead = 0
 	if(stat == DEAD || (HAS_TRAIT(src, TRAIT_FAKEDEATH)))
 		appears_dead = 1
@@ -325,7 +332,7 @@
 				. += "<span class='info'>Detected physiological traits:\n[traitstring]"
 
 		if(HAS_TRAIT(user, TRAIT_SECURITY_HUD))
-			if(!user.stat && user != src)
+			if(user.is_conscious() && user != src)
 			//|| !user.canmove || user.restrained()) Fluff: Sechuds have eye-tracking technology and sets 'arrest' to people that the wearer looks and blinks at.
 				var/criminal = "None"
 

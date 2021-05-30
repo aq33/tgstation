@@ -49,7 +49,14 @@
 			to_chat(user, "<span class='warning'>There's already a weapon installed.</span>")
 			return
 		user.transferItemToLoc(gun,src)
-		installed_gun = gun
+		if(istype(O, /obj/item/gun/energy/kinetic_accelerator))
+			var/obj/item/gun/energy/kinetic_accelerator/pka = O
+			pka.unique_frequency = TRUE
+			pka.holds_charge = TRUE
+			pka.attempt_reload()
+			installed_gun = pka
+		else
+			installed_gun = gun
 		var/list/gun_properties = gun.get_turret_properties()
 		to_chat(user, "<span class='notice'>You slide \the [gun] into the firing mechanism.</span>")
 		playsound(src, 'sound/items/Crowbar.ogg', 50, 1)
@@ -70,6 +77,11 @@
 
 /obj/item/integrated_circuit/manipulation/weapon_firing/attack_self(var/mob/user)
 	if(installed_gun)
+		if(istype(installed_gun, /obj/item/gun/energy/kinetic_accelerator))
+			var/obj/item/gun/energy/kinetic_accelerator/pka = installed_gun
+			pka.unique_frequency = FALSE
+			pka.holds_charge = FALSE
+			installed_gun = pka
 		installed_gun.forceMove(drop_location())
 		to_chat(user, "<span class='notice'>You slide \the [installed_gun] out of the firing mechanism.</span>")
 		size = initial(size)
@@ -114,6 +126,9 @@
 		return
 	if(!installed_gun.cell.charge)
 		return
+	if(istype(installed_gun, /obj/item/gun/energy/kinetic_accelerator))
+		var/obj/item/gun/energy/kinetic_accelerator/pka = installed_gun
+		pka.attempt_reload()
 	var/obj/item/ammo_casing/energy/shot = installed_gun.ammo_type[mode?2:1]
 	if(installed_gun.cell.charge < shot.e_cost)
 		return
@@ -497,6 +512,7 @@
 		"sheets to insert"	 	= IC_PINTYPE_NUMBER,
 		"Iron"				 	= IC_PINTYPE_NUMBER,
 		"Glass"					= IC_PINTYPE_NUMBER,
+		"Copper"				= IC_PINTYPE_NUMBER,
 		"Silver"				= IC_PINTYPE_NUMBER,
 		"Gold"					= IC_PINTYPE_NUMBER,
 		"Diamond"				= IC_PINTYPE_NUMBER,
@@ -511,6 +527,7 @@
 		"Total amount"		 	= IC_PINTYPE_NUMBER,
 		"Iron"				 	= IC_PINTYPE_NUMBER,
 		"Glass"					= IC_PINTYPE_NUMBER,
+		"Copper"				= IC_PINTYPE_NUMBER,
 		"Silver"				= IC_PINTYPE_NUMBER,
 		"Gold"					= IC_PINTYPE_NUMBER,
 		"Diamond"				= IC_PINTYPE_NUMBER,
@@ -532,13 +549,24 @@
 	power_draw_per_use = 40
 	ext_cooldown = 1
 	cooldown_per_use = 10
-	var/list/mtypes = list(/datum/material/iron, /datum/material/glass, /datum/material/silver, /datum/material/gold, /datum/material/diamond, /datum/material/plasma, /datum/material/uranium, /datum/material/bananium, /datum/material/titanium, /datum/material/bluespace)
+	var/list/mtypes = list(/datum/material/iron, /datum/material/glass, /datum/material/copper, /datum/material/silver, /datum/material/gold, /datum/material/diamond, /datum/material/plasma, /datum/material/uranium, /datum/material/bananium, /datum/material/titanium, /datum/material/bluespace)
 
 /obj/item/integrated_circuit/manipulation/matman/Initialize()
-	var/datum/component/material_container/materials = AddComponent(/datum/component/material_container,
-	list(/datum/material/iron, /datum/material/glass, /datum/material/silver, /datum/material/gold, /datum/material/diamond, /datum/material/plasma, /datum/material/uranium, /datum/material/bananium, /datum/material/titanium, /datum/material/bluespace), 0,
-	FALSE, /obj/item/stack, CALLBACK(src, .proc/is_insertion_ready), CALLBACK(src, .proc/AfterMaterialInsert))
-	materials.max_amount =100000
+	var/static/list/materials_list = list(
+		/datum/material/iron,
+		/datum/material/glass,
+		/datum/material/copper,
+		/datum/material/silver,
+		/datum/material/gold,
+		/datum/material/diamond,
+		/datum/material/plasma,
+		/datum/material/uranium,
+		/datum/material/bananium,
+		/datum/material/titanium,
+		/datum/material/bluespace,
+		/datum/material/plastic,
+		)
+	var/datum/component/material_container/materials = AddComponent(/datum/component/material_container, materials_list, max_amt=100000, allowed_types=/obj/item/stack, _precondition=CALLBACK(src, .proc/is_insertion_ready), _after_insert=CALLBACK(src, .proc/AfterMaterialInsert))
 	materials.precise_insertion = TRUE
 	.=..()
 

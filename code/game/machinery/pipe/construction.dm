@@ -21,6 +21,7 @@ Buildable meters
 	level = 2
 	var/piping_layer = PIPING_LAYER_DEFAULT
 	var/RPD_type
+	var/disposable = TRUE // Aquila Edit
 
 /obj/item/pipe/directional
 	RPD_type = PIPE_UNARY
@@ -43,7 +44,7 @@ Buildable meters
 /obj/item/pipe/Initialize(mapload, _pipe_type, _dir, obj/machinery/atmospherics/make_from)
 	if(make_from)
 		make_from_existing(make_from)
-	else
+	else if(_pipe_type) // Aquila Edit
 		pipe_type = _pipe_type
 		setDir(_dir)
 

@@ -2,7 +2,7 @@
 /obj/item/reagent_containers/glass
 	name = "glass"
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5, 10, 15, 20, 25, 30, 50)
+	possible_transfer_amounts = list(1, 5, 10, 15, 20, 25, 30, 50) // Aquila Edit
 	volume = 50
 	reagent_flags = OPENCONTAINER
 	spillable = TRUE
@@ -140,7 +140,7 @@
 	materials = list(/datum/material/glass=2500)
 	volume = 100
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5,10,15,20,25,30,50,100)
+	possible_transfer_amounts = list(1,5,10,15,20,25,30,50,100) // Aquila Edit
 
 /obj/item/reagent_containers/glass/beaker/plastic
 	name = "x-large beaker"
@@ -149,7 +149,7 @@
 	materials = list(/datum/material/glass=2500, /datum/material/plastic=3000)
 	volume = 120
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5,10,15,20,25,30,60,120)
+	possible_transfer_amounts = list(1,5,10,15,20,25,30,60,120) // Aquila Edit
 
 /obj/item/reagent_containers/glass/beaker/plastic/update_icon()
 	icon_state = "beakerlarge" // hack to lets us reuse the large beaker reagent fill states
@@ -163,7 +163,7 @@
 	materials = list(/datum/material/glass=2500, /datum/material/plastic=3000, /datum/material/gold=1000, /datum/material/titanium=1000)
 	volume = 180
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5,10,15,20,25,30,60,120,180)
+	possible_transfer_amounts = list(1,5,10,15,20,25,30,60,120,180) // Aquila Edit
 
 /obj/item/reagent_containers/glass/beaker/noreact
 	name = "cryostasis beaker"
@@ -184,7 +184,7 @@
 	materials = list(/datum/material/glass = 5000, /datum/material/plasma = 3000, /datum/material/diamond = 1000, /datum/material/bluespace = 1000)
 	volume = 300
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5,10,15,20,25,30,50,100,300)
+	possible_transfer_amounts = list(1,5,10,15,20,25,30,50,100,300) // Aquila Edit
 
 /obj/item/reagent_containers/glass/beaker/cryoxadone
 	list_reagents = list(/datum/reagent/medicine/cryoxadone = 30)
@@ -225,7 +225,7 @@
 	materials = list(/datum/material/iron=200)
 	w_class = WEIGHT_CLASS_NORMAL
 	amount_per_transfer_from_this = 20
-	possible_transfer_amounts = list(5,10,15,20,25,30,50,70)
+	possible_transfer_amounts = list(1,5,10,15,20,25,30,50,70) // Aquila Edit
 	volume = 70
 	flags_inv = HIDEHAIR
 	slot_flags = ITEM_SLOT_HEAD
@@ -408,7 +408,7 @@
 	desc = "A specially formed bowl of ancient design. It is possible to crush or juice items placed in it using a pestle; however the process, unlike modern methods, is slow and physically exhausting. Alt click to eject the item."
 	icon_state = "mortar"
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5, 10, 15, 20, 25, 30, 50, 100)
+	possible_transfer_amounts = list(1, 5, 10, 15, 20, 25, 30, 50, 100) // Aquila Edit
 	volume = 100
 	reagent_flags = OPENCONTAINER
 	spillable = TRUE

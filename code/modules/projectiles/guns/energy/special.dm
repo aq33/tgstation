@@ -342,6 +342,10 @@
 	desc = "A weapon that can only be used to its full potential by the truly robust."
 	pin = /obj/item/firing_pin
 	block_upgrade_walk = 1
+	w_class = WEIGHT_CLASS_BULKY
+
+/obj/item/gun/energy/temperature/pin
+	pin = /obj/item/firing_pin
 
 /obj/item/gun/energy/laser/instakill
 	name = "instakill rifle"

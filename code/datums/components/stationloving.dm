@@ -16,13 +16,13 @@
 	src.allow_death = allow_death
 	check_in_bounds() // Just in case something is being created outside of station/centcom
 
-/datum/component/stationloving/InheritComponent(datum/component/stationloving/newc, original, list/arguments)
+/datum/component/stationloving/InheritComponent(datum/component/stationloving/newc, original, _inform_admins, allow_death)
 	if (original)
-		if (istype(newc))
+		if (newc)
 			inform_admins = newc.inform_admins
 			allow_death = newc.allow_death
-		else if (LAZYLEN(arguments))
-			inform_admins = arguments[1]
+		else
+			inform_admins = _inform_admins
 
 /datum/component/stationloving/proc/relocate()
 	var/targetturf = find_safe_turf()
@@ -57,7 +57,7 @@
 /datum/component/stationloving/proc/in_bounds()
 	var/static/list/allowed_shuttles = typecacheof(list(/area/shuttle/syndicate, /area/shuttle/escape, /area/shuttle/pod_1, /area/shuttle/pod_2, /area/shuttle/pod_3, /area/shuttle/pod_4))
 	var/static/list/disallowed_centcom_areas = typecacheof(list(/area/abductor_ship, /area/awaymission/errorroom))
-	var/turf/T = get_turf(parent)
+	var/turf/T = get_turf_global(parent) // Aquila Edit
 	if (!T)
 		return FALSE
 	var/area/A = T.loc
