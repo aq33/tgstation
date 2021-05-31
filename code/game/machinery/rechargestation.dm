@@ -101,10 +101,14 @@
 	..()
 	update_icon()
 
-/obj/machinery/recharge_station/proc/process_occupant()
+/obj/machinery/recharge_station/proc/process_occupant(delta_time)
 	if(!occupant)
 		return
+<<<<<<< HEAD
 	SEND_SIGNAL(occupant, COMSIG_PROCESS_BORGCHARGER_OCCUPANT, recharge_speed, repairs)
+=======
+	SEND_SIGNAL(occupant, COMSIG_PROCESS_BORGCHARGER_OCCUPANT, recharge_speed * delta_time / 2, repairs)
+>>>>>>> 5a317a6422... fix ethereals not charging with borg chargers (#4433)
 
 /obj/machinery/recharge_station/proc/restock_modules()
 	if(occupant)
