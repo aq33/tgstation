@@ -23,9 +23,17 @@ GLOBAL_VAR(restart_counter)
 
 	TgsNew(minimum_required_security_level = TGS_SECURITY_TRUSTED)
 
+	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER])
+
 	GLOB.revdata = new
 
+<<<<<<< HEAD
 	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER])
+=======
+	InitTgs()
+
+	config.LoadMOTD()
+>>>>>>> 1572b70929... Fixes runtime in configuration.dm (#4352)
 
 	load_admins()
 	load_mentors()
