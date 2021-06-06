@@ -59,6 +59,7 @@
 	var/stun_all = 0		//if this is active, the turret shoots everything that isn't security or head of staff
 	var/check_anomalies = 1	//checks if it can shoot at unidentified lifeforms (ie xenos)
 	var/shoot_unloyal = 0	//checks if it can shoot people that aren't loyalty implantd
+	var/target_cyborgs = 0	//checks if it can shoot cyborgs regardless of faction
 
 	var/attacked = 0		//if set to 1, the turret gets pissed off and shoots at people nearby (unless they have sec access!)
 
@@ -175,6 +176,7 @@
 		dat += "Neutralize All Non-Security and Non-Command Personnel: <A href='?src=[REF(src)];operation=shootall'>[stun_all ? "Yes" : "No"]</A><BR>"
 		dat += "Neutralize All Unidentified Life Signs: <A href='?src=[REF(src)];operation=checkxenos'>[check_anomalies ? "Yes" : "No"]</A><BR>"
 		dat += "Neutralize All Non-Loyalty Implanted Personnel: <A href='?src=[REF(src)];operation=checkloyal'>[shoot_unloyal ? "Yes" : "No"]</A><BR>"
+		dat += "Neutralize All Cyborgs: <A href='?src=[REF(src)];operation=checkborg'>[target_cyborgs ? "Yes" : "No"]</A><BR>"
 	if(issilicon(user))
 		if(!manual_control)
 			var/mob/living/silicon/S = user
@@ -216,6 +218,8 @@
 				check_anomalies = !check_anomalies
 			if("checkloyal")
 				shoot_unloyal = !shoot_unloyal
+			if("checkborg")
+				target_cyborgs = !target_cyborgs
 			if("manual")
 				if(issilicon(usr) && !manual_control)
 					give_control(usr)
@@ -380,6 +384,10 @@
 			var/mob/living/silicon/sillycone = A
 
 			if(ispAI(A))
+				continue
+
+			if(target_cyborgs && sillycone.stat != DEAD && iscyborg(sillycone))
+				targets += sillycone
 				continue
 
 			if(sillycone.stat || in_faction(sillycone))
@@ -568,13 +576,14 @@
 	A.fire()
 	return A
 
-/obj/machinery/porta_turret/proc/setState(on, mode)
+/obj/machinery/porta_turret/proc/setState(on, mode, shoot_cyborgs)
 	if(controllock)
 		return
 	src.on = on
 	if(!on && !always_up)
 		popDown()
 	src.mode = mode
+	src.target_cyborgs = shoot_cyborgs
 	power_change()
 
 
@@ -587,7 +596,7 @@
 	var/obj/machinery/porta_turret/P = target
 	if(!istype(P))
 		return
-	P.setState(P.on,!P.mode)
+	P.setState(P.on, !P.mode, P.target_cyborgs)
 
 /datum/action/turret_quit
 	name = "Release Control"
@@ -646,7 +655,11 @@
 	installation = null
 	always_up = 1
 	use_power = NO_POWER_USE
+<<<<<<< HEAD
 	has_cover = 0
+=======
+	has_cover = FALSE
+>>>>>>> dd3e77e577... initial fix (#4477)
 	scan_range = 9
 	req_access = list(ACCESS_SYNDICATE)
 	mode = TURRET_LETHAL
@@ -960,7 +973,7 @@
 
 /obj/machinery/turretid/proc/updateTurrets()
 	for (var/obj/machinery/porta_turret/aTurret in turrets)
-		aTurret.setState(enabled, lethal)
+		aTurret.setState(enabled, lethal, shoot_cyborgs)
 	update_icon()
 
 /obj/machinery/turretid/power_change()
