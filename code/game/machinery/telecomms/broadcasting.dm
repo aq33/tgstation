@@ -119,8 +119,13 @@
 		"spans" = spans,
 		"mods" = message_mods
 	)
+<<<<<<< HEAD
 	var/turf/T = get_turf_global(source) // Aquila Edit
 	levels = list(T.z)
+=======
+	var/turf/T = get_turf(source)
+	levels = list(T.get_virtual_z_level())
+>>>>>>> bfa912c849... Virtual Z-Levels (#4202)
 
 /datum/signal/subspace/vocal/copy()
 	var/datum/signal/subspace/vocal/copy = new(source, frequency, virt, language)
@@ -153,7 +158,7 @@
 			// Syndicate radios can hear all well-known radio channels
 			if (num2text(frequency) in GLOB.reverseradiochannels)
 				for(var/obj/item/radio/R in GLOB.all_radios["[FREQ_SYNDICATE]"])
-					if(R.can_receive(FREQ_SYNDICATE, list(R.z)))
+					if(R.can_receive(FREQ_SYNDICATE, list(R.get_virtual_z_level())))
 						radios |= R
 
 		if (TRANSMISSION_RADIO)

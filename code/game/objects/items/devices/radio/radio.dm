@@ -258,7 +258,7 @@
 	var/turf/position = get_turf(src)
 	for(var/obj/item/jammer/jammer in GLOB.active_jammers)
 		var/turf/jammer_turf = get_turf(jammer)
-		if(position?.z == jammer_turf.z && (get_dist(position, jammer_turf) <= jammer.range))
+		if(position?.get_virtual_z_level() == jammer_turf.get_virtual_z_level() && (get_dist(position, jammer_turf) <= jammer.range))
 			return
 
 	// Determine the identity information which will be attached to the signal.
@@ -287,14 +287,19 @@
 	addtimer(CALLBACK(src, .proc/backup_transmission, signal), 20)
 
 /obj/item/radio/proc/backup_transmission(datum/signal/subspace/vocal/signal)
+<<<<<<< HEAD
 	var/turf/T = get_turf_global(src) // Aquila Edit
 	if (signal.data["done"] && (T.z in signal.levels))
+=======
+	var/turf/T = get_turf(src)
+	if (signal.data["done"] && (T.get_virtual_z_level() in signal.levels))
+>>>>>>> bfa912c849... Virtual Z-Levels (#4202)
 		return
 
 	// Okay, the signal was never processed, send a mundane broadcast.
 	signal.data["compression"] = 0
 	signal.transmission_method = TRANSMISSION_RADIO
-	signal.levels = list(T.z)
+	signal.levels = list(T.get_virtual_z_level())
 	signal.broadcast()
 
 /obj/item/radio/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods = list())
@@ -323,8 +328,13 @@
 	if (freq == FREQ_CENTCOM)
 		return independent  // hard-ignores the z-level check
 	if (!(0 in level))
+<<<<<<< HEAD
 		var/turf/position = get_turf_global(src) // Aquila Edit
 		if(!position || !(position.z in level))
+=======
+		var/turf/position = get_turf(src)
+		if(!position || !(position.get_virtual_z_level() in level))
+>>>>>>> bfa912c849... Virtual Z-Levels (#4202)
 			return FALSE
 
 	// allow checks: are we listening on that frequency?
