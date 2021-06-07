@@ -32,5 +32,5 @@ GLOBAL_LIST(round_join_declarees)
 		GLOB.round_join_declarees = list()
 		GLOB.round_join_declarees.len = 35
 	LAZYOR(GLOB.round_join_declarees[treshold], sender.mention)
-	check_tgs_declare_notify())
+	check_tgs_declare_notify()
 	return "Powiadomię cię jezeli dołączy, lub zadeklaruje się przynajmniej [treshold] graczy."
