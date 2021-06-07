@@ -13,9 +13,8 @@ GLOBAL_LIST(round_join_declarees)
 			current_players += declarees.len
 			declarees.len = 0
 		
-		send2irc("Notice", "[to_notify.Join(", ")] jest obecnie grających lub zadeklarowanych [current_players] graczy.")
-		return TRUE
-	return FALSE
+		if(to_notify.len > 0)
+			send2irc("Notice", "[to_notify.Join(", ")] jest obecnie grających lub zadeklarowanych [current_players] graczy.")
 	
 /datum/tgs_chat_command/declare
 	name = "declare"
@@ -33,5 +32,5 @@ GLOBAL_LIST(round_join_declarees)
 		GLOB.round_join_declarees = list()
 		GLOB.round_join_declarees.len = 35
 	LAZYOR(GLOB.round_join_declarees[treshold], sender.mention)
-	if(!check_tgs_declare_notify())
-		return "Powiadomię cię jezeli dołączy, lub zadeklaruje się przynajmniej [treshold] graczy."
+	check_tgs_declare_notify())
+	return "Powiadomię cię jezeli dołączy, lub zadeklaruje się przynajmniej [treshold] graczy."
