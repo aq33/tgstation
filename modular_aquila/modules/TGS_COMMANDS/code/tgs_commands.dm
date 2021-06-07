@@ -10,8 +10,8 @@ GLOBAL_LIST(round_join_declarees)
 			var/list/declarees = GLOB.round_join_declarees[i]
 			for(var/mention in declarees)
 				to_notify |= mention
-			current_players += declarees[i]
-			declarees[i] = 0
+			current_players += declarees.len
+			declarees.len = 0
 		
 		send2irc("Notice", "[to_notify.Join(", ")] jest obecnie grających lub zadeklarowanych [current_players] graczy.")
 		return TRUE
