@@ -7,7 +7,9 @@ GLOBAL_LIST(round_join_declarees)
 		for(var/i in GLOB.round_join_declarees)
 			if(LAZYLEN(GLOB.round_join_declarees[i]) == 0)
 				continue
-			var/list/declarees = GLOB.round_join_declarees[i].Copy()
+			//ehh, any better way to do this?
+			var/list/declarees_old = GLOB.round_join_declarees[i]
+			var/list/declarees = declarees_old.Copy()
 			if(i > current_players + declarees.len)
 				break
 			current_players += declarees.len
