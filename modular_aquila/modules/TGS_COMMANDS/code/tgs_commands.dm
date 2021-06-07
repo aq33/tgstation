@@ -7,9 +7,11 @@ GLOBAL_LIST(round_join_declarees)
 		for(var/i in GLOB.round_join_declarees)
 			if(LAZYLEN(GLOB.round_join_declarees[i]) == 0)
 				continue
-			for(var/mention in GLOB.round_join_declarees[i])
+			var/list/declarees = GLOB.round_join_declarees[i]
+			for(var/mention in declarees)
 				to_notify |= mention
-			current_players += GLOB.round_join_declarees[i].len
+			current_players += declarees[i]
+			declarees[i] = 0
 		
 		send2irc("Notice", "[to_notify.Join(", ")] jest obecnie grających lub zadeklarowanych [current_players] graczy.")
 		return TRUE
