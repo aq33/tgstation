@@ -4,17 +4,15 @@ GLOBAL_LIST(round_join_declarees)
 	if(LAZYLEN(GLOB.round_join_declarees))
 		var/list/to_notify = list()
 		var/current_players = SSticker.totalPlayers
-		for(var/i in GLOB.round_join_declarees)
+		for(var/i in length(GLOB.round_join_declarees))
 			if(LAZYLEN(GLOB.round_join_declarees[i]) == 0)
 				continue
-			//ehh, any better way to do this?
-			var/list/declarees_old = GLOB.round_join_declarees[i]
-			var/list/declarees = declarees_old.Copy()
+			var/list/declarees = GLOB.round_join_declarees[i]
 			if(i > current_players + declarees.len)
 				break
 			current_players += declarees.len
-			for(var/j in declarees)
-				to_notify += declarees[j]
+			for(var/declaree in declarees)
+				to_notify += declaree
 			declarees.len = 0
 		
 		if(to_notify.len > 0)
@@ -30,6 +28,7 @@ GLOBAL_LIST(round_join_declarees)
 	var/treshold = text2num(params)
 	if(treshold == null || treshold <= 0)
 		return "Musisz podać minimalną liczbę graczy przy której dołączysz."
+	treshold = round(treshold)
 	if(treshold > 35)
 		return "Maksymalna wartośc N to 35."
 	if(GLOB.round_join_declarees == null)
