@@ -3272,4 +3272,5 @@
 #include "modular_aquila\modules\NULLCRATE\code\packs.dm"
 #include "modular_aquila\modules\NULLCRATE\code\uplink_items.dm"
 #include "modular_aquila\modules\SURGERY\code\gender_reasigment\gender_reasigment.dm"
+#include "modular_aquila\modules\TGS_COMMANDS\code\tgs_commands.dm"
 // END_INCLUDE
