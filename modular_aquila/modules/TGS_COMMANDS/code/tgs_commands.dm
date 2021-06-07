@@ -30,6 +30,7 @@ GLOBAL_LIST(round_join_declarees)
 	if(treshold > 35)
 		return "Maksymalna wartośc N to 35."
 	if(GLOB.round_join_declarees == null)
+		GLOB.round_join_declarees = list()
 		GLOB.round_join_declarees.len = 35
 	LAZYOR(GLOB.round_join_declarees[treshold], sender.mention)
 	if(!check_tgs_declare_notify())
