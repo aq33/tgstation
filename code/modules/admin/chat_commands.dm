@@ -28,7 +28,13 @@
 		return
 	last_irc_check = rtod
 	var/server = CONFIG_GET(string/server)
+<<<<<<< HEAD
 	return "[GLOB.round_id ? "Round #[GLOB.round_id]: " : ""][GLOB.clients.len] players on [SSmapping.config.map_name], Mode: [GLOB.master_mode]; Round [SSticker.HasRoundStarted() ? (SSticker.IsRoundInProgress() ? "Active" : "Finishing") : "Starting"] -- [server ? server : "<byond://[world.internet_address]:[world.port]>"]" // Aquila Edit
+=======
+	return "[GLOB.round_id ? "Round #[GLOB.round_id]: " : ""][GLOB.clients.len] players on [SSmapping.config.map_name], Mode: [GLOB.master_mode]; Round [SSticker.HasRoundStarted() ? (SSticker.IsRoundInProgress() ? "Active" : "Finishing") : "Starting"] -- [server ? server : "[world.internet_address]:[world.port]"]" 
+
+/** -- Not for use within BeeStation
+>>>>>>> 8e55d7fbf5... Comments out multiple TGS admin commands (#4484)
 /datum/tgs_chat_command/ahelp
 	name = "ahelp"
 	help_text = "<ckey|ticket #> <message|ticket <close|resolve|icissue|reject|reopen <ticket #>|list>>"
@@ -50,6 +56,7 @@
 	var/res = IrcPm(target, all_params.Join(" "), sender.friendly_name)
 	if(res != "Message Successful")
 		return res
+**/
 
 /datum/tgs_chat_command/namecheck
 	name = "namecheck"
@@ -86,6 +93,7 @@ GLOBAL_LIST(round_end_notifiees)
 	GLOB.round_end_notifiees[sender.mention] = TRUE
 	return "I will notify [sender.mention] when the round ends."
 
+/** -- Not for use within BeeStation
 /datum/tgs_chat_command/sdql
 	name = "sdql"
 	help_text = "Runs an SDQL query"
@@ -116,6 +124,7 @@ GLOBAL_LIST(round_end_notifiees)
 /datum/tgs_chat_command/reload_admins/proc/ReloadAsync()
 	set waitfor = FALSE
 	load_admins()
+<<<<<<< HEAD
 
 // AQUILA EDIT
 /datum/tgs_chat_command/ircramranch
@@ -134,3 +143,6 @@ GLOBAL_LIST(round_end_notifiees)
 	. += "; Czas rundy: [worldtime2text()]"
 	. += " -- <byond://[world.internet_address]:[world.port]>"
 // AQUILA EDIT
+=======
+**/
+>>>>>>> 8e55d7fbf5... Comments out multiple TGS admin commands (#4484)
