@@ -17,7 +17,7 @@ GLOBAL_LIST(round_join_declarees)
 			declarees.len = 0
 		
 		if(to_notify.len > 0)
-			send2chat("Notice", "[to_notify.Join(", ")] jest obecnie grających lub zadeklarowanych [current_players] graczy.")
+			send2chat("[to_notify.Join(", ")] jest obecnie grających lub zadeklarowanych [current_players] graczy.")
 	
 /datum/tgs_chat_command/declare
 	name = "declare"
