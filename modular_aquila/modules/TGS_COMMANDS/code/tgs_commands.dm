@@ -1,15 +1,16 @@
 GLOBAL_LIST(round_join_declarees)
 	
 /proc/check_tgs_declare_notify()
-	if(LAZYLEN(GLOB.round_join_declarees))
+	if(LAZYLEN(GLOB.round_join_declarees) > 0)
 		var/list/to_notify = list()
 		var/current_players = SSticker.totalPlayers
-		for(var/i in length(GLOB.round_join_declarees))
+		for(var/i = 1; i <= length(GLOB.round_join_declarees); i++)
 			if(LAZYLEN(GLOB.round_join_declarees[i]) == 0)
 				continue
 			var/list/declarees = GLOB.round_join_declarees[i]
 			if(i > current_players + declarees.len)
 				break
+			
 			current_players += declarees.len
 			for(var/declaree in declarees)
 				to_notify += declaree
