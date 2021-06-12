@@ -14,7 +14,6 @@
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	clothing_flags = NOTCONSUMABLE
 	var/rad_count = 0
 	var/rad_record = 0
 	var/grace_count = 0
