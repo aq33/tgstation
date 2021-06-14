@@ -363,7 +363,7 @@
 			component.rename_component(usr)
 			if(component.assembly)
 				component.assembly.add_allowed_scanner(usr.ckey)
-		
+
 		if(href_list["interact"])
 			var/obj/item/I = usr.get_active_held_item()
 			if(istype(I))
@@ -565,12 +565,10 @@
 
 	switch(type_to_use)
 		if("repair")
-			to_chat(world,"Integrity: [obj_integrity] / [max_integrity]")
 			if(obj_integrity < max_integrity)
 				obj_integrity = min(obj_integrity + 20,max_integrity)
-				to_chat(world,"Integrity: [obj_integrity] / [max_integrity]")
+				to_chat(user,"Integrity: [obj_integrity] / [max_integrity]")
 				to_chat(user,"<span class='notice'>You fix the dents and scratches of the assembly.</span>")
-				to_chat(world,user)
 				return TRUE
 
 			else
