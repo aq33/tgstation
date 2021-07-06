@@ -1,5 +1,5 @@
 /datum/job/atmos
-	title = "Atmospheric Technician"
+	title = "Inżynier Atmosferyki"
 	flag = ATMOSTECH
 	department_head = list("Chief Engineer")
 	department_flag = ENGSEC

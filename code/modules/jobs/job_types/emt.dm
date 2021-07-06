@@ -1,5 +1,5 @@
 /datum/job/emt
-	title = "Paramedic"
+	title = "Paramedyk"
 	flag = EMT
 	department_head = list("Chief Medical Officer")
 	department_flag = MEDSCI

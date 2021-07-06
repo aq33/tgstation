@@ -1,5 +1,5 @@
 /datum/job/bartender
-	title = "Bartender"
+	title = "Barman"
 	flag = BARTENDER
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN

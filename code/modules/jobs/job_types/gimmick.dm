@@ -1,5 +1,5 @@
 /datum/job/gimmick //gimmick var must be set to true for all gimmick jobs BUT the parent
-	title = "Gimmick"
+	title = "Cywilne"
 	flag = GIMMICK
 	department_flag = CIVILIAN
 	faction = "Station"
@@ -19,7 +19,7 @@
 	display_order = JOB_DISPLAY_ORDER_ASSISTANT
 
 /datum/job/gimmick/barber
-	title = "Barber"
+	title = "Fryzjer"
 	flag = BARBER
 	outfit = /datum/outfit/job/gimmick/barber
 	access = list(ACCESS_MORGUE, ACCESS_MAINT_TUNNELS)
@@ -39,7 +39,7 @@
 	l_pocket = /obj/item/razor/straightrazor
 
 /datum/job/gimmick/magician
-	title = "Stage Magician"
+	title = "Magik"
 	flag = MAGICIAN
 	outfit = /datum/outfit/job/gimmick/magician
 	access = list(ACCESS_THEATRE, ACCESS_MAINT_TUNNELS)
@@ -62,7 +62,7 @@
 	backpack_contents = list(/obj/item/choice_beacon/magic=1)
 
 /datum/job/gimmick/hobo
-	title = "Debtor"
+	title = "Dłużnik"
 	flag = HOBO
 	outfit = /datum/outfit/job/gimmick/hobo
 	access = list(ACCESS_MAINT_TUNNELS)
@@ -95,7 +95,7 @@
 
 
 /datum/job/gimmick/shrink
-	title = "Psychiatrist"
+	title = "Psychiastra"
 	flag = SHRINK
 	outfit = /datum/outfit/job/gimmick/shrink
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MEDICAL)

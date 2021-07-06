@@ -1,5 +1,5 @@
 /datum/job/roboticist
-	title = "Roboticist"
+	title = "Robotyk"
 	flag = ROBOTICIST
 	department_head = list("Research Director")
 	department_flag = MEDSCI

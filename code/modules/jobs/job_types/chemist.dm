@@ -1,5 +1,5 @@
 /datum/job/chemist
-	title = "Chemist"
+	title = "Chemik"
 	flag = CHEMIST
 	department_head = list("Chief Medical Officer")
 	department_flag = MEDSCI
