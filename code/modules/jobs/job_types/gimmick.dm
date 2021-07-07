@@ -95,7 +95,7 @@
 
 
 /datum/job/gimmick/shrink
-	title = "Psychiastra"
+	title = "Psychiatra"
 	flag = SHRINK
 	outfit = /datum/outfit/job/gimmick/shrink
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MEDICAL)

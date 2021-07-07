@@ -1,5 +1,5 @@
 /datum/job/cargo_tech
-	title = "Technik Logistyki"
+	title = "Magazynier"
 	flag = CARGOTECH
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
