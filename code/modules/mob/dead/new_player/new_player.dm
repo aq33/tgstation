@@ -44,9 +44,9 @@
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 		switch(ready)
 			if(PLAYER_NOT_READY)
-				output += "<p>\[ [LINKIFY_READY("Gotowy", PLAYER_READY_TO_PLAY)] | <b >Nie Gotowy </b> | [LINKIFY_READY("Obserwuj", PLAYER_READY_TO_OBSERVE)] \]</p>"
+				output += "<p>\[ [LINKIFY_READY("Gotowy", PLAYER_READY_TO_PLAY)] | <b >Nie Gotowy</b> | [LINKIFY_READY("Obserwuj", PLAYER_READY_TO_OBSERVE)] \]</p>"
 			if(PLAYER_READY_TO_PLAY)
-				output += "<p>\[ <b> Gotowy </b> | [LINKIFY_READY("Nie Gotowy", PLAYER_NOT_READY)] | [LINKIFY_READY("Obserwuj", PLAYER_READY_TO_OBSERVE)] \]</p>"
+				output += "<p>\[ <b>Gotowy</b> | [LINKIFY_READY("Nie Gotowy", PLAYER_NOT_READY)] | [LINKIFY_READY("Obserwuj", PLAYER_READY_TO_OBSERVE)] \]</p>"
 			if(PLAYER_READY_TO_OBSERVE)
 				output += "<p>\[ [LINKIFY_READY("Gotowy", PLAYER_READY_TO_PLAY)] | [LINKIFY_READY("Nie Gotowy", PLAYER_NOT_READY)] | <b> Obserwuj </b> \]</p>"
 	else
@@ -202,7 +202,7 @@
 	if(!force_observe)
 		this_is_like_playing_right = alert(src,"Na pewno chcesz obserwować? Nie będziesz mógł grać podczas tej rundy!","Player Setup","Tak","Nie")
 
-	if(QDELETED(src) || !src.client || this_is_like_playing_right != "Yes")
+	if(QDELETED(src) || !src.client || this_is_like_playing_right != "Tak")
 		ready = PLAYER_NOT_READY
 		src << browse(null, "window=playersetup") //closes the player setup window
 		new_player_panel()
