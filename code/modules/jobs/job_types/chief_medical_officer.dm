@@ -1,5 +1,5 @@
 /datum/job/cmo
-	title = "Chief Medical Officer"
+	title = "Ordynator"
 	flag = CMO_JF
 	department_head = list("Captain")
 	department_flag = MEDSCI

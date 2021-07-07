@@ -1,5 +1,5 @@
 /datum/job/virologist
-	title = "Virologist"
+	title = "Wirolog"
 	flag = VIROLOGIST
 	department_head = list("Chief Medical Officer")
 	department_flag = MEDSCI

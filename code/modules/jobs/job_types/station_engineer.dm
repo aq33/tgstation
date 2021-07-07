@@ -1,5 +1,5 @@
 /datum/job/engineer
-	title = "Station Engineer"
+	title = "Inżynier"
 	flag = ENGINEER
 	department_head = list("Chief Engineer")
 	department_flag = ENGSEC

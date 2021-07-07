@@ -1,5 +1,5 @@
 /datum/job/mining
-	title = "Shaft Miner"
+	title = "Górnik"
 	flag = MINER
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
