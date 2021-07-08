@@ -360,11 +360,11 @@
 			return "Code Scotch"
 
 /proc/get_all_jobs()
-	return list("Assistant", "Kapitan", "Kadrowy", "Barman", "Kucharz", "Botanik", "Kwartermistrz", "Magazynier",
-				"Górnik", "Klaun", "Mim", "Woźny", "Kurator", "Prawnik", "Kapłan", "Główny Inżynier", "Inżynier",
-				"Inżynier Atmosferyki", "Ordynator", "Lekarz", "Chemik", "Genetyk", "Wirolog", "Paramedyk",
-				"Dyrektor Naukowy", "Naukowiec", "Robotyk", "Szef Ochrony", "Naczelnik", "Detektyw", "Funkcjonariusz Ochrony", "Lekarz Ochrony",
-				"Aspirant", "Psycholog", "Fryzjer")
+	return list("Assistant", "Captain", "Head of Personnel", "Bartender", "Cook", "Botanist", "Quartermaster", "Cargo Technician",
+				"Shaft Miner", "Clown", "Mime", "Janitor", "Curator", "Lawyer", "Chaplain", "Chief Engineer", "Station Engineer",
+				"Atmospheric Technician", "Chief Medical Officer", "Medical Doctor", "Chemist", "Geneticist", "Virologist", "Paramedic",
+				"Research Director", "Scientist", "Roboticist", "Head of Security", "Warden", "Detective", "Security Officer", "Brig Physician",
+				"Deputy", "Psychologist", "Barber")
 
 /proc/get_all_job_icons() //For all existing HUD icons
 	return get_all_jobs() + list("Prisoner", "King")
