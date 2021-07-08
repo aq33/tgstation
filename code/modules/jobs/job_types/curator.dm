@@ -1,5 +1,5 @@
 /datum/job/curator
-	title = "Kurator"
+	title = "Curator"
 	flag = CURATOR
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN

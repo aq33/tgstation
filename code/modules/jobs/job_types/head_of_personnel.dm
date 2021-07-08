@@ -1,5 +1,5 @@
 /datum/job/hop
-	title = "Kadrowy"
+	title = "Head of Personnel"
 	flag = HOP
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list("Captain")

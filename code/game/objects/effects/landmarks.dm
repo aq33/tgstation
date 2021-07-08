@@ -66,123 +66,123 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/janitor
-	name = "Woźny"
+	name = "Janitor"
 	icon_state = "Janitor"
 
 /obj/effect/landmark/start/cargo_technician
-	name = "Magazynier"
+	name = "Cargo Technician"
 	icon_state = "Cargo Technician"
 
 /obj/effect/landmark/start/bartender
-	name = "Barman"
+	name = "Bartender"
 	icon_state = "Bartender"
 
 /obj/effect/landmark/start/clown
-	name = "Klaun"
+	name = "Clown"
 	icon_state = "Clown"
 
 /obj/effect/landmark/start/mime
-	name = "Mim"
+	name = "Mime"
 	icon_state = "Mime"
 
 /obj/effect/landmark/start/quartermaster
-	name = "Kwartermistrz"
+	name = "Quartermaster"
 	icon_state = "Quartermaster"
 
 /obj/effect/landmark/start/atmospheric_technician
-	name = "Inżynier Atmosferyki"
+	name = "Atmospheric Technician"
 	icon_state = "Atmospheric Technician"
 
 /obj/effect/landmark/start/cook
-	name = "Kucharz"
+	name = "Cook"
 	icon_state = "Cook"
 
 /obj/effect/landmark/start/shaft_miner
-	name = "Górnik"
+	name = "Shaft Miner"
 	icon_state = "Shaft Miner"
 
 /obj/effect/landmark/start/security_officer
-	name = "Ochroniarz"
+	name = "Security Officer"
 	icon_state = "Security Officer"
 
 /obj/effect/landmark/start/botanist
-	name = "Botanik"
+	name = "Botanist"
 	icon_state = "Botanist"
 
 /obj/effect/landmark/start/head_of_security
-	name = "Szef Ochrony"
+	name = "Head of Security"
 	icon_state = "Head of Security"
 
 /obj/effect/landmark/start/captain
-	name = "Kapitan"
+	name = "Captain"
 	icon_state = "Captain"
 
 /obj/effect/landmark/start/detective
-	name = "Detektyw"
+	name = "Detective"
 	icon_state = "Detective"
 
 /obj/effect/landmark/start/warden
-	name = "Naczelnik"
+	name = "Warden"
 	icon_state = "Warden"
 
 /obj/effect/landmark/start/chief_engineer
-	name = "Główny Inżynier"
+	name = "Chief Engineer"
 	icon_state = "Chief Engineer"
 
 /obj/effect/landmark/start/head_of_personnel
-	name = "Kadrowy"
+	name = "Head of Personnel"
 	icon_state = "Head of Personnel"
 
 /obj/effect/landmark/start/librarian
-	name = "Kurator"
+	name = "Curator"
 	icon_state = "Curator"
 
 /obj/effect/landmark/start/lawyer
-	name = "Prawnik"
+	name = "Lawyer"
 	icon_state = "Lawyer"
 
 /obj/effect/landmark/start/station_engineer
-	name = "Inżynier"
+	name = "Station Engineer"
 	icon_state = "Station Engineer"
 
 /obj/effect/landmark/start/medical_doctor
-	name = "Lekarz"
+	name = "Medical Doctor"
 	icon_state = "Medical Doctor"
 
 /obj/effect/landmark/start/emt
-	name = "Paramedyk"
+	name = "Paramedic"
 	icon_state = "Medical Doctor"
 
 /obj/effect/landmark/start/scientist
-	name = "Naukowiec"
+	name = "Scientist"
 	icon_state = "Scientist"
 
 /obj/effect/landmark/start/chemist
-	name = "Chemik"
+	name = "Chemist"
 	icon_state = "Chemist"
 
 /obj/effect/landmark/start/roboticist
-	name = "Robotyk"
+	name = "Roboticist"
 	icon_state = "Roboticist"
 
 /obj/effect/landmark/start/research_director
-	name = "Dyrektor Naukowy"
+	name = "Research Director"
 	icon_state = "Research Director"
 
 /obj/effect/landmark/start/geneticist
-	name = "Genetyk"
+	name = "Geneticist"
 	icon_state = "Geneticist"
 
 /obj/effect/landmark/start/chief_medical_officer
-	name = "Ordynator"
+	name = "Chief Medical Officer"
 	icon_state = "Chief Medical Officer"
 
 /obj/effect/landmark/start/virologist
-	name = "Wirolog"
+	name = "Virologist"
 	icon_state = "Virologist"
 
 /obj/effect/landmark/start/chaplain
-	name = "Kapłan"
+	name = "Chaplain"
 	icon_state = "Chaplain"
 
 /obj/effect/landmark/start/cyborg
@@ -190,7 +190,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Cyborg"
 
 /obj/effect/landmark/start/ai
-	name = "SI Stacji"
+	name = "AI"
 	icon_state = "AI"
 	delete_after_roundstart = FALSE
 	var/primary_ai = TRUE
@@ -208,12 +208,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	latejoin_active = FALSE
 
 /obj/effect/landmark/start/brig_phys
-	name = "Lekarz Ochrony"
+	name = "Brig Physician"
 
 /obj/effect/landmark/start/randommaint
 	name = "maintjobstart"
-	icon_state = "x3"
-	var/job = "Gimmick" //put the title of the job here.
+	icon_state = "x3" 
+	var/job = "Gimmick" //put the title of the job here. 
 
 /obj/effect/landmark/start/randommaint/New() //automatically opens up a job slot when the job's spawner loads in
 	..()
@@ -222,19 +222,19 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	J.spawn_positions += 1
 
 /obj/effect/landmark/start/randommaint/backalley_doc
-	name = "Fryzjer"
+	name = "Barber"
 	job = "Barber"
 
 /obj/effect/landmark/start/randommaint/magician
-	name = "Magik"
+	name = "Stage Magician"
 	job = "Stage Magician"
 
 /obj/effect/landmark/start/randommaint/hobo
-	name = "Dłużnik"
+	name = "Debtor"
 	job = "Debtor"
-
+	
 /obj/effect/landmark/start/randommaint/shrink
-	name = "Psychiatra"
+	name = "Psychiatrist"
 	job = "Psychiatrist"
 
 /obj/effect/landmark/start/randommaint/celebrity
@@ -339,7 +339,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	GLOB.xeno_spawn += loc
 	return INITIALIZE_HINT_QDEL
 
-//objects with the stationloving component (nuke disk) respawn here.
+//objects with the stationloving component (nuke disk) respawn here. 
 //also blobs that have their spawn forcemoved (running out of time when picking their spawn spot), santa and respawning devils
 /obj/effect/landmark/blobstart
 	name = "blobstart"

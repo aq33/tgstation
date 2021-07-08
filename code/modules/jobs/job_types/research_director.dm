@@ -1,5 +1,5 @@
 /datum/job/rd
-	title = "Dyrektor Naukowy"
+	title = "Research Director"
 	flag = RD_JF
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list("Captain")

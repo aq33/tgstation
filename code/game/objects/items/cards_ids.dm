@@ -104,8 +104,8 @@
 	playsound(src, 'sound/items/bikehorn.ogg', 50, 1)
 
 /obj/item/card/id
-	name = "karta identyfikacyjna"
-	desc = "Karta identyfikująca osobę noszącą ją."
+	name = "identification card"
+	desc = "A card used to provide ID and determine access across the station."
 	icon_state = "id"
 	item_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'

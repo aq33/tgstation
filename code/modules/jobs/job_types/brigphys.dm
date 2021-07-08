@@ -1,5 +1,5 @@
 /datum/job/brig_phys
-	title = "Lekarz Ochrony"
+	title = "Brig Physician"
 	flag = BRIG_PHYS
 	department_head = list("Chief Medical Officer")
 	department_flag = ENGSEC

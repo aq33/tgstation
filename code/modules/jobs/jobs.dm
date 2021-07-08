@@ -1,71 +1,71 @@
 GLOBAL_LIST_INIT(command_positions, list(
-	"Kapitan",
-	"Kadrowy",
-	"Szef Ochrony",
-	"Główny Inżynier",
-	"Dyrektor Naukowy",
-	"Ordynator"))
+	"Captain",
+	"Head of Personnel",
+	"Head of Security",
+	"Chief Engineer",
+	"Research Director",
+	"Chief Medical Officer"))
 
 
 GLOBAL_LIST_INIT(engineering_positions, list(
-	"Główny Inżynier",
-	"Inżynier",
-	"Inżynier Atmosferyki"))
+	"Chief Engineer",
+	"Station Engineer",
+	"Atmospheric Technician"))
 
 
 GLOBAL_LIST_INIT(medical_positions, list(
-	"Ordynator",
-	"Lekarz",
-	"Genetyk",
-	"Wirolog",
-	"Paramedyk",
-	"Chemik",
-	"Lekarz Ochrony"))
+	"Chief Medical Officer",
+	"Medical Doctor",
+	"Geneticist",
+	"Virologist",
+	"Paramedic",
+	"Chemist",
+	"Brig Physician"))
 
 
 GLOBAL_LIST_INIT(science_positions, list(
-	"Dyrektor Naukowy",
-	"Naukowiec",
-	"Robotyk"))
+	"Research Director",
+	"Scientist",
+	"Roboticist"))
 
 
 GLOBAL_LIST_INIT(supply_positions, list(
-	"Kadrowy",
-	"Kwartermistrz",
-	"Magazynier",
-	"Górnik"))
+	"Head of Personnel",
+	"Quartermaster",
+	"Cargo Technician",
+	"Shaft Miner"))
 
 
 GLOBAL_LIST_INIT(civilian_positions, list(
-	"Barman",
-	"Botanik",
-	"Kucharz",
-	"Woźny",
-	"Kurator",
-	"Prawnik",
-	"Kapłan",
-	"Klaun",
-	"Mim",
+	"Bartender",
+	"Botanist",
+	"Cook",
+	"Janitor",
+	"Curator",
+	"Lawyer",
+	"Chaplain",
+	"Clown",
+	"Mime",
 	"Assistant"))
 
 GLOBAL_LIST_INIT(gimmick_positions, list(
-	"Cywilne",
-	"Fryzjer",
-	"Magik",
-	"Dłużnik",
-	"Psychiatra",
+	"Gimmick",
+	"Barber",
+	"Stage Magician",
+	"Debtor",
+	"Psychiatrist",
 	"VIP"))
 
 GLOBAL_LIST_INIT(security_positions, list(
-	"Szef Ochrony",
-	"Naczelnik",
-	"Detektyw",
-	"Funkcjonariusz Ochrony",
-	"Aspirant"))
+	"Head of Security",
+	"Warden",
+	"Detective",
+	"Security Officer",
+	"Deputy"))
 
 
 GLOBAL_LIST_INIT(nonhuman_positions, list(
-	"SI Stacji",
+	"AI",
 	"Cyborg",
 	ROLE_PAI))
 
@@ -131,7 +131,7 @@ GLOBAL_PROTECT(exp_specialmap)
 	job = ce_expand.Replace(job, "chief engineer")
 	job = qm_expand.Replace(job, "quartermaster")
 	job = sec_expand.Replace(job, "security officer")
-	job = engi_expand.Replace(job, "engineer")
+	job = engi_expand.Replace(job, "station engineer")
 	job = atmos_expand.Replace(job, "atmospheric technician")
 	job = doc_expand.Replace(job, "medical doctor")
 	job = mine_expand.Replace(job, "shaft miner")
