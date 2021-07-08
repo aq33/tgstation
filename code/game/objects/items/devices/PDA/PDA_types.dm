@@ -4,7 +4,7 @@
 	default_cartridge = /obj/item/cartridge/virus/clown
 	inserted_item = /obj/item/toy/crayon/rainbow
 	icon_state = "pda-clown"
-	desc = "Przenośny minikomputer, wyprodukowany przez Thinktronic Systems, LTD. Powierzchnia została pokryta teflonem i resztkami bananów."
+	desc = "A portable microcomputer by Thinktronic Systems, LTD. The surface is coated with polytetrafluoroethylene and banana drippings."
 	ttone = "honk"
 	var/slipvictims = list() //Track slipped people
 
@@ -25,7 +25,7 @@
 	default_cartridge = /obj/item/cartridge/virus/mime
 	inserted_item = /obj/item/toy/crayon/mime
 	icon_state = "pda-mime"
-	desc = "Przenośny minikomputer, wyprodukowany przez Thinktronic Systems, LTD. Zmodyfikowane z myślą o ślubowaniu milczenia."
+	desc = "A portable microcomputer by Thinktronic Systems, LTD. The hardware has been modified for compliance with the vows of silence."
 	allow_emojis = TRUE
 	silent = TRUE
 	ttone = "silence"
@@ -188,7 +188,7 @@
 	icon_alert = "pda-r-library"
 	default_cartridge = /obj/item/cartridge/curator
 	inserted_item = /obj/item/pen/fountain
-	desc = "Przenośny minikomputer, wyprodukowany przez Thinktronic Systems, LTD. Jest to model WGW-11 z serii e-reader."
+	desc = "A portable microcomputer by Thinktronic Systems, LTD. This model is a WGW-11 series e-reader."
 	note = "Congratulations, your station has chosen the Thinktronic 5290 WGW-11 Series E-reader and Personal Data Assistant!"
 	silent = TRUE //Quiet in the library!
 	overlays_x_offset = -3
@@ -196,7 +196,7 @@
 /obj/item/pda/clear
 	name = "clear PDA"
 	icon_state = "pda-clear"
-	desc = "Przenośny minikomputer, wyprodukowany przez Thinktronic Systems, LTD. Specjalna edycja, z przezroczystą obudową."
+	desc = "A portable microcomputer by Thinktronic Systems, LTD. This model is a special edition with a transparent case."
 	note = "Congratulations, you have chosen the Thinktronic 5230 Personal Data Assistant Deluxe Special Max Turbo Limited Edition!"
 
 /obj/item/pda/cook

@@ -10,8 +10,8 @@
  */
 
 /obj/item/storage/backpack
-	name = "plecak"
-	desc = "Nosisz go na plecach i trzymasz w nim rzeczy."
+	name = "backpack"
+	desc = "You wear this on your back and put items into it."
 	icon_state = "backpack"
 	item_state = "backpack"
 	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
@@ -138,37 +138,37 @@
 
 /obj/item/storage/backpack/clown
 	name = "Giggles von Honkerton"
-	desc = "Plecak zrobiony przez firmę Honk! Co."
+	desc = "It's a backpack made by Honk! Co."
 	icon_state = "clownpack"
 	item_state = "clownpack"
 
 /obj/item/storage/backpack/explorer
-	name = "Torba Górnicza"
-	desc = "Solidny plecak do przechowywania łupów."
+	name = "explorer bag"
+	desc = "A robust backpack for stashing your loot."
 	icon_state = "explorerpack"
 	item_state = "explorerpack"
 
 /obj/item/storage/backpack/mime
 	name = "Parcel Parceaux"
-	desc = "Cichy plecak stworzony dla cichych pracowników. Slience Corp."
+	desc = "A silent backpack made for those silent workers. Silence Co."
 	icon_state = "mimepack"
 	item_state = "mimepack"
 
 /obj/item/storage/backpack/medic
-	name = "plecak medyczny"
-	desc = "Plecak zaprojektowany do użytku w sterylnym środowisku."
+	name = "medical backpack"
+	desc = "It's a backpack especially designed for use in a sterile environment."
 	icon_state = "medicalpack"
 	item_state = "medicalpack"
 
 /obj/item/storage/backpack/security
-	name = "plecak ochrony"
-	desc = "Bardzo wytrzymały plecak."
+	name = "security backpack"
+	desc = "It's a very robust backpack."
 	icon_state = "securitypack"
 	item_state = "securitypack"
 
 /obj/item/storage/backpack/captain
-	name = "plecak kapitana"
-	desc = "Specjalny plecak stworzony wyłącznie dla Oficerów Nanotrasen."
+	name = "captain's backpack"
+	desc = "It's a special backpack made exclusively for Nanotrasen officers."
 	icon_state = "captainpack"
 	item_state = "captainpack"
 
@@ -180,32 +180,32 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/storage/backpack/botany
-	name = "plecak botaniki"
-	desc = "Plecak wyprodukowany w 100% z naturalnych włókien."
+	name = "botany backpack"
+	desc = "It's a backpack made of all-natural fibers."
 	icon_state = "botpack"
 	item_state = "botpack"
 
 /obj/item/storage/backpack/chemistry
-	name = "plecak chemii"
-	desc = "Plecak zaprojektowany z myślą do przetrwania niebezpiecznych płynów."
+	name = "chemistry backpack"
+	desc = "A backpack specially designed to repel stains and hazardous liquids."
 	icon_state = "chempack"
 	item_state = "chempack"
 
 /obj/item/storage/backpack/genetics
-	name = "plecak genetyki"
-	desc = "Plecak bardzo wytrzymały, na wypadek gdyby ktoś próbował Cię zabić."
+	name = "genetics backpack"
+	desc = "A bag designed to be super tough, just in case someone hulks out on you."
 	icon_state = "genepack"
 	item_state = "genepack"
 
 /obj/item/storage/backpack/science
-	name = "plecak nauki"
-	desc = "Specjalnie zaprojektowany plecak. Jest ognioodporny i posiada lekki zapach plazmy."
+	name = "science backpack"
+	desc = "A specially designed backpack. It's fire resistant and smells vaguely of plasma."
 	icon_state = "toxpack"
 	item_state = "toxpack"
 
 /obj/item/storage/backpack/virology
-	name = "plecak wirologii"
-	desc = "Plecak wyprodukowany z hipoalergicznych materiałów. Pachnie jak małpa."
+	name = "virology backpack"
+	desc = "A backpack made of hypo-allergenic fibers. It's designed to help prevent the spread of disease. Smells like monkey."
 	icon_state = "viropack"
 	item_state = "viropack"
 

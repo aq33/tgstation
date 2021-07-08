@@ -1,5 +1,5 @@
 /datum/job/chief_engineer
-	title = "Główny Inżynier"
+	title = "Chief Engineer"
 	flag = CHIEF
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list("Captain")

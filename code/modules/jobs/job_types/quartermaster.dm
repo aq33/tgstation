@@ -1,5 +1,5 @@
 /datum/job/qm
-	title = "Kwartermistrz"
+	title = "Quartermaster"
 	flag = QUARTERMASTER
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN

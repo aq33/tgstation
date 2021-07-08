@@ -1,5 +1,5 @@
 /datum/job/deputy
-	title = "Aspirant"
+	title = "Deputy"
 	flag = DEPUTY
 	department_head = list("Head of Security")
 	department_flag = ENGSEC

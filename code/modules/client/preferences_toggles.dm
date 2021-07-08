@@ -1,61 +1,61 @@
 /client/verb/setup_character()
-	set name = "Preferencje Gry"
+	set name = "Game Preferences"
 	set category = "Preferences"
 	set desc = "Open Game Preferences Window"
 	prefs.current_tab = 1
 	prefs.ShowChoices(usr)
 
 /client/verb/toggle_ghost_ears()
-	set name = "Pokaż/Ukryj GhostEars"
+	set name = "Show/Hide GhostEars"
 	set category = "Preferences"
 	set desc = "See All Speech"
 	prefs.chat_toggles ^= CHAT_GHOSTEARS
-	to_chat(usr, "Jako duch, będziesz teraz [(prefs.chat_toggles & CHAT_GHOSTEARS) ? "widział wiadomości z całej gry" : "widział wiadomości tylko obok ciebie"].")
+	to_chat(usr, "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTEARS) ? "see all speech in the world" : "only see speech from nearby mobs"].")
 	prefs.save_preferences()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Ghost Ears", "[prefs.chat_toggles & CHAT_GHOSTEARS ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/toggle_ghost_sight()
-	set name = "Pokaż/Ukryj GhostSight"
+	set name = "Show/Hide GhostSight"
 	set category = "Preferences"
 	set desc = "See All Emotes"
 	prefs.chat_toggles ^= CHAT_GHOSTSIGHT
-	to_chat(usr, "Jako duch, będziesz teraz [(prefs.chat_toggles & CHAT_GHOSTSIGHT) ? "widział emotikony z całej gry" : "widział emotikony tylko obok ciebie"].")
+	to_chat(usr, "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTSIGHT) ? "see all emotes in the world" : "only see emotes from nearby mobs"].")
 	prefs.save_preferences()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Ghost Sight", "[prefs.chat_toggles & CHAT_GHOSTSIGHT ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/toggle_ghost_whispers()
-	set name = "Pokaż/Ukryj GhostWhispers"
+	set name = "Show/Hide GhostWhispers"
 	set category = "Preferences"
 	set desc = "See All Whispers"
 	prefs.chat_toggles ^= CHAT_GHOSTWHISPER
-	to_chat(usr, "Jako duch, będziesz teraz [(prefs.chat_toggles & CHAT_GHOSTWHISPER) ? "widział szepty z całej gry" : "widział szepty tylko obok ciebie"].")
+	to_chat(usr, "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTWHISPER) ? "see all whispers in the world" : "only see whispers from nearby mobs"].")
 	prefs.save_preferences()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Ghost Whispers", "[prefs.chat_toggles & CHAT_GHOSTWHISPER ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/toggle_ghost_radio()
-	set name = "Pokaż/Ukryj GhostRadio"
+	set name = "Show/Hide GhostRadio"
 	set category = "Preferences"
 	set desc = "See All Radio Chatter"
 	prefs.chat_toggles ^= CHAT_GHOSTRADIO
-	to_chat(usr, "Jako duch, będziesz teraz [(prefs.chat_toggles & CHAT_GHOSTRADIO) ? "widział wiadomości radiowe" : "nie widział wiadomości radiowych"].")
+	to_chat(usr, "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTRADIO) ? "see radio chatter" : "not see radio chatter"].")
 	prefs.save_preferences()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Ghost Radio", "[prefs.chat_toggles & CHAT_GHOSTRADIO ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc! //social experiment, increase the generation whenever you copypaste this shamelessly GENERATION 1
 
 /client/verb/toggle_ghost_pda()
-	set name = "Pokaż/Ukryj GhostPDA"
+	set name = "Show/Hide GhostPDA"
 	set category = "Preferences"
 	set desc = "See All PDA Messages"
 	prefs.chat_toggles ^= CHAT_GHOSTPDA
-	to_chat(usr, "Jako duch, będziesz teraz [(prefs.chat_toggles & CHAT_GHOSTPDA) ? "widział wiadomości PDA z całej gry" : "widział wiadomości PDA tylko obok ciebie"].")
+	to_chat(usr, "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTPDA) ? "see all pda messages in the world" : "only see pda messages from nearby mobs"].")
 	prefs.save_preferences()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Ghost PDA", "[prefs.chat_toggles & CHAT_GHOSTPDA ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/toggle_ghost_laws()
-	set name = "Pokaż/Ukryj GhostLaws"
+	set name = "Show/Hide GhostLaws"
 	set category = "Preferences"
 	set desc = "See All Law Changes"
 	prefs.chat_toggles ^= CHAT_GHOSTLAWS
-	to_chat(usr, "Jako duch, będziesz teraz [(prefs.chat_toggles & CHAT_GHOSTLAWS) ? "powiadamiany o zmianach w prawie AI" : "nie powiadamiany o zmianach w prawie AI"].")
+	to_chat(usr, "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTLAWS) ? "be notified of all law chanes" : "no longer be notified of law changes"].")
 	prefs.save_preferences()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Ghost Laws", "[prefs.chat_toggles & CHAT_GHOSTLAWS ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -88,45 +88,45 @@
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Midround Antag", "[prefs.toggles & MIDROUND_ANTAG ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/toggletitlemusic()
-	set name = "Włącz/Wyłącz Muzykę Lobby"
+	set name = "Hear/Silence Lobby Music"
 	set category = "Preferences"
-	set desc = "Włączanie lub Wyłączanie Muzyki w Lobby."
+	set desc = "Hear Music In Lobby"
 	prefs.toggles ^= SOUND_LOBBY
 	prefs.save_preferences()
 	if(prefs.toggles & SOUND_LOBBY)
-		to_chat(usr, "Włączyłeś muzykę w Lobby.")
+		to_chat(usr, "You will now hear music in the game lobby.")
 		if(isnewplayer(usr))
 			playtitlemusic()
 	else
-		to_chat(usr, "Wyłączyłeś muzykę w Lobby.")
+		to_chat(usr, "You will no longer hear music in the game lobby.")
 		usr.stop_sound_channel(CHANNEL_LOBBYMUSIC)
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Lobby Music", "[prefs.toggles & SOUND_LOBBY ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/togglemidis()
-	set name = "Włącz/Wyłącz Muzykę MIDI"
+	set name = "Hear/Silence Midis"
 	set category = "Preferences"
-	set desc = "Włącz lub wyłącz muzykę MIDI, wybieraną przez Admina."
+	set desc = "Hear Admin Triggered Sounds (Midis)"
 	prefs.toggles ^= SOUND_MIDI
 	prefs.save_preferences()
 	if(prefs.toggles & SOUND_MIDI)
-		to_chat(usr, "Włączyłeś muzykę MIDI puszczaną przez adminów.")
+		to_chat(usr, "You will now hear any sounds uploaded by admins.")
 	else
-		to_chat(usr, "Wyłączyłeś muzykę MIDI puszczaną przez adminów.")
+		to_chat(usr, "You will no longer hear sounds uploaded by admins")
 		usr.stop_sound_channel(CHANNEL_ADMIN)
 		var/client/C = usr.client
 		C?.tgui_panel?.stop_music()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Hearing Midis", "[prefs.toggles & SOUND_MIDI ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/toggle_instruments()
-	set name = "Włącz/Wyłącz Instrumenty"
+	set name = "Hear/Silence Instruments"
 	set category = "Preferences"
-	set desc = "Włącz lub wyłącz dźwięki instrumentów w grze."
+	set desc = "Hear In-game Instruments"
 	prefs.toggles ^= SOUND_INSTRUMENTS
 	prefs.save_preferences()
 	if(prefs.toggles & SOUND_INSTRUMENTS)
-		to_chat(usr, "Od teraz będziesz słyszał jak ludzie w grze grają na instrumentach.")
+		to_chat(usr, "You will now hear people playing musical instruments.")
 	else
-		to_chat(usr, "Od teraz nie będziesz słyszał jak ludzie w grze grają na instrumentach.")
+		to_chat(usr, "You will no longer hear musical instruments.")
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Instruments", "[prefs.toggles & SOUND_INSTRUMENTS ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/Toggle_Soundscape()
@@ -144,9 +144,9 @@
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Ambience", "[prefs.toggles & SOUND_AMBIENCE ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/toggle_ship_ambience()
-	set name = "Włącz/Wyłącz Dźwięk Statku "
+	set name = "Hear/Silence Ship Ambience"
 	set category = "Preferences"
-	set desc = "Włączenie lub wyłączenie dźwięku ambientu statku."
+	set desc = "Hear Ship Ambience Roar"
 	prefs.toggles ^= SOUND_SHIP_AMBIENCE
 	prefs.save_preferences()
 	if(prefs.toggles & SOUND_SHIP_AMBIENCE)
@@ -159,38 +159,38 @@
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Ship Ambience", "[prefs.toggles & SOUND_SHIP_AMBIENCE ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, I bet you read this comment expecting to see the same thing :^)
 
 /client/verb/toggle_announcement_sound()
-	set name = "Włącz/Wyłącz Ogłoszenia"
+	set name = "Hear/Silence Announcements"
 	set category = "Preferences"
-	set desc = "Włączenie lub wyłączenie dźwięku ogłoszeń."
+	set desc = "Hear Announcement Sound"
 	prefs.toggles ^= SOUND_ANNOUNCEMENTS
-	to_chat(usr, "Od teraz będziesz [(prefs.toggles & SOUND_ANNOUNCEMENTS) ? "słyszał dźwięk ogłoszeń" : "nie słyszał dźwięku ogłoszeń."].")
+	to_chat(usr, "You will now [(prefs.toggles & SOUND_ANNOUNCEMENTS) ? "hear announcement sounds" : "no longer hear announcements"].")
 	prefs.save_preferences()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Announcement Sound", "[prefs.toggles & SOUND_ANNOUNCEMENTS ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/stop_client_sounds()
-	set name = "Zatrzymaj Dźwięki"
+	set name = "Stop Sounds"
 	set category = "Preferences"
-	set desc = "Zatrzymaj wszystkie dźwięki z gry."
+	set desc = "Stop Current Sounds"
 	SEND_SOUND(usr, sound(null))
 	tgui_panel?.stop_music()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Stop Self Sounds")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/listen_ooc()
-	set name = "Pokaż/Ukryj OOC"
+	set name = "Show/Hide OOC"
 	set category = "Preferences"
-	set desc = "Pokaż czat OOC"
+	set desc = "Show OOC Chat"
 	prefs.chat_toggles ^= CHAT_OOC
 	prefs.save_preferences()
-	to_chat(usr, "Teraz [(prefs.chat_toggles & CHAT_OOC) ? "będziesz" : "nie będziesz"] widział wiadomości z czatu OOC.")
+	to_chat(usr, "You will [(prefs.chat_toggles & CHAT_OOC) ? "now" : "no longer"] see messages on the OOC channel.")
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Seeing OOC", "[prefs.chat_toggles & CHAT_OOC ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/listen_bank_card()
-	set name = "Pokaż/Ukryj Dochody"
+	set name = "Show/Hide Income Updates"
 	set category = "Preferences"
-	set desc = "Pokaż lub ukryj aktualizacje dotyczące twojego dochodu w grze."
+	set desc = "Show or hide updates to your income"
 	prefs.chat_toggles ^= CHAT_BANKCARD
 	prefs.save_preferences()
-	to_chat(usr, "Od teraz [(prefs.chat_toggles & CHAT_BANKCARD) ? "będziesz" : "nie będziesz"] powiadamiany kiedy dostajesz zapłatę.")
+	to_chat(usr, "You will [(prefs.chat_toggles & CHAT_BANKCARD) ? "now" : "no longer"] be notified when you get paid.")
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Income Notifications", "[(prefs.chat_toggles & CHAT_BANKCARD) ? "Enabled" : "Disabled"]"))
 
 GLOBAL_LIST_INIT(ghost_forms, sortList(list("ghost","ghostking","ghostian2","skeleghost","ghost_red","ghost_black", \
