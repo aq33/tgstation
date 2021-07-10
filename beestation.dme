@@ -3273,4 +3273,5 @@
 #include "modular_aquila\modules\SKINSUITS\code\modules\clothing\spacesuits\miscellaneous.dm"
 #include "modular_aquila\modules\SURGERY\code\gender_reasigment\gender_reasigment.dm"
 #include "modular_aquila\modules\UBRANIA\nazi\code\security.dm"
+#include "modular_aquila\modules\VERBS\code\modify_metacoins.dm"
 // END_INCLUDE
