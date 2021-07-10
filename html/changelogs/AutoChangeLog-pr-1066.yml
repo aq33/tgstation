@@ -1,9 +1,0 @@
-author: Faceslav
-delete-after: true
-changes:
-  - rscadd: dodano nowy VERB który wymusza zamknięcie okienek TGUI w tabie OOC; hard
-      restart TGUI
-  - tweak: zwiększono ilość slotów postaci do 10 z 3
-  - balance: skajdankowane buciki wymagają teraz półtora minuty by je zdjąć samemu
-      z siebie, wcześniej 15 sekund
-  - admin: dodano możliwość zmiany metacoins w playerpanel
