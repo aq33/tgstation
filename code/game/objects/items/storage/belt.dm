@@ -237,7 +237,7 @@
 
 /obj/item/storage/belt/security
 	name = "tactical belt"
-	desc = "Can hold gear like handcuffs, batons, weapon magazines and flashes." //AQ EDIT
+	desc = "Can hold gear like handcuffs, batons, weapon magazines and flashes. Includes holster for small guns" //AQ EDIT
 	icon_state = "securitybelt"
 	item_state = "security"//Could likely use a better one.
 	content_overlays = TRUE
@@ -295,7 +295,7 @@
 	update_icon()
 
 /obj/item/storage/belt/security/webbing
-	name = "security webbing"
+	name = "black webbing"
 	desc = "Unique and versatile chest rig, can hold security gear."
 	icon_state = "securitywebbing"
 	item_state = "securitywebbing"
