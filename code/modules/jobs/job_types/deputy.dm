@@ -32,7 +32,7 @@
 	ears = /obj/item/radio/headset/headset_sec
 	uniform = /obj/item/clothing/under/rank/security/officer/mallcop/deputy
 	accessory = /obj/item/clothing/accessory/armband/deputy
-	shoes = /obj/item/clothing/shoes/sneakers/black
+	shoes = /obj/item/clothing/shoes/jackboots //AQ EDIT
 	glasses = /obj/item/clothing/glasses/hud/security/deputy
 	head = /obj/item/clothing/head/soft/sec
 	l_pocket = /obj/item/pda/security
