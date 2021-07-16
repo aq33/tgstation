@@ -4,14 +4,6 @@
 	var/atom/P
 	var/list/things
 
-//	var/list/blacklisted_guns = list()
-//	blacklisted_masks = list(/obj/item/gun/energy/e_gun)
-//	if(wear_mask)
-
-//		if(wear_mask.type in blacklisted_guns)
-//			return
-
-
 /datum/component/storage/concrete/gun_slot/handle_item_insertion(obj/item/W, prevent_warning = FALSE, mob/living/user)
 	total_guns = 0
 	P = src.parent
