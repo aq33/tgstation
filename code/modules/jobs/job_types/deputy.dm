@@ -37,7 +37,7 @@
 	glasses = /obj/item/clothing/glasses/hud/security/deputy
 	head = /obj/item/clothing/head/soft/sec
 	l_pocket = /obj/item/pda/security
-	implants = list(/obj/item/implant/mindshield, /obj/item/implant/securitydown)
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/securitydown) //AQ EDIT
 
 	backpack = /obj/item/storage/backpack/security
 	satchel = /obj/item/storage/backpack/satchel/sec
