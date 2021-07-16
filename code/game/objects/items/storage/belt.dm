@@ -283,13 +283,25 @@
 	new /obj/item/melee/baton/loaded(src)
 	update_icon()
 
+/obj/item/storage/belt/security/secoff
+
+/obj/item/storage/belt/security/secoff/PopulateContents()
+	new /obj/item/reagent_containers/spray/pepper(src)
+	new /obj/item/restraints/handcuffs(src)
+	new /obj/item/restraints/handcuffs(src)
+	new /obj/item/grenade/flashbang(src)
+	new /obj/item/flashlight/seclite(src)
+	new /obj/item/melee/baton/loaded(src)
+	new /obj/item/gun/energy/disabler(src)
+	update_icon()
+
 /obj/item/storage/belt/security/deputy
 //	name = "deputy security belt" AQ EDIT
 
 /obj/item/storage/belt/security/deputy/PopulateContents()
 	new /obj/item/melee/classic_baton/police/telescopic(src) //AQ EDIT
 	new /obj/item/restraints/handcuffs(src)
-	new /obj/item/restraints/handcuffs/cable(src)
+	new /obj/item/restraints/handcuffs(src)
 	new /obj/item/reagent_containers/spray/pepper(src)
 	new /obj/item/flashlight/seclite(src)
 	update_icon()
