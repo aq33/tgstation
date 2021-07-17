@@ -234,10 +234,10 @@
 		/obj/item/plunger,
 		/obj/item/extrapolator
 		))
-
+//AQ EDIT START
 /obj/item/storage/belt/security
-	name = "security belt"
-	desc = "Can hold security gear like handcuffs and flashes."
+	name = "tactical belt"
+	desc = "Can hold gear like handcuffs, batons, weapon magazines and flashes. Includes holster for small guns" //AQ EDIT
 	icon_state = "securitybelt"
 	item_state = "security"//Could likely use a better one.
 	content_overlays = TRUE
@@ -245,7 +245,7 @@
 /obj/item/storage/belt/security/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 5
+	STR.max_items = 7
 	STR.max_combined_w_class = 18
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.can_hold = typecacheof(list(
@@ -267,7 +267,12 @@
 		/obj/item/restraints/legcuffs/bola,
 		/obj/item/holosign_creator/security,
 		/obj/item/club,
-		/obj/item/shield/riot/tele
+		/obj/item/shield/riot/tele,
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/gun/energy/disabler,
+		/obj/item/gun/energy/e_gun/mini,
+		/obj/item/gun/ballistic/automatic/toy/pistol,
+		/obj/item/stack/taperoll/police
 		))
 
 /obj/item/storage/belt/security/full/PopulateContents()
@@ -278,19 +283,31 @@
 	new /obj/item/melee/baton/loaded(src)
 	update_icon()
 
+/obj/item/storage/belt/security/secoff
+
+/obj/item/storage/belt/security/secoff/PopulateContents()
+	new /obj/item/reagent_containers/spray/pepper(src)
+	new /obj/item/restraints/handcuffs(src)
+	new /obj/item/restraints/handcuffs(src)
+	new /obj/item/grenade/flashbang(src)
+	new /obj/item/flashlight/seclite(src)
+	new /obj/item/melee/baton/loaded(src)
+	new /obj/item/gun/energy/disabler(src)
+	update_icon()
+
 /obj/item/storage/belt/security/deputy
-	name = "deputy security belt"
+//	name = "deputy security belt"
 
 /obj/item/storage/belt/security/deputy/PopulateContents()
-	new /obj/item/melee/classic_baton/police/deputy(src)
+	new /obj/item/melee/classic_baton/police/telescopic(src) //AQ EDIT
 	new /obj/item/restraints/handcuffs(src)
-	new /obj/item/restraints/handcuffs/cable(src)
+	new /obj/item/restraints/handcuffs(src)
 	new /obj/item/reagent_containers/spray/pepper(src)
 	new /obj/item/flashlight/seclite(src)
 	update_icon()
-
+//AQ EDIT END
 /obj/item/storage/belt/security/webbing
-	name = "security webbing"
+	name = "black webbing" //AQ EDIT
 	desc = "Unique and versatile chest rig, can hold security gear."
 	icon_state = "securitywebbing"
 	item_state = "securitywebbing"
@@ -300,7 +317,7 @@
 /obj/item/storage/belt/security/webbing/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 6
+	STR.max_items = 8 //AQ EDIT
 	STR.max_combined_w_class = 21
 
 /obj/item/storage/belt/mining
@@ -313,7 +330,7 @@
 /obj/item/storage/belt/mining/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 6
+	STR.max_items = 8 //AQ EDIT
 	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.max_combined_w_class = 20
 	STR.can_hold = typecacheof(list(
@@ -624,7 +641,7 @@
 /obj/item/storage/belt/bandolier/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 18
+	STR.max_items = 30 //QA EDIT
 	STR.display_numerical_stacking = TRUE
 	STR.can_hold = typecacheof(list(
 		/obj/item/ammo_casing/shotgun
