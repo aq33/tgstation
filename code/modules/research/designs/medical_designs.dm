@@ -456,6 +456,16 @@
 	category = list("Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_ALL		//if you get bananium you get the sad trombones.
 
+/datum/design/implant_securitydown
+	name = "Security Officer Down Implant Case"
+	desc = "A glass case containing an implant."
+	id = "implant_securitydown"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 500, /datum/material/glass = 500)
+	build_path = /obj/item/implantcase/securitydown
+	category = list("Medical Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY  // available only in the seclathe to stop medbay jokers from implanting non-secs
+
 /datum/design/implant_chem
 	name = "Chemical Implant Case"
 	desc = "A glass case containing an implant."

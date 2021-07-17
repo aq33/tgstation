@@ -4,8 +4,8 @@
 	department_head = list("Head of Security")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 3
+	spawn_positions = 3
 	supervisors = "the head of security"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
@@ -13,6 +13,7 @@
 	exp_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/deputy
+	mind_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
 
 	access = list(ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_COURT, ACCESS_MAINT_TUNNELS, ACCESS_WEAPONS)
 	minimal_access = list(ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_COURT, ACCESS_MAINT_TUNNELS, ACCESS_WEAPONS)
@@ -32,10 +33,11 @@
 	ears = /obj/item/radio/headset/headset_sec
 	uniform = /obj/item/clothing/under/rank/security/officer/mallcop/deputy
 	accessory = /obj/item/clothing/accessory/armband/deputy
-	shoes = /obj/item/clothing/shoes/sneakers/black
+	shoes = /obj/item/clothing/shoes/jackboots //AQ EDIT
 	glasses = /obj/item/clothing/glasses/hud/security/deputy
 	head = /obj/item/clothing/head/soft/sec
 	l_pocket = /obj/item/pda/security
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/securitydown) //AQ EDIT
 
 	backpack = /obj/item/storage/backpack/security
 	satchel = /obj/item/storage/backpack/satchel/sec

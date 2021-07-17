@@ -3202,6 +3202,7 @@
 #include "modular_aquila\modules\BLUESPACE_PIPE\code\bluespace_pipe.dm"
 #include "modular_aquila\modules\BLUESPACE_PIPE\code\construction.dm"
 #include "modular_aquila\modules\BLUESPACE_PIPE\code\design.dm"
+#include "modular_aquila\modules\BRONIE\code\gun_slot.dm"
 #include "modular_aquila\modules\CIRCUITY\code\core\analyzer.dm"
 #include "modular_aquila\modules\CIRCUITY\code\core\assemblies.dm"
 #include "modular_aquila\modules\CIRCUITY\code\core\debugger.dm"

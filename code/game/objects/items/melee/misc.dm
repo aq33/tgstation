@@ -60,10 +60,10 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	flags_1 = CONDUCT_1
 	obj_flags = UNIQUE_RENAME
-	force = 15
+	force = 17
 	block_level = 1
 	block_upgrade_walk = 1
-	block_power = 50
+	block_power = 80 //AQ EDIT
 	block_flags = BLOCKING_ACTIVE | BLOCKING_NASTY
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
@@ -167,7 +167,7 @@
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
 	block_upgrade_walk = 1
 	slot_flags = ITEM_SLOT_BELT
-	force = 12 //9 hit crit
+	force = 12 
 	w_class = WEIGHT_CLASS_NORMAL
 
 	var/cooldown_check = 0 // Used interally, you don't want to modify
@@ -332,7 +332,7 @@
 //Telescopic Baton
 /obj/item/melee/classic_baton/police/telescopic
 	name = "telescopic baton"
-	desc = "A compact and harmless personal defense weapon. Can be concealed when folded."
+	desc = "A compact personal defense weapon. Can be concealed when folded." //AQ EDIT
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "telebaton_0"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
@@ -348,8 +348,8 @@
 	on_icon_state = "telebaton_1"
 	off_icon_state = "telebaton_0"
 	on_item_state = "nullrod"
-	force_on = 0
-	force_off = 0
+	force_on = 12 //AQ EDIT
+	force_off = 5 //AQ EDIT
 	weight_class_on = WEIGHT_CLASS_BULKY
 
 /obj/item/melee/classic_baton/telescopic/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
