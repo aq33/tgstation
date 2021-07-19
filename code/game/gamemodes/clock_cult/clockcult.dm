@@ -29,7 +29,7 @@ GLOBAL_VAR(clockcult_eminence)
 	config_tag = "clockcult"
 	report_type = "clockcult"
 	false_report_weight = 5
-	required_players = 24
+	required_players = 12
 	required_enemies = 4
 	recommended_enemies = 4
 	antag_flag = ROLE_SERVANT_OF_RATVAR
