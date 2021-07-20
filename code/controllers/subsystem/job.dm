@@ -21,10 +21,10 @@ SUBSYSTEM_DEF(job)
 	var/list/chain_of_command = list(
 		"Captain" = 1,				//Not used yet but captain is first in chain_of_command
 		"Head of Personnel" = 2,
-		"Head of Security" = 3)
+		"Head of Security" = 3,
 		"Research Director" = 4,
 		"Chief Engineer" = 5,
-		"Chief Medical Officer" = 6,
+		"Chief Medical Officer" = 6)
 
 /datum/controller/subsystem/job/Initialize(timeofday)
 	SSmapping.HACK_LoadMapConfig()
