@@ -15994,19 +15994,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
-"axH" = (
-/obj/structure/lattice/catwalk,
-/obj/item/stack/marker_beacon{
-	anchored = 1;
-	icon_state = "markerburgundy-on";
-	light_color = "#FA644B";
-	light_power = 3;
-	light_range = 2;
-	name = "landing marker";
-	picked_color = "Burgundy"
-	},
-/turf/open/space/basic,
-/area/space)
 "axI" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -52586,6 +52573,9 @@
 /obj/structure/chair/office{
 	dir = 1
 	},
+/obj/item/storage/secure/safe/caps_spare{
+	pixel_x = -24
+	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "bwG" = (
@@ -71486,6 +71476,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
+/obj/effect/landmark/start/deputy,
 /turf/open/floor/plasteel,
 /area/security/warden)
 "bXq" = (
@@ -82295,15 +82286,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/engine/engineering)
-"cnf" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/structure/grille,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/plating/airless,
-/area/space/nearstation)
 "cng" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -100586,6 +100568,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/start/deputy,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "cOF" = (
@@ -133987,8 +133970,8 @@ aaa
 aaa
 aaa
 aaa
-cmJ
-cmJ
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -134245,7 +134228,7 @@ aaa
 aaa
 aaa
 aaa
-axH
+aaa
 aaa
 aaa
 aaa
@@ -141110,7 +141093,7 @@ cnu
 cnu
 cmU
 cmU
-cnf
+cmU
 aeU
 aeU
 aaa
