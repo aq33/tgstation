@@ -22759,6 +22759,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/red,
+/obj/effect/landmark/start/deputy,
 /turf/open/floor/plasteel,
 /area/security/processing)
 "aZS" = (
@@ -52248,6 +52249,9 @@
 /obj/item/radio/intercom{
 	pixel_x = -29
 	},
+/obj/item/storage/secure/safe/caps_spare{
+	pixel_y = -27
+	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "hpU" = (
@@ -53487,6 +53491,17 @@
 	},
 /turf/open/space/basic,
 /area/space/nearstation)
+"lWt" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/start/deputy,
+/turf/open/floor/plasteel,
+/area/security/brig)
 "maC" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -103215,7 +103230,7 @@ akC
 anZ
 anZ
 anZ
-anZ
+lWt
 aln
 anZ
 oBN

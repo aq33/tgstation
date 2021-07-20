@@ -8204,18 +8204,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
-"avT" = (
-/obj/docking_port/stationary{
-	dheight = 1;
-	dir = 8;
-	dwidth = 12;
-	height = 17;
-	id = "syndicate_ne";
-	name = "northeast of station";
-	width = 23
-	},
-/turf/open/space,
-/area/space/nearstation)
 "avV" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
@@ -16094,6 +16082,9 @@
 /obj/structure/table/reinforced,
 /obj/item/assembly/flash/handheld,
 /obj/item/assembly/flash/handheld,
+/obj/item/storage/secure/safe/caps_spare{
+	pixel_x = -24
+	},
 /turf/open/floor/plasteel,
 /area/bridge)
 "aSw" = (
@@ -57788,6 +57779,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/brig)
+"rOH" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/effect/landmark/start/deputy,
+/turf/open/floor/plasteel,
+/area/security/brig)
 "rOJ" = (
 /obj/machinery/door/airlock/atmos{
 	name = "Atmospherics";
@@ -91508,7 +91509,7 @@ agR
 agn
 agR
 agn
-ajc
+rOH
 ajb
 ako
 akQ
@@ -94849,7 +94850,7 @@ afU
 ahI
 aim
 adR
-ajc
+rOH
 ajL
 akv
 vHp
@@ -114349,7 +114350,7 @@ aaa
 aaa
 aaa
 aaa
-avT
+aaa
 aaa
 aaa
 aaa

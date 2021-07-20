@@ -45930,6 +45930,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -30
 	},
+/obj/effect/landmark/start/deputy,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "mIy" = (
@@ -52151,6 +52152,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 10
 	},
+/obj/item/storage/secure/safe/caps_spare{
+	pixel_x = 34
+	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "ozQ" = (
@@ -54052,6 +54056,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/start/deputy,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "pag" = (
