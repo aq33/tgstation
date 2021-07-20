@@ -1,0 +1,6 @@
+author: Dejaku51
+delete-after: true
+changes:
+  - soundadd: dodano dźwięk rozpoczęcia głosowania
+  - soundadd: dodano dźwięk zakończenia głosowania
+  - soundadd: dodano dźwięk gdy ktoś zagłosuje
