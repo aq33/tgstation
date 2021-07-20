@@ -3202,6 +3202,7 @@
 #include "modular_aquila\modules\BLUESPACE_PIPE\code\bluespace_pipe.dm"
 #include "modular_aquila\modules\BLUESPACE_PIPE\code\construction.dm"
 #include "modular_aquila\modules\BLUESPACE_PIPE\code\design.dm"
+#include "modular_aquila\modules\BRONIE\code\gun_slot.dm"
 #include "modular_aquila\modules\CIRCUITY\code\core\analyzer.dm"
 #include "modular_aquila\modules\CIRCUITY\code\core\assemblies.dm"
 #include "modular_aquila\modules\CIRCUITY\code\core\debugger.dm"
@@ -3246,6 +3247,7 @@
 #include "modular_aquila\modules\EMOTES\code\emotes.dm"
 #include "modular_aquila\modules\EMOTES\code\keybindings.dm"
 #include "modular_aquila\modules\EMOTES\code\mob.dm"
+#include "modular_aquila\modules\IMPLANTS\code\implant_security.dm"
 #include "modular_aquila\modules\JUKEBOX\code\jukebox.dm"
 #include "modular_aquila\modules\JUKEBOX\code\jukeboxes.dm"
 #include "modular_aquila\modules\JUKEBOX\code\wires_jukebox.dm"
@@ -3273,4 +3275,5 @@
 #include "modular_aquila\modules\SKINSUITS\code\modules\clothing\spacesuits\miscellaneous.dm"
 #include "modular_aquila\modules\SURGERY\code\gender_reasigment\gender_reasigment.dm"
 #include "modular_aquila\modules\UBRANIA\nazi\code\security.dm"
+#include "modular_aquila\modules\VERBS\code\modify_metacoins.dm"
 // END_INCLUDE

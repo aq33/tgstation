@@ -285,3 +285,19 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 		pct += delta
 		winset(src, "mainwindow.split", "splitter=[pct]")
+
+// AQ changes
+//to jest na podstawie fix nanoUI, ten verb wymusza zamknięcie okienek
+/client/verb/fixtgui()
+	set name = "hard-restart TGUI"
+	set desc = "Fixes TGUI by forcing all existing windows to close"
+	set category = "OOC"
+
+	if(!mob)
+		return
+
+	for(var/datum/tgui/ui in mob.tgui_open_uis)
+		if(!QDELETED(ui))
+			ui.close()
+
+	to_chat(mob, "<span class='warning'>All tgUI windows have been forcefully closed. Please try re-opening them.</span>")

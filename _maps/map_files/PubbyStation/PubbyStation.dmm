@@ -6954,6 +6954,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/effect/landmark/start/deputy,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "aqA" = (
@@ -55897,6 +55898,21 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
+"gty" = (
+/obj/machinery/light{
+	light_color = "#e8eaff"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/item/storage/secure/safe/caps_spare{
+	pixel_y = -27
+	},
+/turf/open/floor/plasteel/dark,
+/area/bridge)
 "gue" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
@@ -57203,6 +57219,19 @@
 	luminosity = 2
 	},
 /area/maintenance/department/science)
+"iAu" = (
+/obj/machinery/atmospherics/pipe/manifold/cyan/hidden{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/landmark/start/deputy,
+/turf/open/floor/plasteel,
+/area/security/brig)
 "iAx" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -86669,7 +86698,7 @@ aic
 aiF
 ajd
 ajJ
-akF
+iAu
 alu
 amd
 amP
@@ -97222,7 +97251,7 @@ auR
 avZ
 axb
 ayb
-azh
+gty
 aAB
 aBx
 aCL

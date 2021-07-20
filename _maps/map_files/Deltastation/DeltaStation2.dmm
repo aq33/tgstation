@@ -46084,6 +46084,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/landmark/start/deputy,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "bCi" = (
@@ -121285,6 +121286,16 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/science/research)
+"ied" = (
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/item/storage/secure/safe/caps_spare{
+	pixel_y = -26
+	},
+/turf/open/floor/plasteel/dark,
+/area/bridge)
 "igE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/airalarm{
@@ -122313,6 +122324,16 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/research)
+"lin" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/effect/landmark/start/deputy,
+/turf/open/floor/plasteel,
+/area/security/brig)
 "liC" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -166874,7 +166895,7 @@ bwU
 bBM
 bDB
 bFi
-bGU
+ied
 bIV
 bIV
 bMG
@@ -177929,7 +177950,7 @@ ljq
 bJy
 bLp
 bNl
-bNl
+lin
 bNl
 bLp
 jKG

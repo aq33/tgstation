@@ -110,7 +110,8 @@
 		var/mob/living/carbon/human/hummie = user
 		if(hummie.shoes == src && chained)
 			to_chat(hummie, "<span class='warning'>You start taking off your [src]!</span>")
-			if(!do_after(hummie,15 SECONDS, src))
+//			if(!do_after(hummie,15 SECONDS, src)) AQ EDIT
+			if(!do_after(hummie,90 SECONDS, src))
 				return FALSE
 	return ..()
 
@@ -120,6 +121,7 @@
 		var/mob/living/carbon/human/hummie = m
 		if(hummie.shoes == src && chained)
 			to_chat(hummie, "<span class='warning'>You start taking off your [src]!</span>")			
-			if(!do_after(hummie,15 SECONDS, src))
+//			if(!do_after(hummie,15 SECONDS, src)) AQ EDIT
+			if(!do_after(hummie,90 SECONDS, src))
 				return FALSE
 	return ..()
