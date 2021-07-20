@@ -1,0 +1,9 @@
+author: Faceslav
+delete-after: true
+changes:
+  - rscadd: dodaje sejf z spare który znajduję się na każdej mapie (nie licząc debug
+      maps), do tego sejfu da się włamać. Head of staff dostają karteczke z kodem
+      do sejfu. Sejf jest koloru papieżowego więc łatwo go odróżnić i zauważyć.
+  - bugfix: greytide event teraz nie będzie powodować dekompresji całego prison wing
+  - bugfix: deputy spawn
+  - imageadd: ładny sprite deputy do landmarks.dmi
