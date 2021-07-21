@@ -6,11 +6,11 @@
 	damage_type = STAMINA
 	flag = "stamina"
 	nodamage = FALSE
-	knockdown = 30
+	flag = "energy"
 	stutter = 5
 	jitter = 20
 	hitsound = 'sound/weapons/taserhit.ogg'
-	range = 7
+	range = 5
 	tracer_type = /obj/effect/projectile/tracer/stun
 	muzzle_type = /obj/effect/projectile/muzzle/stun
 	impact_type = /obj/effect/projectile/impact/stun
