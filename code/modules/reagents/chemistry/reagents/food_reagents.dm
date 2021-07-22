@@ -287,9 +287,10 @@
 		//check for protection
 		//actually handle the pepperspray effects
 		if(!victim.is_eyes_covered() || !victim.is_mouth_covered())
-			victim.blur_eyes(5) // 10 seconds
-			victim.blind_eyes(3) // 6 seconds
-			victim.Knockdown(3 SECONDS)
+			victim.blur_eyes(15) // 30 seconds AQ EDIT
+			victim.blind_eyes(5) // 12 seconds AQ EDIT
+			victim.Knockdown(6 SECONDS) //AQ EDIT
+			victim.confused = max(M.confused, 10) //AQ EDIT
 			if(prob(5))
 				victim.emote("scream")
 			victim.confused = max(M.confused, 5) // 10 seconds
