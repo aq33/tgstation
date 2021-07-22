@@ -201,3 +201,11 @@
 		return FALSE
 
 	return TRUE
+// AQUILA EDIT
+/proc/sound_to_players(soundin, volume = 100, vary = FALSE, frequency = 0, falloff = FALSE, channel = 0, pressure_affected = FALSE, sound/S)
+	if(!S)
+		S = sound(get_sfx(soundin))
+	for(var/m in GLOB.player_list)
+		var/mob/M = m
+		M.playsound_local(M, null, volume, vary, frequency, falloff, channel, pressure_affected, S)
+//AQUILA EDIT

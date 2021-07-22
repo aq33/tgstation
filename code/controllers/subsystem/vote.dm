@@ -42,7 +42,7 @@ SUBSYSTEM_DEF(vote)
 	//get the highest number of votes
 	var/greatest_votes = 0
 	var/total_votes = 0
-	sound_to_playing_players('modular_aquila/modules/VOTING/sound/Vote_success.ogg') // AQUILA EDIT
+	sound_to_players('modular_aquila/modules/VOTING/sound/Vote_success.ogg') // AQUILA EDIT
 	for(var/option in choices)
 		var/votes = choices[option]
 		total_votes += votes
@@ -183,7 +183,6 @@ SUBSYSTEM_DEF(vote)
 
 	choice_by_ckey[usr.ckey] = vote
 	choices[choices[vote]]++	//check this
-	sound_to_playing_players('modular_aquila/modules/VOTING/sound/Vote.ogg') // AQUILA EDIT
 	return vote
 
 /datum/controller/subsystem/vote/proc/initiate_vote(vote_type, initiator_key, forced=FALSE, popup=FALSE)
@@ -242,7 +241,7 @@ SUBSYSTEM_DEF(vote)
 		log_vote(text)
 		var/vp = CONFIG_GET(number/vote_period)
 		to_chat(world, "\n<font color='purple'><b>[text]</b>\nType <b>vote</b> or click <a href='byond://winset?command=vote'>here</a> to place your votes.\nYou have [DisplayTimeText(vp)] to vote.</font>")
-		sound_to_playing_players('modular_aquila/modules/VOTING/sound/Vote_started.ogg') // AQUILA EDIT
+		sound_to_players('modular_aquila/modules/VOTING/sound/Vote_started.ogg') // AQUILA EDIT
 		time_remaining = round(vp/10)
 		for(var/c in GLOB.clients)
 			var/client/C = c
