@@ -1,0 +1,5 @@
+author: Dejaku51
+delete-after: true
+changes:
+  - bugfix: naprawiono brak dźwięków przed startem gry
+  - sounddel: usunięto dźwiek gdy dajesz vote
