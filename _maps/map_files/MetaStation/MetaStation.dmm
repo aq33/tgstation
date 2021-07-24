@@ -29387,12 +29387,11 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/clothing/glasses/meson,
+/obj/item/lighter,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/chief)
 "bei" = (
-/obj/structure/rack,
-/obj/item/lighter,
-/obj/item/clothing/glasses/meson,
 /obj/machinery/button/door{
 	id = "ceprivacy";
 	name = "Privacy Shutters Control";
@@ -29408,6 +29407,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/machinery/photocopier,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/chief)
 "bej" = (
@@ -31159,7 +31159,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/item/twohanded/required/kirbyplants/random,
+/obj/machinery/photocopier,
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/captain/private)
 "bhw" = (
@@ -31167,6 +31167,7 @@
 	dir = 6
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/twohanded/required/kirbyplants/random,
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/captain/private)
 "bhx" = (
@@ -35178,8 +35179,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/obj/item/storage/fancy/donut_box,
-/obj/structure/table/glass,
+/obj/machinery/photocopier,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "boE" = (
@@ -39163,11 +39163,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/structure/table/wood,
-/obj/item/stack/packageWrap,
-/obj/item/hand_labeler,
+/obj/machinery/photocopier,
 /turf/open/floor/wood,
-/area/crew_quarters/heads/hop)
+/area/space)
 "bwk" = (
 /obj/structure/closet/secure_closet/hop,
 /turf/open/floor/wood,
@@ -61371,6 +61369,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/machinery/photocopier,
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/heads/cmo)
 "cqm" = (
@@ -63848,12 +63847,7 @@
 /turf/open/floor/carpet/purple,
 /area/crew_quarters/heads/hor)
 "cuP" = (
-/obj/structure/table,
-/obj/item/aicard,
-/obj/item/circuitboard/aicore{
-	pixel_x = -2;
-	pixel_y = 4
-	},
+/obj/machinery/photocopier,
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
@@ -63876,6 +63870,8 @@
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/item/circuitboard/aicore,
+/obj/item/aicard,
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
