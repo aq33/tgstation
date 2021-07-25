@@ -565,11 +565,7 @@
 		return
 	//Box closing from here on out.
 	if(!isturf(owner.loc)) //Don't let the player use this to escape mechs/welded closets.
-<<<<<<< HEAD
-		to_chat(owner, "<span class = 'notice'>You need more space to activate this implant.</span>")
-=======
-		to_chat(owner, "<span class='warning'>Potrzebujesz więcej miejsca do aktywowania implantu!</span>")
->>>>>>> 017441cb0... Tłumaczenie quirków, przedmiotów do celów anatgów, akcji (#88)
+		to_chat(owner, "<span class='notice'>Potrzebujesz więcej miejsca do aktywowania implantu!</span>")
 		return
 	if(!COOLDOWN_FINISHED(src, box_cooldown))
 		return

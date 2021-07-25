@@ -248,29 +248,16 @@
 
 /mob/living/simple_animal/pet/cat/proc/wuv(change, mob/M)
 	if(change)
-<<<<<<< HEAD
 		if(M && stat != DEAD)
 			new /obj/effect/temp_visual/heart(loc)
 			emote("me", 1, "purrs!")
+			playsound(loc, 'sound/misc/purr.ogg', 50, 1)
 			if(flags_1 & HOLOGRAM_1)
 				return
 			SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, src, /datum/mood_event/pet_animal, src)
 	else
 		if(M && stat != DEAD)
 			emote("me", 1, "hisses!")
-=======
-		if(change > 0)
-			if(M && stat != DEAD)
-				new /obj/effect/temp_visual/heart(loc)
-				emote("me", 1, "purrs!")
-				playsound(loc, 'sound/misc/purr.ogg', 50, 1)
-				if(flags_1 & HOLOGRAM_1)
-					return
-				SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, src, /datum/mood_event/pet_animal, src)
-		else
-			if(M && stat != DEAD)
-				emote("me", 1, "hisses!")
->>>>>>> 359072df61... Wielki overhaul dźwięków vol. 1 (#329)
 
 /mob/living/simple_animal/pet/cat/cak //I told you I'd do it, Remie
 	name = "Keeki"

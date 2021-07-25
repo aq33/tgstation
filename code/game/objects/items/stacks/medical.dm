@@ -78,8 +78,6 @@
 				return
 			user.visible_message("<span class='green'>[user] applies [src] on [t_himself].</span>", "<span class='green'>You apply [src] on yourself.</span>")
 
-<<<<<<< HEAD
-
 	if(iscarbon(M))
 		var/mob/living/carbon/C = M
 		affecting = C.get_bodypart(check_zone(user.zone_selected))
