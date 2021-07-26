@@ -404,10 +404,19 @@
 
 /mob/living/LaserEyes(atom/A, params)
 	changeNext_move(CLICK_CD_RANGE)
+	
+	if(iscarbon(src))
+		var/mob/living/carbon/C = src
+		var/obj/item/organ/eyes/E = C.getorganslot(ORGAN_SLOT_EYES)
+		if(!E)
+			return
+		else if(E.status != ORGAN_ROBOTIC)
+			E.applyOrganDamage(rand(0, 3))
 
 	var/obj/item/projectile/beam/LE = new /obj/item/projectile/beam( loc )
 	LE.icon = 'icons/effects/genetics.dmi'
 	LE.icon_state = "eyelasers"
+	LE.damage = 10
 	playsound(usr.loc, 'sound/weapons/taser2.ogg', 75, 1)
 
 	LE.firer = src

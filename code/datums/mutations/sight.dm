@@ -70,10 +70,9 @@
 /datum/mutation/human/laser_eyes
 	name = "Laser Eyes"
 	desc = "Reflects concentrated light back from the eyes."
-	quality = POSITIVE
-	locked = TRUE
-	difficulty = 16
 	text_gain_indication = "<span class='notice'>You feel pressure building up behind your eyes.</span>"
+	locked = TRUE
+	instability = 35
 	layer_used = FRONT_MUTATIONS_LAYER
 	limb_req = BODY_ZONE_HEAD
 
