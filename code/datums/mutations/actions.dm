@@ -394,8 +394,8 @@
 	var/icon_left = "bloodhand_left"
 	var/icon_right = "bloodhand_right"
 	hitsound = 'sound/weapons/slash.ogg'
-	pickup_sound = 'sound/items/unsheath.ogg'
-	drop_sound = 'sound/items/sheath.ogg'
+	//pickup_sound = 'sound/items/unsheath.ogg' TODO
+	//drop_sound = 'sound/items/sheath.ogg' TODO
 	attack_verb = list("attacked", "slashed", "sliced", "tore", "ripped")
 	force = 15
 	throwforce = 0 //Just to be on the safe side
