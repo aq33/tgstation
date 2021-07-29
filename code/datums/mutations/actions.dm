@@ -104,6 +104,7 @@
 	desc = "An ancient mutation that gives lizards breath of fire."
 	quality = POSITIVE
 	difficulty = 12
+	locked = TRUE
 	text_gain_indication = "<span class='notice'>Your throat is burning!</span>"
 	text_lose_indication = "<span class='notice'>Your throat is cooling down.</span>"
 	power = /obj/effect/proc_holder/spell/aimed/firebreath
