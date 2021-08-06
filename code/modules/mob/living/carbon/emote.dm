@@ -105,7 +105,7 @@
 	key = "wink"
 	key_third_person = "winks"
 	//message = "winks"
-  message = "puszcza oczko"
+	message = "puszcza oczko"
 
 /datum/emote/living/carbon/wink/get_sound(mob/living/user)
 	if(ishuman(user) && !user.mind.miming)
