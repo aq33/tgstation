@@ -128,7 +128,6 @@
 	starting_amount = 1 //With this it can produce hivebots constantly, given that there is power in the area.
 	cooldownTime = 10 //Only 1 second - hivebots are extremely weak
 	dispense_type = /mob/living/simple_animal/hostile/hivebot
-	update_icon()
 	begin_create_message = "closes and begins fabricating something within."
 	end_create_message = "slams open, revealing a hivebot!"
 	recharge_sound = null
