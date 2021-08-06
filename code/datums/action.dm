@@ -284,19 +284,6 @@
 	name = "Włąćż/Wyłącz Słuchawki"
 	desc = "UNTZ UNTZ UNTZ"
 
-/datum/action/item_action/toggle_spacesuit
-	name = "Włącz/Wyłącz Regulatory Termiczne Kombinezonu"
-	icon_icon = 'icons/mob/actions/actions_spacesuit.dmi'
-	button_icon_state = "thermal_off"
-
-/datum/action/item_action/toggle_spacesuit/New(Target)
-	. = ..()
-	RegisterSignal(target, COMSIG_SUIT_SPACE_TOGGLE, .proc/toggle)
-
-/datum/action/item_action/toggle_spacesuit/Destroy()
-	UnregisterSignal(target, COMSIG_SUIT_SPACE_TOGGLE)
-	return ..()
-
 /datum/action/item_action/toggle_headphones/Trigger()
 	var/obj/item/clothing/ears/headphones/H = target
 	if(istype(H))

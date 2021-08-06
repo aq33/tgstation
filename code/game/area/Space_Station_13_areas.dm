@@ -530,7 +530,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/library/abandoned
 	name = "Opuszczona Biblioteka"
 	icon_state = "abandoned_library"
-	flags_1 = CULT_PERMITTED_1
+	flags_1 = NONE
 
 /area/chapel
 	icon_state = "chapel"
@@ -734,7 +734,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/medical
 	name = "Szpital"
 	icon_state = "medbay3"
-	ambientsounds = MEDICAL
+	ambient_effects = MEDICAL
 	mood_bonus = 2
 	mood_message = "<span class='nicegreen'>Czuję się tutaj bezpiecznie!\n</span>"
 	lighting_colour_tube = "#e7f8ff"
@@ -744,7 +744,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/medical/abandoned
 	name = "Opuszczony Szpital"
 	icon_state = "medbay3"
-	ambientsounds = list('sound/ambience/signal.ogg')
+	ambient_effects = list('sound/ambience/signal.ogg')
 
 /area/medical/medbay/central
 	name = "Szpital Głowny"
@@ -855,13 +855,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/medical/sleeper
 	name = "Sala Medyczna"
 	icon_state = "exam_room"
-
-/area/medical/psychology
-	name = "Biuro Psychologa"
-	icon_state = "psychology"
-	mood_bonus = 3
-	mood_message = "<span class='nicegreen'>Czuję, że ktoś wreszcie mnie rozumie.\n</span>"
-	ambientsounds = list('sound/ambience/aurora_caelus_short.ogg')
 
 //Security
 

@@ -332,7 +332,7 @@
 
 /obj/item/clothing/head/helmet/monkey_sentience/equipped(mob/user, slot)
 	. = ..()
-	if(slot != SLOT_HEAD)
+	if(slot != ITEM_SLOT_HEAD)
 		return
 	if(!ismonkey(user) || user.ckey)
 		var/mob/living/something = user

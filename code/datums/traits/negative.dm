@@ -8,7 +8,6 @@
 	gain_text = "<span class='danger'>Twoje plecy BARDZO cię bolą!</span>"
 	lose_text = "<span class='notice'>Twoje plecy są wolne od bólu.</span>"
 	medical_record_text = "Skany pacjenta wykazały znaczny i chroniczny ból pleców."
-	hardcore_value = 4
 
 /datum/quirk/badback/on_process()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -24,7 +23,6 @@
 	gain_text = "<span class='danger'>Czujesz, że twoje siły powoli cię opuszczają.</span>"
 	lose_text = "<span class='notice'>Czujesz się bardziej rześki.</span>"
 	medical_record_text = "Pacjent wymaga regularnej transfuzji krwii ze względu na jej niską produkcję."
-	hardcore_value = 8
 
 /datum/quirk/blooddeficiency/on_process()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -41,7 +39,6 @@
 	gain_text = "<span class='danger'>Nic nie widzisz.</span>"
 	lose_text = "<span class='notice'>Cudownie odzyskałeś wzrok.</span>"
 	medical_record_text = "Pacjent jest ślepy."
-	hardcore_value = 15
 
 /datum/quirk/blindness/add()
 	quirk_holder.become_blind(ROUNDSTART_TRAIT)
@@ -89,7 +86,6 @@
 	gain_text = "<span class='danger'>Nic nie słyszysz.</span>"
 	lose_text = "<span class='notice'>Twój słuch powrócił!</span>"
 	medical_record_text = "Nerwy słuchowe pacjenta są uszkodzone."
-	hardcore_value = 12
 
 /datum/quirk/depression
 	name = "Depresja"
@@ -113,7 +109,6 @@
 	var/obj/item/heirloom
 	var/where
 	medical_record_text = "Pacjent przejawia nietypowe przywiązanie do pamiątki rodzinnej."
-	hardcore_value = 1
 
 /datum/quirk/family_heirloom/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -243,7 +238,6 @@
 	gain_text = "<span class='danger'>Czujesz się słabo.</span>"
 	lose_text = "<span class='notice'>Wróciła ci krzepa.</span>"
 	medical_record_text = "Pacjent ma słabe kości, zalecana jest dieta bogata w białko."
-	hardcore_value = 4
 
 /datum/quirk/foreigner
 	name = "Foreigner"
@@ -273,7 +267,6 @@
 	gain_text = "<span class='danger'>Jesteś senny.</span>"
 	lose_text = "<span class='notice'>W końcu się wyspałeś.</span>"
 	medical_record_text = "Pacjent wymaga więcej snu i ciężko mu się obudzić."
-	hardcore_value = 2
 
 /datum/quirk/hypersensitive
 	name = "Nadczuły"
@@ -282,7 +275,6 @@
 	gain_text = "<span class='danger'>Zaczynasz brać wszystko do siebie.</span>"
 	lose_text = "<span class='notice'>Przestałeś brać wszystko do siebie.</span>"
 	medical_record_text = "Pacjent przejawia znaczną czułość emocjonalną."
-	hardcore_value = 3
 
 /datum/quirk/hypersensitive/add()
 	var/datum/component/mood/mood = quirk_holder.GetComponent(/datum/component/mood)
@@ -303,7 +295,6 @@
 	gain_text = "<span class='notice'>Na samą myśl o alkoholu zaczyna ci się kręcić w głowie.</span>"
 	lose_text = "<span class='danger'>Przestałeś być tak podatny na alkohol.</span>"
 	medical_record_text = "Pacjent wykazał niską tolerancję na alkohol. (Leszcz)"
-	hardcore_value = 3
 
 /datum/quirk/nearsighted //t. errorage
 	name = "Krótkowzroczny"
@@ -312,7 +303,6 @@
 	gain_text = "<span class='danger'>Rzeczy z daleka wydają się być rozmazane.</span>"
 	lose_text = "<span class='notice'>Znów widzisz normalnie.</span>"
 	medical_record_text = "Pacjent wymaga okularów, ze względu na swoją krótkowzroczność."
-	hardcore_value = 5
 
 /datum/quirk/nearsighted/add()
 	quirk_holder.become_nearsighted(ROUNDSTART_TRAIT)
@@ -329,7 +319,6 @@
 	desc = "Odkąd tylko pamiętasz obawiałeś się ciemności. Kiedy jesteś w ciemności, bez źródła światła, zachowujesz się ostrożniej i czujesz lęk."
 	value = -1
 	medical_record_text = "Pacjent wykazuje strach przed ciemnością. (Serio?)"
-	hardcore_value = 5
 
 /datum/quirk/nyctophobia/on_process()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -352,7 +341,6 @@
 	gain_text = "<span class='danger'>Odpycha cię myśl o przemocy!</span>"
 	lose_text = "<span class='notice'>Uważasz, że samoobrona jest konieczna.</span>"
 	medical_record_text = "Pacjent ma tendencje pacyfistyczne i nie jest w stanie wyrządzić krzywdy."
-	hardcore_value = 6
 
 /datum/quirk/paraplegic
 	name = "Sparaliżowany"
@@ -362,7 +350,6 @@
 	gain_text = null // Handled by trauma.
 	lose_text = null
 	medical_record_text = "Pacjent wykazuje nieuleczalny brak funckji motorycznych w kończynach dolnych."
-	hardcore_value = 15
 
 /datum/quirk/paraplegic/add()
 	var/datum/brain_trauma/severe/paralysis/paraplegic/T = new()
@@ -395,7 +382,6 @@
 	value = -1
 	mob_trait = TRAIT_POOR_AIM
 	medical_record_text = "Pacjent wykazuje znaczne trzęsienie rąk."
-	hardcore_value = 3
 
 /datum/quirk/prosopagnosia
 	name = "Prozopagnozja"
@@ -403,7 +389,6 @@
 	value = -1
 	mob_trait = TRAIT_PROSOPAGNOSIA
 	medical_record_text = "Pacjent cierpi na prozopagnozję i nie potrafi rozpoznawać twarzy."
-	hardcore_value = 5
 
 /datum/quirk/prosthetic_limb
 	name = "Proteza"
@@ -411,7 +396,6 @@
 	value = -1
 	var/slot_string = "limb"
 	medical_record_text = "Podczas oględzin, zauważono u pacjenta protezę."
-	hardcore_value = 3
 
 /datum/quirk/prosthetic_limb/on_spawn()
 	var/limb_slot = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
@@ -447,7 +431,6 @@
 	gain_text = "<span class='danger'>Czujesz się jak popychadło.</span>"
 	lose_text = "<span class='notice'>Czujesz, że możesz się postawić.</span>"
 	medical_record_text = "Pacjent jest nieasertwyny i łatwy w manipulacji."
-	hardcore_value = 4
 
 /datum/quirk/insanity
 	name = "Zaburzenia Dysocjacyjne"
@@ -457,7 +440,6 @@
 	gain_text = "<span class='userdanger'>...</span>"
 	lose_text = "<span class='notice'>Wracasz do rzeczywistości.</span>"
 	medical_record_text = "Pacjent doświadcza poważnych zaburzeń dysocjacyjnych i ma halucynacje."
-	hardcore_value = 6
 
 /datum/quirk/insanity/on_process()
 	if(quirk_holder.reagents.has_reagent(/datum/reagent/toxin/mindbreaker, needs_metabolizing = TRUE))
@@ -479,7 +461,6 @@
 	gain_text = "<span class='danger'>Zaczynasz się martwić o to co mówisz.</span>"
 	lose_text = "<span class='notice'>Mówienie przychodzi ci z łatwością.</span>" //if only it were that easy!
 	medical_record_text = "Pacjent jest niechętny do spotkań toważyskich i często ich unika."
-	hardcore_value = 4
 	var/dumb_thing = TRUE
 
 /datum/quirk/social_anxiety/on_process()
@@ -667,4 +648,3 @@
 	gain_text = "<span class='danger'>Masz sporo na głowie.</span>"
 	lose_text = "<span class='notice'>W twojej głowie wreszcie zapanował spokój.</span>"
 	medical_record_text = "Umysł pacjenta jest w wrażliwym stanie, musi dbać o swoje zdrowie psychiczne."
-	hardcore_value = 9
