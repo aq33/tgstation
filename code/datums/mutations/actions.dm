@@ -234,3 +234,299 @@
 
 	var/obj/item/bodypart/BP = pick(parts)
 	BP.dismember()
+
+/datum/mutation/human/extendoarm
+	name = "Extendo Arm"
+	desc = "Allows the affected to stretch their arms to grab objects from a distance."
+	quality = POSITIVE
+	difficulty = 12
+	text_gain_indication = "<span class='notice'>Your arms feel stretchy.</span>"
+	text_lose_indication = "<span class='warning'>Your arms feel solid again.</span>"
+	instability = 30
+	power = /obj/effect/proc_holder/spell/aimed/extendoarm
+
+/obj/effect/proc_holder/spell/aimed/extendoarm
+	name = "Arm"
+	desc = "Stretch your arm to grab or put stuff down."
+	charge_max = 50
+	cooldown_min = 50
+	clothes_req = FALSE
+	range = 50
+	projectile_type = /obj/item/projectile/bullet/arm
+	base_icon_state = "arm"
+	action_icon_state = "arm"
+	active_msg = "You loosen up your arm!"
+	deactive_msg = "You relax your arm."
+	active = FALSE
+	projectile_amount = 64
+
+/obj/effect/proc_holder/spell/aimed/extendoarm/ready_projectile(obj/item/projectile/bullet/arm/P, atom/target, mob/user, iteration)
+	var/mob/living/carbon/C = user
+	var/new_color
+	if(C.dna?.species && !C.dna.species.use_skintones)
+		new_color = C.dna.species.default_features["mcolor"]
+		if(!("#" in new_color))
+			new_color = "#[new_color]"
+		P.add_atom_colour(new_color, FIXED_COLOUR_PRIORITY)
+
+	P.homing = target
+	P.beam = new(C, P, time=200, beam_icon_state="2-full", maxdistance=150, beam_sleep_time=1, beam_color = new_color)
+	P.beam.Start()
+
+	var/obj/item/I = C.get_active_held_item()
+	if(I && C.dropItemToGround(I, FALSE))
+		var/obj/item/projectile/bullet/arm/ARM = P
+		ARM.grab(I)
+	P.arm = C.hand_bodyparts[C.active_hand_index]
+	P.arm.drop_limb()
+	P.arm.forceMove(P)
+
+/obj/effect/proc_holder/spell/aimed/extendoarm/InterceptClickOn(mob/living/caller, params, atom/target)
+	if(!iscarbon(caller))
+		return
+	var/mob/living/carbon/C = caller
+	if(!C.hand_bodyparts[C.active_hand_index]) //all these checks are here, because we dont want to adjust the spell icon thing in your screen and break it. wich it otherwise does in can_cast
+		return
+	if(HAS_TRAIT(C, TRAIT_NODISMEMBER))
+		return
+	if(!C.canUnEquip(C.get_active_held_item()))
+		return
+	return ..()
+
+/obj/effect/proc_holder/spell/aimed/extendoarm/can_cast(mob/user = usr)
+	. = ..()
+	if(!iscarbon(user))
+		return FALSE
+	var/mob/living/carbon/C = user
+	if(C.handcuffed) //this doesnt mix well with the whole arm removal thing
+		return FALSE
+
+/obj/item/projectile/bullet/arm
+	name = "arm"
+	icon_state = "arm"
+	suppressed = TRUE
+	damage = 0
+	range = 100
+	speed = 2
+	nodamage = 1
+	homing = TRUE
+	homing_turn_speed = 360
+	var/obj/item/grabbed
+	var/obj/item/bodypart/arm
+	var/returning = FALSE
+	var/datum/beam/beam
+
+/obj/item/projectile/bullet/arm/prehit(atom/target, blocked = FALSE)
+	if(returning)
+		if(target == firer)
+			var/mob/living/L = firer
+			if(arm && firer)
+				arm.attach_limb(firer, TRUE)
+				arm = null
+			L.put_in_hands(ungrab())
+			qdel(src) //If we let it run it's course, it's going to awkwardly hit you
+	else if(!isitem(target) && !grabbed && firer)
+		target.attack_hand(firer)
+		go_home()
+	else
+		if(grabbed)
+			ungrab()
+		else if(isitem(target))
+			grab(target)
+		go_home()
+
+/obj/item/projectile/bullet/arm/proc/go_home()
+	homing_target = firer
+	returning = TRUE
+	icon_state += "-reverse"
+	range = decayedRange
+	ignore_source_check = TRUE
+
+/obj/item/projectile/bullet/arm/proc/grab(obj/item/I)
+	if(!I)
+		return
+	I.forceMove(src)
+	var/image/IM = image(I, src)
+	IM.appearance_flags = RESET_COLOR //Otherwise skin color leaks to the object
+	grabbed = I
+	overlays += IM
+
+/obj/item/projectile/bullet/arm/proc/ungrab()
+	if(!grabbed)
+		return
+	grabbed.forceMove(drop_location())
+	overlays.Cut()
+	. = grabbed
+	grabbed = null
+
+/obj/item/projectile/bullet/arm/Destroy()
+	if(grabbed)
+		grabbed.forceMove(drop_location())
+	if(arm)
+		arm.forceMove(drop_location())
+	qdel(beam)
+	return ..()
+
+/datum/mutation/human/claws
+	name = "Claws"
+	desc = "A mutation that reshapes the bone structure of the wrist to include claws."
+	quality = POSITIVE
+	text_gain_indication = "<span class='warning'>You feel sharp pain in your wrists!</span>"
+	text_lose_indication = "<span class='warning'>Your wrists painfully reform back to normal.</span>"
+	difficulty = 12
+	instability = 25
+	power = /obj/effect/proc_holder/spell/targeted/conjure_item/claw
+
+/obj/effect/proc_holder/spell/targeted/conjure_item/claw
+	name = "Extend Claws"
+	desc = "Extend or retract your claws."
+	action_icon_state = "claws"
+	charge_max = 20
+	cooldown_min = 20
+	item_type = /obj/item/claw
+
+/obj/item/claw
+	name = "claw"
+	desc = "A claw made out of extended bone and freaky genetics. Fairly sharp, and always at the ready."
+	item_flags = ABSTRACT | DROPDEL
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	icon = 'icons/effects/blood.dmi'
+	icon_state = "bloodhand_left"
+	var/icon_left = "bloodhand_left"
+	var/icon_right = "bloodhand_right"
+	hitsound = 'sound/weapons/slash.ogg'
+	//pickup_sound = 'sound/items/unsheath.ogg' TODO
+	//drop_sound = 'sound/items/sheath.ogg' TODO
+	attack_verb = list("attacked", "slashed", "sliced", "tore", "ripped")
+	force = 15
+	throwforce = 0 //Just to be on the safe side
+	throw_range = 0
+	throw_speed = 0
+	damtype = "brute"
+
+/obj/item/claw/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, "genetics")
+	AddComponent(/datum/component/butchering, 40, 60)
+
+/obj/item/claw/equipped(mob/user, slot)
+	. = ..()
+	//these are intentionally inverted
+	var/i = user.get_held_index_of_item(src)
+	if(!(i % 2))
+		icon_state = icon_left
+	else
+		icon_state = icon_right
+
+/obj/item/claw/suicide_act(mob/living/user)
+	playsound(src, 'sound/weapons/slash.ogg', 100, TRUE)
+	if(istype(user) && user.get_bodypart(BODY_ZONE_HEAD))
+		var/obj/item/bodypart/head/myhead = user.get_bodypart(BODY_ZONE_HEAD)
+		user.visible_message("<span class='suicide'>[user] begins to slice [user.p_their()] head off with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		myhead.dismember()
+	else
+		user.visible_message("<span class='suicide'>[user] begins to dice themselves apart with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	return (BRUTELOSS)
+
+/datum/mutation/human/armblade
+	name = "Arm Blade"
+	desc = "A horrific mutation that gives user the ability to turn their arm into a grotesque blade made of bone and flesh."
+	locked = TRUE
+	text_gain_indication = "<span class='warning'>You feel bones in your arm painfully reforming!</span>"
+	text_lose_indication = "<span class='warning'>Your arms painfully reform back to normal.</span>"
+	instability = 35
+	power = /obj/effect/proc_holder/spell/targeted/conjure_item/armblade
+
+/obj/effect/proc_holder/spell/targeted/conjure_item/armblade
+	name = "Arm Blade"
+	desc = "Reform one of your arms into a deadly blade."
+	action_icon = 'icons/mob/actions/actions_changeling.dmi'
+	action_icon_state = "armblade"
+	charge_max = 50
+	cooldown_min = 20
+	item_type = /obj/item/melee/arm_blade_mut
+
+/obj/item/melee/arm_blade_mut //nowy obiekt, bo bazowanie klasy o /obj/item/melee/arm_blade jest w chuj nieporęczne. wymagałoby nadpisania kilku funkcji w bardzo nieprzyjemny sposób
+	name = "arm blade"
+	desc = "A grotesque blade made out of bone and flesh that cleaves through people as a hot knife through butter. This one doesn't look sturdy enough to force an airlock."
+	icon = 'icons/obj/changeling_items.dmi'
+	icon_state = "arm_blade"
+	item_state = "arm_blade"
+	lefthand_file = 'icons/mob/inhands/antag/changeling_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/antag/changeling_righthand.dmi'
+	item_flags = NEEDS_PERMIT | ABSTRACT | DROPDEL
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	w_class = WEIGHT_CLASS_HUGE
+	force = 20 //this is an undroppable melee weapon. should not be better than the fireaxe
+	throwforce = 0 //Just to be on the safe side
+	throw_range = 0
+	throw_speed = 0
+	block_power = 20
+	block_level = 1
+	block_upgrade_walk = 1
+	block_flags = BLOCKING_ACTIVE | BLOCKING_NASTY
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "tore", "ripped", "diced", "cut")
+	sharpness = IS_SHARP
+
+/obj/item/melee/arm_blade_mut/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, "genetics")
+	AddComponent(/datum/component/butchering, 60, 80)
+
+/obj/item/melee/arm_blade_mut/equipped(mob/user, slot)
+	. = ..()
+	user.visible_message("<span class='warning'>A grotesque blade forms around [user.name]\'s arm!</span>", "<span class='warning'>Your arm twists and mutates, transforming it into a deadly blade.</span>", "<span class='italics'>You hear organic matter ripping and tearing!</span>")
+	playsound(user, 'sound/effects/blobattack.ogg', 30, 1)
+
+/obj/item/melee/arm_blade_mut/dropped(mob/user, slot)
+	. = ..()
+	user.visible_message("<span class='warning'>With a sickening crunch, [user] reforms [user.p_their()] blade into an arm!</span>", "<span class='notice'>You assimilate the blade back into your body.</span>", "<span class='italics>You hear organic matter ripping and tearing!</span>")
+	playsound(user, 'sound/effects/blobattack.ogg', 30, 1)
+
+/datum/mutation/human/vore //ta mutacja to nie byl moj pomysl, miejcie pretensje do jokura
+	name = "Matter Eater"
+	desc = "A mutation that gives a subject the ability to eat anything around them whole."
+	quality = POSITIVE
+	text_gain_indication = "<span class='warning'>You feel extremely hungry!</span>"
+	text_lose_indication = "<span class='notice'>You feel satied once again.</span>"
+	difficulty = 14
+	instability = 35
+	power = /obj/effect/proc_holder/spell/targeted/vore
+
+/obj/effect/proc_holder/spell/targeted/vore
+	name = "Eat Matter"
+	desc = "Eat the item you're currently holding or puke out the item you ate."
+	charge_max = 40
+	cooldown_min = 20
+	clothes_req = FALSE
+	range = -1
+	include_user = TRUE
+	action_icon_state = "stomach"
+	var/obj/item/eaten_item = null
+
+/obj/effect/proc_holder/spell/targeted/vore/cast(mob/living/user = usr)
+	var/obj/item/helditem = user.get_active_held_item()
+	if(eaten_item && eaten_item.loc == src)
+		eaten_item.forceMove(user.loc)
+		user.visible_message("<span class='notice'>[user] spits [eaten_item] out!</span>", "<span class='notice'>You spit [eaten_item] out!</span>")
+		playsound(user, 'sound/effects/splat.ogg', 50, 1)
+		eaten_item = null
+		return
+	if(helditem && helditem.w_class > WEIGHT_CLASS_NORMAL)
+		user.visible_message("<span class='notice'>[user] tries to put [helditem] into their mouth, but fails miserably!</span>", "<span class='warning'>[helditem] is too big for you to eat!</span>")
+		return
+	if(helditem)
+		eaten_item = helditem
+		helditem.forceMove(src)
+		user.visible_message("<span class='notice'>[user] swallows [eaten_item] whole!</span>", "<span class='notice'>You swallow [eaten_item] whole!</span>")
+		playsound(user, 'sound/effects/attackblob.ogg', 50, 1)
+		return
+	to_chat(user,"<span class='warning'>You're not holding anything.</span>")
+
+/obj/effect/proc_holder/spell/targeted/vore/Destroy()
+	if(eaten_item)
+		eaten_item.forceMove(usr.loc)
+		usr.visible_message("<span class='notice'>[usr] spits [eaten_item] out!</span>", "<span class='notice'>You spit [eaten_item] out!</span>")
+		playsound(usr, 'sound/effects/splat.ogg', 50, 1)
+	return ..()

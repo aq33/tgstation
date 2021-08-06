@@ -249,7 +249,7 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 7
-	STR.max_combined_w_class = 18
+	STR.max_combined_w_class = 21
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.can_hold = typecacheof(list(
 		/obj/item/melee/baton,
@@ -321,7 +321,7 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 8 //AQ EDIT
-	STR.max_combined_w_class = 21
+	STR.max_combined_w_class = 30 //AQ EDIT
 
 /obj/item/storage/belt/mining
 	name = "explorer's webbing"
@@ -335,7 +335,7 @@
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 8 //AQ EDIT
 	STR.max_w_class = WEIGHT_CLASS_BULKY
-	STR.max_combined_w_class = 20
+	STR.max_combined_w_class = 35 //AQ EDIT
 	STR.can_hold = typecacheof(list(
 		/obj/item/crowbar,
 		/obj/item/powertool,
@@ -644,8 +644,9 @@
 /obj/item/storage/belt/bandolier/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 30 //QA EDIT
+	STR.max_items = 30 //AQ EDIT
 	STR.display_numerical_stacking = TRUE
+	STR.max_combined_w_class = 60 //AQ EDIT
 	STR.can_hold = typecacheof(list(
 		/obj/item/ammo_casing/shotgun
 		))
