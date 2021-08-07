@@ -221,7 +221,7 @@
 	name = "Nine Tails whip"
 	description = "Commander Jackson is looking for a fine addition to her exotic weapons collection. She will reward you handsomely for either a Cat or Liz o' Nine Tails."
 	reward = 4000
-	wanted_types = list(/obj/item/melee/chainofcommand/tailwhip)
+	wanted_types = list(/obj/item/melee/curator_whip/chainofcommand/tailwhip) //AQ EDIT
 
 /datum/bounty/item/assistant/dead_mice
 	name = "Dead Mice"
