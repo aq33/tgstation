@@ -567,7 +567,6 @@
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 10, "energy" = 15, "bomb" = 100, "bio" = 100, "rad" = 60, "fire" = 60, "acid" = 80, "stamina" = 30)
 	var/obj/machinery/doppler_array/integrated/bomb_radar
-	scan_reagents = TRUE
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL | SHOWEROKAY | SNUG_FIT | SCAN_REAGENTS
 	actions_types = list(/datum/action/item_action/toggle_helmet_light, /datum/action/item_action/toggle_research_scanner)
 
@@ -606,7 +605,7 @@
 	. = ..()
 	if(!ishuman(user))
 		return
-	if(slot == SLOT_WEAR_SUIT)
+	if(slot == ITEM_SLOT_OCLOTHING)
 		say("Welcome to the H.E.V. mark IV protective system, for use in hazardous environment conditions.")
 		playsound(src, 'sound/items/hev/hev_logon.ogg', 50, 0)
 	return

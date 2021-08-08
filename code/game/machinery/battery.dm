@@ -140,4 +140,3 @@
 			connect_to_network()
 		else
 			disconnect_from_network()
-		update_cable_icons_on_turf(get_turf(src))

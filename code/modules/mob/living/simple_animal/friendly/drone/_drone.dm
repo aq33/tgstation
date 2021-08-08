@@ -78,7 +78,7 @@
 	"<span class='notify'>     - Interakcje z nieżywymi niedronami (ciągnięcie ciał, okradanie ciał etc.)</span>\n"+\
 	"<span class='warning'>W PRZYPADKU WĄTPLIWOŚCI ZAPYTAJ ADMINA</span>\n"+\
 	"<span class='warning'><u>Jeżeli nie posiadasz standardowego zestawu praw drona przestrzegaj go najlepiej jak umiesz.</u></span>"
-	mobsay_color = "#8AB48C"
+	chat_color = "#8AB48C"
 
 /mob/living/simple_animal/drone/Initialize()
 	. = ..()

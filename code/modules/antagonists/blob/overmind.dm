@@ -253,7 +253,6 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 /mob/camera/blob/blob_act(obj/structure/blob/B)
 	return
 
-<<<<<<< HEAD
 /mob/camera/blob/get_stat_tab_status()
 	var/list/tab_data = ..()
 	if(blob_core)

@@ -243,15 +243,15 @@
 	if(overmind)
 		. += list("<b>Rodzaj Grzyba:: <font color=\"[overmind.blobstrain.color]\">[overmind.blobstrain.name]</font><span class='notice'>.</span></b>",
 		"<b>Efekt:</b> <span class='notice'>[overmind.blobstrain.analyzerdescdamage]</span>",
-		"<b>Właściwości:</b> <span class='notice'>[overmind.blobstrain.analyzerdesceffect || "N/A"]</span>"")
+		"<b>Właściwości:</b> <span class='notice'>[overmind.blobstrain.analyzerdesceffect || "N/A"]</span>")
 	else
 		. += "<b>No Material Detected!</b>"
 
 /obj/structure/blob/proc/typereport(mob/user)
 	RETURN_TYPE(/list)
 	return list("<b>Rodzaj Grzyba:</b> <span class='notice'>[uppertext(initial(name))]</span>",
-		<b>Zdrowie:</b> <span class='notice'>[obj_integrity]/[max_integrity]</span>",
-		<b>Efekty:</b> <span class='notice'>[scannerreport()]</span>")
+		"<b>Zdrowie:</b> <span class='notice'>[obj_integrity]/[max_integrity]</span>",
+		"<b>Efekty:</b> <span class='notice'>[scannerreport()]</span>")
 
 
 /obj/structure/blob/attack_animal(mob/living/simple_animal/M)
