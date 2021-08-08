@@ -1,0 +1,10 @@
+author: Faceslav
+delete-after: true
+changes:
+  - tweak: przerobiono lekko zbrojownie w CC oraz ERT drop pod zone
+  - tweak: chain of command oraz tail whipy korzystają z funkckji bata curatora
+  - balance: zmniejszono obrażenia bata chain of command z 10 do 7, throw damage z
+      7 na 2
+  - balance: bat curatora teraz zadaje 2 punkty obrażeń z 0.001
+  - bugfix: skasowano duplikat drukari w biurze hopa oraz szafki detektywa na meta
+  - bugfix: naprawiono chłodnie w kuchni meta station
