@@ -60,7 +60,7 @@ GLOBAL_LIST_INIT(battle_royale_basic_loot, list(
 		/obj/item/nullrod/fedora,
 		/obj/item/nullrod/godhand,
 		/obj/item/melee/baton/loaded,
-		/obj/item/melee/chainofcommand/tailwhip/kitty,
+		/obj/item/melee/curator_whip/chainofcommand/tailwhip/kitty, //AQ EDIT
 		/obj/item/melee/classic_baton,
 		/obj/item/melee/ghost_sword,
 		/obj/item/melee/powerfist,
