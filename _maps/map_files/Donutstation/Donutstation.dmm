@@ -11279,7 +11279,7 @@
 "aAZ" = (
 /obj/structure/table/wood,
 /obj/item/book/manual/wiki/security_space_law,
-/obj/item/melee/chainofcommand,
+/obj/item/melee/curator_whip/chainofcommand,
 /obj/item/storage/fancy/cigarettes/cigpack_syndicate,
 /obj/machinery/keycard_auth{
 	pixel_y = -24

@@ -14290,12 +14290,12 @@
 /turf/open/floor/plasteel,
 /area/security/brig)
 "aBk" = (
-/obj/structure/closet/secure_closet/detective,
 /obj/effect/landmark/blobstart,
 /obj/machinery/camera{
 	c_tag = "Detective's Office";
 	dir = 4
 	},
+/obj/machinery/photocopier,
 /turf/open/floor/plasteel/grimy,
 /area/security/detectives_office)
 "aBl" = (
@@ -36425,7 +36425,7 @@
 	},
 /obj/item/paper/fluff/gateway,
 /obj/item/coin/plasma,
-/obj/item/melee/chainofcommand,
+/obj/item/melee/curator_whip/chainofcommand,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain/private)
 "bqW" = (
@@ -37448,12 +37448,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
-	},
-/turf/open/floor/carpet/blue,
-/area/crew_quarters/heads/hop)
-"bsO" = (
-/obj/machinery/photocopier{
-	pixel_y = 3
 	},
 /turf/open/floor/carpet/blue,
 /area/crew_quarters/heads/hop)
@@ -111074,7 +111068,7 @@ bkz
 bmq
 boo
 bqD
-bsO
+bsQ
 bup
 bwk
 bkz
