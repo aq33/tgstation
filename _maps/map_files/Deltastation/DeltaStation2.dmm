@@ -58921,7 +58921,7 @@
 	pixel_y = 4
 	},
 /obj/item/hand_tele,
-/obj/item/melee/chainofcommand,
+/obj/item/melee/curator_whip/chainofcommand,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "bUQ" = (

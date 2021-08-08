@@ -96147,7 +96147,7 @@
 	pixel_y = 4
 	},
 /obj/item/folder/blue,
-/obj/item/melee/chainofcommand,
+/obj/item/melee/curator_whip/chainofcommand,
 /obj/item/toy/figure/captain,
 /obj/structure/table/wood,
 /turf/open/floor/carpet/royalblue,

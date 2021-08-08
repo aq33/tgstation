@@ -1627,7 +1627,7 @@
 /area/holodeck/rec_center/thunderdome1218)
 "ey" = (
 /obj/structure/table/wood,
-/obj/item/melee/chainofcommand{
+/obj/item/melee/curator_whip/chainofcommand{
 	name = "chain whip"
 	},
 /obj/item/twohanded/spear,
@@ -5511,7 +5511,7 @@
 /obj/structure/table/wood,
 /obj/item/clipboard,
 /obj/item/folder/blue,
-/obj/item/melee/chainofcommand,
+/obj/item/melee/curator_whip/chainofcommand,
 /obj/item/stamp/captain,
 /obj/machinery/newscaster/security_unit{
 	pixel_y = 32
@@ -6279,19 +6279,23 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
-/turf/open/floor/plasteel,
+/obj/effect/turf_decal/box/red,
+/obj/effect/turf_decal/delivery/red,
+/turf/open/floor/monofloor,
 /area/centcom/supplypod/loading/ert)
 "pC" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/monotile/dark,
 /area/centcom/supplypod/loading/ert)
 "pD" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/turf/open/floor/plasteel,
+/obj/effect/turf_decal/box/red,
+/obj/effect/turf_decal/delivery/red,
+/turf/open/floor/monofloor,
 /area/centcom/supplypod/loading/ert)
 "pE" = (
 /obj/machinery/plantgenes/seedvault,
@@ -6464,20 +6468,12 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
+/obj/effect/turf_decal/box/red,
+/obj/effect/turf_decal/delivery/red,
+/turf/open/floor/monofloor,
 /area/centcom/supplypod/loading/ert)
 "pU" = (
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
+/turf/open/floor/monotile/dark,
 /area/centcom/supplypod/loading/ert)
 "pV" = (
 /obj/machinery/light{
@@ -6493,7 +6489,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
+/obj/effect/turf_decal/box/red,
+/obj/effect/turf_decal/delivery/red,
+/turf/open/floor/monofloor,
 /area/centcom/supplypod/loading/ert)
 "pY" = (
 /obj/machinery/washing_machine,
@@ -6872,11 +6870,15 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
-/turf/open/floor/plasteel,
+/obj/effect/turf_decal/box/red,
+/obj/effect/turf_decal/delivery/red,
+/turf/open/floor/monofloor,
 /area/centcom/supplypod/loading/ert)
 "qG" = (
 /obj/effect/turf_decal/stripes/line,
-/turf/open/floor/plasteel,
+/obj/effect/turf_decal/box/red,
+/obj/effect/turf_decal/delivery/red,
+/turf/open/floor/monofloor,
 /area/centcom/supplypod/loading/ert)
 "qH" = (
 /obj/structure/urinal{
@@ -7013,7 +7015,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/turf/open/floor/plasteel,
+/obj/effect/turf_decal/box/red,
+/obj/effect/turf_decal/delivery/red,
+/turf/open/floor/monofloor,
 /area/centcom/supplypod/loading/ert)
 "rc" = (
 /obj/item/twohanded/required/kirbyplants{
@@ -10327,6 +10331,7 @@
 /area/centcom/ferry)
 "yp" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/arrows,
 /turf/open/floor/plasteel,
 /area/centcom/ferry)
 "yr" = (
@@ -11153,19 +11158,30 @@
 /area/centcom/ferry)
 "Aj" = (
 /obj/structure/table/reinforced,
-/obj/item/restraints/handcuffs,
-/obj/item/radio,
-/obj/effect/turf_decal/stripes/line{
-	dir = 9
+/obj/item/storage/belt/bandolier{
+	pixel_x = 7
 	},
-/turf/open/floor/plasteel,
-/area/centcom/ferry)
-"Ak" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/firstaid/regular,
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
+/obj/item/storage/belt/bandolier{
+	pixel_x = -7
+	},
+/obj/item/storage/belt/bandolier,
+/turf/open/floor/plasteel,
+/area/centcom/ferry)
+"Ak" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/arrows,
 /turf/open/floor/plasteel,
 /area/centcom/ferry)
 "Al" = (
@@ -11395,19 +11411,19 @@
 /area/centcom/ferry)
 "AQ" = (
 /obj/structure/table/reinforced,
-/obj/item/clipboard,
-/obj/item/folder/yellow,
+/obj/item/storage/box/zipties,
+/obj/item/crowbar/red,
 /obj/effect/turf_decal/stripes/line{
-	dir = 8
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/centcom/ferry)
 "AR" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/box/zipties,
-/obj/item/crowbar/red,
+/obj/item/restraints/handcuffs,
+/obj/item/radio,
 /obj/effect/turf_decal/stripes/line{
-	dir = 4
+	dir = 9
 	},
 /turf/open/floor/plasteel,
 /area/centcom/ferry)
@@ -11646,20 +11662,26 @@
 /area/centcom/ferry)
 "BB" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/lockbox/loyalty,
-/obj/effect/turf_decal/stripes/line{
-	dir = 10
-	},
-/turf/open/floor/plasteel,
-/area/centcom/ferry)
-"BC" = (
-/obj/structure/table/reinforced,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/tank/internals/emergency_oxygen/engi,
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
 /turf/open/floor/plasteel,
+/area/centcom/ferry)
+"BC" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/guncase/shotgun,
+/turf/open/floor/plasteel/dark,
 /area/centcom/ferry)
 "BD" = (
 /obj/machinery/newscaster/security_unit{
@@ -16873,6 +16895,15 @@
 	},
 /turf/open/floor/plasteel,
 /area/ctf)
+"Nb" = (
+/obj/structure/table/reinforced,
+/obj/item/clipboard,
+/obj/item/folder/yellow,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/centcom/ferry)
 "Nd" = (
 /turf/closed/indestructible{
 	icon = 'icons/turf/walls/wood_wall.dmi';
@@ -17896,6 +17927,20 @@
 /obj/effect/turf_decal/tile/brown,
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/two)
+"Tg" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet/lethalshots,
+/turf/open/floor/plasteel/dark,
+/area/centcom/ferry)
 "Tj" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey{
@@ -18799,6 +18844,14 @@
 	},
 /turf/open/floor/holofloor,
 /area/holodeck/rec_center/basketball)
+"Zn" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/lockbox/loyalty,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/plasteel,
+/area/centcom/ferry)
 "Zs" = (
 /obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
@@ -54331,7 +54384,7 @@ wr
 xe
 wr
 wx
-mD
+td
 pB
 pT
 pT
@@ -54586,7 +54639,7 @@ uO
 vD
 ws
 xf
-ws
+Ak
 yp
 sd
 pC
@@ -58702,9 +58755,9 @@ ts
 mD
 zf
 sw
-sw
-sw
-sw
+AR
+Nb
+Zn
 sw
 CC
 mD
@@ -59216,9 +59269,9 @@ ts
 mD
 zh
 sw
-Ak
-AR
-BC
+sw
+sw
+sw
 sw
 CE
 mD
@@ -59473,9 +59526,9 @@ ts
 mD
 zi
 sw
-sw
-sw
-sw
+BC
+BC
+Tg
 sw
 CF
 nT
