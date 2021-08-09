@@ -1,6 +1,8 @@
 /obj/item/screwdriver
-	name = "screwdriver"
-	desc = "You can be totally screwy with this."
+	name = "wkrętak"
+	// name = "screwdriver"
+	desc = "Możesz kręcić do woli."
+	// desc = "You can be totally screwy with this."
 	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/tools.dmi' //aquila edit
 	icon_state = "screwdriver_map"
 	item_state = "screwdriver"
@@ -83,8 +85,10 @@
 	return eyestab(M,user)
 
 /obj/item/screwdriver/brass
-	name = "brass screwdriver"
-	desc = "A screwdriver made of brass. The handle feels freezing cold."
+	name = "mosiężny wkrętak"
+	// name = "brass screwdriver"
+	desc = "Wkrętak zrobiony z mosiądzu. Rączka jest strasznie zimna."
+	// desc = "A screwdriver made of brass. The handle feels freezing cold."
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	icon_state = "screwdriver_brass"
 	item_state = "screwdriver_brass"
@@ -92,8 +96,10 @@
 	random_color = FALSE
 
 /obj/item/screwdriver/abductor
-	name = "alien screwdriver"
-	desc = "An ultrasonic screwdriver."
+	name = "wkrętak obcych"
+	// name = "alien screwdriver"
+	desc = "Ultradźwiękowy wkrętak."
+	// desc = "An ultrasonic screwdriver."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "screwdriver_a"
 	item_state = "screwdriver_nuke"
@@ -105,8 +111,10 @@
 	return mutable_appearance('modular_aquila/modules/NARZEDZIA/icons/obj/clothing/belt_overlays.dmi', "screwdriver_nuke") //aquila edit
 
 /obj/item/screwdriver/cyborg
-	name = "automated screwdriver"
-	desc = "A powerful automated screwdriver, designed to be both precise and quick."
+	name = "wkrętak zautomatyzowany"
+	// name = "automated screwdriver"
+	desc = "Zautomatyzowany wkrętak, precyzyjny i szybki."
+	// desc = "A powerful automated screwdriver, designed to be both precise and quick."
 	icon = 'icons/obj/items_cyborg.dmi'
 	icon_state = "screwdriver_cyborg"
 	hitsound = 'sound/items/drill_hit.ogg'
