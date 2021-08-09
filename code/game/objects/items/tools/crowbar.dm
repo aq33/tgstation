@@ -1,6 +1,8 @@
 /obj/item/crowbar
-	name = "pocket crowbar"
-	desc = "A small crowbar. This handy tool is useful for lots of things, such as prying floor tiles or opening unpowered doors."
+	name = "łom kieszonkowy"
+	// name = "pocket crowbar"
+	desc = "Mały łom. Użyteczny w wielu sytuacjach, czy to w ściąganiu płyt podłogowych czy otwieraniu niezasilonych drzwi."
+	// desc = "A small crowbar. This handy tool is useful for lots of things, such as prying floor tiles or opening unpowered doors."
 	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/tools.dmi' //aquila edit
 	icon_state = "crowbar"
 	lefthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/equipment/tools_lefthand.dmi' //aquila edit
@@ -29,15 +31,18 @@
 	force = 8
 
 /obj/item/crowbar/brass
-	name = "brass crowbar"
-	desc = "A brass crowbar. It feels faintly warm to the touch."
+	name = "mosiężny łom"
+	// name = "brass crowbar"
+	desc = "Ciepły w dotyku, mosiężny łom."
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	icon_state = "crowbar_brass"
 	toolspeed = 0.5
 
 /obj/item/crowbar/abductor
-	name = "alien crowbar"
+	name = "łom obcych"
+	// name = "alien crowbar"
 	desc = "A hard-light crowbar. It appears to pry by itself, without any effort required."
+	// desc = "Dziwaczny łom. Wydaje się podważać bez żadnej pomocy."
 	icon = 'icons/obj/abductor.dmi'
 	usesound = 'sound/weapons/sonic_jackhammer.ogg'
 	icon_state = "crowbar"
@@ -46,7 +51,9 @@
 
 /obj/item/crowbar/large
 	name = "crowbar"
-	desc = "It's a big crowbar. It doesn't fit in your pockets, because it's big."
+	// name = "crowbar"
+	desc = "Duży łom. Nie wsadzisz go do kieszeni bo jest za duży."
+	// desc = "It's a big crowbar. It doesn't fit in your pockets, because it's big."
 	force = 12
 	w_class = WEIGHT_CLASS_NORMAL
 	throw_speed = 3
@@ -58,7 +65,9 @@
 
 /obj/item/crowbar/cyborg
 	name = "hydraulic crowbar"
-	desc = "A hydraulic prying tool, simple but powerful."
+	// name = "łom hydrauliczny"
+	desc = "Hydrauliczne urządzenie, proste ale potężne."
+	// desc = "A hydraulic prying tool, simple but powerful."
 	icon = 'icons/obj/items_cyborg.dmi'
 	icon_state = "crowbar_cyborg"
 	usesound = 'sound/items/jaws_pry.ogg'
