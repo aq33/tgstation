@@ -1,6 +1,8 @@
 /obj/item/wirecutters
-	name = "wirecutters"
-	desc = "This cuts wires."
+	name = "obcinaczki"
+	// name = "wirecutters"
+	desc = "Nadają się do kradzieży trakcji."
+	// desc = "This cuts wires."
 	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/tools.dmi' //aquila edit
 	icon_state = "cutters_map"
 	item_state = "cutters"
@@ -67,16 +69,20 @@
 	return (BRUTELOSS)
 
 /obj/item/wirecutters/brass
-	name = "brass wirecutters"
-	desc = "A pair of wirecutters made of brass. The handle feels freezing cold to the touch."
+	name = "mosiężne obcinaczki"
+	// name = "brass wirecutters"
+	desc = "Obcinaczki zrobione z mosiądzu. Rączka jest zimna w dotyku."
+	// desc = "A pair of wirecutters made of brass. The handle feels freezing cold to the touch."
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	icon_state = "cutters_brass"
 	random_color = FALSE
 	toolspeed = 0.5
 
 /obj/item/wirecutters/abductor
-	name = "alien wirecutters"
-	desc = "Extremely sharp wirecutters, made out of a silvery-green metal."
+	name = "obcinaczki obcyh"
+	// name = "alien wirecutters"
+	desc = "Strasznie ostre obcinaczki, zrobione z zielono-srebrnego metalu."
+	// desc = "Extremely sharp wirecutters, made out of a silvery-green metal."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "cutters"
 	toolspeed = 0.1
@@ -84,8 +90,10 @@
 	random_color = FALSE
 
 /obj/item/wirecutters/cyborg
-	name = "powered wirecutters"
-	desc = "Cuts wires with the power of ELECTRICITY. Faster than normal wirecutters."
+	name = "obcinaczki elektryczne"
+	// name = "powered wirecutters"
+	desc = "Tnij kabelki obcinaczkami zasilanymi prądem! Szybsze w użyciu od normalnych."
+	// desc = "Cuts wires with the power of ELECTRICITY. Faster than normal wirecutters."
 	icon = 'icons/obj/items_cyborg.dmi'
 	icon_state = "wirecutters_cyborg"
 	toolspeed = 0.5
