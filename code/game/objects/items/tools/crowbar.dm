@@ -41,8 +41,8 @@
 /obj/item/crowbar/abductor
 	name = "łom obcych"
 	// name = "alien crowbar"
-	desc = "A hard-light crowbar. It appears to pry by itself, without any effort required."
-	// desc = "Dziwaczny łom. Wydaje się podważać bez żadnej pomocy."
+	desc = "Dziwaczny łom. Wydaje się pracować bez żadnej pomocy."
+	// desc = "A hard-light crowbar. It appears to pry by itself, without any effort required."
 	icon = 'icons/obj/abductor.dmi'
 	usesound = 'sound/weapons/sonic_jackhammer.ogg'
 	icon_state = "crowbar"
