@@ -1,6 +1,8 @@
 /obj/machinery/vending/tool
-	name = "\improper YouTool"
-	desc = "Tools for tools."
+	name = "\improper MiniMrówka"
+	// name = "\improper YouTool"
+	desc = "Dla majsterkowiczów."
+	// desc = "Tools for tools."
 	icon_state = "tool"
 	icon_deny = "tool-deny"
 	light_color = LIGHT_COLOR_YELLOW
