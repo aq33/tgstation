@@ -1,7 +1,9 @@
 #define WELDER_FUEL_BURN_INTERVAL 13
 /obj/item/weldingtool
-	name = "welding tool"
-	desc = "A standard edition welder provided by Nanotrasen."
+	name = "spawarka"
+	// name = "welding tool"
+	desc = "Czym zespawasz cienką blachę?"
+	// desc = "A standard edition welder provided by Nanotrasen."
 	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/tools.dmi' //aquila edit
 	icon_state = "welder"
 	item_state = "welder"
@@ -294,8 +296,10 @@
 		return ""
 
 /obj/item/weldingtool/largetank
-	name = "industrial welding tool"
-	desc = "A slightly larger welder with a larger tank."
+	name = "spawarka przemysłowa"
+	// name = "industrial welding tool"
+	desc = "Większa spawarka z większym zbiornikiem."
+	// desc = "A slightly larger welder with a larger tank."
 	icon_state = "indwelder"
 	max_fuel = 40
 	materials = list(/datum/material/glass=60)
@@ -304,8 +308,10 @@
 	return
 
 /obj/item/weldingtool/largetank/cyborg
-	name = "integrated welding tool"
-	desc = "An advanced welder designed to be used in robotic systems. Custom framework doubles the speed of welding."
+	name = "zintegrowana spawarka"
+	// name = "integrated welding tool"
+	desc = "Zaawansowana spawarka używana przez roboty. Specjalna budowa podwaja prędkość spawania."
+	// desc = "An advanced welder designed to be used in robotic systems. Custom framework doubles the speed of welding."
 	icon = 'icons/obj/items_cyborg.dmi'
 	icon_state = "indwelder_cyborg"
 	toolspeed = 0.5
@@ -316,8 +322,10 @@
 	switched_on(user)
 
 /obj/item/weldingtool/mini
-	name = "emergency welding tool"
-	desc = "A miniature welder used during emergencies."
+    name = "spawarka awaryjna"
+	// name = "emergency welding tool"
+	desc = "Miniaturowa spawarka używana w nagłych wypadkach."
+	// desc = "A miniature welder used during emergencies."
 	icon_state = "miniwelder"
 	max_fuel = 10
 	w_class = WEIGHT_CLASS_TINY
@@ -328,8 +336,10 @@
 	return
 
 /obj/item/weldingtool/abductor
-	name = "alien welding tool"
-	desc = "An alien welding tool. Whatever fuel it uses, it never runs out."
+	name = "spawarka obcych"
+	// name = "alien welding tool"
+	desc = "Spawarka obcych. W jakiś sposób jest zdolna spawać w nieskończoność."
+	// desc = "An alien welding tool. Whatever fuel it uses, it never runs out."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "welder"
 	toolspeed = 0.1
@@ -342,16 +352,20 @@
 	..()
 
 /obj/item/weldingtool/hugetank
-	name = "upgraded industrial welding tool"
-	desc = "An upgraded welder based of the industrial welder."
+	name = "ulepszona spawarka przemysłowa"
+	// name = "upgraded industrial welding tool"
+	desc = "Taka spawarka przemysłowa tyle że ulepszona."
+	// desc = "An upgraded welder based of the industrial welder."
 	icon_state = "upindwelder"
 	item_state = "upindwelder"
 	max_fuel = 80
 	materials = list(/datum/material/iron=70, /datum/material/glass=120)
 
 /obj/item/weldingtool/experimental
-	name = "experimental welding tool"
-	desc = "An experimental welder capable of self-fuel generation and less harmful to the eyes."
+	name = "spawarka eksperymentalna"
+	// name = "experimental welding tool"
+	desc = "Eksperymentalna spawarka generująca sobie paliwo jak i mniej szkodliwe dla oczu światło."
+	// desc = "An experimental welder capable of self-fuel generation and less harmful to the eyes."
 	icon_state = "exwelder"
 	item_state = "exwelder"
 	max_fuel = 40
@@ -364,8 +378,10 @@
 	var/nextrefueltick = 0
 
 /obj/item/weldingtool/experimental/brass
-	name = "brass welding tool"
-	desc = "A brass welder that seems to constantly refuel itself. It is faintly warm to the touch."
+	name = "mosiężna spawarka"
+	// name = "brass welding tool"
+	desc = "Mosiężna, samoładująca się spawarka. Ciepła w dotyku."
+	// desc = "A brass welder that seems to constantly refuel itself. It is faintly warm to the touch."
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	icon_state = "brasswelder"
 	item_state = "brasswelder"
