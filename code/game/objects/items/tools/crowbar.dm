@@ -64,8 +64,8 @@
 	toolspeed = 0.7
 
 /obj/item/crowbar/cyborg
-	name = "hydraulic crowbar"
-	// name = "łom hydrauliczny"
+	name = "łom hydrauliczny"
+	// name = "hydraulic crowbar"
 	desc = "Hydrauliczne urządzenie, proste ale potężne."
 	// desc = "A hydraulic prying tool, simple but powerful."
 	icon = 'icons/obj/items_cyborg.dmi'
