@@ -1,6 +1,8 @@
 /obj/item/wrench
-	name = "wrench"
-	desc = "A wrench with common uses. Can be found in your hand."
+	name = "klucz"
+	// name = "wrench"
+	desc = "Do śrub, nie do drzwi."
+	// desc = "A wrench with common uses. Can be found in your hand."
 	icon = 'modular_aquila/modules/NARZEDZIA/icons/obj/tools.dmi' //aquila edit
 	icon_state = "wrench"
 	lefthand_file = 'modular_aquila/modules/NARZEDZIA/icons/mob/inhands/equipment/tools_lefthand.dmi' //aquila edit
@@ -25,23 +27,29 @@
 	return (BRUTELOSS)
 
 /obj/item/wrench/brass
-	name = "brass wrench"
-	desc = "A brass wrench. It's faintly warm to the touch."
+	name = "mosiężny klucz"
+	// name = "brass wrench"
+	desc = "Ciepły w dotyku mosiężny klucz."
+	// desc = "A brass wrench. It's faintly warm to the touch."
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	icon_state = "wrench_brass"
 	toolspeed = 0.5
 
 /obj/item/wrench/abductor
-	name = "alien wrench"
-	desc = "A polarized wrench. It causes anything placed between the jaws to turn."
+	name = "klucz obcych"
+	// name = "alien wrench"
+	desc = "Wszystko odkręci, klucz dziesiątka zastąpiony perfekcyjnie."
+	// desc = "A polarized wrench. It causes anything placed between the jaws to turn."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "wrench"
 	usesound = 'sound/effects/empulse.ogg'
 	toolspeed = 0.1
 
 /obj/item/wrench/medical
-	name = "medical wrench"
-	desc = "A medical wrench with common(medical?) uses. Can be found in your hand."
+	name = "klucz medyczny"
+	// name = "medical wrench"
+	desc = "Nie działa jako klucz do serca pacjenta."
+	// desc = "A medical wrench with common(medical?) uses. Can be found in your hand."
 	icon_state = "wrench_medical"
 	force = 2 //MEDICAL
 	throwforce = 4
