@@ -21480,7 +21480,7 @@
 "bim" = (
 /obj/structure/table/wood,
 /obj/machinery/recharger,
-/obj/item/melee/chainofcommand,
+/obj/item/melee/curator_whip/chainofcommand,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "bio" = (

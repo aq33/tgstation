@@ -2981,7 +2981,7 @@
 /area/security/prison)
 "ahK" = (
 /obj/structure/table,
-/obj/item/melee/chainofcommand,
+/obj/item/melee/curator_whip/chainofcommand,
 /obj/item/melee/baton,
 /obj/item/clothing/suit/straight_jacket,
 /obj/item/clothing/suit/straight_jacket,

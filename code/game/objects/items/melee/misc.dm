@@ -9,7 +9,7 @@
 		return TRUE
 
 
-/obj/item/melee/chainofcommand
+/obj/item/melee/curator_whip/chainofcommand //AQ EDIT
 	name = "chain of command"
 	desc = "A tool used by great men to placate the frothing masses."
 	icon_state = "chain"
@@ -18,14 +18,14 @@
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
-	force = 10
-	throwforce = 7
+	force = 7 //AQ EDIT
+	throwforce = 2 //AQ EDIT
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb = list("flogged", "whipped", "lashed", "disciplined")
 	hitsound = 'sound/weapons/chainhit.ogg'
 	materials = list(/datum/material/iron = 1000)
 
-/obj/item/melee/chainofcommand/suicide_act(mob/user)
+/obj/item/melee/curator_whip/chainofcommand/suicide_act(mob/user) //AQ EDIT
 	user.visible_message("<span class='suicide'>[user] is strangling [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return (OXYLOSS)
 
@@ -677,7 +677,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
-	force = 0.001 //"Some attack noises shit"
+	force = 2 //"Some attack noises shit" /AQ EDIT
 	reach = 3
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb = list("flogged", "whipped", "lashed", "disciplined")
