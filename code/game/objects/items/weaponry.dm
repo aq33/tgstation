@@ -590,13 +590,14 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	desc = "A bust of the famous Greek physician Hippocrates of Kos, often referred to as the father of western medicine."
 	icon_state = "hippocratic"
 
-/obj/item/melee/chainofcommand/tailwhip
+/obj/item/melee/curator_whip/chainofcommand/tailwhip //AQ EDIT
 	name = "liz o' nine tails"
 	desc = "A whip fashioned from the severed tails of lizards."
 	icon_state = "tailwhip"
 	item_flags = NONE
+	hitsound = 'sound/weapons/whip.ogg' //AQ EDIT
 
-/obj/item/melee/chainofcommand/tailwhip/kitty
+/obj/item/melee/curator_whip/chainofcommand/tailwhip/kitty //AQ EDIT
 	name = "cat o' nine tails"
 	desc = "A whip fashioned from the severed tails of cats."
 	icon_state = "catwhip"

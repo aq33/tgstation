@@ -141,7 +141,7 @@
 
 /datum/crafting_recipe/tailwhip
 	name = "Liz O' Nine Tails"
-	result = /obj/item/melee/chainofcommand/tailwhip
+	result = /obj/item/melee/curator_whip/chainofcommand/tailwhip //AQ EDIT
 	reqs = list(/obj/item/organ/tail/lizard = 1,
 	            /obj/item/stack/cable_coil = 1)
 	time = 40
@@ -150,7 +150,7 @@
 
 /datum/crafting_recipe/catwhip
 	name = "Cat O' Nine Tails"
-	result = /obj/item/melee/chainofcommand/tailwhip/kitty
+	result = /obj/item/melee/curator_whip/chainofcommand/tailwhip/kitty //AQ EDIT
 	reqs = list(/obj/item/organ/tail/cat = 1,
 	            /obj/item/stack/cable_coil = 1)
 	time = 40
