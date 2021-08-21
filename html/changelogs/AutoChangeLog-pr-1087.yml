@@ -1,9 +1,0 @@
-author: Dejaku51
-delete-after: true
-changes:
-  - rscadd: Dodano Construction bag
-  - tweak: Dodano Construction bag oraz Sheet Snatcher do Engivenda
-  - tweak: Dodano Construction bag do szafki CE
-  - tweak: Dodano możliwość stworzenia Construction bag oraz Sheet Snatcher za pomocą
-      tkaniny
-  - balance: Zmieniono pojemność Sheet Snatchera z 300 do 150
