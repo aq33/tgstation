@@ -18,6 +18,7 @@
 					/obj/item/electronics/advanced_airlock_controller = 10,
 					/obj/item/electronics/firealarm = 10,
 					/obj/item/electronics/firelock = 10,
+					/obj/item/storage/bag/sheetsnatcher = 3,
 					/obj/item/storage/bag/construction = 3)
 	contraband = list(/obj/item/stock_parts/cell/potato = 3)
 	premium = list(/obj/item/storage/belt/utility = 3,
