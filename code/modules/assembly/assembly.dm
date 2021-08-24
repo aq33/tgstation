@@ -28,6 +28,8 @@
 
 	var/next_activate = 0 //When we're next allowed to activate - for spam control
 	var/activate_delay = 30
+	drop_sound = 'sound/items/handling/component_drop.ogg'
+	pickup_sound =  'sound/items/handling/component_pickup.ogg'
 
 /obj/item/assembly/get_part_rating()
 	return 1

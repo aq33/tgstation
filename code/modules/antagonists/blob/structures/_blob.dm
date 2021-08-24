@@ -1,9 +1,9 @@
 //I will need to recode parts of this but I am way too tired atm //I don't know who left this comment but they never did come back
 /obj/structure/blob
-	name = "blob"
+	name = "grzyb"
 	icon = 'icons/mob/blob.dmi'
 	light_range = 2
-	desc = "A thick wall of writhing tendrils."
+	desc = "Gruba ściana wijących się zgrzybiałych pędów."
 	density = FALSE //this being false causes two bugs, being able to attack blob tiles behind other blobs and being unable to move on blob tiles in no gravity, but turning it to 1 causes the blob mobs to be unable to path through blobs, which is probably worse.
 	opacity = 0
 	anchored = TRUE
@@ -226,13 +226,13 @@
 /obj/structure/blob/attackby(obj/item/I, mob/user, params)
 	if(I.tool_behaviour == TOOL_ANALYZER)
 		user.changeNext_move(CLICK_CD_MELEE)
-		to_chat(user, "<b>The analyzer beeps once, then reports:</b><br>")
+		to_chat(user, "<b>Analizer pipczy, po czym wyświetla szczegółowy raport:</b><br>")
 		SEND_SOUND(user, sound('sound/machines/ping.ogg'))
 		if(overmind)
-			to_chat(user, "<b>Progress to Critical Mass:</b> <span class='notice'>[overmind.blobs_legit.len]/[overmind.blobwincount].</span>")
+			to_chat(user, "<b>Postęp do masy krytycznej:</b> <span class='notice'>[overmind.blobs_legit.len]/[overmind.blobwincount].</span>")
 			to_chat(user, chemeffectreport(user).Join("\n"))
 		else
-			to_chat(user, "<b>Blob core neutralized. Critical mass no longer attainable.</b>")
+			to_chat(user, "<b>Rdzeń grzyba został zneutralizowany. Masa krytyczna nie jest już osiągalna.</b>")
 		to_chat(user, typereport(user).Join("\n"))
 	else
 		return ..()
@@ -241,17 +241,17 @@
 	RETURN_TYPE(/list)
 	. = list()
 	if(overmind)
-		. += list("<b>Material: <font color=\"[overmind.blobstrain.color]\">[overmind.blobstrain.name]</font><span class='notice'>.</span></b>",
-		"<b>Material Effects:</b> <span class='notice'>[overmind.blobstrain.analyzerdescdamage]</span>",
-		"<b>Material Properties:</b> <span class='notice'>[overmind.blobstrain.analyzerdesceffect || "N/A"]</span>")
+		. += list("<b>Rodzaj Grzyba:: <font color=\"[overmind.blobstrain.color]\">[overmind.blobstrain.name]</font><span class='notice'>.</span></b>",
+		"<b>Efekt:</b> <span class='notice'>[overmind.blobstrain.analyzerdescdamage]</span>",
+		"<b>Właściwości:</b> <span class='notice'>[overmind.blobstrain.analyzerdesceffect || "N/A"]</span>")
 	else
 		. += "<b>No Material Detected!</b>"
 
 /obj/structure/blob/proc/typereport(mob/user)
 	RETURN_TYPE(/list)
-	return list("<b>Blob Type:</b> <span class='notice'>[uppertext(initial(name))]</span>",
-		"<b>Health:</b> <span class='notice'>[obj_integrity]/[max_integrity]</span>",
-		"<b>Effects:</b> <span class='notice'>[scannerreport()]</span>")
+	return list("<b>Rodzaj Grzyba:</b> <span class='notice'>[uppertext(initial(name))]</span>",
+		"<b>Zdrowie:</b> <span class='notice'>[obj_integrity]/[max_integrity]</span>",
+		"<b>Efekty:</b> <span class='notice'>[scannerreport()]</span>")
 
 
 /obj/structure/blob/attack_animal(mob/living/simple_animal/M)
@@ -310,17 +310,17 @@
 	. = ..()
 	var/datum/atom_hud/hud_to_check = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
 	if(user.research_scanner || hud_to_check.hudusers[user])
-		. += "<b>Your HUD displays an extensive report...</b><br>"
+		. += "<b>Twój HUD wyświetla szczegółowy raport...</b><br>"
 		if(overmind)
 			. += overmind.blobstrain.examine(user)
 		else
-			. += "<b>Core neutralized. Critical mass no longer attainable.</b>"
+			. += "<b>Rdzeń grzyba został zneutralizowany. Masa krytyczna nie jest już osiągalna.</b>"
 		. += chemeffectreport(user)
 		. += typereport(user)
 	else
 		if((user == overmind || isobserver(user)) && overmind)
 			. += overmind.blobstrain.examine(user)
-		. += "It seems to be made of [get_chem_name()]."
+		. += "Wydaje się że jego rodzaj to: [get_chem_name()]."
 
 /obj/structure/blob/proc/scannerreport()
 	return "A generic blob. Looks like someone forgot to override this proc, adminhelp this."
@@ -331,7 +331,7 @@
 	return "some kind of organic tissue"
 
 /obj/structure/blob/normal
-	name = "normal blob"
+	name = "zwyczajny grzyb"
 	icon_state = "blob"
 	light_range = 0
 	obj_integrity = 21 //doesn't start at full health
@@ -341,23 +341,23 @@
 
 /obj/structure/blob/normal/scannerreport()
 	if(obj_integrity <= 15)
-		return "Currently weak to brute damage."
+		return "Podatny na obrażenia fizyczne."
 	return "N/A"
 
 /obj/structure/blob/normal/update_icon()
 	..()
 	if(obj_integrity <= 15)
 		icon_state = "blob_damaged"
-		name = "fragile blob"
-		desc = "A thin lattice of slightly twitching tendrils."
+		name = "delikatny grzyb"
+		desc = "Cienka siatka lekko drgających zgrzybiałych pnączy."
 		brute_resist = 0.5
 	else if (overmind)
 		icon_state = "blob"
-		name = "blob"
-		desc = "A thick wall of writhing tendrils."
+		name = "grzyb"
+		desc = "Gruba ściana wijących się zgrzybiałych pnączy."
 		brute_resist = 0.25
 	else
 		icon_state = "blob"
-		name = "dead blob"
-		desc = "A thick wall of lifeless tendrils."
+		name = "martwy grzyb"
+		desc = "Gruba ściana martwych zgrzybiałych pnączy."
 		brute_resist = 0.25

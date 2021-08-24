@@ -572,3 +572,8 @@
 		var/custom_data = item.on_object_saved(depth++)
 		dat += "[custom_data ? ",\n[custom_data]" : ""]"
 	return dat
+
+/obj/structure/closet/Moved(atom/OldLoc, Dir)
+	. = ..()
+	if(has_gravity())
+		playsound(src, 'sound/effects/closetpull.ogg', 100, 0)

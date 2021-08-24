@@ -794,8 +794,8 @@
 "cm" = (
 /obj/structure/table/wood,
 /obj/item/clothing/glasses/sunglasses,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /turf/open/floor/wood,
 /area/awaymission/beach)
 "cn" = (
@@ -937,12 +937,12 @@
 /area/awaymission/beach)
 "cK" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /turf/open/floor/plating/beach/sand,
 /area/awaymission/beach)
 "cL" = (

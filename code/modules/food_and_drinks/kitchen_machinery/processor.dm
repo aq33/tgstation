@@ -188,6 +188,7 @@
 		return
 
 	visible_message("[picked_slime] is sucked into [src].")
+	playsound(loc, 'sound/effects/footstep/crawl1.ogg', 50, 1)
 	picked_slime.forceMove(src)
 
 /obj/machinery/processor/slime/process_food(datum/food_processor_process/recipe, atom/movable/what)

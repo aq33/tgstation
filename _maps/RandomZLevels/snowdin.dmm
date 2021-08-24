@@ -12264,7 +12264,7 @@
 /turf/open/floor/plasteel/dark,
 /area/awaymission/snowdin/cave)
 "CI" = (
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	list_reagents = null
 	},
 /obj/effect/turf_decal/tile/neutral,
@@ -12493,7 +12493,7 @@
 /area/awaymission/snowdin/cave)
 "Df" = (
 /obj/item/stack/rods,
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	list_reagents = null
 	},
 /obj/effect/turf_decal/tile/neutral,
@@ -12513,7 +12513,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	list_reagents = null
 	},
 /turf/open/floor/mineral/plastitanium/red,
@@ -12613,7 +12613,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	list_reagents = null
 	},
 /turf/open/floor/mineral/plastitanium/red,
@@ -12933,7 +12933,7 @@
 /turf/open/floor/plasteel/dark/snowdin,
 /area/awaymission/snowdin/cave)
 "Ea" = (
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	list_reagents = null
 	},
 /turf/open/floor/plasteel/dark,
@@ -12973,7 +12973,7 @@
 /turf/open/floor/plating/asteroid/snow,
 /area/awaymission/snowdin/cave)
 "Ef" = (
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	list_reagents = null
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -13043,7 +13043,7 @@
 /area/awaymission/snowdin/cave)
 "Eo" = (
 /obj/effect/turf_decal/weather/snow,
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	list_reagents = null
 	},
 /turf/open/floor/plasteel/dark/snowdin,
@@ -13112,7 +13112,7 @@
 /area/awaymission/snowdin/cave)
 "Eu" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	list_reagents = null
 	},
 /turf/open/floor/plasteel/dark,
@@ -13122,7 +13122,7 @@
 	dir = 4
 	},
 /obj/item/stack/rods,
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	list_reagents = null
 	},
 /turf/open/floor/mineral/plastitanium/red,
@@ -13171,7 +13171,7 @@
 	dir = 10
 	},
 /obj/item/shard,
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	list_reagents = null
 	},
 /turf/open/floor/mineral/plastitanium/red,

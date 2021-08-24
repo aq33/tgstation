@@ -193,7 +193,7 @@
 /mob/living/simple_animal/pet/cat/Life()
 	if(!stat && !buckled && !client)
 		if(prob(3))
-			switch(rand(1, 3))
+			switch(rand(1, 4))
 				if (1)
 					INVOKE_ASYNC(src, /mob.proc/emote, "me", 1, pick("stretches out for a belly rub.", "wags its tail.", "lies down."))
 					icon_state = "[icon_living]_rest"
@@ -212,6 +212,8 @@
 						set_resting(FALSE)
 					else
 						INVOKE_ASYNC(src, /mob.proc/emote, "me", 1, pick("grooms its fur.", "twitches its whiskers.", "shakes out its coat."))
+				if (4)
+					playsound(loc, 'sound/misc/meow.ogg', 50, 1)
 
 	..()
 	if(next_scan_time <= world.time)
@@ -249,6 +251,7 @@
 		if(M && stat != DEAD)
 			new /obj/effect/temp_visual/heart(loc)
 			emote("me", 1, "purrs!")
+			playsound(loc, 'sound/misc/purr.ogg', 50, 1)
 			if(flags_1 & HOLOGRAM_1)
 				return
 			SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, src, /datum/mood_event/pet_animal, src)

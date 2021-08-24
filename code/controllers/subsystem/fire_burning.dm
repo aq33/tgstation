@@ -31,6 +31,7 @@ SUBSYSTEM_DEF(fire_burning)
 		if(O.resistance_flags & ON_FIRE) //in case an object is extinguished while still in currentrun
 			if(!(O.resistance_flags & FIRE_PROOF))
 				O.take_damage(20, BURN, "fire", 0)
+				playsound(O.loc, 'sound/effects/fire.ogg', 100, 1)
 			else
 				O.extinguish()
 

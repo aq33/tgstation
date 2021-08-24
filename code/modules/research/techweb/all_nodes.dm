@@ -188,7 +188,7 @@
 	display_name = "Advanced Power Manipulation"
 	description = "How to get more zap."
 	prereq_ids = list("engineering")
-	design_ids = list("smes", "super_cell", "hyper_cell", "super_capacitor", "superpacman", "mrspacman", "power_turbine", "power_turbine_console", "power_compressor", "circulator", "teg")
+	design_ids = list("smes", "super_cell", "hyper_cell", "super_capacitor", "superpacman", "mrspacman", "power_turbine", "power_turbine_console", "power_compressor", "circulator", "teg", "export_battery")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 
@@ -384,7 +384,8 @@
 	prereq_ids = list("robotics", "posibrain")
 	design_ids = list("aifixer", "aicore", "safeguard_module", "onehuman_module", "protectstation_module", "quarantine_module", "oxygen_module", "freeform_module",
 	"reset_module", "purge_module", "remove_module", "freeformcore_module", "asimov_module", "paladin_module", "tyrant_module", "overlord_module", "corporate_module",
-	"default_module", "borg_ai_control", "mecha_tracking_ai_control", "aiupload", "intellicard")
+	"dungeonmaster_module", "boomer_module", "zoomer_module", "science_module", "service_module", "weeb_module", "gamer_module", "lizardimov_module",
+	"corgi_module", "cowboy_module", "default_module", "borg_ai_control", "mecha_tracking_ai_control", "aiupload", "intellicard", "droneDispenser")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 

@@ -12,12 +12,12 @@
 	var/mob/pulledby = null
 	var/initial_language_holder = /datum/language_holder
 	var/datum/language_holder/language_holder	// Mindless mobs and objects need language too, some times. Mind holder takes prescedence.
-	var/verb_say = "says"
-	var/verb_ask = "asks"
-	var/verb_exclaim = "exclaims"
-	var/verb_whisper = "whispers"
-	var/verb_sing = "sings"
-	var/verb_yell = "yells"
+	var/verb_say = "mówi"
+	var/verb_ask = "pyta"
+	var/verb_exclaim = "woła"
+	var/verb_whisper = "szepcze"
+	var/verb_sing = "śpiewa"
+	var/verb_yell = "krzyczy"
 	var/speech_span
 	var/inertia_dir = 0
 	var/atom/inertia_last_loc

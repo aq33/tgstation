@@ -1,15 +1,15 @@
 /obj/structure/blob/resource
-	name = "resource blob"
+	name = "owocnik"
 	icon = 'icons/mob/blob.dmi'
 	icon_state = "blob_resource"
-	desc = "A thin spire of slightly swaying tendrils."
+	desc = "struktura z gęstych, grzybich pnączy"
 	max_integrity = 60
 	point_return = 15
 	resistance_flags = LAVA_PROOF
 	var/resource_delay = 0
 
 /obj/structure/blob/resource/scannerreport()
-	return "Gradually supplies the blob with resources, increasing the rate of expansion."
+	return "Stopniowo zasila grzyba zasobami, zwiększając tempo rozrostu."
 
 /obj/structure/blob/resource/creation_action()
 	if(overmind)

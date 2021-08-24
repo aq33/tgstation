@@ -1706,7 +1706,7 @@
 	pixel_x = -11;
 	pixel_y = 3
 	},
-/obj/item/reagent_containers/food/drinks/beer{
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull{
 	pixel_x = 6;
 	pixel_y = 14
 	},

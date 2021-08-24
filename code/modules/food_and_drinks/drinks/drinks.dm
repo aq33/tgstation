@@ -87,6 +87,7 @@
 		var/refill = reagents.get_master_reagent_id()
 		var/trans = src.reagents.trans_to(target, amount_per_transfer_from_this, transfered_by = user)
 		to_chat(user, "<span class='notice'>You transfer [trans] units of the solution to [target].</span>")
+		playsound(src, "sound/items/pour.ogg", 15, TRUE)
 
 		if(iscyborg(user)) //Cyborg modules that include drinks automatically refill themselves, but drain the borg's cell
 			var/mob/living/silicon/robot/bro = user
@@ -264,8 +265,8 @@
 
 
 /obj/item/reagent_containers/food/drinks/dry_ramen
-	name = "cup ramen"
-	desc = "Just add 5ml of water, self heats! A taste that reminds you of your school years. Now new with salty flavour!"
+	name = "zupa romana"
+	desc = "Wystarczy, że dodasz 5ml wody."
 	icon_state = "ramen"
 	list_reagents = list(/datum/reagent/consumable/dry_ramen = 15, /datum/reagent/consumable/sodiumchloride = 3)
 	foodtype = GRAIN
@@ -602,3 +603,10 @@
 	desc = "There is no air shortage. Do not drink."
 	icon_state = "air"
 	list_reagents = list(/datum/reagent/nitrogen = 24, /datum/reagent/oxygen = 6)
+
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull
+	name = "mocny full"
+	desc = "Najlepsze w całym kosmosie."
+	icon_state = "mocnyfull"
+	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 30)
+	foodtype = GRAIN | ALCOHOL

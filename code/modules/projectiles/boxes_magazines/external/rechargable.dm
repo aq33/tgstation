@@ -4,7 +4,7 @@
 	icon_state = "oldrifle-20"
 	ammo_type = /obj/item/ammo_casing/caseless/laser
 	caliber = "laser"
-	max_ammo = 20
+	max_ammo = 12
 
 /obj/item/ammo_box/magazine/recharge/update_icon()
 	desc = "[initial(desc)] It has [stored_ammo.len] shot\s left."

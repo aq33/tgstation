@@ -78,7 +78,6 @@
 				return
 			user.visible_message("<span class='green'>[user] applies [src] on [t_himself].</span>", "<span class='green'>You apply [src] on yourself.</span>")
 
-
 	if(iscarbon(M))
 		var/mob/living/carbon/C = M
 		affecting = C.get_bodypart(check_zone(user.zone_selected))
@@ -92,6 +91,7 @@
 					H.suppress_bloodloss(stop_bleeding)
 		if(affecting.status == BODYPART_ORGANIC) //Limb must be organic to be healed - RR
 			if(affecting.heal_damage(heal_brute, heal_burn))
+				playsound(user.loc, 'sound/effects/suture.ogg', 100, 1)
 				C.update_damage_overlays()
 		else
 			to_chat(user, "<span class='notice'>Medicine won't work on a robotic limb!</span>")

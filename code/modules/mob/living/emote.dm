@@ -26,12 +26,20 @@
 	message = "beka"
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/burp/get_sound(mob/living/user)
+	if(ishuman(user) && !user.mind.miming)
+		return 'sound/misc/burp.ogg'
+
 /datum/emote/living/choke
 	key = "choke"
 	key_third_person = "chokes"
 	// message = "chokes"
 	message = "dusi się"
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/choke/get_sound(mob/living/user)
+	if(ishuman(user) && !user.mind.miming)
+		return 'sound/misc/choke.ogg'
 
 /datum/emote/living/cross
 	key = "cross"
@@ -72,12 +80,19 @@
 	if(HAS_TRAIT(user, TRAIT_SOOTHED_THROAT))
 		return FALSE
 
+/datum/emote/living/cough/get_sound(mob/living/user)
+	if(ishuman(user) && !user.mind.miming)
+		return 'sound/misc/cough.ogg'
+
 /datum/emote/living/dance
 	key = "dance"
 	key_third_person = "dances"
 	// message = "dances around happily"
 	message = "tańczy wesoło"
 	restraint_check = TRUE
+
+/datum/emote/living/dance/get_sound(mob/living/user)
+	return 'sound/misc/dance.ogg'
 
 /datum/emote/living/deathgasp
 	key = "deathgasp"
@@ -176,6 +191,10 @@
 	emote_type = EMOTE_AUDIBLE
 	stat_allowed = UNCONSCIOUS
 
+/datum/emote/living/gasp/get_sound(mob/living/user)
+	if(ishuman(user) && !user.mind.miming)
+		return 'sound/misc/gasp.ogg'
+
 /datum/emote/living/giggle
 	key = "giggle"
 	key_third_person = "giggles"
@@ -208,6 +227,10 @@
 	message = "jęczy"
 	message_mime = "wydaje się jęczeć"
 
+/datum/emote/living/groan/get_sound(mob/living/user)
+	if(ishuman(user) && !user.mind.miming)
+		return 'sound/misc/groan.ogg'
+
 /datum/emote/living/grimace
 	key = "grimace"
 	key_third_person = "grimaces"
@@ -230,6 +253,10 @@
 	message_param = "posyła buziaka do %t"
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/kiss/get_sound(mob/living/user)
+	if(ishuman(user) && !user.mind.miming)
+		return 'sound/misc/kiss.ogg'
+
 /datum/emote/living/laugh
 	key = "laugh"
 	key_third_person = "laughs"
@@ -247,7 +274,7 @@
 		return !C.silent
 
 /datum/emote/living/laugh/get_sound(mob/living/user)
-	if(ishuman(user))
+	if(ishuman(user) && !user.mind.miming)
 		var/mob/living/carbon/human/H = user
 		var/human_laugh = ishumanbasic(H) || iscatperson(H)
 		if(human_laugh && (!H.mind || !H.mind.miming))
@@ -283,7 +310,7 @@
 
 /datum/emote/living/point/run_emote(mob/user, params, type_override, intentional)
 	message_param = initial(message_param) // reset
-	if(ishuman(user))
+	if(ishuman(user) && !user.mind.miming)
 		var/mob/living/carbon/human/H = user
 		if(H.get_num_arms() == 0)
 			if(H.get_num_legs() != 0)
@@ -346,6 +373,10 @@
 	message = "wzdycha"
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/sigh/get_sound(mob/living/user)
+	if(ishuman(user) && !user.mind.miming)
+		return 'sound/misc/sigh.ogg'
+
 /datum/emote/living/sit
 	key = "sit"
 	key_third_person = "sits"
@@ -365,6 +396,10 @@
 	message = "kicha"
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/sneeze/get_sound(mob/living/user)
+	if(ishuman(user) && !user.mind.miming)
+		return 'sound/misc/sneeze.ogg'
+
 /datum/emote/living/smug
 	key = "smug"
 	key_third_person = "smugs"
@@ -378,6 +413,10 @@
 	message = "niucha"
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/sniff/get_sound(mob/living/user)
+	if(ishuman(user) && !user.mind.miming)
+		return 'sound/misc/sniff.ogg'
+
 /datum/emote/living/snore
 	key = "snore"
 	key_third_person = "snores"
@@ -387,6 +426,10 @@
 	message_mime = "chrapie głośno"
 	emote_type = EMOTE_AUDIBLE
 	stat_allowed = UNCONSCIOUS
+
+/datum/emote/living/snore/get_sound(mob/living/user)
+	if(ishuman(user) && !user.mind.miming)
+		return 'sound/misc/snore.ogg'
 
 /datum/emote/living/stare
 	key = "stare"
@@ -470,6 +513,10 @@
 	// message = "yawns"
 	message = "ziewa"
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/yawn/get_sound(mob/living/user)
+	if(ishuman(user) && !user.mind.miming)
+		return 'sound/misc/yawn.ogg'
 
 /datum/emote/living/custom
 	key = "me"

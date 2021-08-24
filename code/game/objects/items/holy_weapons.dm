@@ -191,6 +191,13 @@
 	desc = "I mean, you don't /have/ to seek bling water. I just think you should."
 	icon_state = "chaplain_hood_leader"
 
+/obj/item/storage/box/holy/techpriest
+	name = "Techpriest Kit"
+
+/obj/item/storage/box/holy/techpriest/PopulateContents()
+	new /obj/item/clothing/suit/hooded/techpriest(src)
+	new /obj/item/autosurgeon/techpriest(src)
+	new /obj/item/storage/box/microwavekit(src)
 
 // CHAPLAIN NULLROD AND CUSTOM WEAPONS //
 

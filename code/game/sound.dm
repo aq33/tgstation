@@ -12,7 +12,7 @@
 
  	// Looping through the player list has the added bonus of working for mobs inside containers
 	var/sound/S = sound(get_sfx(soundin))
-	var/maxdistance = (getviewsize(world.view)[1] + extrarange)
+	var/maxdistance = (world.view * 2 + extrarange)
 	var/z = turf_source.z
 	var/list/listeners = SSmobs.clients_by_zlevel[z]
 	if(!ignore_walls) //these sounds don't carry through walls
@@ -45,6 +45,8 @@
 		else
 			S.frequency = get_rand_frequency()
 
+	var/direct = 0
+	var/room   = -10000
 	if(isturf(turf_source))
 		var/turf/T = get_turf(src)
 
@@ -55,6 +57,12 @@
 
 		S.volume -= max(distance - getviewsize(world.view)[1], 0) * 2 //multiplicative falloff to add on top of natural audio falloff.
 
+		if(get_area(T) == get_area(turf_source))
+			direct = 0
+			room   = -250
+		else 
+			direct = -distance * 100
+			room   = 0
 		if(pressure_affected)
 			//Atmosphere affects sound
 			var/pressure_factor = 1
@@ -74,17 +82,18 @@
 			S.volume *= pressure_factor
 			//End Atmosphere affecting sound
 
-		if(S.volume <= 0)
-			return //No sound
-
 		var/dx = turf_source.x - T.x // Hearing from the right/left
 		S.x = dx * distance_multiplier
 		var/dz = turf_source.y - T.y // Hearing from infront/behind
 		S.z = dz * distance_multiplier
 		// The y value is for above your head, but there is no ceiling in 2d spessmens.
 		S.y = 1
-		S.falloff = (falloff ? falloff : FALLOFF_SOUNDS)
 
+	//SOUND_MUTE signalizes the sound should play despite volume == 0
+	if(S.volume == 0 && !(S.status & SOUND_UPDATE) && !(S.status & SOUND_MUTE))
+		return
+	S.environment = 7
+	S.echo = list(direct, null, room, null, null, null, null, null, null, null, null, null, null, 1, 1, 1, null, null)
 	SEND_SOUND(src, S)
 
 /proc/sound_to_playing_players(soundin, volume = 100, vary = FALSE, frequency = 0, falloff = FALSE, channel = 0, pressure_affected = FALSE, sound/S)
@@ -174,6 +183,8 @@
 				soundin = pick('sound/voice/beepsky/god.ogg', 'sound/voice/beepsky/iamthelaw.ogg', 'sound/voice/beepsky/secureday.ogg', 'sound/voice/beepsky/radio.ogg', 'sound/voice/beepsky/insult.ogg', 'sound/voice/beepsky/creep.ogg')
 			if("honkbot_e")
 				soundin = pick('sound/items/bikehorn.ogg', 'sound/items/AirHorn2.ogg', 'sound/misc/sadtrombone.ogg', 'sound/items/AirHorn.ogg', 'sound/effects/reee.ogg',  'sound/items/WEEOO1.ogg', 'sound/voice/beepsky/iamthelaw.ogg', 'sound/voice/beepsky/creep.ogg','sound/magic/Fireball.ogg' ,'sound/effects/pray.ogg', 'sound/voice/hiss1.ogg','sound/machines/buzz-sigh.ogg', 'sound/machines/ping.ogg', 'sound/weapons/flashbang.ogg', 'sound/weapons/bladeslice.ogg')
+			if("allah")
+				soundin = pick('sound/items/Alah.ogg', 'sound/items/alah_grib.ogg')
 			if("goose")
 				soundin = pick('sound/creatures/goose1.ogg', 'sound/creatures/goose2.ogg', 'sound/creatures/goose3.ogg', 'sound/creatures/goose4.ogg')
 			if("smcalm")

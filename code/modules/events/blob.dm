@@ -16,7 +16,7 @@
 	fakeable = TRUE
 
 /datum/round_event/ghost_role/blob/announce(fake)
-	priority_announce("Confirmed outbreak of level 5 biohazard aboard [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert", 'sound/ai/outbreak5.ogg')
+	priority_announce("Potwierdzono wystąpienie zagrożenia biologicznego piątego poziomu na pokładzie [station_name()]. Cały personel ma za zadanie powstrzymać rozprzestrzenienie.", "Alarm biologiczny", 'sound/ai/outbreak5.ogg')
 
 /datum/round_event/ghost_role/blob/spawn_role()
 	if(!GLOB.blobstart.len)

@@ -1,10 +1,10 @@
 //does brute damage through armor and bio resistance
 /datum/blobstrain/reagent/reactive_spines
-	name = "Reactive Spines"
-	description = "will do medium brute damage through armor and bio resistance."
-	effectdesc = "will also react when attacked with brute damage, attacking all near the attacked blob."
-	analyzerdescdamage = "Does medium brute damage, ignoring armor and bio resistance."
-	analyzerdesceffect = "When attacked with brute damage, will lash out, attacking everything near it."
+	name = "Pleśń Agresywna"
+	description = "zadajesz średnie obrażenia fizyczne przebijając pancerz oraz kombinezony biologiczne."
+	effectdesc = "automatycznie zaatakujesz agresora oraz wszystko w jego pobliżu, kiedy zostaniesz zaatakowany fizycznie."
+	analyzerdescdamage = "Zadaje średnie obrażenia fizyczne, przebijając pancerz oraz kombinezony biologiczne."
+	analyzerdesceffect = "Po zaatakowaniu go fizycznie samoistnie zaatakuje agresora oraz wszystko w jego pobliżu."
 	color = "#9ACD32"
 	complementary_color = "#FFA500"
 	blobbernaut_message = "stabs"

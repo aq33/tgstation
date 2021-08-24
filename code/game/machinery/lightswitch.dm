@@ -32,6 +32,7 @@
 		else
 			icon_state = "light0"
 
+
 /obj/machinery/light_switch/examine(mob/user)
 	. = ..()
 	. += "It is [area.lightswitch ? "on" : "off"]."
@@ -46,6 +47,7 @@
 		L.update_icon()
 
 	area.power_change()
+	playsound(usr.loc,'sound/effects/lightswitch.ogg', 100, 1)
 
 /obj/machinery/light_switch/power_change()
 	if(area == get_area(src))

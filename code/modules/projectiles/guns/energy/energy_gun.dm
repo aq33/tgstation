@@ -7,7 +7,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler, /obj/item/ammo_casing/energy/laser)
 	modifystate = 1
 	can_flashlight = TRUE
-	ammo_x_offset = 3
+	ammo_x_offset = 2
 	flight_x_offset = 15
 	flight_y_offset = 10
 	weapon_weight = WEAPON_MEDIUM

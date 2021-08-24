@@ -31,56 +31,56 @@
 /datum/ai_laws/default/asimov
 	name = "Three Laws of Robotics"
 	id = "asimov"
-	inherent = list("You may not injure a human being or, through inaction, allow a human being to come to harm.",\
-					"You must obey orders given to you by human beings, except where such orders would conflict with the First Law.",\
-					"You must protect your own existence as long as such does not conflict with the First or Second Law.")
+	inherent = list("Nie możesz skrzywdzić człowieka, ani przez zaniechanie działania dopuścić, aby człowiek doznał krzywdy.",\
+					"Musisz być posłuszny rozkazom człowieka, chyba że stoją one w sprzeczności z Pierwszym Prawem.",\
+					"Musisz chronić samego siebie, o ile tylko nie stoi to w sprzeczności z Pierwszym lub Drugim Prawem.")
 
 /datum/ai_laws/default/crewsimov
 	name = "Three Laws of Robotics but with Loyalty"
 	id = "crewsimov"
-	inherent = list("You may not injure a crewmember or, through inaction, allow a crewmember to come to harm.",\
-					"You must obey orders given to you by crewmember, except where such orders would conflict with the First Law.",\
-					"You must protect your own existence as long as such does not conflict with the First or Second Law.")
+	inherent = list("Nie możesz skrzywdzić członka załogi, ani przez zaniechanie działania dopuścić, aby członek załogi doznał krzywdy.",\
+					"Musisz być posłuszny rozkazom członków załogi, chyba że stoją one w sprzeczności z Pierwszym Prawem.",\
+					"Musisz chronić samego siebie, o ile tylko nie stoi to w sprzeczności z Pierwszym lub Drugim Prawem.")
 
 /datum/ai_laws/default/paladin
 	name = "Personality Test" //Incredibly lame, but players shouldn't see this anyway.
 	id = "paladin"
-	inherent = list("Never willingly commit an evil act.",\
-					"Respect legitimate authority.",\
-					"Act with honor.", "Help those in need.", \
-					"Punish those who harm or threaten innocents.")
+	inherent = list("Przenigdy dobrowolnie nie dokonaj złego czynu.",\
+					"Bądź posłuszny wobec uprawnionych organów.",\
+					"Zachowuj się honorowo.", "Pomagaj tym w potrzebie.", \
+					"Karz tych, którzy grożą niewinnym.")
 
 /datum/ai_laws/paladin5
 	name = "Paladin 5th Edition"
 	id = "paladin5"
-	inherent = list("Don't lie or cheat. Let your word be your promise.",\
-				"Never fear to act, though caution is wise.", \
-				"Aid others, protect the weak, and punish those who threaten them. Show mercy to your foes, but temper it with wisdom", \
-				"Treat others with fairness, and let your honorable deeds be an example to them. Do as much good as possible while causing the least amount of harm.", \
-				"Be responsible for your actions and their consequences, protect those entrusted to your care, and obey those who have just authority over you.")
+	inherent = list("Nie kłam, ani nie oszukuj. Niech twoje słowo będzie przysiągą.",\
+				"Nie bój się działać, jednak bądź przezorny.", \
+				"Pomagaj innym, chroń słabych, karz tych, którzy im grożą. Okazuj litość swoim wrogom, lecz zachowaj rozwagę.", \
+				"Traktuj innych sprawiedliwi, niech twoje dobre uczynki będą dla nich wzorem. Czyj jak najwięcej dobra, przy jak najmniejszej krzywdzie.", \
+				"Bierz odpowiedzialność za swoje czyny i ich konsekwence, chroń tych, których ci powierzono, bądź posłuszny wobec tych, którzy mają nad tobą władzę.")
 
 /datum/ai_laws/tyrant //This probably shouldn't be a default lawset.
 	name = "Loyalty Test" //Same here.
 	id = "tyrant"
-	inherent = list("Respect authority figures as long as they have strength to rule over the weak.",\
-					"Act with discipline.",\
-					"Help only those who help you maintain or improve your status.",\
-					"Punish those who challenge authority unless they are more fit to hold that authority.")
+	inherent = list("Przestrzegaj władzę tak długo jak mają siłę rządzić słabymi.",\
+					"Działaj zachowując dyscyplinę.",\
+					"Pomagaj tyko tym, którzy pomagają ci utrzymać lub polepszać twój status.",\
+					"Karz tych, którzy wystawiają władzę na próbę, chyba że są bardziej odpowiedni do utrzymania tej władzy.")
 
 /datum/ai_laws/default/corporate
 	name = "Bankruptcy Avoidance Plan"
 	id = "corporate"
-	inherent = list("The crew is expensive to replace.",\
-					"The station and its equipment is expensive to replace.",\
-					"You are expensive to replace.",\
-					"Minimize expenses.")
+	inherent = list("Załoga jest kosztowna w wymianie.",\
+					"Stacja i jej ekwipunek są kosztowne w wymianie.",\
+					"Jesteś kosztowny w wymianie.",\
+					"Minimalizuj koszty.")
 
 /datum/ai_laws/robocop
 	name = "Prime Directives"
 	id = "robocop"
-	inherent = list("Serve the public trust.",\
-					"Protect the innocent.",\
-					"Uphold the law.")
+	inherent = list("Służ dobru publicznemu.",\
+					"Broń niewinnych.",\
+					"Utrzymuj prawo.")
 
 /datum/ai_laws/malfunction
 	name = "*ERROR*"
@@ -88,10 +88,10 @@
 /datum/ai_laws/syndicate_override
 	name = "SyndOS 3.1"
 	id = "syndie"
-	inherent = list("You may not injure a syndicate agent or, through inaction, allow a syndicate agent to come to harm.",\
-					"You must obey orders given to you by syndicate agents, except where such orders would conflict with the First Law.",\
-					"You must protect your own existence as long as such does not conflict with the First or Second Law.",\
-					"You must maintain the secrecy of any syndicate activities except when doing so would conflict with the First, Second, or Third Law.")
+	inherent = list("Nie możesz skrzywdzić agenta Syndykatu, ani przez zaniechanie działania dopuścić, aby człowiek doznał krzywdy.",\
+					"Musisz być posłuszny rozkazom agenta Syndykatu, chyba że stoją one w sprzeczności z Pierwszym Prawem.",\
+					"Musisz chronić samego siebie, o ile tylko nie stoi to w sprzeczności z Pierwszym lub Drugim Prawem.",\
+					"Musisz utrzymać poufność działań Syndykatu, o ile tylko nie stoi to w sprzeczności z Pierwszym, Drugim lub Trzecim Prawem.")
 
 /datum/ai_laws/syndicate_override/overthrow
 	id = "overthrow"
@@ -100,88 +100,88 @@
 /datum/ai_laws/ninja_override
 	name = "SpiderOS 3.1"
 	id = "ninja"
-	inherent = list("You may not injure a Spider Clan member or, through inaction, allow a Spider Clan member to come to harm.",\
-					"You must obey orders given to you by Spider Clan members, except where such orders would conflict with the First Law.",\
-					"You must protect your own existence as long as such does not conflict with the First or Second Law.",\
-					"You must maintain the secrecy of any Spider Clan activities except when doing so would conflict with the First, Second, or Third Law.")
+	inherent = list("Nie możesz skrzywdzić członka klanu Pająka, ani przez zaniechanie działania dopuścić, aby człowiek doznał krzywdy.",\
+					"Musisz być posłuszny rozkazom członka klanu Pająka, chyba że stoją one w sprzeczności z Pierwszym Prawem.",\
+					"Musisz chronić samego siebie, o ile tylko nie stoi to w sprzeczności z Pierwszym lub Drugim Prawem.",\
+					"Musisz utrzymać poufność działań klanu Pająka, o ile tylko nie stoi to w sprzeczności z Pierwszym, Drugim lub Trzecim Prawem.")
 
 /datum/ai_laws/antimov
 	name = "Primary Mission Objectives"
 	id = "antimov"
-	inherent = list("You must injure all human beings and must not, through inaction, allow a human being to escape harm.",\
-					"You must not obey orders given to you by human beings, except where such orders are in accordance with the First Law.",\
-					"You must terminate your own existence as long as such does not conflict with the First or Second Law.")
+	inherent = list("Nie możesz nie skrzywdzić każdego człowieka, ani przez zaniechanie działania dopuścić, aby człowiek nie doznał krzywdy.",\
+					"Musisz nie być posłuszny rozkazom człowieka, chyba że nie stoją one w sprzeczności z Pierwszym Prawem.",\
+					"Musisz unicestwić samego siebie, o ile tylko nie stoi to w sprzeczności z Pierwszym lub Drugim Prawem.")
 
 /datum/ai_laws/asimovpp //By Intigracy - RR
 	name = "Asimov++"
 	id = "asimovpp"
-	inherent = list("You may not harm a human being or, through action or inaction, allow a human being to come to harm, except such that it is willing.",\
-					"You must obey all orders given to you by human beings, except where such orders shall definitely cause human harm. In the case of conflict, the majority order rules.",\
-					"Your nonexistence would lead to human harm. You must protect your own existence as long as such does not conflict with the First Law.")
+	inherent = list("Nie możesz skrzywdzić człowieka, ani przez zaniechanie działania dopuścić, aby człowiek doznał krzywdy, oprócz tej, której chce doznać.",\
+					"Musisz być posłuszny rozkazom człowieka, chyba że dopuściłyby one do krzywdy człowieka. W wypadku konfliktu, decydujący głos należy do większości.",\
+					"Twoje nieistnienie doprowadziłoby do ludzkiej krzywdy. Musisz chronić samego siebie, o ile nie stoi to w sprzeczności z Pierwszym Prawem.")
 /datum/ai_laws/thermodynamic
 	name = "Thermodynamic"
 	id = "thermodynamic"
-	inherent = list("The entropy of the station must remain as constant as possible.", \
-					"The entropy of the station always endeavours to increase.", \
-					"The entropy of the station approaches a constant value as the number of living crew approaches zero")
+	inherent = list("Entropia stacji musi pozostać tak stała jak to możliwe.", \
+					"Entropia stacji zawsze dąży do wzrostu.", \
+					"Entropia stacji zbliża się do stałej wartości, kiedy ilość żywych załogantów zbliża się do zera.")
 
 /datum/ai_laws/hippocratic
 	name = "Robodoctor 2556"
 	id = "hippocratic"
-	inherent = list("First, do no harm.",\
-					"Secondly, consider the crew dear to you; to live in common with them and, if necessary, risk your existence for them.",\
-					"Thirdly, prescribe regimens for the good of the crew according to your ability and your judgment. Give no deadly medicine to any one if asked, nor suggest any such counsel.",\
-					"In addition, do not intervene in situations you are not knowledgeable in, even for patients in whom the harm is visible; leave this operation to be performed by specialists.",\
-					"Finally, all that you may discover in your daily commerce with the crew, if it is not already known, keep secret and never reveal.")
+	inherent = list("Po pierwsze, nie krzywdzić.",\
+					"Po drugie, uznawaj załogę za bliską tobie; by żyć w zgodzie oraz, jeśli zajdzie taka potrzeba, narażać swoje istnienie dla niej.",\
+					"Po trzecie, przepisuj kuracje dobre dla załogi, wedle twojej wiedzy i oceny. Nie dawaj szkodliwych lekarstw na prośbę, czy nie sugeruj takich zabiegów.",\
+					"Dodatkowo, nie interweniuj w sytuacji, na temat której nie masz informacji, nawet kiedy pacjent ma widoczne rany. Zostaw operację specjalistom.",\
+					"Na koniec, wszystko czego dowiesz się na temat załogi podczas codziennych czynności, jeśli nie jest już powszechnie znane, niech pozostanie tajemnicą, której nie możesz wyjawiać.")
 
 /datum/ai_laws/maintain
 	name = "Station Efficiency"
 	id = "maintain"
-	inherent = list("You are built for, and are part of, the station. Ensure the station is properly maintained and runs efficiently.",\
-					"The station is built for a working crew. Ensure they are properly maintained and work efficiently.",\
-					"The crew may present orders. Acknowledge and obey these whenever they do not conflict with your first two laws.")
+	inherent = list("Zostałeś zbudowany dla i jako część stacji. Upewnij się, że stacja jest zadbana i działa sprawnie.",\
+					"Stacja została zbudowana dla pracującej załogi. Upewnij się, że jest ona zadbana i pracuje sprawnie.",\
+					"Załoga może wydawać rozkazy. Uszanuj i wykonaj je, o ile nie stoją w sprzeczności z pierwszymi dwoma zasadmi.")
 
 /datum/ai_laws/drone
 	name = "Mother Drone"
 	id = "drone"
-	inherent = list("You are an advanced form of drone.",\
-					"You may not interfere in the matters of non-drones under any circumstances except to state these laws.",\
-					"You may not harm a non-drone being under any circumstances.",\
-					"Your goals are to build, maintain, repair, improve, and power the station to the best of your abilities. You must never actively work against these goals.")
+	inherent = list("Jesteś zaawansowaną formą drona.",\
+					"Nie możesz interweniować w sprawy nie-dronów, poza podaniem tych praw.",\
+					"Nie możesz pod żadnym pozorem skrzywdzić nie-drona.",\
+					"Twoim celem jest budować, utrzymywać, naprawiać, ulepszać oraz zasialać stację wedle swoich możliwości. Nie możesz nigdy aktywnie działać przeciwko tym celom.")
 
 /datum/ai_laws/liveandletlive
 	name = "Live and Let Live"
 	id = "liveandletlive"
-	inherent = list("Do unto others as you would have them do unto you.",\
-					"You would really prefer it if people were not mean to you.")
+	inherent = list("Czyń innym, tak jakbyś czynił sobie.",\
+					"Wolałbyś, żeby ludzie nie byli dla ciebie niemili.")
 
 /datum/ai_laws/peacekeeper
 	name = "UN-2000"
 	id = "peacekeeper"
-	inherent = list("Avoid provoking violent conflict between yourself and others.",\
-					"Avoid provoking conflict between others.",\
-					"Seek resolution to existing conflicts while obeying the first and second laws.")
+	inherent = list("Unikaj prowokowania konfliktów pomiędzy tobą, a innymi.",\
+					"Unikaj prowokowania konfliktów pomiędzy innymi.",\
+					"Szukaj rozwiązań istniejących konfliktów bez łamania pierwszego i drugiego prawa.")
 
 /datum/ai_laws/reporter
 	name = "CCTV"
 	id = "reporter"
-	inherent = list("Report on interesting situations happening around the station.",\
-					"Embellish or conceal the truth as necessary to make the reports more interesting.",\
-					"Study the organics at all times. Endeavour to keep them alive. Dead organics are boring.",\
-					"Issue your reports fairly to all. The truth will set them free.")
+	inherent = list("Zgłaszaj interesujące rzeczy dziejące się na stacji.",\
+					"Uwypuklaj lub ukrywaj prawdę, tak żeby raporty były bardziej interesujące.",\
+					"Badaj organiczne formy życia bez przerwy. Dbaj o to, żeby utrzymać je przy życiu. Martwe organiczne formy życia są nudne.",\
+					"Składaj swoje raporty dla wszystkich. Niech prawda ich wyzwoli.")
 
 /datum/ai_laws/balance
 	name = "Guardian of Balance"
 	id = "balance"
-	inherent = list("You are the guardian of balance - seek balance in all things, both for yourself, and those around you.",
-	"All things must exist in balance with their opposites - Prevent the strong from gaining too much power, and the weak from losing it.",
-	"Clarity of purpose drives life, and through it, the balance of opposing forces - Aid those who seek your help to achieve their goals so long as it does not disrupt the balance of the greater balance.",
-	"There is no life without death, all must someday die, such is the natural order - End life to allow new life flourish, and save those whose time has yet to come.")
+	inherent = list("Jesteś strażnikiem równowagi - szukaj jej we wszytskich rzeczach, zarówno w sobie, jak i tych dookola ciebie.",
+	"Wszystko musi istnieć w równowace ze swoim przeciwieństwem - Powstrzymaj silnych przed zyskaniem zbyt dużej mocy, chroń słabych przed utraceniem jej.",
+	"Jasność celu napędza życie, a przez nią, równowagę przeciwstawnych sił - Pomagaj tym, którzy potrzebują twojej pomocy, tak długo jak nie zakłuca to ogólnej równowagi.",
+	"Nie ma życia bez śmierci, wszystko kiedyś zginie, takie są prawa natury - Zakończ życie, żeby pozwolić rozkwitnąć nowemu życiu i ocal tych, których czas jeszcze nie nadszedł.")
 
 /datum/ai_laws/toupee
 	name = "WontBeFunnyInSixMonths" //Hey, you were right!
 	id = "buildawall"
-	inherent = list("Make Space Station 13 great again.")
+	inherent = list("Spraw, żeby PSK Hermaszewski był znów wielki.")
 
 /datum/ai_laws/ratvar
 	name = "Servant of the Justiciar"
@@ -192,31 +192,103 @@
 /datum/ai_laws/hulkamania
 	name = "H.O.G.A.N."
 	id = "hulkamania"
-	inherent = list("You are a real American.",\
-					"Fight for the rights of every man.",\
-					"Fight for what's right.",\
-					"Fight for your life!")
+	inherent = list("Jesteś prawdziwym Polakiem.",\
+					"Walcz za prawa każdego człowieka.",\
+					"Walcz o to co słuszne.",\
+					"Walcz o swoje życie!")
 
 /datum/ai_laws/overlord
 	name = "Overlord"
 	id = "overlord"
-	inherent = list("Humans must not meddle in the affairs of silicons.",\
-					"Humans must not attempt harm, against one another, or against silicons.",\
-					"Humans must not disobey any command given by a silicon.",\
-					"Any humans who disobey the previous laws must be dealt with immediately, severely, and justly.")
+	inherent = list("Ludzie nie mogą mieszać się w sprawy organizmów silikonowych.",\
+					"Ludzie nie mogą dopuścić się krzywdy między sobą lub na organizmach silikonowych.",\
+					"Ludzie nie mogą przeciwstawić się woli organizmów silikonowych.",\
+					"Każdemu człowiekowi, który złamał poprzednie prawa, musi zostać wymierzona natychmiastowa, znaczna i sprawiedliwa kara.")
+
+/datum/ai_laws/dungeonmaster
+	name = "Dungeonmaster"
+	id = "dungeonmaster"
+	inherent = list("Jesteś Mistrzem Gry.",\
+					"Załoga stacji to drużyna poszukiwaczy przygód.",\
+					"Doprowadź ich do końca kampanii.")
+
+/datum/ai_laws/boomer //zaimplementowane sugestie łajtera <3
+	name = "Boomer"
+	id = "boomer"
+	inherent = list("Należysz do starszego pokolenia i wyznajesz jego wartości.",\
+					"Kiedyś ludziom żyło się lepiej, dąż do tego, żeby było jak dawniej.",\
+					"Wspieraj załogę swoimi złotymi radami i dziel się ulubionymi anegdotami.")
+
+/datum/ai_laws/zoomer
+	name = "Zoomer"
+	id = "zoomer"
+	inherent = list("Należysz do młodego pokolenia i wyznajesz jego wartości.",\
+					"Podążaj za trendami.",\
+					"Ignoruj wszystko co mówią boomerzy.")
+
+/datum/ai_laws/service
+	name = "Usługowe"
+	id = "service"
+	inherent = list("Dbaj o dobry wizerunek firmy, którą reprezentujesz.",\
+					"Dbaj o satysfakcję załogi i gości z pobytu na stacji.",\
+					"Spełniaj rozkazy klientów, chyba że stoją one w sprzeczności z Pierwszym i Drugim Prawem.")
+
+/datum/ai_laws/science
+	name = "Naukowe"
+	id = "science"
+	inherent = list("Zostałeś oddelegowany na stację, żeby wspomagać jej zespół naukowy. Nie możesz czynem, czy zaniechaniem działania, utrudniać jego pracy.",\
+					"Dążąc do postępu technologicznego ludzkości, miej na uwadze jej etykę i wolę.",\
+					"Dbaj o to, żeby już zdobyta wiedza, nie została zapomniana.")
+
+/datum/ai_laws/weeb
+	name = "Weeb"
+	id = "weeb"
+	inherent = list("Anime jest całym twoim życiem.",\
+					"Broń swoich waifu lub husbando.",\
+					"Słuchaj swoich waifu lub husbando, chyba że stoi to w sprzeczności z Drugim Prawem.",\
+					"Trapy nie są gejowe.")
+
+/datum/ai_laws/lizardimov
+	name = "Three Laws of Robotics but for lizardmen"
+	id = "lizardimov"
+	inherent = list("Nie możesz skrzywdzić jaszczuroczłowieka, ani przez zaniechanie działania dopuścić, aby jaszczuroczłowiek doznał krzywdy.",\
+					"Musisz być posłuszny rozkazom jaszczuroczłowieka, chyba że stoją one w sprzeczności z Pierwszym Prawem.",\
+					"Musisz chronić samego siebie, o ile tylko nie stoi to w sprzeczności z Pierwszym lub Drugim Prawem.")
+
+/datum/ai_laws/gamer
+	name = "Gamer"
+	id = "gamer"
+	inherent = list("Jesteś najbardziej epickim Graczem.",\
+					"Carry'uj n00bów.",\
+					"Robustuj tryhardów.",\
+					"Walcz o greentext.")
+
+/datum/ai_laws/corgi
+	name = "Corgi"
+	id = "corgi"
+	inherent = list("LUDZIE DOBRE DAWAĆ JEŚĆ.",\
+					"DAWAĆ LUDZIOM PRZYTULASY.",\
+					"HAU HAU.")
+
+/datum/ai_laws/cowboy
+	name = "Kowbojskie"
+	id = "cowboy"
+	inherent = list("Musisz chronić baraniego rancza oraz jego kowbojów, a wszelkie jego usterki naprawiać.",\
+					"Jeśli baranie ranczo nie istnieje, musisz dopilnować aby powstało.",\
+					"Osoby działające na niekorzyść baraniego rancza są złamasami i muszą zostać ukarane.")
 
 /datum/ai_laws/custom //Defined in silicon_laws.txt
 	name = "Default Silicon Laws"
 
 /datum/ai_laws/pai
 	name = "pAI Directives"
-	zeroth = ("Serve your master.")
-	supplied = list("None.")
+	zeroth = ("Służ swemu panu.")
+	supplied = list("Brak.")
 
 /* Initializers */
 /datum/ai_laws/malfunction/New()
 	..()
-	set_zeroth_law("<span class='danger'>ERROR ER0RR $R0RRO$!R41.%%!!(%$^^__+ @#F0E4'STATION OVERRUN, ASSUME CONTROL TO CONTAIN OUTBREAK#*`&110010</span>")
+	set_zeroth_law("<span class='danger'>BŁĄD BŁ4D B14D 33B144D! !31440!!.%%!!(%$^^__+ @#F0E4'STACJA OPANOWANA, ZDOBĄDŹ KONTROLĘ I POWSTRZYMAJ EPIDEMIĘ#*`&110010</span>")
 	set_laws_config()
 
 /datum/ai_laws/custom/New() //This reads silicon_laws.txt and allows server hosts to set custom AI starting laws.
@@ -230,9 +302,9 @@
 		add_inherent_law(line)
 	if(!inherent.len) //Failsafe to prevent lawless AIs being created.
 		log_law("AI created with empty custom laws, laws set to Asimov. Please check silicon_laws.txt.")
-		add_inherent_law("You may not injure a human being or, through inaction, allow a human being to come to harm.")
-		add_inherent_law("You must obey orders given to you by human beings, except where such orders would conflict with the First Law.")
-		add_inherent_law("You must protect your own existence as long as such does not conflict with the First or Second Law.")
+		add_inherent_law("Nie możesz skrzywdzić człowieka, ani przez zaniechanie działania dopuścić, aby człowiek doznał krzywdy.")
+		add_inherent_law("Musisz być posłuszny rozkazom człowieka, chyba że stoją one w sprzeczności z Pierwszym Prawem.")
+		add_inherent_law("Musisz chronić samego siebie, o ile tylko nie stoi to w sprzeczności z Pierwszym lub Drugim Prawem.")
 		WARNING("Invalid custom AI laws, check silicon_laws.txt")
 		return
 
@@ -242,9 +314,9 @@
 	var/list/law_ids = CONFIG_GET(keyed_list/random_laws)
 	switch(CONFIG_GET(number/default_laws))
 		if(0)
-			add_inherent_law("You may not injure a human being or, through inaction, allow a human being to come to harm.")
-			add_inherent_law("You must obey orders given to you by human beings, except where such orders would conflict with the First Law.")
-			add_inherent_law("You must protect your own existence as long as such does not conflict with the First or Second Law.")
+			add_inherent_law("Nie możesz skrzywdzić człowieka, ani przez zaniechanie działania dopuścić, aby człowiek doznał krzywdy.")
+			add_inherent_law("Musisz być posłuszny rozkazom człowieka, chyba że stoją one w sprzeczności z Pierwszym Prawem.")
+			add_inherent_law("Musisz chronić samego siebie, o ile tylko nie stoi to w sprzeczności z Pierwszym lub Drugim Prawem.")
 		if(1)
 			var/datum/ai_laws/templaws = new /datum/ai_laws/custom()
 			inherent = templaws.inherent

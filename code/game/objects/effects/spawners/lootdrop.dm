@@ -261,9 +261,9 @@
 		/obj/item/reagent_containers/food/snacks/pie/cream = 3)
 
 /obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner
-	name = "2% chance xeno egg spawner"
+	name = "20% chance xeno egg spawner"
 	loot = list(
-		/obj/effect/decal/remains/xeno = 49,
+		/obj/effect/decal/remains/xeno = 4,
 		/obj/effect/spawner/xeno_egg_delivery = 1)
 
 /obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner/Initialize()
@@ -342,7 +342,9 @@
 				/obj/item/aiModule/core/full/asimovpp,
 				/obj/item/aiModule/core/full/hippocratic,
 				/obj/item/aiModule/core/full/paladin_devotion,
-				/obj/item/aiModule/core/full/paladin
+				/obj/item/aiModule/core/full/paladin,
+				/obj/item/aiModule/core/full/dungeonmaster,
+				/obj/item/aiModule/core/full/corgi
 				)
 
 /obj/effect/spawner/lootdrop/aimodule_neutral // These shouldn't allow the AI to start butchering people without reason
@@ -355,7 +357,12 @@
 				/obj/item/aiModule/core/full/reporter,
 				/obj/item/aiModule/core/full/robocop,
 				/obj/item/aiModule/core/full/liveandletlive,
-				/obj/item/aiModule/core/full/hulkamania
+				/obj/item/aiModule/core/full/boomer,
+				/obj/item/aiModule/core/full/zoomer,
+				/obj/item/aiModule/core/full/service,
+				/obj/item/aiModule/core/full/science,
+				/obj/item/aiModule/core/full/gamer,
+				/obj/item/aiModule/core/full/cowboy
 				)
 
 /obj/effect/spawner/lootdrop/aimodule_harmful // These will get the shuttle called
@@ -365,7 +372,8 @@
 				/obj/item/aiModule/core/full/balance,
 				/obj/item/aiModule/core/full/tyrant,
 				/obj/item/aiModule/core/full/thermurderdynamic,
-				/obj/item/aiModule/core/full/damaged
+				/obj/item/aiModule/core/full/damaged,
+				/obj/item/aiModule/core/full/weeb //anime jest grozniejsze od kazdej broni
 				)
 
 // Tech storage circuit board spawners

@@ -34,3 +34,4 @@
 	if(GARBAGEDAY in SSevents.holidays)
 		l_pocket = /obj/item/gun/ballistic/revolver
 		r_pocket = /obj/item/ammo_box/a357
+	gloves = /obj/item/clothing/gloves/color/yellow

@@ -30,7 +30,7 @@
 
 
 #define SOUND_MINIMUM_PRESSURE 10
-#define FALLOFF_SOUNDS 1
+#define FALLOFF_SOUNDS 2
 
 
 //Ambience types
@@ -67,7 +67,7 @@
 #define SPOOKY list('sound/ambience/ambimo1.ogg','sound/ambience/ambimo2.ogg','sound/ambience/ambiruin7.ogg','sound/ambience/ambiruin6.ogg',\
 										'sound/ambience/ambiodd.ogg', 'sound/ambience/ambimystery.ogg')
 
-#define SPACE list('sound/ambience/ambispace.ogg', 'sound/ambience/ambispace2.ogg', 'sound/ambience/title2.ogg', 'sound/ambience/qwerty/starlight.ogg')
+#define SPACE list('sound/ambience/ambispace.ogg', 'sound/ambience/ambispace2.ogg', 'sound/ambience/title2.ogg', 'sound/ambience/qwerty/starlight.ogg', 'sound/ambience/ambiatmos.ogg', 'sound/ambience/space_odyssey.ogg', 'sound/ambience/strauss.ogg', 'sound/ambience/synthwave.ogg')
 
 #define MAINTENANCE list('sound/ambience/ambimaint1.ogg', 'sound/ambience/ambimaint2.ogg', 'sound/ambience/ambimaint3.ogg', 'sound/ambience/ambimaint4.ogg',\
 											'sound/ambience/ambimaint5.ogg', 'sound/voice/lowHiss2.ogg', 'sound/voice/lowHiss3.ogg', 'sound/voice/lowHiss4.ogg', 'sound/ambience/ambitech2.ogg' )
@@ -87,3 +87,8 @@
 	'sound/hallucinations/turn_around1.ogg', 'sound/hallucinations/turn_around2.ogg', 'sound/hallucinations/veryfar_noise.ogg', 'sound/hallucinations/wail.ogg')
 
 #define MUSIC_VOLUME 50 //AQUILA EDIT
+#define INTERACTION_SOUND_RANGE_MODIFIER -3
+#define EQUIP_SOUND_VOLUME 30
+#define PICKUP_SOUND_VOLUME 15
+#define DROP_SOUND_VOLUME 20
+#define YEET_SOUND_VOLUME 90

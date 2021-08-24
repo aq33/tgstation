@@ -149,7 +149,7 @@
 
 	else if(!CHECK_BITFIELD(I.item_flags, ABSTRACT) && !HAS_TRAIT(I, TRAIT_NODROP))
 		thrown_thing = I
-		dropItemToGround(I, thrown = TRUE)
+		dropItemToGround(I, thrown = TRUE, silent = TRUE)
 
 		if(HAS_TRAIT(src, TRAIT_PACIFISM) && I.throwforce)
 			to_chat(src, "<span class='notice'>You set [I] down gently on the ground.</span>")
@@ -469,6 +469,7 @@
 		Paralyze(15)
 		Knockdown(90)
 
+	playsound(src, 'sound/misc/vomit.ogg', 50, 1)
 	playsound(get_turf(src), 'sound/effects/splat.ogg', 50, 1)
 	var/turf/T = get_turf(src)
 	if(!blood)

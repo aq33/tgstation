@@ -186,6 +186,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	hitsound = 'sound/items/welder.ogg'
 	damtype = "fire"
 	force = 4
+	playsound(src, "sound/items/cigarette.ogg", 15, TRUE)
 	if(reagents.get_reagent_amount(/datum/reagent/toxin/plasma)) // the plasma explodes when exposed to fire
 		var/datum/effect_system/reagents_explosion/e = new()
 		e.set_up(round(reagents.get_reagent_amount(/datum/reagent/toxin/plasma) / 2.5, 1), get_turf(src), 0, 0)
@@ -278,7 +279,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		user.visible_message("<span class='notice'>[user] calmly drops and treads on \the [src], putting it out instantly.</span>")
 		new type_butt(user.loc)
 		new /obj/effect/decal/cleanable/ash(user.loc)
-		playsound(src, 'sound/items/cig_snuff.ogg', 25, 1)
+		playsound(src, "sound/items/cigarette_extinguish.ogg", 25, TRUE)
 		qdel(src)
 	. = ..()
 
@@ -602,6 +603,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		attack_verb = list("burnt", "singed")
 		set_light(1)
 		START_PROCESSING(SSobj, src)
+		playsound(src, "sound/items/lighter_light.ogg", 15, TRUE)
 	else
 		hitsound = "swing_hit"
 		force = 0

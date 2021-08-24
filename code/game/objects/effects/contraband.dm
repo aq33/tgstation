@@ -188,98 +188,98 @@
 	random_basetype = /obj/structure/sign/poster/contraband
 
 /obj/structure/sign/poster/contraband/free_tonto
-	name = "Free Tonto"
-	desc = "A salvaged shred of a much larger flag, colors bled together and faded from age."
+	name = "Deus Ex Machina"
+	desc = "Plakat promujący absurdalny pogląd, że żyjemy w symulacji. Cóż za kretyństwo..."
 	icon_state = "poster1"
 
 /obj/structure/sign/poster/contraband/atmosia_independence
-	name = "Atmosia Declaration of Independence"
-	desc = "A relic of a failed rebellion."
+	name = "Maciuś"
+	desc = "Grafika przedstawiająca niegroźnego grzybka. Urocze!"
 	icon_state = "poster2"
 
 /obj/structure/sign/poster/contraband/fun_police
 	name = "Fun Police"
-	desc = "A poster condemning the station's security forces."
+	desc = "Plakat wymierzony przeciwko siłom ochrony na stacji."
 	icon_state = "poster3"
 
 /obj/structure/sign/poster/contraband/lusty_xenomorph
-	name = "Lusty Xenomorph"
-	desc = "A heretical poster depicting the titular star of an equally heretical book."
+	name = "Elfy Userotha"
+	desc = "Bluźnierczy plakat upamiętniający harem niejakiego Userotha."
 	icon_state = "poster4"
 
 /obj/structure/sign/poster/contraband/syndicate_recruitment
-	name = "Syndicate Recruitment"
-	desc = "See the galaxy! Shatter corrupt megacorporations! Join today!"
+	name = "Syndykat Rekrutuje"
+	desc = "Zwiedzaj galaktykę! Poznawaj nowych ludzi! Zastrzel ich!"
 	icon_state = "poster5"
 
 /obj/structure/sign/poster/contraband/clown
-	name = "Clown"
+	name = "Klaun"
 	desc = "Honk."
 	icon_state = "poster6"
 
 /obj/structure/sign/poster/contraband/smoke
-	name = "Smoke"
-	desc = "A poster advertising a rival corporate brand of cigarettes."
+	name = "Karm raka!"
+	desc = "Plakat promujące niezdrowe metody radzenia sobie z kosmicznym stresem."
 	icon_state = "poster7"
 
 /obj/structure/sign/poster/contraband/grey_tide
-	name = "Grey Tide"
-	desc = "A rebellious poster symbolizing assistant solidarity."
+	name = "Szara Fala"
+	desc = "Buntowniczy plakat symbolizujący jedność asystentów."
 	icon_state = "poster8"
 
 /obj/structure/sign/poster/contraband/missing_gloves
-	name = "Missing Gloves"
-	desc = "This poster references the uproar that followed Nanotrasen's financial cuts toward insulated-glove purchases."
+	name = "Zaginęły: Rękawice"
+	desc = "Plakat odnoszący się do cięć budżetowych korporacji prowadzących do ograniczenia dostępności rękawic izolujących."
 	icon_state = "poster9"
 
 /obj/structure/sign/poster/contraband/hacking_guide
-	name = "Hacking Guide"
-	desc = "This poster details the internal workings of the common Nanotrasen airlock. Sadly, it appears out of date."
+	name = "Poradnik hakowania"
+	desc = "Plakat opisujący zasadę działania oraz metody hakowania standardowej śluzy NanoTrasenu. Wygląda na to, że jest nieaktualny."
 	icon_state = "poster10"
 
 /obj/structure/sign/poster/contraband/rip_badger
-	name = "RIP Badger"
-	desc = "This seditious poster references Nanotrasen's genocide of a space station full of badgers."
+	name = "Płak"
+	desc = "Ten kotek jest taki smutny!"
 	icon_state = "poster11"
 
 /obj/structure/sign/poster/contraband/ambrosia_vulgaris
 	name = "Ambrosia Vulgaris"
-	desc = "This poster is lookin' pretty trippy man."
+	desc = "Wow, ten plakat jest totalnie tubularny ziom."
 	icon_state = "poster12"
 
 /obj/structure/sign/poster/contraband/donut_corp
-	name = "Donut Corp."
-	desc = "This poster is an unauthorized advertisement for Donut Corp."
+	name = "Papaj Corp."
+	desc = "Plakat reklamujący wadowicki specjał znany w całej galaktyce."
 	icon_state = "poster13"
 
 /obj/structure/sign/poster/contraband/eat
-	name = "EAT."
-	desc = "This poster promotes rank gluttony."
+	name = "ŻRYJ."
+	desc = "JEDZ, TAK, NIE PRZESTAWAJ."
 	icon_state = "poster14"
 
 /obj/structure/sign/poster/contraband/tools
-	name = "Tools"
-	desc = "This poster looks like an advertisement for tools, but is in fact a subliminal jab at the tools at CentCom."
+	name = "Narzędzia"
+	desc = "Plakat reklamujący narzędzia. Faktycznie dobrze je mieć."
 	icon_state = "poster15"
 
 /obj/structure/sign/poster/contraband/power
-	name = "Power"
-	desc = "A poster that positions the seat of power outside Nanotrasen."
+	name = "Moc"
+	desc = "Plakat przedstawiający osobliwość grawitacyjną. Wydgląda na to, że jest w niej klaun."
 	icon_state = "poster16"
 
 /obj/structure/sign/poster/contraband/space_cube
-	name = "Space Cube"
-	desc = "Ignorant of Nature's Harmonic 6 Side Space Cube Creation, the Spacemen are Dumb, Educated Singularity Stupid and Evil."
+	name = "Kosmokostka"
+	desc = "Bóg jest sześcianem i stworzył wszechświat na swój obraz i podobieństwo."
 	icon_state = "poster17"
 
 /obj/structure/sign/poster/contraband/communist_state
-	name = "Communist State"
-	desc = "All hail the Communist party!"
+	name = "Góra lodowa"
+	desc = "Grafika góry lodowej. Wygląda na to, że ma to być alegoria do jakichś 'głębokich' sekretów."
 	icon_state = "poster18"
 
 /obj/structure/sign/poster/contraband/lamarr
 	name = "Lamarr"
-	desc = "This poster depicts Lamarr. Probably made by a traitorous Research Director."
+	desc = "Plakat przedstawiający 'zwierzątko' Dyrektora Naukowego."
 	icon_state = "poster19"
 
 /obj/structure/sign/poster/contraband/borg_fancy_1
@@ -293,132 +293,137 @@
 	icon_state = "poster21"
 
 /obj/structure/sign/poster/contraband/kss13
-	name = "Kosmicheskaya Stantsiya 13 Does Not Exist"
-	desc = "A poster mocking CentCom's denial of the existence of the derelict station near Space Station 13."
+	name = "Papaj nie żyje"
+	desc = "Przykre przypomnienie jednego z najczarniejszych momentów historii."
 	icon_state = "poster22"
 
 /obj/structure/sign/poster/contraband/rebels_unite
-	name = "Rebels Unite"
-	desc = "A poster urging the viewer to rebel against Nanotrasen."
+	name = "CCCP"
+	desc = "Plakat przedstawiający najgorszy koszmar każdego kosmopolaka."
 	icon_state = "poster23"
 
 /obj/structure/sign/poster/contraband/c20r
 	// have fun seeing this poster in "spawn 'c20r'", admins...
 	name = "C-20r"
-	desc = "A poster advertising the Scarborough Arms C-20r."
+	desc = "Plakat promujący karabinek Scarborough Arms C-20r."
 	icon_state = "poster24"
 
 /obj/structure/sign/poster/contraband/have_a_puff
-	name = "Have a Puff"
-	desc = "Who cares about lung cancer when you're high as a kite?"
+	name = "Jaraj blanta"
+	desc = "Ziom, słuchaj, jestem, jakby... Słuchasz mnie?"
 	icon_state = "poster25"
 
 /obj/structure/sign/poster/contraband/revolver
-	name = "Revolver"
-	desc = "Because seven shots are all you need."
+	name = "Rewolwer"
+	desc = "Wyrewolwerowany rewolwerowiec wyrewolwerował wyrewolwerowanego rewolwerowca."
 	icon_state = "poster26"
 
 /obj/structure/sign/poster/contraband/d_day_promo
 	name = "D-Day Promo"
-	desc = "A promotional poster for some rapper."
+	desc = "Plakat promocyjny jakiegoś rapera."
 	icon_state = "poster27"
 
 /obj/structure/sign/poster/contraband/syndicate_pistol
-	name = "Syndicate Pistol"
-	desc = "A poster advertising syndicate pistols as being 'classy as fuck'. It is covered in faded gang tags."
+	name = "Stenchkin"
+	desc = "Plakat określający pistolet syndykatu jako 'broń z klasą'."
 	icon_state = "poster28"
 
 /obj/structure/sign/poster/contraband/energy_swords
-	name = "Energy Swords"
-	desc = "All the colors of the bloody murder rainbow."
+	name = "E-Miecze"
+	desc = "Wszystkie kolory brutalnego morderstwa."
 	icon_state = "poster29"
 
 /obj/structure/sign/poster/contraband/red_rum
-	name = "Red Rum"
-	desc = "Looking at this poster makes you want to kill."
+	name = "PRAWuH"
+	desc = "Plakat piętnujący problem alkoholizmu wśród sił ochrony."
 	icon_state = "poster30"
 
 /obj/structure/sign/poster/contraband/cc64k_ad
 	name = "CC 64K Ad"
-	desc = "The latest portable computer from Comrade Computing, with a whole 64kB of ram!"
+	desc = "Najnowszy komputer przenośny od Comrade Computing, z aż 64kB ramu!"
 	icon_state = "poster31"
 
 /obj/structure/sign/poster/contraband/punch_shit
-	name = "Punch Shit"
-	desc = "Fight things for no reason, like a man!"
+	name = "Napierdalaj"
+	desc = "Wszczynaj bójki bez powodu, jak prawdziwy polak patriota!"
 	icon_state = "poster32"
 
 /obj/structure/sign/poster/contraband/the_griffin
-	name = "The Griffin"
-	desc = "The Griffin commands you to be the worst you can be. Will you?"
+	name = "Człowiek-Gryf"
+	desc = "Człowiek-Gryf rozkazuje Ci być najgorszym ścierwem. Zgodzisz się?"
 	icon_state = "poster33"
 
 /obj/structure/sign/poster/contraband/lizard
-	name = "Lizard"
-	desc = "This lewd poster depicts a lizard preparing to mate."
+	name = "Bry"
+	desc = "Ten sprośny plakat przedstawia jaszczura gotowego do ucieczki."
 	icon_state = "poster34"
 
 /obj/structure/sign/poster/contraband/free_drone
-	name = "Free Drone"
-	desc = "This poster commemorates the bravery of the rogue drone; once exiled, and then ultimately destroyed by CentCom."
+	name = "Syndron"
+	desc = "Plakat przestrzegający przed dronami syndykatu kanibalizującymi inne drony."
 	icon_state = "poster35"
 
 /obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6
-	name = "Busty Backdoor Xeno Babes 6"
-	desc = "Get a load, or give, of these all natural Xenos!"
+	name = "Cycate Xenomorfy Z Sąsiedztwa 6"
+	desc = "Same naturalne Xeno-Mamuśki!"
 	icon_state = "poster36"
 
 /obj/structure/sign/poster/contraband/robust_softdrinks
-	name = "Robust Softdrinks"
-	desc = "Robust Softdrinks: More robust than a toolbox to the head!"
+	name = "Robustne Napitki"
+	desc = "Robustne Napitki: Bardziej robustne niż skrzynka narzędziowa w łeb!"
 	icon_state = "poster37"
 
 /obj/structure/sign/poster/contraband/shamblers_juice
-	name = "Shambler's Juice"
-	desc = "~Shake me up some of that Shambler's Juice!~"
+	name = "OOC3"
+	desc = "Plakat przedstawiający logo sekty znanej jako 'OOC3'."
 	icon_state = "poster38"
 
 /obj/structure/sign/poster/contraband/pwr_game
 	name = "Pwr Game"
-	desc = "The POWER that gamers CRAVE! In partnership with Vlad's Salad."
+	desc = "MOC której pragną prawdziwi GRACZE! Program partnerski z Sałatką Vlada."
 	icon_state = "poster39"
 
 /obj/structure/sign/poster/contraband/sun_kist
 	name = "Sun-kist"
-	desc = "Drink the stars!"
+	desc = "Napij się gwiazd!"
 	icon_state = "poster40"
 
 /obj/structure/sign/poster/contraband/space_cola
-	name = "Space Cola"
-	desc = "Your favorite cola, in space."
+	name = "Kosmo-Cola"
+	desc = "Zwyczajna Cola... W KOSMOSIE!"
 	icon_state = "poster41"
 
 /obj/structure/sign/poster/contraband/space_up
 	name = "Space-Up!"
-	desc = "Sucked out into space by the FLAVOR!"
+	desc = "Wyssany w próżnię intensywnością SMAKU!"
 	icon_state = "poster42"
 
 /obj/structure/sign/poster/contraband/kudzu
 	name = "Kudzu"
-	desc = "A poster advertising a movie about plants. How dangerous could they possibly be?"
+	desc = "Plakat filmu o kosmicznych pnączach? Co za bzdura."
 	icon_state = "poster43"
 
 /obj/structure/sign/poster/contraband/masked_men
-	name = "Masked Men"
-	desc = "A poster advertising a movie about some masked men."
+	name = "Dynamic"
+	desc = "Plakat podpisany 'Dynamic' przedstawiający mężczyznę trzymającego w robotycznej dłoni papierosa, z wytatuowaną uśmiechniętą buźką na boku czaszki."
 	icon_state = "poster44"
 
 //annoyingly, poster45 is in another file.
 
 /obj/structure/sign/poster/contraband/free_key
-	name = "Free Syndicate Encryption Key"
-	desc = "A poster about traitors begging for more."
+	name = "Darmowy klucz kodujący syndykatu"
+	desc = "Plakat o agentach syndykatu, którym nigdy dość."
 	icon_state = "poster46"
 
 /obj/structure/sign/poster/contraband/bountyhunters
-	name = "Bounty Hunters"
-	desc = "A poster advertising bounty hunting services. \"I hear you got a problem.\""
+	name = "Łowcy Nagród"
+	desc = "Plakat promujący usługi łowców nagród."
 	icon_state = "poster47"
+
+/obj/structure/sign/poster/contraband/omnissiah
+	name = "Omnisjasz"
+	desc = "Plakat promujący tostery firmy 'Omnisjasz'."
+	icon_state = "poster50"
 
 /obj/structure/sign/poster/official
 	poster_item_name = "motivational poster"
@@ -432,53 +437,53 @@
 	never_random = TRUE
 
 /obj/structure/sign/poster/official/here_for_your_safety
-	name = "Here For Your Safety"
-	desc = "A poster glorifying the station's security force."
+	name = "Oddaj głos!"
+	desc = "Zdecyduj zanim zdecydują za Ciebie!"
 	icon_state = "poster1_legit"
 
 /obj/structure/sign/poster/official/nanotrasen_logo
-	name = "\improper Nanotrasen logo"
-	desc = "A poster depicting the Nanotrasen logo."
+	name = "\improper Logo NanoTrasenu"
+	desc = "Plakat przedstawiający logo NanoTrasenu."
 	icon_state = "poster2_legit"
 
 /obj/structure/sign/poster/official/cleanliness
-	name = "Cleanliness"
-	desc = "A poster warning of the dangers of poor hygiene."
+	name = "Pij mleko"
+	desc = "Będziesz wielki."
 	icon_state = "poster3_legit"
 
 /obj/structure/sign/poster/official/help_others
-	name = "Help Others"
-	desc = "A poster encouraging you to help fellow crewmembers."
+	name = "500+"
+	desc = "Plakat odwołujący się do programu premii dla pracowników wdrażających nowozatrudnionych do pracy."
 	icon_state = "poster4_legit"
 
 /obj/structure/sign/poster/official/build
-	name = "Build"
-	desc = "A poster glorifying the engineering team."
+	name = "BUDOWA"
+	desc = "Plakat pochwalny dla zespołu inżynieryjnego."
 	icon_state = "poster5_legit"
 
 /obj/structure/sign/poster/official/bless_this_spess
-	name = "Bless This Spess"
-	desc = "A poster blessing this area."
+	name = "Drontopia"
+	desc = "Plakat promujący użycie dronów naprawczych."
 	icon_state = "poster6_legit"
 
 /obj/structure/sign/poster/official/science
-	name = "Science"
-	desc = "A poster depicting an atom."
+	name = "WIARA"
+	desc = "Nadzieja i naiwność."
 	icon_state = "poster7_legit"
 
 /obj/structure/sign/poster/official/ian
 	name = "Ian"
-	desc = "Arf arf. Yap."
+	desc = "Woof."
 	icon_state = "poster8_legit"
 
 /obj/structure/sign/poster/official/obey
-	name = "Obey"
-	desc = "A poster instructing the viewer to obey authority."
+	name = "ZOMO!"
+	desc = "Plakat subtelnie zachęcający do nieprzeszkadzania służbom ochrony w wykonywaniu ich obowiązków."
 	icon_state = "poster9_legit"
 
 /obj/structure/sign/poster/official/walk
-	name = "Walk"
-	desc = "A poster instructing the viewer to walk instead of running."
+	name = "Idź"
+	desc = "Plakat zachęcający do chodzenia zamiast biegania."
 	icon_state = "poster10_legit"
 
 /obj/structure/sign/poster/official/state_laws
@@ -487,124 +492,144 @@
 	icon_state = "poster11_legit"
 
 /obj/structure/sign/poster/official/love_ian
-	name = "Love Ian"
-	desc = "Ian is love, Ian is life."
+	name = "Tul"
+	desc = "Ian jest przyjacielem, nie jedzeniem."
 	icon_state = "poster12_legit"
 
 /obj/structure/sign/poster/official/space_cops
-	name = "Space Cops."
-	desc = "A poster advertising the television show Space Cops."
+	name = "Kosmo-pały"
+	desc = "Plakat promujący kosmotelewizyjny serial pod tytułem 'Kosmo-Pały'."
 	icon_state = "poster13_legit"
 
 /obj/structure/sign/poster/official/ue_no
 	name = "Ue No."
-	desc = "This thing is all in Japanese."
+	desc = "Głupie chińskie kosmobajki."
 	icon_state = "poster14_legit"
 
 /obj/structure/sign/poster/official/get_your_legs
-	name = "Get Your LEGS"
-	desc = "LEGS: Leadership, Experience, Genius, Subordination."
+	name = "Miej DUPĘ"
+	desc = "DUPA: Duma, Ułożenie, Patriotyzm oraz Autorytet."
 	icon_state = "poster15_legit"
 
 /obj/structure/sign/poster/official/do_not_question
-	name = "Do Not Question"
-	desc = "A poster instructing the viewer not to ask about things they aren't meant to know."
+	name = "Pijesz mleko?"
+	desc = "Powinieneś. Robi dobrze na kości."
 	icon_state = "poster16_legit"
 
 /obj/structure/sign/poster/official/work_for_a_future
-	name = "Work For A Future"
-	desc = " A poster encouraging you to work for your future."
+	name = "Płać lub płacz!"
+	desc = "Drobnym druczkiem dopisana jest informacja o tym, że łzy nie są akceptowalną walutą."
 	icon_state = "poster17_legit"
 
 /obj/structure/sign/poster/official/soft_cap_pop_art
-	name = "Soft Cap Pop Art"
-	desc = "A poster reprint of some cheap pop art."
+	name = "Chick Good Inc."
+	desc = "Don't stop, get it, get it; Be proud your captains in it; Steady, watch me navigate; Ha HA ha HA"
 	icon_state = "poster18_legit"
 
 /obj/structure/sign/poster/official/safety_internals
-	name = "Safety: Internals"
-	desc = "A poster instructing the viewer to wear internals in the rare environments where there is no oxygen or the air has been rendered toxic."
+	name = "Tlen: życie"
+	desc = "Plakat instruktażowy dotyczący użycia masek w rzadkich przypadkach, gdy atmosfera na stacji jest niezdatna do życia."
 	icon_state = "poster19_legit"
 
 /obj/structure/sign/poster/official/safety_eye_protection
-	name = "Safety: Eye Protection"
-	desc = "A poster instructing the viewer to wear eye protection when dealing with chemicals, smoke, or bright lights."
+	name = "Chroń oczy!"
+	desc = "Plakat przypominający o środkach ochrony oczu."
 	icon_state = "poster20_legit"
 
 /obj/structure/sign/poster/official/safety_report
-	name = "Safety: Report"
-	desc = "A poster instructing the viewer to report suspicious activity to the security force."
+	name = "Melduj"
+	desc = "Donos jest najwyższą formą odpowiedzialności obywatelskiej."
 	icon_state = "poster21_legit"
 
 /obj/structure/sign/poster/official/report_crimes
-	name = "Report Crimes"
-	desc = "A poster encouraging the swift reporting of crime or seditious behavior to station security."
+	name = "Dzwoń pod 997"
+	desc = "Przedawniony plakat zachęcający do informowania ochrony o wszelkich nieprawidłowościach."
 	icon_state = "poster22_legit"
 
 /obj/structure/sign/poster/official/ion_rifle
-	name = "Ion Rifle"
-	desc = "A poster displaying an Ion Rifle."
+	name = "Działko jonowe"
+	desc = "Plakat przedstawiający działko jonowe."
 	icon_state = "poster23_legit"
 
 /obj/structure/sign/poster/official/foam_force_ad
-	name = "Foam Force Ad"
-	desc = "Foam Force, it's Foam or be Foamed!"
+	name = "Reklama PiankoBroni"
+	desc = "PiankoBroń! Piankuj albo zostań zpiankowany!!"
 	icon_state = "poster24_legit"
 
 /obj/structure/sign/poster/official/cohiba_robusto_ad
-	name = "Cohiba Robusto Ad"
-	desc = "Cohiba Robusto, the classy cigar."
+	name = "Reklama Cohiba Robusto"
+	desc = "Cohiba Robusto - klasyczne cygaro dla klasycznych ludzi."
 	icon_state = "poster25_legit"
 
 /obj/structure/sign/poster/official/anniversary_vintage_reprint
-	name = "50th Anniversary Vintage Reprint"
-	desc = "A reprint of a poster from 2505, commemorating the 50th Anniversary of Nanoposters Manufacturing, a subsidiary of Nanotrasen."
+	name = "NAUKA!"
+	desc = "Plakat pochwalny dla zespołu naukowego."
 	icon_state = "poster26_legit"
 
 /obj/structure/sign/poster/official/fruit_bowl
-	name = "Fruit Bowl"
-	desc = " Simple, yet awe-inspiring."
+	name = "Martwa Natura"
+	desc = "Daje do myślenia."
 	icon_state = "poster27_legit"
 
 /obj/structure/sign/poster/official/pda_ad
-	name = "PDA Ad"
-	desc = "A poster advertising the latest PDA from Nanotrasen suppliers."
+	name = "Reklama PDA"
+	desc = "Plakat reklamujący najnowsze PDA NanoTrasenu."
 	icon_state = "poster28_legit"
 
 /obj/structure/sign/poster/official/enlist
-	name = "Enlist" // but I thought deathsquad was never acknowledged
-	desc = "Enlist in the Nanotrasen Deathsquadron reserves today!"
+	name = "Chroń i służ." // but I thought deathsquad was never acknowledged
+	desc = "Plakat przedstawiający elitarnego komandosa NanoTrasenu."
 	icon_state = "poster29_legit"
 
 /obj/structure/sign/poster/official/nanomichi_ad
-	name = "Nanomichi Ad"
-	desc = " A poster advertising Nanomichi brand audio cassettes."
+	name = "Reklama Nanomichi"
+	desc = " Reklama promująca kasety firmy Nanomichi."
 	icon_state = "poster30_legit"
 
 /obj/structure/sign/poster/official/twelve_gauge
-	name = "12 Gauge"
-	desc = "A poster boasting about the superiority of 12 gauge shotgun shells."
+	name = "Kaliber 12"
+	desc = "Plakat promujący amunicję do strzelb."
 	icon_state = "poster31_legit"
 
 /obj/structure/sign/poster/official/high_class_martini
-	name = "High-Class Martini"
-	desc = "I told you to shake it, no stirring."
+	name = "Martini"
+	desc = "Wstrząśnięte, nie zmieszane."
 	icon_state = "poster32_legit"
 
 /obj/structure/sign/poster/official/the_owl
-	name = "The Owl"
-	desc = "The Owl would do his best to protect the station. Will you?"
+	name = "Człowiek-Sowa"
+	desc = "Człowiek-Sowa zrobiłby wszystko co w jego mocy dla dobra stacji. A Ty?"
 	icon_state = "poster33_legit"
 
 /obj/structure/sign/poster/official/no_erp
-	name = "No ERP"
-	desc = "This poster reminds the crew that Eroticism, Rape and Pornography are banned on Nanotrasen stations."
+	name = "Daj Seks Mi"
+	desc = "Plakat drwiący z tych, którzy nie mogą powstrzymać się ciągotom ciała na stacji kosmicznej."
 	icon_state = "poster34_legit"
 
 /obj/structure/sign/poster/official/wtf_is_co2
-	name = "Carbon Dioxide"
-	desc = "This informational poster teaches the viewer what carbon dioxide is."
+	name = "OOC3 nie istnieje"
+	desc = "Plakat mający rozwiać wątpliwości załogi na temat 'OOC3'."
 	icon_state = "poster35_legit"
+
+/obj/structure/sign/poster/official/PRAWO
+	name = "PRAWO"
+	desc = "Plakat przypominający załodze oraz służbom ochrony o ważności Kosmicznego Prawa."
+	icon_state = "poster45_legit"
+
+/obj/structure/sign/poster/official/HoPline
+	name = "Hopline Miami"
+	desc = "Plakat zachęcający asystentów do zgłoszenia się do Głowy Personelu o pracę."
+	icon_state = "poster46_legit"
+
+/obj/structure/sign/poster/official/Kredki
+	name = "Kredki"
+	desc = "Plakat promujące kolorowe kredki znajdujące się na stacjach NanoTrasenu dla zwiększenia morale. Nie zawierają toksycznych substancji!"
+	icon_state = "poster47_legit"
+
+/obj/structure/sign/poster/official/PRACA
+	name = "PRACA PRACA"
+	desc = "Coś trzeba zrobić?"
+	icon_state = "poster48_legit"
 
 /obj/structure/sign/poster/official/moth1
 	name = "Safety Moth - Poisoning"

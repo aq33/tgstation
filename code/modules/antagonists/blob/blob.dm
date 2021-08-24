@@ -15,7 +15,7 @@
 	if(isovermind(owner.current)) //embarrasing if not
 		var/mob/camera/blob/overmind = owner.current
 		if(!overmind.victory_in_progress) //if it won this doesn't really matter
-			var/point_report = "<br><b>[owner.name]</b> took over [overmind.max_count] tiles at the height of its growth."
+			var/point_report = "<br><b>[owner.name]</b> rozrósł się na [overmind.max_count] kafelków w jego szczytowym punkcie."
 			return basic_report+point_report
 	return basic_report
 
@@ -47,7 +47,7 @@
 		pop_action.Grant(owner.current)
 
 /datum/objective/blob_takeover
-	explanation_text = "Reach critical mass!"
+	explanation_text = "Osiągnij masę krytyczną!"
 
 //Non-overminds get this on blob antag assignment
 /datum/action/innate/blobpop

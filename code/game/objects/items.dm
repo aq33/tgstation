@@ -41,13 +41,19 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 
 	/// See _DEFINES/obj_flags.dm for a list of item flags
 	var/item_flags = NONE
+	///Used when yate into a mob
+	var/mob_throw_hit_sound
+	///Sound used when equipping the item into a valid slot
+	var/equip_sound
+	///Sound uses when picking the item up (into your hands)
+	var/pickup_sound
+	///Sound uses when dropping the item, or when its thrown.
+	var/drop_sound
 
 	/// The sound played when you hit things with it.
 	var/hitsound = null
 	/// If it's a tool, this is the sound played when the tool is used. For example when you use a wrench it goes *ccTCTHCHHTHCHT*
 	var/usesound = null
-	/// The sound played when you throw it at something and it hits that something.
-	var/throwhitsound = null
 	/// The weight class of an object. Used to determine tons of things, like if it's too cumbersome for you to drag, if it can fit in certain storage items, how long it takes to burn, and more. See _DEFINES/inventory.dm to see all weight classes.
 	var/w_class = WEIGHT_CLASS_NORMAL
 	/// This is used to determine on which inventory slots an item can fit.
@@ -567,7 +573,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 /obj/item/proc/talk_into(mob/M, input, channel, spans, datum/language/language, list/message_mods)
 	return ITALICS | REDUCE_RANGE
 
-/obj/item/proc/dropped(mob/user)
+/obj/item/proc/dropped(mob/user, silent = FALSE)
 	for(var/X in actions)
 		var/datum/action/A = X
 		A.Remove(user)
@@ -578,6 +584,8 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	if(item_flags & SLOWS_WHILE_IN_HAND)
 		user.update_equipment_speed_mods()
 	remove_outline()
+	if(!silent)
+		playsound(src, drop_sound, DROP_SOUND_VOLUME, ignore_walls = FALSE)
 
 // called just as an item is picked up (loc is not yet changed)
 /obj/item/proc/pickup(mob/user)
@@ -593,7 +601,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 // slot uses the slot_X defines found in setup.dm
 // for items that can be placed in multiple slots
 // note this isn't called during the initial dressing of a player
-/obj/item/proc/equipped(mob/user, slot)
+/obj/item/proc/equipped(mob/user, slot, initial = FALSE)
 	SEND_SIGNAL(src, COMSIG_ITEM_EQUIPPED, user, slot)
 	for(var/X in actions)
 		var/datum/action/A = X
@@ -602,6 +610,11 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	if(item_flags & SLOWS_WHILE_IN_HAND || slowdown)
 		user.update_equipment_speed_mods()
 	item_flags |= IN_INVENTORY
+	if(!initial)
+		if(equip_sound &&(slot_flags & slot))
+			playsound(src, equip_sound, EQUIP_SOUND_VOLUME, TRUE, ignore_walls = FALSE)
+		else if(slot == ITEM_SLOT_HANDS)
+			playsound(src, pickup_sound, PICKUP_SOUND_VOLUME, ignore_walls = FALSE)
 
 //sometimes we only want to grant the item's action if it's equipped in a specific slot.
 /obj/item/proc/item_action_slot_check(slot, mob/user)
@@ -723,6 +736,20 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		var/itempush = 1
 		if(w_class < 4)
 			itempush = 0 //too light to push anything
+		if(istype(hit_atom, /mob/living)) //Living mobs handle hit sounds differently.
+			var/volume = get_volume_by_throwforce_and_or_w_class()
+			if (throwforce > 0)
+				if (mob_throw_hit_sound)
+					playsound(hit_atom, mob_throw_hit_sound, volume, TRUE, -1)
+				else if(hitsound)
+					playsound(hit_atom, hitsound, volume, TRUE, -1)
+				else
+					playsound(hit_atom, 'sound/weapons/genhit.ogg',volume, TRUE, -1)
+			else
+				playsound(hit_atom, 'sound/weapons/throwtap.ogg', 1, volume, -1)
+			
+		else
+			playsound(src, drop_sound, YEET_SOUND_VOLUME, ignore_walls = FALSE)
 		return hit_atom.hitby(src, 0, itempush, throwingdatum=throwingdatum)
 
 /obj/item/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback, force, quickstart = TRUE)
@@ -1009,7 +1036,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 			layer = initial(layer)
 			plane = initial(plane)
 			appearance_flags &= ~NO_CLIENT_COLOR
-			dropped(M)
+			dropped(M, FALSE)
 	return ..()
 
 /obj/item/proc/canStrip(mob/stripper, mob/owner)

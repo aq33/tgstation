@@ -58,7 +58,7 @@
 	name = "forked tongue"
 	desc = "A thin and long muscle typically found in reptilian races, apparently moonlights as a nose."
 	icon_state = "tonguelizard"
-	say_mod = "hisses"
+	say_mod = "syczy"
 	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
 	modifies_speech = TRUE
 
@@ -75,7 +75,7 @@
 	name = "proboscis"
 	desc = "A freakish looking meat tube that apparently can take in liquids."
 	icon_state = "tonguefly"
-	say_mod = "buzzes"
+	say_mod = "bzyczy"
 	taste_sensitivity = 25 // you eat vomit, this is a mercy
 	modifies_speech = TRUE
 
@@ -92,7 +92,7 @@
 	name = "superlingual matrix"
 	desc = "A mysterious structure that allows for instant communication between users. Pretty impressive until you need to eat something."
 	icon_state = "tongueayylmao"
-	say_mod = "gibbers"
+	say_mod = "bełkocze"
 	taste_sensitivity = 101 // ayys cannot taste anything.
 	modifies_speech = TRUE
 	var/mothership
@@ -144,7 +144,7 @@
 	name = "rotting tongue"
 	desc = "Between the decay and the fact that it's just lying there you doubt a tongue has ever seemed less sexy."
 	icon_state = "tonguezombie"
-	say_mod = "moans"
+	say_mod = "jęczy"
 	modifies_speech = TRUE
 	taste_sensitivity = 32
 
@@ -160,7 +160,7 @@
 			message_list[insertpos] = inserttext + "..."
 
 		if(prob(20) && message_list.len > 3)
-			message_list.Insert(insertpos, "[pick("BRAINS", "Brains", "Braaaiinnnsss", "BRAAAIIINNSSS")]...")
+			message_list.Insert(insertpos, "[pick("MÓZGI", "Mózgi", "Móóóóózzzgiiiiii", "MÓÓÓÓÓÓZZZGIIIIII")]...")
 
 	speech_args[SPEECH_MESSAGE] = jointext(message_list, " ")
 
@@ -168,7 +168,7 @@
 	name = "alien tongue"
 	desc = "According to leading xenobiologists the evolutionary benefit of having a second mouth in your mouth is \"that it looks badass\"."
 	icon_state = "tonguexeno"
-	say_mod = "hisses"
+	say_mod = "syczy"
 	taste_sensitivity = 10 // LIZARDS ARE ALIENS CONFIRMED
 	modifies_speech = TRUE // not really, they just hiss
 	var/static/list/languages_possible_alien = typecacheof(list(
@@ -196,7 +196,7 @@
 	name = "bone \"tongue\""
 	desc = "Apparently skeletons alter the sounds they produce through oscillation of their teeth, hence their characteristic rattling."
 	icon_state = "tonguebone"
-	say_mod = "rattles"
+	say_mod = "grzechocze"
 	attack_verb = list("bitten", "chattered", "chomped", "enamelled", "boned")
 	taste_sensitivity = 101 // skeletons cannot taste anything
 	modifies_speech = TRUE
@@ -228,7 +228,7 @@
 	desc = "A voice synthesizer that can interface with organic lifeforms."
 	status = ORGAN_ROBOTIC
 	icon_state = "tonguerobot"
-	say_mod = "states"
+	say_mod = "stwierdza"
 	attack_verb = list("beeped", "booped")
 	modifies_speech = TRUE
 	taste_sensitivity = 25 // not as good as an organic tongue

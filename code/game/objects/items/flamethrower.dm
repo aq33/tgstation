@@ -189,6 +189,7 @@
 /obj/item/flamethrower/proc/flame_turf(turflist)
 	if(!lit || operating)
 		return
+	playsound(loc, 'sound/weapons/flamethrower.ogg', 100, 1)
 	operating = TRUE
 	var/turf/previousturf = get_turf(src)
 	for(var/turf/T in turflist)
@@ -207,7 +208,6 @@
 	for(var/mob/M as() in viewers(1, loc))
 		if((M.client && M.machine == src))
 			attack_self(M)
-
 
 /obj/item/flamethrower/proc/default_ignite(turf/target, release_amount = 0.05)
 	//TODO: DEFERRED Consider checking to make sure tank pressure is high enough before doing this...

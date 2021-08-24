@@ -36,3 +36,6 @@
 			if(m_intent == MOVE_INTENT_RUN)
 				adjust_nutrition(-(HUNGER_FACTOR/10))
 
+	var/obj/item/tank/jetpack/J = get_jetpack()
+	if(istype(J) && J.allow_thrust(0.01, src) && (!has_gravity(NewLoc)) && isopenturf(NewLoc))
+		playsound(src, 'sound/vehicles/jetpack.ogg', 60, 1)

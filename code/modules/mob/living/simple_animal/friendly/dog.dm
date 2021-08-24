@@ -503,6 +503,9 @@
 					setDir(i)
 					sleep(1)
 
+		if(prob(10))
+			playsound(src, 'sound/misc/bark.ogg', 50, 1)
+
 /mob/living/simple_animal/pet/dog/corgi/Ian/narsie_act()
 	playsound(src, 'sound/magic/demon_dies.ogg', 75, TRUE)
 	var/mob/living/simple_animal/pet/dog/corgi/narsie/N = new(loc)

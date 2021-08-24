@@ -59,7 +59,7 @@
 	set waitfor = 0
 	sound_to_playing_players('sound/magic/lightning_chargeup.ogg')
 	sleep(80)
-	priority_announce("Massive bluespace anomaly detected en route to [station_name()]. Brace for impact.")
+	priority_announce("Potężna bluespace anomalia wykryta w drodze do [station_name()]. Przygotować się na uderzenie.")
 	sleep(20)
 	sound_to_playing_players('sound/magic/lightningbolt.ogg')
 

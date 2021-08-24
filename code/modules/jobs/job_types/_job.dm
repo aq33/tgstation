@@ -127,6 +127,11 @@
 			var/item = G.spawn_item(null, metadata)
 			var/atom/placed_in = human.equip_or_collect(item)
 
+			if(istype(item, /obj/item/organ))
+				var/obj/item/organ/org = item
+				org.Insert(H)
+				to_chat(M, "<span class='notice'>Your [G.display_name] has been automatically implanted in you!</span>")
+				continue
 			if(istype(placed_in))
 				if(isturf(placed_in))
 					to_chat(M, "<span class='notice'>Placing [G.display_name] on [placed_in]!</span>")
@@ -176,7 +181,7 @@
 	if(!H)
 		return FALSE
 	if(CONFIG_GET(flag/enforce_human_authority) && (title in GLOB.command_positions))
-		if(H.dna.species.id != "human")
+		if(H.dna.species.id != "human" && H.dna.species.id != "ipc")
 			H.set_species(/datum/species/human)
 			H.apply_pref_name("human", preference_source)
 	if(!visualsOnly)

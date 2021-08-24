@@ -1,10 +1,10 @@
 //does aoe brute damage when hitting targets, is immune to explosions
 /datum/blobstrain/reagent/explosive_lattice
-	name = "Explosive Lattice"
-	description = "will do brute damage in an area around targets."
-	effectdesc = "will also resist explosions, but takes increased damage from fire and other energy sources."
-	analyzerdescdamage = "Does medium brute damage and causes damage to everyone near its targets."
-	analyzerdesceffect = "Is highly resistant to explosions, but takes increased damage from fire and other energy sources."
+	name = "Purchawka Wybuchowa"
+	description = "zadajesz obszarowe obrażenia fizyczne."
+	effectdesc = "jesteś wysoce odporny na wybuchy, ale otrzymujesz większe obrażenia od ognia oraz innych typów energii."
+	analyzerdescdamage = "Zadaje średnie obrażenia fizyczne oraz obszarowe."
+	analyzerdesceffect = "Jest wysoce odporny na wybuchy, ale otrzymuje większe obrażenia od ognia oraz innych typów energii."
 	color = "#8B2500"
 	complementary_color = "#00668B"
 	blobbernaut_message = "blasts"

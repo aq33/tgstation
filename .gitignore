@@ -194,6 +194,8 @@ Temporary Items
 *.sublime-workspace
 
 #Visual studio stuff
+.vs
+*.cache
 *.vscode/*
 !/.vscode/extensions.json
 !/.vscode/settings.json

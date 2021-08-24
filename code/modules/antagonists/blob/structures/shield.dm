@@ -1,9 +1,9 @@
 /obj/structure/blob/shield
-	name = "strong blob"
+	name = "gęsty grzyb"
 	icon = 'icons/mob/blob.dmi'
 	icon_state = "blob_shield"
-	desc = "A solid wall of slightly twitching tendrils."
-	var/damaged_desc = "A wall of twitching tendrils."
+	desc = "Solidna ściana lekko drgających zgrzybiałych pnączy."
+	var/damaged_desc = "Ściana lekko drgających zgrzybiałych pnączy."
 	max_integrity = 150
 	brute_resist = 0.25
 	explosion_block = 3
@@ -13,7 +13,7 @@
 
 /obj/structure/blob/shield/scannerreport()
 	if(atmosblock)
-		return "Will prevent the spread of atmospheric changes."
+		return "Zapobiega rozprzestrzenianiu się zmian w atmosferze."
 	return "N/A"
 
 /obj/structure/blob/shield/core
@@ -34,9 +34,9 @@
 	air_update_turf(1)
 
 /obj/structure/blob/shield/reflective
-	name = "reflective blob"
-	desc = "A solid wall of slightly twitching tendrils with a reflective glow."
-	damaged_desc = "A wall of twitching tendrils with a reflective glow."
+	name = "lustrzany grzyb"
+	desc = "Solidna ściana lekko drgających zgrzybiałych pnączy z odbijającym światło połyskiem."
+	damaged_desc = "Ściana lekko drgających zgrzybiałych pnączy z odbijającym światło połyskiem."
 	icon_state = "blob_glow"
 	flags_1 = CHECK_RICOCHET_1
 	point_return = 8
@@ -54,6 +54,6 @@
 	var/new_angle_s = SIMPLIFY_DEGREES(face_angle + incidence_s)
 	P.setAngle(new_angle_s)
 	if(!(P.reflectable & REFLECT_FAKEPROJECTILE))
-		visible_message("<span class='warning'>[P] reflects off [src]!</span>")
+		visible_message("<span class='warning'>[P] odbija się od [src]!</span>")
 	return TRUE
 

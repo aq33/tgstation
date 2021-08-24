@@ -1,15 +1,15 @@
 //does low brute damage, oxygen damage, and stamina damage and wets tiles when damaged
 /datum/blobstrain/reagent/pressurized_slime
-	name = "Pressurized Slime"
-	description = "will do low brute, oxygen, and stamina damage, and wet tiles under targets."
-	effectdesc = "will also wet tiles near blobs that are attacked or killed."
-	analyzerdescdamage = "Does low brute damage, low oxygen damage, drains stamina, and wets tiles under targets, extinguishing them."
-	analyzerdesceffect = "When attacked or killed, lubricates nearby tiles, extinguishing anything on them."
+	name = "Maślak Śliski"
+	description = "zadajesz niskie obrażenia fizyczne, lekkie oparzenia oraz wywołujesz wyczerpanie, jak również pryskasz wodą pod stopy przeciwników."
+	effectdesc = "pryskasz wodą wokoło blobów, które są atakowane lub zostały zabite."
+	analyzerdescdamage = "Zadaje niskie obrażenia fizyczne, wywołuje lekkie oparzenia, oraz powoduje wyczerpanie, jak również pryska wodą pod stopy ofiar, gasząc je."
+	analyzerdesceffect = "Gdy zostanie zaatakowany lub zabity, opryskuje pobliskie podłoże gasząc wszystko, co się na nim znajduje."
 	color = "#AAAABB"
 	complementary_color = "#BBBBAA"
 	blobbernaut_message = "emits slime at"
-	message = "The blob splashes into you"
-	message_living = ", and you gasp for breath"
+	message = "Blob rozpryskuje się na ciebie"
+	message_living = " i zapierasz dech w piersiach"
 	reagent = /datum/reagent/blob/pressurized_slime
 
 /datum/blobstrain/reagent/pressurized_slime/damage_reaction(obj/structure/blob/B, damage, damage_type, damage_flag)

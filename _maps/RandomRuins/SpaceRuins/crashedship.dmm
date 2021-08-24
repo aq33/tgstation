@@ -205,7 +205,7 @@
 /obj/structure/table/wood,
 /obj/item/stack/spacecash/c500,
 /obj/item/stack/spacecash/c100,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /turf/open/floor/wood,
 /area/awaymission/BMPship/Fore)
 "aS" = (
@@ -281,8 +281,8 @@
 /area/awaymission/BMPship/Aft)
 "bh" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "bi" = (
@@ -588,7 +588,7 @@
 "cf" = (
 /obj/structure/table,
 /obj/item/kitchen/knife/butcher,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -638,7 +638,7 @@
 /area/awaymission/BMPship/Midship)
 "cj" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -693,7 +693,7 @@
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "cr" = (
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Midship)
 "cs" = (
@@ -830,7 +830,7 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/awaymission/BMPship/Midship)
 "cP" = (
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -895,7 +895,7 @@
 /area/awaymission/BMPship/Fore)
 "cZ" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /turf/open/floor/carpet,
 /area/awaymission/BMPship/Fore)
 "da" = (
@@ -2017,7 +2017,7 @@
 "gi" = (
 /obj/structure/table,
 /obj/item/pen/red,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /turf/open/floor/plasteel,
 /area/awaymission/BMPship/Aft)
 "gj" = (
@@ -2335,7 +2335,7 @@
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "hs" = (
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/soda_cans/mocnyfull,
 /turf/open/floor/plating,
 /area/awaymission/BMPship/Aft)
 "ht" = (
