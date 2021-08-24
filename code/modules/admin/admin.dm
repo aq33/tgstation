@@ -3,13 +3,13 @@
 	msg = "<span class=\"admin\"><span class=\"prefix\">ADMIN LOG:</span> <span class=\"message linkify\">[msg]</span></span>"
 	to_chat(GLOB.admins,
 		type = MESSAGE_TYPE_ADMINLOG,
-		html = msg)
+		html = msg, confidential=TRUE)
 
 /proc/relay_msg_admins(msg)
 	msg = "<span class=\"admin\"><span class=\"prefix\">RELAY:</span> <span class=\"message linkify\">[msg]</span></span>"
 	to_chat(GLOB.admins,
 		type = MESSAGE_TYPE_ADMINLOG,
-		html = msg)
+		html = msg, confidential=TRUE)
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////Panels
@@ -25,7 +25,7 @@
 	log_admin("[key_name(usr)] checked the individual player panel for [key_name(M)][isobserver(usr)?"":" while in game"].")
 
 	if(!M)
-		to_chat(usr, "You seem to be selecting a mob that doesn't exist anymore.")
+		to_chat(usr, "You seem to be selecting a mob that doesn't exist anymore.", confidential=TRUE)
 		return
 
 	var/body = "<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><body>Options panel for <b>[M]</b>"
@@ -233,7 +233,7 @@
 	if (!istype(src, /datum/admins))
 		src = usr.client.holder
 	if (!istype(src, /datum/admins))
-		to_chat(usr, "Error: you are not an admin!")
+		to_chat(usr, "Error: you are not an admin!", confidential=TRUE)
 		return
 	var/dat
 	dat = text("<HEAD><TITLE>Admin Newscaster</TITLE></HEAD><H3>Admin Newscaster Unit</H3>")
@@ -630,7 +630,7 @@
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Start Now") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		return 1
 	else
-		to_chat(usr, "<font color='red'>Error: Start Now: Game has already started.</font>")
+		to_chat(usr, "<font color='red'>Error: Start Now: Game has already started.</font>", confidential=TRUE)
 
 	return 0
 
@@ -802,10 +802,10 @@
 	set name = "Show Traitor Panel"
 
 	if(!istype(M))
-		to_chat(usr, "This can only be used on instances of type /mob")
+		to_chat(usr, "This can only be used on instances of type /mob", confidential=TRUE)
 		return
 	if(!M.mind)
-		to_chat(usr, "This mob has no mind!")
+		to_chat(usr, "This mob has no mind!", confidential=TRUE)
 		return
 
 	M.mind.traitor_panel()
@@ -845,37 +845,37 @@
 		var/mob/living/silicon/S = i
 		ai_number++
 		if(isAI(S))
-			to_chat(usr, "<b>AI [key_name(S, usr)]'s laws:</b>")
+			to_chat(usr, "<b>AI [key_name(S, usr)]'s laws:</b>", confidential=TRUE)
 		else if(iscyborg(S))
 			var/mob/living/silicon/robot/R = S
-			to_chat(usr, "<b>CYBORG [key_name(S, usr)] [R.connected_ai?"(Slaved to: [key_name(R.connected_ai)])":"(Independent)"]: laws:</b>")
+			to_chat(usr, "<b>CYBORG [key_name(S, usr)] [R.connected_ai?"(Slaved to: [key_name(R.connected_ai)])":"(Independent)"]: laws:</b>", confidential=TRUE)
 		else if (ispAI(S))
-			to_chat(usr, "<b>pAI [key_name(S, usr)]'s laws:</b>")
+			to_chat(usr, "<b>pAI [key_name(S, usr)]'s laws:</b>", confidential=TRUE)
 		else
-			to_chat(usr, "<b>SOMETHING SILICON [key_name(S, usr)]'s laws:</b>")
+			to_chat(usr, "<b>SOMETHING SILICON [key_name(S, usr)]'s laws:</b>", confidential=TRUE)
 
 		if (S.laws == null)
-			to_chat(usr, "[key_name(S, usr)]'s laws are null?? Contact a coder.")
+			to_chat(usr, "[key_name(S, usr)]'s laws are null?? Contact a coder.", confidential=TRUE)
 		else
 			S.laws.show_laws(usr)
 	if(!ai_number)
-		to_chat(usr, "<b>No AIs located</b>" )
+		to_chat(usr, "<b>No AIs located</b>" , confidential=TRUE)
 
 /datum/admins/proc/output_all_devil_info()
 	var/devil_number = 0
 	for(var/datum/mind/D in SSticker.mode.devils)
 		devil_number++
 		var/datum/antagonist/devil/devil = D.has_antag_datum(/datum/antagonist/devil)
-		to_chat(usr, "Devil #[devil_number]:<br><br>" + devil.printdevilinfo())
+		to_chat(usr, "Devil #[devil_number]:<br><br>" + devil.printdevilinfo(), confidential=TRUE)
 	if(!devil_number)
-		to_chat(usr, "<b>No Devils located</b>" )
+		to_chat(usr, "<b>No Devils located</b>" , confidential=TRUE)
 
 /datum/admins/proc/output_devil_info(mob/living/M)
 	if(is_devil(M))
 		var/datum/antagonist/devil/devil = M.mind.has_antag_datum(/datum/antagonist/devil)
-		to_chat(usr, devil.printdevilinfo())
+		to_chat(usr, devil.printdevilinfo(), confidential=TRUE)
 	else
-		to_chat(usr, "<b>[M] is not a devil.")
+		to_chat(usr, "<b>[M] is not a devil.", confidential=TRUE)
 
 /datum/admins/proc/manage_free_slots()
 	if(!check_rights())
@@ -940,7 +940,7 @@
 			if(kick_only_afk && !C.is_afk()) //Ignore clients who are not afk
 				continue
 			if(message)
-				to_chat(C, message)
+				to_chat(C, message, confidential=TRUE)
 			kicked_client_names.Add("[C.key]")
 			qdel(C)
 	return kicked_client_names
