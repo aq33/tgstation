@@ -1,0 +1,4 @@
+author: Dejaku51
+delete-after: true
+changes:
+  - rscadd: Zmieniono interfejs konsoli RnD na TGUI
