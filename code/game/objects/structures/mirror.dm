@@ -8,7 +8,6 @@
 	anchored = TRUE
 	max_integrity = 200
 	integrity_failure = 100
-	flags_ricochet = RICOCHET_SHINY
 	layer = ABOVE_WINDOW_LAYER
 
 /obj/structure/mirror/Initialize(mapload)
