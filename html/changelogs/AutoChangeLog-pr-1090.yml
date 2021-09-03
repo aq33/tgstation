@@ -1,0 +1,14 @@
+author: Dejaku51
+delete-after: true
+changes:
+  - rscadd: crew pinpointer pokazuje kogo namierza
+  - bugfix: sprawiono że pistolet z palców nie ma już odrzutu
+  - bugfix: naprawiono operacje mózgu na IPC
+  - bugfix: naprawiono runtime gdy ID modification program jest włączony w komputerze
+      modularnym bez id slotu
+  - bugfix: komputery modularne nie upuszczają już baterii gdy są zniszczone
+  - tweak: sprawiono że wszystkie rzeczy na ściane są nad oknem
+  - tweak: posegregowano crew manifest
+  - tweak: Poprawiono kod turretów
+  - rscdel: usunięto pliki VR sleepera
+  - spellcheck: Poprawiono literówke w płucach oozelinga
