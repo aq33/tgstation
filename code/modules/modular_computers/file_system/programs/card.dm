@@ -353,13 +353,14 @@
 	data["authenticated"] = authenticated
 
 	if(computer)
-		var/obj/item/card/id/id_card = card_slot.stored_card
-		data["has_id"] = !!id_card
-		data["id_name"] = id_card ? id_card.name : "-----"
-		if(id_card)
-			data["id_rank"] = id_card.assignment ? id_card.assignment : "Unassigned"
-			data["id_owner"] = id_card.registered_name ? id_card.registered_name : "-----"
-			data["access_on_card"] = id_card.access
+		if(card_slot)
+			var/obj/item/card/id/id_card = card_slot.stored_card
+			data["has_id"] = !!id_card
+			data["id_name"] = id_card ? id_card.name : "-----"
+			if(id_card)
+				data["id_rank"] = id_card.assignment ? id_card.assignment : "Unassigned"
+				data["id_owner"] = id_card.registered_name ? id_card.registered_name : "-----"
+				data["access_on_card"] = id_card.access
 
 	return data
 
