@@ -12,7 +12,8 @@
 			return 0
 		if(i > 1)
 			newshot()
-	user.newtonian_move(get_dir(target, user))
+	if(exists)
+		user.newtonian_move(get_dir(target, user))
 	update_icon()
 	return TRUE
 
